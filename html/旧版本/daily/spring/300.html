@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('299')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('301')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">喜乐妙法</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">耶稣对他说，你若想要完全，就要去变卖你的家业，分给穷人，就必有财宝在诸天之上，你还要来跟从我。（太19:21）</div>
+<div id="CC">Jesus said to him，If you want to be perfect，go，sell your possessions and give to the poor，and you will have treasure in the heavens; and come，follow Me.（Matthew 19:21）</div>
+<div id="C">有一个富翁，当他初信主的时候，很喜乐。过不多久，他的喜乐就消失了，觉得信主没有什么味道。于是，他问一个传道人说，“这是什么缘故呢？”传道人告诉他：“你若要得到喜乐，请你去看望一家人。你看望之后，再来见我。”就将那家的地点告诉他。富翁照着地点去找。到了那里，只见一家贫穷的信徒，房屋又破又漏，妻子病卧在床上，儿女衣衫褴褛，米缸中空无一粒。一家人在那里祷告呼吁神，此外没有别的出路。这位富翁信徒一见，心里非常受感，连忙回家，把米、衣服、钱，送给这位穷苦信徒，使他们全家得以度日。富翁自己也满有喜乐，以后又常去看望，从此被复兴起来。有一天，富翁又遇见这位传道人说，你为何不早将这喜乐的妙法告诉我呢？那不知要免去我多少愁苦哩。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

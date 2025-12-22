@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('744')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('746')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 17 课<br />小申言者书（二）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周三　约拿书的内容</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我若传福音，于我原没有可夸的，因为我是不得已的。若不传福音，我便有祸了。（林前九16。）</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神要约拿往尼尼微去传道，他‘却起来，逃往他施去躲避耶和华’。人想躲避神是不可能的。从始祖亚当、夏娃藏在园里的树木中起，一直到末后君王、臣宰藏在山洞、岩石穴里止，人何尝能够避去神的面呢？尼尼微在东，他施在西，走向与神旨意相背的路就是堕落。人的堕落不是一下子的事，乃是一步一步越陷越深的。约拿经历下到约帕、下入船、下海、进鱼腹、下深渊、下到山根，最后他几乎下入阴府的门，永远被关住。但是约拿向神悔改，他正在没有指望的时候，神却将他的性命从坑中救出来。愿我们都从约拿的经历得警惕，顺从神的命令，看重神的旨意过于自己的想法。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>顺从神的命令，看重神的旨意过于自己的想法。</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('332')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('334')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 12 课<br />争战与得胜</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周四　毁灭约但河西山地及低原诸国</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶和华怎样吩咐祂仆人摩西，摩西就照样吩咐约书亚，约书亚也照样行；凡耶和华所吩咐摩西的，约书亚没有一件懈怠不行的。（书十一15。）</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约书亚毁灭了约但河西山地、低原、并沿着大海一带，其余一切列国。其中的亚衲族人，就是伟人族。民数记十三章三十三节，以色列人去窥探迦南地时，看见那地的居民身量高大，就是亚衲人。亚衲族人出于拿非林人，创世记六章启示，拿非林人是人的女儿与堕落天使之间邪恶联合所产生的。人类与堕落的天使有了淫乱，破坏人类纯一的婚姻原则。神不能容忍这情形，因此，神嘱咐祂的选民要杀尽那地一切的人。因为在他们中间有伟人，他们的血统已经不再单纯了。这给我们看见：淫乱是严重的事。当人沉溺在淫乱中，会不顾心志，失去理性，使鬼有机会进来，完全附着他们。这就是为甚么迦南人，尤其是亚衲族人需要被灭绝的原因。从这些圣经故事的记载，我们需要认识淫乱是严重的罪，在召会生活中绝不能容让有淫乱的事发生。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保守自己的心单一纯洁，远避任何与放纵情欲有关的事。</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

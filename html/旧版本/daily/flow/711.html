@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('710')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('712')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 12 课<br />歌中之歌</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周四　对基督经历的起初阶段</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>歌一2～4：愿祂用口与我亲嘴；因你的爱情比酒更美。你的膏油馨香；你的名如同倒出来的香膏；所以众童女都爱你。愿你吸引我，我们就快跑跟随你。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>雅歌说到神与人之间的罗曼史，也是说到一个基督徒经历中属灵生命的故事。雅歌给我们看见基督徒对基督的追求，可分为四个阶段，在起初的阶段里，我们这班藉着恩典得救的罪人，受到基督甘甜之爱的吸引，而被祂的所是所迷住，她享受到基督那令人愉快的爱，这爱比酒更美；也享受到主那迷人的名—代表主的人位，如同倒出来的膏油那样馨香，就起来追求主。不仅如此，她也求主吸引她，使她和她的同伴，都快跑跟随主。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>建立每天与主个人、情深的接触，呼求主的名，并对主说，‘主耶稣，我爱你。’</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

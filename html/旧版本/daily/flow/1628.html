@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1627')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1629')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 17 课<br />
+信心的历史和见证人</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周四　信的定义</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来十一1：信就是所望之事的质实，是未见之事的确证。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>信就是所望之事的质实。信也是‘未见之事的确证’。凡盼望之事，都是未见之事。任何事情若是看见了，就不必盼望。我们是有盼望的人，生活的目标不该放在所见的，乃该放在所不见的；因为所见的是暂时的，所不见的才是永远的。因此，我们行事为人，是凭着信心，不是凭着眼见。我们的目标是至圣所和新耶路撒冷，这两样都是看不见的。然而，对这些未见之事，我们有充足的确证。信心使我们对未见之事有把握，证实我们所没有看见的。因此，信是未见之事的证据、证明。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练行事为人凭着信心，不凭着眼见。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

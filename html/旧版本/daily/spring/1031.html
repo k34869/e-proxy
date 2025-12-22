@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('443')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('445')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">威尔斯大复兴</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>约翰福音 16:8祂来了，就要为罪，为义，为审判，使世人知罪自责。</p><p>何格曼已在某城传教十年，但无一人悔改归主。他几乎相信那地的人不会觉悟有罪。一天晚上，正在讲道之时，神的灵忽然自天而降。从前丝毫不受感动的听众，现在居然大大受了感动；从前坐在会中茫无所得的人们，现在跪下为着自己的罪号啕痛哭。甚至有一个人，两次犯了偷窃的罪而被官厅捉去，用尽酷刑，也总不能使他承认他的过犯；但是现在当着许多人的面，承认了他以前在酷刑之下所不愿承认的罪。那时城中的人满城奔走，互相告诫，说，‘不要往福音堂去听道，他们神的灵已经下来了，那灵能使人人认自己的罪。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

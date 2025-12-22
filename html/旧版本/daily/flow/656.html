@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('655')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('657')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 4 课<br />受死、复活、牧养并作王的基督</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周五　经过死荫幽谷而经历复活</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>诗二三4～6 我虽然行过死荫的幽谷，也不怕遭害；因为你与我同在；你的杖，你的竿，都安慰我。在我敌人面前，你为我摆设筵席；你用油膏了我的头，使我的福杯满溢。我一生一世必有恩惠慈爱随着我；我且要住在耶和华的殿中，直到永远。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>活在地上，难处是无法避免的，这难处就是死荫的幽谷。当我们在谷中时，总是受试诱要作些事好脱离谷。但我们越作，谷就越延伸。最好的应付之路，乃是安静、安息在主里面，这会使谷缩短，使荫减少，并将死除去。我们若有了谷中正确的经历，就能见证谷是我们亲密享受主同在的地方。这将使我们对复活之基督有更深、更高的享受，就是经历主在敌人面前，为我们摆设筵席。最后我们还要对基督有最高的经历——经历在神的殿中，享受神圣的恩惠。（基督的恩）与神圣的慈爱（神的爱）一直随着我们（在圣灵的交通中）。然而经历这一切都必须在召会中。惟有在召会中，我们才能经历基督是青草地和溪水、是引导者、是丰盛的筵席，作我们终极的享受。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历在召会生活中的安息与享受。</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('349')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('351')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">朴素衣服</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">凡世界上的事，就是肉体的情欲、眼目的情欲、并今生的骄傲，都不是出于父，乃是出于世界。（约壹2:16）</div>
+<div id="CC">All that is in the world，the lust of the flesh and the lust of the eyes and the vainglory of life，is not of the Father but is of the world.（1 John 2:16）</div>
+<div id="C">一位姊妹有件很朴素的衣服，在家喜欢穿它，出门也喜欢穿它，除了这件衣服以外，似乎不愿穿别的衣服。这件朴素的衣服就成了她的霸占，她的世界。她以为只有好看的、红红绿绿的、高贵华丽的衣服才是世界。<br/><br/>　有一天，她喂小孩喝汤，汤汁倒在衣服上面。她花了许多时间，用了许多气力去洗掉这些污渍，却总洗不掉。这时，她才醒悟过来：是神对付她，要脱离这件衣服的霸占。<br/><br/>　在我们的日常生活中，只要稍微查究一下，就必发现许多特别得着我们心爱的事物，成了我们的霸占；我们是否一一对付过这些东西？如果我们总是不对付，恐怕神的手就要伸出来提醒我们。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

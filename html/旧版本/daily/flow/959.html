@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('958')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('960')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 11 课<br />
+主受死的预备</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　咒诅以色列国并洁净圣殿</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>你们若有信心，不疑惑，不但能行无花果树上所发生的事，就是对这座山说，你得挪开，投在海里，也必成就。你们祷告，无论求什么，只要信，就必得着。（太二一21下～22。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主咒诅无花果树并洁净圣殿，指明主关切神的家和神的满足。祂洁净我们，使我们能向神献上正确的敬拜；祂也对付我们，使我们能结果子，叫神满足。我们需要在我们灵里得主洁净，把正确的敬拜献给神，并结果子使神满足。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>向神献上正确的敬拜；祂对付我们，使我们能结果子，叫神满足。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2">bord_su</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2">subj_su</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2">open_su</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2">end_app</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: false,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

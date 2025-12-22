@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('121')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('123')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">舍近求远</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我们有这宝贝在瓦器里，要显明这超越的能力，是属于神，不是出于我们。（林后4:7）</div>
+<div id="CC">We have this treasure in earthen vessels that the excellency of the power may be of God and not out of us.（2 Corinthians 4:7）</div>
+<div id="C">南美洲的巴西，有九个牧羊人结伴离家，要到北美的加州去开金矿。他们动身之时，经过自己的家乡，便在山脚下拾起一袋小碎石，准备在路上用来下棋消遣。他们到了美国，原本想把那袋石子丢到海里，索性就把剩下的几块石子，拿给炼金的人。那人立刻认出，碎石原来是极名贵的金刚石。他们立即赶回家，要去采拾金刚石。可惜一到达家门，才知道那块地已卖给政府，不能再采石了。<br/><br/>　美国内华达州有一个农夫，将自己仅有的一块地卖了，只得着四十二块钱作旅费，便出门去探求金矿。那知自己所卖出的那块地，到了别人手里，一经开采便是金矿、银矿。<br/><br/>　神格一切的丰满，都有形有体地居住在基督里面，而基督又在我们里面；只要我们回到里面，就能摸着基督，得着测不透的丰富。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

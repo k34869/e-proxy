@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('861')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('863')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 16 课<br />
+主赶逐污鬼的职事</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：荣耀的释放。（诗歌246首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我将这些事对你们说了，是要叫你们在我里面有平安。在世上你们有苦难，但你们可以放心，我已经胜了世界。（约十六33。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主在安息日医治被鬼附者—太八16，十二22～28，路十一14～20</p>
+<p class="ot2">1.　堕落的人因着被鬼附着，又瞎又哑，无法赞美神并为神说话。</p>
+<p class="ot2">2.　主赶鬼乃是藉着属灵的争战，捆绑那壮者—撒但。</p>
+<p class="ot2">3.　我们必须藉着禁食、属灵争战的祷告捆绑撒但，使人得着释放—太十七14～21，可九17～29。</p>
+<p class="ot1">二　主管理风海—太八23～27，可四35～41，路八22～25</p>
+<p class="ot2">1.　风里有撒但的堕落天使，海里有鬼—弗六12，太八32。</p>
+<p class="ot2">2.　主超越险恶的风暴，不受搅扰。</p>
+<p class="ot2">3.　主是宇宙的创造主，有超然的权柄，能管理自然的环境，对付空中堕落的天使以及水中的污鬼。</p>
+<p class="ot2">4.　我们在召会这船上，行在世界这风暴的海中，应当呼求主名，信靠主，与主一同安息。</p>
+<p class="ot1">三　主管理鬼—太八28～34，可五1～20，路八26～39</p>
+<p class="ot2">1.　格拉森乃是充满污鬼以及猪群的地方。</p>
+<p class="ot2">2.　主特意到那里，赶出鬼附之人的群鬼，并清除养猪的污秽事业。</p>
+<p class="ot2">3.　我们是神的子民，不该放猪，而该为神牧羊，以合式的祭物献给神—创四2～4。</p>
+<p class="ot1">四　门徒经历跟随主途中的风暴—太十四22～33，可六45～52</p>
+<p class="ot2">1.　今天主在山上，就是诸天之上，而召会是行在风暴海上的船。</p>
+<p class="ot2">2.　我们该藉主的话，信靠主在天上的代求，凭信走在风暴的海浪上。</p>
+<p class="ot1">五　主医治外邦妇人被鬼附的女儿—太十五21～28，可七24～30</p>
+<p class="ot2">1.　迦南妇人凭着对主的信心，使她的女儿得医治。</p>
+<p class="ot2">2.　主启示祂是微小的饼，桌上掉下来的碎渣，作我们的供应与享受。</p>
+<p class="ot1">六　主在安息日医治驼背的女人—路十三10～17</p>
+<p class="ot2">1.　驼背的女人表征鬼把人压制到极点，使人被弯曲，只能向着撒但的世界，不能直立望天。</p>
+<p class="ot2">2.　主打破安息日变形的规条，使受苦的人藉祂禧年的祝福得着释放。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示基督在祂的职事里赶鬼，释放人脱离撒但的背叛和霸占。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>当主来到地上完成祂为着罪人的服事时，祂遇到许多鬼附的事例。人被鬼附，意思就是他被撒但所霸占。所以，主在祂的职事里不只赦免人的罪、医治人的疾病，也赶鬼释放人脱离撒但的霸占和背叛。今天人受撒但霸占，极需要主这方面的职事。在主地上的职事里，他藉着赶出人里面的鬼，来毁坏魔鬼的作为。藉此祂释放人脱离撒但的国，并进到神的国里。祂作这事，不是凭自己的力量、能力，而是靠着神的灵，藉着祷告并运用祂神圣的权柄。愿我们都向主敞开，拯救我们脱离一切的背叛、不服和霸占，并给主完全的地位来占有我们全人。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在安息日医治被鬼附者</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神的儿子显现出来，是要消除魔鬼的作为。（约壹三8。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在马太八章，主医治彼得岳母的那天，到了黄昏，有人带着许多鬼附的到祂跟前，祂用一句话就赶出那些污灵。法利赛人听见了却说，这个人赶鬼，无非是靠着鬼王别西卜。但主说，祂若是靠着撒但赶鬼，那就是撒但攻打撒但了。主也告诉他们，在这地上有两个国—撒但的国与神的国。撒但是这世界的王。他的国就是黑暗的权势。但基督来了，祂要在这地上建立属天的国，并靠着神的灵赶鬼。神的灵乃是神国的能力，神的灵在那里掌权，那里就有神的国，鬼就没有地位。无论在那里，神的灵施行权柄管理反对的局面，那就是神的国。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>藉着神的灵掌权、管治，胜过黑暗的权势。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('498')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('500')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">受论断不解释</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>腓立比二8 既显为人的样子，就降卑自己，顺从至死，且死在十字架上。</p><p>倪弟兄说，‘有一次有人要受浸。有三个弟兄在那里，我年纪最小，王弟兄比我大五岁，还有一个吴弟兄，比王弟兄还大七岁。我就想，王弟兄比我大五岁，所以平日什么事情我都要听他的；现在吴弟兄比他还要大，看他听不听吴弟兄？好，后来我们谈，那知吴弟兄所讲的，我所讲的，他都不听。我们怎样讲，他都不肯听。弄到末了，他说你们不来，我来好了。所以我想，岂有此理，如果能是这样的话，世界上就没有是非了。我就立刻到那一位常带领我的姊妹那里去，问她说，“现在有一件事是这样，你现在怎么说？叫我生气的就是他这一个人没有是非。”她站起来说，“你到今天还没有看见什么是基督的生命么？几个月来，你一直要说你是对的，你的弟兄是错的，你还不知道十字架么？你所争的是事情对的问题，我所争的是十字架生命的问题。”因为我在那里所争的，是对与不对，我没有看见什么叫作十字架。所以她问我：“你想你这样作是对的？你想这样告诉我是对的？以道理来说都是对的，但我问你，你里面怎样？你里面感觉怎样？”我只得承认说，“以道理来说，是对的，但是以里面生命来说，实在是错的。”’喜欢讲理由是己。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

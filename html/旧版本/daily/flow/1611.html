@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1610')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1612')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 15 课<br />
+君尊、神圣的大祭司和更美的新约</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：基督是万有惟一的实际。（诗歌374首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：所以，那藉着祂来到神面前的人，祂都能拯救到底；因为祂是长远活着，为他们代求。（来七25。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　永久、伟大、活着、且能拯救到底的大祭司—来七1～28</p>
+<p class="ot2">1　基督照着麦基洗德的等次，为君尊、永久、尊大的大祭司，将神供应给我们—1～15。</p>
+<p class="ot2">2　基督是照着不能毁坏之生命的大能，为神圣的大祭司，使我们胜过罪，有更美的盼望—16～28：</p>
+<p class="ot2">a　祂是长远活着，为我们代求—25下。</p>
+<p class="ot2">b　祂能拯救我们到底—25上。</p>
+<p class="ot1">二　基督的新约超越旧约—八1～13</p>
+<p class="ot2">1　更美应许之更美的约，同更超越的职事—6。</p>
+<p class="ot2">2　新约的内容—10～12：</p>
+<p class="ot2">a　生命之律的分赐。</p>
+<p class="ot2">b　得着神作我们的神，我们作祂子民的福分。</p>
+<p class="ot2">c　里面认识主的能力。</p>
+<p class="ot2">d　宽恕我们的不义并赦免我们的罪。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督是永久、伟大、活着、且能拯救到底的大祭司，在属天的帐幕里尽更超特的职事；祂所成就的新约，比旧约更美。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>希伯来七章揭示基督照着麦基洗德的等次，成为永久、尊大、君尊的大祭司，在天上的帐幕里尽职事，将经过过程的神供应我们，使我们胜过罪。祂也是神圣的大祭司，长远活着，为我们代求，并拯救我们到底。希伯来八章启示，基督现今在属天的帐幕里，尽属天的执事和更超特的职任；并凭着更美的应许产生更美之约。这更美之约—新约—的内容包括四项：就是生命之律分赐到我们里面；得着神作我们的神，我们作祂的子民；内里认识主的能力；不义得着宽恕，罪得蒙赦免。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　永久、尊大、君尊的大祭司</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来七3：他无父，无母，无族谱，既无时日之始，也无生命之终，乃与神的儿子相似，是永久为祭司的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>基督这位君尊的大祭司乃是永久、永远、无始无终的。希伯来七章三节说，麦基洗德是‘无父，无母，无族谱，既无时日之始，也无生命之终，乃与神的儿子相似，是永久为祭司的’。他是永远的，所以他没有族谱。创世记里，所有重要的人物都有族谱，惟独麦基洗德没有。在神圣的著作中，圣灵主宰的不记载他时日之始，和他生命之终，使他得以正确的预表基督是那永远的一位，永久作我们的大祭司。正如约翰福音所陈明的，神的儿子是永远的，没有族谱。基督就是这样一位君尊的大祭司，将经过过程的神供给我们，作我们每日的供应。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受基督君尊的祭司职分，将神供应给我们。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

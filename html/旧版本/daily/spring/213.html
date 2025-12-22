@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+               <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('212')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('214')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第17课 创造—人的受造奇妙可畏（三）耳朵</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言一8 我儿，要听你父亲的训诲，不可离弃你母亲的指教。</p>
+<p>引题：神为我们造耳朵是为了让我们来听，小朋友们，在家妈妈嘱咐我们的时候，是不是总是觉得他们很唠叨，不想听他们的话，</p>
+<p>课程内容：不听话的小蚯蚓</p>
+<p>小蚯蚓整天呆在潮湿的泥土里，每天都很无聊，每当它听着土地上面小动物们的玩耍嬉戏声，都很羡慕。 一天，它对妈妈说：“妈妈妈妈，我想去泥土上看一看！” 可是妈妈却说：“不行啊！孩子，咱们蚯蚓天生只能在泥土里，离开了泥土，我们不仅有被动物啄食的危险，还会全身缺水干涸而死！” 可是小蚯蚓实在是太渴望了，它悄悄的说：“我就去玩一下，玩一下……” 于是这一天，它趁着妈妈注意，悄悄溜出去了。 它来到泥土上，看见了非常美丽的景色，有芬芳馥（fu）郁（yu）的鲜花，有郁郁葱葱的青草，有翩翩飞舞的蝴蝶蜻蜓，真美！真美！ 它陶醉在美景之中，全然没有发现身后的巨大危险，措不及防下，它被一只小麻雀一口给吞进了肚子。</p>
+<p>其实父母对我们所说的话，我们都应该好好听话，例如，不让我们玩手机，是为了好好保护我们的眼睛，让我们多吃蔬菜，是为了让我们身体健康。父母所说的都是对我们有好处的，父母是神给我们的最好的帮助者。生活中我们就该学习作一个听话，顺服的孩子！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神为人造耳朵来倾听。我们从小就要学习用耳朵倾听父母的话。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：让孩子们举例，当父母要求他们做什么，他们有没有听。例如在过马路时要看两边，该睡觉的时候要睡觉，要多吃蔬菜和必需要吃的东西，清理他们的玩具，穿适当的衣服等等。问问他们如果不听从父母的话会发生什么。父母是神给他们的最好帮助，所以他们应该倾听和服从。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十17 谨守训诲的，乃在生命的途径上；离弃责备的，便失迷了路。</p>
+<p>引题：神为我们造耳朵就是让我们来倾听，听和倾听有什么不同呢，倾听就是认真的听，意味着服从。我们该倾听，留意身边的人所说的话，留意我们所听见的。</p>
+<p>课程内容：大卫（撒上17：12～20）</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神为人造耳朵来倾听。倾听意味着服从。我们应该学习倾听并服从父母和老师。此外，我们应该留意我们所听的。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：举例说明和他们一样年幼的孩子如何服从权柄。例如大卫（撒母耳记上17:12～20上），撒母耳（撒母耳记上3:1－18）等。我们也应该注意听我们所听到的。询问孩子们在学校听到哪些不同的话，听到这些话有什么感受？（例如：闲话、批评和弥补的话；关爱的话和严厉的话；好听的音乐和尖叫声、噪音等等。）</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以赛亚书50:4下 …主每早晨唤醒我；祂唤醒我的耳朵，使我能听，像受教者一样。</p>
+<p>引    题：我们平时在家听见父母说的话都去实行了吗？马太福音 7:24、26.所以，凡听见我这些话就实行的，好比一个精明人，把他的房子盖在磐石上。凡听见我这些话不实行的，好比一个愚拙人，把他的房子盖在沙土上。</p>
+<p>课程内容：王下五章1亚兰王的元帅乃缦，在他主人面前为大，极受尊宠，因耶和华曾借他使亚兰人得胜；他又是大能的勇士，只是患了麻风。9于是，乃缦带着车马来了，站在以利沙的家门口。10以利沙打发一个使者，对乃缦说，你去在约但河中沐浴七次，你的肉必复原，你就必得洁净。11乃缦却发怒走了，说，我想他必定出来见我，站着呼求耶和华他神的名，在患处以上摇手，治好这麻风。12大马色的河1亚罢拿和法珥法，岂不比以色列的一切水更好么？我不能在那里沐浴，得洁净么？于是气忿忿的转身去了。13他的仆人进前来，对他说，我父阿，申言者若叫你作一件大事，你岂不作么？何况说你去沐浴而得洁净呢？14于是乃缦下去，照着神人的话，在约但河里浸了七次。他的肉复原，好像小孩子的肉，他就洁净了。（参王下五）</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：耳朵能让我们听到别人说的话。要学习做一个倾听并实行的人。我们也要小心该听谁的话。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：我们应该听从神的话，遵守祂的话。了解神的话是一回事，倾听和顺服神的话是另一回事。举例说明在圣经中听从神话语的人物或故事，如乃缦（王下5:9－14）、瞎子（约9:1－11）等。相反，列出人不听神话的例子，如人类的第一次堕落（创世记2 :16－17；3:1－19），扫罗（撒母耳记上15:1－11）等。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

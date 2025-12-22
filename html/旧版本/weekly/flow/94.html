@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('93')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('95')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">摇动的彼得成为稳固结实的人</p>
+<p>我还告诉你，你是彼得，我要把我的召会建造在这磐石上，阴间的门不能胜过她。（太十六18）</p>
+<p>在圣经里，我们能找出一个很容易摇动的人，就是彼得。彼得原来名叫西门，因他认识主是基督，是活神的儿子，主就将他改名为彼得（意石头），又对他说，‘我要把我的召会建造在这磐石上。’（太十六18。）磐石是坚固、不能摇动的。这指明召会的根基是稳固、不摇动的。彼得和所有神的儿女在这一个磐石上都是石头，也是不能摇动的。神要得着彼得成为性情坚固的人，来服事、建造召会。然而，当主指示门徒，祂必须上耶路撒冷去，被杀，并且第三日复活时，彼得就拉着主，责劝祂说，‘主阿，神眷怜你，这事绝不会临到你。’耶稣转过来，对彼得说，‘撒但，退我后面去罢！’（21～23。）彼得前一刻才得着启示，后一刻就被撒但利用。彼得看见极高的启示，但一落就落到极低的地步，甚至凭着撒但说话；这是一个动摇不定的性格，绝对无法建造召会。</p>
+<p>在主被捉拿以前，祂豫先警告门徒，他们都要绊跌。彼得就对主说，‘即使众人因你绊跌，我总不绊跌。’主告诉彼得：‘我实在告诉你，今夜鸡叫以前，你要三次否认我。’彼得又对主说，‘我就是必须和你同死，也绝不会否认你。’（二六31～35。）彼得不认识自己，他说起话来坚强有把握，凭他的感觉也真是那样，可是行出来的时候就什么都改变了。他的性情像水一样，一会儿流到这边，一会儿流到那边。当他们到了客西马尼园，他无法同主儆醒，就睡着了。他的灵虽然愿意，肉体却软弱了。（36～41。）当主被捉拿时，他先是‘远远的跟着耶稣’，接着三次否认主，甚至发咒起誓他不认识耶稣。（57～58，69～75。）这说出他的性情是摇动的。彼得三次否认主后，立时鸡就叫了，主转过身来看他。他因着失败，看见了自己的软弱，就出去痛哭。当神怜悯他的时候，他才真正成了彼得，从一个软弱动摇的人，变成了一个稳固结实的人。参主工人的性格，111～122、132页。）</p>
+<p class="title">入霄风筝</p>
+<p>清明时节，有一个小孩子在旷野放风筝。因为风大，没有多久，风筝就已飞得很高，甚至高入云霄。虽然这孩子已经看不见风筝，他还是紧握着线，站在那里。有一老人，从他身旁走过，问道：‘孩子，天快要黑了！你还站在这里不动，作什么？’‘我在这里放风筝。’老人抬头望天，四周一看，说，‘那里有风筝？’孩子答道：‘信不信由你，虽然风筝已经飞入云霄，看不见了；但我手中的线使我觉得上面有个力量牵引着我。’照样，只有认识那看不见的主，才能感觉到有一股向上的力量吸引你，也托住你，保守你平稳的走在主所命定的路上。（参造就故事上册，114页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：仰望神的怜悯，将我们从软弱动摇的人，变化成稳固结实的人。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

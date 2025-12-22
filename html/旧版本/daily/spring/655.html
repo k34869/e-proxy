@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('654')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('656')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">昨晚自缢而死</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>哥林多前书 1:22-23 犹太人是求神迹，希利尼人是寻求智慧，我们却是传扬钉十字架的基督，对犹太人为绊脚石，对外邦人为愚拙。</p><p>查麦士（ThomasChalmers,1780～1847）是十九世纪讲道最好的人，也是最会救人的人。他讲了一个相当好的故事。他说，有一次他到一个人家里去吃晚饭。吃完后，就读经。查麦士是非常有学问的，很会说话，在那里就谈了许多学问上的事。那时有当地两个年纪很大的酋长也在那里。这位酋长也是很有学问的，他们就谈了很久。后来大家回到房间里去。酋长的房间刚刚好在他的对面。查麦士到了自己房间的时候，就听见对面房间里有一个声音，好像是什么东西跌下去。他跑过去一看，看见酋长跌在地板上，已经死了。其余的人也都跑了来。查麦士马上就站起来说，如果我知道有这一件事，我前两个钟头就不谈那么多的话，我的手指头要指给他看永远的事。但是我没有花五分钟的时间，说到关乎这一个人灵魂得救的事。我没有给他一个机会。如果我知道现在我所知道的，刚才我要尽我的力量去告诉他，人需要知道耶稣为他钉死在十字架上。但是现在太迟了！刚才我如果对他讲这些话，你们定规要笑我不得时。现在我说这些话，时候是太迟了。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

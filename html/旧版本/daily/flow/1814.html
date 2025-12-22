@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1813')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1815')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 8 课<br />
+七印—神经纶的奥秘</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：基督快要再临。（诗歌755首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：羔羊揭开七印中第一印的时候，我观看，就听见四活物中的一个，声音如雷，说，你来。我就观看，看哪，有一匹白马，骑在马上的拿着弓，并有冠冕赐给他，他便出去，胜了又要胜。（启六1～2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　头四印—启六1～8</p>
+<p class="ot2">1　第一印：白马与骑马者—福音广传—1～2。</p>
+<p class="ot2">2　第二印：红马与骑马者—战争普及—3～4。</p>
+<p class="ot2">3　第三印：黑马与骑马者—饥荒增剧—5～6。</p>
+<p class="ot2">4　第四印：灰马与骑马者—死亡肆虐—7～8。</p>
+<p class="ot1">二　第五印和第六印—9～17</p>
+<p class="ot2">1　第五印：祭坛底下众魂的呼喊—9～11。</p>
+<p class="ot2">2　第六印：天地震动，大灾难的起头—12～17。</p>
+<p class="ot1">三　插于第六印和第七印之间的异象—七1～17</p>
+<p class="ot2">1　十二支派中十四万四千人受印—被拣选的以色列人在地上蒙保守—1～　8。</p>
+<p class="ot2">2　大批的群众在天上的殿里事奉神—蒙救赎的圣徒被提到天上，享受神的看顾和羔羊的牧养—9～17。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神对受造之物的经纶包含在七印中，本课介绍头四印与第五、六印。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>七印乃是神经纶的奥秘。羔羊揭开七印，是紧接在基督升天之后。基督藉着成为肉体、钉死并复活，就完全够资格在祂的升天里揭开七印所包含神经纶的奥秘。头四印可说是自基督升天直到这世代末了的世界史。头四印包括四匹马以及骑在马上的，犹如一场四马竞赛。紧接基督升天之后，福音、战争、饥荒、和死亡这四件事，便像四个骑马的骑在四匹马上，开始奔跑，一直持续到基督回来。第五印揭示从第一世纪到将近这世代末了基督徒的殉道。他们在阴间的乐园里呼喊，等候主来伸冤。第六印乃是要来超自然灾难的开始，是神对第五印中殉道圣徒呼求的答应。第六印揭开后，主来震动地以及天上的天象；这是大灾难的起头，也是主的日子之前的警告。插在第六印与第七印之间的话，显示神要在地上执行祂的审判时，怎样看顾祂的子民。神要保守祂的两班子民，就是以色列人和蒙救赎的圣徒。在大灾难之前，神要印以色列蒙拣选的遗民，以及开始提接召会中蒙救赎的人。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　第一印与第二印</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启六2:我就观看，看哪，有一匹白马，骑在马上的拿着弓，并有冠冕赐给他，他便出去，胜了又要胜。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>白马象征福音的传扬，不论对神对人，都是清洁、纯一、公义、并可蒙称许的。这里只有弓，没有箭，指明箭已经射出，除灭了仇敌，并且已经得胜，使和平的福音得以构成。历代以来，福音无论传到那里，都征服并胜过了各样的抵挡和攻击，直到今天仍是得胜。红马象征战争的进行。自从基督升天以后，福音不断的广传，同时战争也不断的在人类中间进行。战争造成饥荒，饥荒便带来死亡。这些都要持续到这世代的末了。</p>
+<p>操练实行：与得胜的福音配合，将人带回归神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

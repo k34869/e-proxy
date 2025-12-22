@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1819')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1821')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 8 课<br />
+七印—神经纶的奥秘</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　召会中蒙救赎者的被提</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启七9下～10:看哪，有大批的群众，没有人能数得过来，是从各邦国、各支派、名民族、名方言来的，站在宝座前和羔羊面前，身穿白袍，手拿棕树枝，大声喊着说，愿救恩归与坐在宝座上我们的神，也归与羔羊。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>对那些蒙拣选的以色列遗民，神是用印来保守他们，但仍留他们在地上。然而神保守祂所救赎的圣徒，乃是将他们提接取去。被提不只一次，也不仅有一种，至少有两三种的被提。从第一班得胜者开始，这应该是在第六印之前。然后，神还要继续提接蒙祂救赎的圣徒，最终召会中所有蒙救赎的圣徒，都要从地上被提到天上。在永世里，全召会要得着神的照顾，也要受羔羊的牧养。不过，我们若想要被提到神面前，就必须成熟。我们若仍青嫩，神就要将我们留在田地里，经历苦难直到成熟。愿我们不断藉着吃基督而长大，直到被提进入祂的同在！</p>
+<p>操练实行：藉着吃基督而长大，直到被提进入祂的同在！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"></v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>七印乃是神经纶的奥秘。头四印开始于基督的升天，并要持续到这世代的末了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>请简述头四印的内容。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘七印乃是神经纶的奥秘。（启六1～17，八1～2。）头四印是四匹马的历程：福音的传扬、战争、饥荒和死亡。（六1～8，太二四6～8，14。）这四匹马的历程乃是现今召会时代里世界的历程。紧接基督升天之后，福音、战争、饥荒、和死亡这四件事，便像四个骑马的骑在四匹马上，开始奔跑，一直持续到这世代的末了。从第一世纪开始，经过了这二十个世纪，福音不断的广传。福音是带头的。同时战争也不断在人类中间进行。战争总是造成饥荒，饥荒便带来死亡。这四印开始于基督的升天，并要持续到这世代的末了。（启六12～　17。）’（使徒的教训，105～106页。）</p>
+<p>‘按照圣经所言，我们必须传福音，使罪人得救。我们都必须结果子。虽然我们可能承认这是合乎圣经的，但我们可能没有结任何果子。这意思是说，我们没有骑在白马上。我们若传福音，我们所关切的乃在于神的国。我们今天在地上所关切的是什么？我们应当是那些劳苦使人得救，为着神的国建造基督身体的人。我们大多数的人必须作事维持生活。但我们都能为着主的权益分别一些时间给主。不信的人总是能为着娱乐和消遣分出时间来。但我们信徒有神作我们的娱乐和消遣。我们没有藉口不传福音。我们必须骑在白马上，扩展福音。’（圣经中四个‘七’的预言，29页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>与得胜的福音配合，将人带回归神。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

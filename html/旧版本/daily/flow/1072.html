@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1071')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1073')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 10 课<br />
+保罗最后的尽职</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：当我跑尽应跑道路。（诗歌773首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你起来站着，我向你显现，正是要选定你作执事和见证人，将你所看见我的事，和我将要显现给你的事，见证出来；我要拯救你脱离百姓和外邦人。我差你到他们那里去，叫他们的眼睛得开，从黑暗转入光中，从撒但权下转向神，又因信入我，得蒙赦罪，并在一切圣别的人中得着基业。（徒二六16～18。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　犹太人终极的逼迫（二）—徒二五1～二六32</p>
+<p class="ot2">1.　保罗在非斯都前的分诉与向该撒的上诉—徒二五1～12。</p>
+<p class="ot2">2.　非斯都向亚基帕王的题说—二五13～27。</p>
+<p class="ot2">3.　保罗在亚基帕王前的分诉—二六1～29：</p>
+<p class="ot2">a.　保罗见证主如何向他显现，又给他托付，选定他作执事和见证人—1～16。</p>
+<p class="ot2">b.　主差保罗叫外邦人的眼睛得开，从黑暗转入光中，从撒但权下转向神，又因信入主，得蒙赦罪，并在一切圣别的人中得着基业—17～18。</p>
+<p class="ot2">c.　保罗一生作主活的见证人，没有违背那从天上来的异象—19～29。</p>
+<p class="ot2">4.　亚基帕王的判断—二六30～32。</p>
+<p class="ot1">二　保罗第四次的行程—二七1～二八31</p>
+<p class="ot2">1.　到佳澳—二七1～12。</p>
+<p class="ot2">2.　飓风与保罗对安全的预告—二七13～26。</p>
+<p class="ot2">3.　保罗的超越、智慧对水手兵丁的卑鄙、愚昧—二七27～44。</p>
+<p class="ot2">4.　到米利大岛—二八1～10。</p>
+<p class="ot2">5.　到罗马，结束第四次的行程—二八11～31：</p>
+<p class="ot2">a.　从叙拉古到罗马—11～16。</p>
+<p class="ot2">b.　与犹太首领的接触—17～22。</p>
+<p class="ot2">c.　在罗马的尽职—23～31。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>明白保罗为福音被囚及上诉的经过，并他最后一次的行程。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗为福音的缘故被囚后，先在总督腓力斯面前分诉，后又在新任总督非斯都面前分诉。为了避免被杀害以尽完他的职事，保罗要求上诉于该撒。非斯都将保罗的情形向亚基帕王题说，保罗就在亚基帕王面前，见证主如何向他显现，又给他托付，选定他作执事和见证人。亚基帕王因此判断保罗并没有罪，但保罗为了上诉于该撒，就开始他第四次的行程。这段行程在路加的陪伴下，有了详细、生动的记载。从一路上遭遇的许多患难，特别显出保罗的超越、智慧，与水手兵丁的卑鄙、愚昧。保罗在船上显出他是一个活基督、显大基督的人。在风暴的海上，主使保罗成为与他同船之人的主人，也成为他们生命的保证人和安慰者。他也成为土人的医治者和喜乐。最后他们到了罗马，结束第四次的行程。保罗在罗马尽职两年，全然放胆宣扬神的国，并教导主耶稣基督的事。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　保罗在非斯都前的分诉</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这是照着我所专切期待并盼望的，就是没有一事会叫我羞愧，只要凡事放胆，无论是生，是死，总叫基督在我身体上，现今也照常显大。（腓一20。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗为了拯救自己的性命脱离逼迫他的人，使他能完成他尽职的路程，他必须在非斯都面前分诉。非斯都为了讨好犹太人，狡猾的题议要保罗上耶路撒冷，保罗  　很智慧，刚强的说，他要上诉于该撒。因他若不上诉于该撒，也许会因非斯都不公平的处置而遭犹太人杀害，他的性命就无法存留来跑完他尽职的路程。他上诉于该撒，也是要实现他去罗马　推广主见证的心愿。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在各种环境中显大基督。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('959')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('961')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 12 课<br />
+主的受试验</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主你是那永久磐石。（诗歌151首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：知道你们得赎，…不是用能坏的金银等物，乃是用基督的宝血，如同无瑕疵无玷污的羔羊之血。（彼前一18～19。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主是受察验之逾越节的羊羔—约一29，林前五7，彼前一18～19</p>
+<p class="ot1">二　受祭司长和长老的试验—关于祂的权柄—太二一23～27，可十一27～33，路二十1～8</p>
+<p class="ot1">三　主以三个比喻回答祭司长和长老的察验—太二一28～二二14，可十二1～12，路二十9～19</p>
+<p class="ot2">1.　长子名分转移的比喻—太二一28～32。</p>
+<p class="ot2">2.　神国度转移的比喻—太二一33～46，可十二1～12，路二十9～19。</p>
+<p class="ot2">3.　国度婚筵的比喻—太二二1～14。</p>
+<p class="ot1">四　受法利赛门徒、希律党人的试验—关于纳税给该撒—太二二15～22，可十二13～17，路二十20～26</p>
+<p class="ot1">五　受撒都该人的试验—关于复活—太二二23～33，可十二18～27，路二十27～38</p>
+<p class="ot1">六　受律法师的试验—关于最大的诫命—太二二34～40，可十二28～34，参路十25～28</p>
+<p class="ot1">七　笼住所有试验者的口—关于基督的问题—太二二41～46，可十二35～37，路二十41～44</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识主耶稣被钉十字架之前，受试验并被察验，以证明祂合格被献为神的羔羊。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主耶稣最后一次来到耶路撒冷，并不是来作工，乃将祂自己献上，受那些要将祂治死的人试验和察验。根据出埃及十二章，逾越节的羊羔在被杀之前要彻底的被察验。作为真逾越节的羊羔，基督被察验了几天。祂受祭司长和长老的试验—关于祂的权柄，受法利赛门徒和希律党人的试验—关于纳税给该撒，受撒都该人的试验—关于复活，受律法师的试验—关于最大的诫命，然后祂笼住所有试验者的口—关于基督的问题。这些试验和察验都证明基督是神那完全的羔羊，为着我们的救赎被献在十字架上的那一位。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主是受察验之逾越节的羊羔</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>知道你们得赎，…不是用能坏的金银等物，乃是用基督的宝血，如同无瑕疵无玷污的羔羊之血。（彼前一18～19。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在福音书中我们看见，主耶稣非常谨慎，祂不让自己在指定的时间以前或以后被杀。如果祂在逾越节以前被杀，预言就无法应验。那样的话，祂就不是真的逾越节羊羔。但祂既是真的逾越节羊羔，祂就保守自己，直等祂被献在十字架上的时候来到。在主受死前的这一周，主非常谨慎，每天都回到殿里，目的是要将自己交与犹太人，让他们彻底的察验祂，以证明祂正是那无瑕疵无玷污的逾越节羊羔，为我们被杀献祭，好完成神的定旨。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>珍赏主是无瑕疵无玷污的逾越节羔羊，为我们被杀献祭，好完成神的定旨。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

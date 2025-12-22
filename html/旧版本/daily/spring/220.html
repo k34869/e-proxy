@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('219')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('221')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第18课 创造—人的受造奇妙可畏（四）眼睛</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以赛亚书四十26上 你们向高处举目，看谁创造了这万象…</p>
+<p>引    题：神为我们造的美丽的眼睛，是要我们能看到这个美丽的世界，我们要保护好我们的眼睛。</p>
+<p>课程内容：从前，在一座美丽的大森林里，有一只非常爱学习的小猴。它可爱看书了，它的书架上大约有一百多本书，它每天写完作业后就躺在床上看书，直到妈妈让它睡觉，它才恋恋不舍地把书放下。因此它患上了近视眼，所以大家给它起了个绰号叫“近视虫”，小猴听了还挺不服气呢!</p>
+<p>每天放学，小猴都是急急忙忙地跑回家。一进家门，对妈妈说：“妈妈，我回来了。”话音刚落，它就钻进书房，急匆匆拿出作业，认认真真地摆出了正确的写字姿势。妈妈看见了，还以为小猴把不正确的写字姿势改掉了，嘴角上露出了欣喜的笑容。可当妈妈一走开，小猴又趴在桌子上写作业。</p>
+<p>几天后，小猴的眼睛上课看不清了，经常把6看成9，把5看成2，还闹出了许多笑话哩!有一次，在数学课上，老师把6+5=?写在黑板上，问小猴：“这道题等于几?”小猴回答：“9+2=11。”全班同学听了哄堂大笑，都喊小猴“近视虫”。</p>
+<p>老师把小猴经常出错闹笑话的情况告诉了小猴妈妈，还建议小猴妈妈带小猴去医院看一看眼睛。小猴妈妈听了后忧心忡忡。</p>
+<p>第二天，小猴妈妈带小猴去医院看了眼科医生。医生认真检查后对小猴说：“你得了假性近视!”啊!小猴一听，顿时傻了，冷汗也冒了出来。过了一会儿，小猴担忧地问：“医生，我的眼睛还能好吗?”医生意味深长地对它说：“你想让眼睛好起来也不难，关键要看你有没有毅力。”小猴一听立刻高兴地跳起来：“医生医生，你快告诉我，我怎么做眼睛就会好?”医生看到小猴可爱的样子，呵呵笑着说：“一是少看电视，二是少玩游戏机，三是注意正确的写字姿势。这些你能做到吗?”小猴胸有成竹地说：“我能做到!”从此以后，小猴按照医生说的去做，眼睛渐渐好了，它的外号也就没有了!</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神为我们造眼睛，使我们能看见。借着眼睛，我们可以看到神为我们所做的一切。我们需要照顾好我们的眼睛。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：拿一些神创造的美景的图片，如瀑布，彩虹，草莓，美丽的鸟类和鱼类。神为我们造眼睛，使我们可以看到神创造的所有秀美景色。为了让我们欣赏神创造的一切美好事物，我们需要关爱我们的眼睛，保护我们的眼睛健康。我们需要有充足的睡眠，避免阳光直射，小心锋利的物体，不长时间看手机或电视，以保护我们的眼睛。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>路加福音十23 耶稣转身，暗暗的对门徒说，看见你们所看见的，那眼睛就有福了。</p>
+<p>引    题：眼睛是心灵的窗户.我们眼睛所看到的，会影响我们的思想和感情，所以我们在能看到的东西上要小心。</p>
+<p>课程内容：请不要开错窗</p>
+<p>一个小女孩趴在窗台上，看窗外的人正在埋葬她心爱的小狗，不禁泪流满面，悲恸不已。她的外祖父见状，连忙引她到另一个窗口，让她欣赏他的玫瑰花园。果然小女孩的心情顿时开朗。老人托起外孙女的下巴说：“孩子，你开错了窗户”。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：通过眼睛，外面的东西可以被“带”进我们的心，影响我们的思想和感情。在我们眼睛能看到的东西上我们需要小心。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：我们如此有福，能看到神所创造的人和事—我们的家庭，可爱的动物，孩子们玩耍等等。当我们看到这些令人愉快的东西时，内心就感到快乐。我们也会看到一些让我们悲伤或害怕的东西。在我们所能看见的东西上谨慎是很重要的。我们阅读、浏览、观看的内容，比如可怕的照片，做坏事的人，描绘暴力或邪恶事物的图像，会进入我们里面，影响我们的感觉以及我们对待他人的方式。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一一九18 “求你开我的眼睛，使我看出你律法中的奇妙。</p>
+<p>诗篇十九8下  …耶和华的命令清明，能明亮人眼。</p>
+<p>引    题：知不知道神给人最好的礼物是什么？圣经，我们有沒有读过圣经？读过多少遍呢？圣经是神给我们说的话，这话能使我们有智慧，能快活人心，明亮人眼。</p>
+<p>课程内容：爱读圣经的亚伯</p>
+<p>美国总统林肯-亚伯拉罕，从小生长在一个爱主的家庭里。家庭的环境虽然并不富裕，爸爸妈妈却相信，外面物质的享受并不重要，神才是他们倚靠的源头。因此，林肯从小就读圣经，借圣经来学会认字。有一年秋天，他们所住的那一带地方，流行恶性疟疾，就连马、羊等家中畜养的牲口，也都患了这可怕的疾病。</p>
+<p>一天，亚伯的母亲兰西，也不幸得了这病，发起高烧来；因为烧得太厉害，妈妈的舌头都被灼干了，几乎说不出话来。亚伯和他的姊姊莎拉，不分昼夜的坐在母亲床边，仔细的照顾妈妈。每当妈妈睡着了，姊弟俩就到屋外，找个地方坐下，一同为妈妈祷告。妈妈知道自己不能再活多久，就叫了亚伯过来，对他说：“亚伯，这本圣经，妈妈留给你作纪念！圣经里所写的，都是神给我们的话。好好读圣经，你就会成为一个爱神的人。也要好好听爸爸的话，和姊姊相亲相爱！妈妈希望你成为一个正直且敬畏神的人。”亚伯从妈妈手中，接过这分宝贵的礼物。一会儿，妈妈又对姊姊莎拉说，“莎拉，我把这本赞美诗歌留给你。除了圣经以外，再没有什么比诗歌更重要了。你学会了这里面的诗歌，要常常唱给爸爸和亚伯听。”妈妈说完了话，就很安心的闭上眼睛。第二天早上，太阳出来的时候，母亲平安地去世了。母亲虽然去世得很早，却留给亚伯和姊姊最宝贵的礼物—圣经和诗歌。母亲临终前对他们说的话，深深影响了他们的一生。亚伯就爱上了圣经，勤读圣经，已经把那本圣经翻得快要破掉了，里面的内容也滚瓜烂熟了。</p>
+<p>年幼的亚伯，就知道要善待神所造的每一种生物。当他长大以后，看见美国到处都是贩卖黑奴的情形，再也忍不住了。他相信黑人的皮肤虽然比较黑，生长的环境虽然比较落后，但他们也是神所创造，是神所爱的人。因此他的一生，致力于使黑人重新获得神所赋予人类同等的自由。亚伯的一生，对于任何人不怀恶意，始终以慈悲为怀。他彻底实践了神所赐给我们的诫命：“要爱邻舍如同自己。”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：眼睛能让我们看到并欣赏神的创造。我们也能通过眼睛把事物接受到我们心里。我们应该用眼睛阅读圣经，使神的话能进到我们的心中。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：神给我们眼睛，不仅使我们能观看祂奇妙的创造，也使我们可以接受祂的话语和思想。我们阅读的许多东西中，只有圣经有力量进入我们的心。我们每天应该花几分钟读圣经。告诉孩子们，如果他们的父母能读给他们听，是很好的。如果他们能自己读圣经，那就更好了。可以和他们一起玩游戏，来帮助他们记住圣经各卷的次序。也可以唱圣经上的诗歌“创，出，利，民，申…”</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

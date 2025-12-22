@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('846')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('848')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 13 课<br />
+主生命供应的职事（五）生命的解渴</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　住棚节的意义</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>那灵和新妇说，来！听见的人也该说，来！口渴的人也当来；愿意的都可以白白取生命的水喝。（启二二17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约翰七章那里的住棚节，只是基督的预表，基督才是实际。那个节期并不能满足他们，所以主在节期的末日高声说，凡干渴不满足的，都当到祂那里来喝，好得着真正的满足。在约翰末了一卷书启示录里，那灵和新妇再发出这个呼召，要人在新耶路撒冷里有分于对基督的享受。这指明那些守住棚节的人并不满足；真正的满足乃是接受基督并且饮于祂，使他们不仅得着满足，也满溢出活水的江河。今天在召会生活里，我们是这一班真正守住棚节的人，享受基督作真正的活水，并预尝新耶路撒冷，得着完满的享受与满足。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在召会生活里享受基督是活水，以得着满足，并彰显神的丰富，预尝新耶路撒冷。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2">bord_su</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2">subj_su</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2">open_su</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2">end_app</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: false,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

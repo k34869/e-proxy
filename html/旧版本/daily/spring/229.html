@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('228')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('230')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">又偷又揩</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">免我们的债，如同我们免了欠我们债的人。（太6:12）</div>
+<div id="CC">And forgive us our debts，as we also have forgiven our debtors.（Matthew 6:12）</div>
+<div id="C">有一位替西国教士作饭的大厨师，常常偷他主人的米、面、糖、煤；上市场买菜，也常常揩他主人的钱。明明是一块钱买的东西，回来开账成了一元五角；五十元的，回来开账成了六十五元。因着他能偷能揩，他的太太和儿女的吃穿，可说是小康之家。有一天他得救了，主的光一直光照他，要他向主人认罪。他极其作难，因为若去认罪，就要丢掉饭碗。他想：我偷的那些东西，揩来的那些金钱，早已吃光、用光，那里有钱赔偿呢？然而，圣灵一直在他里面催促，叫他坐立难安。经过很长时间的挣扎，末了主得胜。他就走到教士那里，流着泪说，“主人，我对不起你，我常偷你的东西，带到家里吃用，上市场买菜也常揩你的油。现在我得救了，想要赔偿你，却没有钱，请你收下我作你的奴隶吧，把我的身体作赔偿你的代价，服事你。”那位教士就对他说，“感谢主，主既然赦免了你，我怎能不饶恕你呢？至于你给我作奴隶，我不敢当，只要你好好爱主就够了。”后来这位弟兄，带领不少人得救。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

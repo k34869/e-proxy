@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('285')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('287')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">大厦衰颓</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">贪财是万恶之根，有人贪恋钱财，就受迷惑，<br/><br/>　离弃了信仰，用许多苦痛把自己刺透了。（提前6:10）</div>
+<div id="CC">The love of money is a root of all evils，because of which some，aspiring after money，have been led away from the faith and pierced themselves through with many pains.（1 Timothy 6:10）</div>
+<div id="C">美国弗罗里达州的迈阿密，是富人冬季避寒的胜地。那里有一所大厦，是富豪狄林约翰建造的，精美壮丽，无与伦比，建筑费高达一千六百万美元。这一所雄伟的建筑，现已日渐衰颓。高楼已被风雨侵蚀，精巧飞檐快要脱落。前门钉上木板，大有人去楼空之感。据说，狄林曾将此座大厦，捐给迈阿密市政府。市政府以美金一元八角五分的一张游览券，售与游客入内游览。后来，巿政府仍把大厦退还原主，因为每年的修理与开支过巨，巿政府负担不起。有人估计，狄林这笔建筑费，若是用作布道工作，可以派遣宣教士一千人，到国外布道十六年；若派遣十人，可工作一千年之久；这一千六百万美元，就会产生永存不朽的价值，不至像现在剩下一座快要毁坏、无人接受的房子。<br/><br/>　富足的信徒们，你们的钱财愿意让它锈坏呢，还是愿意让它增添你仁义的果子？</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

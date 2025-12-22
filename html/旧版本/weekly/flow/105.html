@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('104')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('106')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">大卫敬畏神而甘愿忍受逼迫</p>
+<p>那临到你们的试诱，无非是人所能受的；神是信实的，必不容你们受试诱过于所能受的，祂也必随着试诱开一条出路，叫你们能忍受得住。（林前十13）</p>
+<p>大卫在少年时就蒙神拣选，神藉着撒母耳膏他，意思就是要立他作以色列的王。但神为了要得到一个合神心意的王，并没有让大卫立即作王，却花了十几年的时间，不断用各种环境训练他，特别是在他与扫罗王的关系上试验他。因着年轻的大卫信靠神而打败歌利亚，竟遭来扫罗的妒忌，因而想要杀他。</p>
+<p>当大卫从西弗旷野上去，住在隐基底的山寨里。有人将大卫的下落告诉扫罗，扫罗就挑选三千精兵，出去寻索大卫。大卫和跟随他的人藏在洞里的深处，不料扫罗进到洞里，因而落在大卫手里。跟随的人对大卫说，‘耶和华曾对你说，我要将你的仇敌交在你手里，你可以照你看为好的待他；如今那日子到了。’（撒上二四4。）大卫就起来，悄悄的割下扫罗外袍的衣襟。大卫作了这事，心中却自责，因为他敬畏神，知道扫罗乃是神的受膏者。所以他万不敢伸手加害扫罗，也拦住跟随他的人，不容他们起来害扫罗。后来在西弗的旷野，扫罗又来寻索大卫，神将扫罗交在大卫手中。扫罗睡在辎重营，他的枪在头旁，插在地上。跟从大卫的人就求大卫，容他拿枪将扫罗刺透在地。但大卫不肯害死扫罗，因为他敬畏神，知道扫罗是神的受膏者。大卫在面对扫罗的时候，立了很好的次序和榜样，就是他敬重、重视神的权柄。（二一～二四。）</p>
+<p>大卫原来有两次机会可以杀扫罗，但大卫敬畏神，只因扫罗曾经是耶和华神的受膏者，大卫就不敢害他。这种态度和存心令神非常喜悦。大卫在一切的试验中，从不争斗、反抗或反应，只专心信靠神、敬畏神、常常求问神，宁愿自己忍受逼迫也不敢害神的受膏者，他一直是在十字架之下，在任何情形下，都不抱怨、批评、反对或定罪。他学了十字架的功课，成为享受者，并且通过试验，蒙神称许，最后他为百姓所加冠，作神在地上之国的君王。（参撒母耳记生命读经，109、118～126页。）</p>
+<p class="title">一百年后，一万倍繁增</p>
+<p>马礼逊（Robert Morrison）是英国人，当时控制通往远东航道的英国东印度公司，禁止马礼逊自英国启程。他们害怕西方人将福音传给中国异教徒，会损害彼此间有利的贸易关系。然而，马礼逊毫不受阻，他取道纽约，搭乘美国商船三叉戟号，启程前往中国。历经了二百二十天的航程，终于抵达广州。马礼逊绝大部分时间皆是独居，在这偌大的国家中，他仅能带一个人得救。然而，他完成了他首要的工作。经过十七年持续恒忍的殷勤劳苦，他完成一部中文圣经的完整译本，使神写出的话首次呈现在中国人面前。他逝世于一八三四年。尽管没有表面上的成果，他终究不灰心，因为在澳门他的墓碑上所刻的遗言是：‘一百年后，一万倍繁增。’</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：效法大卫敬畏神，在一切的试验中信靠神，甘愿忍受逼迫。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

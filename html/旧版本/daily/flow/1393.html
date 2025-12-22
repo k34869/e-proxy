@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1392')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1394')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 1 课<br />
+推广福音的交通</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　两种不同的传扬</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓一18：这有何妨呢？或假意，或真诚，无论怎样，基督究竟被宣传开了，为此我就欢喜，并且还要欢喜。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗两种不同的传扬基督。第一种是因着嫉妒争竞，出于私图好争，动机并不单纯，想要加重保罗捆锁的苦楚。第二种传扬基督，是因着好意，出于爱，有纯洁的动机。一面，我们需要有保罗这样宽广的心，并以适当的方式，用谦卑和爱心，与向我们敞开的信徒一同分享。另一面，我们不该满意于肤浅的领会。我们的传扬应当回到圣经，探究其中所蕴涵的丰富。愿我们都健康的传扬福音，带进福音的进展。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在福音上有交通，辩护、证实福音，并带进福音的进展。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们经历基督，活基督，都必须以推广福音为因素，在推广福音上有交通，为着福音的进展。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>请说明传扬福音与经历基督的关系。你是否有在传福音中经历基督的见证？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们活基督，以基督为我们生命和生活的原因，乃是为着推广福音。（腓一5。）经历基督作我们的生命与生活，出自于福音的推广。我们越在福音上有交通，与使徒有配搭，就越活基督。活基督的因素乃是福音的推广，这福音的推广是以团体的方式施行的。</p>
+<p>我们经历基督，活基督，都必须以推广福音为因素。若没有这样的因素，我们论到活基督的话都是枉然的。保罗和腓立比人活基督，在里面以基督为生命，在外面以基督为生活，因为他们都在福音的团体交通里。使徒对福音的推广有负担，腓立比人就与他配搭。保罗和腓立比人在推广福音的事上是欢乐的，并且他们都享受基督在里面作他们的生命，在外面作他们的生活。腓立比一章不仅启示因素，也启示结果。因素是与使徒一同推广福音，结果是享受基督，经历基督在里面作我们的生命，在外面作我们的生活。</p>
+<p>享受基督会使你到人家中探访人，传福音。享受基督绝不会使你昏睡，反而使你受激励。当我们享受基督到极点，我们就欣喜若狂。我们越享受基督，就越活动。当我们享受基督时，我们绝不会静默无言。’‘那些传基督是出于嫉妒、争竞和私图好争的，必定不会在推广福音上有交通。我们若没有交通，就不会对基督有经历。…要有这种交通不是一件简单的事，这要求我们把自己、野心、名誉和地位都摆在一边。这是真正十字架的杀死。在推广福音上的交通会杀死我们的己、肉体和天然的人，也杀死我们的野心、愿望、喜好和拣选。这就是为什么在传扬福音上的交通，会使我们经历基督。’（经历基督，17页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在推广福音上，与圣徒们有交通，以经历基督。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

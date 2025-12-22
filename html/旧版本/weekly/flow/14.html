@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('13')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('15')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>孩子们，我们相爱，不要只在言语和舌头上，总要在行为和真诚上。（约壹三18）</p>
+<p class="title">真的操练（三）在爱里持守着真实</p>
+<p>保罗写信给帖撒罗尼迦的初信者时，说到他们离弃了偶像转向神，来服事那又活又真的神；这乃是基督徒生活显着的特征。我们的神是又活又真的，与又死又假的偶像相对。在我们的日常生活中，神对我们，并祂在我们里面，必是又活又真的。祂活在我们里面，管治、引导、并对付我们。祂不会放我们过去，反而在许多事上改正、调整我们，这就证明祂是活的。我们藉着日常的生活行动，就能向我们的亲戚、邻居、朋友证明，我们的神是又活又真的。约翰在他的书信里也有类似的嘱咐：‘孩子们，你们要保守自己，远避偶像。’（约壹五21。）神是真实的，而偶像是虚假的。在神以外任何吸引我们注意，或打岔我们，叫我们离开神的人事物都是偶像。我们需要离弃在神之外的一切人事物，在灵和真实里敬拜，并服事又活又真的神。</p>
+<p>在召会生活，也就是在以基督为人位的新人生活中，保罗嘱咐我们要在爱里持守着真实，使我们得以在一切事上长到祂，就是元首基督里面。（弗四15。）同时，我们要脱去谎言，就是脱去一切虚假的事，而与弟兄姊妹说真实的话。（25。）彼得在他的第一封书信里也说，我们因顺从真理，洁净了自己的魂，以致爱弟兄没有假冒，就当从清洁的心里彼此热切相爱。（彼前一22。）约翰也嘱咐我们，在身体生活中，圣徒间彼此相爱，不要只在言语和舌头上，总要在行为和真诚上。（约壹三18。）换句话说，不可仅有虚空的谈论，更要有爱的实际。因此，在日常生活中，我们要操练认真，不敷衍了事，不草率；学习在面对每件人事物时，都从心里认真、切实的作，像是给主作的，而不是作给人看的。（西三23。）（参帖撒罗尼迦前书生命读经，18～23页。）</p>
+<p class="title">打扫书橱后面</p>
+<p>岳堪纳是一个非洲的孩子，生长在非洲中部一个布道所里，自幼就听福音，接受主耶稣作他的救主。有一天，老师要他打扫教室，他扫到大书橱面前，就想：‘书橱后面不必扫，扫或不扫，无人看见，何必多作此工呢？’但这时又有另一个思想来到：‘在整个教室之中，有一个地方，我可为主而扫，因为他人不会知道。’虽然无人看见，他还是打扫了书橱后面，因为他是为主而扫。他一边扫一边向主祷告：‘主阿，我是为你而扫此地。’这正是歌罗西三章二十三节所说，‘你们无论作什么，都要从心里作，像是给主作的，不是给人作的。’说话作事虚假，别人或许不知道，但是主知道。说话为人真实，或许不为人知，但却是给主作的，不是给人作的。（参造就故事下册，62页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：以基督为人位，在爱里持守着真实，有爱的实际。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

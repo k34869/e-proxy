@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('499')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('501')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第16课  性格—严谨</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书五15 你们要仔细留意怎样行事为人，不要像不智慧的人，乃要像有智慧的人。</p>
+<p>合格的助手</p>
+<p>一位年轻的女护士，第一次给一位赫赫有名的外科专家当助手，复杂艰苦的手术从清晨直到黄昏，眼看患者的伤口即将缝合，女护士突然严肃地盯着外科专家，她说：“大夫，我们用了十二块纱布，你只取出十一块。”“我已经取出来了。”专家命令道，“手术已经一整天，立即开始缝合伤口。”</p>
+<p>“不，不行！”女护士高声抗议，“我记得清清楚楚，手术中我们用了十二块纱布。”</p>
+<p>外科专家不理睬她，命令道：“听我的，准备——缝合！”女护士毫不示弱，她几乎是大声叫起来：“你是医生，你不能这样做！”直到这时，外科专家冷漠的脸上才浮起一丝欣慰的笑容，他举起左手心里握着的第十二块纱布，向所有的人宣布：“她是我合格的助手！”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：严谨的人是一个可以在没有别人帮助的情况下遵守规则的人。当我们去没有父母的地方时，我们必须在我们的行为上严谨。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当我们被邀请到朋友家时，告诉孩子们我们应该如何表现。我们会不会还记得礼貌，对主人说“请”和“谢谢”呢？我们是合适地与朋友分享，还是我们认为我们是客人，就应该享有额外的特权？我们在离开之前帮忙收拾一下，还是让我们的朋友收拾残局？即使父母不在那里，我们是否仍会像他们教导我们的那样？</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇三四13 你要禁止舌头不出恶言，嘴唇不说诡诈的话。作曲对于贝多芬而言，是一项十分艰苦的工作。他写作歌剧《费德里奥》时，为其中的一首合唱曲先后拟定过十种开头。人们熟悉的《命运交响曲》第一乐章的主题动机，也曾在他的草稿中找到过十几种不同的构想。贝多芬常常揣着笔记本，在散步时也从不忘记将突发的灵感记录下来。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：严谨的人是一个可以在没有别人帮助的情况下遵守规则的人。当我们去父母没在的地方时，我们也必须在说话上严谨。 实际应用：和孩子们谈谈当他们的父母不在时，他们是如何说话的。在学校里，孩子们说各种不适当的话，我们不应该不适当地说话。我们要知道什么话该说，什么话不该说，我们需要严格要求自己，即使有时可能非常困难。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：<p>诗篇三四13 你要禁止舌头不出恶言，嘴唇不说诡诈的话。作曲对于贝多芬而言，是一项十分艰苦的工作。他写作歌剧《费德里奥》时，为其中的一首合唱曲先后拟定过十种开头。人们熟悉的《命运交响曲》第一乐章的主题动机，也曾在他的草稿中找到过十几种不同的构想。贝多芬常常揣着笔记本，在散步时也从不忘记将突发的灵感记录下来。</p>
+_app</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书五16 要赎回光阴，因为日子邪恶。</p>
+<p>一次香港最著名的畅销书作家梁凤仪应邀到北京大学作报告，时间是下午3点。当天的上午她应邀参观了中央电视台的一个拍摄基地后，她觉得时间还很充足，就和基地的领导一起共进了午餐。谁知乘车去北京大学的路上塞车了，结果迟到了一小时。</p>
+<p>会议开始后，主持人一再强调:“梁老师迟到是因为塞车。”但是，走上讲台的梁凤仪觉得自己是不可原谅的，她说:“各位同学，我在此向大家诚恳道歉!北京塞车是常事，但我不应该为自己找借口，我应该把塞车的时间计算在内，做好充分的准备。</p>
+<p>如果在座的有一千位同学，我迟到的这一小时，对大家来说，就是浪费了一千个小时的生产力量，影响一千个人的心情啊!我只能盼望你们的原谅!”她的话，不仅赢得了同学们热烈的掌声，更赢得了大家发自内心的爱戴。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个严谨的人是一个可以在没有别人帮助的情况下举止得体的人。在如何利用时间上我们需要严谨。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：谈谈准时和管理时间。我们不仅要准时到学校、开会或其他活动，而且也必须在做作业上严谨。我们应该合理安排时间，使我们每天有足够的时间完成作业。为此，我们放学后不应该花太多的时间玩或吃零食。我们也应该注意不要浪费时间在看电视和玩电子游戏之类的事上。我们应该养成制定长期计划的习惯，每天按计划实行，而不是等到没时间了才开始。一个严谨的人会合理花费时间来作作业和作其他的事。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

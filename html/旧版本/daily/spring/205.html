@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('204')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('206')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">清理旧生活</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>了结已往<div id="CC">若有人在基督里，他就是新造；旧事已过，看哪，都变成新的了。（哥林多后书5:17）</div>
+<div id="CC">If anyone is in Christ，he is a new creation. The old things have passed away; behold，they have become new.（2 Corinthians 5:17）</div><hr/>清理旧生活<div id="CC">在从前的生活样式上，脱去了旧人，……并且穿上了新人。（弗4:22，24）</div>
+<div id="CC">That you put off，as regards your former manner of life，the old man，…… and put on the new man.（Ephesians 4:22，24）</div>
+<div id="C">我们一得救，成了一个新的人，自然就应当有一个新的起头，新的开始，过一种新的生活。为此，我们就必须清理已往的旧生活。保罗在帖前一章九节说到，在帖撒罗尼迦的信徒，他们一信主就离弃了偶像，转向神，为要事奉那又活又真的神。<br/><br/>　神是忌邪的神，绝不许可事奉祂的人跪拜任何偶像，因为偶像的背后，都有鬼魔藏着。所以，我们信主归于神之后，就要立刻离弃、弃绝一切金、银、铜、铁、木、石所刻制和塑造，大小各种形状的偶像。在旧约中神是要祂的百姓，打碎、焚烧一切的偶像。我们属神的人也该如此作，不该将任何偶像留下转送别人。这是得罪神，也败坏别人的事。不仅偶像本身，即使是一切与偶像有关的物件，也都要打碎、焚烧。<br/><br/>　此外，一切与拜偶像并邪恶之事有关的邪污之物，如算命、占卦的书，和带着龙像、龙印的物件，以及各种赌具等物，都要去掉。这些都是撒但魔鬼的表征。我们既是属神、敬奉神的人，无论在我们身上的穿戴，或在我们家中的陈设，以及典藏之物，都不该再有这些邪污之物的形迹。反之，我们的衣着、装饰，和我们的陈设、装潢，都应该叫人看出我们是信主、爱神的人。我们在信主之后，当将所得的不义之财，尽速偿还我们所亏负的人。这会叫我们在人面前有见证，在我们的良心里有平安，使我们配成为一个真正的基督徒。（生命课程）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

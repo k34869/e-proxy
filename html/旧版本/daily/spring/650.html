@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('649')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('651')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">雪夜呼救声</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>哥林多前书 9:16 我若传福音，于我原没有可夸的，因为我是不得已的。若不传福音，我便有祸了。</p><p>有一青年，因为犯罪的缘故，生了肺病，躺在医院中，快要死了。有位年老的仆人前去和他谈道，劝他接受耶稣作他的救主。后来，他接受了主，得救了，心里十分平安快乐。过了几天，那年老的仆人再去看他，见他满面愁容，十分忧伤，就很希奇，问他为了什么？他很伤心的回答说，‘我的年日将完，立刻就要死了。但是当我站在主面前时，主说我是得救了，但是我有什么带去给祂呢？我说我的手是空的阿！我怎能空手去见我主呢？’所以那位青年十二分的难受。那位老仆就对他说，‘弟兄，不要紧，我就用你这句话当题目作一首诗，鼓励人去布道。但愿什么人因着这首诗歌，出外布道得着人，赏赐都归给你。’这就是现在顶出名的‘主若今日接我灵魂，我能坦然见主否’那一首。（参诗歌六六八首。）很多的人受了这诗感动，出外布道。真的！主若今天就收我们回去，你有什么带给祂呢？你有没有救过一个灵魂呢？所以趁我们还有今天，就去抢救灵魂吧！</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

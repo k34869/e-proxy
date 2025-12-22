@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('345')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('347')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">圣别归神</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们这些淫乱的人，岂不知与世界为友，就是与神为敌吗？所以凡想要与世界为友的，就成了神的仇敌。（雅4:4）</div>
+<div id="CC">Adulteresses，do you not know that the friendship of the world is enmity with God? Therefore whoever determines to be a friend of the world is constituted an enemy of God.（James 4:4）</div>
+<div id="C">凡是是神的，和一切属于神、归于神、为着神的，都是圣的；凡是不是神的，和一切不属于神、不归于神、不为着神的，就都是不圣的。我们对付世界的对象，就是这些不圣的。所以测量世界的标准，就是神自己。凡和神合不来的、对不起的、构不上的，那就是世界，就是不圣，也就该对付。<br/><br/>　所以我们该在我们的身上，在我们的环境中，在我们的家庭中，在我们的工作里，在我们的事业上，把每一件人、事、物，都摆到神跟前，看这一个人、这一件事、这一个物，是否是神的？是否是属于神的？是否是归于神的？是否是为着神的？如果还有一点是构不上神的，是与神合不来的，就需要对付，叫它构得上神，与神合得来。<br/><br/>　此外还有两件事，最影响我们对世界的感觉，就是爱神与生命的程度。我们一远离神，就不觉得身上有世界；一亲近神，就发觉身上有许多事物都是世界。而只有爱神的人，才愿亲近神。所以我们要对付世界，就要先爱神。我们爱神越深，对世界的感觉就越敏锐，世界也就从我们身上显出来得越多。一显出来，就会掉下去。这个显出来，就是光照。爱叫我们碰着神，而神就是光，光一来了，就把我们身上的世界照掉了。所以对付世界，并没有律法，只有神是我们的准则，是我们的度量。我们爱神到什么地步，对付我们身上的世界也就能到什么地步。（生命的经历）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

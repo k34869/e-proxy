@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('61')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('63')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>那时，彼得进前来，对耶稣说，主阿，我的弟兄得罪我，我当赦免他几次？到七次么？耶稣对他说，我不是对你说到七次，乃是到七十个七次。（太十八21～22）</p>
+<p class="title">主教导门徒赦免人</p>
+<p>有一次，彼得问主耶稣一个问题：‘主阿，我的弟兄得罪我，我当赦免他几次？到七次么？’耶稣对他说，‘我不是对你说到七次，乃是到七十个七次。’主接着对彼得说了一个比喻：‘诸天的国好比一个作君王的人，要和他的奴仆算账。才算的时候，有人带了一个欠一万他连得银子的来。因为他没有什么可偿还的，主人吩咐把他和他的妻子儿女，并一切所有的都卖了来偿还。那奴仆就俯伏拜他，说，宽容我，将来我都要还清。那奴仆的主人就动了慈心，把他释放，并且免了他的债。但那奴仆出来，遇见一个和他同作奴仆的，欠他一百银币，便揪住他，掐住他的喉咙，说，你所欠的，都要偿还。那和他同作奴仆的，俯伏央求他说，宽容我，将来我必还你。他却不肯，竟去把他下在监里，等他还清所欠的债。那些和他同作奴仆的，看见所发生的事，就甚忧愁，去把一切所发生的事，都完全告诉他们的主人。于是主人把他叫来，对他说，你这恶仆，因你央求我，我就把你一切所欠的都免了；你岂不应当怜悯和你同作奴仆的，像我怜悯你么？主人就大怒，把他交给掌刑的，直到他还清了一切所欠的债。你们各人若不从心里赦免你的弟兄，我天父也要这样待你们了。’（太十八21～35。）</p>
+<p>这比喻启示，我们都是主的奴仆。主在今世藉着疾病或是患难等类的事对付我们，叫我们领悟我们欠主多少，并且需要祂赦免我们。我们求主宽容，主就动了慈心，赦免我们所欠的债，好恢复我们与主的交通。但我们若不肯赦免弟兄，好像这蒙主赦免的奴仆，凶狠的对待那欠他一百银币的同伴，就会使我们的弟兄忧愁，而将这事带到主面前。到主回来时，我们就要受主管教和对付，直到我们从心里赦免弟兄。这含示我们今天若不从心里赦免弟兄，来世就不得进国度。因此主对彼得说，该赦免人到七十个七次。这意思是说，我们必须不计其数的赦免人，而不需要数算或记录你赦免人的次数；一次又一次，我们必须赦免别人。（参马太福音生命读经，685～688页。）</p>
+<p class="title">被神的爱所融化</p>
+<p>有一个人的父亲被人杀了，他定意要报这杀父的仇。然而，他是一个真基督徒。一天，他参加主日擘饼聚会，正好，杀他父亲的仇人就坐在他旁边；他就离开座位，走到外边去。他里面起了很大的交战，是杀那仇人呢，还是进去与他一同擘饼？就在这个时候，神给他看见基督的爱。他看见自己原是神的仇敌，但基督却甘愿受死拯救他。他被神的爱融化了，就擦干眼泪，进去与他的仇敌一同擘饼。当那人出去的时候，他不再看他是仇人，而是他在主里的一位弟兄。神的爱是大的，使我们能爱不可爱的弟兄，甚至于爱我们的仇人。（参爱神，3～4页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：有赦免别人的灵，如同主赦免了我们。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

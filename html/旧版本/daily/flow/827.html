@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('826')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('828')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 11 课<br />
+主生命供应的职事（三）生命的医治与点活</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主你是我生命。（诗歌381首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：那听我话，又信差我来者的，就有永远的生命，不至于受审判，乃是已经出死入生了。（约五24下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　生命医治垂死的人—约四43～54</p>
+<p class="ot2">1.　堕落的人需要主生命的医治，分赐生命给我们必死的身体—罗八11。</p>
+<p class="ot2">2.　凭赐生命的话，并藉信而施的医治—约四50～54。</p>
+<p class="ot1">二　生命点活软弱的人—约五1～47</p>
+<p class="ot2">1.　宗教守律法的亏缺，与神子赐生命的充足—1～9。</p>
+<p class="ot2">2.　宗教敌对生命—10～16。</p>
+<p class="ot2">3.　子与父同工，并赐生命给死人—17～21。</p>
+<p class="ot2">4.　子的四重见证—31～47。</p>
+<p class="ot1">三　生命点活的路—运用灵、接触话、得着生命—约五40，六63，林后三17</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主生命供应的职事能医治人的死亡，赐生命给人的灵、魂、体，并能点活软弱的人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主所行的第二件神迹，乃是临到一个在迦百农垂死的病人，因着他父亲的信，主仅仅藉着他活的话，就使这垂死的病人得了医治。主又在犹太人的节期，来到表征犹太宗教之耶路撒冷羊门旁边的毕士大池子，遇见一个病了三十八年软弱的人。犹太宗教虽然好，有圣城、圣殿、圣经、圣节期、圣安息日和医治人的池子，但对于软弱的人，却毫无帮助。即使在这节期，他也没有快乐和安息，因为他无力行宗教的律法。然而主临到这软弱的人，并以祂复活的生命点活他，使他不仅病得医治，并且被点活，能拿着褥子起来行走。这件事引起宗教的敌对，因为那些守律法的人，虽看见子的四重见证—施浸者约翰的见证、子工作的见证、父的见证、和圣经的见证，却不愿到主这里来得生命。这给我们看见，我们不该把圣经当作知识，却需要运用我们的灵，来接触主的话，好在主的话中遇见活的主，得着主生命的分赐。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　生命医治垂死的人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶稣对他说，去罢，你的儿子活了。那人信耶稣对他所说的话，就去了。正下去的时候，他的奴仆迎见他，说他的孩子活了。（约四50～51。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主耶稣回到祂行第一件神迹的地方—加利利的迦拿，就是脆弱人之地，医治一个垂死的脆弱人。在这事例中，大臣恳求主下去医治他的儿子，主并没有去，却仅仅说话，那孩子就痊愈了。当主说，‘去罢，你的儿子活了。’大臣就相信从主口中说出来的话。而当他在回家的路上，听见他的奴仆说他儿子活了，他和他全家就都相信了。主医治这垂死的孩子，乃是藉着祂说赐生命的话。我们所需要的，就是接受并相信祂赐生命的话。每当我们呼求主耶稣的时候，这位是生命的神圣之灵，便进到我们灵中，使我们的灵活过来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>呼求主耶稣，让是生命的神圣之灵，进到我们灵中，使我们的灵活过来。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

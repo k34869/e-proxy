@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1771')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1773')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 2 课<br />
+行走在金灯台中间的人子</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　今天神的国度。（诗歌751首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经:　我转过身来，要看是谁发声与我说话；既转过来，就看见七个金灯台；灯台中间，有一位好像人子，身穿长袍，直垂到脚，胸间束着金带。祂的头与发皆白，如白羊毛、如雪，眼目如同火焰，脚好像在炉中煆炼过明亮的铜，声音如同众水的声音。祂右手中拿着七星。（启一12～16上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　在耶稣的患难、国度、忍耐里一同有分—启一9～10</p>
+<p class="ot1">二　约翰在灵里所看见的事—11～20</p>
+<p class="ot2">1　七个金灯台—发光的召会—11～12：</p>
+<p class="ot2">a　召会的界限。</p>
+<p class="ot2">b　金灯台的属灵意义。</p>
+<p class="ot2">2　人子—活的基督—13～18。</p>
+<p class="ot2">3　七星—众召会明亮的使者—16，20。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督是行走在金灯台中间的人子</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录是为着那些‘在耶稣里’受患难之苦的人。使徒约翰为神的话和耶稣的见证被放逐在拔摩海岛，他在那时领受了本书的启示。因着他是完全分别出来归给神，也是一个在灵里的人，他领受了神所赐给他关于召会、世界、大巴比伦、以及新耶路撒冷，四个最大的异象。在关于召会的异象里，我们看见召会的地方立场及地方的界限；七个金灯台乃是召会的表征，金表征父是本质，台表征子是父的具体化身，而灯表征那灵是父在子里的彰显。因此，三一神的意义含示在金灯台里。不只这样，在启示录里，灯台有七个，这就说明台和灯，就是基督和那灵，繁殖为众召会。召会不只在宇宙中是一个，也在各城市中有地方的彰显。众召会乃是耶稣的见证。在众召会中间行走的乃是人子基督，祂身穿长袍，直垂到脚，胸间束着金带。表明祂如今在祂的人性里，在爱里，如同大祭司照顾众召会。祂是亘古常在的；并且祂的眼目如同火焰，来鉴察并搜寻，使祂藉着光照施行审判，为着神在地上的行动。祂右手中拿着七星，那七星就是七个召会的使者，表示在召会堕落的黑暗时期里，祂需要众召会中属灵的人，担负‘耶稣的见证’的责任。祂自己也必为着祂的见证担负责任。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　有分耶稣的患难、国度和忍</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启一9:我约翰，就是你们的弟兄，和你们在耶稣的患难、国度、忍耐里一同有分的，为神的话和耶稣的见证，曾在那名叫拔摩的海岛上。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>国度乃是在神圣性情里的属天管治。主耶稣在地上时，国度与祂同在；而我们藉着重生进入了这国度—今天的召会生活就是国度，我们乃是在属天的管治之下。因此，今天在耶稣的国度里，并不是一种荣耀。但当在耶稣里的国成为在基督里的国时，那就是荣耀的时候了。我们一面藉着在祂的患难、国度、忍耐里一同有分而等候祂的回来，一面受管教、受训练、受装备，使我们配作祂争战的军队。这是何等有福！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>藉着在祂的患难、国度、忍耐里一同有分而等候祂的回来。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

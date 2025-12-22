@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1805')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1807')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 6 课<br />
+在老底嘉的召会，与关于七个召会的结论</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　凡有耳的，就应当听</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启三22：那灵向众召会所说的话，凡有耳的，就应当听。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>对这七个召会，七次主都说同样的话：‘那灵向众召会所说的话，凡有耳的，就应当听。’每个召会的情形，很多时候可能产生在一个召会身上。主告诉我们，凡有耳、会听主话的，就应当听。有许多人是没有耳、不会听主话的人。我们如果有耳朵，就应当听。求神给我们走一条正直的路，无论如何，我们要拣选非拉铁非的路。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>求神让我们走正直的路，拣选非拉铁非的路。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主在启示录二、三章向得胜者发出严肃的呼召，我们需要答应祂的呼召，被兴起来开展主的见证和召会的恢复。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在召会历史中，我们渴慕成为那一班人？我们要怎样追求成为得胜者？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘基督徒的生活加上召会生活，完全就是一个得胜的生活。得胜这件事开始于我们相信主。…我们藉着相信基督而得胜，以承受永远的生命，并成为神的众子，直到永远。…在启示录二、三章的得胜，使得胜的信徒够资格有分于千年国的享受，作神时代行政里特别的赏赐；在二十一章七节的得胜，使所有的信徒够资格有分于新耶路撒冷，连同其中一切的享受，作神永远救恩共同的分。…</p>
+<p>在召会堕落和荒凉的期间，为了要维持并继续召会所作关于基督的见证，使召会能恢复到她原有的情形，得胜者是极其需要的，这也是主所渴望的。为此，主在启示录二、三章写给七个召会的七封书信末了，都不断的向得胜者发出这严肃的呼召。历代以来，已经有许多信徒答应祂的呼召，并且很强的被兴起，来开展主的见证和召会的恢复。’　　　‘启示录给我们看见，没有得胜者，基督就无法回来。我们知道基督是我们的道路。（约十四6上。）但从祂内心的深处，基督会告诉我们，得胜者乃是祂的路。没有基督，我们就没有路，但今天没有得胜者，基督就没有路。得胜者乃是让基督回来的路。</p>
+<p>启示录是一卷说到终极完成神经纶之得胜者的书。没有得胜者，神就没有路完成祂的经纶。…在主恢复中的众召会，不该被算为得胜者的众召会。我们不该以为在主恢复中的众召会里，每一个人都是得胜者。但我们在主恢复中的众召会里，会加强并帮助我们成熟成为得胜者。这恢复是主帮助我们作得胜者的路。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>留在主恢复中的众召会里，这会加强并帮助我们成熟成为得胜者。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

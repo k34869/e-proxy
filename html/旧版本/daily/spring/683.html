@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('682')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('684')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">玻璃窗反射太阳光</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>提后3:16　圣经都是神的呼出，对于教训、督责、改正、在义上的教导，都是有益的，</p><p>某店东在报纸刊登广告，征一店员。报名应征者五十余人。届时，各人携带荐书前来应征。店主却选用了一个未带荐书的人。朋友都希奇他的选择，问他说，‘有荐书的，你皆不用，而独用此无荐书的，到底什么道理？’店主说，‘你们以为他没有荐书么？他的荐书正多哩！他入门时，先在门外把鞋擦干净，证明他是好整洁而守秩序，此其一。此外，我故意将一书丢在地上，以观察众人如何处理。其他看见的人，一脚踢开就过去了；但是他却屈身拾置台上，证明他是小心工作的人，此其二。他一入门即脱帽，证明他懂礼貌，此其三。他在房中见一老人进来，立即起身让坐，证明他恭敬而顾到别人，此其四。当我挨次问话时，他静候而不争先，证明他能谦逊，此其五。我和他谈话时，见其衣服整齐，头发梳光，牙齿皓白，指甲无积垢，证明他勤于整洁，此其六。凡此种种，虽非笔写，岂不是最好的荐书么？基督徒一举一动都要有新生的样式，始能将天国大使的荣耀彰显出来！</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

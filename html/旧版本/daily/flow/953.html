@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('952')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('954')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 11 课<br />
+主受死的预备</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：一件美事。（新歌颂咏。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：为什么难为这女人？她在我身上作的，是一件美事。因为常有穷人和你们同在，只是你们不常有我。她将这香膏浇在我身上，是为安葬我作的。（太二六10下～12。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主第三次揭示祂的钉死与复活—太二十17～19，可十32～34，路十八31～33，十二49～50</p>
+<p class="ot1">二　国度宝座与十架苦杯—太二十20～28，可十35～45，参路二二24～27</p>
+<p class="ot1">三　伯大尼—召会生活的小影—约十二1～2，太二六6，可十四3上</p>
+<p class="ot2">1.　是由复活的生命所产生—由耶稣从死人中所复活的拉撒路所表征。</p>
+<p class="ot2">2.　是由蒙洁净的罪人所组成—由患麻疯的西门所表征。</p>
+<p class="ot2">3.　外面是困苦的—由伯大尼这困苦之家所表征。</p>
+<p class="ot2">4.　里面是在主的同在中与主同筵。</p>
+<p class="ot2">5.　姊妹比弟兄多。</p>
+<p class="ot2">6.　各有不同的功用—马大服事、拉撒路作见证、马利亚爱主。</p>
+<p class="ot1">四　爱主者抓住机会爱主—太二六7～13，可十四3～9，约十二3～8</p>
+<p class="ot1">五　主骑驴进耶路撒冷—太二一1～11，可十一1～10，路十九28～38</p>
+<p class="ot1">六　主为耶路撒冷哀哭—路十九37～44，可十一11</p>
+<p class="ot1">七　咒诅以色列国并洁净圣殿—太二一12～22，可十一12～24，路十九45～46</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主耶稣为完成神的旨意而往耶路撒冷去，预备祂的受死。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主耶稣完成祂在加利利的职事之后，就预备上耶路撒冷，去完成祂职事中最重要的部分：受死并复活，以完成神的旨意。主渴望藉着死，将祂里面神圣的生命释放出来，如同火丢在地上，烧着地上的人。途中主向门徒第三次揭示祂的钉死与复活，但门徒不能领会，反而充满了地位的野心。主因此启示门徒，要有分于国度的宝座，需要先接受十字架的苦杯。主也向他们启示，祂来不是要受人服事，乃是要服事人，并且要舍命，作多人的赎价。主进耶路撒冷之前，先到了伯大尼西门的家里，这家由罪人以及爱主的人所组成，显示出召会生活的小影。当主进耶路撒冷时，祂启示自己是温柔谦卑的君王，骑着驴和驴驹，受到百姓和门徒热烈的欢迎。但主为耶路撒冷哀哭，并洁净圣殿。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主第三次揭示他的钉死与复活</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>于是我说，看哪，我来了，神阿，是要实行你的旨意。（来十7上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主在往耶路撒冷去的路上，第三次向门徒揭示祂的钉死与复活。主是父荣耀的彰显，然而主在地上生活的三十三年半间，祂神性的荣耀是遮藏在祂肉体（人性）的外壳里。惟有一次，主带门徒上了高山，那时祂在山顶上变化形像，祂神性的荣耀曾向祂的门徒短暂的显现。因此主受困迫和拘禁，祂渴望受死的浸，使祂神性的荣耀得以释放出来。主知道祂要藉着死，在复活里得荣耀，并释放出祂神圣的生命，产生许多弟兄作祂的彰显。因此祂轻看羞辱，自愿前往耶路撒冷，被交与撒但所霸占的犹太首领，被他们定罪以至于死。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>珍赏主的钉死与复活，释放神圣的生命，产生许多的弟兄。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

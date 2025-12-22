@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('119')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('121')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">深（二）　经历深：经历深厚不肤浅</p>
+<p class="title">基督丰富的量度是阔长高深的</p>
+<p>使基督藉着信，安家在你们心里，叫你们在爱里生根立基，使你们满有力量，能和众圣徒一同领略何为那阔、长、高、深。（弗三17～18）</p>
+<p>以弗所三章十七至十八节给我们看见，基督的量度是阔、长、高、深。这是宇宙的量度。我们经历基督，先是经历祂所是的阔和长，这是平面的。当我们在基督里长进时，就经历祂丰富的高和深，这是垂直的。我们对基督的经历，不该只有一度，像一条线；乃该有二度，像一平面。我们对祂若只有‘线’的经历，就容易一直走到极端。比如，有的基督徒圣经知识渊博，却不大祷告；有的只爱祷告，对圣经少有认识。有的人以为只要留在家中享受主就可以，不必参加召会的聚会。相反的，有些人只顾聚会，没有留下时间在家里祷告、读经、享受主，这也是个极端。我们要经历基督的宇宙量度，就需要召会生活，并与身体的众肢体一同经历基督。我们若在召会生活中经历基督的量度，就会逐渐被织成‘地毯’，而不会是‘线条’；并且我们能经历基督的高和深。至终，我们对基督的经历，就从二度进到三度，从‘平面’进到‘立方体’。立方体是扎实的，在三个方向都有许多的线来来去去。在会幕和圣殿里的至圣所都是立方体，而新耶路撒冷将是一个永远的立方体。当我们成为一立方体时，我们就不倒也不破。</p>
+<p>十七节的‘安家’一辞，指明基督要深深安家在我们全人里面。当我们得加强到里面的人里，就为基督开了一条路，在我们里面扩展，从我们的灵扩展到我们心思、情感、意志的每一部分。基督越在我们里面扩展，祂就越在我们里面定居，在我们里面安家。这就是说，祂占有我们里面之人的每一部分，据有这些部分，并且用祂自己浸透这些部分。基督安家在我们心里，意思就是祂使自己定居在我们的心思、情感、意志和良心里面。基督渴望安家在我们心里，占有我们里面之人的每一部分。因此，我们里面的人，需要被基督浸透、据有、占有并充满。这使我们能满有力量，在召会生活中，与众圣徒一同领略基督那阔长高深的宇宙量度。（参以弗所书生命读经，345～349页；新约总论第五册，570～571页。）</p>
+<p class="title">海水倒在蚬壳里</p>
+<p>奥古斯丁有一天在海边散步，默想三一神的真理时，看见一个小孩不断的将海水注入一个蚬壳里面（这壳中间有一个洞）。奥古斯丁就问他说，‘你在作什么？’孩子回答说，‘我要把所有的海水倒在这个蚬壳里面。’奥古斯丁突然觉悟，自己也像这个孩子一样。哦！谁能藉着理智来明白三一神的真理呢？又有谁能测得透基督的丰富，是何等的阔、长、高、深呢？（参造就故事下册，81页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在召会生活中，与众圣徒一同领略基督那阔长高深的宇宙量度。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

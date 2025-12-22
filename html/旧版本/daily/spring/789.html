@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('788')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('790')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">你所爱的人病了</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>耶利米哀歌 3:22</p><p>我们不至消灭，是出于耶和华的慈爱，因祂的怜恤不至断绝；</p><p>It is Jehovah's lovingkindness that we are not consumed, For His compassions do not fail;</p><p>一七○九年二月九日，卫斯理约翰父亲的住宅正当午夜突然失火。全家的人仓皇逃出，只有小约翰留在火窟中。那时，他还只有五岁，沉睡未醒。当他醒时，火焰已经延及楼梯。他见不能由此下楼，急忙跑往窗边，爬到一个箱子上。他的父亲想要冒火上楼救出他的儿子，但因火势猛烈，不能由梯而上。大家都想这个孩子不免要遭难了。正当这时，在寝室的窗前，有一个人爬在另一个人的肩上，把他从窗户里救了出来。即刻工夫，屋顶就倒塌下来了。父亲的心满了感谢，向那些帮忙搬运东西的人狂喊说，‘各位邻居快来，让我们跪下感谢神，祂叫我的八个孩子一个都不损失。随这房子烧毁罢，我是尽够富足了！’照样，世界和其上的事物都要过去，只有我们这些蒙救赎的人在天父眼中看为宝贝。‘论到世上的圣民，他们又美又善，是我最喜悦的。’（诗十六3。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

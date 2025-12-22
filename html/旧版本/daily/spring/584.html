@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('583')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('585')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第28课  性格—倾听</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二2上 侧耳听智慧，倾心求聪明。</p>
+<p>《骄傲的吉吉》</p>
+<p>春天到了，大树幼儿园将要举办一个"爱护环境，热爱植物"的主题会，以此鼓励大家都来保护树木。</p>
+<p>这天猫头鹰老师挑选了各种各样的植物种子，让小朋友带回去种，小朋友们都拿到了自己喜欢的植物猫头鹰老师为大家详细的讲解如何种好植物！小朋友们听得很是认真，但唯独猴子吉吉没有耐心，总是插话，挺不进去，自认为没什么，挺简单的！回家后，大家都在照老师的方法细心的照顾着自己心爱的植物，各自的植物也一天天的长大了，可是吉吉呢 ！刚长出来的芽儿也枯萎死掉了！</p>
+<p>吉吉没有听老师的讲话，而是照着自己的意思，为小种子浇水有时一天浇水好多次，有时忘了，好几天没浇水，也不晒太阳，就这样，长出来的芽儿也枯萎死掉了！</p>
+<p>吉吉最终没能参加学校举办的主题会！吉吉后悔没听老师的话！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个性格好的人是一个会倾听他人的人。当别人告诉我们怎样作某些事时，作一个细心的倾听者是很重要的。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当老师在课堂上教你们怎样作东西时，一个好的倾听者会仔细听老师讲完，然后才去作。即使他们认为自己知道该怎么作，他们也会倾听所有的指导，并且尽最大努力照着指导去作。想一想让孩子们玩一个关于倾听的游戏。给孩子们一系列的指令，比如说“某某说”或“重复出我说的话”来展示倾听的重要性。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>愚妄人所行的，在自己眼中看为正直，惟智慧人肯听劝戒。 箴言十二15</p>
+<p>《亡羊补牢》从前有个牧民养了几十只养，白天放牧，晚上赶进一个用柴草和木桩等物围起来的羊圏内，一天早晨，这个牧民去放羊，发现少了一只，原来羊圈破了一个窟窿，夜间有狼从窟窿里钻了进来，把一只羊叼走了！</p>
+<p>邻居劝他说，赶快的羊圈修一修，堵上那个窟窿吧“</p>
+<p>他说羊已经丢了,还去修羊圈干什么呢？他没有接受邻居的好心劝告。</p>
+<p>第二天，他去放羊，发现又少了一只羊，原来狼又从窟窿里钻羊圈，又叼走了一只羊，这位牧民很后悔没有接受邻居的劝告，去及时采取补救措施，，于是他赶紧堵上那个窟窿，又把整体进加固，把羊圈修的牢牢实实的，从此，这个牧民的羊再也没有被野狼叼走过。</p>
+<p>小朋友们，范了错误，遭到挫折，这是常有的现象，只要能认真吸取教训及时采取补救措施，就可以避免继续犯错误，遭受更大的损失！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个性格好的人是一个会倾听他人的人。当别人教导、纠正或训练我们时，作一个好的聆听者是很重要的。我们需要愿意听取指责。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：当你的教练解释如何练习时，你会注意听吗？你会不会和你的队友聊天，炫耀知道怎么作？你会按照要求进行训练吗？当钢琴老师在某段音乐上纠正你时，你会倾听并作出改变吗？如果你作错了事，妈妈责备你，怎么办？你如何处理这种指责？你为自己辩护，甚至反驳她，还是接受她的话？一个好的倾听者是一个愿意倾听、遵照指示去改正的人。他愿意听取指责，不争辩、不生气，不找借口。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二一23 保守口与舌的，就保守自己免受灾难。</p>
+<p>《父与子》有一对父子，一见面就争吵不休，儿子嫌父亲啰嗦，父亲嫌儿子不听话，总之是话不投机，见面说不上几句话就不欢而散。一次儿子说：“爸爸，你从来没有认真听我说过一句话，我现在只要你把我说的话重复一遍就行。”</p>
+<p>父亲答应了。当父亲重复了儿子的话，才发现儿子原来这么懂事，父子间关系变得非常融洽。后来，这位父亲在工作上也开始认真倾听下属的话，企业业绩开始不断上升。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个性格好的人是一个会倾听他人的人。当别人告诉你一些非常重要的事情，或者当他们向你倾诉的时候，作一个好的倾听者是很重要的。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：当你的朋友或父母告诉你一些重要的事情时，你应该全神贯注的去听。你不应该分心，作其他的事，或注意无关的事。你也不应该急于告诉他们你的看法。一个好的倾听者在谈话时不会打断别人，也不会以为他们知道别人想说什么。他们认真倾听，试着理解别人所说的，等到他们说完才会发表自己的想法。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

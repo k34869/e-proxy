@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('205')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('207')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第16课  创造—人的受造奇妙可畏（二）嘴巴</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言八6~7上 你们当听，因我要说尊高的事；我张嘴要论正直的事。我的口要发出真理…</p>
+<p>课程内容：神给我们造了嘴巴，我们嘴巴的功用不仅是吃东西，还能说话！每个人都会说话。但是我们在说话的时候要注意说话时所使用的词。我们要要学习使用有礼貌的话。学习说对不起，没关系，请，对不起！“对不起”与“没关系” 书法课上，小亮不小心把毛笔尖碰到了小丽新买的白衬衫上。霎时，小丽见自己的白衬衫被染黑了，立刻脸胀得通红。小亮慌忙说道：“对不起，我不是故意的，原谅我可以吗？下课后，我帮你洗干净。”小丽温柔地说：“没关系，以后注意点就行了。”一句简简单单的“对不起”“没关系”让一场同学之间的矛盾化为无形了，这就是文明礼仪的魅力。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神给人造了嘴巴可以说话；这使人与动物不同。因为我们能够说话，所以我们说话时要注意所使用的词。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：所有动物都有嘴巴，但只有人类的嘴巴能通过说话交流。一些驯兽师试图训练动物，比如黑猩猩说话。但是没有动物能像人一样说话。它们没有产生语言所必需的生理结构，它们的大脑没有掌握语言的能力。让孩子们说出不同的动物和它们发出的声音。指出这些动物都没有用语言交流的能力。神唯独创造人有说话的能力，所以我们需要小心从我们嘴里说出的话。我们应该用嘴巴说出友好、礼貌的话，比如“谢谢”、“请”和“对不起”。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书四29 败坏的话一句都不可出口，只要按需要说建造人的好话，好将恩典供给听见的人。</p>
+<p>课程内容：神给我们造了嘴巴，不仅可吃东西，也可以说话。每个人都可以说话，所有的动物也都有嘴巴，但只有人类的嘴巴能通过说话交流，我们要用嘴巴说出友好礼貌的话。早晚要向父母问好（早上好，晚安，）。出去玩和回来要和父母说，要告诉父母。对父母长辈说话要恭敬，不惹父母长辈生气，大人问话时要认真听并有礼貌的回答。家中来客人时要热情接待，有礼貌的称呼问好，家长同客人谈话时不打扰，不插嘴。别人帮助时要说“谢谢”，求别人帮助时要说“请”，得罪别人时要说“对不起”。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神给人造了嘴巴可以说话；这使人与动物不同。通过谈话，我们可以表达自己的想法和感受，与他人交流。因为我们被造有语言交流的能力，所以我们说话时要小心我们的用词。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：仅英语就有100多万个单词。为了说明我们可以处理多少单词，想出20个单词，让孩子们识别近义词和反义词。例如，“美丽”这个词，近义词可以是“漂亮”或“可爱”或“迷人”，反义词可以是“丑陋”或“冒犯”。强调所有这些词语都表达出我们的想法和情感，会赋予相对应的意义，我们应该小心说什么话。思考在我们交流时如何选择用友好的、积极的词，而不是消极的、伤害性的词。另一个可行的活动是玩哑谜，强调当我们不能说话交流时出现的困难。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>经    文：从婴孩和吃奶的口中，建立了能力…（诗篇8:2上）</p>
+<p>颂赞和咒诅从同一个口里出来，我的弟兄们，这是不应当的。（雅各书3:10）</p>
+<p>课程内容：神给我们造了嘴巴，我们该说礼貌的话，积极的话，还要说神的话。我们早上要晨兴，祷读神的话，我们要唱诗，歌唱赞美神的话，还要见证，申言为主说话，使我们的嘴巴分别出来，嘴巴干净，使神喜欢。生活中，我们每天要操练不说闲话，不说谎话，不一口两舌（蛇），不说败坏的话，不说粗鄙的戏言，</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：神给人造了嘴巴可以说话；这使人与动物不同。人可以用嘴巴祷告、赞美、感谢神，和别人分享神。我们的嘴巴该用来说这些积极的事，而不是消极的事。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：让孩子们分享他们所学的关于神的一些东西，例如，神是爱，祂爱我们每个人；神是无所不知的，什么也不能向祂隐藏；神是公义的，无论祂做什么都是对的；神给我们造了良心，使我们能分辨对错等等。讨论这些关于神的事是如何的奇妙，我们应该为此感谢神，并与别人分享。人们的嘴巴可能会被“肮脏”和“不干净”的东西充满，但我们常说神的话，来使我们的嘴巴“干净”。神不喜欢我们的嘴巴一会赞美祂，一会说脏话。正如没有人愿意从同一个泉中一天喝甜水，另一天喝苦水。圣经告诉我们，我们的嘴巴不该既说祝福的话，又说诅咒的话。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

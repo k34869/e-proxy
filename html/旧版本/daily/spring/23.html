@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('22')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('24')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">沾光走路</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你的话是我脚前的灯，是我路上的光。（诗119:105）</div>
+<div id="CC">Your word is a lamp to my feet and a light to my path.（Psalm 119:105）</div>
+<div id="C">早期四川的交通不便，常常需要走石板路，或是山上的羊肠小径。若在夜间，又下着雨，走这样的路，真是非有亮光不可；有时即使是一点小火光也是宝贵的。一次，有位弟兄就在这样一个雨夜走路。他住在山顶，当时手里没有手电筒，连一点小火光也没有。在黝黑的夜里，路上都是烂泥浆和小水洼；他又戴着一副不合度数的眼镜，摸索着前进，真是举步维艰。正在这时，忽然看见后面远处有人拿着灯火过来。他就决意停下来，让那人先行，这样便可沾他一点光。可是走不到几步，那人转入另一条小路上，他只好“望火兴叹”。没过多久，又有另一个人，拿着手电筒赶上了他。他紧跟在那人后面，希望赶快结束这次可怕艰苦的行路。然而，亮光究竟不在自己手中；所以不到半里路，已被那人远远抛在后面。就这样沾了好几个人的光，直到深夜，方才满身泥浆，疲惫不堪的回到家。<br/><br/>　圣经说，“黑夜已深，白昼将近。”（罗十三12。）信徒处于今天的世代，是在黑夜里赶路，必须自己有亮光。可惜许多信徒，在神的话语上自己没有亮光和启示，总是沾着别人的“光”行路，听听这人，跟跟那人，始终不会直接跟从神。弟兄姊妹，只有神的话是我们脚前的灯，路上的光；我们必须殷勤虔读祂的话语。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

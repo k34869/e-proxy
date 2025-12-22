@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('288')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('290')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">倪弟兄去建瓯(三)</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们要先寻求祂的国和祂的义，这一切就都要加给你们了。（太6:33）</div>
+<div id="CC">Seek first His kingdom and His righteousness，and all these things will be added to you.（Matthew 6:33）</div>
+<div id="C">倪弟兄由建瓯要回家时，一共只剩下十二角。他买了约一元的东西，还剩两角。所以，聚会完了，他便一直祷告。主日晚上，有一位鹿腓利弟兄请他吃饭。对他说，“倪弟兄，这一次你上来，我们得了很大的帮助，你回去的路费，好不好由我来负责。”他一听见这话，一面快乐，一面觉得不行接受。就说，“已经有一位负责了。”鹿弟兄听见这话，说了一声对不起，就过去了。他离开时就很懊悔，因为这一件事，给他回绝了。然而他一面祷告，一面心里很平安。第二天，他要走，口袋只有两角钱，没有办法应付船资，他在那里相当作难。魏弟兄和他家里的人，都来送行，魏弟兄和他一同走，东西已经先挑走了。他就祷告说，“主啊，你把我带到建瓯来，你不能让我回不去；是你负我的责任。如果我错了，我肯承认我的错，但是我不相信我错了，因为你说，‘你给人，就必有给你的。’”祷告完，走到半路上，腓利弟兄派人送一封信给他，信上说，“我知道有人负责，但是神叫我觉得，在这一次你来建瓯的事上，我应当有分。你好不好让一个年长的弟兄，有一点分在里面。请你收下这一点钱。”他接受了这钱。对神说，“神，这一个时候的钱，是对的。”他就用这钱作路费；并且回来后，还有余钱印一期复兴报。<br/><br/>　“你们要给人，就必有给你们的。”（路六38。）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('102')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('104')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">食人鲸</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">一人……能追赶他们千人，二人……能使万人逃跑。（申32:30）</div>
+<div id="CC">One chase a thousand，and two put ten thousand to flight.（Deuteronomy 32:30）</div>
+<div id="C">在南极洋里有许多食人鲸，常常是一百多条成群的游来游去。它们有巨大的头和嘴巴，据说还有世界上最厉害的一副牙齿。海豹和企鹅只要被它们可怕的牙齿一咬，立刻就丧命。有一个探险者，一次拿着摄影机站在浮冰上，准备拍摄食人鲸的照片。起初他发现它们常从海里抬起头来，好像在察看四周，但一刹那之间，忽然有如受了一声命令似的，所有鲸鱼都不见了。一会儿，就在那人脚踏冰块底下，发生一连串凶猛的撞击，冰块开始碎裂，碎块之间露出那些可怕鲸鱼的头，张着嘴巴。那摄影者不敢再逗留，飞奔逃回船上。<br/><br/>　食人鲸合力撞击冰块的事，启示给我们几个祷告的原则：第一，要聚集在一起，同心合意的祷告。申命记三十二章三十节说，“一人……能追赶他们千人，二人……能使万人逃跑。”第二，要不断的祷告。主耶稣说，“要……常常祷告，不可灰心。”（路十八1。）祂常常不是很快的答应我们的祷告，乃因祂愿意我们的信心逐渐增长，并要我们学习宝贵的功课。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

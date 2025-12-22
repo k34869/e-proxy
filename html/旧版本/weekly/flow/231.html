@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('230')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('232')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">热切爱主，等候主来</p>
+<p>我们的国籍乃是在诸天之上，我们也热切等待救主，就是主耶稣基督，从那里降临。（腓三20）</p>
+<p>在热的操练上，我们也需要热切爱主。行传二章记载初期耶路撒冷的召会生活，说到：‘他们天天同心合意，坚定持续的在殿里，并且挨家挨户擘饼，存着欢跃单纯的心用饭，赞美神，在众民面前有恩典。主将得救的人，天天和他们加在一起。’（46～47。）早期的信徒天天在家里擘饼记念主，这表明他们热切爱主。他们‘存着欢跃单纯的心用饭’，这指明他们追求主，有单纯热切的爱与渴慕，以致在众民面前有恩典，主也因此将得救的人，天天和他们加在一起。</p>
+<p>腓立比三章二十节说，‘我们的国籍乃是在诸天之上，我们也热切等待救主，就是主耶稣基督，从那里降临。’因此，我们既爱慕主的显现，就要热切等待祂的来临。</p>
+<p>帖前一章十节说，我们‘等候祂的儿子从诸天降临，就是祂从死人中所复活，那拯救我们脱离要来忿怒的耶稣。’因着等候神的儿子从诸天降临，我们的将来就集中在祂身上；我们的生活表明我们在地上没有盼望，在今世没有积极的定命。我们的盼望是要来的主，祂是我们永远的定命。（10注1。）在林前七章，保罗这样说，‘弟兄们，我对你们说，时候缩短了。从此以后，那有妻子的，要像没有妻子；哀哭的，要像不哀哭；喜乐的，要像不喜乐；置买的，要像无所拥有；使用世物的，要像不浪费使用；因这世界的样子正在逝去。’（29～31。）主才是我们真实的盼望。</p>
+<p>我们可以把对主再来的渴望发表成为对祂的祷告，呼求说，‘主耶稣阿，我愿你来！’（启二二20。）我们应当时常这样呼求祂，作为我们对祂再来的响应。（参使徒行传生命读经，108～109页；神圣分赐的异象与新路实行的指引，36～37页。）</p>
+<p class="title">九十岁时比十九岁时更加宝爱圣经</p>
+<p>克罗斯比芬尼（Frances Jane Crosby，1820～1915）是个盲眼诗人，外面看不见这世界的景色，里面却看到荣美的基督。诗歌二百六十五首的歌辞正是她所写：</p>
+<p>‘有福的确据，基督属我！</p>
+<p>豫尝神荣耀，何等快活！</p>
+<p>蒙宝血赎回，领受恩赐；</p>
+<p>由圣灵重生，作神后嗣。</p>
+<p>这是我见证，是我诗歌，</p>
+<p>赞美我救主，口唱心和！</p>
+<p>这是我见证，是我诗歌，</p>
+<p>赞美我救主，终日欢乐！’</p>
+<p>基督是她的见证、诗歌、欢乐与荣耀。她曾说，‘在这广大的世界上，没有别的事比讲述救主的故事，给我的快乐更大。我对圣经的宝爱，在九十岁时，比十九岁时更加宝贵、更加坚定。’她与使徒保罗一样，一生以认识基督耶稣为至宝，热切的爱祂并追求祂。</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：时常向主呼求：‘主耶稣阿，我愿你来！’作为我们对祂再来的响应。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

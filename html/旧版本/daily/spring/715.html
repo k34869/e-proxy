@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('714')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('716')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">多摆两个座位</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>提前2:4　祂愿意万人得救，并且完全认识真理；</p><p>一个姊妹领了一个查经班，召聚许多在柜台上售货的女子来（都是没有信主的），一周有一次查经。作了一段时间之后，她觉得不行。在这些人中间，有一个女子打扮得特别漂亮、摩登，她根本一点心都没有，很骄傲的在那里。她就注意她，替她祷告。好些日子之后，有一天，她请她到家里来吃点心。那一个女子盼望有一点社交，所以就来了。那一天，一坐下来，那位姊妹就向她开讲，一样一样的劝她。她说，我不能信，我爱打牌，我也爱看戏，我也爱世界的快乐，我不愿意有这些的损失，所以我不能相信主耶稣。但是那位姊妹说，人如果要相信主耶稣，是要把牌除掉；人如果要相信主耶稣，是要把看戏除掉。人如果要相信主耶稣，世界的快乐是一点不能享受的；人如果要相信主耶稣，是只能这样行。她说，这一个代价太大，我出不起。那一个姊妹说，我盼望你回去考虑。后来她回去，跪下来祷告；祷告之后，她说，我定规了，我今天要跟从主耶稣。她忽然改变了，不知道什么缘故，她的心就转过来了。她就把她的衣服改变了，不再那样打扮了。过了一个月，她那一层的一位经理，就请她到他的房间里去说，我看见你这一个月有大改变，恭喜你。她就很希奇是怎么一回事。经理就告诉她说，‘我们曾开过会，本来定规说，如果你再像从前那个样子，再继续一周，我们就要解你的职。因为你的态度骄傲，看不起顾客，又打扮得那么厉害，嘻嘻哈哈的，你在店里什么都不顾，就只顾你自己。但是，就在我们定规没有一周的工夫，你忽然改变了，这到底是怎么一回事？’她说，‘我就是这一个月，刚刚好信了主耶稣，这一件事我一点不晓得。’奇妙的事接下去，就在一年之内，在这一个公司里有一百多位售货的女子，被她一个一个的带到主的面前了。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

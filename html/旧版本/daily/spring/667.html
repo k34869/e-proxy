@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('666')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('668')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">已作傻子二十年</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>(路加福音 4:18</p><p>“主的灵在我身上，因为祂膏了我，叫我传福音给贫穷的人，差遣我去宣扬被掳的得释放，瞎眼的得复明，叫那受压制的得自由， )</p><p>有一位作矿工的弟兄，名叫麦雅各，是神所重用的人。他写了一本书，叫作‘见与闻’，说到他传福音的经历。他不是一个特别有学问的人，也不是一个特别有恩赐的人；他只是一个很平常的弟兄。但是因为他把自己完全交给主，主就重用他。他第一次讲道，是在二十三岁，也就是他初得救的时候。他在一个聚会里面，听一位传道人讲道，因他心里迫切想要救人，他就请求传道人让他上去讲。他一上去，一句话也讲不出来。但他心里充满了救人灵魂的火热，眼泪如同潮水那样涌流出来。最后他喊着讲了两三句话。那时，神的灵充满了聚会的地方，人都感觉自己的罪和失丧的情形。在这里有一个人，年纪虽轻，但他外面的人是被破碎的；他没有多少话语，但他的灵出来了，人也就得救了。他一生救了很多的人。我们读他的历史，就知道这个人是有灵出来的人。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

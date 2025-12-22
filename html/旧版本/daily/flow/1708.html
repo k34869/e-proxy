@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1707')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1709')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 10 课<br />
+神圣的供备与神圣的行政（一）盼望、儆醒与谨守</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　使所蒙的呼召和拣选坚定不移</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼后一10～11：所以弟兄们，应当更加殷勤，使你们所蒙的呼召和拣选坚定不移；你们行这几样，就永不失脚。这样，你们就必得着丰富充足的供应，以进入我们主和救主耶稣基督永远的国。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼得劝勉信徒，要殷勤发展五至七节所题的美德，这会证实我们的呼召和拣选。这就是使我们所蒙的呼召和拣选坚定不移。不但如此，我们行这几样，就永不失脚，因为我们已彻底被构成。彼后一章十一节里永远的国，指所赐给我们主和救主耶稣基督之神的国，这国要作赏赐，赐给那些追求在祂生命里长大以致成熟，并发展祂性情之美德的忠信信徒，使他们在千年国时能有分于祂在神荣耀里的君王职分。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>使神圣的生命得着发展，以得着丰富充足的供应，以进入要来的国。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>藉着神的义，神已将宝贵的信当作神圣的分，同等的分给所有在基督里的信徒。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼得后书是写给谁的？在他们身上有什么相同的特点？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们永远无法摆脱我们里面这宝贵的信。我们遭受试炼和试诱的时候，可能会说，作基督徒也没什么好处。我们自认作不到，所以想放弃，不作基督徒了。但是我们无法放弃。我们也许想要放弃主，但祂不放弃我们，这宝贵的信紧紧握住了我们。因为我们里面有个活的东西，就是宝贵的信，我们越想放弃主，祂把我们握得越紧。这实在是奥秘。我们里面这宝贵的信，是我们已经蒙神拣选最有力的证实。</p>
+<p>从我们里面这活的信，我们有了神的能力。今天许多人追求在圣灵里的浸这外在的能力，然而真实的能力不是外面的，乃是里面的。我们可以用原子能作例证。原子能不仅是外面的，它甚至包含在最劣质的天然物质里面。我们里面有神圣的原子能，这神能已将一切关于生命和敬虔的事赐给我们。生命是我们里面的内容，而敬虔是我们外面的生活。</p>
+<p>我们拥有所需要的一切。神是这样充分而周全的照顾我们。祂知道我们真实的光景，所以祂赐给我们许多宝贵的应许，叫我们藉着这些应许，得有分于祂的神圣性情，而在性情上与祂一样。这是何等的奇妙！’（由基督与召会的观点看新约概要卷三，424～425页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>珍赏每一位信徒所分得同样宝贵的信。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

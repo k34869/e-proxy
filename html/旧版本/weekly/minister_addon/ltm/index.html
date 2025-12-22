@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="css/vuetify.min.css" rel="stylesheet" />
+    <link href="css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>提升擘饼丶申言</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+              提升擘饼丶申言
+            
+              
+              </div>
+            </v-card>
+          </div>
+          <div class="nav1">          关于擘饼聚会     </div>
+          <div class="nav" @click="jump('./y1.html')"> 第一篇 擘饼聚会（一）主日分别为圣</div>
+          <div class="nav" @click="jump('./y2.html')"> 第二篇 擘饼聚会（二）对擘饼聚会的认识</div>
+          <div class="nav" @click="jump('./y3.html')"> 第三篇 擘饼聚会（三）实际，操练，实行</div>
+
+          <div class="nav1">           关于申言</div>
+
+          <div class="nav" @click="jump('./y4.html')"> 第一篇  恢复申言</div>
+          <div class="nav" @click="jump('./y5.html')"> 第二篇  申言的构成、榜样，过申言的生活</div>
+          <div class="nav" @click="jump('./y6.html')"> 第三篇  申言的实行</div>
+          
+        </v-main>
+      </v-app>
+    </div>
+   <script src="js/vue.js"></script>
+    <script src="js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../minister/index.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

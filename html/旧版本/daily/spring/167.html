@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('166')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('168')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">因信赞美</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">就当存着真诚的心，以十分确信的信，前来进入至圣所。（来10:22）</div>
+<div id="CC">Let us come forward to the Holy of Holies with a true heart in full assurance of faith.（Hebrews 10:22）</div>
+<div id="C">有一位弟兄生了病，得到神应许要医治他，他就立即赞美主，两天后病就好了，并且向圣徒们作见证。他借着信心经历病得医治有七个步骤：第一，生病；第二，祷告；第三，得着应许；第四，相信应许；第五，赞美；第六，病得医治；第七，作见证。另外一位患病的弟兄便照着头五步去作，却得不着第六步。因为头一位弟兄是先相信病得医治，结果产生赞美，他的赞美是从信来的；但第二位弟兄的赞美是要达到信的，他是以赞美为达到信心的手段。第一位弟兄的赞美是结果，第二位弟兄的赞美是手段。第二位弟兄盼望以赞美达到病得医治，却没有真实的信心，所以不发生效力。我们只能因信赞美，不能由赞美产生信。<br/><br/>　倪柝声弟兄有一回生了大病，主应许他因信得生，因信而立，因信而行。神这样对他说，他就相信祂的话，不再祈求。他相信神的应许，就是得生，得站立，得行走；于是他得生，他站起，又行走。后来有一位姊妹也生病，她照着倪弟兄的见证，也要爬起来，却不能起来。她是要爬入信心，却是不能；她自己没有信心，却要爬入信心，所以没有成功。信心的经历，乃是有主的应许，而相信，然后从信心出发，而能赞美。信心的经历不能照别人信心的行为，也不能由赞美到信。从别人学来的，乃是信心的公式，公式是没有用的；只有活的信心才能产生功用。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

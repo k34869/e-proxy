@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1602')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1604')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 13 课<br />
+来到施恩的宝座前</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　来到施恩的宝座</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来四16：所以我们只管坦然无惧的来到施恩的宝座前，为要受怜悯，得恩典，作应时的帮助。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>那在天上坐在施恩宝座上的基督，现今也在我们里面，就是在我们的灵里。来到施恩的宝座前完全是在灵里的事。每当我们转到灵里，就能藉着基督作天梯，进入天的门。每当我们从深处呼喊‘哦，主耶稣’，我们立刻就在至圣所里，摸着施恩的宝座，我们就能‘受怜悯，得恩典，作应时的帮助’。我们不需要作什么，只需要简单前来，敞开并接受怜悯和恩典，作应时的帮助。每一天，从这恩典而来的帮助，都是应时、新鲜的，正合我们当时的光景和需要。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来到施恩的宝座前，享受恩典应时、新鲜的供应。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>坦然无惧的来到我们灵里，这施恩的宝座前，为要受怜悯，得恩典，作应时的帮助。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>来到施恩的宝座前的秘诀是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘如果施恩的宝座在诸天之上，当我们还住在地上的时候，如何能够来到这宝座前？在此我们又需要我们的灵。（来四12。）施恩的宝座是在诸天之上，但这属天的宝座在我们灵里不断的传输到我们里面。在灵里，我们能摸着诸天之上的施恩宝座。就着一面的意义说，我们甚至可以说，施恩的宝座就在我们里面，因为属天的那灵就在我们里面。殿里有至圣所，至圣所里有约柜。约柜的盖子，就是遮罪盖，表征施恩的宝座。（出二五17，21。）约柜是基督的预表，而约柜是在至圣所里。因此，既然基督在我们灵里，今天我们的灵就是至圣所。一面，至圣所是在诸天之上；但另一面，希伯来十章十九节告诉我们，我们必须进入至圣所。今天至圣所若仅仅在诸天之上，我们如何能进到至圣所里面？我们虽然是在地上，一切属天的事物仍然在我们灵里传输给我们。这样，我们的灵就联于诸天。包罗万有的灵乃是电流，将诸天之上的事物传输到我们里面。</p>
+<p>基督在诸天之上，在神面前是我们的大祭司，不断的传输到我们灵里。我们也可以用电视为例来说明。虽然现场、人物、地点离得很远，电视却将它们带进人们家中。现场虽然遥远，却藉着电传送给人。照样，基督虽是在诸天里作我们的大祭司行动并作事，这“景象”却传输到我们灵里。一天过一天，我们灵里有个属天的“电视”。…许多时候我闭起眼睛，就看见属天、属基督的事物传输到我里面。一天过一天，在我灵里有一个奇妙的景象，基督是活的、行动的，执行祂作大祭司的工作，而这景象不断的传输到我们灵里。我们只要简单的在灵里享受祂。施恩的宝座毫无疑问是在天上，却传输到我们灵里。我们只管坦然无惧的，来到我们灵里这施恩的宝座前，为要受怜悯，得恩典，作应时的帮助。我们需要在我们的灵里经历那灵。这完全是在灵里的事。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>来到施恩的宝座前，享受恩典应时、新鲜的供应。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

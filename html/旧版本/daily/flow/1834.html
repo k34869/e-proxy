@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1833')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1835')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 10 课<br />
+基督来据有全地</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　第七号</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启十一15:第七位天使吹号，天上就有大声音说，世上的国，成了我主和祂基督的国，祂要作王，直到永永远远。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>第七号就是末次号筒，有消极和积极两面。消极一面包括：（一）神的忿怒，泄尽于七碗的末后灾害，就是临到住在地上之人末后的灾祸；（二）在主一回到地上时，败坏那些败坏地者。积极一面包括：（一）基督永远的国，就是在其实现中的国度来到；（二）在圣徒复活之前审判死人；（三）在圣徒复活、被提之后，在基督的审判台前，赏赐众申言者和众圣徒；并在基督的荣耀宝座前赏赐那些敬畏神之名的人。因此，第七号包括从大灾难末了，到将来永世的一切事；在吹第七号的时候，不只大灾难要结束，这世代也要结束，神的奥秘要完成，世上的国要成为我主和祂基督的国。另一世代，就是国度世代要开始，基督要作王，直到永永远远。</p>
+<p>操练应用:爱慕主的显现，儆醒祷告，脱离要来的忿怒。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"></v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督是另一位天使，要来据有地，向爱慕、等候祂的人显为晨星。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督作为另一位大力的天使，怎样来据有全地？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘按启示录十章一至七节，基督是另一位天使，要来据有地。…披着云彩是隐密的来。在十章一节，基督仍是隐密的来，不是公开的来。</p>
+<p>作为来据有地的天使，基督的头上有虹。这里的虹指明基督在审判地并来据有地时，信守神与挪亚关于地所立的约。（创九8～17。）这也指明基督执行审判，是照着那坐在天上有虹围绕之宝座上的神。（启四2～3。）</p>
+<p>启示录十章一节也告诉我们，基督是另一位大力的天使，脸面像日头，两脚像火柱。这里，在靠近向地上的人公开来临时，基督像日头，不再像在天明前极黑暗时，向爱慕、等候祂的人显为晨星。这里柱指明坚定不移，（耶一18，加二9，）火指明神的圣别；（出十九18，来十二29；）基督要照着神的圣别，在地上执行审判。…</p>
+<p>脚踏在海上与地上，意思就是据有海与地，（申十一24，书一3，诗八6～8。）…在约书亚记，神告诉百姓，凡他们脚掌所踏之地，他们都要得着。他们要走遍那地，凡他们所踏之地，都要成为他们的产业。基于同样的原则，基督是神所差遣的另一位天使，要踏海踏地，因为地与海都已给了他，作祂的产业。（诗二8。）虽然地与海已被祂的仇敌霸占，但有一天，祂将不再容忍这霸占。祂要来要求祂合法的产业。’（新约总论第二册，152～153页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>作得胜者，在属灵的黑夜里儆醒，好得着晨星。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

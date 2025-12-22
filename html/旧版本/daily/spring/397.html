@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('396')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('398')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">里面当家的不许</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>腓2:12　这样，我亲爱的，你们既是常顺从的，不但我与你们同在的时候，就是我如今不在的时候，更是顺从的，就当恐惧战兢，作成你们自己的救恩，So then, my beloved, even as you have always obeyed, not as in my presence only but now much rather in my absence, work out your own salvation with fear and trembling;</p><p>当倪弟兄访问英国属灵交通中心伦敦贵橡（Honor Oak）的时候，有一个弟兄从别的地方来到贵橡作客。他对贵橡的批评很多。他曾当过牧师，很会讲道，也知道贵橡有顶多属灵的东西可以给人，但他心里不佩服。他碰着倪弟兄的时候，总是说，在他的地方是怎样怎样作的，但是在贵橡是这样这样作的，意思是他作的好得多。有一天他实在说得太多了，倪弟兄就对他说，‘你说贵橡这样不好，你走好了，为什么还在这里呢？’他指着心说，‘原因在这里，因为它（心）要在这里。’他每一次到房间收拾皮包要回去的时候，心里就不平安。有的时候，一天到房间去收拾行李三次，但是每一次要走的时候里面就觉得不该，觉得不能。有一次已经回去两周，还得写信说要再来。</p><p>儿童,#702 当我心亲近救主</p><p>当我心亲近救主，祂使我心快乐；</p><p>当我心忧愁痛苦，祂使我口唱歌；</p><p>祂以柔声细语招呼，招呼我亲近主，</p><p>祂使我心高声歌唱，永远永远歌唱。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

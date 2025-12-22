@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1504')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1506')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 17 课<br />
+与基督联合的生活（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　言语带着恩典</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西四6：你们的言语总要带着恩典，好像用盐调和，就可知道你们应当怎样回答各人。（。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们的话语带着恩典，意思就是基督藉着我们的话语得着彰显。我们的话语，每一句都必须是那作恩典之基督的彰显与发表。当我们觉得缺少恩典的时候，就必须再祷告，直到满了神圣的电流；然后我们的口就必满了恩典。如果我们不住的祷告，向神献上感谢，言语满了恩典，我们自然而然就成为大有智慧的人，行事为人荣耀神，并且建造别人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>不住的祷告，向神献上感谢，言语被恩典充满。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为了要在神这一边与撒但争战，我们就必须坚定持续的祷告；并划出定时祷告的时间。我们的态度应当把祷告当作我们最重要的事，不让任何的事打岔。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘坚定持续的祷告’是什么意思？</p>
+<p>你是否已经开始操练个人定时祷告？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们若要坚定持续的祷告，就需要计划，甚至预算我们的时间，如同预算金钱的使用一样。我们若对钱财没有预算，就会没有节制的花钱。我们既然有钱财的预算，就也该有时间的预算。在我们时间的预算中，我们该定立两、三个祷告的时段。在早上，我们至少可以祷告十五分钟。然后，照着我们的计划，我们可以在上午十时左右、中午或下午，划出另外的祷告时段。然后，我们可以在晚上睡觉以前再划出一个时段。我们该预算三个祷告的时段。</p>
+<p>你若定意从明天开始在某些时段祷告，你就要预备好环境中有事情兴起来阻挠你。当你开始要祷告时，有人可能敲你的门。一年到头，都没有人在这个时间敲你的门，但在你决定要用这段时间来祷告以后，人就来了。当你去开门看看是谁，才发现那人敲错了门。你可能因此生气，失去了祷告的心情。这样，你专为祷告保留的十五分钟就报销了。你若决定在早上十时祷告，可能就有三位朋友在那时来看你，跟你谈一个小时。我们必须看见，这样的事乃是仇敌的攻击，要我们不祷告。</p>
+<p>在我们祷告的时段里，最好不要应门或接电话。实际上，我们在祷告的时候太忙碌了，以致不能应门或接电话。我们忙于接触我们的主，我们的王。我们既同我们的王在一起，就怎可以离开祂去顾到别的事？…</p>
+<p>我们必须儆醒。仇敌总是要作工来废止我们祷告的时间。…我们不该让我们的祷告受破坏，被夺去或被废止。我们需要儆醒留心，来维持我们祷告的时间。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>划出定时祷告的时间，在祷告上坚定持续，有争战、儆醒的祷告。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

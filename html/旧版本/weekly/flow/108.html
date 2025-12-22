@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('107')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('109')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">亚伯拉罕恒久忍耐得着神的应许</p>
+<p>亚伯拉罕既恒久忍耐，就得了所应许的。（来六15）</p>
+<p>希伯来六章十五节告诉我们，亚伯拉罕恒久忍耐，就得着神所应许他的。罗马书称亚伯拉罕为我们众人信心的父：‘亚伯拉罕在他所信那叫死人复活，又称无为有的神面前，是我们众人的父，如经上所记：“我已经立你作多国的父。”他在无可指望的时候，仍靠指望而信，就得以照先前所说，“你的后裔将要如此”的话，作多国的父。他将近百岁的时候，虽然想到自己的身体如同已死，撒拉的生育也已断绝，他的信还是不软弱，总没有因不信而疑惑神的应许，反倒因信得着加力，将荣耀归与神，且满心确信，神所应许的，祂也必能作成；所以这就算为他的义。算为他的义这句话，不是单为他写的，也是为我们将来得算为义的人，就是为我们这些信靠那使我们的主耶稣从死人中复活者的人写的。’（四17～24。）</p>
+<p>亚伯拉罕七十五岁蒙召出迦勒底的吾珥时，就蒙神指示他未见的事，并应许他要成为大国，他的后裔要如海边的沙，天上的星。但他直到百岁，才得着神所应许的后裔以撒。这是一个漫长的过程，需要恒久忍耐与信心。亚伯拉罕是我们众人信的榜样，我们都该像亚伯拉罕一样，成为信的人。这意思是，我们必须了结自己，承认我们一无所是，一无所有，也一无所能。每一步，我们都必须信靠祂。我们不知道如何行事，只知道信靠我们的主。我们相信祂，也相信祂为我们所成就的一切。我们相信祂为我们所能作的，也相信祂为我们所要作的；我们完全信靠祂。当召会生活人数稀少时，不要因此失望，要相信神是那称无为有的创造者。当觉得自己或召会的光景软弱死沉时，不要沮丧，要相信主是能叫死人复活的一位。我们若这样相信，神就要因我们的信称我们为义。基督就要进到我们里面作我们的信，使我们有信又有义。这就是说，我们要得着更多的基督。我们有基督作我们的信和我们的义。（参罗马书生命读经，77～87页。）</p>
+<p class="title">忍耐等候神的作工</p>
+<p>倪柝声弟兄第一次到福建南部去作工的时候，赴会者约有一千五百人之多。倪弟兄只讲了三次，全城的牧师就都害怕起来。他们对倪弟兄说，‘倪先生，我们请你来讲道，是要你叫教友们发热心、多作工、多事奉神。但是你对他们说，你们不必作什么，只要接受基督就彀了。他们本来就不肯作，经你这么一说，今后恐怕就不作了！你来这里是短期的，你可以说完了就走，我们还要长期留在这里，以后该怎么办？’倪弟兄说，‘现在才聚了两天的会，还有十六天呢！请各位暂时忍耐，等到末了再看如何。基督在人里面所作的，比人靠自己所作的多得多！我信人若信我所传的福音，他们的光景一定会有所改变。’当时，他们对倪弟兄的话还信不来，只因既然请他来了，又不能不要他讲。倪弟兄虽然说后果由他负责，他们仍是摇头说，危险得很！不过以后又过了一周多，就有许多牧师来向倪弟兄赔不是。他们说，‘真的，只有接受神儿子在里面作的工，比靠自己作的更好。’（参正常的基督徒信仰，194页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：承认我们一无所是，一无所有，也一无所能，只信靠那称无为有，并叫死人复活的神。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

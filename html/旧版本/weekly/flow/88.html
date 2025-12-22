@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('87')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('89')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">主的话永远长存、永不改变</p>
+<p>凡听见我这些话就实行的，好比一个精明人，把他的房子盖在磐石上。雨淋、河冲、风吹，撞着那房子，房子总不倒塌，因为是立基在磐石上。（太七24～25）</p>
+<p>主是永不改变的主，祂的话也是永远长存、永不改变。主在马太五章十八节说，‘我实在告诉你们，即使到天地都过去了，律法的一撇或一画，也绝不能过去，直到一切都得成全。’主耶稣来不是要废除摩西的律法，乃是要提高旧律法的标准。祂用两种方式提高旧律法的标准：藉着补充旧律法，并藉着改变旧律法。并且，祂还用三个步骤成全律法。首先，祂自己遵行律法。然而，因着我们没有遵行，祂就为我们违犯律法的罪，死在十字架上。然后，祂的代死带进了复活的生命，这生命已经分赐到我们这些信祂的人里面。藉着祂复活的生命，我们就能成全更高的新律法的要求。藉着这三个步骤，基督不仅成全了旧律法，并且祂的死将复活的生命带进我们里面，加强我们，使我们能成全新律法的要求。</p>
+<p>主在七章二十四至二十五节又告诉我们：‘凡听见我这些话就实行的，好比一个精明人，把他的房子盖在磐石上。雨淋、河冲、风吹，撞着那房子，房子总不倒塌，因为是立基在磐石上。’圣经的话像磐石一样可靠，我们需要宝爱主和主的话，并听见主的话就去实行，这就是把我们生活和工作的根基，建立在主智慧的话，这稳固的磐石上。倘若我们的生活和工作，建立在主话这磐石上，便是稳固的。虽然可能有雨淋、河冲、风吹等试验临到，但盖在稳固磐石上的房子，总不会倒塌，就像用金、银、宝石建造的工程，能经得起试验的火。反之，‘凡听见我这些话不实行的，好比一个愚拙人，把他的房子盖在沙土上。雨淋、河冲、风吹，撞着那房子，房子就倒塌了，并且倒塌得很大。’（26～27。）沙土指人的观念和天然的作法。我们若照着人的观念和天然的作法生活工作，我们的生活和工作就是盖在沉陷的沙土上。当雨、河、风试验这盖在沙土上的房子时，房子因没有稳固的根基，就必倒塌。（参马太福音生命读经，241～242、341～342页。）</p>
+<p class="title">大桥经不起试验</p>
+<p>在法国波尔多附近，建造了一座大桥。落成当天，群众对于桥梁的设计和建筑都相当满意。工作人员外表虽然谦卑，但内心难免有几分骄傲。然而，这座桥必须经过试验，才准通车。于是在试验当日，特别豫备了数辆大车，满载砂石，约重二百余吨，同时行过此桥，而且来回数次，以确保这座桥的安全。不料，最可怕的一刻临到，忽然听到桥梁断裂的声音，桥身继而全部塌陷，所有在桥上的人员和车辆都坠入河中。不少人因此罹难，总工程师及其助手也在其中，损失何等惨重！他们都以为他们的工作是可靠的，那知经不起试验。照样，我们各人为主所作的工程，在基督回来的时候也要被火试验，若存得住，就要得赏赐；若被烧了，就要受亏损。所以我们必须要问：你的工程是用什么建造的？是用金、银、宝石，还是用木、草、禾秸？（参造就故事下册，66页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：宝爱主和主的话，并且听见主的话就去实行，就是把我们生活和工作的根基，建立在主智慧的话这稳固的磐石上。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

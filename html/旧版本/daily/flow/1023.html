@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1022')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1024')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 3 课<br />
+初期召会生活的延续</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：又新又活的聚集。（补充本诗歌723首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：祂是你们匠人所轻弃的石头，已成了房角的头块石头。除祂以外，别无拯救，因为在天下人间，没有赐下别的名，我们可以靠着得救。（徒四11～12。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　彼得的第二篇信息—徒三1～26</p>
+<p class="ot2">1.　瘸者得医—1～10。</p>
+<p class="ot2">2.　信息—11～26：</p>
+<p class="ot2">a.　见证受死并复活的耶稣—11～18。</p>
+<p class="ot2">b.　劝人回转，有分于升天并再来的基督—19～26。</p>
+<p class="ot1">二　犹太宗教徒逼迫的开始—四1～31</p>
+<p class="ot2">1.　议会的捉拿并审问—1～7。</p>
+<p class="ot2">2.　彼得的见证—8～12。</p>
+<p class="ot2">3.　议会的禁止—13～18。</p>
+<p class="ot2">4.　彼得和约翰的答言—19～20。</p>
+<p class="ot2">5.　议会的释放—21～22。</p>
+<p class="ot2">6.　召会的赞美与祷告—23～31。</p>
+<p class="ot1">三　召会生活的延续—四32～五11</p>
+<p class="ot2">1.　积极的一面—四32～37。</p>
+<p class="ot2">2.　消极的一面—五1～11。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒行传初期召会生活之延续的详细描绘。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼得与约翰在进圣殿时，医治了一个瘸腿的人，使众人希奇惊骇。彼得因此说了第二篇信息见证受死并复活的耶稣，劝人回转，以有分于升天并再来的基督。犹太宗教徒因此逼迫、捉拿并审问他们。彼得却放胆见证，他们所听见的不能不说。议会因查不出他们的罪，只得释放他们，召会因此积极赞美并祷告。在行传二章初期召会生活的延续，众人一心一魂，凡物公用。使徒大有能力，众人也都蒙大恩。凡物公用的结果，没有一个缺乏的，都把产业卖了放在使徒脚前，并照各人所需用的分给各人。五章记载一个消极的事例—亚拿尼亚和撒非喇因着那住在他们里面撒但的人位，以及他们的野心，使他们欺骗圣灵，结果遭受肉身死亡的惩罚。这警告我们不该有野心，更不该欺骗圣灵。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　瘸者得医</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼得却说，金银我都没有，只把我所有的给你：我在拿撒勒人耶稣基督的名里，叫你起来行走！（徒三6。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼得没有金银，但他有耶稣基督的名，就是耶稣基督的人位。他缺少金银，却富有基督。彼得对瘸腿的人说话，叫他在拿撒勒人耶稣的名里行走。‘他有负担把基督说出来，说到人的里面，使他们成为基督的繁殖，作他的活肢体，好叫基督在地上得着一个身体。宗教的传扬总是强调神医，但我们传福音的目的，不该叫人注意得医治，乃该帮助人将他们的注意力，从医治转向医治者，使人成为基督的繁殖。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在生活中把基督说出来，说到人的里面，使人成为基督的繁殖，作祂的活肢体。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

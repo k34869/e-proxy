@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('83')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('85')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>民15:38-40　你要告诉以色列人，叫他们世世代代在衣服边上作]穗子，又在衣边的穗子上钉一根蓝细带子。这穗子是要叫你们一看见，就记念并遵行耶和华一切的命令，不随从自己的心意、眼目行邪淫，像你们素常一样；使你们记念并遵行我一切的命令，成为圣别，归与你们的神。</p>
+<p class="title">细的操练（四）细微的经历并活出基督</p>
+<p>歌罗西书给我们看见，神的旨意是要使基督成为我们的一切，就是将基督赐给我们，作我们的分、我们的生命、和我们的一切。靠着神的怜悯和恩典，我们已经接受了基督这位包罗万有者。我们接受祂以后，必须在祂这范围里，以祂为凭藉而行事为人；我们必须学习这样认识基督。为此，我们需要在日常生活中，细微的经历基督。今天我们所需要的，不是更多好的教训，乃是学习实际的凭祂而活。</p>
+<p>在民数记十五章，耶和华对摩西说，‘你要告诉以色列人，叫他们世世代代在衣服边上作?子，又在衣边的?子上钉一根蓝细带子。这?子是要叫你们一看见，就记念并遵行耶和华一切的命令，不随从自己的心意、眼目行邪淫…。’（38～39。）这里说到以色列人在衣服边上要作?子，又在衣边的?子上钉一根蓝细带子。蓝色表征属天，带子表征约束。因此，蓝细带子表征我们是神的儿女，行为举止该是美好的，也该在属天管治的约束之下。百姓要观看这?子，并记念遵行耶和华一切的命令，不随从自己的心意、眼目行邪淫。这样，他们就会记念并遵行神的命令，成为圣别归与神的。（40。）按照四福音的记载，主耶稣在地上时就是穿着这样的衣服。有一天，一个妇人来摸祂的衣服?子。（太九20～22。）这衣服?子表征祂人性美德的美丽，祂医治的能力就是由此发出。这指明我们这些神的儿女，该在属天的约束下行事为人。我们既是诸天之国的子民，就不该靠警察或法庭的约束，乃该受属天的约束、属天的管治和管理。这会产生我们属人行为和美德上的美丽，使我们活出基督那甜美、柔细的人性美德。（参由基督与召会的观点看新约概要卷二，302页；民数记生命读经，185页。）</p>
+<p class="title">回到农场去</p>
+<p>有一个出身穷苦的孩子，他的志向是进大学，进神学院，然后献身作传道人；家境虽然穷困，但他总算读完了中学。毕业后，他的身体欠佳，医生叫他另换一种生活方式。于是，他在农场里工作了两年。以后他考进了大学，但是求学愿望的实现并没有带给他平安；主是要他回到农村里，作一个忠诚的信徒，帮助村子里的召会。这声音虽然微小，却不断的在里面题醒他。为了逃避这声音，他曾进入极大的争战中。最终，他胜过了自己的野心，顺服他里面的微声，决定回到农场去。十年后，他成为当地召会的一位长老。他从来没有上过讲台，但他的精神和影响，给全召会带来了复兴。在跟从主的事上，我们应当细听主的微声，让祂居首位，然后我们就有一些本于元首为着祂身体建造的生命供应。（参造就故事中册，178页。）钉一根蓝细带子。（民十五38）</p>
+<p class="title">里面当家的不许</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：学习实际的凭基督而活，细微的经历基督，活出基督那甜美、柔细的人性美德。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('632')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('634')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第35课 性格—卑微</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala">
+                <p>歌罗西书三12下 就要穿上怜恤的心肠、恩慈、卑微…</p>
+                <p>主耶稣是至高神的儿子，为着我们人类他甘愿降卑自己，在马利亚腹中被限制了九个月，却做了一个木匠的儿子，祂为我们人类甘愿牺牲自己，在地上生活了三十三年半，至终被钉在十字架上流出了宝血，救赎了我们。</p>
+                <p>祂三日复活，升天成了那灵为要分赐到我们里面。</p>
+                <p>主耶稣这位神的儿子是我们的榜样，祂在人性里活出了祂神性的美德。</p>
+              </div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个卑微的人，尽管志向高远并努力作到最好，但不会因此就认为自己比别人更重要。他们愿意让别人抢先。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当你在公园玩滑滑梯或是荡秋千时，你是不是总想要第一个玩呢？有没有让别人先玩过？要吃饭的时候，你是不是总想先抢到最大的、最好吃的？卑微的人不认为自己比别人更重要，愿意让别人抢先。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala">
+                <p>罗马书十二16上 要彼此思念相同的事，不要思念高傲的事，倒要俯就卑微的人…</p>
+                <p>在大学的校园里，有这么一群人，他们来自农村，他们出身贫寒，他们没去过麦当劳，没吃过肯德基，更不知什么是汉堡。但是，他们艰苦朴素，他们坚强执着，他们默默无闻，他们成绩优异。</p>
+                <p>她们的穿着是多么的过时落伍；也别嘲笑她们；请别嘲笑她们对于一元一角是多么的看重和珍视。</p>
+                <p>虽然，当别人出去吃饭时，她们只能一个人默默地坐在食堂；当别人出去游玩时，她们只能静静地呆在教室，抱着一本书。</p>
+                <p>在生活中，她们从不和别人攀比，无论别人怎样闲言碎语，她们都不在乎，只是很努力的学习，后来她们考上了重点大学，而那些爱吃爱穿的同学考的成绩都很差。</p>
+              </div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个卑微的人，尽管志向高远并努力作到最好，但不会因此就认为自己比别人更重要。他们不坚持让别人接受他们的观点或作事的方式，也不与别人争论。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：假设在学校，老师让你们小组研究一项科学课题。然后你花很多时间研究，该写什么、怎么写。你的队友可能不像你那样努力，但他们也有一些想法和意见。你会和他们争论并且一定要坚持你的想法吗？因为你付出的多，可能知道的最多。卑微的人不坚持自己的是最好的，对别人的观点、作事的方式持包容的态度。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala">
+                <p>腓立比书二3~4 凡事都不私图好争，也不贪图虚荣，只要心思卑微，各人看别人比自己强；各人不单看重自己的长处，也看重别人的。</p>
+                <p>逾越节以前，耶稣知道自己离世归父的时候到了。祂既爱世间属自己的人，就爱他们到底。</p>
+                <p>耶稣知道父已将万有交在祂手里，且知道自己是从神出来的，又要往神那里去，就起身离席，脱了外衣，拿一条手巾束腰。随后把水倒在盆里，就开始洗门徒的脚，并用自己所束的手巾擦干。</p>
+                <p>彼得说，你绝不可洗我的脚，永远不可。耶稣回答说，我若不洗你，你就与我无分了。</p>
+                <p>西门彼得对祂说，主阿，不但我的脚，连手和头也要洗。</p>
+                <p>耶稣洗完了他们的脚，就穿上外衣，又坐下，对他们说，我向你们所作的，你们明白么？</p>
+                <p>我是主，是夫子，尚且洗你们的脚，你们也当彼此洗脚。我实实在在的告诉你们，奴仆并不大过主人，受差遣的也不大过差遣他的。</p>
+              </div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：无论别人如何赞扬或重视，卑微的人都不会夸耀自己比别人更优秀。只有降卑自己（不让自己高于别人），我们才能帮助他人。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：可能你有一项很擅长的运动。你每天都在努力练习，加强你的技巧和本领。教练和队友也称赞你为球队的不懈努力和贡献。这时，你会不会忍不住夸耀自己的表现？会不会期望别人对你另眼相看？如果你的队友没有你优秀，你会帮助他（她）？如果教练把你放在一个不重要的位置，你会作何反应？一个卑微的人不会看自己比别人强，也不会吹嘘自己。别人可以从他们那里得到帮助，因为他们没有优越、高傲的态度。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

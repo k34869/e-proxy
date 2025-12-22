@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('72')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('74')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 11 课<br />亚伯拉罕在迦南</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周三　帐棚的生活</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>亚伯拉罕因着信，…在应许之地作客，好像在异地，与承受同样应许的以撒、雅各一同居住在帐棚里；因为他等候那座有根基的城，其设计者并建筑者乃是神。（来十一8～10。）</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>亚伯拉罕筑坛以后，就支搭帐棚，帐棚是为着他的生活。（创十二7～8。）在巴别，人先造城，然后造塔。但亚伯拉罕先筑坛，然后搭棚。对亚伯拉罕而言，首要的事是把一切献给神，敬拜事奉神，并与神有交通；然后才为他的生活支搭帐棚。</p><p>亚伯拉罕的历史就是我们的历史。世人没有帐棚，他们只有大城。他们惟一能看见的，就是他们的大城。但我们能对世人说，“你有一切，但有一样你没有─神的同在。”当我们住在有神同在的帐棚─召会生活里，我们里面就深深觉得，在地上没有一样事物是持久的，每样事物都是短暂的，我们仰望永世。藉着支搭帐棚，我们宣告我们属于另一个家乡。我们不属于这一个家乡，我们仰望并指望进入更美的家乡。亚伯拉罕的帐棚，乃是新耶路撒冷的小影，新耶路撒冷是神在宇宙中终极的帐幕。（启二一2～3。）圣经告诉我们，这更美的家乡就是新天新地，那座有根基的城是新耶路撒冷，就是神和所有蒙召者永远的居所。今日的召会生活是亚伯拉罕生活和历史的收成；我们都在这里筑坛并支搭帐棚。这是要来新耶路撒冷的图画，在那里我们要与神永远同住。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>宝爱帐棚的生活─召会生活，经历召会生活是新耶路撒冷的小影。</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

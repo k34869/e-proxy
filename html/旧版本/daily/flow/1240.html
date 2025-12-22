@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1239')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1241')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 16 课<br />
+财物的交通</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：何必担心一握不释。（诗歌488首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：还有，少种的少收，多种的多收。各人要照心里所酌定的，不要作难，不要勉强，因为神喜爱乐意施与的人。神能使各样的恩典向你们洋溢，使你们在凡事上常常十分充足，能洋溢出各样的善工。（九6～8。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　来自四方的恩典—林后八1～15</p>
+<p class="ot2">1　神的恩典—1～2。</p>
+<p class="ot2">2　使徒的恩典—4。</p>
+<p class="ot2">3　信徒的恩典—6～7。</p>
+<p class="ot2">4　基督的恩典—9。</p>
+<p class="ot1">二　留心作善美可敬的事—八16～24</p>
+<p class="ot1">三　给与成为祝福，不成为贪婪—九1～5</p>
+<p class="ot1">四　为着收获义果而撒种—九6～15</p>
+<p class="ot1">五　神是独一祝福的源头—太六31～33</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>由使徒关于供给缺乏圣徒的交通，学习财物奉献的原则。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>林后八章和九章，是说到使徒关于供给缺乏圣徒的交通。这供给的职事是前两章和好工作的结果。从八章一至十五节，说到从四方来的恩典：来自神，来自使徒，来自信徒，并来自基督。这四重的恩典使圣徒能有分于供给缺乏者的职事。并且保罗所受的托付是这职事最高的一分。所以在尽这供给职事的过程中，他极其谨慎学习在主和人面前，留意作善美可敬的事，好避免人的挑剔。最后，我们看见神看顾祂的儿女，祂是一切供应的源头。祂是降下吗哪者，也是所撒之种与所吃之粮的供应者。因此我们应当认识我们的给与就是收取，且为着收义果而撒种。带着祝福撒种，也带着祝福收获。使徒保罗对神的经纶有透彻的认识，因此他有确据和平安，鼓励马其顿贫穷的圣徒，用他们的所有供给人，这符合新约关于财物奉献的教导。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　四方的恩典（一）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后八2：就是在患难中受大试验的时候，他们充盈的喜乐，和极深的贫困，汇溢出丰厚的慷慨。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们若要合式的供给有需要的圣徒，就必须与神和好，完全被带回归祂。我们必须是活在神里面，与神没有间隔的人。我们都需要恩典，好胜过财物的霸占。我们若要不断的（不是一次而永远的）供给，就需要神圣的恩典在里面激励我们。如此，才能尽这供给的职事，胜过玛门，并使用这些财物来完成神的定旨。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历恩典在我们里面的运行，使我们能胜过玛门和财物。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

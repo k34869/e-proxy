@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('310')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('312')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第3课  十诫—不可妄称主的名</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十7上  不可妄称耶和华你神的名…</p>
+<p>每一个人都有名字，一个人的名字就代表他这一个人，要认识一个人，首先要认识他的名字。当我们要找某一个人时，也必须称呼他的名字，才能够让人知道我们要找的是谁。如果我们要找一个人，不称呼他的名字，而叫他：“喂！”这是很不礼貌的事。</p>
+<p>我们在班上，常常喜欢替别人取绰号，这在我们是觉得好玩，但是对别人来说，这是一种不尊敬别人名字的表现。每一个人的名字都是父母或亲人为他取的，如果我们随意给人取绰号，这是对人不尊敬。因为当我们随便以绰号称呼他人时，别人就会把这个人和他的绰号联想在一起。像小朋友刚才所听的录音带，故事中的那些人物，都被人取了绰号，有一个姓鲁的同学，被人叫作“卤蛋”，另一个叫“大光”的小朋友，被人叫作“大光头”。其实他们既不是卤蛋，也不是光头，但是被人这么一称呼，就会造成错误的印象。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：第三条诫命是人不可妄称主的名。我们能认识神和知道祂的名是何等的福分和权利。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：随机指着在场的一个孩子问其他人：“他是谁？”在大家回答出这个孩子的名字后，就指出如果你想知道一个人，你需要知道他或她的名字。我们的神要我们知道祂是谁，所以祂告诉了我们祂的名字。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十7上 不可妄称耶和华你神的名…</p>
+<p>新约中有一位使徒名叫保罗，他因着被圣灵充满，奉主的名无论是传道，或是医病行异能，都满有能力。很多人因着他病得医治，身上的恶灵也被赶出去了。有几个游行各处，也靠着念咒赶鬼的犹太人，看见保罗奉主名传福音如此有异能，也学保罗，向那些被恶灵附着的人，擅自称主耶稣的名说，“我靠保罗所传扬的耶稣，敕令你们出来。”但是那附在人身上的恶灵却回答他们说，“耶稣我认识，保罗我也知道；你们却是谁？”恶灵所附着的人，就扑在他们身上，制伏他们，且胜过他们，结果他们赶鬼赶不成，竟赤着身子，又带着伤，从那屋子里逃出去了。因着这事，住在那一带的人都惧怕，尊敬主耶稣的名（徒十九11~17）。这个事例给我们看见，我们绝不可随意的妄称或是试探主的名，而当尊他的名为圣。</p>
+<p>以赛亚书五六6下 …要爱耶和华的名</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：第三条诫命是人不可妄称主的名。世界上的人轻浮的用神的名，甚至以诅咒的方式，但是我们作为祂的子民，应该尊崇祂的名。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：在房间里喊某人的名字，但是当那个人回应你时，故意忽视他或显得不理睬他。由此指出这样就是妄称某人的名字的意思。名字代表一个人。当我们说出一个人的名字时，就意味着我们需要那个人。如果人们用玩笑的方式说出你的名字，或者每次出错时用责备的方式说出你的名字，你会喜欢吗？今天，许多人妄称神的名（耶和华或耶稣）。但我们应该是一班用爱和尊重来</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传四12 除祂以外，别无拯救，因为在天下人间，没有赐下别的名，我们可以靠着得救。</p>
+<p>神把他的名赐给我们的目的，就是要我们呼求他。我们需要某人时，就会呼喊他。从小我们叫得最多的，就是妈妈了。当我们一叫妈妈，妈妈一听到就来到我们身边，了解我们需要什么，并供给我们所需要的，解决我们的问题。但是，妈妈不能随时随地都在我们身边，听见我们的需要。主耶稣却在我们里面，无论何时何地，一呼喊他就来。事实上，不是只有今天的基督徒呼求主，从人类的第三代起，也就是亚当的孙子中，有一位名叫以挪士的（以挪士的名字乃是脆弱、必死的人），他明白自己是很脆弱的，就常常呼求神的名，来享受神的丰富</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：第三条诫命是人不可妄称主的名。我们不以轻蔑或诅咒的方式说主的名字。主的名是人唯一能借以得救的名字。若是有一个人遇到危险了，他必定大声喊叫：“救命！”当一个人迫切想要得到拯救时，他必定会真诚的大声喊叫。呼求主名也是这样，必须发自我们的真诚，并且用听得见的声音来呼求。主告诉我们，只要我们诚心的呼求他的名，他都听，并且与我们相近</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：给房间里的孩子一些东西（铅笔、杯子等）。问一个没有得到东西的孩子，他们得到东西的正确方法是什么。说明正确的方法是通过称呼孩子的名字，然后友好地请求他给你某样东西。耶稣的意思是耶和华救主，或耶和华救恩。我们不应该徒劳地使用主耶稣的名字。我们应该珍赏祂的名，因为那是我们唯一借以得救的名。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

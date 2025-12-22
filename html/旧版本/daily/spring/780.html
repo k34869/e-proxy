@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('779')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('781')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">光就照在背上</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗马书 3:24</p><p>但因神的恩典，借着在基督耶稣里的救赎，就白白地得称义。</p><p>Being justified freely by His grace through the redemption which is in Christ Jesus;</p><p>德华是个吝啬的小孩，每逢作事，总要过分计较报酬，才肯去作。一天晚饭之后，他暗暗将一纸条放在母亲枕头底下，上面写着：‘母亲欠德华的债：帮母亲带信—二角五分，听从母亲的话—一角，作功课—一角五分，其他—二角，合计—七角。’第二天清晨，德华在小餐桌上，收到一个小包，打开一看，眉飞色舞；可是另外还附一张纸条，上面这样写着：‘德华欠母亲的债：细心抚育—免费，患很重的猩红热日夜服事—免费，八年来每日三餐一宿—免费，合计—免费。’德华看了，非常惭愧，就把七角钱统统还给母亲，流泪说道：‘妈妈，我欠你的，永远还不清。’神爱我们，白白赐恩给我们，不需要我们出什么代价。‘神既不爱惜自己的儿子为我们众人舍了，岂不也把万物和祂一同白白的赐给我们么？’（罗八32。）‘你们一切干渴的都当就近水来；没有银钱的也可以来；你们都来，买了吃；不用银钱，不用价值，也来买酒和奶。’（赛五五1。）‘谁是先给了祂，使祂后来偿还呢？’（罗十一35。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

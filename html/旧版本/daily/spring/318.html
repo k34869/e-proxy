@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('317')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('319')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第4课 十诫—圣别主日</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十8 当记念安息日，将这日分别为圣。</p>
+<p>创世记二2~3到第七日，神造作的工已经完毕，就在第七日歇了祂一切造作的工，安息了。神赐福给第七日，将其分别为圣，因为在这日神歇了祂一切创造和造作的工，就安息了。</p>
+<p>小朋友们还记不记得，神创造天地万物总共用了多少时间？总共用了六天的时间。在这六天里面，神创造了光、空气、陆地、植物、日、月、星辰等各种光体，还有海里的鱼、空中的鸟、以及地上各样的动物。当神将这一切都预备好了，神才用地上的尘土造人。在神所造的万物中，只有人和神是非常相像的。因为人是照着神的形像，按着他的样式造的。现在，神得着一个有他形像和样式的人，这一个人要在地上，作神的代表，并将他彰显出来。神造了人以后，非常高兴，非常满足。所以到了第七天，神停下他所有的工作，不再作工了。那不是因为他太累而歇息，乃是因为他造了人以后，就满足而歇息，神已经完成了他所渴望达到的，所以他安息了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：第四条诫命是记念安息日。在旧约中，安息日是为了让神的子民得安息，以记念神创造天地的工作。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：通过与孩子们讨论神是如何创造天地来解释安息日是什么。简要地说一下神创造的进程。第七天，神歇了，因为祂完成了工作，并且祂也满意了。后来，第七天被定为安息日（出埃及记20:8—11），就是一个休息的日子，以记念神在创作中的工作。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十8 当记念安息日，将这日分别为圣。</p>
+<p>启示录一10上 当主日我在灵里…</p>
+<p>神要人守安息日，还有一个目的，是要人知道，他是万有的创造者。万有都是他造的，也是为着他和他的计划造的。因此万有都属于他，我们也是属于他的，我们生活所需要的一切都是从他而来，连我们的健康、体力、工作的能力也都来自于他。所以，神不要我们靠自己，他要我们倚靠他，并记念他是我们的造物主和供应者。就像农夫可以昼夜不休的劳苦耕种，但如果神没有从天降下雨来，农作物也不能长起来。所以神要人认识，他才是一切的源头。既然神是人一切需要的源头，人就不应该为着自己的需要，拼命工作而不休息。像有些人为了赚钱就拼命工作，不仅白天工作，晚上还去兼差，只想多赚一点钱。但圣经告诉我们：“人若赚得全世界，却赔上自己的魂生命，有什么益处？”（太十六26上。）当神要人记念安息日并守为圣日时，他告诉人不可在安息日作工。神要我们该工作的时候就要工作，该休息的时候就要休息。在安息日这一天，人不要再为自己劳碌工作，而应当安息，并且记念那造我们，又赐给我们一切供应的神。所以安息真正的意义，就是倚靠神、信靠神、并记念神。我们既相信主耶稣，就可以把我们所有的事—不快乐的事，难过的事，痛苦的事，忧伤的事，觉得重担的事—都借着祷告来告诉主，并且倚靠主，仰望主，来卸去我们的重担，享受主作我们真正的安息。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：在旧约圣经中，神的子民休息，以记念神创造的工作。在新约圣经中，我们聚在一起记念耶稣和祂的复活。这一天叫作主日，这是一周的第一天。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：人们通常称之为星期天，我们称之为“主日”，正如早期基督徒所作的那样。在旧约中，神的子民守安息日为圣来记念神。在新约中，主日是一个记念主复活的日子。主日是一周的第一天（启示录1:10），一周的第一天是特别的，因为它意味着一个新的开始。一周又一周，我们有一个新的开始。每逢主日，我们聚在一起，与父母和其他的孩子们一同敬拜主。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十8~10  当记念安息日，将这日分别为圣。六日要劳碌作你一切的工，但第七日是向耶和华你神当守的安息日；这一日你和你的儿子、女儿、仆人、婢女、牲畜、并你城里的寄居者，无论何工都不可作。</p>
+<p>华盛顿从不疏忽主日</p>
+<p>一位常到凡门岗拜谒华盛顿总统的人说：“没有人能拦阻华盛顿不去参加主日的聚会。每当主日早晨，总统的早餐桌上都是客人，但是总统从来不曾因着这些客人而疏忽了敬拜神，破坏了他敬拜神的习惯。到了时候，他就不和客人作假意敷衍，却诚心诚意的邀请他们一齐参加主日的聚会去。”你对你的朋友们如何？</p>
+<p>使徒行传二十7上 七日的第一日，我们聚集擘饼的时候…</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：我们与世人不同的一个标志就是我们遵守主日。世人可能会利用这一天来工作或玩耍，但我们利用这一天来宣告我们属于神，并依靠祂作任何事情。我们永远不该错过一次主日聚会。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：在旧约中，神的子民劳苦了六天，但在安息日，第七天，他们休息（出埃及记20:9—10）。耶和华吩咐他们在这一天休息，记念他。在新约中，神的子民应该在主日聚会上相聚记念他。这是一个欢庆、敬拜和赞美的日子（诗篇118篇；24篇）。不像许多世人在这一天作许多其他的事情，我们在主日要分别自己为圣。问问孩子们，他们是否希望在神的日子能作些别的事情，而不去参加儿童聚会。这一天应该是属于神的，这是我们为祂留出的一天。我们应该以正确的态度和举止去参加儿童聚会，敬拜神。永远不要错过一个主日聚会，并准备歌唱、赞美和学习神的话！</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

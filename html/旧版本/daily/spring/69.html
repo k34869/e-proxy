@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('68')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('70')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">绳子嵌在石缝中</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">约伯……清早起来，按着他们众人的数目献燔祭；因为约伯说，说不定我儿子犯罪，心中咒诅了神。约伯常常这样行。（伯1:5）</div>
+<div id="CC">Job ……would rise early in the morning and offer burnt offerings according to the number of them all; for Job said，Perhaps my children have sinned and have cursed God in their heart. Job did this continually.（Job 1:5）</div>
+<div id="C">贾斐（Gorfield）生长在一个极为贫困的家庭中。父亲早逝，母亲以耕种几亩薄田为生，他自己则在船上作伙夫。有一天夜半，他一个不小心落入海里，没有人听见他的呼救。他在危急中，抓住一条绳子，绳子另一端很松，无法施力，便越拉越沉。突然绳子嵌在船边的石缝中，他因此得以攀上，得救上岸。他穿着湿淋淋的衣服跑回家中，看见母亲正在跪着为他祷告。他知道是神救了他，从此以后便成为神所重用的人。</div>
+<div id="CC">祷告─在主名里（诗559）</div>
+<div id="C">我奉耶稣全能的名，<br/>　跪在施恩宝座前，<br/>　打败许多黑暗军兵，<br/>　灭熄许多的火箭。<br/>（副）<br/>　全能名！全能名！<br/>　我奉此名就得胜！<br/>　全能名！全能名！<br/>　撒但、罪、死，都无能！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

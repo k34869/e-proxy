@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('17')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('19')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>你眼必看见你的教师。你或向左、或向右，耳中必听见后边有话说，这是正路，要行在其间。（赛三十20～21）</p>
+<p class="title">听话要准确</p>
+<p>我们讲到话语的问题，不只注意到说话准确，也要注意到听话准确。在积极一面，我们要学习听主的话，并准确的照着主的话去实行。主在马太七章说到，这样的人，就好比一个精明人，把房子盖在磐石上。这里的房子指我们的生活和工作，磐石指基督智慧的话。我们的生活和工作，都必须建立在主的话上，照着主的话一点不打折扣，准确的去行。这样行乃是把房子盖在稳固的磐石上，不论雨淋、河冲、风吹，房子都不会倒塌。这样的工程就像用金、银、宝石建造的，能经得起试验的火。（林前三12～13。）</p>
+<p>以赛亚三十章说到，在我们人生的路上，主是我们的教师：‘你或向左、或向右，耳中必听见后边有话说，这是正路，要行在其间。’（21。）基督是我们的教师，我们能在所行的路上听见祂的声音，告诉我们或向左、或向右。每当我们迷路或走错路，在我们走到转角处时，祂就在那里。我们在十字路口，不知道要选择向左或向右，而基督就在十字路口，告诉我们要走的路，这时我们需要听见祂的声音并准确的遵行，使我们不至偏行己路。在约翰十五章十四节，主嘱咐门徒：‘你们若遵行我所吩咐你们的，就是我的朋友了。’藉着读经、祷告、和参加召会的聚会，我们操练听见主的说话，同时准确的照着主的话去行；这样，我们就是主的朋友，也是将我们的房子，盖在稳固的磐石上。（参马太福音生命读经，341页；以赛亚书生命读经，146、362页。）</p>
+<p class="title">开表的方法</p>
+<p>湖南一个弟兄，睡觉的时候，突然发现一个小偷正在偷他桌上摆着的表。他立即起来，想要抓住小偷。但是里面有声音告诉他：‘你就让他拿去罢。’他正在犹疑作难，里面的声音又告诉他：‘你应当告诉他开表的方法。’原来他的表很特别，开发条的方法和普通的表不一样。他想，既然里面二次对他说话，定规不会错。于是叫住小偷，很温和的对他说，‘这个表你拿回去，每天十二点时上发条一次，上的时候，要从后面用那表炼上的小匙来上，旋转八次就可以了。’小偷回去，越想越觉奇怪，世上竟有这样的好人。过了几天，里面受感动，把表送还给那弟兄，以后也信主得救了。（造就故事中册，40～41页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：藉着读经、祷告、和参加召会的聚会，操练听见主的说话，同时准确的照着主的话去行。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

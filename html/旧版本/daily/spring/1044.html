@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('534')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('536')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">破布变白纸</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗8:17　既是儿女，便是后嗣，就是神的后嗣，和基督同作后嗣，只要我们与祂一同受苦，好叫我们也与祂一同得荣耀。</p><p>天蛾茧的结构非常特异，一头是一条细管，一头是一个球形的囊，很像实验室中细颈瓶。当蛾出茧之时，必须从球形囊那里爬过那条极细的管儿，然后才能脱身，飞翔空中。它的身体这样肥大，那条管儿这样细小，人人都会希奇，怎样能够出来呢？一定碰见多少难处，花费多少心机与力气。据生物学家说，它在作蛹之时，翅膀萎缩不发达；脱茧之时，必须经过一番挣扎，身体中的体质才能流到翅膀中去，两翅才能有力飞翔空中。</p><p>有一个弟兄，也养着一个这样的天蛾茧。一天，恰巧看见那只久囚的虫儿开始活动了。整个早晨，他忍耐等在旁边察看。它在里面奋力挣扎，还是不能进前丝毫，似乎再也没有可能出来了。最后他的耐心用尽，就用一把小剪刀，把茧上的丝剪薄了些，让它出来可以稍为容易一些。一会儿，蛾儿很容易的爬出来了。可是身体反常臃肿，翅膀反常萎缩。他在旁边等候，想要看它徐徐伸展翅膀，显露细巧精致的彩纹。岂知大失所望，他的帮助反成祸根。可怜的虫儿，非但不能伸展它带虹翅翼，飞翔空中，呈现它的美丽；竟很痛苦的爬了一会儿，不寿而终了。</p><p>许多时候，我们看见人们在忧愁、困苦、艰难中挣扎，觉得很是可怜；常常愿意把神的法则变更，给他们属人的帮助。神使祂的长子在苦难中得荣耀；照样，也使祂的众儿女在患难中学习顺服，得以进入荣耀。有了这样荣耀的目的，祂才不顾他们的眼泪。‘如果我们和祂一同受苦，也必和祂一同得荣耀。’（罗八17。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

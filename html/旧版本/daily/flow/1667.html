@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1666')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1668')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 5 课<br />
+生命的长大及其结果</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主阿我心我灵又渴又饥。（诗歌586首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：惟有你们是蒙拣选的族类，是君尊的祭司体系，是圣别的国度，是买来作产业的子民，要叫你们宣扬那召你们出黑暗、入祂奇妙之光者的美德。（彼前二9。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　靠话奶的喂养长大，以致完全得救—彼前二1～3</p>
+<p class="ot2">1　要脱去恶毒、诡诈、伪善、嫉妒、毁谤的话—1。</p>
+<p class="ot2">2　要像才生的婴孩，切慕那纯净的话奶，靠此长大以致得救—2～3。</p>
+<p class="ot1">二　变化被建成属灵的殿，作神的居所，成为事奉神的圣别祭司体系—4～8</p>
+<p class="ot2">1　基督是神所拣选、所宝贵的活石—4，6～8：</p>
+<p class="ot2">a　基督为人所弃绝，却为神所拣选所宝贵—4。</p>
+<p class="ot2">b　基督是匠人所弃的石头，成了房角的头块石头—7。</p>
+<p class="ot2">c　对不信从的人，基督是绊脚的石头，并跌人的磐石—8。</p>
+<p class="ot2">2　我们来到基督这活石跟前，也就像活石—4～5上。</p>
+<p class="ot2">3　被变化、建造成为属灵的殿，和圣别的祭司体系—5上。</p>
+<p class="ot2">4　藉着耶稣基督，献上神所悦纳的属灵祭物—5下。</p>
+<p class="ot1">三　宣扬呼召者的美德—9～10</p>
+<p class="ot2">1　我们的身分—9上：</p>
+<p class="ot2">a　蒙拣选的族类。</p>
+<p class="ot2">b　君尊的祭司体系。</p>
+<p class="ot2">c　圣别的国度。</p>
+<p class="ot2">d　买来作产业的子民。</p>
+<p class="ot2">2　我们的托付—宣扬神的美德—9下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示神的目标和愿望，是要得着一个建造的殿和祭司体系，作祂的彰显。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼前二章一至十节给我们看见生命的长大及其结果首先我们靠话奶的喂养长大，以致完全得救。然后我们来到基督这为人所弃绝，却为神所拣选、所宝贵，成了房角头块石头的活石跟前，也要变化成为活石，并被建成属灵的殿，作神的居所，成为事奉神的圣别祭司体系。我们的身分是蒙拣选的族类、君尊的祭司体系、圣别的国度、买来作产业的子民，要叫我们宣扬那召我们出黑暗、入祂奇妙之光者的美德。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　切慕那纯净的话奶</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前二2～3：像才生的婴孩一样，切慕那纯净的话奶，叫你们靠此长大，以致得救；你们若尝过主是美善的，就必如此。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼得二章先题到要脱离五件消极的事：恶毒、诡诈、伪善、嫉妒、毁谤的话。要脱离这五件消极之事，就要像才生的婴孩一样，切慕那纯净的话奶。信徒藉着重生，出生为属灵的婴孩，就能靠着灵奶的滋养，在生命里长大，以致进一步的得救。在神的话里有养分，我们该切慕纯净的话奶，由神的话所传输的奶得着滋养，在这生命里并因这生命而长大。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>藉神的话所传输的奶得着滋养，在这生命里并因这生命而长大。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

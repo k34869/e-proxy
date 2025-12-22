@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('156')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('158')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">信心的创始者与成终者</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">望断以及于耶稣，就是我们信心的创始者与成终者。（来12:2）</div>
+<div id="CC">Looking away unto Jesus，the Author and Perfecter of our faith.（Hebrews 12:2）</div>
+<div id="C">我们需要耶稣作信心的创始者，因为照我们天然的人，我们没有信的能力，我们凭自己没有信。那叫我们得救的信，乃是我们从主所得宝贵的信。当我们仰望耶稣，祂这赐生命的灵就将祂自己，将祂信的成分，灌输到我们里面；这样，自然而然的，有一种信在我们里面升起，我们就能相信祂。<br/><br/>　耶稣是信心的创始者和起始者，主要是就着祂在地上的生活和所行的路程说的。主耶稣在地上的生活，乃是开辟信心之路的生活。祂无论往哪里去，好像都有高山大水拦阻祂；但祂一步一步开辟信心的路，就像建筑高速公路的人，移高山平深谷一样。<br/><br/>　耶稣是信心的成终者，主要是就着祂在荣耀里和在天上的宝座上说的。祂在荣耀里坐在宝座上，要完成祂在地上所起始的信心。祂是信心的完成者和完全者，必能完成并完全祂所起始并开创的信心。<br/><br/>　当我们望断以及于祂，我们就给祂机会，让祂自由的把祂自己作到我们里面。这样，生命之律就能在我们里面每一部分运行，直到我们里面被祂充满。我们里面越多充满祂，就越容易相信。这就是得着信心的路。（希伯来书生命读经）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

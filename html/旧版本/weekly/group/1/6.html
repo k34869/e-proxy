@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>二O二三年秋季训练申言参考</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('5')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">第 6 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('7')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+
+          <div class="title">第六周 基督的好执事</div>
+          <v-divider></v-divider>
+
+          <v-btn block color="primary" elevation="1" tile><b>鸟瞰：</b></v-btn>
+          <div class="contents">
+            <v-divider></v-divider>
+            <p>提前四6：将这些事题醒弟兄们，便是基督的好执事，在信仰的话并善美教训的话上得喂养。借着职事得主喂养，乃是自己先得喂养，然后滋养供应神子民。好执事牺牲自己，以保持真理绝对；人必须站在真理一边反对自己。好执事供应生命，按生命树原则服事圣徒；我们服事神的话语，要注意神的说话；要有负担必须背负人在神面前光景，晓得神要说甚么话；没负担作甚么都是死的。好执事须有生机特点：爱主到极点被祂充满，借复兴生活，牧养劳苦维持得胜，需是祷告的人，彻底对付罪，里面充满素质的灵，外面充溢经纶的灵，对基督有经历，对主话有积存。
+</p>
+            
+            <v-divider></v-divider>
+            <br />
+
+             <v-btn block color="primary" elevation="2" rounded >周一</v-btn>
+            <br v-show="show" />
+<br />
+            <p class="ot2" >晨祷经节：你将这些事题醒弟兄们，便是基督耶稣的『好执事』，在信仰的话…（提前四6）</p>
+            <p class="ot1">1 请论述作为基督好执事，该在那些事上提醒弟兄们？</p>
+            <p class="ot2" >保罗提前四6 所说『这些事』，意思是他在这封书信里到目前为止所说过的一切。管家怎样在一餐饭中将不同的食物摆在客人面前，基督的好执事照样该将『这些事』题醒信徒们。不仅如此，保罗用『得了喂养』指明，他观念是供应生命给人。</p>
+            <p class="ot1">2 请阐释众召会的圣徒，需要得着丰盛的喂养？</p>
+            <p class="ot2" >我负担是要为众地方召会出产食材。一个地方召会领头的人若将生命读经里的丰富题醒圣徒们，圣徒们就会得着丰盛的喂养。我只盼望众召会能从主所给我们的属灵丰富，得着喂养，将主从祂的话所给我们看见的丰富作为食材陈明给众圣徒。</p>
+           
+  <v-btn block color="primary" elevation="2" rounded >周二</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：只有长成的人，才能『吃干粮』，他们的官能因习用而受了操练…。（来五14）</p>
+            <p class="ot1">1 请解明提前四6 中，善美的话之意义及运用？</p>
+            <p class="ot2" >善美教训的话，乃是那些包含并传输基督的丰富，以喂养、造就并加强祂信徒之甜美的话。事实上，信仰的话与善美教训的话是指同样的事。我们要教导别人，自己必先紧紧跟随这些话。我们跟随这些话，并得其喂养，然后才能喂养别人。</p>
+            <p class="ot1">2 请交通在接纳信徒过召会生活上，该如何？</p>
+            <p class="ot2" >我们要照着基督耶稣，彼此思念相同的事，同心合意荣耀神。当我们同心合意时，我们都用同一的口，说同样的话。我们同心同口惟一的路，就是让基督在我们心里和口中，有地位作一切，使荣耀归与神。我们已经说过，神就是新耶路撒冷。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周三</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：求你用真理圣别他们，你的话就是『真理』。（约十七17）</p>
+            <p class="ot1">1 请交通要学习作神的工，对真理要绝对？</p>
+            <p class="ot2" >圣经中的每一个真理都不和人发生关系。真理本身是绝对的。我们要看见，个人的光景如何，与神的真理不发生一点的关系。真理若受人影响，这个真理就不是真理。真理在你身上若不是绝对的，你还不认识神，还不会读神的话。</p>
+            <p class="ot1">2 请阐释提前三15 真理的柱石？</p>
+            <p class="ot2" >为甚么说到真理的柱石呢？因为柱子是不移动的。这是一个大试验。人必须站在真理一边反对自己，如此才能维持真理，不维持自己。自己没受过对付的人，永远不知道甚么是真理。惟有对付自己的人，才能维持真理。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周四</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：于是我『遵命申言』，气息就进入骸骨，骸骨便活了，并且站起来…。（结三七10）</p>
+            <p class="ot1">1 请解述申言者的意义？他们的功用为何？</p>
+            <p class="ot2" >申言者是一个完全呼吸神、被神充满、活在神里与神相通的人。他作神的发言人和神的发表，所以他的话就是神的话。他的职事他所说的，都是呼召人来享受神自己。作申言者尽职，就是作一个享受生命树的人，呼召带领人来享受生命树。</p>
+            <p class="ot1">2 请阐述何谓生命之道？</p>
+            <p class="ot2" >神要来与人调和，作人的成分，成为人的一切。你若看见这个亮光，所有在〔神来作人生命〕之外的道，都是弗四的教训之风。只有用话语带领人在基督里享受神作人的生命；只有这一种道叫作生命之道，能叫人得到真实生命的供应。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周五</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：耶和华论以色列之话语的『默示』〔直译，负担〕…造人里面之灵的耶和华说。（亚十二1）</p>
+            <p class="ot1">1 请解说要有话语职事，该如何？</p>
+            <p class="ot2" >启示、光照是第一。你总得从这里起头，但是有了启示、光照，还没有话语的职事。你需要有更新的悟性，更新的心思，这样，神一光照你，你就清楚内容。…思想清楚了，如果没有话，你那个意思还没有出去。所以你在神面前总得有话。</p>
+            <p class="ot1">2 请论述话语的职事与负担？</p>
+            <p class="ot2" >在话语的职事上，最大的难处就是没有负担，或说不接受负担，不注意负担。如果他们尚未得救的，你就该背负他们的灵魂，将救恩种到他们里面。若是已经得救却不爱主，你就该接受一个负担，使他们爱主。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周六</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：…我题醒你，将那借我按手，在你里面神的恩赐，再『如火挑旺』起来。（提后一6）</p>
+            <p class="ot1">1 请交通无论得时不得时，须每日都对人说基督？</p>
+            <p class="ot2" >这指明我们应当拿起传扬福音的负担，到一个地步，叫我们会对在周围的东西说话。我们要作说话的人，就需要里面的充满；这样我们才有内容。我们也需要外面的充溢；这样我们才有能力和权柄。当我们在聚会中说话，必须满有灵的操练。</p>
+            <p class="ot1">2 请阐说我们对于人的灵，该有何种认识？</p>
+            <p class="ot2" >很可惜的是，由于人的堕落，人不仅疏忽并忽略人的灵，甚至拒绝承认人有灵。…身为基督徒，我们的灵已经得了重生。神的生命和神的灵…已经加到我们灵里了。我们有一个得重生并得加强的灵，这灵是刚强的灵，有一个同伴就是三一神。</p>
+
+<v-btn block color="primary" elevation="2" rounded >总结</v-btn>
+<br />
+            
+            
+            <p class="ot2" >生命读经信息的目标是要为着众地方召会出产食材，使每个地方召会成为存货充足的超级市场，满了各种滋养的食物。我们若先消化、吸收、并让生命读经里所包含的丰富浸透到我们里面，然后将其题醒圣徒们，圣徒们就会得着丰盛的喂养，这样，我们就是基督的好执事。同时，我们还必须操练以至于敬虔，就是操练我们的灵，在日常生活中活出基督。我们里面需要喂养，外面该有敬虔。我们该从里面得着基督的喂养，然后我们该有彰显神的生活。我们的事奉变作尽责任，就表明事奉已经堕落。真实的事奉不是责任的问题，乃是负担的问题。</p>
+           
+  
+        
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+      });
+    </script>
+    <style>
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

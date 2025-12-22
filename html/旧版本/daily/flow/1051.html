@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1050')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1052')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 7 课<br />
+保罗开展的职事（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：为神永远的经纶。（补充本诗歌427首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：知道人心的神，也为他们作了见证，赐圣灵给他们，正如给我们一样…我们信，我们得救乃是藉着主耶稣的恩，和他们一样。（徒十五8，11。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　保罗第一次的行程—徒十三4下～十四28</p>
+<p class="ot2">1.　到居比路的帕弗—十三4下～12。</p>
+<p class="ot2">2.　到彼西底的安提阿—十三13～52：</p>
+<p class="ot2">a.　传讲钉死并复活的基督为救主—13～43。</p>
+<p class="ot2">b.　为犹太人所弃绝—44～52。</p>
+<p class="ot2">3.　到以哥念—十四1～5。</p>
+<p class="ot2">4.　到吕高尼的路司得和特庇—十四6～21上。</p>
+<p class="ot2">5.　回程坚固门徒，并选立长老—十四21下～25上。</p>
+<p class="ot2">6.　回安提阿，结束第一次行程—十四25下～28。</p>
+<p class="ot1">二　割礼的搅扰—十五1～34</p>
+<p class="ot2">1.　使徒和长老在耶路撒冷的会议—1～21。</p>
+<p class="ot2">2.　决议—22～34。</p>
+<p class="ot1">三　巴拿巴的难处—十五35～39</p>
+<p class="ot1">四　保罗第二次的行程（一）—十五40～十六12</p>
+<p class="ot2">1.　保罗拣选西拉同行—十五40。</p>
+<p class="ot2">2.　到叙利亚和基利家，坚固众召会—十五41。</p>
+<p class="ot2">3.　到特庇和路司得—十六1～5。</p>
+<p class="ot2">4.　往前的方向受圣灵以及耶稣的灵所管治并引导—十六6～8。</p>
+<p class="ot2">5.　夜间看见异象而到马其顿的腓立比—十六9～12。</p>
+<p class="ot2">6.　路加在特罗亚加入了保罗尽职的旅程—十六10～12。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>明白保罗第一次出外开展职事的细节、当时召会中消极的难处并解决之路。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在第一次的行程中，到居比路的帕弗，惩罚行法术的假申言者。到了彼西底的安提阿，在那里传讲钉死并复活的基督为救主，但却为犹太人所弃绝。他们又到以哥念，和吕高尼的路司得，保罗对那里的外邦人从神的创造讲到福音。但因受到犹太人的逼迫，就离开往特庇去，好多人听信福音作了门徒。回程又沿路坚固门徒，并在各城选立长老。最后回到安提阿，结束第一次行程。不久，安提阿召会就受到犹太人要外邦人受割礼的搅扰。保罗和巴拿巴因而被指派参加使徒和长老在耶路撒冷的会议。过后，保罗要回到各城去看望弟兄们，巴拿巴却因马可的问题和保罗起了争执，而离开这分职事。至终，保罗拣选西拉同行，到叙利亚和基利家，坚固众召会。又到特庇和路司得，在那里遇见提摩太，就带他同行。然而圣灵以及耶稣的灵禁止，不许他们往左或往右，却在夜间藉异象指示他们要往马其顿。此时路加在特罗亚加入了保罗第二次出外尽职的旅程，他们就一同前往马其顿区的头一个城—腓立比。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　保罗传讲钉死并复活的基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>外邦人听见了，就欢乐，并且荣耀主的话，凡指定得永远生命的人都信了。于是主的话传遍了整个地区。（徒十三48～49。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们在行传十三章看见一个完整的榜样，给我们来跟从。巴拿巴和扫罗被圣灵差遣，到了彼西底的安提阿，向当地的百姓传扬福音。有很多人信了福音，并且跟从他们，那一天凡命定要得永远生命的人，都因着福音得救了，他们被喜乐和圣灵充满。保罗总是根据圣经传讲并施教，他乃是传讲并教导来自圣经的话。他的信息完全以基督为中心。当他说到救恩的时候，特别强调基督被钉十字架，以及祂藉着复活成为神的长子，为着生命的繁殖。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练根据圣经传讲以基督为中心的福音。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

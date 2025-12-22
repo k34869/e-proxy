@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('3')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('5')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>我只怕你们的心思或被败坏，失去那向着基督的单纯和纯洁，就像蛇用诡诈诱骗了夏娃一样。（林后十一3）</p>
+<p class="title">人堕落的原因—撒但诱骗人，使人犯罪</p>
+<p>在神造人的时候，神照着祂的形像和样式来造人，那时人里面是没有罪的。但是在创世记三章，撒但以非常狡猾的方式，化身成为蛇，来诱骗夏娃，叫人因此犯罪而堕落。蛇知道女人比男人更软弱，容易受试诱，所以它先来引诱夏娃，对她说，‘神岂是真说，你们不可吃园中所有树上的果子么？’（1。）蛇先使夏娃心中对神的话起了疑惑，然后对夏娃说不真实的话，篡改了神对亚当夏娃的吩咐。接着又进一步对夏娃说，‘你们不一定死；因为神知道，你们吃的日子眼睛就开了，你们便如神知道善恶。’（4～5。）它第二次改了神的话，叫夏娃对神的话起了怀疑。狡猾的撒但就像蝎子，他的话似是而非。当蛇对夏娃说话时，这些话就成了毒素，刺进夏娃里面。</p>
+<p>撒但有一个特别的名字，叫作‘那试诱者’。（太四3。）无论他去那里，所行的就是试诱，因为这是他的性情和本质。他也被称为‘魔鬼’，（启十二9，二十2，）这名字的意义是‘毁谤者’。他向人毁谤神，也向神毁谤人。撒但试诱人的方法，是向人题议，叫人对神的话起疑问，而来试诱、引诱、陷害人。（创三1，4。）撒但的题议总是使人怀疑神的话和神的心，结果叫人的心思被败坏，偏离神，而活在罪中。要逃避撒但这虚谎者惟一的路，就是运用我们的灵，转向灵，回到灵里，拒绝撒但的试诱与谎言。（参创世记生命读经，285～288、291 ～292页。）</p>
+<p class="title">认识狼心</p>
+<p>狼看见山羊在一座很高的岩石上吃草，就装作很友爱的样子对山羊说，‘好朋友，你不怕跌伤么？’山羊仍在吃草，不去理它。狼又说道：‘你爬得这么高，又没有一点遮蔽，不是很可怕么？’可是山羊仍在吃草。狼就大声叫道：‘下来罢！我带你去较远的地方，找寻丰富而美好的青草罢！’山羊答道：‘狼先生，你的这番好意，到底是为我的食料，还是为了你自己呢？’不要接受魔鬼的意见，你一接受，就会替他开了侵入之门。（造就故事中册，181～182页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：运用灵，操练灵，回到灵里，拒绝撒但的试诱与谎言。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

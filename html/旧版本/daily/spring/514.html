@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('513')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('515')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第18课  性格—热情</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书四32上 你们要以恩慈相待，心存慈怜。</p>
+<p>森林王国深处，住着小熊一家四口—熊爸爸、熊妈妈、小熊哥哥和小熊妹妹。一天，天气晴朗，熊妈妈对小熊哥哥说“今天天气真好，带着小熊妹妹出去玩吧，要注意安全啊！”</p>
+<p>于是，小熊哥哥牵着小熊妹妹的手出门啦，路上小熊妹妹开开心心的边走边蹦，还不停的向周围的人打招呼。“嗨，蝴蝶，你好！”  “嗨，小黄鹂，你好啊，你在唱歌啊！”“嗨，买菜的阿姨，你好！” “小熊妹妹，你好啊！”周围的人也热情的向小熊妹妹问候。小熊妹妹主动邀请孤单的小白兔一起和他们玩纸飞机的游戏。大家都夸小熊妹妹真是热情、有礼貌的好孩子！</p>
+<p>（诗歌推荐：没有人喜欢被遗弃）</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：热情的人是一个关心人、温柔的人。他们对周围的人热情友善。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当你遇到一个朋友或一个你不认识的孩子时，你应该总是微笑着问候他，并邀请他们加入你正在作的事情。走进一个你谁都不认识的房间，每个人都只是盯着你看，不笑也不跟你说话，这样的感觉很不好。要热情，我们就需要热切地欢迎人。让孩子们示范如何亲切地问候人。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约翰壹书三17 凡有世上养生之物的，看见弟兄有需要，却向他塞住慈心，神的爱怎能住在他里面？</p>
+<p>棕棕第一天上学的日子，真是愉快极了。山羊先生是它们的老师，它和蔼可亲的请每一位小朋友自我介绍，棕棕很快就认识了新同学：小象比比、小白猫咪咪、公鸡咕咕、花鹿迪迪、和白兔妮妮。 咦！有一位新同学一直在哭呢！原来是小袋鼠跳跳，它平常都住在妈妈的袋子里，从未离开过妈妈，因此今天第一天来学校，很不习惯呢！当它哭的时候，小灰狼皮皮又在一旁笑它，惹得它更伤心了。其它的同学都围着小袋鼠跳跳，安慰它，叫它不要哭。可是跳跳还是哭个不停。棕棕看小袋鼠哭得那么伤心，它虽然也很想妈妈，但它决心要先去安慰跳跳。</p>
+<p>于是棕棕演出它的拿手绝活—荡树枝，它身手利落的从爬上一槐树，荡到另一棵树，又荡到另一棵树，…看得同学们个个都目瞪口呆。最后，它从树上摘了一粒苹果，带回来送给小袋鼠跳跳，跳跳终于破涕为笑，不再哭了。现在，跳跳也很高兴的和其他同学玩在一起了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：热情的人是对人有同情心的人。当人遇到问题时，他们会理解、关心、同情那个人的处境。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：如果你的朋友来找你，说他有点受伤。因为有人对他说了刻薄的话或作了什么刻薄的事，你要尽力理解他的感觉，照顾他，而不是忽略他。热情的人会关心别人的感情和处境，会对他们表示同情和关心，并尽力安慰他们。让孩子们示范如何安慰被别人的说话伤害的朋友。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>彼得前书三8 总之，你们众人都要心思一致，同情体恤，弟兄相爱，心存慈怜，心思卑微。</p>
+<p>爱人之心</p>
+<p>这是发生在英国的一个真实故事。有位孤独的老人，无儿无女，又体弱多病，他决定搬到养老院去。老人宣布出售他漂亮的住宅。购买者闻讯蜂拥而至。住宅底价8万英镑，但人们很快就将它炒到了10万英镑。价钱还在不断攀升。老人深陷在忧愁里，满目忧郁，是的，要不是健康情形不行，他是不会卖掉这栋陪他度过大半生的住宅的。</p>
+<p>一个衣着朴素的青年来到老人眼前，弯下腰，低声说：“先生，我也好想买这栋住宅，可我只有1万英镑。 可是，如果您把住宅卖给我，我保证会让您依旧生活在这里，和我一起喝茶，读报，散步，天天都快快乐乐的——相信我，我会用整颗心来照顾您”!老人颔首微笑，把住宅以1万英镑的价钱卖给了他。</p>
+
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">
+<p>焦点：热情的人是一个关心人、温柔、同情他人的人，但他们在自己的表现感情上并不松散。他们平易近人，用适当的方式表达自己对别人的照顾和关心。</p>
+</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：如果有人受伤，从学校步行回家，热情的人会停下来用一个温和的方式帮助和照顾他，或帮助他回家，即使这样会让人迟到。如果有人失去了对他来说珍贵的东西，热情的人会停下他们手中的事，帮助那个人找到丢失的东西。热情并不意味着你过多的帮助别人，或给别人很多拥抱。相反，乃是对他人温柔的关心。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

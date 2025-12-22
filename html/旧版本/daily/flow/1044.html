@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1043')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1045')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 6 课<br />
+彼得职事的扩展（二）与保罗职事的开始</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：祷告与主同劳苦。（诗歌569首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：他们事奉主，禁食的时候，圣灵说，要为我分别巴拿巴和扫罗，去作我召他们所作的工。于是禁食祷告，按手在他们身上，就打发他们去了。（徒十三2～3。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　彼得职事向外邦人的扩展—徒十1～十一18</p>
+<p class="ot2">1.　哥尼流的异象—十1～8。</p>
+<p class="ot2">2.　彼得的异象—十9～16。</p>
+<p class="ot2">3.　彼得的造访与信息—十17～43。</p>
+<p class="ot2">4.　外邦信徒的灵浸与水浸—十44～48。</p>
+<p class="ot2">5.　使徒和犹太众弟兄的承认—十一1～18。</p>
+<p class="ot1">二　福音的扩展与众召会间的交通—十一19～30</p>
+<p class="ot1">三　罗马政客的逼迫并神话语的扩长与繁增—十二1～24</p>
+<p class="ot2">1.　几个信徒的受害和雅各的殉道—1～2。</p>
+<p class="ot2">2.　彼得被捉拿并主的拯救—3～19上。</p>
+<p class="ot2">3.　逼迫者的命运—19下～23。</p>
+<p class="ot2">4.　神话语的扩长与繁增—24。</p>
+<p class="ot1">四　主行动中新的转弯—在外邦地，藉着保罗一班同工的职事—十二25～十三4上</p>
+<p class="ot2">1.　保罗职事的引进—十二25。</p>
+<p class="ot2">2.　圣灵的分别并差遣—十三1～4上。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>明白行传十至十三章彼得职事向外邦人的扩展，与保罗职事的引进并开始。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼得被主推动往该撒利亚的哥尼流家去，主预备这虔诚的外邦人，为着开启外邦人进入召会生活的门。因着哥尼流和彼得都在祷告，神使他们看见异象，为主福音的扩展开路。彼得放下自己旧约的观念，往哥尼流家去传福音，藉此外邦人在哥尼流家受了灵浸与水浸，并得到使徒和犹太众弟兄的承认。福音也扩展到腓尼基、居比路和安提阿。门徒被称为基督徒，是从安提阿开始。安提阿召会也与犹太众召会有交通。这时罗马政府与犹太宗教联合逼迫召会，造成几个信徒的受害和雅各的殉道。彼得也被捉拿，却因着召会的祷告蒙主拯救，神的话语也得到扩长与繁增。此时主的行动藉着保罗一班同工的职事，在安提阿这外邦地有了新的转弯。安提阿的申言者和教师禁食祷告，带进那灵的说话，分别并差遣巴拿巴和扫罗出外，将主国度的福音，开展到外邦世界。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　哥尼流的异象</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在该撒利亚有一个人，名叫哥尼流，…他是个虔诚人，同全家都敬畏神，多多赒济百姓，常常祈求神。（徒十1～2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>哥尼流，是个虔诚人，同全家都敬畏神，常常祈求神。有一天，约在午后三时，他在异象中，清楚看见神的一位使者来到他那里对他说’你的祷告和你的赒济，已经上达神面前，蒙记念了。现在你要打发人往约帕去，请那称呼彼得的西门来’神藉天使让哥尼流在祷告中得着异象，这有力的强调祷告的重要。主只能使用那些在生活中祷告接触神的人。我们都需要学习建立祷告的生活，甚至有定时的祷告。我们若有这样定时祷告的生活，就会被主使用,为主的行动铺路，并为主的扩展开门，为主恢复的扩展开路。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>建立定时祷告的生活，以被主使用，为主恢复的扩展开路。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

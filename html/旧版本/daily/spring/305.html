@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('304')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('306')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">对付罪的实行</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">不法得赦免，罪得遮盖的人，是有福的。（罗4:7）</div>
+<div id="CC">Blessed are they whose lawlessnesses have been forgiven，and whose sins have been covered over.（Romans 4:7）</div>
+<div id="C">我们在神面前罪案的消除，乃是因着主在十字架上的救赎。主替我们承担了神公义的审判，祂的宝血为我们满足了神律法的要求，我们在神面前所有的罪案就得以消除。然而，这客观的事实，若要成为我们的经历，就还需要我们来取用。<br/><br/>　我们得救以前所有的罪，在我们信主时，就都得着了赦免。这是行传十章四十三节所说，“凡信入祂的人，必借着祂的名得蒙赦罪。”所以，我们得救前罪案的消除，乃是在于我们的信，在于我们凭信而取用。至于我们得救后所犯的罪，若是在光中觉得了，就要立即向神承认；这样，就必得着赦免和洗净。所以，我们得救后罪案的消除，在于我们的认，在于我们凭认而取用。我们若不认，神就无法赦免，无法洗净。我们何时认了，何时就能得着赦免，得着洗净。这个认，也就是我们向神的对付。<br/><br/>　至于犯罪的事实，若是亏欠神的，就必须向神对付，求神赦免；若是得罪人的，就必须向人对付，求人饶恕。若牵涉到财物和利益上的损失，就还要照所亏欠的，如数赔偿。这不仅是对于得救以后所犯的罪，就是得救之前所犯的罪，也该照着里面的感觉去一一向人对付。（生命的经历）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

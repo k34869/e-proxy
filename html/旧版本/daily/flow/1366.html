@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1365')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1367')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 16 课<br />
+新人的生活</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　为神永远的经纶。（补充本诗歌427首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：在从前的生活样式上，脱去了旧人，这旧人是照着那迷惑的情欲败坏的；而在你们心思的灵里得以更新，并且穿上了新人，这新人是照着神，在那实际的义和圣中所创造的。（弗四22～24。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　新人生活的基本原则—弗四17～24</p>
+<p class="ot2">1　行事为人不再像外邦人—17～19。</p>
+<p class="ot2">2　学了基督—20～21。</p>
+<p class="ot2">3　脱去旧人—22～23。</p>
+<p class="ot2">4　穿上新人—24。</p>
+<p class="ot1">二　新人生活的细节—四25～五21</p>
+<p class="ot2">1　不要叫神的圣灵忧愁—四25～32。</p>
+<p class="ot2">2　在爱里行事为人—五1～7。</p>
+<p class="ot2">3　行事为人像光的儿女—8～14。</p>
+<p class="ot2">4　赎回光阴，在灵里被充满—15～21。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识召会在日常行事上需要的生活，就是新人的生活，其基本原则及细节。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以弗所四章十七节开始，保罗论到召会在日常行事上需要的生活，首先乃是在复活的生命里，照着那在耶稣身上是实际者，学了基督。这样，我们就能藉着在心思的灵里得以更新，脱去旧人，穿上召会生活作新人，这是召会生活最高的一面。这种生活像耶稣的生活一样，充满了恩典和实际，并不是凭我们天然的生命，乃是凭祂神圣的生命，效法神，在爱和光中行事为人，结出善、义、真实的果子；也藉着在灵里被充满而赎回光阴，在身体中过一个感谢神并彼此服从的生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　学了基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗四20～21：但你们并不是这样学了基督；如果你们真是听过祂，并在祂里面，照着那在耶稣身上是实际者，受过教导。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>基督对我们不仅是生命，也是榜样。我们跟祂学，不是凭天然的生命，乃是凭祂在复活里作我们的生命。主在地上三十三年半的一生当中，设立了模型，这是一件意义重大的事。当我们相信主耶稣而得救时，神就把我们放在作为模子的基督里。学基督就是被模成基督的模型、形像。一面，神把我们摆在基督里；另一面，基督进到我们里面作我们的生命。当我们爱主，接触祂，向祂祷告，我们就自然而然的照着福音书中所描绘的模子活祂。这就是学基督的意思。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在复活的生命里，照着那在耶稣身上是实际者学基督。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

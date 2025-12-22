@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>负担落实</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              
+            </v-card>
+            <br />
+            <v-card elevation="0">
+              <div class="banner">
+           
+                第四篇 拔高福音质量 落实三环牧养 提升主日小排
+                <br />
+                加强各环成全 逐步完善四强 显出召会功用
+              </div>
+        
+          </div>
+         
+          <p class="nav">读经：</p>
+          <p class="hymn">罗 1:2　这福音是神从前借着祂的众申言者，在圣经上所应许的，</p>
+          <p class="hymn">3　论到祂的儿子，我们的主耶稣基督：按肉体说，是从大卫后裔生的，</p>
+          <p class="hymn">罗 1:16　我不以福音为耻；这福音本是神的大能，要救一切信的人，先是犹太人，后是希利尼人。 </p>
+          <p class="hymn">西 1:28　我们宣扬祂，是用全般的智慧警戒各人，教导各人，好将各人在基督里成熟地献上； </p>
+          <p class="hymn">彼前 5:2　务要牧养你们中间神的群羊，按着神监督他们，不是出于勉强，乃是出于甘心；不是为着卑鄙的利益，乃是出于热切； </p>
+<p class="hymn">约 2:23～11:57　生命应付人各种情况的需要</p>
+          <p class="hymn">林前 14:24　但若众人都申言，有不信的，或是不通方言的人进来，他就被众人劝服，被众人审明了；</p>
+          <p class="hymn">25　他心里的隐情显露出来，就必面伏于地敬拜神，宣告说，神真是在你们中间了。 </p>
+          <p class="hymn">来 10:24　且当彼此相顾，激发爱心，勉励行善； </p>
+          <p class="hymn">25　不可放弃我们自己的聚集，好像有些人习惯了一样，倒要彼此劝勉；既看见那日子临近，就更当如此。</p>
+<p class="hymn">弗 4:11　祂所赐的，有些是使徒，有些是申言者，有些是传福音者，有些是牧人和教师，</p>
+          <p class="hymn">12　为要成全圣徒，目的是为着职事的工作，为着建造基督的身体，</p>
+          <p class="hymn">13　直到我们众人都达到了信仰上并对神儿子之完全认识上的一，达到了长成的人，达到了基督丰满之身材的度量， </p>
+          <p class="hymn">14　使我们不再作小孩子，为波浪漂来漂去，并为一切教训之风所摇荡，这教训是在于人的欺骗手法，在于将人引入错谬系统的诡诈作为； </p>
+          <p class="hymn">15　惟在爱里持守着真实，我们就得以在一切事上长到祂，就是元首基督里面；</p>
+<p class="hymn">16　本于祂，全身借着每一丰富供应的节，并借着每一部分依其度量而有的功用，得以联络在一起，并结合在一起，便叫身体渐渐长大，以致在爱里把自己建造起来。</p>
+          <p class="hymn">腓 1:1　基督耶稣的奴仆，保罗和提摩太，写信给所有在腓立比，在基督耶稣里的圣徒，同诸位监督和诸位执事：</p>
+          <p class="hymn">提前 3:15　倘若我耽延，你也可以知道在神的家中当怎样行；这家就是活神的召会，真理的柱石和根基。 </p>
+          <p class="hymn">16　并且，大哉！敬虔的奥秘！这是众所公认的，就是：祂显现于肉体，被称义于灵里，被天使看见，被传于万邦，被信仰于世人中，被接去于荣耀里。 </p>
+     
+
+
+
+
+
+
+
+
+
+
+
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "04.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

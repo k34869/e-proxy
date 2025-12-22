@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('254')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('256')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第23课  创造-人的受造奇妙可畏（九）情感</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约翰壹书四19 我们爱，因为神先爱我们。</p>
+<p>罗马书十三9下 要爱邻舍如同自己。</p>
+<p>积逊的改变</p>
+<p>在南欧的爱琴海上，有一个荒野多山的拔摩海岛，那是罗马帝国用来囚禁俘虏的地方。希腊少年积逊也是俘虏之一，他不用作苦工，只需要陪伴长官那和他年龄相仿的儿子马盖斯，作他的同伴。马盖斯正加紧努力的练习赛跑，为了参加四年一次的奥林匹克竞赛，积逊已经陪伴马盖斯练习了两年，他梦寐以求的，就是能参加奥林匹克竞赛，希望能借着得到胜利，重获自由。</p>
+<p>一天，长官对积逊说，『马盖斯快要参加奥林匹克竞赛了，你可以跟他一起去。』积逊听了高兴极了。没想到马盖斯却对他说，『你到了那里，不能参加竞赛，因为你是俘虏。』顿时之间，积逊气得说不出话来。他心里起了恨意，第二天，积逊看见马盖斯，不加思索的说，『马盖斯，你太对不起我了。』说着，就不由分说的挥拳揍了过去，将马盖斯打倒在地上。积逊的行为被长官的侍卫看见了，就被带到长官那里，因他出手打长官的儿子，使他必须回到矿场，和其他的俘虏一同作苦工。</p>
+<p>在矿场上积逊想到马盖斯，心里的恨意难以消除，他常常喃喃自语的说，『马盖斯，我恨你，我永不能饶恕你。』这一天，当他爬上陡岩，又这样喃喃自语时，一位慈爱的老人站在他的身后，和蔼可亲的问他，为什么这么生气。他将所发生的事，一五一十的告诉老人，又怀恨的说，『难道我一辈子作俘虏么？』</p>
+<p>一天黄昏，积逊又爬上陡岩，他看见远处海边有一个人走向海滩，那人正是马盖斯。他不禁脱口而出：『我恨他。』可是，『要彼此相爱』这句话却在他耳边响起。马盖斯跳到水里去游泳了，过了一会，积逊却发现马盖斯吃力的要游回岸边，却游不回去，而从海面上传来呼救的声音。积逊要去救他么？不，那是他的敌人。但『要彼此相爱』这句话，又在他耳边响起。这次，他不再犹豫，立刻从陡岩上一耀而下，奋身跳进海里，游到马盖斯身边，用力的托着他，一步一步的游回去。</p>
+<p>马盖斯感激的对他说，『积逊，谢谢你，你肯再和我作朋友么？』积逊说，『我乐意作你的朋友。』长官因着积逊救了他儿子的命，释放他不再作俘虏，恢复他自由的身分，并让他和儿子一同去参加竞赛。积逊现在终于明白，老人对他所说，『要彼此相爱』的意义，当神的爱充满他，他就能去爱他的敌人。（据传这位老人便是放逐在拔摩海岛的使徒约翰。）</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神为我们造了情感，让我们可以爱。我们需要用我们的情感来爱我们的家庭、委托给我们的东西（我们的宠物）和我们周围的人（我们的邻居）。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：我们之所以爱别人，是因为神是爱，祂让我们有爱的能力。让孩子们列出他们可以向其他人表达爱的方式，比如邀请朋友去玩，或参加儿童聚会。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记四十30 约瑟爱弟之情发动，就急忙寻找可哭之处，进入自己的内室，哭了一场。</p>
+<p>约瑟的故事</p>
+<p>圣经里有一个人，叫约瑟，家里有爸爸妈妈，还有十个哥哥，一个弟弟，有一天他哥哥们去放羊吃草，，约瑟的老父亲就叫约瑟去找，他们远远地看见约瑟，哥哥们趁他还没有走到他们跟前，大家就商量要怎样害他；『因为他一天到晚只会作梦，还想叫我们向他下拜，真可恶！来罢！我们将他杀了，丢到一个坑里，再回去告诉爸爸说他被野兽吃掉了，看看他的梦会不会实现。』他大哥听了就说，我们不能杀他，把他丢在这野地的坑里就好了。当约瑟走到他们跟前时，他们就剥了他那件漂亮的彩衣，把约瑟丢在一个很深的大洞里。</p>
+<p>傍晚当他哥哥们正在吃饭时，刚好有一队骑骆驼的商人经过那里，他们是去往埃及做生意的。约瑟的四哥犹大就说：『我们杀了约瑟对我们没有什么好处，不如把他卖给这些商人，因为再怎么说他总是我们的弟弟啊！』于是他们就把约瑟卖给了商人，商人就把约瑟带到埃及去了。</p>
+<p>当时全地都在闹饥荒，雅各就吩咐他十个儿子，除了便雅悯之外，都下埃及去买粮食。当他们来到埃及，见到约瑟时，全都面伏于地，向他下拜，因为约瑟已经成了埃及地的宰相。约瑟看见他哥哥们，认出他们来，却装作不认识，很严厉的问他们是从那里来？时间过得很快，一转眼粮食快吃完了，饥荒越来越严重，雅各布叫他的儿子们再去埃及买些粮食回来。犹大用他自己性命作保，求他父亲让便雅悯和他们同去，因为约瑟说过若不带便雅悯去见他，他必不见他们的面，买不到粮食。雅各布只好让便雅悯跟哥哥们一同去埃及，还拿许多当地的土产，及双倍的银子送给约瑟。并且为他们祷告，求神赐福，保守他们都能平安归来。当约瑟的哥哥们带着便雅悯到约瑟面前，约瑟就差人把他们带到自己的家里，预备筵席，中午要与他们一同吃饭。中午约瑟回来，他哥哥们把礼物送给他，又向他俯伏下拜。约瑟问他们父亲还健在吗？平安吗？他们说还在，约瑟看见同母的弟弟便雅悯，就说你们所说最小的弟弟就是这位吗？他们说正是。约瑟看到多年未见面的弟弟，心中非常激动，忍不住要掉眼泪，就急忙进入自己的房间，大哭一场。然后出来，吃饭的时候，约瑟按着长幼的次序，分配座位。众弟兄都彼此以惊奇的眼光相看，心想这个宰相怎么知道谁是老大？老二？…还把食物分送给他们，但给便雅悯的，比别人多五倍。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神为我们造了情感，让我们可以爱。人不同于动物，因为我们的情感范围比动物更广。我们需要学习控制我们的情感，来恰当地表达我们的情感。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：用约瑟与兄弟们团聚的故事来说明，我们需要在适当的时间，用适当的方式来表达我们的情感（恐惧、悲伤和快乐）。教孩子们学习如何在各种情况下表现出适当的情绪（例如，何时大笑、高兴、悲伤或悲伤）。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>马可福音十二30 你要全心、全魂、全心思并全力，爱主你的神。</p>
+<p>但以理和他的三个同伴</p>
+<p>神的选民因为离弃神，敬拜偶像，并行了许多恶而堕落了，其结果乃是被掳。巴比伦王尼布甲尼撒就攻击耶路撒冷,掳掠了神殿中的器皿，就带到示拿地，收入偶像的庙里。尼布甲尼撒造了一个金像，下令各族、各国、各种方言的人，拜他的金像；凡不俯伏敬拜的，必扔在烈火的窑中。那时但以理的三个同伴，不肯敬拜偶像。因为他们爱神。因此有几个迦勒底人进来控诉他们，尼布甲尼撒因此大发烈怒，要试诱他们，再给他们敬拜的机会，又警告他们若不敬拜，必立时将他们扔在烈火的窑中。这三个年轻的得胜者，放胆无惧的回答说，‘即便如此，我们所事奉的神，能将我们从烈火的窑中救出来；王阿，深也必救我们脱离你的手。’尼布甲尼撒怒气填胸，向他们变了脸色，吩咐人把窑烧热，比平常更加七倍，又吩咐几个壮士将他们捆起来，扔在烈火的窑中。三人就被捆起来，扔在火窑里。因火窑甚热，那些抬他们的壮士，都被火焰烧死，三人被捆着落在烈火的窑中。此时王甚惊奇，问谋士被扔在火里的不是三个人么？他却看见有四个人，并没有被捆绑，在火中行走，也没有受伤。而那第四个的相貌，好像神子。于是王就近火窑门说，‘至高神的仆人…出来，上这里来吧！’年轻的得胜者就从火中出来了。周围的人一同聚集看这三个人，见火无力伤他们的身体，头发没有烧焦，衣服没有变色，没有火燎的气味。于是王称颂他们的神，因为没有别神能这样施行拯救。王就使这三个年轻的得胜者在巴比伦省得以昌盛。（但三1～30。）</p>
+<p>三个年轻的得胜者胜过拜偶像的引诱，整个宇宙看见他们拒绝那鬼魔的敬拜。因此神能向撒但夸口，即使在他的领土中，神仍得着一班子民敬拜祂。今天在这黑暗的世代里，似乎一切都叫人失望；但神要得着我们作祂的得胜者，在这世代作中流砥柱，使神在地上的敬拜、见证、和权益得以维持</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：神为我们造了情感，使我们能够爱神和神所爱的事物。我们越爱神，就越能恨恶神所恨恶的。神渴望我们用我们的情感去爱祂。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：用爱神之人的故事、神的话和神子民（传福音者、诗歌作者、路得记等）的故事来激励孩子们。给他们讲一个恨恶偶像（取代神或反对神的事物）的人（但以理和他的朋友，以及犹大或以色列的好'国王）的故事，向他们展示用正确的方式使用情感的例子。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

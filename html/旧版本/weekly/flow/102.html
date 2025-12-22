@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('101')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('103')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>主耶稣忍的榜样（一）</p>
+<p>耶稣对他们说，…岂不知我必须以我父的事为念么？（路二49）</p>
+<p>主耶稣生在马槽里，这表明微小并卑下乃是主一生的记号。当祂还是个婴孩，就因希律王要杀两岁以内的男孩，而从以色列地逃往埃及，又从埃及回到以色列地。然后祂从伯利恒逃往加利利，并定居在拿撒勒。（太二1～23。）加利利是一个受藐视的省分；人认识祂是拿撒勒人。‘拿撒勒人’这个名称，得自祂逃往那微不足道的拿撒勒村庄。祂在十二岁时对祂父母说，‘我必须以我父的事为念。’（路二49。）早在十二岁时，第一个神人耶稣就以祂父的事为念，也就是说，以祂父家的事为念。这家就是今日的召会，结果带进基督的身体，而终极完成于新耶路撒冷。</p>
+<p>虽然主耶稣在十二岁时就关心神家的事，但那时神还没有托付祂，完成那为要成就神永远经纶的职事，使祂照顾神的家，带进基督的身体，终极完成于新耶路撒冷。人行动总是太快，神却是有忍耐的。神告诉亚当，祂将要作女人的后裔，来毁坏撒但，然而祂直等到四千年以后才来。当主耶稣出生时，才应验了神在创世记三章十五节向亚当的应许。神的许多仆人不能忍受这样一段静默的时候，反而在神这样的试验上失败了。然而主却能忍受并经过这一段静默的时间，直到祂三十岁的时候，才开始出来尽职。祂为了完成神的经纶，甘愿来到地上，成为一个受时间、空间限制的人。（参神人的生活，31～33、36页。）</p>
+<p class="title">近代东方开荒布道先锋</p>
+<p>在英国有一个安静的青年姊妹，遇到一个顽童，先送他一套衣服，要把他领到主日学校。不料那男童竟欺骗她。几周之后，她找到了男童，又送他一套衣服，但是那男童再次欺骗她，并且不敢和她见面。直到最后，这位姊妹的恒忍终于征服那个顽童，使他归向基督。这个孩子就是后来的马礼逊（Robert Morrison），他是近代东方开荒布道的先锋，成为神对几百万中国人布道的开端。（参福音故事下册，192～193页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：珍赏主耶稣忍受并经过一段静默的时间，直到祂三十岁的时候，才开始出来尽职。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

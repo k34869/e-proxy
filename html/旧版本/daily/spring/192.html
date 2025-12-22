@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('191')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('193')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第14课  创造—从创造看出神的权柄</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约翰福音十27 我的羊听我的声音，我也认识他们，他们也跟着我。</p>
+<p>引题：创造揭示宇宙中有权柄，权柄指的是拥有权利的人，他们指挥并领导一个群体。</p>
+<p>课程内容：羊的权柄给我们看见，每个羊群里都有一只领头羊，不管结果如何，只要领头羊往前，羊群就跟着一起往前。</p>
+<p>有这么一个故事，小林家喂了一群羊，有一天妈妈让小林去放羊，小林赶着羊群到了一个小河边，看到河那边的青草鲜美肥嫩，就想把羊群赶过去那边吃，但是小河上只有一个窄窄的桥，无论小林怎么赶，羊群都不敢过，这时一只大个的公羊试了试，走了过去，后面的羊也一个个的跟着过了河，后来小林回去和妈妈说，才知道那个先过河的是头羊，头羊过去了，羊群就跟着头羊一起过去了</p>
+<p>羊群在行进时其它的羊都会自觉地跟在领头羊的身后,牧羊人只需引领着领头羊便可。</p>
+<p>羊群出、入圈、过桥、过河或通过狭窄处时，只要有领头羊先行，其余羊只就会尾随。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造揭示宇宙中有权柄。权柄指的是拥有权力的人，他们指挥并领导一个群体。神是宇宙中的权柄，我们应该跟随神。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：羊给我们看见权柄：1）羊群中有一只领头羊，不管结果如何，其他羊都跟着。当一只羊走动时，其余的羊都会跟随。如果羊群里有一只公羊，它通常会是带头的羊。2）羊也跟着牧羊人，因为牧羊人满足它们的需要，使它们免受伤害。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言三十27 群蝗没有君王，却分队而出。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造揭示宇宙中有权柄。神是宇宙中的权柄，我们应该按照神的方式作事，而不是按照我们自己看为对的作事。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：<p>箴言三十27 群蝗没有君王，却分队而出。</p>
+_app</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言三十30 就是狮子，乃百兽中最为雄猛、面对任何野兽都不躲避的。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造揭示宇宙中有权柄。神是宇宙中的权柄，我们应该尊敬并遵从神作为我们的权柄。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：<p>箴言三十30 就是狮子，乃百兽中最为雄猛、面对任何野兽都不躲避的。</p>
+_app</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('994')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('996')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 17 课<br />
+主复活并向门徒显现</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：耶稣已经出墓来。（诗歌107首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：耶稣对她说，不要摸我，因我还没有升到父那里；你往我弟兄那里去，告诉他们说，我要升到我的父，也是你们的父那里，到我的神，也是你们的神那里。（约二十17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　七日的第一日主复活了—太二八1～8，可十六1～8，路二四1～10，约二十1～10</p>
+<p class="ot2">1.　主复活的这日是圣经中最大的日子，是神所定的—诗一一八24。</p>
+<p class="ot2">2.　爱主的姊妹们成了主复活的头一班见证人—太二八1，可十六2，路二四1，约二十1。</p>
+<p class="ot2">3.　基督的复活是被天使指出的—太二八2～7，可十六5～7，路二四4～7。</p>
+<p class="ot2">4.　主藉着复活将旧造撇在坟墓中—约二十5～7。</p>
+<p class="ot1">二　抹大拉的马利亚清早得着主的显现—约二十11～18，可十六9～11</p>
+<p class="ot2">1.　马利亚专一的要主，主不得不先向她显现—约二十11～16。</p>
+<p class="ot2">2.　主向马利亚启示，祂复活的新鲜要升上天去满足父—17上。</p>
+<p class="ot2">3.　主称祂的门徒为弟兄，指明藉着主的复活，门徒得着重生，有神的生命，成为神的众子，基督的众弟兄—17下～18。</p>
+<p class="ot1">三　复活的基督与妇女们相见—太二八8～10</p>
+<p class="ot1">四　犹太首领的谣言—太二八11～15</p>
+<p class="ot1">五　主向往以马忤斯去的两个门徒显现—路二四13～35</p>
+<p class="ot2">1.　两个门徒因着失望沮丧，从耶路撒冷下到以马忤斯—13。</p>
+<p class="ot2">2.　主与他们同行，并向他们显现—14～15。</p>
+<p class="ot2">3.　主向他们讲解经上指着自己的话，但门徒仍然不认识主—25～27。</p>
+<p class="ot2">4.　门徒必须将饼献给主，让主擘开，才能得着对主的启示与认识—30～31上。</p>
+<p class="ot2">5.　主从他们面前隐没，仍然看不见的与他们同在—31下～32。</p>
+<p class="ot2">6.　门徒受到鼓舞，立刻回到耶路撒冷，述说遇见主显现的事—33～35。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见基督复活这清楚而荣耀的事实，并我们如何主观的对主有认识与经历。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督的复活是基督徒信仰中心的一项。基督来服事人，为人受死，又在复活里把自己分赐到人里面。福音书里记述主的复活，描绘出门徒们与复活的基督第一次接触的美妙情景。妇女们发现空墓以后，（其中一个妇女）抹大拉的马利亚去告诉彼得和约翰，他们就与她到坟墓那里，探索一番，然后离开了。然而，马利亚却徘徊在坟墓那里，只顾到主自己。因着她的寻找，主向她显现，使她成为第一个人看见新鲜复活的主。同一天，主后来又向两位往以马忤斯去的信徒显现，并对他们讲解圣经上关于自己的预言，主又开启他们的眼睛，使他们认识复活的主。我们需要每天早起渴慕主，寻找主，就能遇见复活新鲜的主；我们也需要求主开启里面的眼睛，使我们对主有里面、真实的认识。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　七日的第一日主复活了</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这是耶和华所定的日子；我们在其中要高兴欢喜。（诗一一八24。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主钉十字架后第三日，就是七日的头一日，主耶稣照着祂原先所预言的，从死人中复活了。主的复活是一个新起头，开启达到新世代与新时代的路。主复活的这日是圣经中最大的日子。后来，早期的基督徒称这日为‘主日’。这是何等美妙的日子。主的复活已经成就了，但门徒还需要在对主的爱里去寻找，才能发现。最早发现主复活的是两位姊妹：抹大拉的马利亚和另一个马利亚。她们因着爱主到极点而发现主的复活，她们成了主复活的头两个见证人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识主日，因主的复活而欢喜快乐。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

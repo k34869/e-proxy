@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('168')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('170')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">主的恩典够你用</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">祂对我说，我的恩典够你用的，因为我的能力，是在人的软弱上显得完全。（林后12:9）</div>
+<div id="CC">And He has said to me，My grace is sufficient for you，for My power is perfected in weakness.（2 Corinthians 12:9）</div>
+<div id="C">有一位传道人，在他女儿的葬礼之后，第二天恰好是主日，他思考着该预备什么样的信息，于是选了林后十二章九节：“我的恩典够你用的”作题目。于是他跪下来，求神祝福这题目。在祷告的时候，他自问说，“到底神的恩典够不够我用呢？若是神的恩典不够我用，我怎能对人说，神的恩典是够你用的？我女儿过世了，我难过、心疼，我过不去，这就是说，神的恩典不够我用。我不能说谎。”他想换一个题目，时间又来不及了，所以他只有祷告，求神说，“神啊，叫我经历你够用的恩典，叫你的恩典是够我用的。”<br/><br/>　他祷告了很久，似乎一点效力都没有。就在这时，他无意间瞥见壁炉上挂着一节圣经，是他母亲在他去参加葬礼时摆进来的。那正是林后十二章九节：“我的恩典够你用的。”这上面“我”、“你”印的是蓝色，其余的字印的是黑色，只有“够”印的是红色。他忽然得着神的亮光，主是说，“我的恩典够你用的；”但我却说，“你的恩典不够我用。”他就在神面前认错说，“神啊，你说‘我的恩典够你用的’；我却还在祈求，叫你的恩典够我用。”他一面向神认罪，一面感谢赞美神说，你的恩典是够我用的。他充满快乐和感谢。<br/><br/>　第二天，他站在讲台上，讲了一生之中最好的一篇道。有人问他秘诀在那里，他回答说，在他给女儿送葬之后，他看见了什么是相信。相信不是去求神成就祂的应许，相信乃是赞美感谢神已经说了的话。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

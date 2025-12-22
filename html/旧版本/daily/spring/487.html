@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('486')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('488')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">老鹰拔毛</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗马书 6:6</p><p>知道我们的旧人已经与祂同钉十字架，使罪的身体失效，叫我们不再作罪的奴仆，</p><p>一次，某地所有的鸟聚在一起选王，大家热烈讨论许多办法。后来决定谁能飞得最高，谁就当选鸟王。这时老鹰心中暗暗自得，以为必操胜算无疑。斑鸠亦很自负，也信自己必能为王。百灵鸟喜欢飞翔，并在空中歌唱，心中满了盼望，切望竞赛日期来到。其他的鸟也都交头接耳，大谈它们的机会到了。但当欧鹪（一种小鸟）宣布抱有最高希望参加竞赛之时，大家都予嘲笑，嗤之以鼻。竞赛之日来到，各鸟齐集，个个摩拳擦掌，准备一决雌雄。竞飞时刻将到，它们忽然发现欧鹪不见了，于是大家纷纷议论，说它知难而退，以免当场出丑。竞飞之令一发，各鸟鼓翼上腾。起先大家飞得很快，渐渐越飞越慢，一个一个相继落后了。最后只剩老鹰还在高飞，心中十分得意，认为再无别鸟与竞。可是当它飞得疲倦，不能再往上飞之时，忽然听见在它上面有一得胜的声音，抬头一看，竟是那只小小欧鹪。原来它的身体很轻，藏在老鹰背上，别的鸟看不见，老鹰也不觉得；老鹰一直背它高飞。等到老鹰疲倦，不能再往上飞之时，欧鹪才从老鹰背上跳出，往上飞去，因而作了鸟王。夸耀自己；在教会中好为首；在事奉上争竞、比赛；都是肉体的动作。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

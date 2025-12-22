@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('100')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('102')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第1课  创造—从天看出神的伟大</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇十九1 诸天述说神的荣耀，穹苍传扬祂手的作为。</p>
+<p>引    题：晚上有没有抬头看过天空，你就看到了什么？能数的过来吗？</p>
+<p>课程内容：小朋友想想看，天上有些什么东西呢？对了，就是太阳、月亮、和星星这些会发光的东西，我们称它们作光体。有了这些光体，地上的动物、植物才能按时候生长、按时候休息。所以，神在第四日创造了天上的光体。大的是太阳，管理白天；小的是月亮，管理夜晚；还有很多很多的星星一闪一闪亮晶晶的。</p>
+<p>在没有任何灯光的夜晚，如果能看到天上的月亮和星星是最叫人得安慰的了。所以，我们在晴朗的夜晚，用最好的视力，大概也只能看到几千颗星星一闪一闪的挂在天空。这些星星看起来虽不过是一个个小小的光点，但实际上有些星星比太阳还大，只因为离地球太远太远了，在我们眼中就成为一颗颗的小星星了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造彰显神的伟大。宇宙中有数十亿颗恒星。只有伟大的创造者才能创造出这么多的星星。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：可以用太阳、地球、行星、恒星或星系的图片（或视频）来说明这一点。问问孩子们是否能数清夜空中所有的星星。告诉他们每个恒星都像太阳一样有很多行星。我们的太阳只是一个普通的恒星，就像我们在夜空中看到的星星一样，但是宇宙中有数以百万计的恒星。计算宇宙中星星的数目就像计算沙滩上沙粒的数目一样。让孩子们对创造的神是何等伟大留下深刻印象。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以赛亚书四八13 我亲手立了地的根基，我的右手铺张了诸天；我一召唤，天地便都立住。</p>
+<p>引    题：小朋友，你知道太阳有多大吗？太阳距离地球有多远吗？</p>
+<p>课程内容：太阳为我们带来光线，也带来温暖。我们从地球上面看太阳，觉得它似乎离我们并不太远，而且也没有地球大。事实上，太阳比地球大多了。如果能把太阳中间挖空的话，可以装进一百三十万个地球。你们说，太阳大不大？太阳离地球大约有一亿五千万公里。这个距离，如果搭飞机的话，要飞十七年才能到达。这乃是神奇妙的安排；因为太阳是一个气体的大火球，它的表面温度有六千度。你们想想看，假若太阳离我们居住的地球近一点，我们是不是就会像烤肉一样被烤焦了？那么太阳离地球再远一点好不好？也不好，因为这么一来，地球到处都会结冰，所有的生物也都会被冻死啦！所以，神修造太阳，把太阳的位置和温度都造得恰好适合地球，为地球带来光与热，使地球上的生物能够生生不息。我们居住的地球，在宇宙中它是太阳系里面的一颗星星。太阳系就是以太阳为中心，和所有受太阳吸引的天体组合。这些天体都有自己的运动路线，都围绕着太阳旋转。因着太阳有巨大的吸引力，他们都像听话的孩子，乖乖的，围着太阳转，都不会跑太远哦。这是神大能智慧创造的奇，太阳对我们太重要了，太阳表征基督太阳带给我们光和温暖，主耶稣更给我们一个光明的人生，并且叫我们心中充满温暖。我们要像向日葵一样，天天转向我们的太阳—</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造彰显神的伟大。当我们仰望天空，白天我们看到太阳，夜晚可以看到星星。太阳和星星都证明了神的伟大。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：见初级应用。问问孩子们地球和太阳相比有多大，太阳能产生多少能量。告诉他们一百万个地球才能填满太阳（从北极到南极，地球的直径是7900英里）。太阳非常热，它提供数百万英里以外行星的热量。寻找其他细节使孩子们对神所创造的这一切是何等伟大留下深刻印象。也可以考虑使用物理模型来帮助孩子们想象地球和太阳之间的大小差异，以及宇宙的浩瀚。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以赛亚书四十12上 谁曾用手心量诸水，用手虎口测诸天…</p>
+<p>课程内容：当神创造宇宙时，它不仅创造了我们的太阳系，在祂的创造中还创造了无数的星系，现在人类已经可以观测到一千二百五十亿个星系，而每个星系大约含有千亿颗恒星左右，单是是地球所在的银河系，自己会发光的星星就有一百亿颗。另外有一些星星自己不会发光，乃是像月亮一样反射其他星星的光。这么多的星星，我们不都看得到，因为有些离地球太远了，有些被宇宙中的尘埃挡住了。看看这些奇妙的创造，人手能造得出来吗？只有伟大的神神才能造出，</p>
+<p>圣经的话给我们看见，太阳代表基督，月亮 代表召会，众星代表发光的众圣徒，就是我们，其实只有太阳会发光，月亮和大多数的星星只是返照太阳的光，所以我们要成为发光的星星就需要转向基督，每天呼求主名，读主的话，就能接受祂的光照，做发光的星星照在黑暗的世界里，每天我们都要祷告说:“主啊，你是我的真光，请你光照我，指引我。”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造彰显神的伟大。当神创造宇宙时，祂不仅创造了我们的太阳系。神在祂的伟大中创造了无数的太阳系和星系。谁能创造出这些？只有那伟大的一位！</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：参见初级和中级应用。问问他们有关太阳系和星系的事。解释我们的太阳系是由太阳和行星组成的。你在夜空中看到的每颗星星都像太阳一样有许多行星。恒星不是随机散布在太空中的，而是聚集在一起组成巨大星系团。太阳属于银河系。天文学家估计，仅银河系就有大约1000亿颗恒星。除此之外，还有数以百万计的其他星系！然而，对我们伟大的创造主来说，圣经告诉我们，“诸天的范围”仅仅是祂手掌的宽度。只有伟大可畏的神才能创造出一个伟大可畏的宇宙。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

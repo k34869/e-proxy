@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('889')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('891')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 2 课<br />
+国度子民最高标准的道德</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主你是我生命。（诗歌381首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你们是地上的盐；盐若失了味，可用什么叫它再咸？既无任何用处，只好丢在外面，任人践踏了。你们是世上的光。城立在山上，是不能隐藏的。人点灯，也不放在斗底下，乃是放在灯台上，就照亮所有在家里的人。你们的光也当这样照在人前，叫他们看见你们的好行为，就荣耀你们在诸天之上的父。（太五13～16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　国度子民的影响—太五13～16</p>
+<p class="ot2">1.　国度子民是地上的盐—13：</p>
+<p class="ot2">a.　具有杀菌防腐的元素，防止地完全被败坏。</p>
+<p class="ot2">b.　盐不该失了味，不该失去与世人的分别。</p>
+<p class="ot2">2.　国度子民是世上的光—14～16：</p>
+<p class="ot2">a.　是造在山上的城—14。</p>
+<p class="ot2">b.　是灯台上的灯—15。</p>
+<p class="ot2">c.　荣耀在诸天之上的父—16。</p>
+<p class="ot1">二　国度子民的律法—五17～48</p>
+<p class="ot2">1.　国度子民成全并补充律法—17～18。</p>
+<p class="ot2">2.　国度子民活出最高标准的道德—19～30。</p>
+<p class="ot2">3.　国度子民活出超凡的义以进入国度—20。</p>
+<p class="ot2">4.　国度子民行事为人如同天父的儿子—31～47。</p>
+<p class="ot2">5.　国度子民在天父的爱里像天父完全一样—48，约壹三1上。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>国度子民对这世界的影响，是杀菌防腐的盐，也是世上的光—照亮周围的城与照亮家的灯台。国度子民凭基督的生命能活出最高标准的道德，像天父完全一样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>国度子民对世界的影响应当成为地上的盐，具有杀菌防腐的元素，防止地完全被败坏。同时盐不该失了味，失去与世人的分别。国度子民也应当是照亮的光，如同城立在山上，是不能隐藏的；又如同灯不放在斗底下，乃放在灯台上，就照亮家里的人。国度子民成全并补充律法，凭基督的生命能活出最高标准的道德，并活出超凡的义以进入国度。国度子民行事为人如同天父的儿子，在天父的爱里，像天父完全一样。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　国度子民是地上的盐</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>你们是地上的盐；盐若失了味，可用什么叫它再咸？既无任何用处，只好丢在外面，任人践踏了。（太五13。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>国度子民对世界的影响，第一乃是‘地上的盐’。盐在性质上是一种杀菌防腐的元素。因此，盐的功能就是保守神所创造的。我们必须在这败坏的地上发挥影响，藉着成为‘地上的盐’，而把地带回到原来的情况，防止地完全败坏。今天主的心意是要把这地带回到原来的情况。不论我们在那里，我们对周围的人都该发挥盐的影响。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>活出国度子民的性质，与世人有分别，成为盐，将地带回到神创造时的情况。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

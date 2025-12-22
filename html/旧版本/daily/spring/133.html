@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('132')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('134')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">不看橱窗不感兴趣</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">然而属魂的人不领受神的灵的事，因他以这些事为愚拙，并且他不能明白，因为这些事是凭灵看透的。（林前2:14）</div>
+<div id="CC">But a soulish man does not receive the things of the Spirit of God，for they are foolishness to him and he is not able to know them because they are discerned spiritually.（1 Corinthians 2:14）</div>
+<div id="C">慕迪讲道喜欢用故事作比喻。一位不信神的新闻记者常批评讥笑说，“慕迪先生的故事虽然讲得好，但全是假的，是他捏造的。”有一天，他去听慕迪讲道，为要挑剔错误。那天慕迪讲“属灵的光”，用一个故事作比喻：“有三个女子在街上走，沿路观看商店橱窗的陈列物。其中两个女子很感兴趣，看了以后，再讲给第三个女子听。但那个女子好像不感兴趣。有一个人从旁边经过，诧异她们同行同看，为何有如此的差别？近前才知，第三位女子因为眼瞎，当然不感兴趣。”慕迪说，“这就是基督徒与世人的分别。我们对于属灵的事，觉得有味道，属血气的人却不以为然，因为他们的心眼瞎了，不领会神灵的事，反倒以为愚拙；因为这些事，唯有属灵的人才能看透。”那位记者听了，不等散会，就上前质问说，“你刚才讲的故事，是从何处听来？”慕迪回答说，“在报纸上读过这段故事，却不记得是什么报。”记者就说，“那是我写的故事。我自己看见那三个女子，便记了下来，却想不到其中的好教训。如今才知道，我的心眼实在瞎了，不领会属灵的事。”就在那次聚会中，那位不信神的新闻记者，被自己所记的故事感动，而悔改归主。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

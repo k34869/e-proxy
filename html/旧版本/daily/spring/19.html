@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('18')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('20')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">没有基督的讲章</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们查考圣经，因你们以为其中有永远的生命，为我作见证的就是这经。（约5:39）</div>
+<div id="CC">You search the Scriptures，because you think that in them you have eternal life; and it is these that testify concerning Me.（John 5:39）</div>
+<div id="C">
+        有一个青年，在一位多年忠心的神仆人面前讲道。讲完之后，他就来问这位老人：“先生！你看我的讲章如何？”老人回答说，“很没有意味。”青年人不服气的说，“没有意味？我费了多少工夫才预备好的。”“啊！那就不足怪了。”青年人又问：“你说没有意味，是不是因为圣经题目讲的不对？”“不，讲的很对。”“那你为何说没有意味？是我用的比喻不适当吗？”“不，很适当。”青年人忍不住，再问：“那么你说没有意味，到底是什么意思呢？”老人回答说，“因为里头没有基督。”青年人说，“这题目里本来就没有基督，我们总不能仅讲基督；题目是什么，就当讲什么。”老人回答说，“弟兄，你不知道，全英国每一座城，每一个乡村，都有一条道路通到伦敦吗？”青年人说，“是啊。”老人说，“圣经中无论哪一个题目，都有一条大道，引到圣经的中心，就是基督身上。我传道几十年，没有遇见一个题目，不能引到基督身上的。”
+        <br/>
+<br/>
+        　圣经是给基督作见证的；所以，读经应该读出基督，而不该只读一些教训和道理。
+      </div>
+
+</div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

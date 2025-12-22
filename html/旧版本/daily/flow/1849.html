@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1848')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1850')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 13 课<br />
+晚期的得胜者和七碗</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我只要神旨意。（补充本诗歌744首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我又看见仿佛有搀杂着火的玻璃海，且看见那些胜了兽和兽像，以及兽名数字的人，都站在玻璃海上，拿着神的琴。他们唱着神奴仆摩西的歌、和羔羊的歌，说，主神，全能者，你的作为大哉、奇哉！万国之王，你的道路义哉、诚哉！（启十五2～3。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　晚期的得胜者—启十五2～4</p>
+<p class="ot2">1　经过大灾难，胜了兽和兽像，及兽名的数字—2上。</p>
+<p class="ot2">2　站在玻璃海上—2下。</p>
+<p class="ot2">3　唱摩西的歌和羔羊的歌—3～4。</p>
+<p class="ot1">二　七碗—末了的七灾—十五1，5～8，十六1～21</p>
+<p class="ot2">1　倒下七碗前天上的景象—十五5～8。</p>
+<p class="ot2">2　第一碗：拜敌基督者身生毒疮—十六1～2。</p>
+<p class="ot2">3　第二碗：海变血—3。</p>
+<p class="ot2">4　第三碗：江河与水泉变血—4～7。</p>
+<p class="ot2">5　第四碗：日头用火烤人—8～9。</p>
+<p class="ot2">6　第五碗：敌基督的国变为黑暗—10～11。</p>
+<p class="ot2">7　第六碗：伯拉大河干了—12。</p>
+<p class="ot2">8　插于第六碗和第七碗之间的异象：哈米吉顿的聚拢—13～16。</p>
+<p class="ot2">9　第七碗：最大的地震和大雹子—17～21。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>晚期的得胜者，与七碗的七样灾祸。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录十五至十六章说到第四项重要关键的事物，就是七碗所指明的七灾。而在七灾的记载之前，圣经插进一段关于晚期得胜者的话；这些晚期的得胜者，他们经过大灾难，且胜了敌基督，没有敬拜他。他们要受敌基督的逼迫而殉道，然后复活，在千年国里与基督同王。死去的得胜者是男孩子，活着的得胜者是初熟的果子，而那些在大灾难期间殉道的人是晚期的得胜者。大多数的信徒要经过大灾难，他们被算在庄稼之内。</p>
+<p>当天上见证之帐幕的殿开了，那掌管七灾的七位天使，就从殿中出来，将神烈怒的七个金碗，就是末了的七灾，倾倒下来。头四碗是终极的超自然灾害，彻底的毁坏人在宇宙中的住处。第一碗是神对地更进一步的审判，使拜敌基督者身上生恶毒的疮；第二碗是神对海更进一步的审判，海变成了血；第三碗是对江河的审判，江河水泉都变成血，叫人喝这血；第四碗是神对日头更进一步的审判，使它用火烤人；第五碗的审判施行在敌基督的国和座位上；第六碗使伯拉大河的水干了，为哈米吉顿的争战预备；至终第七碗将是大灾难结束的灾害，有最大的地震和大雹子。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　晚期的得胜者</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启十五2：我又看见仿佛有搀杂着火的玻璃海，且看见那些胜了兽和兽像，以及兽名数字的人，都站在玻璃海上，拿着神的琴。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>死去的得胜者是男孩子，活着的得胜者是初熟的果子，而那些在大灾难期间殉道的人是晚期的得胜者。晚期的得胜者唱着神奴仆摩西的歌、和羔羊的歌，指明他们胜过了敌基督的权势。摩西的歌指出神在祂百姓的仇敌身上得胜的审判，在消极方面为着神的审判赞美神；而羔羊的歌指出神的子民在仇敌面前所经历基督的救赎，在积极方面为着基督的救赎赞美神。因着得胜者认识神的道路，他们确信神必要成就祂所应许的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识神的道路，确信神必要成就祂所应许的。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

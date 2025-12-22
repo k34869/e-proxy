@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('38')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('40')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>要赎回光阴，因为日子邪恶。…不要醉酒，醉酒使人放荡，乃要在灵里被充满。（弗五16，18）</p>
+<p class="title">紧的操练（一）要赎回光阴</p>
+<p>诗篇九十篇是神人摩西的祷告。在十节摩西说，‘我们一生的年日是七十岁，若是强壮可到八十岁；但其中所矜夸的，不过是劳苦愁烦，转眼成空，我们便如飞而去。’我们短暂的人生满了罪和苦难。我们必须住在神里面，每时每刻活在祂里面。（10注1。）因此摩西向神祷告：‘求你指教我们怎样数算自己的日子，好叫我们得着智慧的心。’（12。）回顾已往，会发现许多浪费与羞耻的时日，这指明我们需要神教导我们如何数算自己的日子，以得着智慧的心，并过喜乐的生活。新约中使徒保罗教导我们，‘要赎回光阴，因为日子邪恶。’（弗五16。）赎回光阴，就是把握每一有利的时机。在这邪恶的世代，每一日都是邪恶的，满了邪恶的事。许多迷惑的事物会进来打岔我们，例如电动、网路、电视、漫画，叫我们的时间变为无效、受缩减、被夺去。如果我们不把握每一个可用的时机，我们的光阴就会浪费了。</p>
+<p>赎回光阴，就是要把握现在，抓住每一个今天来爱主。基督徒彰显基督的生命，是不受时间、环境、条件的限制的。一个人如果想等到一切都理想时，才能好好过属灵的生活，那是错的。我们不必盼望等身体更好，才能活出基督的生命。就如一个工作很忙的母亲，有十个儿女，她不必等到儿女都长大时，才能好好过属灵生活。单身的人不必盼望结婚后，才能专心事奉神；学生不必盼望毕业以后，才能过属灵生活。彰显基督的生命，不需要有新的环境或条件，主的安排是要我们在任何情形中，尽所能的彰显祂的生命，以显明祂的生命能适应一切环境，胜过一切情形。（参诗篇生命读经，493页；以弗所书生命读经，523页；主恢复中成熟的带领上册，21～22页。）</p>
+<p class="title">强盛时日已被吃掉</p>
+<p>英国有位顶出名的政治家格莱斯顿（William　Ewart　Gladstone），在他年老之时，对一年轻的国外布道家说，‘你年纪还轻，我祝福你再往国外去布道；可惜我现在已经老了。哦！虽然我在政治舞台上作了一最要紧的人物，为了英国用了这么多的力气和时间；但是，我为着已过的时间痛心。若是我有三条命的话，必定叫每一条命都去传神的道。我今天已不能了，那些顶强、顶好的时日，已被吃掉了。所以我劝你去，为着主和福音奔跑。’现在，让我们每一个人自己计算计算，那最强盛的时日被撒但吃去了多少？哦！那些已失掉的是不会再来了，将来的日子你要如何定规？（造就故事下册，1页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在任何情形中，尽所能的彰显主的生命，以显明祂的生命能适应一切环境，胜过一切情形。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

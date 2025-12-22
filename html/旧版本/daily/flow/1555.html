@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1554')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1556')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 7 课<br />
+召会的功用</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我求更深。（补充本诗歌406首）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：　我将这些事写给你，指望快到你那里去，倘若我耽延，你也可以知道在神的家中当怎样行；这家就是活神的召会，真理的柱石和根基。并且，大哉！敬虔的奥秘！这是众所公认的，就是：祂显现于肉体，被称义于灵里，被天使看见，被传于万邦，被信仰于世人中，被接去于荣耀里。（提前三14～16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　召会中正常的生活—提前二8～15</p>
+<p class="ot2">1　弟兄们—8：</p>
+<p class="ot2">a　无忿怒，无争论。</p>
+<p class="ot2">b　举起虔圣的手。</p>
+<p class="ot2">c　随处祷告。</p>
+<p class="ot2">2　姊妹们—9～15：</p>
+<p class="ot2">a　妆饰—9～10。</p>
+<p class="ot2">b　学习—11～14。</p>
+<p class="ot2">c　得救—15。</p>
+<p class="ot1">二　召会行政中的监督与执事—三1～13</p>
+<p class="ot2">1　监督—1～7。</p>
+<p class="ot2">2　执事—8～13。</p>
+<p class="ot1">三　召会的功用—作活神的家并真理的柱石与根基—14～16</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识召会中关于弟兄们与姊妹们正常的生活，并召会行政中的监督与执事，以及召会的功用。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗嘱咐弟兄们要无忿怒，无争论，并当举起虔圣的手，随处祷告。姊妹们要以廉耻、自守妆饰自己，并安静学习，活在信、爱、圣别兼自守中，就必藉着生产得救。保罗也论到召会行政中监督与执事的职分和资格。最后保罗说到召会的功用，乃是作活神的家并真理的柱石与根基。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　召会中正常的生活—关于弟兄</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>提前二8：…我愿男人无忿怒，无争论，举起虔圣的手，随处祷告。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以弗所六章十八节保罗告诉我们要时时祷告，但在提前二章这里他说要随处祷告。我们若能随处祷告，必能时时祷告。但即使我们能时时祷告，也许我们仍不可能随处祷告。譬如，我们不可能在一些属世的地方祷告。有些地方令我们无法祷告，如电影院、KTV、网咖等等，我们就不该在那里。我们若要有正确祷告的生活，就必须学习不情绪化，不对别人发怒或争辩，乃凭着主的恩与我们的灵同在而祷告。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练过随处祷告的生活。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('308')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('310')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">创伤药</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">神啊，求你为我造清洁的心，使我里面重新有正直的灵。（诗51:10）</div>
+<div id="CC">Create in me a clean heart，O God，and renew a steadfast spirit within me.（Psalm 51:10）</div>
+<div id="C">有一次，我住在一位朋友家中。一天早晨，我用刮胡刀刮脸，失手将脸割破。那位朋友家中备有许多医药用品，他一见我割破了脸，立刻拿出一瓶创伤药，取出一些涂在我的伤处；并将该药送我一瓶，告诉我说，无论什么时候，割破了脸，或是割伤了手，可在伤处随时涂上一些，免得细菌感染，发生危险。我的朋友还应许我，什么时候用完这瓶药，就还要再送给我。因为得了这样有用的药，可以避免受伤感染之危，我便十分感谢我的朋友。<br/><br/>　之后，我回到自己屋里，打开瓶子一看，瓶内的药真是不少，计算一下，总可用上百多次。我不能因此拿起刮胡刀，向自己脸的左右边，横竖割几刀，然后将药取出来，照着伤口数目一一涂上，说，“现在可好了，我有创伤药，可以时常割破脸、手，无所顾虑了。”如果我真是这样作，看见的人岂不以为我疯了？创伤药是有用的好东西，我感谢领受朋友的馈赠，并且好好保存这药，以备失手割破皮肉之时可以使用；然而，我绝不肯因为有了创伤药，就去任意割破皮肉。割破皮肉，自己要受伤害，要感痛苦，这除非是精神异常的人，否则有谁肯这样作？</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

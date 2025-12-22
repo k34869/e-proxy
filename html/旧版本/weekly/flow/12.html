@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('11')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('13')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>耶和华阿，求你救我脱离说谎的嘴唇，脱离诡诈的舌头。（诗一二○2）</p>
+<p class="title">亚伯真实事奉神与该隐跟从虚谎者相对</p>
+<p>该隐和亚伯一起受父母的教导，但他所领受的却与亚伯的不同。他觉得种地养活自己比献祭给神更为重要，因此选择了种地的工作。表面看来，似乎该隐聪明多了。然而该隐种地是为着自己，亚伯牧羊却是为着神。到献祭的时候，该隐没有照神所吩咐的，却以地里的出产代替流血的祭牲献给神为供物。这是该隐拒绝了父母所教导神救赎的路，而照自己的观念，发明自己的路。该隐这样行，乃是拒绝神，跟从了那虚谎者撒但，因此神看不中该隐的供物。</p>
+<p>创世记四章说，‘耶和华看中了亚伯和他的供物，只是看不中该隐和他的供物。该隐就大大发怒，垂下脸来。…该隐对他弟弟亚伯说，我们往田间去罢。二人正在田间，该隐起来打他弟弟亚伯，把他杀了。耶和华对该隐说，你弟弟亚伯在那里？他说，我不知道。我岂是看守我弟弟的么？耶和华说，你作了什么事？你弟弟的血有声音从地里向我哀告。地开了口，从你手里接受你弟弟的血；现在你必从这地受咒诅。你耕地，地不再给你效力；你必流离飘荡在地上。’（4～5，8～12。）该隐没有听从父母的话，却走了撒但的路。魔鬼撒但是说谎者，该隐与他合作说了个大谎言。他首先轻视父母所传的福音，使他被撒但推动，照着自己的发明事奉神。他又被撒但那杀人者捉住，使他拒绝神的路和神的警告，结果与撒但一同成了杀人者和说谎者，造成人类第二次的堕落。该隐的事例给我们一个警惕，我们应当在主的光中看见自己的错误，立即悔改转向神，并坦然向神及向人认罪。（参创世记生命读经，362～379页。）</p>
+<p class="title">射死一只鸭子</p>
+<p>一位牧师在非洲传道。那里生活便宜，请了几个工人。其中有一个黑人小孩会拿橡皮作成弓箭，射无不中，十分好玩。一天，一箭射死主人的一只鸭子。不得了，主人若要他赔，他赔不起，怎么办呢？想了一个办法，快快挖了一坑，把那死鸭埋掉。虽然没人看见，心里却是常常不安，时时记起那只死鸭。一天，厨子对他说，‘你去替我挑水。’他说，‘挑水不是我的事。’厨子说，‘你要小心阿，你射死鸭子，我要告诉主人。’他害怕了，快快去挑水。厨子叫他去劈柴，他说，‘我没有力。’厨子说，‘你射死鸭子，我去告诉主人。’他又害怕，就去劈柴；他天天作厨子的奴仆，心里又不安，因为有个死鸭子。一天，他到主人面前跪下流泪。主人问什么事？他就告诉主人怎样射死一只鸭子，怎样把它埋掉了。主人说，‘知罪认罪，我赦免你。’他心里从此平安了。有一天，厨子又叫他挑水。他说，‘我不挑。’厨子问他记不记得那只死鸭子。他说，‘我不怕你。’厨子说，‘我去告诉主人。’他说，‘你去告罢！我不怕。我认了罪，我心平安了。’信徒有罪若是不肯承认，会受魔鬼控告，心里不安，以致落在他的手中；什么时候向主一认罪，心里立刻就会得到平安，那恶者也就无能为力了。（造就故事上册，204～205页。 ）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在主的光中看见自己的错误，立即悔改转向神，并坦然向神及向人认罪。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

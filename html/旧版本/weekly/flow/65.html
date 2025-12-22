@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('64')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('66')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>时时在灵里祷告，并尽力坚持，在这事上儆醒，且为众圣徒祈求。（弗六18）</p>
+<p class="title">圣经中大的榜样（一）亚伯拉罕</p>
+<p>亚伯拉罕蒙神呼召，带着侄儿罗得离开迦勒底的吾珥，往迦南地去。渐渐的，他与罗得的财物甚多，那地容不下他们，亚伯拉罕的牧人就和罗得的牧人相争。亚伯拉罕不为自己争夺或拣选，只信靠神的看顾，因此他让罗得选择土地。结果罗得选择了肥美的约但河全平原，就离开亚伯拉罕。之后，神向亚伯拉罕显现，对他说，‘从你所在的地方，举目向东西南北观看；凡你所看见的一切地，我都要赐给你和你的后裔，直到永远。我也要使你的后裔如同地上的尘沙那样多…。’由于亚伯拉罕不为自己争夺，反将一切的选择都留给他的侄儿罗得。因此，他得着神的显现和应许。这加强了他凭信而活的生活。（创十三5～18。）从亚伯拉罕的经历我们认识，无论在何种景况中，我们都不需要为自己争夺什么。如果我们愿意把拣选让给我们的弟兄，神会进来把一切可拣选的赐给我们。</p>
+<p>反观罗得和亚伯拉罕分离后，渐渐挪移自己的帐棚，最后搬进了罪大恶极的所多玛城。神不允许祂的子民住在那邪恶的城里，因此在神的主宰之下，发生了四王与五王的争战。最后，四王击败了五王，将所多玛城里所有的财物，并一切的粮食都掳去；罗得和他的财物也都被掳。后来，有一个逃出来的人，来告诉亚伯拉罕这件事。亚伯拉罕就率领家里生养的三百一十八名壮丁，与四王并他们的军队争战。因着亚伯拉罕信靠神，他得了胜利，杀败了敌人，又将被掳去的一切财物，和侄儿罗得都夺回来。（十四1～16。）亚伯拉罕不计算弟兄的弱点，也不对罗得的遭遇幸灾乐祸。反而在罗得被掳时，为罗得祷告，并坚决定意要为罗得争战。亚伯拉罕信靠神而得到胜利；他对神有信心，因为他学会了认识神。我们也都需要学这个功课，认识神是天地的主。一切发生在我们身上的事，都是出于祂主宰的手。同时，我们也要学习作个有度量的人，看见周围的同伴被掳而离开神时，起来为他们争战。（参创世记生命读经，701～703、707～712页。）</p>
+<p class="title">不单顾自己的事</p>
+<p>倪柝声弟兄曾作过以下这个见证：‘我个人近年来因身体不好的缘故，常顾不到别人的事！多少时候，我们好像自己的事都顾不来了，更何况其他人的事呢？其实，顾别人的事，乃是一个舍己的生活。今年，我遇见一位内地会的女教士。我问她见过戴德生先生么？你看他有什么特点呢？她说，照我所知道的，他有一特点，就是无论什么时候你去见他，他好像什么事都没有，惟独你的事最要紧。事实上，他一天不知要写多少封信，要见人多少次。但他却将自己的事暂放一边，来顾到别人的事。这就是舍己。哦！如果主像我们这样冷漠，这样不顾别人的话，就你我今天会在那里？主所顾的，完全是人的事。祂死，是因你我犯了罪。我们应当受教，作一个顾念别人事的人。’（参倪柝声文集第一辑第十八册，114～115页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：认识神是天地的主，不为自己拣选，也学习作个有度量的人，为被掳的同伴争战。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('202')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('204')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">被圣灵充满，让主有地位</p>
+<p>那时，诸天的国好比十个童女，拿着她们的灯，出去迎接新郎。…精明的拿着她们的灯，又在器皿里带着油。（太二五1，4）</p>
+<p>在马太二十五章，主耶稣将信徒比喻作童女，她们拿着灯，又在器皿里带着油。（1，4。）这里的器皿象征信徒的魂。五个精明的童女不仅在她们的灯里有油，也在器皿里带着油。灯里有油，表征神的灵住在她们灵里；器皿里带着油，表征神的灵充满、浸透她们的魂。（4注1。）在我们得救之初，我们里面有重生的灵，有神的生命和性情，但还没有圣灵的充满；我们灯里有油，但器皿里没有豫备油。要让我们的器皿里也充满油，就需要追求圣灵的充满。</p>
+<p>圣灵充满我们，意思是我们这个人里面，都让基督占有，都给神充满了；我们的思想、爱好、眼光、看法、倾向、选择，我们所有的一切，都给基督占有，都让神充满了。因此，让圣灵充满的路，首先是向主敞开。按照约翰四章十四节，基督这位经过过程之三一神的具体化身，已经成了赐生命的灵，内住在我们灵里，作活水的泉源。基督总是等候机会，要在我们里面涌流。当我们向祂敞开，内住的基督就会涌流，而且要流出。（七37～39上。）因此，我们需要敞开自己接触主，然后就会经历，主对我们是何等实际、便利、新鲜、令人舒畅。</p>
+<p>再者，我们需要出代价，让内住的基督在我们里面得着更多的地位。灯里的油不用买，器皿里的油却需要买；重生的圣灵是白给的，充满的圣灵却是需要出代价得着的。主要我们在每件事上，让祂经过，让祂有地位。我们若肯稍微为着主的缘故，放下一点自己的爱好、前途、学问、地位、家庭、财物、事业、看法、眼光等等，圣灵就要充满我们；我们放下有多少，圣灵充满就有多少。若是我们将所有的问题带到主面前，把主权、地位让给祂，我们就是出代价，‘买’得祂；主在我们里面就得着地位，充满我们。愿主怜悯我们，使我们都能出代价，给主有地位，好更多被圣灵充满。（参生命树，32～33页；基督徒生命成熟的路，90、94、110页。）</p>
+<p class="title">船坞的闸门</p>
+<p>考门夫人（Mrs. Charles E. Cowman）一次看见船进船坞的情景：一道铁门闸住了旱坞，外面有艘火轮等待要行驶进来。空空的船坞，像个巨人张开干渴的大口，准备接受江水的滋润。突然，管理的人搬动了机柄，闸门渐渐的开了，坞里涌进江水，澎湃翻腾。不久，内外水面达到平衡，船就缓缓行驶了进来。她看见这幅图画，就领会说，这正是说明圣灵充满的真理。神的儿女像船坞一样，等待充满；坞外有无限量的江水，就是不能干涸枯竭的圣灵，等待进来，当人这边的闸门打开了，神和人两边的愿望都同得满足。但是，什么是这重要的闸门呢？就是你不保留的奉献！（参造就故事中册，81页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：学习将所有问题带到主面前，把主权、地位让给祂，好更多被圣灵充满。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

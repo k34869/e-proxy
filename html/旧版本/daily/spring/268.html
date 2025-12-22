@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('267')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('269')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">对主你如何</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">耶和华喜悦燔祭和平安祭，岂如喜悦人听从他的话呢？看哪，听从胜于献祭；听命胜于公羊的脂油。（撒上15:22）</div>
+<div id="CC">Does Jehovah delight in burnt offerings and sacrifices as much as in obeying the voice of Jehovah?　Behold，to obey is better than sacrifice，and to heed，than the fat of rams.（1 Samuel 15:22）</div>
+<div id="C">在德国某教堂内，有一个碑铭如下：“我们的主耶稣基督，对我们如此说：你称我为主，可是并不听从我。你称我为光，可是并不看见我。你称我为道路，可是并不走在这路上。你称我为生命，可是并不盼望得着。你称我为全智，可是并不跟随我。你称我为美好，可是并不亲爱我。你称我为全丰，可是并不祈求我。你称我为永生，可是并不寻求我。你称我为仁慈，可是并不倚靠我。你称我为尊贵，可是并不事奉我。你称我为全能，可是并不尊敬我。你称我为公义，可是并不敬畏我。我若定你的不是，你可不要怪我。”</div>
+<div id="CC">福音─救主（诗677）</div>
+<div id="C">怜悯、慈爱、宽恕、<br/>　温柔又谦和；<br/>　为了罪人忍辱，<br/>　甘负十架轭；<br/>　舍命、流血、受苦，<br/>　为救失丧者：<br/>　这是基督耶稣，<br/>　对祂你如何？</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

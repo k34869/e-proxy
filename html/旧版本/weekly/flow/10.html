@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('9')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('11')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>那光是真光，来到世上，要照亮每一个人。（约一9）</p>
+<p class="title">主耶稣的真实</p>
+<p>我们要来看圣经中‘真’的榜样。第一我们要看见的，就是主耶稣自己。约翰一章说到，施浸者约翰来是要为那光作见证，那光是真光，来到世上，要照亮每一个人。（6～9。）主耶稣就是这真光。当祂在地上生活的时候，祂说话为人都是真实的。马可十二章有这样一个故事：‘有一个经学家进前来，听见他们辩论，晓得耶稣回答得好，就问祂说，诫命中那一条是第一？耶稣回答说，第一是，“以色列阿，你要听，主我们的神，是独一的主。你要全心、全魂、全心思并全力，爱主你的神。”其次，“要爱邻舍如同自己。”再没有别的诫命比这两条更大的了。那经学家对祂说，夫子，不错，你说的是真实的，神只有一位，除了祂以外，再没有别神。’（28～32。）这经学家想要凭着圣经知识，与主辩论，但他听见主的回答，就承认主所说的，都是真实的。</p>
+<p>在约翰八章，法利赛人认为主为自己作见证，因此祂的见证不真。但主回答他们说，‘我就是为自己作见证，我的见证还是真的。’（13～14。）祂又说，‘我的判断也是真的，因为我并不单独，还有差我来的父与我同在。’（16。）‘关于你们，我有许多事要讲说，要判断；但那差我来的是真实的，我把从祂所听见的这些事，对世人讲说。’（26。）主的见证，主的判断，都是真的；那差主来者的，乃是父，祂是真实的，主把从父所听见的，对世人讲说。基督也为着神的真实，作了受割礼之人的执事，要证实对列祖的应许。（罗十五8。）为着这真实的一位，我们赞美祂。如今我们是在基督这位真实者里面，祂对我们是真实、实际的神和永远的生命，使我们能有分于祂作我们的一切。（约壹五20与注8。）</p>
+<p class="title">苦修的喇嘛相信耶稣</p>
+<p>印度着名传道人撒督孙达尔氏，在未信主前，终日感觉人生虚空，便在各种教门寻找平安之路，多年终不可得，心里忧伤，直到绝望地步。后来一想，莫非宇宙之真道，藏在我所藐视之福音中？于是打开圣经，恰巧看到马太十一章二十八节，他心里非常希奇，就跪在救主面前，把重担交给祂，求祂照着祂的应许赐给平安；果然从此以后内心痛苦完全消失，并且充满快乐平安。孙达尔氏信主之后，曾往西藏传道。一天爬上高山，经过崎岖岩石之处，进入一个山洞，洞中见一老年喇嘛，闭目打坐，头发系于洞顶。孙达尔氏与他谈话，知道他是一位立功苦修的喇嘛，自念罪孽太重，惧怕将来审判报应，立志弃绝红尘，遂到深山密洞专事苦修，恐怕打坐长久，进入睡乡，故将头发系于洞顶，可是直到如今没有得到平安。孙达尔氏遂将新约圣经马太十一章二十八节翻给他看，上载：‘凡劳苦担重担的，可以到我这里来，我必使你们得安息。’就此解明其意。喇嘛惊奇非常，跳起来说，‘这个平安正是我所需要的，请把我带到耶稣那里去。’二人跪下祷告，这位老人彻底认罪悔改，接受耶稣作他个人的救主，起来之后，大得平安，立即要求受浸。主耶稣的应许至今仍一一履行，证明祂是真实的。（参耶稣是神的儿子么，48～49页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：住在基督这位真实者里面，有分于祂作我们的一切。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

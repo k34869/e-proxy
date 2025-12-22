@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('76')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('78')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">抚发祷告</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">况且，那灵也照样帮同担负我们的软弱；我们本不晓得当怎样祷告，只是那灵亲自用说不出来的叹息，为我们代求。（罗8:26）</div>
+<div id="CC">Moreover，in like manner the Spirit also joins in to help us in our weakness，for we do not know for what we should pray as is fitting，but the Spirit Himself intercedes for us with groanings which cannot be uttered.（Romans 8:26）</div>
+<div id="C">有一位母亲因为儿子常常醉酒，走向毁灭之路，便请求一位姊妹为他祷告。这位姊妹问她自己曾否为儿子祷告。她说，“已经为他祷告过了。”这位姊妹再问她曾否与儿子一同祷告。她答：“我不能出声祷告，也不敢在人面前祷告。”这位姊妹就对她说，“姊妹，你必须与他一同祷告；否则，我也不能为他祷告。”这位母亲立即醒悟过来，觉得不该如此软弱，以致儿子不能悔改。<br/><br/>　有一天晚上，她的儿子又喝醉酒回家，躺在自己的卧室里，酣酣入睡。圣灵把这位姊妹引到她儿子身边，她跪在地上，把手放在儿子发烫的额上，一面抚平他的乱发，一面为他祷告，求神感动他的心，使他悔改。忽然儿子醒过来，睁眼看着母亲，心中十分惊异。圣灵使他的心灵苏醒过来，他立即喊说，“母亲，你在为我祷告？神啊，怜悯我。”泪从他脸上流了下来，他悔改了；二人同声祷告。当晚他就得救了。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

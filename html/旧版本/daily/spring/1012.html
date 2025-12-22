@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('310')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('312')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">母亲指头流血</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我的孩子们，我将这些事写给你们，是要叫你们不犯罪。若有人犯罪，我们有一位与父同在的辩护者，就是那义者耶稣基督。（约壹2:1）</div>
+<div id="CC">My little children，these things I write to you that you may not sin. And if anyone sins，we have an Advocate with the Father，Jesus Christ the Righteous.（1 John 2:1）</div>
+<div id="C">某地有一法规，凡赌博的，要罚五百卢比。有一次，官吏捉住两个少年赌徒，把他们下在监里。其中一个是财主的儿子，另一个是乡间的穷人。五百卢比对财主而言，实在算不得什么，所以财主立时缴纳，他儿子就被释放了。然而穷人无法缴纳，只得留在监里。穷人的母亲终日劳苦，替人搬运石头，为要凑足钱数，好缴罚款。辛劳中，石头砸伤了她的手，就流出血来。一天母亲来探监，从监狱的窗口，少年赌徒看见了母亲的手，就问她说，“母亲，你手上是什么伤？你指头上那来的血？”母亲就把所作的事仔细告诉了他。最后她积攒了五百卢比，把她儿子保释出来。<br/><br/>　有一天，那个财主的儿子遇见了这个穷人的儿子，又邀他去赌博。他回答说，“从今以后，我不能再作那事了。你的赦免得来很容易；我却因着母亲的辛苦工作，并她受伤流血才得释放。这种使我母亲忍痛受苦的玩意，我连看也不愿再看了。”主为我们流血舍命，也是付了极大的代价！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

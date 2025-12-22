@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1274')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1276')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 3 课<br />
+那灵－信基督所得应许之福</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：求主使我近十架。（诗歌456首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：为叫亚伯拉罕的福，在基督耶稣里可以临到外邦人，使我们借着信，可以接受所应许的那灵。(加三14。)</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　那灵是因信基督所得应许之福－加三1～14</p>
+<p class="ot2">1　钉十字架的基督－1。</p>
+<p class="ot2">2　基督与那灵－2。</p>
+<p class="ot2">3　靠信基督的那灵与靠行律法的肉体相对－2下～5。</p>
+<p class="ot2">4传给亚伯拉罕的福音－6～14：</p>
+<p class="ot2">a　本于信得称义－6～13。</p>
+<p class="ot2">b　那灵－福音的福－14。</p>
+<p class="ot1">二　律法是承受应许者的监护人－15～29</p>
+<p class="ot2">1　应许与律法相对－15～21。</p>
+<p class="ot2">2　信仰顶替律法－22～26。</p>
+<p class="ot2">3　浸入基督，穿上基督，在基督里是一－27～29。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督钉十字架，赎出我们脱离律法的咒诅，且成了那灵，就是神所传给亚伯拉罕的福音应许之福。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗开启基督钉十字架的异象，作为神经纶的中心，并陈明那灵与肉体的对比，以及信仰与律法的对比。他使我们看见，我们相信了钉十字架的基督，但我们所接受的乃是那灵，就是包罗万有赐生命的灵。这灵就是神所传给亚伯拉罕的福音的福，而这福音乃是神的应许，立定为约，新约就是这个应许的延续或重复。并且我们也看见律法在完成神定旨的事上，只有暂时的地位；律法是神赐给亚伯拉罕应许四百三十年之后才颁布的，就像是监护人、儿童导师，借着定罪人而看守、照顾罪人，引导罪人归于基督。信基督使新约的信徒成为神的儿子，亚伯拉罕的子孙，并借着受浸，就穿上了基督，众圣徒在基督里成为一，成为基督的身体，和一个新人。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　钉十字架的基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前二2：因为我曾定了主意，在你们中间不知道别的，只知道耶稣基督，并这位钉十字架的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神经纶的完成，完全在于基督的十字架。十字架乃是神在宇宙中完成祂经纶之作为的中心。基督钉十字架，目的是要在十字架上对付我们的罪与邪恶的世代，并将生命分赐给我们，并在复活里活在我们里面，好释放我们脱离律法的辖制。我们所要作的，就是留在基督这里，仰望这位钉十字架的基督，只有祂和祂的十字架是神经纶的中心！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>仰望钉十字架的基督，只有祂和祂的十字架是神经纶的中心！</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

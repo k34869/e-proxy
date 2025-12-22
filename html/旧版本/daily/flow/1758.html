@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1757')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1759')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 18 课<br />
+在真理与爱中行事，在至圣的信仰上建造自己</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　基督是万有惟一的实际。（诗歌374首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：亲爱的，你们却要在至圣的信仰上建造自己，在圣灵里祷告，保守自己在神的爱中，等候我们主耶稣基督的怜悯，以至于永远的生命。（犹20～21。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　约翰二书</p>
+<p class="ot2">1　在真实中为着真理而爱—1～6。</p>
+<p class="ot2">2　不要有分于异端—7～11。</p>
+<p class="ot2">3　结语—12～13。</p>
+<p class="ot1">二　约翰三书</p>
+<p class="ot2">1　鼓励在真理上的同工：凡事兴盛，身体健康；在真理中行事—1～4。</p>
+<p class="ot2">2　接待作客旅的工人—5～8。</p>
+<p class="ot2">3　不要效法恶，只要效法善—9～12。</p>
+<p class="ot2">4　结语—13～14。</p>
+<p class="ot1">三　犹大书</p>
+<p class="ot2">1　为信仰争辩—1～3。</p>
+<p class="ot2">2　指出背道者的邪恶及对信徒的嘱咐—4～25。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>禁止有分于异端，鼓励在真理上的同工，并为信仰争辩。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>约翰的三封书信给我们看见，在神的神圣家庭里肢体中间正确的交通。约翰一书给我们神圣交通的原则；约翰二书告诉我们，不要和某些宣称是基督徒的异端者有交通；约翰三书告诉我们，在交通中款待所有亲爱的圣徒，越多越好。但我们不应当企图作头，管辖别人，这会破坏神家的交通。犹大书则论到召会背道的难处，我们需要为信仰争辩，并在至圣的信仰上建造自己，在圣灵里祷告，保守自己在神的爱中，等候主耶稣基督的怜悯，以活在三一神里面，应用并享受可称颂之完整的神圣三一。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在真实中为着真理而爱</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约贰3：恩典、怜悯、平安从父神，并从父的儿子耶稣基督，在真理和爱中，必与我们同在。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>使徒基于信徒中间存有真理和爱这两件要紧的事，便用恩典、怜悯、平安问候并祝福他们。我们在真理中行事为人，并且彼此相爱，就必享受神圣的恩典、怜悯与平安。在约贰四至六节说到在真理与爱中的行事。父命令我们要在真理中行事为人，以尊敬子；子命令我们要彼此相爱，以彰显祂。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在真理（真实）中行事为人，彼此相爱，以彰显并活出神的美德。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

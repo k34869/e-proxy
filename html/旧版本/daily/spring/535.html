@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('534')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('536')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第21课  性格—与人合作</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>罗马书十二10 爱弟兄，要彼此亲热；恭敬人，要互相争先。</p>
+<p>两头驴，被一根绳拴住了，它们的两边各有一堆草。它们反向走各去吃自己这边的草，可是绳子不够长，两头驴吃不到各自方向的那堆草。经过思考，它们共同协作先吃一边的草再吃另一堆草。它们能看到共同的利益而进行协作，如果它们互不相让只看到自己眼前的利益，将谁也吃不到草。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：与人合作就是能够与他人合作。与人合作的人不自私，总是希望事情顺其自然。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：如果你的家人决定去外面吃晚饭，你会听取所有的建议还是你坚持你最喜欢的餐厅？当你在儿童聚会中，你愿意唱别人说的诗歌还是你最喜欢的诗歌？一个与人合作的人是一个可以用别人喜欢的方式与他人合作的人。出一些谜题并让孩子们在组里一起解答。有些人可能和其他人合作得很好，有些人则想自己解决整个谜题。用这个来说明与他人合作的意义。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多前书十二21 眼不能对手说，我不需要你；头也不能对脚说，我不需要你。</p>
+<p>人体的各个不同部分在进行各种生命活动的时候,不是孤立的而是互相密切配合协同工作的 在消化系统中, 人体活动需要的能量来自于消化器官对食物中营养 的吸收。人体的消化 器官有口腔，食管、胃.小肠和大肠，每个器官都有各自的功能。食物在口腔被咬碎后，经过食管来到胃，胃把食物进一步分解 ，变成粥一 样的食糜,逐步送入小肠， 小肠再进行消化吸收最后久留下残渣来到大肠，大肠吸收其中的水分后被排出.</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：与人合作就是能够与他人合作。团队不是个人主义者—总是想自己作事情的人。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：我们的身体就是一个相互合作很好的例子。身体上没有哪一部分可以是单独，独自行动，它必须和我们身体上的其他肢体一起工作发挥作用。例如，吃食物需要我们的眼睛看，鼻子闻，用手拿，用嘴吃等等。与人合作的另一个例子就是团队运动。这就要求我们和我们的团队成员互动，并遵循彼此的暗示。我们不可能是单独，只把球留给自己而不传给别人。举行一些团体活动来描述其意义。例如，一起打球或烘烤饼干等。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多前书十二25 免得身体上有了分裂，总要肢体彼此同样相顾。</p>
+<p>在南美洲的草原上，发生过这样一件令人惊心动魄的事。一个秋日的下午，一片临河的草丛突然起火，顺着风游走的火舌像一条红色的项链，向草丛中央一个小小的丘陵包围过来。</p>
+<p>丘陵上无数的蚂蚁被逼得连连后退，它们似乎除了葬身火海已别无选择。但是就在这时，出乎意料的情形出现了，只见蚂蚁们迅速聚拢，抱成一团，滚作一个黑色的“蚁球”冲进火海。烈火将外层的蚂蚁烧得噼啪作响，然而，“蚁球”越滚越快，终于穿过火海，冲进小河。</p>
+<p>河水把“蚁球”卷向岸边，使大多数蚂蚁绝处逢生。这个故事告诉我们一个道理：需要与人合作，因为团结就是力量，只有团结起来才能化险为夷、战胜困难，只有团结起来，这些蚂蚁才能绝处逢生。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：与人合作就是能够与他人合作。与人合作的人不是隐退的，一个自己从别人那里撤退的人。要成为一个与人合作的人需要不自私，不个人主义，不孤僻。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：假设你的科学老师指派一个小组项目。如果你真的很擅长科学，你自己完成它，因为这样更快，还是你允许你的组员参与并作贡献？人体也提供了一个说明合作的很好的例子。问问孩子们他们认为什么是他们身体中最重要的器官（例如，大脑，心脏等等）。无论这一部分多么重要，它都不能独立或不需要其他成员的帮助而独自生存。问孩子他们认为什么是他们身体最不重要的部分（如阑尾、扁桃体等）。不管这个部位看起来多么微不足道，如果它有什么问题的话，它会使整个身体十分疼痛。同样，我们不应该把自己与他人分开，而要与人合作。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

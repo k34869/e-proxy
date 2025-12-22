@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('819')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('821')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 10 课<br />
+主生命供应的职事（二）生命的满足</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：多年疲惫未能寻到一泉源。（诗歌254首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：耶稣回答说，凡喝这水的，还要再渴；人若喝我所赐的水，就永远不渴；我所赐的水，要在他里面成为泉源，直涌入永远的生命。（约四13～14。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　干渴的救主与干渴的罪人—约四1～8</p>
+<p class="ot2">1.　救主‘必须经过’罪人的地方—撒玛利亚—1～4。</p>
+<p class="ot2">2.　救主来到雅各井旁等候干渴的罪人—5～6。</p>
+<p class="ot2">3.　罪人来到宗教的遗产跟前，遇见救主—7～8。</p>
+<p class="ot1">二　宗教传统的虚空，与生命活水的丰满—9～14</p>
+<p class="ot1">三　主启示取用活水的路—15～26</p>
+<p class="ot2">1.　悔改并承认罪—丈夫—15～18。</p>
+<p class="ot2">2.　在人的灵和真实里，接触是灵的神—19～24。</p>
+<p class="ot2">3.　相信耶稣是基督—25～26。</p>
+<p class="ot1">四　活的见证及惊人的收成—27～42</p>
+<p class="ot2">1.　罪人相信，得着满足，撇下从前霸占她的事物并作见证—27～30。</p>
+<p class="ot2">2.　救主因实行神的旨意满足罪人，而得着满足—31～34。</p>
+<p class="ot2">3.　庄稼惊人的收成—35～42。</p>
+<p class="ot1">五　遍地的庄稼已经发白，要求主催赶工人，收割他的庄稼—约四35，路十2</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主耶稣是活水—赐生命的灵—的泉源，临到干渴的罪人，给人享受并畅饮。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主耶稣在去加利利的路上，必须经过撒玛利亚，来到叙加的雅各井旁，寻找干渴的罪人—撒玛利亚妇人。主摸着这妇人的良心，并向她启示她是干渴的，而主能赐给她活水。主也向她启示取用活水的路，乃是悔改并承认罪，在人的灵和真实里接触是灵的神，以及相信耶稣是基督。撒玛利亚妇人因着遇见主而得满足，她接受了主，并立刻向人作活的见证，因而带下惊人的收成。而主也向门徒启示，祂的食物乃是拯救罪人，使罪人得满足。主并要门徒看见庄稼已经发白，他们必须去收割庄稼，将基督带给人，也将人带来，收割归给基督。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　干渴的救主与干渴的罪人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶稣回答说，你若知道神的恩赐，和对你说请给我水喝的是谁，你必早求祂，祂也必早给了你活水。（约四10。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主耶稣去加利利时，祂‘必须’经过撒玛利亚。这撒玛利亚妇人，是父所赐给主的。因此，主有负担往撒玛利亚去，好实行父的旨意，寻找那不道德的妇人。当主在等候罪人来到时，祂是干渴的；而撒玛利亚妇人来打水，表示她也是干渴的。当她来打水时，救主要求她给祂水喝来得满足，这使那妇人惊讶。因为犹太人和撒玛利亚人素不来往。但主向她启示，神的恩赐大过那口被视为祖宗遗产的雅各井。神的恩赐就是神圣的生命，这恩赐乃是藉着‘求’而得到的。她若求，主就要赐给她活水，解她的干渴，这活水还要在她里面成为泉源，直涌入永远的生命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>求主赐给活水，以解除生活中的干渴。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

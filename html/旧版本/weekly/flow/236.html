@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('235')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('237')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">向主悔改，脱离不冷不热的光景</p>
+<p>我劝你向我买火炼的金子，叫你富足；又买白衣穿上，叫你赤身的羞耻不露出来；又买眼药擦你的眼睛，使你能看见。（启三18）</p>
+<p>启示录三章十五至十九节给我们看见老底嘉召会的情形，以及主对他们的嘱咐：‘我知道你的行为，你也不冷也不热；我巴不得你或冷或热。你既如温水，也不热也不冷，我就要从我口中把你吐出去。因为你说，我是富足，已经发了财，一样都不缺；却不知道你是那困苦、可怜、贫穷、瞎眼、赤身的。我劝你向我买火炼的金子，叫你富足；又买白衣穿上，叫你赤身的羞耻不露出来；又买眼药擦你的眼睛，使你能看见。凡我所爱的，我就责备管教；所以你要发热心，也要悔改。’恢复的召会一旦堕落了，就成了温水，也不热也不冷。这对我们该是警告。我们一旦变成温水，就要从主的口中被吐出来，就是被主弃绝，不得再享受主对祂的召会所是的一切。</p>
+<p>恢复后又堕落的召会，夸耀她的富足，主要是在道理的知识上，却不知道她在生命上是贫穷的，在视力上是瞎眼的，在行为上是赤身的。圣经把我们那运行作工的信（加五6）比喻为金子，（彼前一7，）并且神圣的性情，就是基督的神性，也是由金子表征的。（出二五11。）我们乃是藉信有分于神的性情。（彼后一l，4～5。）恢复后又堕落的召会，对基督有道理的认识，但没有多少活的信。她需要付代价，经过火炼的试验，得着金的信，使她能有分于真金，就是基督自己，作祂身体生命的元素。</p>
+<p>在今日的召会生活中，我们要脱离对主不冷不热的光景，就需要悔改，火热的追求对主丰富的经历。我们可能享受基督到某一个程度，但我们还需要更深、更高、更阔、更丰富的享受祂。我们该告诉主，我们对祂要有新的经历。要不断的寻求主的丰富，就需要我们殷勤不懒惰，灵里火热，好使不冷不热的光景，被灵里的火热所吞灭。（参启示录生命读经，237、240～241页；活力排的训练与实行，44页。）</p>
+<p class="title">次等的冠冕</p>
+<p>在澳洲有一位不冷不热的传道人，夜里作梦，被提上了云间，来到审判台前，领受他一生为主工作的赏赐。有一位天使送来一个华丽冠冕，上面镶的满是珍珠宝玉，后来又来一位天使说，‘拿错了，这是二十年前为他豫备的，那时候他拼命为耶稣作见证，可惜不一会儿的工夫，因着“世上的忧虑，钱财的迷惑”，他就退后了，所以要换一个次等的冠冕给他！’</p>
+<p>不一会儿，换来一个次等的冠冕，虽然没有头一个那么华丽，他还很觉得意。忽然又来一位天使说，‘我们又拿错了，这是十年前为他豫备的，因那时候他“再如火挑旺起来”。不幸，“肉体的情欲、眼目的情欲、并今生的骄傲，”又迷住了他，叫他成为不冷不热的传道人，我们再换个冠冕罢。’</p>
+<p>于是再换来一个，上面一粒珠宝都没有，毫无光彩，这位传道人就垂头丧气，懊悔无地。庆幸的是，他醒来，发现原是南柯一梦，从那时候起，有数十年之久，他灵里火热为主作见证，成了主忠信的仆人。（参福音故事下册，174～175页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：告诉主，我们渴望对祂有新的经历，愿意脱离不冷不热的光景，火热的追求对主丰富的经历。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

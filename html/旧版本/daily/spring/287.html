@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('286')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('288')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">倪弟兄去建瓯(一)</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">恩待穷乏的，乃是尊敬主。（箴14:31）</div>
+<div id="CC">He who is gracious to the needy honors Him.（Proverbs 14:31）</div>
+<div id="C">倪柝声在福州读书时，同学魏弟兄约他到建瓯，距福州五百里处，去帮助那里的召会。当时主只预备了三分之一的旅费，约是十几块钱。建瓯召会催说什么都预备好了，请他快去。倪弟兄回电报说，就来。他定规周五晚上动身。周五一早起来，忽然得到一句话：“你要给人，就有给你的。”心里又觉得说，“你应该把钞票都送出去，银角留着为你自己。”但是给谁呢？又觉得说，“要给一个有家庭的弟兄。”倪弟兄祷告完了，不敢说顺服，也不敢说不顺服，心中对主说，“如果你要我送给这一位弟兄，你就叫我在半路上碰见他。”在中途，那位弟兄恰好迎面走来，倪弟兄就说，“弟兄，主叫我把这摆在你手里。”说了，就走。走了两步，就流下泪来，对主说，“我已经打电报给建瓯的魏弟兄，说去；现在钱送出去了，叫我怎么去呢？”然而另一面，他心里非常舒服；因为主说，“你给了人，就必有给你的。”于是，他对主说，“主，你应当给我了。时候到了，就要上船了。”<br/><br/>　诚实爱主的人，他的奉献总是绝对的、坚定的。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('692')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('694')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">有灯无光</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>彼前3:1　照样，作妻子的，要服从自己的丈夫，好叫那些甚至不信从主话的，也可以不用主的话，藉着妻子的品行，被主得着，</p><p>有个信主的女子，嫁给一位有为的青年，他的才能、学问、品德都很不错。结婚之后，彼此相爱，小家庭的生活，确是非常快乐美满。当结婚第五周年纪念日的早晨，她很得意的对丈夫说，‘我何幸得作你的妻子。你真是一个模范青年、好丈夫。五年的婚姻生活，使我十分满意。但是我要求你一件事，你若肯答应，那我就更加满意了。’‘是什么事呢？’她的丈夫问。她说，‘我要求你信主耶稣，作基督徒。’她的丈夫说，‘不错，你是信奉耶稣的，我差不多忘记了。但我要问你，你信耶稣的杀人不杀人？’她说，‘当然不杀人。’她的丈夫说，‘我也不杀人。’‘你信耶稣的放火不放火？’她的丈夫再问。‘你为何问这问题呢？我从来没放过火。’她回答。她的丈夫说，‘我也不放火。’‘你信耶稣的偷人的东西么？’她的丈夫又问。‘不，我从来没偷过别人的东西。’‘你信耶稣的说假话么？’屋里空气突然冷静下来。她迟疑了片刻才回答说，‘说假话有时有的，因为到了事情不好办的时候，说一句两句就过去了。’她丈夫说，‘我也是这样，有时出于不得已只得说一两句。’‘你信耶稣的打麻将么？’她的丈夫紧接着问。她又迟疑了一下，回答说，‘打麻将么？有时免不了的，因为到人家里作客，正好四缺一，不打罢，人情难却，只得应酬一两圈。’她丈夫说，‘是的，我也是这样。’问过了许多，她的丈夫就说，‘你我是一样的：你不杀人，我也不杀人；你不放火，我也不放火；你不偷东西，我也不偷东西；你有时说一两句假话，我也是如此；你打麻将，我也打麻将。你跟我有什么分别？我又何必信耶稣？’她听了这话心如刀割，跑上楼去，把门关上，跪在主前痛哭认罪、祈祷、悔改。她的丈夫以为说话得罪了她，觉得难过，也就追上楼去，请她原谅。她含泪伤心的说，‘亲爱的！不是我要原谅你，乃是你要原谅我；我作你的妻子于今五年了，不能叫你看出我是基督徒来，我的行为和你毫无分别，我真是万分惭愧。我靠主的恩典，从今天起作一个好基督徒，叫基督的生命从我身上显露出来。从今天起，你要得着一位更好的妻子！’过了半年，在一个聚会中，她的丈夫站起来见证说，‘我信了耶稣，因为我看出了信主与不信主的分别。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

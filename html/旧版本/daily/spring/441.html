@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('440')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('442')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">在乎权能和圣灵</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>希伯来书 4:12因为神的话是活的，是有功效的，比一切两刃的剑更锋利，能以刺入、甚至剖开魂与灵，骨节与骨髓，连心中的思念和主意都能辨明。</p><p>一八三五年，康提多（Titus Coan）头一次到夏威夷。许多人喜欢听他讲道，群众绕着他，甚至使他吃饭的时间都没有。到了一八三七年，复兴的火大大蔓延起来，全巿居民几乎都是他的会众，他竟成为一万五千人的牧师！他虽然无法到他们那里去，他们却都到他这里来。他们在帐幕里不住的聚会，有两年之久。无论何时，白日或是深夜，聚会钟声一响，二千至六千的人便聚集了！痛哭悔改，大声求告主的人，时时都有。有时因为哭声太多，传道人的声音竟听不见。有几百次，他的会众因受感动，甚至昏倒在地。有的人喊着说，‘两刃的剑，直刺入我的心了。’素来讥笑福音的人，原想来到会中扰乱，竟被感化，大声的说，‘神感动了我！’还有一次，聚会人数有二千人，当他正在讲道之时，有一人问道：‘我要怎样作，才可以得救呢？’问了以后，便用税吏的话祷告；全场的人也就与他同声祈祷，求神开恩。康提多只得停止讲道，站着细看神的作为！分争的和好了，醉酒的改变了，淫乱的清洁了，贼把所偷的东西归还原主，有的人犯一生一世不能解除的罪也被释放了。在一年中，五千二百四十四人得救。在一个主日，一千七百零五人受洗，二千四百人擘饼。从前都是极污秽的罪人，现在成为神的圣徒了。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

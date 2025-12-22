@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1749')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1751')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 16 课<br />
+神圣出生的美德以实行神圣的义和爱</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　借着神和全备的灵实行爱</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹四8下～10神就是爱。神差祂的独生子到世上来，使我们借着祂得生并活着，在此神的爱就向我们显明了。不是我们爱神，乃是神爱我们，差祂的儿子，为我们的罪作了平息的祭物，在此就是爱了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>住在神里面就是居住在祂里面，留在我们与祂的交通里，使我们经历并享受祂住在我们里面。这就是凭实行神的义和神的爱的生活，照着神圣的膏油涂抹，实行与神是一。神将祂的灵赐给我们，这灵乃是全备供应、没有限量的。借此，我们有充分的确据，知道我们与神是一，并且我们住在祂里面，祂也住在我们里面。当我们在神圣生命的交通里，就是说，在对三一神的享受里，这享受就有一种流出或结果。享受三一神的结果就是神圣的爱。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在神的爱里彼此相爱，使神圣的爱在我们里面得着成全而显明出来。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神是爱的源头，住在爱里面，实行爱神并彼此相爱。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>按照约翰一书，信徒遵守主的诫命实际的意思是什么？你是否有遵守主诫命的操练和经历？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘彼此相爱似乎很普通。但我们必须承认，虽然我们彼此相爱，我们可能彼此相爱的不多。因着我们一天过一天，一年过一年聚集在一起，我们彼此必定会有人的感情；但在活力排里彼此相爱的情形该远过于这个。我们必须彼此相爱，在彼此的爱里聚集在一起。…</p>
+<p>借着我们彼此相爱，世人就会认出我们是主的门徒。这是真实的冲击力。我们还没有说什么，人就会被劝服，因为他们看见我们在一里，并且同心合意的彼此相爱。在全地上，在每一个社会里，每一个人都知道，每当人聚集在一起，就有争执和争战。什么地方有人群，什么地方就有辩论、争执和争吵。但是当人在我们中间，而我们真实的成为一的时候，他们就会希奇什么使我们成为一。主耶稣是活的人位，祂使我们成为一。我们的成为一，乃是最强的见证，证明我们是耶稣的子民。我们是那位使我们成为一者的门徒。’关于活力排之急切需要的交通，61～62页。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在神的爱里彼此相爱，使神圣的爱在我们里面得着成全而显明出来。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

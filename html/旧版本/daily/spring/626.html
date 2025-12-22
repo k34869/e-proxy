@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('625')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('627')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第34课  性格—受苦不抱怨</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>雅各五8上 你们也当恒忍，坚固你们的心…</p>
+<p>有一天，两个建筑工人坐下来一起吃午餐，其中一个打开饭盒就抱怨："呃！肉卷三明治……我讨厌肉卷三明治。"他的朋友什么话也没说。</p>
+<p>隔天两人又碰面吃午餐，同样地，第一个工人打开饭盒往里面看，这次他更火大了，说："怎么又是肉卷三明治？我痛恨肉卷三明治。我讨厌肉卷三明治。"他的同事一如前日，仍然保持沉默。</p>
+<p>第三天，两人又要准备吃午餐，第一个工人打开饭盒，又大叫起来："我受够了！日复一日都是一样的东西！每个有福的日子都是吃肉卷三明治！我要吃别的东西！"</p>
+<p>他的朋友说:“只要有口饭吃就已经不错了，不要再抱怨了。”</p>
+<p>所以小朋友我们应该为着每天神所赐给我们的食物感祂。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个性格正确的人甘愿受苦，没有怨言。尽管在生活中常常得不到他们想要的东西，他们也不会抱怨。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：我们不可能总是得到我们想要的，即便会得到，也不是每次都会及时得到。当你很饿的时候，但妈妈刚好在接重要的电话，不能马上给你作吃的，你会怎样呢？如果你们家被邀请到别人家作客，你到了那里发现没有什么事可作的，也没有人陪你玩，你会怎样呢？想一想，有些其他国家的孩子每天都吃不饱，而我们有吃有喝，还经常抱怨“无聊”。受苦不抱怨，意思是我们遇到各样的情形，都愿意接受，不抱怨，不生气。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多后书六6 以纯洁、以知识、以恒忍、以恩慈、以圣别的灵、以无伪的爱。</p>
+<p>一位留美的计算机博士，毕业后在美国找工作，结果好多家公司都不录用他，思前想后，他决定收起所有证明，以一种"最低身份"再去求职。</p>
+<p>不久，他被一家公司录用为程序输入员，这对他说简直是"高射炮打蚊子"，但他仍干得一丝不苟。不久，老板发现他能看出程序中的错误，非一般的程序输入员可比，这时他亮出学士证，老板给他换了个与大学毕业生对口的专业。</p>
+<p>过了一段时间，老板发现他时常能提出许多独到的有价值的建议，远比一般的大学生要高明。</p>
+<p>这时，他又亮出了硕士证，于是老板又提升了他。</p>
+<p>再过一段时间，老板觉得他还是与别人不一样，就对他"质询"，此时他才拿出博士证，老板对他的水平有了全面认识，毫不犹豫地重用了他。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个性格正确的人甘愿受苦，没有怨言。当他们遭受损失，有缺乏，或被要求作一些不愿意的事情，他们不抱怨。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：有时你会得到一些令人不愉快的任务，比如清理垃圾或者清理别人的烂摊子。有可能，家里其他人都可以去参加某个活动，但妈妈打算让你留在家里看家，或者写作业。一个性格正确的人，甘愿经历不愉快的事，不抱怨任何的遭遇。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>歌罗西书三12 所以你们既是神的选民，圣别蒙爱的人，就要穿上怜恤的心肠、恩慈、卑微、温柔、恒忍。</p>
+<p>耶稣被他们带到了一个地方，名叫髑髅地，在那里要将耶稣钉十字架，有两个犯人，一个在右边，一个在左边。有一个囚犯嘲笑耶稣，当下耶稣说，父阿，赦免他们，因为他们所作的，他们不晓得。兵丁就拈阄分祂的衣服。</p>
+<p>百姓站着观看，官长也嗤笑着说，祂救了别人，祂若是神的基督，是那蒙拣选的，就让祂救自己吧！兵丁也戏弄祂，上前拿醋送给祂喝，并且还说: 你若是犹太人的王就从十字架上跳下来，救你自己吧！</p>
+<p>在耶稣以上有一个牌子写着：这是犹太人的王。悬挂着的犯人中，有一个亵渎祂说，你不是基督么？可以救自己和我们吧！</p>
+<p>那时约到正午，遍地都黑暗了，直到午后三时，日头不发光，殿里的幔子也从当中裂开。</p>
+<p>耶稣大声喊着说，父阿，我将我的灵交在你手里。说了这话，气就断了。百夫长看见所发生的事，就荣耀神说，这真是个义人。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个性格正确的人甘愿受苦，没有怨言。他们能够经过生活中的不愉快或困难，在过程中不抱怨也不放弃。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：你有没有一个对你很严格的老师或教练？你有没有抱怨他严厉、不公平？每个人在他的一生中，都要经历很多不愉快的事。一个正确的人在经历这些不愉快时，不会抱怨，更不会放弃。给孩子们讲一些经历苦难不抱怨也不放弃的故事，比如戴德生，或者一些身残志坚的人，或者个人的经历等等</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('168')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('170')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">专（一）　目标专：目标专一信靠神</p>
+<p>你要全心信靠耶和华，不可倚靠自己的聪明；在你一切的道路上，都要认定祂，祂必修直你的途径。（箴三5～6）</p>
+<p class="title">什么是专</p>
+<p>专就是不散漫，意指我们这个人的灵、魂、体各部分都集中，目标专一，作事专一，心力集中。</p>
+<p>箴言二十章二十七节说，‘人的灵是耶和华的灯，鉴察人的深处。’我们的灵是盛装神的器皿，是神的灯，除了神以外，不应当盛装任何其他事物。什么时候我们的灵装了神以外的事物，灯就昏暗了。所以保罗劝我们：‘不要醉酒，醉酒使人放荡，乃要在灵里被充满。’（弗五18。）这乃是说到灵的专一；我们要操练专一的活在灵中，常常释放我们的灵，在灵里被神充满。</p>
+<p>再者，我们的心思、情感、意志也需要专一。保罗在林后三章十六节说，我们的心几时转向主，帕子就几时除去；这是指心思的专一说的。在马太六章二十四节，主耶稣告诉门徒：‘没有人能事奉两个主；因为他不是恨这个爱那个，就是忠于这个轻视那个。’这乃是说到情感的专一。我们的情感需要专一，也就是专一的爱主和该爱的事物，不爱属世、邪恶的事物。此外，我们的意志也需要专一。箴言三章五至六节说，‘你要全心信靠耶和华，…在你一切的道路上，都要认定祂，祂必修直你的途径。’凡我们所作的任何决定，都要认定主，并专心倚靠主达到目标。</p>
+<p>在路加九章，主耶稣呼召一个人来跟从祂。那人虽然愿意，却对主说，准他先去辞别家里的人。耶稣回答他说，‘手扶着犁向后看的，没有一个适合于神的国。’（61～62。）这说出我们跟随主，需要灵魂体都专注于主。就如扶犁耕田，需要全神贯注于所耕的路线。不用说回头看，只要稍受打岔，就会耕歪。主不要我们三心二意的跟从祂，祂要我们完全、绝对的跟从祂，忘掉一切，为神的国竭力向前。（参62注1。）（参性格，5页；马太福音生命读经，304页；箴言生命读经，12页。）</p>
+<p class="title">先见神的面</p>
+<p>神的仆人司布真（Charles Spurgeon，1834～1892）非常看重早晨与主交通。他说，‘热心爱主的人，都很重视早晨与主交通，他们的生活有一个规律，就是没有见神的面，绝不先见人的面。’由此可见，司布真对主的爱是专一的。</p>
+<p>又有一位主的仆人说，‘每天最早的三十分钟，是个人与主交通的时候。在我尚未听到别人的声音以前，必须先听到主的声音，即使是我所爱的妻子，也不能破例。当然，我更不能让我的脑子先装满收音机声，或新闻报纸之后，才进到神面前。’此外，一天之中，我们只有早晨三十分钟的祷告是不彀的，必须在一天之中，时时回到主前。不过，清晨的三十分钟乃是全天最好的时间，是最易专一与神交通的时段。（参造就故事上册，1页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：凡我们所作的任何决定，都要认定主，并专心倚靠主达到目标。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

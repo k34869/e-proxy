@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('223')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('225')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">小箱及字典</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">他要承认所犯的罪，将所亏负人的，全数赔还，另外加上五分之一，给与所亏负的人。（民5:7）</div>
+<div id="CC">Then they shall confess their sin which they have committed，and he shall make restitution according to its principal for his wrong and add to it one-fifth of it and give it to the one whom he has wronged.（Numbers 5:7）</div>
+<div id="C">有位姊妹，在她得救之初，总以为自己是个好人，并不觉得有罪。她信了耶稣，却不觉得需要耶稣的血洗净她的罪；好像这位耶稣只作她道德崇拜的榜样，却没有成为她生命的实际。有一次，她去听道，传道人作见证说，“我的父亲是银行经理，很有地位，也很有钱，按理我这银行经理的儿子，在金钱上应该很阔绰清白，那知我常作小偷……。”就这一句“银行经理之子作小偷”的话，打动她的良心，她的心眼立即明亮，好像有话指责她说，“从前你作教员时，岂不是把学校的字典、小箱子等物，都拿走了吗？”当时她就悔改认罪，答应里面的声音，归还这些偷来之物。后来，她又觉得这样归还太难为情，不如按照这些物品的价值折成现金，将钱寄给一位在校的同事，托她代还学校。然而，她里头过不去，非得亲自去还不可。至终，她顺服了下来，亲自带着这些东西，到学校去，向校长认罪归还。从这一次的顺服经历中，她摸着了那活在她里面的基督。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

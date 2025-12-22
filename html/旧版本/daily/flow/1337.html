@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1336')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1338')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 11 课<br />
+召会的产生与建造（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　宇宙和地方的建造（二）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前一2：写信给在哥林多神的召会，…同着所有在各处呼求我们主耶稣基督之名的人；祂是他们的，也是我们的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>二章结束于建造的事。宇宙的建造惟有藉着地方的建造才能完成。我们若不能在自己的所在地与别人建造在一起，就不该盼望能在任何别的地方被建造。我们要在地方一面被建造起来，我们的性情、所是必须受对付。没有一事比建造更试验人属灵的成熟。人若乐意在他的所在地被建造到召会里面，就会有丰盛生命的长进。总之，我们有多少宇宙的和地方的建造，乃在于我们放弃规条，并实际的看见在神的经纶里基督是一切有多少。祂既是那包罗万有的一位，我们该持守基督作一切，经历真实的建造，首先是地方的，然后是宇宙的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在地方一面被建造到召会里，好完成宇宙的建造。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>召会真实的建造，乃是藉着以基督的丰富喂养信徒，使信徒的生命长大。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>信徒生命长大和召会得着建造有何关系？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘召会产生出来以后，需要建造起来。（弗二11～22。）召会是新人，只需要生出来；但这新人有一个身体，身体就需要建造。作母亲的只需要将婴孩生出来。婴孩作为人生出来不需要任何建造；但这婴孩有一个身体，身体就需要建造，因为婴孩生出来的时候，他的身体很小。按照圣经，身体的长大，就是身体的建造。（四16。）建造婴孩身体的路，乃是藉着给婴孩奶喝而喂养他的身体。我们给人施浸以后，必须回去用灵奶喂养他，把他建造起来。（帖前二7，林前三2上，彼前二2。）</p>
+<p>所有作母亲的都知道，喂养小孩无法作得太快。我们若一次喂婴孩太多东西，就会对他有害。我们必须慢慢的、一点一点的喂他。小孩需要在母亲的照顾下得喂养许多年，才能长大成人。从我们得救那天起，主一直在喂养我们。我们每一次呼求主名、祷读主话、参加聚会.......都能得着喂养。这喂养就是主的分赐。基督徒的生活乃是一天一天接受分赐的生活。不管我们有没有察觉，这分赐一直奥秘的在进行着。我们可能说不知道有什么事情在进行着，但我们里面随时都有许多的分赐和属灵喂养在进行。每一天，每一刻，我们基督徒的生活乃是在神分赐下的生活。我们可能对这事没有感觉，但我们不该信靠自己的感觉，乃该信靠分赐的神。</p>
+<p>召会是新人，也是基督的身体。新人不需要建造。圣经没有说新人需要建造起来，却一再告诉我们，基督的身体需要建造起来。（弗四12，16。）众圣徒需要被成全，并学习建造基督的身体。建造的路乃是藉着喂养而分赐生命。’（神的经纶与分赐，99～100页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以基督的丰富喂养圣徒，使我们长成在主里的圣殿，作神在灵里的居所。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

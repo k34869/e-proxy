@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('27')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('29')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>我们的祖宗在旷野有见证的帐幕，是照那对摩西说话者所吩咐，按他所看见的样式作的。（徒七44）</p>
+<p class="title">准的榜样—摩西</p>
+<p>在历史上，摩西是第一个完备、合格且完全的神的仆人。他是神仆人的标准模型，并且神对他的呼召，就是神呼召众仆人的标准。摩西小时候，从母亲得到对神的认识。当他渐长，就回到埃及的王宫里，作了埃及的王子，接受法老女儿的抚养、教导和训练。那时埃及人已经发展出十分进步的文化。摩西虽是希伯来人，却不折不扣的受到正规的埃及教育，学得了埃及人一切的知识学问。因着摩西受到完整的埃及教育，使他成为品德高尚、学识渊博的年轻人，说话行事都有能力。这些成为他天然一面的豫备。（徒七20～22。）</p>
+<p>之后，神把摩西送到旷野四十年，使他在风霜炎热之下，照顾羊群而受熬炼和折磨。牧羊需要有责任心，需要每天按固定的时间，带领羊饮水或吃草；什么时候叫羊休息，或是带着羊出去，一切都得照羊的方便，而不能照他的方便。因为他在旷野学了四十年的功课，使他以后能带领以色列人四十年。他如何在法老前行神迹，带以色列人离开埃及，又使红海的水分开，领以色列人走干地过去，并行过旷野，都是照着神的吩咐。尔后，他在西乃山上领受律法的颁赐，准确的照神所吩咐的，颁布神的诫命、律例、典章，教导百姓。摩西又独自在山上四十昼夜，领受建造会幕的样式。他按着在山上所看见的，每个项目、尺寸，都精确的照着神所吩咐的去作，使会幕得以建造完成。到他年老时，他在申命记中，述说从以色列人接受律法起，一直到他离世的故事，他的记忆力是多么准确、周密。这些都说出摩西身上有一个准的性格，使他能准确的学习埃及的学问，准确的听神的话，又准确的照神的话而行，使他成为神仆人标准的模型。（参出埃及记生命读经，34～35页；性格，54～55页。）</p>
+<p class="title">摩根有条不紊的生活</p>
+<p>英国的摩根（G. Campbell Morgan，1863～1945），是世界闻名的解经家、讲道者。有人曾替他着一传记。书中说，摩根极好整齐、次序，家中每一物具，必有一定位置安放。就是一纸一笔，也不乱放。每读完一书，即在书内写明何年何月何日读完，且还作一笔记，叙述书中内容，并加评论。每收一信，必写回信；若是可能，立刻回信。每信必有副本，以便检阅，并且也要登记，分类保存。旅行讲道皆有记录，统计至一九二九年七月止，共讲道二万零八十三次，旅行过七十一万四千零四十二哩，渡大西洋四十九次。如今着书已出版的，共七十二部。（造就故事下册，75页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：操练准确的听神的话，准确的照神的话而行。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

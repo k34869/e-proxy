@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('229')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('231')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">不销灭那灵，灵里火热</p>
+<p>为这缘故，我题醒你，将那藉我按手，在你里面神的恩赐，再如火挑旺起来。（提后一6）</p>
+<p>在提后一章六至七节，保罗说，‘为这缘故，我题醒你，将那藉我按手，在你里面神的恩赐，再如火挑旺起来。因为神赐给我们的，…乃是能力、爱、并清明自守的灵。’六节所说的恩赐，就是七节所说的灵。所以，我们必须把我们的灵挑旺起来。在召会的聚会中，我们尤其需要将那在我们里面的恩赐，如火挑旺起来。然后火焰会渐渐更高、更亮，基督的丰富就会显明。此外，罗马十二章十一节说，我们要‘灵里火热’。这意思是，我们必须被焚烧的灵烧着，然后去烧别人。我们要热切，要火热，才能服事主。</p>
+<p>在帖前五章十六至二十节，保罗劝勉圣徒：‘要常常喜乐，不住的祷告，凡事谢恩；因为这是神在基督耶稣里对你们的旨意。不要销灭那灵，不要藐视申言者的话。’内住的三一神在我们里面一直工作，所以我们不该销灭那灵，反而该使那灵挑旺起来。那灵实际上就是经过过程的三一神，祂在我们里面的焚烧，就是三一神在我们里面的工作；我们需要与这工作合作。</p>
+<p>今天，那将祂自己与我们调和的三一神，乃是我们里面的发电机。要经历这属天的发电机，钥匙在于我们的祷告，就是运用我们的灵。我们需要祷告：‘主，我愿意成为活的人，我要灵里火热，满有冲击力。’我们也需要凡事谢恩，在阴暗的日子要谢恩，在晴朗、光明的日子要谢恩；事情顺利要谢恩，坏事临到也要谢恩。</p>
+<p>此外，挑旺灵的路，也在于用各样的智慧，让基督的话丰丰富富的住在我们里面，并用诗章、颂辞、灵歌，彼此对说，互相劝戒，心被恩感歌颂神。（西三16。）这会使我们在基督徒生活中，被灵充满也被话充满，叫灵从我们里面洋溢，而满了赞美、歌唱和感恩。（参我们人的灵，48页；提摩太后书生命读经，8页；帖撒罗尼迦前书生命读经，197页；关于活力排之急切需要的交通，154～155页；歌罗西书生命读经，302页。）</p>
+<p class="title">忍不住流泪</p>
+<p>有一个热心的基督徒，学问、口才都不彀，偏遇见一位学问渊博又善辩的不信者。这位基督徒很爱他，常常为他恳切祷告，却不敢向他传福音，更不敢和他辩论；然而在祷告中常感不安，经常豫备了一些话，但一走到那学者的家门口，又不敢叩门。有一天，他祷告后就出去，大胆的叩门。学者出来开门，那基督徒却心慌，不知如何是好，就痛哭起来说，‘我希望你悔改信耶稣；我知道我不会讲，也辩不过你。因此我忍不住的流泪，请不要见怪！’那不信神的学者大受感动，心想这人如此爱我，必有道理，他所信的耶稣必有能力。因此，他放弃成见，虚心研究圣经，终于悔改信主。（参造就故事下册，38页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：不住的祷告，凡事谢恩，使我们的灵挑旺并火热起来。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('194')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('196')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">反面事例的鉴戒</p>
+<p>你们就要使我的喜乐满足，就是要思念相同的事，有相同的爱，魂里联结，思念同一件事。（腓二2）</p>
+<p>法利赛人是自高自义的，喜欢批评论断人，却不顾到人的需要。当主与税吏和罪人一同坐席，法利赛人就批评定罪。（太九9～11。）有一次，主耶稣和门徒在安息日从麦地经过，门徒饿了，掐起麦穗来吃，法利赛人就指责门徒作安息日不可作的事。主耶稣在安息日医治人，他们就定罪主在安息日治病。（十二1～2，10～14。）他们还定罪主的门徒违犯古人的传统，吃饭不洗手。（十五1～2。）法利赛人是这样自私自义，所以主耶稣责备他们，因为他们说而不行，把沉重难担的担子捆起来，放在人的肩上，但自己连一个指头也不肯动。他们的行为，是洁净杯盘的外面，里面却盛满了勒索和放荡。为此，主耶稣说法利赛人有祸了，将要受到八重的灾祸。（二三1～36。）</p>
+<p>此外，巴拿巴也是‘公’这性格的反面例子。保罗和巴拿巴第一次外出时，在身体的祷告和按手下，被圣灵差遣出去，作圣灵的工。但是当他们第二次出外，要去看望弟兄们时，巴拿巴却定意要带着称呼马可的约翰同去。但保罗以为不带他同去是适宜的，因为当他们第一次出外尽职时，马可曾在旁非利亚离开他们，不与他们同去作工。二人因为这事起了争执，巴拿巴因着他与马可天然的关系，就离开保罗，带着马可，迳自坐船往居比路去。巴拿巴和保罗意见不合，就离开保罗，也离开了基督身体的交通。从这事以后，使徒行传说到主在神新约经纶里的行动，就不再题到巴拿巴了。（徒十五37～39与注。）</p>
+<p>腓立比四章题到友欧底亚和循都基这两位姊妹，她们曾在福音上与保罗同工，但她们彼此不合，没有相同的心思。所以，保罗特别劝这两位姊妹，要在主里思念相同的事。保罗也请求腓立比召会的信徒，能帮助这两位姊妹在主里思念相同的事，而成为一。（2～3。）</p>
+<p class="title">盲跛相助</p>
+<p>一群乞丐住在一间破房子里，有患各种病痛的、穷乏的、瞎眼的和瘫痪的。一天，隔壁邻居失火，所有能彀行动的乞丐都跑走了。剩下一个瘫子，看见大火即将延烧过来，自己不能行动；另有一个瞎子，东摸西摸找不着出路。瘫子就对瞎子说，‘你把我背在你肩上，我们两个人合作，你作我的脚，我作你的眼，我们就可以逃出火坑。’于是瞎子就把瘫子背在身上，瘫子指挥方向，瞎子竭力奔逃，结果两个人都平安逃离险境。这给我们看见，弟兄姊妹互为肢体，若彼此帮助，可得多大的益处。若是个个只顾自己，不顾别人，结果就无路可走。（参造就故事中册，175～176页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：以法利赛人、巴拿巴、以及友欧底亚和循都基的事例为鉴戒，与众圣徒同心合意，思念相同的事。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

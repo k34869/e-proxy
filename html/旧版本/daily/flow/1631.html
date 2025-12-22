@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1630')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1632')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 17 课<br />
+信心的历史和见证人</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　信心的历史和见证人(三)</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来十一39～40：这些人都藉着信得了美好的见证，却没有得着所应许的；因为神为我们预备了更美的事，叫他们若没有我们，就不能完全。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以色列人：‘因着信，过红海如过干地；耶利哥的城墙被围绕七日，就倒塌了。妓女喇合因着信，接待探子，就不与那些不信从的人一同灭亡。还有基甸、巴拉、参孙、耶弗他、大卫、撒母耳和众申言者，都因着信，行了许多奇事。这些信的见证人需要新约的信徒才得完全。所有信的见证人和殉道者，都在旧约影儿之下，并不在实际里。没有新约信徒，旧约圣徒就不能得着神所应许的；他们要得着并享受神所应许的美好事物，就需要新约信徒的成全。如今他们正等着我们往前，好叫他们得以完全。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在信心里享受神为我们所预备更美的事。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>从幔子经过，进入至圣所，接触这位属天的基督，摸着施恩的宝座，为要受怜悯，得恩典，作应时的帮助。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>旧约圣所里的幔子预表今日的什么？在个人一面，我们需要如何进入至圣所？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>今天我们的灵就是至圣所。现在我们可以来到至圣所，接触这位属天的基督，摸着施恩的宝座，为要受怜悯，得恩典，作应时的帮助。这是接受基督诸天之上职事的秘诀。</p>
+<p>我们不需要回到犹太教及其影儿、图画和预表。我们在属天的基督里有这一切的实际。这属天的基督是在诸天之上，而诸天是由“电视播送”到我们灵里。我们只要进到我们灵里，就能在至圣所里摸着施恩的宝座。我们就在这里接触基督，祂正将一切属天、属灵、永远的事物供应到我们里面。这真是太奇妙了！’（由基督与召会的观点看新约概要卷三，395页。）</p>
+<p>‘我们在圣所里对基督的经历都是好的，但是还不够。在圣所和至圣所中间，我们遇到幔子这个难题。（出二六33。）幔子表征肉体，（来十20，）就是己。偶像已经被了结，罪的难处已经过去，属世的缠累已经撇弃，但我们的己仍然在我们身上。神有四个主要的仇敌：表征邪灵或撒但权势的偶像、罪、世界和己。我们基督徒可能蒙拯救脱离前三者，现今也许正享受基督作我们的一切。但是我们的己呢？我们大部分人必须承认，我们的己还没有破碎。…</p>
+<p>分隔的幔子预表我们的肉体，我们老旧、属肉体的性情。幔子怎样必须裂开，我们属肉体的性情、我们的己也照样必须破碎，使我们可以进入至圣所。我们的己，我们的旧人已经与基督同钉十字架。（罗六6。）因此，我们乃是藉着十字架，才有可能进入至圣所。我们必须将基督的十字架应用在我们身上。我们必须认识，我们自己就是那一道藩篱，拦阻我们进入神的至圣所。我们的己必须除掉！旧性情必须完全弃绝！旧人必须破碎！藉着实际的经历主的死，实际的应用十字架于我们麻烦的己，我们才可能进入至圣所，分享约柜所预表的神具体的化身—基督。’（神建造的异象，88、90页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以真诚的心，十分确信的信，前来进入至圣所。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

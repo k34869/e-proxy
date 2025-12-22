@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('634')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('636')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">雪地足迹</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>诗篇 18:3 我呼求当受赞美的耶和华，就蒙拯救脱离仇敌。</p><p>I called upon Jehovah, who is worthy of praise, And from my enemies I was saved.</p><p>有一位传道人，在一天夜里刚睡觉的时候，忽觉房中空气异常紧张，且有特别令人难受的气味，以致他的汗毛都竖起来！那时，他非常胆怯，心想为何胆量这样大，一个人单独睡一间房呢？这样一想，就有一种能力像电一样进入他的身体，叫他的头都觉会响起来。他知道这是那恶者的攻击，就恳切的祷告。但是祷告没有用，越祷告就越失败；他就不祷告了。他想他既属于主，主岂不救他，岂不关心他的事？希奇，就是这样一交托主，主就救他了。后来，过了一年多，有一天晚上，那恶者又来了，来的景况仍与前次一样。他就照常祷告，求主拯救，但是无效。他就想，还是唱诗罢。他就唱着：‘得胜，得胜，阿利路亚…基督已经得胜！’希奇，这样一唱，那恶者就离去了。再过一年多，那恶者又再来，因他唱着得胜的歌，那恶者就没法进入。在他里面好似有了围墙，那恶者只能在围墙外，没法透过围墙。那恶者虽像电一般，一连来了四、五次，却都没法进入他的里面，后来就走了。从此以后，再也不遇见那恶者了。</p><p>抵挡那恶者最好的方法，不是祷告，乃是赞美。这不是说祷告没有用，乃是赞美比祷告更有信心。祷告好似主还没有得胜；赞美乃是主已经得胜。祷告好似必须求主，主才拯救；赞美乃是信主已经救我。祷告是因害怕而哀求；赞美乃因救恩而欢呼。祷告是求主得胜；赞美乃是仗主夸胜。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('345')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('347')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第8课 十戒—爱人（尊重婚姻）（2）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书六2上 要孝敬父母… 2. 父母对我们的重要</p>
+<p>﻿</p>
+<p>虽然神是我们真正的源头，但我们来到世上乃是借着父母。在神的安排中，神将儿女赐给他们的父母，作他们的产业。神拣选我们的父母，使我们在母亲腹中经过怀胎十个月而生下来。神也安排父母照顾并养育我们，给我们食物吃，给我们衣服穿，供应我们生活上一切需要，使我们学习一切该学习的事物。父母对我们是何其重要，是我们在这世界上关系最为密切的。父母和我们的关系，是出于神的安排，神是源头，是每一个家庭的设计者和安排者，孝敬我们的父母就是接受神的安排和智慧；不孝敬父母就是不尊敬我们在天上的父。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神注定婚姻是在一男一女之间，这样他们就可以成为彼此的帮手。在神的安排下，孩子们得到最好的照顾，既有父亲也有母亲。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：让孩子们谈论他们的父亲和母亲为他们作的不同的事情。说明同时用右手和左手作事，比只用一只手，甚至两只左手或两只右手更容易。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记二18 耶和华神说，那人独居不好，我要为他造一个帮助者作他的配偶。</p>
+<p>百基拉和亚居拉，真是一对非常可爱和宝贵的夫妻，他们在新约圣经中一共出现了六次之多，保罗在哥林多前书、罗马书和提摩太后书中也前后三次提到了他们夫妻二人，足以可见他们在初期教会中的地位，以及保罗对他们的无比赞赏。</p>
+<p>这对可亲可爱的夫妻有几个很重要的特点，一个就是他们夫妻二人的名字只要一出现，都是联系在一起的，他们夫妻二人的名字从来没有单独出现过。另外，他们夫妻二人不管在哪里，都是建立教会。他们最早在哥林多协助保罗建立教会；保罗把他们夫妻留在以弗所，他们就在以弗所建立了教会；后来他们回到了罗马，又马上在罗马的家中建立了教会。真是一对可爱的夫妻，给人的感觉，他们夫妻二人总是形影不离，同心合意的做主工，侍奉主。不管他们在哪里，不管是在自己的家乡，还是暂时寄居在外地，只要有一个落脚的地方，他们就把家庭开放出来，他们就到处去传福音，邀请人来他们家中聚会。他们夫妻二人也因此成为了历时历代以来，所有信徒家庭最美好的榜样。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神创造女人作为男人的“帮手”。婚姻的目的是使一男一女能互相帮助，好服事神。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：以亚居拉和百基拉为例，说明丈夫和妻子是如何一起服事神的（在哥林多前书10;19，教会在他们的家里聚会，罗马书16:13是使徒保罗的同工。）。问他们的父母是怎样互相帮助，彼此互补的。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一28 神就赐福给他们；又对他们说，要繁衍增多，遍满地面，并制伏这地，也要管理海里的鱼、空中的鸟、和地上各样行动的活物。</p>
+<p>十条诫命中，神还没有说到我们和其他人相处的关系时，首先说到我们和父母的关系，孝敬父母是一切人际关系的基础。我们一生之中，和我们相处关系最为密切的，就是父母了，并且我们和父母的关系，是从小就建立起来的。我们若想要和其他的人，建立良好亲密的人际关系，就需要学习先和我们的父母，建立良好亲密的关系。如果我们对父母的态度和关系都不对，我们与朋友、同学、师长等交往，也很难维持良好的关系。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：神命定了男人与女人之间的婚姻，使人可以继续存留，并为神治理全地。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：与孩子讨论婚姻的重要性和目的乃是为服事神和延续后代。指出如果没有合适的婚姻，神在地上就很难作祂想作的事情 。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

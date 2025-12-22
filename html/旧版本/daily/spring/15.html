@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('14')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('16')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">桑顿的机器被</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">愿爱你的人如日头出现，光辉烈烈。（士5:31）</div>
+<div id="CC">May those who love Him be like the sun when it rises in its might.（Judges 5:31）</div>
+<div id="C">英国有一位传道人，名叫桑顿（Thornton），对于机械很有研究。他刚信主时，很想早起，就是爬不起来。后来他就利用闹钟，挂上一根绳子，穿过滑轮，往上面去，在上面系上石头，再穿过钉在天花板上的滑轮，垂下来系住棉被的四角。早上闹钟一响，绳子脱离闹钟，石头就从上面落了下来。石头一落下来，棉被就被提了上去。没有被子，就只好起床了。因为他起先只用闹钟，闹钟响完还是不起来，他就想，不能单用闹钟，总得把棉被掀起来，这样就不能不起来了。一连几年的工夫，他天天晚上把机器预备好，早晨闹钟一响，就把棉被拉到天花板上。因他这样约束自己，所以神重用他，使他作工很有能力。</div>
+<div id="CC">经历基督─与祂交通（诗417）</div>
+<div id="C">夜影尚存，晨光未现，重新来到恩主面前；<br/>　祂在里面放明、照耀，我得看见祂的荣颜。<br/>　向我发言、给我看见：祂的丰富是为今天；<br/>　甜美、欢乐，将祂享受，所有饥饿全变饱满。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

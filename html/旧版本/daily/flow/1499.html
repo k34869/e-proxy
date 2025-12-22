@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1498')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1500')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 17 课<br />
+与基督联合的生活（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：哦我要像你。（诗歌301首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你们要坚定持续的祷告，在此儆醒感恩，同时也要为我们祷告，求神给我们开传道的门，能以讲说基督的奥秘。（西四2～3。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　基督在人伦中的彰显—西三18～四1</p>
+<p class="ot1">二　持续的祷告与智慧的行事—四2～6</p>
+<p class="ot2">1　持续的祷告—2～4。</p>
+<p class="ot2">2　智慧的行事—5～6。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>教导圣徒与基督联合的生活的另一方面—基督在人伦中的彰显；持续的祷告与智慧的行事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>歌罗西三章十八节至四章六节这段话，包括了我们基督徒生活中几件紧要的事。这是保罗一切所论及之事的延续。神渴望基督能藉着人性生活得着彰显。这种生活是最高的伦理关系；这不是出于我们天然的生命，乃是出于作我们生命的基督。圣徒过与基督联合的生活，结果该是在人性生活中彰显基督。然而，如果我们要在人性生活中彰显基督，并保全我们从主所接受的恩典，就需要持续的祷告。藉着祷告，这恩典才能在我们的经历中成为活而有效的。保罗鼓励我们要在祷告上儆醒，因为基督徒的生活乃是争战的生活。整个宇宙都在撒但的影响之下，与神的旨意相对。为了要在神这一边与撒但争战，我们就必须坚定持续的祷告。祷告乃是在堕落的宇宙中抵挡潮流，这需要极大的力量。我们该向主许愿，要作一个祷告的人，并划出定时祷告的时间，这会帮助我们成功。至终我们会藉着祷告得着许多益处，首先，藉着祷告，我们就思念在上面的事。第二，我们祷告的时候，就进入至圣所，来到施恩的宝座前，怜悯和恩典就像江河一样，在我们里面涌流，并供应我们。第三，我们会得着主的同在和膏油涂抹的益处。如果我们不住的祷告，向神献上感谢，言语满了恩典，我们自然而然就成为大有智慧的人，行事为人荣耀神，并且建造别人。这样，就赎回了我们的光阴。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在人性生活中彰显基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西三17：凡你们所作的，无论是什么，或说话，或行事，都要在主耶稣的名里，藉着祂感谢父神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神渴望基督能藉着人性生活得着彰显。这种生活是最高的伦理关系；这不是出于我们天然的生命，乃是出于作我们生命的基督。基督是在人性生活中，不是在天使的生活中得着彰显；天使不能彰显基督。父已经命定我们这些祂所拣选的人作祂儿子的彰显。我们必须是有基督的平安作仲裁，并有基督的话丰丰富富的住在里面的人。这样，基督就能在我们的人性生活中得着彰显。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练在人性生活中彰显基督。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

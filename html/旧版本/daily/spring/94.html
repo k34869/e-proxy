@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+               <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('93')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('95')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第2系列 第42课   正确的人性 — 感谢</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>帖撒罗尼迦前书五18上 凡事谢恩</p>
+<p>一位苏格兰的植物学家，一天趁着风和日暖，带着一架显微镜，跑到山中研究植物。他在路旁随手采了一朵花，放在显微镜下，越看越觉花纹精致，越看越感造物主的智慧奇妙难测。正在看得出神之时，有位老牧人站在他的后面，诧异他竟对着一朵野花察看那么用心。植物学家站了起来，叫老牧人也低下头来看一看。牧人看完，不知不觉泪流满腮。植物学家惊奇问他：“为什么哭？”他答道：“我平生没有想到这野花是那么可爱。可惜！每天在我脚下不知践踏多少，我真是辜负造物主的一番匠心，所以悲从中来，不觉泪下。”试问你曾否把神的恩典当作平常，践踏在脚下呢？信徒们哪！应当起来，因着祂的一切恩惠，把颂赞归给祂。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：我们应该为着主赐给我们的东西感谢神。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当有人给我们一份礼物时，说“谢谢”是正常和合适的。同样，主给了我们很多东西（食物，阳光，空气，水，玩具，房屋等）。小朋友们，你们拥有丰富的东西是多么的有福。请记得，本周每天都要为着具体的事情感谢主。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多前书一4  …常常为你们感谢我的神，</p>
+<p>从前，西班牙国有一个好国王，名叫福寿，一天，听到宫中孩子们，每餐吃饭都不祷告，也不感谢神恩。于是想了一个方法，用来教训他们。一天下午，国王大摆筵席，约请孩子们来赴宴会。孩子们听见这好消息，连中餐也不吃了。到时，他们就座，见菜便吃，哪儿想到要祷告神，感谢主恩。正在吃得高兴之时，突然闯进一个乞丐，满身褴褛，又龌龊，又难看，挤在他们中间，不用餐具，伸手便抓，捧起就吃，狼吞虎咽，没有几分钟，桌上的菜都被吃光了。孩子们见了又惊又怕，张大眼睛望望对面的国王。但是国王一声不发，也不驱逐，任他大吃大喝。那乞丐吃饱了，抹抹嘴，拔足就走，也不说声谢字。孩子们哭丧脸说：“哪里来的讨饭鬼，这么无礼！”国王走过来，吩咐孩子们不要作声，说：“孩子们，你们都以为这个乞丐不讲礼，不知恩吗？岂知你们自己更不讲礼，更不知恩!你们每餐吃饭，都是天父赐给你们的，你们倒不祷告神，也不感谢神，和这乞丐有又有什么分别呢？”孩子们听了便觉悟了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：我们应该为神安排在我们身边的人而感谢祂。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：请你列出主赐给他们的所有人（例如：父母，兄弟姐妹，朋友，老师，邻居，圣徒等）。我们很容易把它们视为理所当然。有很多人爱你们是多么的有福啊。要求孩子们在本周每天都要为主安排在他们身边的人感谢祂。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书五20  凡事要在我们主耶稣基督的名里，时常感谢神与父。</p>
+<p>从前，有一位弟兄要到另外一座城市，办一件特别的事，于是那天他就早早的准备出门了，他等了很长时间，才等来一辆公共汽车，可是车上的人特别的多。但是，没办法，眼看时间也快来不及了，他只好挤了上去。汽车没走多久又停了下来，原来又有人要坐车。可是车上实在是挤不下更多的人了，车上的售票员就用手指着这位弟兄说：“你下去，坐下一班车”。这位弟兄刚想辩驳，那个售票员眼睛一瞪说：“看什么看，叫你下去你就下去，哪那么多事，快点！”这位弟兄只得下车再等下一班车，刚开始的时候，他里面也很生气，但想到主说要凡事谢恩，他就不再生气，转而祷告赞美神，相信凡事都有主的美意。不一会儿就坐上了另外一班车。当车开到半途中的时候，他看见路上有一辆车出了车祸，仔细一看，正是他赶下来的那一辆车，他不禁在心里发出对神更好的赞美，神的美意，原来如此！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：我们应该感谢主，不仅在顺利的时候，而是在任何时候，不仅是为了好事，而且为了所有事情感谢主。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：我们可能并不总是得到我们想要的东西（例如最好的玩具，最好的班级，最好的成绩或体育运动队等），但好事坏事，顺时不顺时，我们都需要学习感谢主。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

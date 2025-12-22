@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('21')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('23')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">准（二）　时间准：作事准确不拖延</p>
+<p>你要将他们领进去，栽于你产业的山上，耶和华阿，就是你为自己所造的住处，主阿，就是你手所建立的圣所。（出十五17）</p>
+<p class="title">神的准确（二）在时间和作事上</p>
+<p>神在时间上也是准的，传道书三章一节告诉我们：‘凡事都有定期，天下各样事务都有定时。’神的创造完全是根据时间表。创世记一章一再题到‘有晚上，有早晨’，这就是一种时间表。我们若仔细读圣经，就得承认，第一个守时间的，就是我们的神。祂是全能的主，但在时间上没有放松，也没有随意。祂创造是按着豫算，完完整整的六天，而且‘有晚上，有早晨’；每个晚上是十二小时，每个早晨也是十二小时，一整天就是二十四小时，一分一秒都不差。神创造的工作，乃是在时间表里作出来的。</p>
+<p>在旧约圣经中，有好几处地方给我们看见，神拿着准绳。（摩七7～8，亚一16，二1。）准绳是盖房子的时候，拿来量度房子的器具，如同我们所说的尺。神手中拿着准绳，说出神的性情是准的，祂作事也是准的，没有是而又非的。（林后一19。）当神量我们的时候，就显出在我们身上什么地方是构不上神的标准的，是神所不喜悦的，是神所不要的。什么地方被神量过，什么地方就不再是俗的，而是圣的了。本来是属世的，神量过以后，就是属神的了。</p>
+<p>出埃及十五章说到神如何引导祂的百姓：‘你要将他们领进去，栽于你产业的山上，耶和华阿，就是你为自己所造的住处，主阿，就是你手所建立的圣所。’（17。）神不仅用大能的手引导祂的百姓离开埃及，并且带领祂的百姓到正确的地方，就是豫表包罗万有之基督的迦南美地。祂也引导祂的百姓到准确的地点—锡安山，来事奉祂。当我们在灵中准确的对准基督，就经历祂是我们魂的牧人和监督，藉着顾到我们里面各部分的益处，并监督我们真人位的光景，照着我们的需要来牧养我们。祂的牧养指引我们的心思，安慰我们的情感，带领并引导我们的意志，带领我们到正确的地方，并且引导我们到准确的地点。（参召会的扩增与开展，54～55页；十二篮第七辑，76～77页；彼得前后书与犹大书结晶读经信息摘要，130页。）</p>
+<p class="title">活的钟</p>
+<p>琴蟹是种非常有趣的蟹类，它的右螯特别大，因它的壳会随时间改变颜色，科学家又称它为‘活的钟’。琴蟹的壳在白天时是暗色，可以逃避敌人的视线，然后它的颜色依照二十四小时的运律，到晚上壳便转为灰白色。据几位专门研究琴蟹的生物学家说，他们把琴蟹关在一间暗室之中，一连两个月不使它和阳光接触，它的壳仍然是准确的，随着太阳的运转，改变成不同颜色，真像一只‘活的钟’。请问，是谁使它这样？琴蟹的壳除了报告时间之外，还可从它壳上看出潮水的节拍。据生物学家的研究，琴蟹的壳在一天中有一个时期特别暗，这最暗期每日迟五十分钟出现，豫报低潮时间的来临，人类常常利用这个时间捕捉琴蟹，又将琴蟹放在不同的海岸，以测各海岸的低潮时期。（福音故事上册，219～220页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在灵中准确的对准基督，祂就带领我们到正确的地方，引导我们到准确的地点。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

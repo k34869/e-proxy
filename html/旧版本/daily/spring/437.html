@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('436')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('438')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第 7 课 性格-尊重（1）—尊重师长</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书六 1 作儿女的，要在主里顺从你们的父母，因为这是正当的。亲尝汤药</p>
+<p>仁孝临天下，巍巍冠百王。莫庭事贤母，汤药必亲尝。</p>
+<p>公元前 202 年，刘邦建立了西汉政权。刘邦的四儿子刘恒，即后来的汉文帝是一个有名的大孝子。刘恒对他的母亲皇太后很孝顺，从来也不怠慢。</p>
+<p>有一次，他的母亲患了重病，这可急坏了刘恒。他母亲一病就是三年，卧床不起。刘恒亲自为亲尝汤药母亲煎药汤，并且日夜守护在母亲的床前。每次看到母亲睡了，才趴在母亲床边睡一会儿。刘恒天天为母亲煎药，每次煎完，自己总先尝一尝，看看汤药苦不苦，烫不烫，自己觉得差不多了，才给母亲喝。</p>
+<p>刘恒孝顺母亲的事，在朝野广为流传。人们都称赞他是一个仁孝之子。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个尊重人的人，知道重要的人物应该以适当的方式对待。我们需要尊重我们的家庭成员（父母、祖父母、叔叔和婶婶）。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当我们的家人（父母，祖父母，叔叔，阿姨）要求我们作一些事情（拿起玩具，收拾衣服，放桌子，收拾碗碟等），我们需要照作。我们第一次被要求作某事不该有抱怨。我们应该叫他们的称呼（妈妈，爸爸等等）而不是他们的名字。这乃是表明我们尊重他们。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>在利未记十九 32 白发的人面前，你要站起来，也要尊敬老年人… 懂礼貌的小熊猫</p>
+<p>小熊猫总是没有朋友和它玩。它感到你很寂寞，就去问大象伯伯：“为什么大伙儿都不喜欢和我一起玩呢?”</p>
+<p>大象伯伯说：“听说你不懂礼貌!” 小熊猫说：“什么是礼貌啊?”</p>
+<p>大象伯伯说：“你去问山羊公公吧。”</p>
+<p>小熊猫找到山羊公公。“喂!老山羊!什么是礼貌啊?”</p>
+<p>山羊公公耐心地说：“求人帮忙要说‘请’。对长辈说话要称呼‘您’。若是不小心给别人带来麻烦要说‘对不起’、‘请原谅’。分别时要说‘再见’。”</p>
+<p>“哦!原来是这样。山羊公公，那我对您这位长辈应该称呼‘您’呀!对不起，我刚才不懂礼      貌，请原谅。”小熊猫一下子羞红了脸。</p>
+<p>后来，小熊猫成了懂礼貌的孩子，大伙儿都喜欢它，喜欢和它一起玩。</p>
+
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">
+<p>焦	点：一个尊重人的人，知道重要的人物应该以适当的方式对待。我们需要尊敬那些年长的（老年人）。</p>
+</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：当一个老年人走进一个房间（或在我们旁边）时，我们应该适当的问候他们（您好， xx 先生或夫人，或叔叔/阿姨）；如果没有座位，我们应该站起来，给他们让座，使他们得安慰，而不是被迫站在那里。进门的时候我们应该让他们优先，甚至为他们开门。这乃是表明我们尊重他们。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传二三 5 …经上记着，不可毁谤你百姓的官长。路加七 2~10</p>
+<p>路加福音 7:2.有一个百夫长所宝贵的奴仆，患病快要死了。</p>
+<p>3.百夫长听见耶稣的事，就打发犹太人的几个长老到耶稣那里，求耶稣来全然拯救他的奴仆。</p>
+<p>4.他们到了耶稣那里，就切切的求祂 说，你给他行这事，是他所配的；</p>
+<p>5.因为他爱我们的人民，给我们建造会堂。</p>
+<p>6.耶稣就和他们同去。离那家不远，百夫长差了几个朋友去对耶稣说，主阿，不用烦扰了，因为我不配你到舍下来。</p>
+<p>7.我也自以为不配去见你，只要你说一句话，我的仆人就必得医治。</p>
+<p>8.因为我也是一个被派在权柄之下的人，有兵在我以下；我对这个说，去，他就去；对那个说，来，他就来；对我的奴仆说，作这事，他就作。</p>
+<p>9.耶稣听见这话，就希奇他，转身对跟随的群众说，我告诉你们，这样大的信心，就是在以色列中，我也没有遇见过。</p>
+<p>10.那些受差的人回到家里，看见奴仆已经康复了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个尊重人的人，知道重要的人物应该以适当的方式对待。我们需要尊重那些有权位的人（校长和老师，政府官员，警察）。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：掌权的，如校长、教师、代课教师、警察、消防员等，都值得我们尊敬。你是否曾经在代课老师面前，行为失当？事后你感觉如何？当你看到一个警察或消防员时， 你会不会毫不在意的走过去，还是礼貌问候他们？甚至骑自行车时佩戴你的自行车头盔（法律规定）是你尊重警察的标志，因为他们在执行法律。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

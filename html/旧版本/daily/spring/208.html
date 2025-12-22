@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('207')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('209')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">小叔给主改变了</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">败坏的话一句都不可出口，只要按需要说建造人的好话，好将恩典供给听见的人。（弗4:29）</div>
+<div id="CC">Let no corrupt word proceed out of your mouth，but only that which is good for building up，according to the need，that it may give grace to those who hear.（Ephesians 4:29）</div>
+<div id="C">有位传道人，遇见一位受浸八年的弟兄，就问他：“是否清楚知道你里头有主的生命？”他说，“是的，我信主八年了。”那传道人说，“看你的生活不像是有主生命的人。”他很生气，就走了。可是一面走，一面有声音说，“受浸八年，得救不清楚，不像有主的生命。”回家后便关起门来，祷告了一个多钟头，神就光照他。原来他哥哥、嫂嫂均未信主，在分家产时，哥哥多得一亩地，三十块钱。他就很不满意，和哥哥吵了架，三年不和哥哥说话。现在圣灵对他说，“你是主的人，三十块钱和一亩地算什么？为什么三年不说话？你哥哥生病时，你就说死了还好。信主的人骂人死，怎能叫人信？”第二天，主又说，“你光向我认罪不够，你要向哥哥认罪啊。”他想这是一件太难的事。正巧哥哥回来，他就求主加他力量，对哥哥说，“哥哥，你回来了吗？”哥哥说，“是的，我回来了。”他心里很喜乐；但主仍说，“只是这样叫他不够，还要向他认罪。”于是，他再去向哥哥、嫂嫂认罪说，“哥哥，我三年不同你说话，是我不对，请你原谅我。嫂嫂到家里二十年，我没有叫过一声嫂嫂，真是对不起。”嫂嫂快乐得流泪，就到传道人那里说，“先生，我也要信耶稣。我小叔给耶稣改变得很奇特，我要听这奇特的道。”</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

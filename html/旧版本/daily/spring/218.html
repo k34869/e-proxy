@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('217')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('219')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">住在楼板下</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">有许多行巫术的人，把书拿来，堆在众人面前烧毁了。他们计算书价，便知道共合五万银币。（徒19:19）</div>
+<div id="CC">And a considerable number of those who practiced magic brought their books together and burned them before all; and they counted up the price of them and found it to be fifty thousand pieces of silver.（Acts 19:19）</div>
+<div id="C">一九三三年春，浙江温岭县有一个女子被鬼附着，有人请了几位弟兄去为她祷告。祷告之后，当时鬼就离她而去；但过不久，鬼又回来。有位弟兄就问那鬼说，“我们奉主的名叫你去了，为什么又回来。”它说，“我没有离去；我是有地方住的。”弟兄就问它：“你住在什么地方？”它说，“我不告诉你。”弟兄说，“我们奉主耶稣基督的名，一定要你告诉我们。”它才说，“我住在楼板下。”于是叫人下楼寻找；那女子是住在楼上。一会儿，那人回来说，“有一张破旧的符还贴在楼板底下。”弟兄们就说，“快快撕毁它。”当人去撕时，那鬼又说，“嘿！我还有地方。”弟兄们问它还有什么地方？它不肯说。弟兄们就问那主人，家中什么地方还有邪污之物？主人说，“不知道杂物堆里有没有？”弟兄就要他找找看。这时，那鬼忽然喊起来，“没有的，没有的，不要去找吧。”弟兄们一听见，知道一定有的，就吩咐人快点去找。鬼见阻止无效，就说，“你们何苦如此。”一会儿，找出许多佛经、偶像、木主等，一齐拿了出去。弟兄就对它说，“现在你没有地方了，你可以去啦。”它说，“我去，我去。”就离去，不再回来。所以，家中若有什么邪污之物，必须一一除去，免得成为鬼的住处。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

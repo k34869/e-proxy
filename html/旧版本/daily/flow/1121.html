@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1120')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1122')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 17 课<br />
+变化为着身体生活的实行</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：活着为耶稣。（诗歌342首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：所以弟兄们，我藉着神的怜恤劝你们，将身体献上，当作圣别并讨神喜悦的活祭，这是你们合理的事奉。不要模仿这世代，反要藉着心思的更新而变化，叫你们验证何为神那美好、可喜悦、并纯全的旨意。（罗十二1～2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　在实行身体的生活上—罗十二1～21</p>
+<p class="ot2">1.　藉着献上身体，当作圣别并讨神喜悦的活祭—1。</p>
+<p class="ot2">2.　藉着心思更新而变化，不模仿这世代，验证神的旨意—2。</p>
+<p class="ot2">3.　藉着运用恩赐—4～8。</p>
+<p class="ot2">4.　藉着活出最高美德的生活—9～21。</p>
+<p class="ot1">二　在服从权柄上—十三1～7</p>
+<p class="ot1">三　在实行爱上—十三8～10</p>
+<p class="ot1">四　在从事争战上—十三11～14</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>信徒为着正确召会生活的实行，需要经历变化，就是一种新陈代谢的改变。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>信徒的属灵经历，都是为着变化，而变化的目的是为着正确的召会生活。因此罗马十二章的中心是身体生活。身体生活是召会生活的实行。没有身体生活，召会生活只是名词。召会生活在身体生活的实行中才得以实化，成为实际的。为着实行身体生活，我们需要献上身体，当作圣别并讨神喜悦的活祭；并要心思更新而变化，不模仿这世代，验证神的旨意。且要照着神所分给各人的恩典，运用恩赐尽功用：申言、服事、教导、劝勉、分授、带领、怜悯人。并在对人、对神、对自己、对仇敌各方面，都活出最高美德的生活。信徒也需要在服从权柄、实行爱、并从事属灵的争战上有变化。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　借着献上身体过召会生活</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弟兄们，我藉着神的怜恤劝你们，将身体献上，当作圣别并讨神喜悦的活祭。（罗十二1上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这揭示神的特别愿望和目的是要为基督得着身体，我们需要为着基督的身体献上我们的身体，成为圣别并讨神喜悦的活祭，这祭是满了基督作生命的活祭，也是圣别的，是与凡俗的事物分开，并且有神的性情，这献上的目的不是要我们更属灵，乃是要我们实行身体生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为着基督的身体献上身体，成为圣别并讨神喜悦的活祭。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

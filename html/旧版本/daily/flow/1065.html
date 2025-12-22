@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1064')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1066')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 9 课<br />
+保罗至耶路撒冷并受捆锁</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：活着为耶稣。（诗歌342首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我凡事给你们作了榜样，叫你们知道，必须这样劳苦，扶助软弱的人，并且记念主耶稣的话，祂自己说过，施比受更为有福。（徒二十35。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　保罗第三次的行程（二）—徒十九21～二一17</p>
+<p class="ot2">1.　定意去耶路撒冷和罗马—十九21～22。</p>
+<p class="ot2">2.　在以弗所遭遇扰乱—十九23～41。</p>
+<p class="ot2">3.　经过马其顿和希腊到特罗亚—二十1～12。</p>
+<p class="ot2">4.　到米利都，会见以弗所召会的长老—二十13～38。</p>
+<p class="ot2">5.　到推罗、多利买和该撒利亚，每到一处必看望弟兄—二一1～14。</p>
+<p class="ot2">6.　到耶路撒冷，结束第三次的行程—二一15～17。</p>
+<p class="ot1">二　犹太教的反面影响—二一18～26</p>
+<p class="ot1">三　犹太人终极的逼迫（一）—二一27～二四27</p>
+<p class="ot2">1.　抵挡保罗的暴动—二一27～二三15。</p>
+<p class="ot2">2.　千夫长向罗马总督腓力斯的解送—二三16～二四27。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>明白保罗第三次出外行程的细节，以及上耶路撒冷受捆锁的过程。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在第三次出外的行程中，在以弗所停留了三年，那时他定意要去耶路撒冷和罗马。他们经过马其顿和希腊到特罗亚，到米利都，会见以弗所召会的长老，向他们说了离别以及嘱咐的话。又到推罗、多利买和该撒利亚，每到一处必看望弟兄，并与他们住在一起，实际的实行召会的身体生活。最后他们到了耶路撒冷，结束第三次行程。在耶路撒冷，立刻遇见犹太教的反面影响，保罗被迫带着几个年轻人去许拿细耳人的愿。然而主兴起了环境，许可一场暴动发生，使保罗得拯救脱离那处境。在这时，保罗濒临被犹太人杀害的危险，然而，主藉着罗马千夫长的干预，保护保罗脱离那些人的手，并得以在罗马总督腓力斯面前分诉。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　以弗所的扰乱与保罗的定意</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>但我要仍旧住在以弗所，直到五旬节，因为有宽大又有功效的门为我开了，并且反对的人也多。（林前十六8～9。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗第三次出外尽职的旅程中，在以弗所停留了三年，他背着沉重的负担，执行他的职事。然而他在以弗所遭受攻击和反对，甚至想要杀他。虽然如此，保罗仍在灵里定意往耶路撒冷去，要完成他对耶路撒冷圣徒的爱心关切；并且从那里急切要去罗马。这说出保罗有一颗宽广的心，为着主的权益。他的心是何等广大！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>效法保罗，有一颗宽广的心，为着主的权益。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

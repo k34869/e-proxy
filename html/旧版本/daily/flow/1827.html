@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1826')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1828')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 9 课<br />
+七号—执行神的经纶</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　第六号（二）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来十二28～29:所以我们既领受了不能震动的国，就当接受恩典，藉此得以照神所喜悦的，以虔诚和畏惧事奉神；因为我们的神乃是烈火。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>第五号的灾祸必定是大灾难最严重灾祸的起头。第六号以及第七号，也必是大灾难最严重灾祸的两部分。我们已经清楚见到未来的景象。第六印之后，地上就不适于给我们居留了。要预备好！地要被震动，海要被毁坏，河水要变苦，天象也要变黑暗。至终，撒但和敌基督要合作使人受痛苦五个月；接着，第六号吹响的时候，二万万骑马的要开始驰骋，经过地的大部分，铁骑所经之处，要杀掉三分之一的人。我们若看见神审判的用意是要人悔改，今日就该速兴起传福音，叫人悔改转向神！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>速兴起传福音，叫人悔改转向神！</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督作为另一位天使，来把香加到众圣徒的祷告上，众圣徒的祈祷和基督的香一同升到神面前的时候，神就执行了祂行政的政策。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督作为另一位天使，来把香加到众圣徒的祷告上，是什么意思？而当众圣徒祷告时，有什么事发生？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘启示录乃是一卷神行政的书、神圣执行的书，这卷书启示出神的宝座、以及神在全宇宙中的行政。然而，实际上，执行中心并不是宝座，而是八章里的香坛。…众圣徒的祈祷要在这坛上献给神，并且基督的香要加在这些祈祷里面。众圣徒的祈祷和基督的香一同升到神面前的时候，神就执行了祂行政的政策。</p>
+<p>基督的祷告生活乃是神在地上执行祂行政的中心，启示录八章指明了这件事。…众圣徒与基督原是一。八章里的祷告不再仅仅是个别基督的祷告，而是成了团体基督的祷告。在香坛前所进行执行的事上，众圣徒与基督的确是一。因此，我们…说到基督的祷告生活，意思就是团体基督的祷告生活。’（出埃及记生命读经，1884～1885页。）</p>
+<p>‘在〔启示录〕八章，基督又被描述为另一位天使，将众圣徒的祷告献给神。（3～5。）为着祂的行政，祂需要我们的祷告。我们的祷告就是回应祂天上的职事。当我们祷告时，祂就行政。当祂行政时，我们就祷告。祂将这些祷告献给神，然后将神的答应倾倒给地上的人。…神把祂对我们祷告的答应倾倒出来，这就是祂宇宙的行政。这位行政者各方面都配，但祂需要我们的祷告。可以说，基督是藉着我们的祷告来经管全宇宙的。’（基督天上的职事，98页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>祷告与神配合，使祂能执行祂宇宙的行政。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

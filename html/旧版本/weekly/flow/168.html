@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('167')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('169')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">静的操练（三）安静等候主并作工</p>
+<p>我的魂默默无声，专等候神；我的救恩是从祂而来。（诗六二1）</p>
+<p>神是自隐、静默的神，因此我们需要在各样的环境临到时，学习静默、不急躁、不抱怨，安静的等候神。诗篇三十七篇七节说，‘你当在耶和华面前静默，耐心等候祂。’三十九篇九节说，‘因为这是你所作的，我就闭口不语。’六十二篇一节说到我们的魂默默无声，专等候神；因为我们的救恩是从祂而来。哀歌三章二十六节说，‘人仰望且静默等候耶和华的救恩，这原是好的。’当以色列人出埃及，在红海边面临法老的追兵时，他们甚惧怕而呼求。此时，摩西吩咐百姓，不要惧怕，只管站住，看耶和华向他们所要施行的拯救；他们只管静默，不要作声。（出十四10～14。）这指明无论环境如何，我们在神面前，都当安静等候主。</p>
+<p>此外，我们在召会中服事圣徒，也需要操练安静听人的说话。要听懂别人的话，我们在神面前必须是一个安静的人，心是不乱的，灵是安静的。我们里面该像一张白纸，没有一点成见，没有一点主观，也没有一点偏向。我们在神面前把自己摆在一个完全安静的情形里，学习听人的话，才能知道别人说的是什么话。</p>
+<p>然而，对于在召会中好管闲事的人，保罗在帖前四章十一节嘱咐他们说，‘又要立定志向作安静人，办自己的事，亲手作工。’在帖后三章十二节又说，他们‘要安静作工，吃自己的饭’。这意思是说，那些好管闲事的人应当立志叫自己安静下来。圣徒们不该想要作召会的询问台，兴致勃勃想知道别人的事；他们应当办自己的事，花时间打扫屋子、或整理自己的东西，而避免那种破坏召会生活的好管闲事。对别人的事太感兴趣的人，应当立定志向作安静人，办自己的事。但那些不太关心别人，却花太多时间顾自己事的人，要多花时间对别人有合式的照顾。在这件事上，因着我们生来性情就各有不同，所以我们都需要平衡。（参主工人的性格，2～3页；帖撒罗尼迦前书生命读经，162页。）</p>
+<p class="title">孩子批评饭食</p>
+<p>有一位传道人前往探望一个大家庭，家中大大小小的孩子都有。用饭的时候，有几个孩子总是说长道短，批评摆在他们面前的饭食；他们希望能彀吃好一点的食物。惟独一个十岁的小孩，却是一声不响，安安静静的吃饭。最后，他对其他的孩子说，‘你们应当惭愧。因为你们所抱怨、所批评的饭，是母亲作的，并且父亲也为这饭感谢过神了。’饭后，那位传道人在院子里对这个孩子说，‘你的想法为什么和其他孩子不同？为何你那么知足，而其他人却批评、不愉快呢？’那个孩子回答说，‘我爱我的母亲和父亲；我也知道他们已经尽了所有的力量，爱我们这些孩子。’基督徒埋怨环境不好，就是埋怨那位安排环境的神。但那爱神的人，知道一切的遭遇都是出于神爱的量给，也就静默不语。（参造就故事中册，155页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在各样环境临到时，学习静默、不急躁、不抱怨，安静等候神的救恩。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

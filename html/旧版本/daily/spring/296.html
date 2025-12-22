@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('295')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('297')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">一饼一衣</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">孩子们，我们相爱，不要只在言语和舌头上，总要在行为和真诚上。（约壹3:18）</div>
+<div id="CC">Little children，let us not love in word nor in tongue but in deed and truthfulness.（1 John 3:18）</div>
+<div id="C">一个严寒的冬天早晨，一个小女孩来到卫斯理约翰的屋子。这女孩只穿一件单薄的衣服，脸上冻得发青，身体发抖，几乎就要倒毙的样子。卫斯理急忙探手入口袋中，但一文莫名，无法在财物上帮助这位小女孩，因此心中感到非常愁苦。于是，他向神许了一个心愿：“自己的一块饼和一件衣服，也当为贫穷人而牺牲。”以后，他在林肯学院执教时，第一年的进款共计三十镑，除了自己留作生活费外，尚余二镑，他就以此施舍穷人。第二年，他年入六十镑，但他仍旧只用二十八镑，把那余留的作为施舍之用。第三年，他收入九十镑，施舍了六十二镑。第四年，他有了一百二十镑的进款，但除了必需用度的二十八镑外，他还是全部帮助了穷人。</div>
+<div id="CC">鼓励─凭信而给（诗488）</div>
+<div id="C">何必预料明天境遇，<br/>　目前够了就可乐；<br/>　何必先借明天忧虑，<br/>　手里岂非还有着！<br/>　爱是生活，给反存留，<br/>　种得多的收也多；<br/>　好像你已罄你所有，<br/>　看哪！你还有一握！<br/>（副）<br/>　仍然当爱，仍然当给，<br/>　照旧你还余一握；<br/>　所有的爱，所有的给，<br/>　要使神赐加倍多。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

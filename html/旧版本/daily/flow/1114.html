@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1113')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1115')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 16 课<br />
+神的拣选，我们的定命</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：敞开心呼喊祂。（补充本诗歌828首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：且要在那些蒙怜悯、早预备得荣耀的器皿上，彰显祂荣耀的丰富；这器皿就是我们这蒙祂所召的。（罗九23～24上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　神的拣选，我们的定命—罗九1～十21</p>
+<p class="ot2">1.　在于呼召的神—九1～13。</p>
+<p class="ot2">2.　在于神的怜悯—九14～18。</p>
+<p class="ot2">3.　在于神的主宰—九19～29。</p>
+<p class="ot2">4.　藉着那本于信的义—九30～十3。</p>
+<p class="ot2">5.　藉着基督—十4～21：</p>
+<p class="ot2">a.　为律法总结的基督—4。</p>
+<p class="ot2">b.　成肉体并复活的基督—5～7。</p>
+<p class="ot2">c.　相近的基督—8。</p>
+<p class="ot2">d.　被相信并呼求的基督—9～13。</p>
+<p class="ot2">e.　被传讲并听见的基督—14～15。</p>
+<p class="ot2">f.　被接受或弃绝的基督—16～21。</p>
+<p class="ot1">二　神拣选中的经纶—十一1～32</p>
+<p class="ot2">1.　恩典所保留的余数—1～10。</p>
+<p class="ot2">2.　以色列失脚，外邦得救—11～22。</p>
+<p class="ot2">3.　外邦蒙怜悯，以色列得复兴—23～32。</p>
+<p class="ot1">三　对神拣选的赞美—十一33～36</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神的拣选，我们的定命，以及神拣选中的经纶。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在罗马书的第六段说到拣选。首先保罗以雅各和以扫的事例，说到神的拣选与我们的定命，乃是在于呼召的神，在于神的怜悯和主宰。我们蒙拣选也是藉着那本于信的义，并藉着那为律法总结的基督，成肉体并复活的基督，与我们相近的基督，被相信并呼求的基督，被传讲并听见的基督，被接受或弃绝的基督。保罗又说到神拣选中的经纶：神在祂恩典中为以色列家有保留的余数；并且外邦人要因着以色列人失脚而得救，至终外邦要蒙怜悯，以色列家要得复兴；末了，保罗对神的拣选发出宏伟的赞美。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在于呼召的神</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>只因要坚定神拣选人的旨意，不是本于行为，乃是本于那呼召人的。（罗九11下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神的拣选不在于人的行为，乃在于召人的主，在于祂的喜欢和不喜欢，在于祂自己。赞美神！我们都已蒙神拣选并呼召，都是神所爱的对象。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为着我们已蒙神拣选并呼召，是神所爱的对象，赞美神！</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

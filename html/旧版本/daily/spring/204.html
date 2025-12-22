@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('203')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('205')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">鉴识真花假花</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">信心也是这样，若没有行为，就是死的。有人会说，你有信心，我有行为；你将你没有行为的信心指给我看，我便由我的行为，将我的信心指给你看。（雅2:17~18）</div>
+<div id="CC">So also faith，if it does not have works，is dead in itself. But someone will say，you have faith，and I have works; show me your faith without the works，and I will show you my faith by my works.（James 2:17-18）</div>
+<div id="C">相传所罗门为王的时候，国势鼎盛，远方各国都来朝贡。某国特派专使献上两盆名贵的花朵，但其中一盆是天然的，一盆是人造的，两盆都是一样美不胜收。为要夸示他们国家技艺的精巧，并要窥探进贡国家国王的才识，所以请所罗门王鉴赏识别。<br/><br/>　所罗门王毫不犹疑的说，“请把两盆花放在花园中，等我和贵使臣一同去鉴赏。”花园中百花争艳，极其芬芳，蜂蝶飞舞其间，春光绚烂。一会儿，所罗门笑对使臣，说出那一盆是真花，那一盆是人造的。原来天然的花有蜜，蜂蝶都弃假趋真。使臣听了，惊服所罗门的智慧。<br/><br/>　我们的信心好比花朵，虽然一时真假难辨，却可实验。真信心和真花一样，是有生命的，花开时绽放花香，不仅吸引人，花谢后还能结果子。虽然各种花结的果子有大小的不同，但总不会白占地土。这就是使徒雅各说的：“信心……若没有行为，就是死的。……我便由我的行为，将我的信心指给你看。”因此，我们有无信心，不仅自己可以测验，别人也会知道。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

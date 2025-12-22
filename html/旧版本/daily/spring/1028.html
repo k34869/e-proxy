@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('422')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('424')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">神领人之道</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>以赛亚书 五十五9天怎样高过地，照样我的道路高过你们的道路，我的意念高过你们的意念。</p><p>一位基督徒，梦见三位同作肢体的姊妹跪着祷告。主渐渐走近她们。当祂走到第一位姊妹面前，脸上带着光，显出慈容，俯身下去，用顶温柔、顶甜蜜的声音安慰她，勉励她。随后祂走到第二位姊妹身边，只伸出祂的手来，在她额上一按，点点头就走了。最后，当祂走过第三位姊妹那里，一声不响，连看也不看，就走了。那位作梦的基督徒自言自语说，‘第一位姊妹一定灵命顶深，所以主顶爱她。第二位姊妹也还不错，可是不及第一个。第三位姊妹一定是在什么事上得罪了主，深深伤了主的心，所以主不理睬她。’但她并不知道那位姊妹究竟作错了什么？主对待她们竟有这样的不同。正在猜疑之间，主站在她旁边说，‘无知的妇人，你完全误会了我。那第一位姊妹最软弱、最幼稚，时刻需要我的扶持与眷顾。否则她在我的窄路上，简直一步都不能行。她时刻需要我的爱抚和帮助，否则就会失败、跌倒。第二位姊妹较好，她有较强的信心，和较深的爱，我能信任她在任何环境因我站住。那第三位姊妹，（就是似乎我不注意，把她略过的那一位，）灵命顶高、顶深，信心和爱顶大、顶强；我正用一厉害方法将她训练，使她将来能有最高、最圣洁的事奉。她已完全认识我、信任我，并不需要能听、能见、能摸、能觉的帮助；不会因我所安排给她的环境而灰心、丧志、跌倒。虽然理由不能通过，天性不能佩服，但她还是绝对顺服，因她知道我的用意，乃是为着她将来永远的荣耀。我所作的，虽然如今她不知道，后来必定明白。她不要恩赐，只要赐恩者。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('239')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('241')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">刀、碗、马、自己</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">他们……凭着神的旨意，先把自己给了主，也给了我们。（林后8:5）</div>
+<div id="CC">They gave themselves first to the Lord，and to us through the will of God.（2 Corinthians 8:5）</div>
+<div id="C">从前美国土著的印第安人，大多是在树林里狩猎过生活；所以，他们最宝贵的就是吃饭喝水用的碗、刀、或者来福枪。有了这些东西，他们就可以到处生活。一天，有一个人到他们村里来传福音。他们中间有个酋长，十分专心听讲。当传道人说到主耶稣怎样离开天家，为爱罪人来到世上，这位酋长就兴起爱慕耶稣的心。他离开座位，走到传道人面前说，“我将我的刀献给耶稣。”以后，他又听到主耶稣怎样在世为人，“祂本来是富足的，却为我们成了贫穷，叫我们因祂的贫穷，可以成为富足。”他就第二次起来，走到传道人那里说，“我要将我的碗献给耶稣。”他再听到恶人怎样怨恨耶稣，怎样逼迫祂，想要杀害祂；主耶稣怎样的好，怎样的慈爱，反倒被人恨恶。他就牵了他的马来，到传道人面前说，“我将我的马给主耶稣。”他还能再献什么？他已献上他所最贵重、最有用的一切了。他仍然回座继续听讲，听到主耶稣怎样被辱骂，受鞭打，头戴荆棘冠冕，最终被人钉在十字架上，兵丁用枪扎祂的肋旁；祂怎样为人的罪舍身，怎样为这可怜的印第安人的罪死在十字架上。这位酋长落下了两行热泪，跑到传道人面前说，“我将我自己献给主耶稣。”<br/><br/>　这正是主耶稣所要的。或许你已献上许多金钱、时间、力量、以及许多别的东西给主耶稣；但是，你将自己献给祂了没有？</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

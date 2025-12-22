@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('987')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('989')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 16 课<br />
+主的受死与埋葬</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：耶稣我主荣耀王。（诗歌127首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：祂在木头上，在祂的身体里，亲自担当了我们的罪，使我们既然向罪死了，就得以向义活着；因祂受的鞭伤，你们便得了医治。（彼前二24。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　为彼拉多所审—太二七11～26，可十五1～15，路二三1～23，约十八28～十九16</p>
+<p class="ot1">二　被罗马兵丁所戏弄—太二七27～32，可十五16～21，路二三33～38，约十九2～3</p>
+<p class="ot1">三　在各各他被钉十字架—太二七33～44，可十五22～32，路二三33～43，约十九17～24</p>
+<p class="ot1">四　在十字架上受神审判—约十九25～27，太二七45～47，可十五33～35，路二三44～45上</p>
+<p class="ot2">1.　基督钉十字架共有六小时，从上午九时到下午三时。</p>
+<p class="ot2">2.　前三小时，祂是为着遵行神的旨意，受人的逼迫。</p>
+<p class="ot2">3.　后三小时，祂是作罪人的代替，为我们完成救赎，受神的审判。</p>
+<p class="ot1">五　主的受死及受死的功效—约十九28～30，太二七48～56，可十五36～41，路二三44～49</p>
+<p class="ot2">1.　殿里的幔子从上到下裂为两半，启示基督钉死的功效，除去了神与人之间的间隔。</p>
+<p class="ot2">2.　地震动，表征撒但背叛的根基动摇了。</p>
+<p class="ot2">3.　磐石崩裂表征撒但属地之国的营垒崩溃了。</p>
+<p class="ot2">4.　坟墓开了，表征死亡和阴间的能力已被胜过并征服了。</p>
+<p class="ot2">5.　已睡圣徒的身体起来，表征基督之死释放人的能力。</p>
+<p class="ot1">六　生命在血与水中流出—约十九31～37</p>
+<p class="ot2">1.　主的骨头一根也没有折断，表征主肉身的生命虽然被杀，但祂复活的生命却不能为任何事物所伤害、毁坏。</p>
+<p class="ot2">2.　兵丁用枪扎主的肋旁应验了旧约的预言：‘他们必仰望祂，就是他们所扎的’—亚十二10。</p>
+<p class="ot2">3.　主的肋旁流出血与水来：</p>
+<p class="ot2">a.　血表征基督的死救赎的一面，形成洗罪的泉源，为了买召会。</p>
+<p class="ot2">b.　水表征基督的死分赐生命的一面，形成饮用的泉源，为了产生召会。</p>
+<p class="ot1">七　安葬并安息于人的尊贵中—太二七57～66，可十五42～47，路二三50～56，约十九38～42，赛五三9</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见基督钉十字架的细节，为了完成神的定旨，如何愿意将自己置于死地。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>耶稣被犹太首领和罗马政客不公不义的审判并判刑之后，被带去钉十字架。当祂钉在十字架上时，前三个小时，人将所有的侮辱都堆在祂身上。祂在十字架上的后三个小时，神进来审判基督为一切罪的总和。基督完成了救赎的工作之后，交出祂的灵。当主死的时候，有几件事情发生，指明祂死的宇宙的冲击力，能摧毁撒但的国并完成神的经纶。最后耶稣被埋葬于一个财主的坟墓，应验了以赛亚的申言。犹太首领派一个兵丁看守坟墓，并用石头封住，为祂要来的复活立下一个清楚的见证。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　为彼拉多所审</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因为人子来，不是要受人的服事，乃是要服事人，并且要舍命，作多人的赎价。（可十45。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在神的主宰之下，主不仅像羊在剪毛的人面前，受犹太首领的审判，也像罪犯在告祂的人面前，受罗马总督的审判，使祂因此受死，用祂的生命作赎价服事罪人。这赎价不仅是为着犹太人，也是为着外邦人。彼拉多查不出主耶稣有什么该定罪的，就想要释放主耶稣。但为讨好群众，就释放巴拉巴给他们，将耶稣交给人钉十字架。这将人政治的黑暗和不公正表露无遗，也表白了主最高标准的属人完全，带着祂超越一切的神圣光辉，成为最有力的标记，说出祂完全合格作罪人的代替。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在遭遇不公平的对待时，学习主的静默无声。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

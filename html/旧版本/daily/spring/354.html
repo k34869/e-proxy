@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('353')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('355')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">生作财主死作拉撒路</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们知道我们主耶稣基督的恩典，祂本来富足，却为你们成了贫穷，叫你们因祂的贫穷，可以成为富足。（林后8:9）</div>
+<div id="CC">For you know the grace of our Lord Jesus Christ，that though He was rich，for your sakes He became poor in order that you，because of His poverty，might become rich.（2 Corinthians 8:9）</div>
+<div id="C">有一位教师说完了路加十六章财主和拉撒路的故事后，问一班孩子们说，你们谁愿意作拉撒路？谁愿意作财主？有的小孩说，我愿意作拉撒路，因为将来可以享福。有的小孩说，我愿意作财主，因为将来如何还不知道，现在享福再说。有一个小孩说，我活在世上时愿意作财主，死后愿意作拉撒路。<br/><br/>　多少基督徒，也是这样想：最好活在世上时享福，死后也享福。</div>
+<div id="CC">福音─劝导（诗722）</div>
+<div id="C">飘渺人生何短暂，<br/>　好似浮云现即散，<br/>　又似幻梦醒就完：<br/>　要及时！<br/>　时日飞逝在宣言：<br/>　转瞬就到死亡线，<br/>　再迟必在地狱间：<br/>　要及时！<br/>（副）<br/>　要及时！要及时！<br/>　当今耶稣在召唤：<br/>　要及时！<br/>　若在罪中仍流连，<br/>　只怕恩门向你关，<br/>　那时呼救已太晚：<br/>　要及时！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

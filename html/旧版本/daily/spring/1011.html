@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('303')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('305')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">交通与对付罪</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我们若在光中行，如同神在光中，就彼此有交通，祂儿子耶稣的血也洗净我们一切的罪。（约壹1:7）</div>
+<div id="CC">If we walk in the light as He is in the light，we have fellowship with one another，and the blood of Jesus His Son cleanses us from every sin.（1 John 1:7）</div>
+<div id="C">我们要对付罪，先要认识罪有里面的罪性，和外面的罪行。罪性就是我们里面罪的性情，是单数的罪。这单数的罪性，就是撒但在我们里面的生命，我们没有法子对付；因为越对付，它就越活。所以，对付罪是指对付我们外面所犯的罪行，也就是我们在行为上的罪。什么是行为上的罪？约壹五章十七节说，“一切的不义都是罪。”三章四节又说，凡“犯罪的，也行不法；罪就是不法”。凡是不义、不法的行为，都是我们行为上的罪，是我们该对付的。<br/><br/>　约壹一章七节说，我们若与神有交通，就能在光中看见自己的罪，因而就能照着在光中所看见的，向神承认，向神对付，以得着神的赦免和洗净。因此对付罪，是根据我们在与神交通时的感觉，向人、向神有所对付。人在交通时，若在光中看见了自己的罪，而不立刻对付，交通就会受阻碍，良心就会因为有了控告而有破口；这样，属灵的东西就都要漏尽。<br/><br/>　对付罪是根据交通的感觉，而交通的感觉又是根据交通的程度。交通的程度深，交通的感觉就敏锐、就众多；交通的程度浅，交通的感觉就迟钝、就稀少。所以，我们要扩大与主交通的范围，把每一件事都摆到主面前；这样，我们就能在每一件事上有感觉，而在每一件事上有对付。同时，我们也要加深与主交通的程度，使我们对罪的感觉加深，而能更彻底的对付罪。（生命的经历）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1085')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1087')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 12 课<br />
+定罪与称义</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：神圣罗曼史。（补充本诗歌328首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：罗马书五章六至十一节。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　定罪—罗一18～三20</p>
+<p class="ot2">1.　人类被定罪之邪恶的根源—一18～32。</p>
+<p class="ot2">2.　自义者被定罪—二1～16。</p>
+<p class="ot2">3.　宗教徒被定罪—二17～三8。</p>
+<p class="ot2">4.　对普世的人—三9～20。</p>
+<p class="ot1">二　称义—三21～五11</p>
+<p class="ot2">1.　称义的界说—三21～31：</p>
+<p class="ot2">a.　神的义在律法以外，已经藉着信耶稣基督显明出来—21～22。</p>
+<p class="ot2">b.　神的义跨越人先时所犯的罪，向旧约的圣徒显示出来—25。</p>
+<p class="ot2">c.　神的义藉着在基督耶稣里的救赎，并藉着我们信耶稣，白白的称义我们，向新约的圣徒显示出来—24，26。</p>
+<p class="ot2">d.　神称义犹太人，也称义外邦人—30。</p>
+<p class="ot2">2.　称义的表样—亚伯拉罕—四1～25：</p>
+<p class="ot2">a.　亚伯拉罕是犹太人和相信神之外邦人的父—11～12，16～17。</p>
+<p class="ot2">b.　亚伯拉罕是蒙召的人，也是信的人—3。</p>
+<p class="ot2">c.　亚伯拉罕所信的，乃是称无为有，并叫死人复活的神—17。</p>
+<p class="ot2">d.　亚伯拉罕的信被神算为义—3，21～22。</p>
+<p class="ot2">e.　神称义的证明乃是复活的基督—22～25。</p>
+<p class="ot2">3.　称义的结果—五1～11：</p>
+<p class="ot2">a.　称义并和好—1，10～11。</p>
+<p class="ot2">b.　有神的爱浇灌—5。</p>
+<p class="ot2">c.　站在恩典的范围里—2。</p>
+<p class="ot2">d.　藉着在神里面夸耀、欢乐而享受祂—2～5，11。</p>
+<p class="ot2">e.　在基督的生命里得救—10下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>从四方面说到人类被定罪，并信徒如何藉着信耶稣基督，得着神白白的称义。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>罗马书的第二段从四方面说到人类被定罪：首先一般的说到人类被定罪之邪恶的根源；其次专一的说到自义者被定罪；又特别的说到宗教徒被定罪；并总括的说到普世的人被定罪。罗马书的第三段说到称义：神的义在律法以外，已经藉着信耶稣基督显明出来。神的义跨越人先时所犯的罪，向旧约的圣徒显示出来；神的义也藉着在基督耶稣里的救赎，并藉着我们信耶稣，白白的称义我们，向新约的圣徒显示出来。因此，神藉着信称义受割礼的犹太人，也藉着信称义未受割礼的外邦人。亚伯拉罕这犹太人和相信神之外邦人的父，乃是称义的表样。亚伯拉罕是蒙召的人，也是信的人。他所信的乃是称无为有，并叫死人复活的神，他也因信被神算为义，他是我们众人的父。最后，神称义的结果使我们称义并和好，得着神爱的浇灌，并站在恩典的范围里。在这范围里，我们站在恩典中，行在平安里，在指望中受苦，并在患难中享受神，最终使我们在祂的生命里得救。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　人类被定罪之邪恶的根源</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>自从创造世界以来，神那看不见永远的大能，和神性的特征，是人所洞见的，乃是藉着受造之物，给人晓得的，叫人无法推诿。（罗一20。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因着四个邪恶的根源，普世的人都在神的定罪之下。第一，人类从开始就不尊重神的实际，反倒加以抑制。第二，人类虽然知道有神，却定意不去认识祂，不以认识神为美。第三，人不荣耀祂，不感谢祂、敬拜祂、事奉祂。第四，人类改换神，将实际的神改换为虚假的偶像，是何等愚昧可怕。人弃绝神的结果乃是被神放弃，但赞美主，今天我们不活在这些邪恶元素之下，我们乃是以神为实际，以认识神为美，不以任何自设的偶像—前途、地位、学位和目标，来取代神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在每件事上荣耀神、感谢神、敬拜神、事奉神，不以任何自设的偶像来取代神。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

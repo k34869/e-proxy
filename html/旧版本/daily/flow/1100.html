@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1099')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1101')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 14 课<br />
+圣别（二）在灵里内住基督的释放</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：祂是奇妙之灵住我里。（补充本诗歌108首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：罗马书八章一至六节。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　两个丈夫—罗七1～6</p>
+<p class="ot2">1.　人原初的地位—妻子的地位—赛五四5。</p>
+<p class="ot2">2.　堕落的人自取地位成了旧人丈夫—罗七1～4。</p>
+<p class="ot2">3.　重生之人的地位—真正妻子的地位—3～4：</p>
+<p class="ot2">a.　旧人与基督同钉十字架—4上，六6，加二20。</p>
+<p class="ot2">b.　归与新丈夫基督—罗七4下。</p>
+<p class="ot2">c.　结果子给神，并在灵的新样里服事主—4，6。</p>
+<p class="ot1">二　四个律—罗七7～八6</p>
+<p class="ot2">1.　神的律在人外面，使人被暴露并知罪—七7～12，14，16。</p>
+<p class="ot2">2.　心思中为善的律，符合神的律，并响应其要求想要遵守—七22～23，18。</p>
+<p class="ot2">3.　肢体中犯罪的律，与为善的律交战，并把人掳去—七17～18，20，23。</p>
+<p class="ot2">4.　生命之灵的律，在基督耶稣里释放我们，脱离罪与死的律—八2。</p>
+<p class="ot1">三　生命之灵的律的释放—八1～6</p>
+<p class="ot2">1.　律法因肉体而软弱，有所不能的—3上。</p>
+<p class="ot2">2.　神在罪之肉体的样式里，并为着罪，差来了自己的儿子，在肉体中定罪了罪—3下。</p>
+<p class="ot2">3.　使律法义的要求，成就在我们这不照着肉体，只照着灵而行的人身上—4。</p>
+<p class="ot2">4.　需要照着灵而行，将心思置于灵—5～6：</p>
+<p class="ot2">a.　心思置于肉体就是死—6上。</p>
+<p class="ot2">b.　心思置于灵，乃是生命平安—6下。</p>
+<p class="ot1">四　内住的基督—八7～13</p>
+<p class="ot2">1.　基督已成了那灵，住在我们里面—9～10。</p>
+<p class="ot2">2.　内住的基督藉着义，将生命带给我们的灵—10。</p>
+<p class="ot2">3.　生命的分赐—11。</p>
+<p class="ot2">4.　我们的合作—12～13。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识罗马七、八章里的两个丈夫、四个律，以及灵里内住基督的释放。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神造人原初的地位乃是妻子的地位，但堕落的人却离弃神，自取地位而成了旧人丈夫，就是七章里的第一个丈夫，这使人受到律法的辖制。但藉着基督在十字架上的死，使我们的旧人与基督同钉十字架，我们就归与新丈夫基督，结果子给神，并在灵的新样里服事主。罗马七、八章又给我们看见四个律：第一是在人外面之神的律，使人被暴露并知罪。第二是心思中为善的律，符合神的律，并响应其要求想要遵守。第三是肢体中犯罪的律，与为善的律交战，并把人掳去。第四是生命之灵的律，在基督耶稣里释放我们，脱离罪与死的律。经历生命之律释放的路，在于看见神在罪之肉体的样式里，并为着罪，差来了自己的儿子，在肉体中定罪了罪，使律法义的要求，成就在我们这不照着肉体，只照着灵而行的人身上。因此我们需要照着灵而行，并不断将心思置于灵，好叫我们经历成为那灵之内住的基督，藉着义将生命带给我们的灵，并分赐生命给我们必死的身体。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在灵的新样里服事神</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>…叫我们在灵的新样里服事，不在字句的旧样里。（罗七6下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因着堕落，我们是旧人，是我们的旧丈夫。因着重生，我们是新人，基督是我们的新丈夫，我们是妻子。所以我们所是和所作的一切都与神有关，我们必须在灵的新样里服事主，不在字句的旧样里。神重生我们，更新了我们的灵，所以我们要操练不断运用我们的灵服事主，凭着我们的新丈夫基督而活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>活神，生出神来，结果子给神，并在灵的新样里服事。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

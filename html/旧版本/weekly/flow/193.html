@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('192')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('194')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">尼希米爱神，与神是一，不自私</p>
+<p>你们去吃肥美的，喝甘甜的，有不能豫备的就分给他，因为今日是我们主的圣日。你们不要忧愁，因耶和华的喜乐是你们的力量。（尼八10）</p>
+<p>被掳归回的以色列人，在尼希米的带领下，重建耶路撒冷的城墙，带进以色列的复兴。在尼希米身上有许多特征。首先，他是持有正确态度和行为的喜乐之人。尼希米作王的司酒，必是喜乐、甜美的人，一直持有合宜的态度和行为。他素来在王面前没有愁容。其次，尼希米爱神，也爱神在地上的权益，包括圣地、圣殿和圣城。他虽然是平民，是王的仆人，却积极进取，向神自愿效劳，有负担建造耶路撒冷。第三，尼希米是一直在交通里祷告接触神的人。他听见耶路撒冷的城墙被拆毁，城门被火焚烧，就哭泣、悲哀、禁食祷告。（尼一2～4。）</p>
+<p>第四，尼希米是信靠神并与神是一的人。神将重建城墙的负担放在尼希米肩头上，当他背负这些负担时，他信靠神。尼希米知道，神美善的手帮助他，他也求神记念他。这指明他信靠神并与神是一。第五，尼希米在他与百姓的关系上，全然不自私。即使他得着如犹大省长的崇高地位—实际上他就是代理的犹大王，代表波斯王—他也从不为自己寻求什么。尼希米始终愿意为百姓和国家，牺牲他所有的。虽然他贵为省长，却十二年之久没有接受省长的俸禄。他不愿加重百姓的担子，反而供给一百五十多人每日的需要。（五14～18。）尼希米也在那些豫备与仇敌争战的人当中，有分于夜间守望。（四17～23。）他没有将这些事留给别人作，乃是亲自参与其中。</p>
+<p>最后，尼希米是一国的元首，治理者，但他全然没有野心。尼希米知道自己不认识神的话，就愿意从认识神话语的以斯拉得帮助。在尼希米归回以前，以色列国一团糟。祭司的职任不明确，也无人顾到利未人和服事的人。尼希米在以斯拉的帮助下，将以色列国彻底的重新构成，使以色列人成为圣别、分别归神、彰显神的国。他们被神的思想、神的考量、并神的一切所是灌输，使他们成为神的复制。结果，他们在地上成为神圣的国，彰显神圣的特性，作神的见证。（参尼希米记生命读经，33～38页；圣经提要第一卷，155～158页。）</p>
+<p class="title">把热的衬衫给他</p>
+<p>曾有一位主所大用的仆人，名叫希利（R. Hill）。有一次，他去探访一个病人。当他离开时，大家都希奇他为何没有穿衬衫。之后，他到朋友家去，他的朋友就问他为何不穿衬衫？他答说，‘我刚去看望一个病人，见他没有衬衫，所以把我的衬衫给了他。’朋友说，‘你回家后，再另送一件给他，不是一样么？’希利回答说，‘我可以这样作，但我觉得把热的衬衫给他，比冷的更好。’一个肢体有缺乏，就是全身的缺乏，你有这样的感觉么？（参造就故事中册，167页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：效法尼希米，爱神，与神是一，顾到神在地上的权益和见证，以及神子民的需要。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

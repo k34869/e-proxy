@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1820')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1822')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 9 课<br />
+七号—执行神的经纶</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：阿们神的话语。（补充本诗歌414首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：启八1～4:羔羊揭开第七印的时候，天上寂静约有半小时。我看见那站在神面前的七位天使，有七枝号赐给他们。另一位天使拿着金香炉，来站在祭坛旁边，有许多香赐给祂，好同众圣徒的祷告献在宝座前的金坛上。那香的烟同众圣徒的祷告，从那天使手中上升于神面前。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　第七印—启八1～2</p>
+<p class="ot1">二　揭开七印后天上的景象—基督作大祭司，向神献上众圣徒的祷告—3～5</p>
+<p class="ot1">三　头四号—7～12</p>
+<p class="ot2">1　第一号—审判地—7。</p>
+<p class="ot2">2　第二号—审判海—8～9。</p>
+<p class="ot2">3　第三号—审判江河—10～11。</p>
+<p class="ot2">4　第四号—审判天象：日、月、星辰—12。</p>
+<p class="ot1">四　第五号—对人的审判—八13～九11</p>
+<p class="ot1">五　第六号—对人进一步的审判—九12～21</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>第七印带进七号，乃是殉道圣徒在第五印祷告的答应，执行神的经纶。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>第七印的内容就是七号，七号一直延展到永世，乃是神经纶的执行。七印是隐密的揭开，七号是公开的吹响。羔羊揭开第七印时，天上变为寂静，因为时代转换了—从神宽容的时代转到神发怒的时代。这是由于众圣徒的祷告—他们求神审判这抵挡神经纶的地，神对地的审判就得以执行。</p>
+<p>头四号还没有直接审判人。第一号审判地和其上的树，以及青草；第二号审判海与其中的活物并船只；第三号审判江河和众水的泉；第四号审判日头、月亮和星辰。因这四号的审判，地、海、江河、以及天象的三分之一都毁坏了，因此使它们不再适于人的生活。到了第五号的时候，撒但和敌基督合作，使神所造的人直接受痛苦。第六号比第五号更严重，有二万万马军杀害人类的三分之一。第五号的灾祸可说是大灾难最严重灾祸的起头。第六号以及第七号，也必是大灾难最严重灾祸的两部分。这三样灾祸，同着第六印及头四号所带来的伤害，要成为将来全地上居住者的试炼。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　第七印坐在宝座上的神</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启八1～2:羔羊揭开第七印的时候，天上寂静约有半小时。我看见那站在神面前的七位天使，有七枝号赐给他们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>第七印的内容就是七号，乃是神经纶的执行。七号加在一起就等于第七印，一直延展到永世。揭开第七印时，天上变为寂静，因为时代就要转换了—从神宽容的时代转到神发怒的时代。神现在要来干涉地上背叛和罪恶的光景。七号组成第七印，而第七号里有七碗。七号的头四号，像头四印一样形成一组，还没有直接审判人。在第五号时，撒但与敌基督要合作使人受痛苦。到第六号时，有进一步的审判临到人。到了第七号时，藉着七碗，更有进一步的审判临到地、海、江河和日头。那是神对天地最严厉的审判。只有神能写得出启示录；只有祂有智慧，用如此美妙的方式写这卷书。</p>
+<p>操练应用:弃绝天然的观念，求主将祂的道路向我们显明。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

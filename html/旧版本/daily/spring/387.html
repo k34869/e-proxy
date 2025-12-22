@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('386')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('388')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">求主买回缝纫机</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>腓4：6~7应当一无挂虑，只要凡事藉着祷告、祈求，带着感谢，将你们所要的告诉神；神那超越人所能理解的1平安，必在基督耶稣里，保卫你们的心怀意念。</p><p>In nothing be anxious, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God;</p><p>And the peace of God, which surpasses every man’s understanding, will guard your hearts and your thoughts in Christ Jesus.</p><p>和我们一同聚会的张耀华弟兄，他的曾祖母原来是位念佛烧香的乡下老太太，后来转信耶稣。那位老太太一字不识，但却常常祷告，与神交通，对于圣灵的引导有特殊的认识。她的儿子在西北作生意。有一天，非常想念她的儿子，就把这事告诉主。当时里面就有一个声音，告诉她说，‘你的儿子已经有信来了，在街上恒泰祥店里。’恒泰祥是一间杂货店，老板是教会的一位长老，代办邮政转递事宜；因为那时，那里还没有邮政局。这位张老姊妹并不知道恒泰祥在那一条街上，她就向着城里直往大街走去。到了一个地方，忽然觉得腿痛。她说，‘主阿，为什么腿痛？’里面有声音说，‘你走过了。’她即刻回头转弯，另走一路，就问人说，‘你知道恒泰祥在那里？’果然有人指示她一间店，就是恒泰祥。她到了店里，就对老板说，‘老板哪，我儿子来信了，请你给我。’老板一查，果然有她儿子的信，急忙问道，‘你是怎么知道的呢？’张老姊妹就把经过的情形说给他听。这位老板非常喜欢，赞美主说，神也知道我这小小的恒泰祥店。又有一次，她正在摊煎饼，约在早晨四点钟，摊完最后一张煎饼的时候，摊饼用的平底锅，忽然裂为二半。她即刻问主说，‘主阿，这是怎么一回事？’里面就有声音，很清楚的告诉她说，蒋介石在西安遭难，你要痛哭流涕的为他祷告。她立即跪下，痛哭祷告了一阵。第二天是个主日，她就前往刘效温弟兄家里去聚会，把这情形告诉刘弟兄，问刘弟兄说，‘蒋介石是谁？怎么会在西安遭难呢？’刘弟兄就告诉她说，他是中国的军事委员长，他那能遭难呢？那个地方消息不灵，当天也没有报纸。过了两、三天，消息发表，果然蒋委员长在西安被扣。又过了若干时候，就是十二月二十四日那天，忽然她的里面又有声音告诉她说，没有事了，蒋委员长平安了。她又把这事告诉刘弟兄。果然在第二天，就是二十五日，张学良亲自把蒋委员长送到南京。你看奇妙不奇妙！神灭绝智慧人的智慧，向聪明通达的人隐藏起来，向婴孩就显露出来。我们每一个人不是没有圣灵的引导和教训，乃是因着我们头脑的分析，疑惑不信，就常常拦阻圣灵的引导。</p><p>儿童,#836</p><p>我们是小神人</p><p>一</p><p>我们是小神人，操练过神生活，神属性，藉人性，显出来。</p><p>说话真，作事真，不虚假，不遮掩。灵和真，敬拜神，荣耀神。</p><p>二</p><p>我们是小神人，操练过神生活，神属性，藉人性显出来。</p><p>说话准，听话准，传话准，作事准，时间准，彰显神，荣耀神。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1162')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1164')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 5 课<br />
+对付婚姻与食物</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：从我活出你的自己。（诗歌304首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：在我们却只有一位神，就是父，万物都本于祂，我们也归于祂；并有一位主，就是耶稣基督，万物都是藉着祂有的，我们也是藉着祂有的。（林前八6。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　对付滥用自由—林前六12～20</p>
+<p class="ot2">1　基本的原则—凡事都可行，但不都有益处，也不受其辖制—12。</p>
+<p class="ot2">2　身体的用处—13～20：</p>
+<p class="ot2">a　食物是为肚腹，肚腹是为食物，但这两样神都要废掉—13上。</p>
+<p class="ot2">b　身体不是为淫乱，乃是为主，主也是为身体—13下。</p>
+<p class="ot2">c　神必藉着祂的能力使我们的身体复活，所以不该滥用身体—14～18。</p>
+<p class="ot2">3　三件要紧的事—15，17，19：</p>
+<p class="ot2">a　我们的身体是基督的肢体—15。</p>
+<p class="ot2">b　与主联合的，便是与主成为一灵—17。</p>
+<p class="ot2">c　我们的身体是圣灵的殿—19。</p>
+<p class="ot1">二　对付婚姻的生活—七1～40</p>
+<p class="ot2">1　基本的原则—1～40。</p>
+<p class="ot2">2　保罗对付婚姻生活属灵的原则：</p>
+<p class="ot2">a　绝对为着主—7～8，33。</p>
+<p class="ot2">b　不发起任何事情—20。</p>
+<p class="ot2">c　接受我们的环境—24。</p>
+<p class="ot1">三　对付吃祭偶像之物—八1～13</p>
+<p class="ot2">1　不该照着知识，而该照着能建造的爱—1～3。</p>
+<p class="ot2">2　认识偶像算不得什么—4～7。</p>
+<p class="ot2">3　食物不能将我们荐与神—8。</p>
+<p class="ot2">4　不该绊倒软弱的弟兄—9～13。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识婚姻和饮食上基本的原则。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>吃喝和婚姻都是神所命定的，也是人类生存所必需的。食物是神所造，也是神所命定，为着我们的生存。婚姻是为着人类的繁殖。这二者既是神所命定的，也就是合法的。我们有自由吃喝，也有自由结婚。然而，堕落的人在这两件事上滥用自由，因此保罗在林前六章后半，对付滥用自由。在这件事上保罗给我们看见三个重要的原则：我们的身体是基督的肢体；与主联合的，便是与主成为一灵；我们的身体是圣灵的殿。保罗进一步在第七章给我们看见婚姻生活的基本原则。在说到这些事时，保罗的属灵原则是：绝对为着主，不发起任何事情，接受我们的环境。在第八章，保罗对付吃祭偶像之物一事，其中的基本原则乃是：不该照着知识，而该照着能建造的爱；认识偶像算不得什么；食物不能将我们荐与神；并且不该绊倒软弱的弟兄。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　基本的原则</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前六12：凡事我都可行，但不都有益处；凡事我都可行，但无论那一件，我总不受它的辖制。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在召会生活中，我们可以自由的作某些事，但那些事不会帮助我们过召会生活，也不会加强我们的祷告生活。当我们考量是否要作某件事时，我们应当问自己，是否在那件事的权下或控制之下。如果有一件事控制或辖制你，你就不该去作。我们必须彻底对付任何辖制我们的事物。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彻底对付任何会辖制我们的事物。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

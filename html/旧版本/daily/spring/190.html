@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('189')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('191')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">抓紧藤枝往上看</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我的魂说，耶和华是我的分；因此，我要仰望祂。（哀3:24）</div>
+<div id="CC">Jehovah is my portion，says my soul; therefore I hope in Him.（Lamentations 3:24）</div>
+<div id="C">一位传道人来到非洲的刚果。一天，要过一座用藤葛编成的桥。两端藤葛交缠树上，高悬空中，飘摇无定；下临深渊，景状危险。那位传道人俯瞰下面激流湍急的河水，想想伏在水中的巨鳄，根本不敢走过那座桥。有一位土著和他同行，发觉他十分恐惧害怕，就说，“不要怕，抓紧了藤枝，往上看，不要向下看，这是走过这桥的唯一诀窍。”那位传道人如法坚握藤枝，并往上看，于是平安到达彼岸。<br/><br/>　基督徒度过险境的唯一秘诀，就是往上看，抬起脸来仰望神。看环境会叫你畏缩不前；仰望神会叫你勇往直前。</div>
+<div id="CC">一路跑尽（补424）</div>
+<div id="C">我们有当跑的路，阿利路亚！<br/>　当一路跑尽，莫停下！<br/>　对所有在跑的人，阿利路亚！<br/>　神说：“当望断及于祂！”<div class="l2" id="hymn" style="display:flex;">
+<div>副</div>　<div>当望断以及于祂！一路跑尽，莫停下！望断一切身外物，注视耶稣，当望断一切及于祂！</div></div></div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('526')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('528')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">瓷器须经火炼</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林后1:4　祂在我们一切的患难中安慰我们，叫我们1能用自己从神所受的安慰，安慰那些在各样患难中的人。</p><p>刘小姐是一身体强健的人，除了婴孩时生过一次病以外，再没有生过第二次病。她在护士学校毕业之后，献身服务病人，她想尽她力量用爱心服事病人。一次夜班，有一个身上生疮的病人不住的呻吟呼叫，她为顾全其他病人，就去请他不要作声，以免打扰别人。那知不一会儿病人又起呻吟，她又委婉劝他。不久，病人还是呼叫起来。这时她就发怒了，责怪病人不肯忍痛。</p><p>又一次，一个病人发高烧，体温升到华氏一百零四度。她知道病人烧到这种地步，需要多多饮水，她便取来一大杯冷水给病人喝。病人喝了半口，就不肯再喝。她强要病人喝，病人却绝不肯喝；这可把她急坏了。她想，这又不是苦菜，为什么这样坚决不肯喝，真是不知好歹。于是大声叱责病人。病人难过至极，放声大哭起来。</p><p>翌年，刘小姐右耳里面生了一个小疮，痛得日夜不能睡觉。且有几天，痛得使她直闹直哭，总得要人用热手巾敷在她的耳朵上。看护她的人夜间因为疲乏，稍去休息一下，她就痛得喊叫起来。当她在发热时，口苦像含黄莲。明知发热之时必须多多喝水，可是水到口中，比药还难下咽，半口也喝不下。后来脓流出来了，才逐渐痊愈。经过这一次的病，她才经历了疼痛和发热的滋味，也就开始觉得昔日那样对待病人的不当；从前她恨病人不知好歹，现在觉得自己亏待了那些病人。从此她懂得如何看护服事病人。凡是住院病人，异口同声，对她都加以称赞。</p><p>许多弟兄姊妹真有爱心，愿意服事别人，看望别人，可是因着他们自己没有学过多少功课，没有受过多少对付，只凭人的天然本领，肉体的热心，自己的爱好，去服事人，去看望人。结果，非但不能使人得到帮助，反倒使人受到亏损。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1455')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1457')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 10 课<br />
+众圣徒的分、神的像、创造并复活里的首生者</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　从死人中复活的首生者</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西一18：祂也是召会身体的头；祂是元始，是从死人中复活的首生者，使祂可以在万有中居首位。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神完成了两个创造，就是旧造和新造。旧造包括天、地、人类、和亿万不同的东西。新造就是召会，基督的身体。新造是藉着复活，藉着旧造的死与复活而产生的。在召会这个新造里，基督乃是从死人中复活的首生者。基督作为神的儿子，经过了两次出生。第一次的出生发生在祂成为肉体的时候，第二次是在祂的复活里。基督复活之前，乃是神的独生子，但借着复活，独生子成了许多弟兄中的长子。基督的两次出生，神性就被带进人性里，人性也被带进神性里。无论在旧造或新造里，基督都是首先的，并且是居第一位的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在日常生活的凡事上让基督居首位。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督拯救我们脱离黑暗的权势，迁入神爱子的国里，使我们在光中有分于基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>请大家分享自己信主过召会生活之后，和没有信主之前，有什么不一样？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘当我们相信基督作我们的救赎主，神立即拯救我们脱离黑暗的权势，把我们迁入光的国里。在光中我们够资格同得所分给众圣徒的分。这意思是说，我们够资格享受基督。这资格是一个已经成就的事实，所以我们无须为此祷告；相反的，我们只要和保罗一同为此感谢父。’（歌罗西书生命读经，31页。）</p>
+<p>…保罗说到黑暗的权势之后，接着题到规条、仪文、哲学、和世上的蒙学，这些都是撒但权势的各方面。今天有许多人在撒但的权下受哲学的控制。故此，要领一个赌徒归向基督，常常要比领一个热中哲学的人来得容易。在中国，我们发现很难带领孔子的跟从者归向基督。撒但利用儒家的伦理教训来系统化、并控制许多中国人。撒但藉着伦理的哲学，将他们控制在他的权下。…保罗对歌罗西人说，神拯救了他们脱离黑暗的权势，就是脱离律法、规条、作法、禁欲主义、神秘主义和哲学。这些东西虽然包含文化最高的产物，却是撒但藉以辖制人的黑暗权势。’（34～36页。）</p>
+<p>‘神爱子的国，乃是为了叫我们享受基督作生命。在此我们得着释放，脱离基督以外的一切事物，不仅脱离邪恶的事，也脱离哲学、规条、仪文、和禁欲主义等类的事。当我们持守我们的哲学、伦理、禁欲主义或规条，我们就在黑暗的权势之下。但神已拯救我们脱离了这权势，把我们迁入爱的国里，就是满了生命和亮光的国里。在这里我们没有仪文、形式、规条、作法、哲学、神秘主义、智慧派或禁欲主义，我们只有神的爱子基督。在这里我们有爱、光和生命。这就是凭基督而活。’（39～40页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>常常转向主，在爱中受基督的约束和管理，进入祂的同在里，并参加召会的聚会，在光中享受基督作众圣徒的分。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

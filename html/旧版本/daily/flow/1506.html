@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1505')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1507')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 18 课<br />
+结语—新人的生活</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：教会是主的身体。（诗歌598首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：一切关于我的事，有亲爱的弟兄，忠信的执事，在主里同作奴仆的推基古，要告诉你们。（西四7。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　使徒的交通—西四7～17</p>
+<p class="ot2">1　新人生活的实例。</p>
+<p class="ot2">2　新人的感觉。</p>
+<p class="ot2">3　新人的描绘。</p>
+<p class="ot1">二　新人生活的实行</p>
+<p class="ot2">1　主恢复中众召会的交通—林后八4，启二7上。</p>
+<p class="ot2">2　同心合意，用同一的口，说同样的话—罗十五6，林前一10。</p>
+<p class="ot2">3　生活行动顾到宇宙的新人—弗三17上。</p>
+<p class="ot1">三　使徒的问安—西四18</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒的交通和问安给我们看见一幅新人的图画。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>歌罗西四章七至十八节是整卷书信的结语。七至十七节是使徒保罗的交通，十八节是他的问安。这段结语占了整卷歌罗西书很大的部分，启示出一个新人生活的实例。这给我们看见，在使徒时代所实行的新人乃是他工作的结果。这鼓励信徒渴慕基督，就是新人的构成成分，作他们的享受。藉着众召会之间这样的交通，我们就在实行上经历以基督为实际的新人生活。我们要求主给我们一个新人的感觉，就是‘新人感’。并且新人只有一个，他的人位也只有一个。因此我们每一个人说话的时候都要以基督作人位，结果就能同心合意，也说一样的话。甚至，我们各地的召会，在那里考虑某项主张的时候，也要能顾到全地上的召会。我们要看见，今天就是得着一个新人的日子，这新人是由众地方召会所构成，包括所有在基督里是一的圣徒，而基督是一切，又在一切之内。我们要起来，接受基督作我们共同的人位；这样，这个新人就长大成人，我们就达到一个长成的人。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　新人生活的实例</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西四7：一切关于我的事，有亲爱的弟兄，忠信的执事，在主里同作奴仆的推基古，要告诉你们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>歌罗西四章七至十八节的结语，占了整卷歌罗西书很大的部分，是有特别意义的。我们如果在整卷书信的光中看这些经节，就会晓得这些乃是保罗在歌罗西书中所说之事的实际应用。我们所看到的是新人实际的生活。歌罗西三章十一节说，在新人里‘没有希利尼人和犹太人、受割礼的和未受割礼的、化外人、西古提人、为奴的、自主的，惟有基督是一切，又在一切之内’。在四章七至十七节，我们看见三章十至十一节所启示之新人的实例。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>看见新人生活的实例。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

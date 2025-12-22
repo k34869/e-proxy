@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1161')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1163')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 4 课<br />
+神奥秘的管家</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　对付信徒间的诉讼</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前六11下：但在主耶稣基督的名里，并在我们神的灵里，你们已经洗净了自己，已经圣别了，已经称义了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在主的名里，就是在主的人位里。而主的人位就是那灵。（林后三17。）当我们呼求主耶稣，主就来了。当祂临到我们时，祂就是那灵。我们若一直呼求主名，一直享受祂的名和祂的灵，我们就天天被洗净、圣别并称义。这样，我们就够资格，并预备好承受要来的国度。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>呼求主名，享受祂的名和祂的灵，经历在主的名里并神的灵里，被洗净、圣别、称义。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>林前五章对付粗鄙的罪，说出基督徒的生活要守除酵节，除去我们旧性情中的罪，并且享受基督作无酵的生命供应。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督为什么是无酵饼？我们里面有那些旧性情的罪？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们一得救，就该把旧酵除净。什么是除酵？酵在圣经里是指着腐败说的。一团面所以能发起来，是因里面有酵；酵里有腐化的因素，能在几个钟头后，使全团面都发酵。所以酵在面中，乃是指着腐化说的。</p>
+<p>没有一个堕落之人的生活不腐化。有人问说，什么叫生活腐化？什么是生活中的酵？…比方一个十几岁的青年，他的思想原本很清洁，很单纯，但慢慢读了中学后，就开始看爱情小说了。这爱情小说进到他里面就是酵，有一天在他里面变酸、变臭了，使他这个原本单纯的人，里面竟渐渐腐化了。</p>
+<p>有人说电影很好，若是用在教育上，是很有帮助的。的确，电影在某些方面也许有相当的用处，但可惜被今天的人用错了。所有作父母的都知道，今天巿面上充斥着许多影片，不是给青少年思想的启发，而是给他们罪恶的激素。许多时候，虽然是好影片，但因着环境不对，问题就都出来了。…有些青少年曾经愤愤不平的问说，“科学片、历史片，也不可看么？”不是科学片、历史片不可看，而是这样的影片若是在学校的礼堂放映，人人都可去看；但电影院不可去，那个地方太污秽了。</p>
+<p>我们既是得救了，就当在主面前蒙光照，看有否亏欠人的、不义的，统统都要对付干净。无论是家用，或是公用的，只要是不正当得来的，都该对付清楚。若是我们肯在主面前好好清查，我们会发现我们全身都是酵。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>天天吃基督作无酵饼，得着祂作我们的源头和供应，过无罪的生活。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

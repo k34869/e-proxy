@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('898')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('900')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第三子传道</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>哥林多前书6:20　因为你们是重价买来的。这样，就要在你们的身体上荣耀神。</p><p>哥林多后书5:14-15</p><p>原来基督的爱困迫我们，因我们断定：一人既替众人死，众人就都死了；</p><p>并且祂替众人死，是叫那些活着的人，不再向自己活，乃向那替他们死而复活者活。</p><p>五百年前，有人将非洲黑人卖到欧美各国，充任劳役，待遇如同牛马，不只担任种种苦工，责打至死也不用负责任。</p><p>一次，某一市场拍卖黑孩，最后卖到一个又大又高特别强壮之黑奴。他被双条铁链捆着，各人视为奇货，出价甚高，争欲得之。一位绅士见其可怜，出了一笔特高代价，把他买来。拍卖黑奴的人就将契约交与绅士，并且嘱咐他说：“这个黑奴力大无比，必须饿他七天，才可解开铁链，否则他要立刻把你打死，还要逃去。”</p><p>绅士接过契纸之后，当着黑奴面前撕掉，并说：“我来买你不是要你作我奴隶，乃要叫你得着自由。”于是解开他的捆索，叫他回家。</p><p>黑奴感恩之后，二人各自离去。黑奴走到半路，心里一想，天下哪有如此好人，我不爱他还爱谁呢？于是回头追上绅士，急忙跪在他的脚前，甘心情愿作他的奴仆，以报大恩。绅士一再推辞，终以儿子的资格收留了他。</p><p>主既用重价把我们买来，叫我们从罪里得了释放，得以自由，我们理当爱他，奉献给他，甘心作他的奴仆。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

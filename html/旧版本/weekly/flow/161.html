@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('160')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('162')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">静的操练（一）有温柔安静的灵</p>
+<p>你们的妆饰，…乃要重于那以温柔安静的灵为不朽坏之妆饰的心中隐藏的人，这在神面前是极有价值的。（彼前三3～4）</p>
+<p>基督徒应当住在主里面，与主交通，信靠神，过平静安稳的生活。然而，我们经常外面一忙，里面也就觉得乱了。许多时候，外面还没有忙，里面却早已乱了，就没有能力应付外面的事情。以赛亚三十章十五节说，‘你们得救在于归回安息；你们得力在于平静信靠。’没有一个容易受刺激的人在神面前是有能力的，也没有一个思虑烦扰的人在神面前是有能力的。我们的能力是在于里面平静安稳。</p>
+<p>在每一个旋风里面，都有一个中心。虽然外面的风旋转得很快，但是在中心那一点是非常平静的。这一种中心稳定的生活，就是我们的力量。外面的事情好像狂风乱吹，但是在我们的里面是最安静的。我们不能盼望事情不忙，我们却能盼望在百忙之中，我们的里面仍然是十分安静的。事情可以再多一些，但是在我们的里面是平静安稳的。我们所要得着的平安，乃是里面的平安。如果里面是平安的，我们就不会失败了。无论环境怎样，我们要活在主的面前，好像没有事情一样。主在我们里面，要叫我们过安息的生活。</p>
+<p>在彼前三章四节，彼得嘱咐作妻子的要以温柔安静的灵妆饰自己。彼得在这节说到心中隐藏的人，以温柔安静的灵为不朽坏的妆饰，这指出我们里面温柔安静的灵，乃是我们心中隐藏的人。姊妹们在神面前的妆饰，该是她们内里之所是，就是她们心中那以温柔安静的灵为妆饰之隐藏的人。这种属灵的妆饰，在神面前是极有价值，且是永存不朽的。</p>
+<p>我们信徒实际上有两个人。第一个是在我们的魂连同我们的身体里，这是外面的人；另一个是我们心中隐藏的人，这乃是温柔安静的灵。这事实指明我们的灵是我们这人的核仁，隐藏在我们心中，被心思、情感和意志所包围。我们的灵若温柔安静，就会影响我们的心思、情感和意志，使其温柔。我们温柔的时候，就会安静。灵的温柔和安静，在神面前是美丽的妆饰。（参十二篮第三辑，97～98页；彼得前书生命读经，241、243页。）</p>
+<p class="title">打破水晶灯</p>
+<p>有位姊妹脾气极其暴躁，家人无不怕她。过了多年，她学会了与主交通，靠主胜过自己的脾气。一天早晨，她遇到一个顶大的试验。她在楼上梳洗，她的丈夫和用人在楼下准备要挂一盏水晶灯。这灯相当名贵，值不少钱。他们正挂的时候，不料那盏水晶灯落在地上，砸得粉碎。刚好她从楼上下来。丈夫见她下来，一下子愣住了，以为不知她要怎样大发脾气。那知她心平气和的说，‘灯打碎了，扫掉就是了。’这令她的丈夫大为希奇，他想：平时若是打破小杯、小碟，她都责骂，今天也许要大闹一番了。那知完全出乎意料之外。丈夫见她态度平静，就问她：‘你昨夜睡得好么？有没有生病？’她回答说，‘我没有生病，是神行神迹把我发脾气的病治好了。’她丈夫就因此感谢赞美神，赞叹这真是神迹！（参造就故事上册，88～89页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：以心中隐藏的人—温柔安静的灵—为妆饰。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

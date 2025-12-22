@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('235')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('237')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">财物奉献的实行</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">各人要照心里所酌定的，不要作难，不要勉强，因为神喜爱乐意施与的人。（林后9:7）</div>
+<div id="CC">Each one as he has purposed in his heart，not out of sorrow or out of necessity，for God loves a cheerful giver.（2 Corinthians 9:7）</div>
+<div id="C">在财物奉献的实行上，我们可以为着四方面有奉献：第一是为着召会的需要，如同旧约的百姓，为帐幕和圣殿奉献遮罪银（出三十11～16）。第二是为着推广福音（腓一5）。第三是为着供给主的仆人，如腓立比人供给保罗的需要（四15～16）。那善于带领召会的长老，和那在神的话语上劳苦教导人的，信徒也当用财物供给他们（提前五17）。第四是为着供给有需要的圣徒，在圣徒缺乏上有交通，（罗十二13，）也当记念穷人（加二10）。<br/><br/>　我们也要看见，最蒙神悦纳的财物奉献，是应当先把自己献给主，和关心我们的使徒，再有分于这样的恩典和交通。正如马其顿的众召会，在财物供给犹太缺乏圣徒的事上所作的（林后八4～5）。此外，我们奉献财物给神，无论为着什么用途，都不可行在人前，故意给人看见，要得人的荣耀，从人得到赏赐；这样，就不能得在诸天之上父的赏赐。乃要作在隐密中，由天父看见，而报答我们（太六1～4）。<br/><br/>　信徒奉献财物，在神眼中是极有价值的。原来在神眼中看为“不义”、“无定”的钱财，经过我们属神的人，将它奉献给神，为神使用，会成为我们与圣徒的“交通”，（林后八4，）我们在神面前对人的“义”，（九9，）也成为神所悦纳的“祭物”，（来十三16，）并神所喜悦的“香气”（腓四18）。（生命课程）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

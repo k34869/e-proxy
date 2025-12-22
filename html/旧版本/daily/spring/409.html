@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('408')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('410')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第3课 性格—殷勤</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>马太福音六9 我们行善，不可丧志；因为若不灰心，到了适当的时候，就要收成。</p>
+<p>一位英国的生物学家，曾调查过蜜蜂的生活，他作的统计如下：一磅蜂蜜是从六万二千朵花心中采出来的。换言之，蜜蜂采一磅蜜，需要拜会花朵二百七十万次，一去一来，飞过的路程约有五百万英哩。每次采蜜要用它管状式的嘴吸吮，吮花的次数需要三百七十二万次，这样才能作成一磅蜂蜜。并且费了这样多的力量之后，自己还吃不到口。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：殷勤的人是作他们应该作的事情的人。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：询问孩子们是否总是喜欢在公园里玩或吃冰淇淋？那是否喜欢刷牙或清理玩具呢？我们可能总是想作我们喜欢作的事情，却不想作我们不喜欢的事情。但一个殷勤的人，当应该作某件事的时候，即使他们不喜欢也仍然会作。当父母在早上告诉他们该起床穿衣服了，或者必须每天整理房间，殷勤的人就会去作，因为他们应该这样作。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>提摩太后书二15 你当竭力将自己呈献神前，得蒙称许，作无愧的工人，正直的分解真理的话。</p>
+<p>英国有一传道人名叫桑顿，很有学问，对于机械很有研究。在他刚信主时，很想早起，就是爬不起来。后来他就利用一架闹钟，挂上一根绳子，穿过滑辘，往上面去，在上面系上一块石头，再穿过一个钉在天花板上的滑辘，垂了下来，系住棉被的四角。早上闹钟一响，绳子脱离闹钟，石头就从上面落了下来。石头一落下来，棉被就被提了上去，被子没有，再也无法睡了，只好爬了起来。因他起先只用闹钟，闹钟响完还是不起来，他就想，不能单用闹钟，总得把棉被揭去，棉被一揭去，就不能不起来了。他这样一连作了几年的工夫，天天晚上把他自己所发明的机器预备好，早起棉被飞到天花板上。因他这样管住自己，约束自己，所以神重用他，作工很有能力。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：殷勤的人按时间表作事，以按时完成任务，而不是把事情拖到最后一刻。殷勤的人放学后马上就作作业，或有任务时，他们会马上开始。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：有些书有几百页长，可以花几个星期的时间阅读（带一些来给孩子们看）。一些古典音乐作品有好几页，要花几个月才能学会弹奏。如果要你去读这样一本书，或者为独奏会准备这样一首歌，你需要马上开始准备，并制定进度时间表。如果你等到任务开始前两天才准备，会怎么样？殷勤的人不会等到最后一刻才开始工作。他们接受任务时就已经开始准备，并制定时间表以按时完成。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>希伯来六11 只是我们切愿你们各人都显出同样的殷勤，以致对你们所盼望的有充分的确信，一直到底。</p>
+<p>梅大卫是世界闻名的钉锤制造家，发明了最新式的钉锤。他本来是个农夫，因为买的钉锤，常常都不满意，他就自己制造。邻舍看他制作得很好，争先恐后向他订造。因为制法特好，也就改行专造钉锤。有一个朋友问他，为什么他制作的钉锤比别人制作的更好使用，更为牢靠。他回答说，‘我不单要造得好，而且更要求造得极好，好上更好。’有一次，有人来订一大批货，顾主对他说，‘我光顾你这样多，你该为我造些比给别人更好的钉锤。’他回答说，‘我不造就罢了，要造就造顶好的，因为我造每一个钉锤都像为我自己使用一样，所以我这儿没有次等货。’神所要的是上等货，不是次等货。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：殷勤的人按时间表作事，以按时完成任务，把事情作得最好，不匆忙，不作次好的事情。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：孩子们有时在去聚会的路上背诵经节。即使孩子们能记住，也不如每天花点时间去记忆它。如果给孩子们一个月的时间，来背诵圣经中的一卷书，会怎么样呢？如果他们试图在最后几天死记硬背所有内容，他们可能会完成，也可能无法完成。这样背诵不如制定背诵进度表，并且每天按计划实行。殷勤的人总是竭尽所能。他们不急于作事情，不作草率的工作，或等到最后一刻，因为这不会作出最好的工作。另一个例子：科技博览会项目。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

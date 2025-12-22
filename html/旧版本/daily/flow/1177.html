@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1176')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1178')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 7 课<br />
+对付蒙头与主的晚餐</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：哦主耶稣藉着饼杯。（诗歌181首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：主耶稣被出卖的那一夜，拿起饼来，祝谢了，就擘开，说，这是我的身体，为你们舍的，你们要如此行，为的是记念我。饭后，也照样拿起杯来，说，这杯是用我的血所立的新约，你们每逢喝的时候，要如此行，为的是记念我。你们每逢吃这饼，喝这杯，是宣告主的死，直等到他来。(林前十一23下～26。)</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　对付蒙头—林前十一2～16</p>
+<p class="ot2">1　宇宙中的头—2～3。</p>
+<p class="ot2">2　蒙头—4～6。</p>
+<p class="ot2">3　原因—7～15。</p>
+<p class="ot2">4　没有强辩—16。</p>
+<p class="ot1">二　对付主的晚餐—17～34</p>
+<p class="ot2">1　对混乱的责备—17～22。</p>
+<p class="ot2">2　定义的复习—23～26。</p>
+<p class="ot2">3　察验和分辨的需要—27～29。</p>
+<p class="ot2">4　主的管教—30～34。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识蒙头以及主的晚餐的意义。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>林前一至十章中，保罗对付哥林多人关于为人生活范围里的难处。从十一章起，保罗对付哥林多人关于神圣行政范围里的难处。第一个难处，是关于基督与神在神圣行政里的作头问题。在神的行政管理中，是有次序的。神是基督的头，基督是各人的头，男人是女人的头。每当神的作头受尊重，与神行政有关的一切事就都会正确。但当神的作头不受尊重，这一切事就会不正确。第二个难处，是关于主的晚餐的问题。主的晚餐与主的享受和满足有关。为着主的晚餐，我们需要顾到主的享受与满足。为此我们需要察验并分辨自己，配不配吃饼喝杯。我们该藉着察验自己而记念他，使主得到真正的记念。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　对付蒙头</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十一3:我且愿意你们知道，基督是各人的头，男人是女人的头，神是基督的头。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗首先告诉我们，基督是各人的头，这是关于个人的。基督是团体身体（召会）的头，也是个别信徒的头；他是我们各人直接的头。并且在神行政的命定里，按着神所创造的本性，女人是在男人的作头之下，神是这样创造女人的。（创二18～24，提前二13。）保罗又说，神是基督的头。（林前十一3，）基督是神的受膏者，为神所指派。因此，他在神以下，神这创始者是他的头。这是指在神的行政里，基督与神的关系。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>顺服神的权柄，宣告我们是在神的作头之下的人。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

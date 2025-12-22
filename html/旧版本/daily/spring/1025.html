@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('401')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('403')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">到底说了直话</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>约贰1:4　我看到你的儿女，有照着我们从父所受的诫命，在真理中行事为人的，就大大欢乐。I rejoiced greatly that I have found some of your children walking in truth, even as we received commandment from the Father.</p><p>有一个基督徒很喜欢接待信主的人，尤其是对于传道人，如果遇见了，不是请他吃饭，就是送他东西。有一次，他在某处听一位牧师讲道；这位牧师所讲的，有些不合圣经，不承认耶稣基督是成了肉身来的。他听了，一面觉得不舒服，一面又照着平素的习惯，想去和这位牧师拉拉手，谈谈话。但是要去拉手、谈话的时候，里面总觉得有个东西在那里禁止他；他犹预再三，结果只好不拉手就回家去了。这个基督徒，并不知道圣经上说，那些自称传基督的，而不认耶稣基督是成了肉身来的人，不要接他到家里，也不要问他安的话；（参约贰7～10；）但是，他里面的生命所说的，却正与此相合。</p><p>补充832</p><p>我听见了主耶稣说：“我是世界的光，</p><p>转眼看我，晨星必出现，照耀你的途径。”</p><p>我从自己转向耶稣，祂是我晨星、太阳。</p><p>生命光中，欢乐行走，行尽客旅路程。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

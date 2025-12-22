@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('192')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('194')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">在豺狼旁边祷告</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我不撇下你们为孤儿，我正往你们这里来。（约14:18）</div>
+<div id="CC">I will not leave you as orphans; I am coming to you.（John 14:18）</div>
+<div id="C">一位神的仆人在旅行布道时，顿时陷入低潮。他遇见许多难处，无法解决，感觉神似乎撇弃了他。于是他找到一个山洞，进去祷告，细诉苦情和被撇弃的光景。祷告又祷告，一直在那里向主倾心吐意。时间过了很久，他的眼睛习惯于洞里的黑暗后，方才发现洞里离他很近的地方，躺卧着一只母狼和它的小狼。这只狼不但没有过来吞噬他，就是连动也不动。<br/><br/>　本来正在乳养幼狼的母狼比一切的猛兽更凶暴，但神在他以为被撇弃的时候，却保守他十分平安。他顿时领悟过来，一切忧患都是暂时的，千般的为难都有神的美意，他的神用自己的手引领他的一生，叫他无忧无惧。</div>
+<div id="CC">试炼中的安慰─信靠主（诗515）</div>
+<div id="C">不在此时，许待主回，<br/>　不在此地，许到那里；<br/>　我们才能完全领会，<br/>　叹息眼泪所有意义。<div class="l2" id="hymn" style="display:flex;">
+<div>副</div>　<div>你当一生信靠救主，路虽阴暗，仍当赞美，不必惧怕，主在搀扶，有日、有日都要领会。</div></div></div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1036')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1038')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 5 课<br />
+腓利的传扬、扫罗的转变与彼得职事的扩展（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：荣耀福音向外推广。（诗歌662首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：这人是我所拣选的器皿，要在外邦人和君王并以色列子孙面前，宣扬我的名；我要指示他，为我的名必须受许多的苦难。（徒九15下～16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　腓利的传扬—徒八4～40</p>
+<p class="ot2">1.　在撒玛利亚—4～25。</p>
+<p class="ot2">2.　向埃提阿伯人—26～39。</p>
+<p class="ot2">3.　直到该撒利亚—40。</p>
+<p class="ot1">二　扫罗的转变—九1～30</p>
+<p class="ot2">1.　主的显现—1～9。</p>
+<p class="ot2">2.　亚拿尼亚的印证—10～19。</p>
+<p class="ot2">3.　开始的传扬—20～30。</p>
+<p class="ot1">三　召会的建造与繁增—九31</p>
+<p class="ot1">四　彼得职事的扩展—九32～43</p>
+<p class="ot2">1.　到吕大—32～35。</p>
+<p class="ot2">2.　到约帕—36～43。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>明白神藉着使徒（腓利、彼得）将福音从犹太推广到外邦的历程，以及扫罗遇见大光得救的经过。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神的主宰使信徒因受逼迫，从耶路撒冷分散到其他地方，实行福音的开展。藉着传福音者腓利在撒玛利亚传讲基督，主得着进一步的福音行动，将祂自己作为神国的种子，从纯血统的犹太人开展到混血的撒玛利亚人。腓利随从那灵的引导，将福音传给一位古实人的后裔—埃提阿伯的太监，进一步使主将福音开展到道地的外邦人中。接着，主在扫罗往大马色的路上，以大光遇见他，向他显现。扫罗因此从一个逼迫基督徒的人，转变为接受救恩，并大有能力传讲基督是神儿子的使徒。全犹太、加利利、撒玛利亚遍处的召会得平安，被建造，在对主的敬畏并圣灵的安慰中行动，人数就繁增了。神又藉彼得往吕大和约帕传福音，进一步作为彼得开启外邦人进入神国的踏脚石。从行传一章至九章，我们看见主的主宰权柄，藉着开展到祂所拣选的人里面，繁殖祂自己。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　腓利的传扬—在撒玛利亚</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>及至他们信了腓利所传神的国和耶稣基督之名的福音，连男带女就受了浸。（徒八12。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓利在撒玛利亚传讲基督，也传扬神的国为福音。神的国就是救主耶稣作生命的种子，撒在祂的信徒，就是神的选民里面，（可四3，26，）并发展为一个范围，就是神的国，使神在祂神圣的生命里，能在其中掌权。腓利乃是我们今天传福音的榜样，我们不仅该传讲基督是救主、是生命，也需要传基督为国度这高品且丰富的福音。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以腓利为榜样，传基督为国度这高品且丰富的福音。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

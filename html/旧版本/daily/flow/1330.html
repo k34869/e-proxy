@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1329')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1331')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 10 课<br />
+召会的产生与建造（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　创造成一个新人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗四23～24：而在你们心思的灵里得以更新，并且穿上了新人，这新人是照着神，在那实际的义和圣中所创造的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以弗所二章十五节后半说，‘好把两下在祂自己里面，创造成一个新人，成就了和平。’新人，乃是召会最高的一面，是团体的、宇宙的，在宇宙中只有一个新人，所有的信徒都是这团体宇宙新人的组成分子。基督不仅是一个新人（召会）的创造者，并且是这一个新人得以创造的范围和凭藉。祂更是这新人的元素。我们被了结之后，就在祂里面领受了新的素质。因为我们从前的素质是有罪的。但是在祂里面有奇妙的素质，一个新人就在其中被创造。虽然新人已经被创造，我们仍需要穿上这新人，我们需要穿上那在基督里已经创造成的新人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在心思的灵里得以更新，穿上在基督耶稣里已经创造成的新人。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>藉着基督分赐生命的复活，叫我们这些死在罪中的罪人活过来，并与基督一同复活，坐在诸天界里，使我们成为神的杰作。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神在宇宙中工作的杰作是什么？神如何创造这个杰作？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘藉着神圣三一的神圣分赐，就产生了召会作神的杰作。在神眼中，召会是祂奇妙的杰作。我们得救以前，都是“顽皮”的。没有人能改变我们。但有一天，有人来到我们这里，吩咐我们相信主耶稣。那时，我们不是很了解主耶稣是谁，但我们相信了主，呼求祂的名，并受浸了。藉着这样的经历，我们都改变了。我们成了神的杰作，新造里的新人。</p>
+<p>召会乃是在新造里的新人。除了神圣生命的神圣分赐以外，没有别的能使我们成为新的。在传福音时，神圣生命的分赐，就像给病人注射一样。护士不需要向病人解释很多，她只要把针药注射到病人的手臂里。照样，神圣的生命得以分赐到人里面，，乃是藉着我们说话里神圣生命的注射，就有东西注入到人里面。</p>
+<p>召会乃是藉着这神圣的分赐叫罪人活过来而产生的。（弗二1～6上。）人受浸的时候，就被摆进基督里；那时，基督就进到这人里面叫他活过来。虽然他明白的不多，但他却被这活的基督点活了。藉着福音的传扬，基督注入到他里面，他就与基督一同活过来了。这全是奥秘。</p>
+<p>以弗所二章告诉我们，信徒首先被点活，然后与基督一同坐在诸天界里。（6下。）人在基督的复活里被基督点活以后，会领略自己是与基督一同在诸天之上。在基督的复活里，我们被高举到诸天界里。这是对基督复活与升天真实的经历。这一切都是祂那点活人之生命分赐的结果。藉着神圣恩典的分赐，就是三一神当作恩赐赐给我们，我们就成了基督身体上的活肢体，成为召会生机的构成分子，作神圣、属天的诗章。（7～10。）’（神的经纶与分赐，96～98页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>领略并经历与基督一同复活，作神的杰作，实行神的旨意，过召会生活。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

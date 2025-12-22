@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('413')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('415')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">余慈度出洋折回</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>犹1:20~21　亲爱的，你们却要在至圣的信仰上建造自己，在圣灵里祷告，保守自己在神的爱中，等候我们主耶稣基督的怜悯，以至于永远的生命。But you, beloved, building up yourselves upon your most holy faith, praying in the Holy Spirit, Keep yourselves in the love of God, awaiting the mercy of our Lord Jesus Christ unto eternal life.</p><p>张弟兄因有微故被禁牢中。他读到使徒行传，保罗在罗马的监牢里面足足住了两年，一看心里觉得非常难过，难道我在牢里也要住两年么？又过一些日子，忽然里面有一感觉，好像有声音对他说，三月六日出牢；于是就对众人宣布说，‘三月六日我会释放出去。’可是到了三月六日，他并没有出来，大家完全不相信。又过了一年的三月六日，又没有出来，自己也觉得灰心，认为里面生命的感觉不准确。到了第三年三月五日，收到释放的命令。那天因为没有车，又延了一天，到了三月六日才送他出狱。但是那时他已忘记神的启示，出狱之后，把两个启示加起来，方才真正明白，神要他足足住两年，到三月六日出狱。</p><p>新歌,#99 如今主你就是那灵</p><p>一</p><p>如今主，你就是那灵，是那赐人生命的活灵，</p><p>为进我灵作我生命，你已完成必经的过程；</p><p>你从天降下成肉体，从阴间上来又复起，</p><p>今犹如空气在我口里，随时随在我可享受你。</p><p>对我，你丰富无比，对我，你何等实际，</p><p>丰富无比，何等实际，因你就在我心里！</p><p>_二_</p><p>愿主多赐我以那灵，以你新鲜生命来供应，</p><p>从我中心浸透、充盈，直达圆周，处处都光明；</p><p>你多方运行并工作，像神对膏油在涂抹，</p><p>将我的心，灵全浸润过，且来挑旺我深处爱火。</p><p>有你，我灵会飞扬，有你，我心会歌唱，</p><p>灵会飞扬，心会歌唱，生活如同在天上！</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

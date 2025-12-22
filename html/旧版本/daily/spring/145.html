@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('144')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('146')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">船上吃饭不要钱</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">犹太人和希利尼人并没有分别，众人同有一位主，祂对一切呼求祂的人是丰富的。（罗10:12）</div>
+<div id="CC">There is no distinction between Jew and Greek，for the same Lord is Lord of all and rich to all who call upon Him.（Romans 10:12）</div>
+<div id="C">有一个爱尔兰人乘船到美国讨生活。他带的钱很少，除了买船票以外，所剩无几。于是他买了一些粗点心，预备在船上吃，却不敢多吃，心里盼望那些点心，能吃到越过大西洋。谁知没有几天，点心就吃完了。正在挨饿的时候，船上有一个工人，端了一盘菜，从他身旁经过，叫他垂涎三尺。他忍不住上前追问：“请问这盘饭菜要多少钱？”工人说，“你搭船买了船票没有？”他说，“买了。”工人就说，“你既然买了票，为什么不到餐厅去吃饭？你可以去吃，不会另外要钱的。”那人听见这话，十分惊讶，这才明白说，“我太愚笨了，为什么我在这里挨饿，不去吃饭？”我们一得救，就在基督里，祂所有的丰富，都是我们的，只要活在交通里，就能得着，就有享受。</div>
+<div id="CC">在灵里享受（补115）</div>
+<div id="C">饱尝我基督在灵里，<br/>　吃喝祂，享受祂，甜无比！<br/>　祂丰富都成为我实际，<br/>　安息又饱足不止息。<br/>　在灵里，在灵里，<br/>　饱尝我基督在灵里；<br/>　在灵里，在灵里，在灵里，<br/>　享受主基督，在灵里！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

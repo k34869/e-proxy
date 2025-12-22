@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1147')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1149')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 2 课<br />
+基督是我们的智慧</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　属灵的人看透万事</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前二9～10上：只是如经上所记：‘神为爱祂的人所预备的，是眼睛未曾看见，耳朵未曾听见，人心也未曾想到的。’但神藉着那灵向我们启示了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神在祂的智慧里，就是在基督里，已经为我们命定并预备了许多深奥、隐藏的事，如称义、圣别和得荣等。这一切都是人眼睛未曾看见，耳朵未曾听见，人心也未曾想到的，但神藉着那灵向我们启示了。我们若要领略并有分于神为我们命定并预备之深奥、隐藏的事，就不仅需要信祂，也需要爱祂。爱神的意思，是把我们全人，灵、魂、体，连同我们的心、心思和力量，都完全摆在祂身上。这就是说，我们全人都让祂占有，消失在祂里面，以致祂成了我们的一切，我们在日常生活里，实际的与祂是一。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>全人让主占有，消失在祂里面，在日常生活里，实际的与祂是一。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>钉十字架的基督，乃是神的能力和神的智慧。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>钉十字架的基督是怎样的一位？为什么祂是神的能力和神的智慧？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们不论作什么事，都需要智慧和能力。如果我们没有智慧，事情会作得一团糟。但如果我们有智慧，却没有能力，我们就没有力量执行什么事。我们需要智慧和能力，而基督乃是从神给我们的智慧和能力。</p>
+<p>我们要晓得，活的基督天天将祂自己传输给我们，作为从神给我们的能力。我们靠着自己无法圣别、得胜，甚至无法忍耐。因此，我们需要基督作我们的能力。…</p>
+<p>在日常生活中，我们需要从里面转向我们的灵。我们可以用打开电源开关，来说明转向灵。我们需要电力使电器运转时，只要打开开关就可以了。我们不必到别处去得电力。我们在属灵生活里也有“开关”，这开关就在我们的灵里，也就是基督所在的地方。如果有人叫我们为难，我们不要想靠自己作好。如果我们以某种方式来为人，那只是作一件外面的事。我们不要想靠自己作好，却要回到我们的灵里。我们不以外面的方法来应付环境，我们需要回到灵里。关于这一点，呼求主耶稣的名很有帮助。如果我们呼求主的名，转向我们的灵，基督立刻会传输给我们，作为从神给我们的能力，于是这能力就实际的成了我们的力量。…结果，我们就足能面对特殊的处境。我们这样接受神圣的分赐，就能喜喜乐乐的忍耐，不必咬着牙根费力的忍耐。惟有基督作为从神给我们的能力，才能使我们有力量担当难处，度过困境。’（神圣三一的神圣分赐下册，324～326页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>藉着呼求主，享受主，被赐生命的灵充满，在基督的钉死里，经历神的能力和智慧。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

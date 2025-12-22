@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1441')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1443')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 8 课<br />
+以基督为我们的秘诀</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　保罗的问安与祝福</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓四20：愿荣耀归与我们的神与父，直到永永远远。阿们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓立比四章二十一至二十三节是保罗的问安与祝福。保罗说到‘请问在基督里的各位圣徒安’。保罗是用经历基督的一切深奥方面问各位圣徒安。</p>
+<p>最后，保罗在他祝福的话里说，‘愿主耶稣基督的恩与你们的灵同在。’我们若要享受与我们的灵同在的恩典，就需要操练我们的灵。操练灵的路乃是祷告、祷读主话、并呼求主耶稣的名。每当我们呼求主耶稣或向父神祷告时，我们就自然而然的操练我们的灵。这样操练我们的灵，是享受与我们的灵同在之恩典的秘诀。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>每日呼求主、祷告、祷读主话，操练灵，享受恩典与我们同在。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗已经学得了秘诀，所以他知道怎样处富余，也知道怎样处缺乏。他在基督里面，凡事都能作。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在腓立比四章，说到他学到怎样的秘诀？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘保罗已经受教导学了这个秘诀，所以他知道怎样处富余，也知道怎样处缺乏。他在基督里面，凡事都能作。只要在基督里面就够了，因为祂是包罗万有、全丰全足的。举例而言，当我们坐车时，我们是完全信靠车子。基督比任何车子更充足、更包罗。因此，我们应当完全信靠祂。不论我们作什么，我们应该在祂里面作，而不是在我们自己里面作。我们应该在祂里面，并且凭着祂作一切事。这是保罗学得的秘诀，也是我们今天需要学习的秘诀。…</p>
+<p>我们操练这个秘诀时，不该对我们在祂里面要作什么事有任何偏好。然而，我们可能喜欢在祂里面作某些事，而不喜欢在祂里面作另一些事。…因着这些偏好，我们就很少转向祂，求问祂在所给的环境中要作什么事。但我们需要祷告：“主耶稣，你要我作这个么？如果是，主，求你给我看见你作这事的路。”我们有基督活在我们里面，但我们可能不凭祂活着或不在祂里面作事。腓立比四章里的秘诀，乃是在祂里面作一切事。经历基督的路，就是凡事都在祂里面作。’（经历基督，107～109页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在各样的景况中，学得以基督为我们的秘诀。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

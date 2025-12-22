@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('525')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('527')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">强要病人喝水</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>他们的事奉，乃是天上事物的样本和影儿，正如摩西将要完成帐幕的时候，蒙神指示他说，“你要谨慎，照着在山上所指示你的模型，作各样的物件。” 希伯来书 8:5</p><p>陈教授讲述他的一次请客趣谈。他曾到过一个很难吃到鲜鱼的地方，鱼在那里算是珍品。那时他认识一位英国的军官，乃是挚友。他心里常常想要预备一顿特别的晚餐，来与这位好友一同快乐。后来找到了一位烹鱼能手，能单用鱼烹煮十余种不同的佳肴。于是他就决定办一‘鱼席’款待这位挚友。他自己心里感到非常满意；因为在这一个难以吃到鱼的地方，竟能找到一位‘鱼食专家’，替他办理鱼席。这是何等难得的机会，何等珍贵的筵席！到了宴客那天，除了这位英国朋友之外，他还请了好些陪客。入席之时，大家同声称赞这桌鱼席美味罕有。但有一事很叫陈教授感到意外，就是发觉他的朋友原来是个不吃鱼的人！结果，这位英国军官只吃了一点面包、牛油，什么都没有吃到，怅惘而归。许多基督徒对神的热心，也像这位教授请客，只管凭着天然热心，自己认为美好，不问是否神所喜悦。结果虽然作了许多，却是一点不能讨神喜欢！</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

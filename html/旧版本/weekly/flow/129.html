@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('128')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('130')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">基督是神的像，彰显神纯一的属性</p>
+<p>又按调制香品者之法，作圣膏油和纯净馨香的香。（出三七29）</p>
+<p>神是单纯、纯诚的，而基督是那看不见之神的像，（西一15，）将神一切属性和美德上的所是都彰显出来。在旧约出埃及记里，有许多基督的豫表，揭示基督作为神的彰显，如何有纯净的性情。首先，在十六章有从天而降的吗哪，作为以色列人在旷野的食物。（14～15，31。）吗哪豫表基督作属天的粮食，使神的子民能走祂的道路。（15注1。）吗哪是白色的，表明基督清净又纯洁，没有任何的搀杂。地上没有像这样的食物。我们在基督和祂的话以外所吃的每样东西都是搀杂的，惟有基督和祂的话是纯净的。我们越吃基督和祂的话，就越被净化，并且蒙拯救脱离各样的搀杂，越过越纯净。</p>
+<p>其次，在十七章有从被击打的磐石流出来的水。（6。）磐石豫表成肉体的基督被钉十字架。当我们与被击打的基督是一，也就是在基督的死里与祂联合时，我们天然、属人的生命就被治死。然后，我们就会经历神圣的生命作为生命的水，以纯净、毫无搀杂的方式，从我们里面流出来。</p>
+<p>再者，二十五章题到以色列人将建造帐幕的材料，作为举祭献给神。所献的第一种矿物是金子。金子表征基督神圣的性情，它是纯净而永远的。在拿撒勒人耶稣身上，有‘金子’这神圣纯净的性情，隐藏在祂里面。当我们在基督纯净而永远的神性里经历祂，我们在学校或在邻居当中就会使人觉得，我们里面有个贵重而有分量的东西。此外，二十五章也题到约柜是用皂荚木包金作的。（10～11。）皂荚木表征基督的人性，品质坚刚，标准崇高。基督的人性乃是祂作神在地上之见证的基本元素、基本实质。皂荚木里外都包金，表征神圣的性情渗进属人的性情里，并托在属人的性情上，好藉着属人的性情得着彰显。（10注1，11注1。）（参出埃及记生命读经，514、617～618、1142～1143页。）</p>
+<p class="title">溪水冲刷积污</p>
+<p>古时，希腊有一国王，吩咐一个大力士作一件极困难的事，就是把一间豢养牲畜的大房子打扫干净。那座房子坐落在山谷里，多年来累积的污秽和畜粪，堆积甚厚。王既然如此为难他，他该怎么办呢？后来，那位大力士想出一个妙法。他走到山顶，找着一条溪水，设法把它导引下来，流经那座大房子。因着溪水源源不绝，日夜不断的冲刷；不过几天，这座大房子里外都洁净了。圣徒靠自己的努力，实在无法圣别，必须活在与神的交通里，靠祂纯净的活话来洗涤、洁净，才能吞灭一切的不洁与罪污。（参造就故事上册，88页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：越多吃基督和祂的话，经历净化的过程，使我们蒙拯救脱离各样的搀杂，越过越纯净。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

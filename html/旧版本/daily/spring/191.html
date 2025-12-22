@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('190')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('192')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">上面没有云雾</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我要向山举目。我的帮助从何而来？我的帮助从造天地的耶和华而来。（诗121:1~2）</div>
+<div id="CC">I will lift up my eyes to the hills. From where will my help come? My help comes from Jehovah，who made heaven and earth.（Psalm 121:1-2）</div>
+<div id="C">一艘大邮轮正横渡大西洋，突然遇见浓雾；但是船行速度仍然没有减速，照常猛进。乘客颇为忧心。过了一些时候，乘客召集会议，推派两位代表去见船长，请求减低船行速度，并在船头船尾加派船员值班，恐怕因为视线受浓雾阻碍，遭遇意外。船长接见乘客的代表，就托他们转告所有乘客，不用担心，在船最高的地方，就是船长的驾驶台上并没有云雾，他们的视线并不受阻。<br/><br/>　同样的，当信徒遭遇试炼、患难、困苦时，往往十分忧愁，以为前面非常黑暗，不知将要遇见什么。但请记得，引领我们的主在上面，祂是无所不知，无所不见；我们只管安息在祂里面。</div>
+<div id="CC">试炼中的安慰─主的引领（诗507）</div>
+<div id="C">主，你作我的领港，<br/>　来过此人生风浪；<br/>　前面是未识水道，<br/>　浮沙外加上暗礁；<br/>　你当赐南针图状，<br/>　主，你作我的领港。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1812')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1814')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 7 课<br />
+是配的狮子羔羊</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　向羔羊的赞美</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启五9：他们唱新歌，说，你配拿书卷，配揭开它的七印，因为你曾被杀，用自己的血从各支派、各方言、各民族、各邦国中，买了人来归与神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>宇宙中有两班群众敬拜并赞美祂。第一班是二十四位长老所代表的天使，他们带头敬拜祂；其他的造物由四活物代表，他们也带头敬拜。在基督徒成为千年国里的祭司以前，二十四位长老乃是今天的祭司。至终，我们要代替他们。在千年国时期，得胜的圣徒要被成全到完全，成为神正式的祭司和君王。这是个宇宙的赞美；众天使、以及一切受造之物，都向羔羊献上赞美。愿我们都能完全认识神的经纶同祂的救赎,在聚会中向主献上丰富的赞美！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在聚会中向主献上丰富的赞美！</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录这卷书，乃是神行政的书，揭示那为着全宇宙中神圣行政的神的宝座。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>试见证宝座在我们身上掌权的经历。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘启示录呈现出神宇宙行政的景象。这种景象有一个中心。中心不是焦点。焦点是一个人，中心乃是宝座。…头三章是论到召会。在论到召会这段话以后，第四章一开头，约翰立刻看见一个宝座。约翰在灵里，他看见天上一幅与地有关的景象。天向他开启，他看见天上有一个宝座。这个宝座乃是神为着祂行政的宝座，也是神宇宙行政的中心。…请记得，约翰所看见的是一幅天上的景象，却是与地有关。’（神新约的经纶上册，299页。）</p>
+<p>‘宝座不仅是为着神在我们身上掌权，更是为着神达到祂永远的定旨。在我们属灵的生活中若是有宝座，神就不仅能在我们身上掌权，祂也能在我们里面，同着我们，并藉着我们，完成祂的定旨。凡没有宝座在他基督徒生活里的人，都很难让神在他身上达到祂的定旨。…你若要神的定旨和计划在你里面并藉着你得以完成，你就必须是一个服从宝座的人。你必须是一个在神管治下的人。惟有这样，神才能在你身上通行祂的定旨。’（以西结书生命读经，145～146页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>服从宝座的权柄，在神的管治之下，使神能在我们身上通行祂的定旨。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

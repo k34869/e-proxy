@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('464')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('466')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第11课  性格-谨慎（1）（小心）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>注意：这一课是为了平衡宽广（大）的课程。</p>
+<p>以弗所书四29 败坏的话一句都不可出口…</p>
+<p>小凯在幼儿园特别喜欢交朋友，每次觉得和小朋友们一起玩都特别的开心。他也从小朋友身上学到了很多东西。比如：他跟程成小朋友学会了一首老师没教过的歌曲；和辰辰小朋友学会了跳远；跟恩恩小朋友学会了好多游戏。妈妈每次接他放学他都跟妈妈讲了一大堆在学校和好朋友玩的有趣事情。有一次，小凯班上来了一位小朋友，小凯很快和他熟悉了，这个小朋友给人打招呼的方式就是使劲的拍对方的肩膀，生别人气的时候就爱跺着脚撇着嘴说“哼”。小凯觉得挺有个性的！也学会了这2个本领。一次，上课的时候，老师点着小凯和那位新来的小朋友的名字提醒他们不能再做小动作，新来的小朋友对着老师跺着脚说了一个“哼”，小凯也学那位小朋友对老师做了同样的动作。小朋友们，小凯的做法对吗？为什么？</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：当我们选择朋友时，我们需要既要宽广又要小心。我们当然愿意和所有人作朋友，但同时我们也要小心。如果他们用不当的方式说话，我们绝不能和他们一样。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：我们可能会听到我们的朋友说话时不尊重他们的父母或老师。例如，一个朋友的妈妈给他打电话，他却跟他妈妈说“你想要怎样？”或者“你怎么回事？”也可能，你的朋友会说脏话或用脏话开玩笑。我们要认识，当我们的朋友没有用适当的方式说话时，我们不要那样说话。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多前书十五33 你们不要受迷惑：滥交败坏善行。</p>
+<p>凯瑞韦廉的朋友</p>
+<p>凯瑞韦廉是英国人，他的父母都是基督徒，在他很小的时候，就要他每天背圣经；那时他尚未得救。他十二岁就离开学校，本想作一个园丁，但因着皮肤不好，不能晒太阳，不得不放弃，转而去鞋店作学徒。鞋店的主人尼哥尔，是一位有名无实的基督徒，性情暴躁，行为不佳。韦廉终日和他在一起，就受他影响，厌烦信主的事，并且与一些无赖的少年为友，学会撒谎和其他犯罪的事。这时的韦廉确实非常危险，眼看就快被拉到世界中而远离神。</p>
+<p>鞋店里有另一名学徒，名叫华尔约翰，他和尼哥尔及韦廉不同；他很喜欢和同事谈论属神的事。刚开始韦廉很鄙视他，对他所说的毫无兴趣；但华尔是个寻求神的人，不久他就清楚得救了。他开始向韦廉和他的主人热切传讲基督；他不仅是在言语上传扬，更是在生活中活出主的见证，韦廉因此受了感动，就和他一同去参加聚会。不久，因着在一件事上对主有了经历，韦廉就真正清楚得救了。</p>
+<p>有一次他去买东西，价钱超过了他仅有的一先令。但他身上有一枚别人送他的假先令，他就用这假先令去付款，以结清他的私账。然而他里面知道这是欺骗和偷窃的罪，因此非常挣扎。他向主祷告，求主赦免他这次的欺骗，下次绝不再犯。但神并没有让他过去，他欺骗的事还是让老板发现了，可是老板竟怜悯他，宽恕了他的罪过，没有将他的事张扬出去。这个经历让他深刻认识，他多么需要这位救主，拯救他脱离罪恶。于是他向主悔改，接受主作他的救恩，并将自己奉献给主。</p>
+<p>信主之后的凯瑞韦廉成了另一个人，他开始对没有信主的人有了负担，迫切要传福音给他们。他看见圣经中，主的心意要他传福音到地极，特别是那些福音还没有到达的地方。后来主成就了他的心愿，他被神差遣到印度；他原先那不能受日晒的皮肤，竟能在印度那样炎热的地方，传扬福音四十年。他原本十二岁即辍学，后来为了传福音，努力研读拉丁文、希腊文和希伯来文，更学习义大利文、法文、荷文等多种语言，且将圣经翻译成三十多种的印度方言，让神的话语得以传扬到地极。因着韦廉在鞋店一同工作的同事，热切的传扬福音，才使韦廉这样一位弟兄被主得着并重用。</p>
+<p>凯瑞韦廉的故事，给我们看见正确交友的重要，因为我们和朋友在一起时，自然会仿效朋友的行为，去作朋友喜欢作的事。中国有一句成语说，『近朱者赤，近墨者黑。』朋友的行为、品格对我们影响极大。一面来说，我们应当爱所有的人；但另一面说，因为我们都很容易受别人影响，尤其是受朋友的影响，所以在交朋友的事上不得不谨慎。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：当我们选择朋友时，我们既要宽广又要小心。我们当然愿意和所有人作朋友，但同我们必须小心，绝不可加入他们去看、去参与不正当的东西。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：我们从父母知道，有些东西、有些游戏是不应该看，也不应该玩的。但我们可能有些朋友对这些事情感兴趣。比如暴力、杀戮、脏话、巫术/邪术、吸血鬼等等，但是这些却是不正当的，为什么呢？如果我们在互联网上搜索东西，遇到我们不应该观看的东西呢？如果我们的朋友邀请我们去玩暴力游戏或看不健康的电影呢？在这些情况下，我们可以作些什么才能不陷入其中？</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十三20 与智慧人同行的，必得智慧；和愚昧人作伴的，必受亏损。</p>
+<p>英国是一个以基督教为国教的国家，但在十八世纪的时候，英国的属灵情形非常低落，人不认识神的恩典，也失去了敬虔的心。就在这个黑暗的时期，在牛津大学中，有几位学生，他们经常在彼此的寝室里聚会，一同祷告、交通，其中领头的是一对爱主的兄弟，哥哥叫卫斯理约翰，弟弟叫卫斯理查理。他们和几个爱主的同学，在一起成为属灵同伴。因为他们常常聚在一起谈主的事，就受到其他同学的讥笑，称他们为『圣洁团』、『敬虔团』、『圣经蛀虫』、『循规者』等。他们在一起，有非常规律的生活，每晚六点到九点聚在寝室中祷告，每周并有两次禁食祷告，每月擘饼，并时常去探望病痛中的人和监狱中的囚犯。他们如同一班身上带着圣灵火焰的福音使者，将福音传扬出去。</p>
+<p>他们的另一特点，是公开承认主的名。这在其他同学眼中是可耻的事，甚至因他们承认主名而背弃远避他们。可见当时英国国教已是多么腐败，人竟不敢公开承认主名。但是这一群同伴，却没有因此而有所改变。他们那种敬虔的生活，吸引了真正渴慕主的同学。怀特腓乔治便是其中之一，他在校园中看见这班同学，就很羡慕和他们成为朋友，后来他认识了卫斯理查理，并在他们引导下，对主有更深的经历。怀特腓亲自作见证：『他（卫斯理查理）真是我所切望得着的一个属灵朋友。他不仅在一切事上帮助我，叫我软弱的膝盖得以刚强起来，并且扶持我一同走主的道路。这对我以后一生的工作和事奉，有决定性的影响。借着这位永远不能忘记的朋友，主指示我认识了真正属灵的生命和道路。』怀特腓加入了这个团体，和他们一同追求、祷告和事奉。他两位知己的朋友因此离开他，院长甚至恐吓要开除他。起先他害怕而屈服，但后来还是鼓起勇气，照常去探望病人，传扬福音。这群同伴在学校中虽遭受羞辱，但终不以为耻，仍旧坚定他们的信仰，后来都成为神所重用的仆人，并且是当时召会的祝福。一个真正的益友，乃是能彼此激励，以爱主、追求主为人生目标的朋友。这也就是圣经所告诉我们的：『当彼此相顾，激发爱心，勉励行善。』（来十24。）</p>
+<p>在班上，总会有一些行为较偏差的同学，对于这些同学，我们不需要和他们太亲近，免得受他们影响，也养成撒谎、偷窃、打闹、骂脏话等坏习惯。对那些不信神，又嘲弄、甚至咒诅信主耶稣之名的人，更不要主动和他们作朋友，因为他们所作的是亵渎、轻慢神。我们要尽可能与行为良好的同学，以及召会中敬畏神、相信神、爱神的孩子作朋友。</p>
+<p>圣经告诉我们，要为万人祈求、祷告、代求、感谢。（提前二1。）对那些行为不良，会亵渎、轻慢主名的同学，我们不该和他们太亲近，以免我们受他们影响，甚至被他们威胁一同去作坏事。但我们可以接受负担为他们祷告，因为他们需要主耶稣进到他们里面作他们的新生命，好改变他们的行为。我们也可以向他们传福音，如果他们愿意，我们可以和召会中的儿童老师交通，要如何进一步帮助他们。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：当我们选择朋友时，我们需要既宽广又小心。我们当然愿意和所有人作朋友，但同时我们也必须小心，不要和他们去不正当的地方，不要加入他们作不正当的事。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：圣经告诉我们，同伴会对我们造成很大影响。这就是为什么我们要小心，当他们去不正当的地方，作不正确的事，我们不要加入他们。如果放学后很多人都被邀请到一个人的家里，但你知道爸爸妈妈不同意，你该怎么办？如果你的朋友想对邻居恶作剧，你要怎么办？如果你看到或听到你的朋友取笑某人，或者不让谁参与他们的活动，你要怎么办呢？我们要顺从良心的感觉，要小心，不要去不应该去的地方，也不要参与作坏事。即使别人作了，也不要觉得有趣或“酷”。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

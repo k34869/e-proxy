@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('555')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('557')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第24课 性格—敞开</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言八33 要听训诲，要有智慧，不可轻忽。</p>
+<p>又是一次欢聚</p>
+<p>德国有一著名的大学教授，名叫本柏格尔，学问渊博，生活深为全校学生所钦佩。有几个好奇的学生，很想探究他所以有这样生活的秘诀。其中有一个学生偷偷藏匿在教授的书室里，观察他读些什么刊物。那天，教授很晚才走进书室，看起来很疲累的样子，但是他坐了下来，打开圣经，十分虔诚的读了一个钟头，接着向神祷告。祷告后，他合起圣经说道：“主耶稣，我们又是一次欢聚！”原来，这位教授是借着读经与主欢聚，向主敞开，吸取生命的供应，而活出生命的见证</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个敞开的人是能够接受他人帮助的人。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：我们需要愿意让别人告诉我们应该怎么作。如果你被要求整理床铺，你尽力把毯子铺好，但却不能把它弄平整。你不应该沮丧，而应请求家人来教你如何正确地铺床。遇到不知道怎么作的事，请求别人帮助比沮丧和放弃要好得多。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十九20 你要听劝戒，受训诲，使你终久有智慧。</p>
+<p>上面没有云雾</p>
+<p>有一艘大邮船在横渡大西洋时，遇见浓雾；但是船速仍然不减，照常猛速前进。船上的乘客多少有点忧心。经过一段时间后，他们便召集一个乘客大会，推派两位代表去见船长，请求减缓船速，并在船头和船尾加派船员值班，恐怕会因视线受雾阻碍，遭遇意外。船长接见乘客的代表，就托他们转告所有的乘客，不要担心，因为在船的最高处，就是船长和船员站着的驾驶台上，没有云雾，他们的视线并不受阻。信徒遭遇试炼、患难、困苦时，往往大起忧心，以为前面非常黑暗、渺茫，不知将要遇见什么。但请记得，引领我们的主是无所不知、无所不见的；我们只管向祂敞开，将我们的忧虑卸给祂。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个敞开的人是能够接受他人纠正的人。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：我们需要听取别人的意见和调整。当你正在作一项运动或玩一种乐器，教练或老师纠正你时，你不应该争辩，或试图说服别人你是对的，你知道该怎么作。你应该完全敞开，愿意接受纠正，然后纠正你的行为，以表明你已经听见，明白了，并想要改进。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十二15 愚妄人所行的，在自己眼中看为正直，惟智慧人肯听劝戒。</p>
+<p>箴言一8  我儿，要听你父亲的训诲，不可离弃你母亲的指教。</p>
+<p>叨雷博士的绝路</p>
+<p>叨雷博士是一个著名的布道家，曾经引领千千万万的人归主。然而，他年轻的时候，沉溺于罪恶中，不信有神，也不信圣经。他的母亲是个爱主的基督徒，经常为他祷告，并苦口劝他归向真神。但他非常厌烦，最后竟对母亲说道：“我厌烦你的苦劝，现在我要离开家，不再搅扰你了。”母亲一面流泪，一面劝他到大门口，说，“我儿啊！如果你到了极其黑暗、一切绝望的时候，你若肯求告你母亲的神，恳切寻求祂，祂必帮助你。”叨雷离家之后，果真陷入罪恶，并且越陷越深。某天夜里，他在旅馆里面感觉自己堕落罪恶苦境，人生乏味，不能入睡，正准备拿枪自尽时，突然想起母亲临别的话；叨雷立即双膝跪在床前，大声祷告说，“神啊！我母亲的神啊！倘若宇宙中真的有你，我要帮助，我要亮光，求你给我，我必跟随你。”祷告后，他的内心立刻放明，充满喜乐平安。于是，他赶紧回家，他的母亲见他回来，欢喜的说，“我儿啊！我知道你要回来，神已经对我说过，你得着主了。”你陷入罪恶境，力不能胜么？何不敞开胸怀，向神求告，祂必帮助你，将你的脚引到平安地路上</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个敞开的人是能够向别人承认，他们在某件事上需要帮助，或承认某些事正在困扰他们的人。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：假设在学校，你被困在数学方程上。你并没有轻易放弃，并尽力解决了好几次，但还是没弄明白。你的老师（或同学）过来问你是否需要帮助。一个敞开的人在需要帮助时不会感到羞愧或尴尬。或者假设有什么事情困扰着你。你需要敞开说明发生的事情。也许你对你的密友说了些什么，她就不再跟你说话了。在内心深处，你对自己所作的事感到恐惧，这在你的表情中表现出来。关心你的人（比如你的父母或哥哥姐姐）可能会问你出了什么问题。那时我们应该向他们敞开心扉，告诉他们我们的困扰，甚至承认我们所作的或所说的错误。另一个例子：如果你看到一些卑鄙的孩子欺负你班上的胆小鬼，怎么办呢？你想要帮助他，但如果你帮助他，他们也可能欺负你。你知道你需要作点什么，但不知道怎么作。一个敞开的人将寻求合适的人—父母或老师的帮助，以一个适当的，客观的，敞开的方式陈明事实，以为自己和他人寻求到帮助。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

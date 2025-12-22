@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('155')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('157')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">相信主的意义</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>信心<div id="CC">信就是所望之事的质实，是未见之事的确证。（希伯来书11:1）</div>
+<div id="CC">Now faith is the substantiation of things hoped for，the conviction of things not seen.（Hebrews 11:1）</div><hr/>相信主的意义<div id="CC">那以信为本的人，就是亚伯拉罕的子孙。（加3:7）</div>
+<div id="CC">They who are of faith，these are sons of Abraham.（Galatians 3:7）</div>
+<div id="C">旧约里的亚伯拉罕被称为“信心之父”。他舍弃了一切，除了信靠神以外无法往前。他信靠神，因为他不知道往那里去。神只告诉他要离开本地、亲族和父家。祂没有告诉亚伯拉罕往那里去，这迫使他信靠神。亚伯拉罕能说，“我只信靠神。祂带领我去那里，我就去那里。”我们若研读亚伯拉罕的历史，就会知道他的生活是信靠神的生活，信的生活。神不期待亚伯拉罕作什么。神似乎告诉他：“亚伯拉罕，你已蒙我呼召，不要作什么。我要为你作一切，只要与我同在。我行动的时候，你就行动；我往那里去，你就必须往那里去；不要为自己或凭自己作什么。”这就是信靠神的意思。<br/><br/>　许多人有错误的印象，以为相信主耶稣只不过是说，“主耶稣，我相信你，我接受你作我的救主。”这是对的，但相信主耶稣还有更深远的含意。相信主的意思是：我们必须了结自己，承认我们一无所是，一无所有，也一无所能。每一步、每一刻，我们都必须信靠祂。我不知道如何行事；我只知道如何信靠我的主。我已蒙召离开一切不是神的事物，现在我信入一切是神的事物。我相信祂，我也相信祂为我所成就的一切。我相信祂为我所能作的，也相信祂为我所要作的；我完全信靠祂。我们是信心之父亚伯拉罕的子孙，我们乃是信心的子民（加三7～9）。（罗马书生命读经）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

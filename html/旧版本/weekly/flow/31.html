@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('30')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('32')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>我父阿，若是可能，就叫这杯离开我；然而不要照我的意思，只要照你的意思。…祂第二次又去祷告说，我父阿，这杯若不能离开我，必要我喝，就愿你的旨意成就。（太二六39，42）</p>
+<p>紧的榜样—主耶稣（二）</p>
+<p>当主耶稣开始尽职时，在祂尚未作任何事之前，祂到约翰那里去受浸。水浸表征一个在肉体里的人，在神眼中乃是一无用处，只配死与埋葬。基督为着祂尽职的生活，乃是基于水浸的这个意义。我们在生活中，也必须有同样的基础。基于这水浸的意义，基督否认祂的己和祂天然的人。主耶稣没有自由照祂自己生活。主在约翰七章六节和八节，对祂的兄弟所说的话，给我们看见，主作为一个人在地上生活，甚至受时间的限制。诗歌三百八十二首第一节说到基督：‘荣耀基督，亲爱救主，你是神的荣耀显出！原是永远无限的神，竟作时间有限的人。’祂被限制在拿撒勒城过生活，大约三十年之久。祂原是在永远里无限的神，竟成了一个在地上受时间、空间限制的人。</p>
+<p>在路加十七章，主耶稣也教导我们如何作奴仆事奉：‘你们谁有奴仆耕地或是牧羊，从田里回来，你们会对他说，快过来坐下吃饭？岂不对他说，你给我豫备晚饭，束上带子伺候我；等我吃喝完了，你才可以吃喝么？奴仆照所吩咐的去作，主人还谢谢他么？你们也是如此，作完了一切吩咐你们的事，只当说，我们是无用的奴仆，所作的本是我们应当作的。’（7～10。）这里说要束上带子乃是谦卑的意思，也是紧的表征。就如以色列人出埃及，吃逾越节的羊羔时，要腰间束带，赶紧的吃。这表明无论是神的奴仆或神的子民，在服事或行动时，都该紧，不拖拉。（参神人的生活，85～86、92～93页；路加福音生命读经，376页。）</p>
+<p class="title">还有七年去作善工</p>
+<p>英国马甸亨利（Henry Martyn）拟赴印度传道。行前请求医生检验体格。检毕，医生说，‘你的身体太弱，住在印度气候不适，恐不能久留人世。’马甸说，‘照你豫料，我还能在世几年？’医生说，‘至多七年。’他听了非常喜乐，说，‘我有七年光阴，还能去作许多善工哩！’遂于一八○六年四月二十二日前往印度马德拉斯，由此再往加尔各答，将新约译成印度文。一八一一年在波斯布道，又将新约译成波斯文。译毕打算回国，行至小亚细亚之多吉城，病重而死。时一八一二年十月十六日。马甸在外国作工共六载有半。时间虽短，所作之工却不少。‘你们务要…竭力多作主工，因为知道你们的劳苦，在主里面不是徒然的。’（林前十五58。）（造就故事下册，3～4页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：学习不照自己的喜好行动，而是紧紧跟随主，照着主生活行动。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

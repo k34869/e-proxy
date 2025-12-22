@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('376')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('378')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">一千改一万</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>提前1:5　这嘱咐的目的乃是2爱，这爱是出于清洁的心、无亏的良心、并无伪的信心。But the end of the charge is love out of a pure heart and out of a good conscience and out of unfeigned faith;</p><p>爱克登夫人的姊妹，看见一位老人正在爬山，相当辛苦。老人停了下来，问她是不是爱克登夫人。她回答说，‘不是，我是她的姊妹。’那位老人有点失望。她就告诉他说，爱克登先生和夫人就住在山顶上的房子里。他就继续上登，面带愁容，看来很是伤心。于是她又问他，有什么事可以代他效劳？他说，‘我的名字是威尔登，四十年前，我在靠近这里的地方作事。临去之时没有把我购买食品所欠的二十块钱还给爱克登先生的父亲。现在我是个老人了，我又回到此地来住。我的良心异常不安，必须偿还此债。你能帮我解决这个问题么？’爱克登夫人的姊妹说，‘若是你信任我，我很愿意替他收下那笔款子，然后代你转交。’那位老人就把二十元的钞票递给她，并且谢谢她的好意。他说，‘现在我可以平安的回家了。我的心灵轻松极了。我妻和我今夜必能安然就寝，熟睡终夜了。愿神祝福你！’为欠人二十块钱，吃了四十年的苦，到底上算不上算？为什么因贪一点蝇头小利，而甘心忍受良心无尽期的责备呢？</p><p>儿诗205 每当我心安静主前</p><p>G大调4/4</p><p>1</p><p>每当我心安静主前，</p><p>灵里静听我主慈言，</p><p>圣灵充满在我心间，</p><p>使我得享平安无限。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

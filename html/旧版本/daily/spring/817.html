@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('816')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('818')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">唱诗的喜乐胜过金钱</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>以赛亚书 45:5</p><p>我是耶和华，再没有别神；除了我以外没有神；你虽不认识我，我却给你束腰；</p><p>以赛亚书 45:6</p><p>从日出之地到日落之处，使人都知道，除了我以外没有别神。我是耶和华，再没有别神；</p><p>以赛亚书 45:7</p><p>我是那形成光，又创造暗，造作平安，又创造灾祸的；我是那造作这一切的耶和华。</p><p>从前有一青年信徒，因为遭遇一种极大的挫折，以致心灰意懒，踌躇不前，面孔常常露出沮丧，甚至天气阴晴也能影响他的心情。一天，当他守晨更时，读到以赛亚四十五章五至七节：‘从日出之地到日落之处，使人都知道除了我以外，没有别神，我是耶和华，在我以外并没有别神。我造光，又造暗；我施平安，又降灾祸；造作这一切的是我耶和华。’他很受感动，觉得该在凡事上赞美耶和华的名；因此他就定规每天开始工作之时，在一切事上赞美神。这样，一天当中他就觉得有主同在，对所遇见的人也比平时热诚，工作也格外有趣，成绩也很满意。如此一直继续了好几年。因着赞美，生活有了新的气象，工作感到轻省许多，信心和勇气增加，更有忍耐和平安，真有说不尽的好处。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

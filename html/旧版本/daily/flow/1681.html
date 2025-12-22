@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1680')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1682')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 7 课<br />
+以基督为榜样活出佳美的品行（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：哦我要像你。（诗歌301首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：因基督也曾一次为罪受死，就是义的代替不义的，为要引你们到神面前；在肉体里祂被治死，在灵里祂却活着。（彼前三18：）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">五　在婚姻生活中—彼前三1～7</p>
+<p class="ot2">1　妻子要服从丈夫，使丈夫能因妻子的品行被主得着—1～2。</p>
+<p class="ot2">2　姊妹们的妆饰—3～4：</p>
+<p class="ot2">a　不重于外面的辫头发、戴金饰、穿衣服—3。</p>
+<p class="ot2">b　重于那以温柔安静的灵为不朽坏之妆饰的心中隐藏的人—4。</p>
+<p class="ot2">3　神对男女之命定的图画—5～6。</p>
+<p class="ot2">4　对丈夫的嘱咐—7：</p>
+<p class="ot2">a　要敬重妻子。</p>
+<p class="ot2">b　妻子与丈夫一同承受生命之恩。</p>
+<p class="ot1">六　在一般生活中—8～13</p>
+<p class="ot2">1　心思一致，同情体恤，弟兄相爱，心存慈怜，心思卑微—8。</p>
+<p class="ot2">2　不以恶报恶，倒要彼此祝福—9～10。</p>
+<p class="ot2">3　离恶行善，寻求和睦，竭力追逐—11～13。</p>
+<p class="ot1">七　因神旨为义受苦，如基督所行—14～22</p>
+<p class="ot2">1　因义受苦是有福的—14。</p>
+<p class="ot2">2　心里尊基督为圣，以祂为主，常作准备—15。</p>
+<p class="ot2">3　带着温柔和敬畏，存着无亏的良心—16。</p>
+<p class="ot2">4　基督的榜样—18～22：</p>
+<p class="ot2">a　基督受死，为要引我们到神面前—18上。</p>
+<p class="ot2">b　在肉体里祂被治死，在灵里祂却活着—18下。</p>
+<p class="ot2">c　基督向那些在监狱里的灵宣扬—19～20。</p>
+<p class="ot2">d　方舟的水所预表的浸，藉着耶稣基督复活拯救我们—21。</p>
+<p class="ot2">e　基督复活得高举，我们藉着这浸，进入与祂荣耀、尊贵的生机联结—22。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在婚姻及一般生活中，以基督为榜样活出佳美的品行；因神旨而为义受苦，如基督所行；经历与复活基督荣耀、尊贵的生机联结。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼前三章一至七节描绘神对男女之命定的图画。首先，作妻子的要服从丈夫，作丈夫的要敬重妻子。再者，姊妹们的妆饰不该重于外面的辫头发、戴金饰、穿衣服，乃要重于那以温柔安静的灵为不朽坏之妆饰的心中隐藏的人，这在神面前是极有价值的。第三，夫妻是一同承受生命之恩的，好使他们的祷告不受拦阻。八至十三节叙述在一般生活中活出佳美的品行：心思一致，同情体恤，弟兄相爱，心存慈怜，心思卑微，彼此祝福。十四至二十二节进一步说到，要因神旨为义受苦，如基督所行。认识基督受死是要引我们到神面前；在肉体里祂被治死，在灵里祂却活着。也认识我们藉着受浸向神诉求无亏的良心，并藉着耶稣基督复活，进入与基督荣耀、尊贵的生机联结，活出佳美且荣耀神的品行。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　姊妹们在婚姻生活中的品行</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前三1～2：照样，作妻子的，要服从自己的丈夫，好叫那些甚至不信从主话的，也可以不用主的话，藉着妻子的品行，被主得着，这是因为他们亲眼看见你们敬畏中纯洁的品行。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>纯洁、贞洁的品行必是圣别的行事为人，佳美的品行以及好品行。在召会生活中，姊妹可能珍赏别人的丈夫，过于珍赏自己的丈夫；姊妹们也可能觉得服从自己丈夫以外的弟兄比较容易。但彼得告诉作妻子的，她们若服从自己的丈夫，作丈夫的甚至可以不用主的话，就能藉着妻子那感动人的品行，被主得着。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练圣别、虔诚的敬畏，而有佳美、纯洁、贞洁的品行。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

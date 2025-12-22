@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('497')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('499')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">为受浸争是非</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗十三1 1　在上有权柄的，人人都当服从，因为没有权柄不是从神来的，凡掌权的都是神所设立的。</p><p>倪弟兄在中学读书时，常常传福音，为主作见证。是时，有一个弟兄，年纪比他大，他们常闹意见。他们所闹的，不是私事，乃是公事，所谓公事公闹。他心里想，这件事是不对的，那弟兄如果作，他就要争。但是，任凭怎么争，那弟兄偏不听。惟一的理由，就是那弟兄比他大五岁。他虽什么理由都可以争，但他不能争说，他比那弟兄大五岁，这个他没有办法。他心里不服输，就到一位年长，在灵性上很好的姊妹那里，把他们所争的事，告诉她，请她评评看，到底是谁对？可是，她也不说对，也不说不对，她两个眼睛瞪着说，‘你更好是听他的话。’他心里不服，就说，‘如果是我对，就说对；如果是我不对，就说不对，为什么说，“更好是听他的话？”’她说，‘在主里面，年纪小的应该听年纪大的。’他气极了就说，‘在主里，如果年纪小的是对的，也应当听在主里年纪大的是错的人么？’她仍是笑笑的说，‘你更好是听他的话。’己意如果没有受对付，争闹就永远不能止息。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

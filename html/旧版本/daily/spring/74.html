@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('73')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('75')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">为中国人得救提名祷告</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">所以，我愿男人无忿怒，无争论，举起虔圣的手，随处祷告。（提前2:8）</div>
+<div id="CC">I desire therefore that men pray in every place，lifting up holy hands，without wrath and reasoning.（1 Timothy 2:8）</div>
+<div id="C">内地会在中国的工作，有一段时间非常兴旺，可说是全世界最兴旺的区域。其中的原因从来没有人知晓，直到内地会的创办人戴德生有一年去英国，才找出这原因。有一天他在英国某地讲完了道，就有一位青年人前来对他说，“我对于中国内地会的光景，以及什么人得救，我都知道。因为我有一位同学，在中国传道，凡有心向道的中国人，他都不断地把他们的名字寄来给我，我就不断的一一为他们祷告。”戴德生这才明白，原来在英国有一个祷告的人，不但天天祷告，而且特别提名祷告，可说是代祷的传福音者。虽然他未曾亲临中国，但他在中国福音上所得的果效是奇妙的。<br/><br/>　你的亲戚、朋友、同事、同学，是不是还有许多没得救的呢？你是否天天特别提名为他们一一祷告？请不要忘了他们。</div>
+<div id="CC">祷告─与主同劳（诗569）</div>
+<div id="C">祷告与主同劳苦，<br/>　照主心意和目的；<br/>　与主完全的联合，<br/>　直到祝福能满溢。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

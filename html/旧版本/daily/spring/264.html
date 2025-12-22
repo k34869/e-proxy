@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('263')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('265')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">黑奴感恩</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">他的主人就要带他到审判官那里，又要带他到门或门框那里，用锥子穿他的耳朵，他就永远服事主人。（出21:6）</div>
+<div id="CC">Then his master shall bring him to God and shall bring him to the door or to the doorpost，and his master shall bore his ear through with an awl; and he shall serve him forever.（Exodus 21:6）</div>
+<div id="C">五百年前有人将非洲黑人卖到欧美各国，充任劳役，待遇如同牛马，不只担任种种苦工，责打至死也不负责。有时一家数口被人卖到各处，妻离子散，苦死异乡，终身不能再见，真是惨无人道。有一次，某一个市场拍卖黑奴，最后卖到一个又大又高，特别强壮的黑奴。他被双条铁链捆着，人人视为奇货，出价甚高，争欲得之。一位绅士见他可怜，出了一笔特高的代价，把他买来。拍卖黑奴的人，就将卖契交给绅士，并且嘱咐他说，“这个黑奴力大无比，必须饿他七天，才可解开铁链；否则他会立刻把你打死，还要逃去。”绅士接过卖契之后，当着黑奴的面撕掉，并说，“我来买你不是要你作我奴隶；乃是要叫你得着自由。”于是解开他的捆索，叫他回家。黑奴感恩之后，二人各自离去。黑奴走到半路，心想，天下那有如此好人，我不爱他还爱谁呢？于是回头追上绅士，急忙跪在他脚前，甘心情愿作他的奴仆，以报大恩。绅士一再推辞，终以儿子之名收留了他。<br/><br/>　主既用重价把我们买来，叫我们从罪里得了释放，得以自由；我们理当爱祂，奉献给祂，甘心作祂的奴仆。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

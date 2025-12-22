@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('473')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('475')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">大声祷告给祖母听</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>申命记 5:32　所以你们要照耶和华你们神所吩咐的，谨守遵行，不可偏离左右。</p><p>徐弟兄和史弟兄，每天晚上聚在一起有守望祷告，祷告到十一点以后，还是大声祷告。邻居们被吵得不能睡觉，心里非常厌烦，就将史弟兄所穿的短靴灌满两靴子冷水。史弟兄出来穿鞋时，发现满靴冷水，知道有人为难他。他不敢说话，就感谢主的管教，承认自己的错，便回家去了；从此不敢再来。徐弟兄便另外约了一位吕弟兄，改在下午十二点到三点一同守望祷告。那知这段时间正逢邻居们午睡，又引起他们的忿恨，于是就等这边祷告之时，在纸门那边大开收音机，以作抵抗。但是弟兄们祷告的声音却更大，隔壁邻居又加放一个收音机，用顶大的声音来抵制他们。徐、吕两位弟兄又更加大声祷告，以致全身被汗湿透，并且求主捆绑魔鬼。隔壁邻居最后搬来四个收音机同时播放，镇压祷告的声音。祷告固然是好、是对，但在人前一失去谨守的原则，就把一件属灵的事弄得成为肉体的活动了。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('590')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('592')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第29课  性格—不急躁</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>传道书九10上 凡你手所当作的事要尽力去作……</p>
+<p>今天是周末，妈妈说，小明我们把家里整理一下吧，你去把你的书桌整理一下，把你书桌上的书全部放到书架上，要把桌子擦干净，还没有等妈妈说完，小明就不耐烦的说知道了，然后就冲进房间三下五除二的把书往书架的角落里塞，然后就大声的喊着说，妈妈，我打扫完了。</p>
+<p>妈妈说这么快啊！一会儿，听到身后哗啦一声响，是什么声音啊，小明说：没事，是我的书倒了，妈妈走进房间一看，对小明说，我们做事不能急躁，要认真的把书摆放整齐，从小要养成一个做事认真的好孩子，小明听了妈妈的话，和妈妈一起把书一本一本整齐地摆在书架上。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：性格急躁的人是作事总会太快的人。不急躁的人会以适当的速度，细心地把事情作彻底。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当你洗手时，你是不是就用几把水随便湿一下？急躁的人会那样作。不急躁的人会把肥皂放在两只手上揉搓，然后彻底冲洗。问问孩子们，在刷牙、换衣服等事情上，怎样是以正确的速度，耐心彻底的作事。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>传道书五2上 你在神面前不可冒失开口，也不可心急发言…</p>
+<p>有一个脾气急躁的小男孩，一天到晚在家里发脾气，摔摔打打，特别任性．有一天，他爸爸就把这孩子拉到了他家后院的篱笆旁边，说：”儿子，你以后每跟家人发一次脾气，就往篱笆上钉一个钉子．过了一段时间，你看看你发了多少脾气，好不好？”这孩子想，那怕什么？我就看看吧．后来，他每发一次脾气，就自己往篱笆上敲一个钉子，一天下来，自己一看：哎呀，一堆钉子！爸爸说：”你看你要克制了吧？你要能做到一整天不发一次脾气，就可以拔掉一根钉子，这个孩子一想，发一次脾气就钉一个钉子，一天不发脾气才能拔一个钉子，多难啊！可是为了让钉子减少，他也只有不断地克制自己．一开始，男孩觉得真难啊，但是等到他把篱笆上所有的钉子都拔光的时候，他突然发觉自己已经学会了克制，他非常欣喜地找到爸爸说：篱笆上的钉子都拔光了，我现在不发脾气了．”爸爸跟孩子来到了篱笆旁边说：孩子你看，篱笆上的钉子已经拔光了，但是那些洞永远留在了这里，所以我们凡事不能急燥。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：性格急躁的人是作事或说话总会太快的人。不急躁的人会在他们说话之前认真考虑，所以他们不会粗心大意地说话。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：当你听到有人谈论你，说你坏话的时候，你会立刻作出反应，还是先冷静下来想一想？当你生气时，你会立马说出气话，伤害人吗？急躁的人，总是很快的，很粗心的说话、作事，不考虑是否会伤害他人。他们常常后悔自己说过的话或作过的事。我们在说话作事之前要先考虑一下，不要急躁行事。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二一5 殷勤人的筹算，足致丰裕；行事急躁的，都必缺乏。</p>
+<p>一位医生在接到紧急手术的电话后，，以最快的速度赶到医院并换上手术服，男孩的父亲急燥地对他喊道：“你怎么这么晚才来？你难道不知道我儿子正处在危险中吗？你怎么一点责任心都没有。”</p>
+<p>医生淡然地笑着说：“很抱歉，刚刚我不在医院，接到电话就马上赶来了，您冷静一下。”冷静？如果手术室里躺着的是你的儿子，你能冷静吗？如果现在你的儿子死了，你会怎么样？”男孩的父亲愤怒地说，</p>
+<p>医生又淡然地笑着说：“我会默念愿上帝保守，‘我们从尘土中来，也都归于尘土’请为你的儿子祈祷吧！”</p>
+<p>几个小时后，手术顺利完成，医生高兴地从手术室走出来，对男孩的父亲说，谢天谢地，您的儿子得救了！</p>
+<p>还没等男孩的父亲答话，便匆匆离去，并说如果有问题，你可以问护士！</p>
+<p>他怎么如此傲慢！男孩的父亲对护士愤愤不平地说话，护士的眼泪一下子流出来了，他的儿子昨天在交通事故中身亡了，我们叫他来为你儿子做手术的时候，他正去殡仪馆的路上，现在他救活了你的儿子，要赶去完成他儿子的葬礼。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：性格急躁的人是太快作出反应的人。不急躁的人会小心的说话作事，以免有遗漏或犯粗心的错误。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：你有没有过匆匆忙忙地作完试卷，后来才想起来试卷后面那页没有写？你有没有过还没读完答题要求，就匆匆忙忙地作作业？一个不急躁的人会认真作事，不会错过任何事情或犯不必要的错误。当我们作作业时，我们应该仔细核对答案，避免粗心的错误。我们作任工作之前都要仔细阅读指导说明书。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('289')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('291')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">倪弟兄去建瓯(四)</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我的神必在荣耀中，照着祂的丰富，在基督耶稣里，使你们一切所需用的都充足。（腓4:19）</div>
+<div id="CC">And my God will fill your every need according to His riches，in glory，in Christ Jesus.（Philippians 4:19）</div>
+<div id="C">倪弟兄回来后，那位同工的妻子看见他，就问说，“倪弟兄，我要问你一件事。你离开福州时，为什么送我丈夫钱？为什么你把钱一塞给他，立刻就走了？”他说，“没有别的，是因为我祷告了一天，主给我看见说，该送给他。所以我从家里出去，在路上碰见他，就把钱给了他。”她说，“那一天晚上，是我们家里最末了的一餐，最末了的一点柴。你的钱来的时候，米也买了一担，柴也买了许多斤，一直到前几天，主才给我们另外有一点钱。那一次，我们一直等候在主面前。”倪弟兄心里非常清楚，如果把钱留在口袋里，那钱就死掉了；但那钱送出去，就有用了。在路上他仰起头来，对主说，“路加六章三十八节，我是第一次看见。”就在那里，把他自己再一次奉献给主说，“从今天起，我定规要给，我不愿意一文钱留在我手里是懒惰的钱。我要把钱送出去，让神行神迹；我要把钱送出去，当作神听祷告的答应。”<br/><br/>　我们岂不也当把钱奉献出去，让神行神迹；把钱送出去，作神听祷告的答应？</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

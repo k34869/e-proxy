@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('152')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('154')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">正的操练（三）接受主的管教，修直自己的路径</p>
+<p>所以你们要把下垂的手，瘫弱的膝挺起来；也要为自己的脚把路径修直了，使瘸子不至脱臼，反得医治。（来十二12～13）</p>
+<p>希伯来十二章说到，神管教我们，因为我们是祂所爱的。神要把我们带到一个地步，能彀成功作一个器皿，所以祂才施行管教。神是因着爱的缘故，才花工夫在那里管教祂自己的儿女，因此管教乃是爱的安排。我们接受了主耶稣作救主，成为神的儿女，就要准备受管教。一个好的父亲，对于自己的儿子，必定有一个按部就班的教育。他必是按着自己定规的几件事，来教育他的儿子，叫他的儿子学习诚实，学习殷勤，学习能受苦，学习有高尚的心志。从我们得救之后，神也起首安排一个课程，叫我们学所该学的功课，要我们在性情上与祂相同。所以祂就有安排，有管教，有鞭打，要在我们身上造出某一种的性格。</p>
+<p>我们受管教之后，就会结出平安的义果。（11。）同时，‘也要为自己的脚把路径修直了。’（13上。）今天，好像我们走过了这一条路，把这一条路很正直的摆在人面前，为要‘使瘸子不至脱臼，反得医治’。（13下。）好让那班走不来的人，因着我们的路正直的缘故，因着我们这样走路的缘故，也能彀不至于脱臼，也能彀得着医治，也能彀跟着我们一块儿走。所以当我们受试炼的时候，我们若服在神大能的手下，圣洁的品格就能建造在我们身上；我们也能彀带领别人，路走得正直，不至于脱臼，反而得着医治。我们自己总得顺服神，总得结出平安的义果。这样，不只我们自己的路能彀正直，并且还能彀带领别人走正直的路。所有瘸腿的人，都能走在这条路上。所有瘸腿的人，都能得着医治。在世界上还有许多人是瘸腿的，要因着我们的路是正直的，他们就也能得着医治。所以我们要替弟兄们开出一条路来。（参初信造就下册，159～161、180～182页。）</p>
+<p class="title">将自己交给主</p>
+<p>许多时候，我们好像那无知的骡马一样，需要神在外面用嚼环、辔头拉住我们，勒住我们，我们才不会错。你看过赶鸭子的人么？赶鸭子的人手里拿着长竿，鸭子要往左边去，他就用竿子把它赶过来；鸭子要往右边去，他也用竿子把它赶过来；鸭子没有办法，只好走到正路上。照样，你也可以把自己交给主，对主说，‘主，我在你面前真像无知的骡马，但是，我不要错，我要知道你的旨意。求你用嚼环来勒住我，求你用缰绳来拉住我。你一放手，我就跑错了。求你把我圈在你的旨意里，求你把我赶到你的旨意里。如果我要离开，就愿意你干涉。别的我不知道，疼痛我知道。在我不要你的旨意的时候，求你干涉我！’</p>
+<p>我们千万不要轻看神在环境中的安排。许多时候，我们好像作了无知的骡马，并不体面，但是能被勒住，也就是神的怜悯，使我们能正确的照着神的旨意跟从祂。（参初信造就中册，174～175页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：服在神大能的手下，接受神的管教，修直自己的路径。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

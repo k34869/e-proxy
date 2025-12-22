@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('201')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('203')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">心转向主，除去帕子</p>
+<p>但我们众人既然以没有帕子遮蔽的脸，好像镜子观看并返照主的荣光，就渐渐变化成为与祂同样的形像，从荣耀到荣耀，乃是从主灵变化成的。（林后三18）</p>
+<p>林后三章十六至十八节说，‘但他们的心几时转向主，帕子就几时除去了。而且主就是那灵；主的灵在那里，那里就有自由。但我们众人既然以没有帕子遮蔽的脸，好像镜子观看并返照主的荣光，就渐渐变化成为与祂同样的形像，从荣耀到荣耀，乃是从主灵变化成的。’在我们重生时，主就进到我们里面，住在我们灵里，我们与主乃是面对面，彼此有交通。然而，一天过一天，当我们面对生活中的人事物时，我们就不知不觉背向了主。这就是‘帕子’。帕子不是一个东西或事物，而是‘背’向主。主在我们灵里，我们与祂原是面对面的；但我们的心若向着世界的许多事物，而不向着主，我们与主之间就有帕子。我们需要将心转过来，与主面对面，帕子就除去了。这时心敞开了，圣灵就能从我们灵里往外扩展，经过我们的心，进到我们魂的每一部分，我们就能敞着脸，看见主的荣光。</p>
+<p>按照十八节，我们就是一面镜子，一个敞开的脸，对准主；对得越准，对得越近，就照得越清楚，返照得越有荣光。什么是敞着脸？向着主的心就是敞着的脸。我们的心爱主，我们的心向主就是敞开的，脸也是敞开的；我们就能面对面看见主，天天和主有交通。主藉着祂的灵，就把祂的荣耀，祂那是灵的自己，充满在我们魂的各部分，使我们的思想、爱好和定意，都有主的形像，这就是返照主的荣光。愿主得着我们的心更爱祂，天天藉着呼求祂的名、读主的话、祷告，向祂敞开。这样祂就能彀从我们的灵，扩展到我们的心思、情感、意志里，使我们全人里面都有主的灵，都有自由。这个自由就是荣耀，就是神的同在，就是神的显出；这叫我们觉得高尚、尊贵、光荣。日复一日，我们越爱主，越给主机会，主就越在我们里面扩展，我们就天天长大、变化，至终变成主的形状。（参基督徒生命成熟的路，132～137、165～166页。）</p>
+<p class="title">盖蜡烛铁帽</p>
+<p>有一位研究科学的学者来问一位牧师说，‘我将新旧约原文圣经从头到尾，仔细读了十七遍，而且与科学细细比较，发觉圣经所说基督的救赎，并不像你所讲的，太奇怪了！’牧师说，‘没有什么可奇怪的。我在几天前的某个晚上，想点蜡烛，总点不着，觉得非常奇怪。再仔细一看，原来是忘记揭开盖在上面的铁帽。假使我不揭开铁帽，就是点了十七次蜡烛也是不会亮的！所以，凡用科学知识、成见，去读圣经的，心眼必被遮蔽，就如蜡烛盖上了铁帽一样。’读经不可有自己的观念、成见和看法；否则，这些会成为你里面的帕子，叫你读了，仍旧不懂。（参造就故事上册，26页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：操练将心转向主，让圣灵在我们里面扩展，使我们长大、变化。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

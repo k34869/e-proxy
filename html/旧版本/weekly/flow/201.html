@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('200')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('202')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>主向父并向人敞开的榜样（二）</p>
+<p>耶稣拿着五个饼两条鱼，望着天祝福，擘开饼，递给门徒，摆在众人面前，也把那两条鱼分给众人。（可六41）</p>
+<p>马太十四章记载主耶稣看见大批的群众，就对他们动了慈心，治好了他们的病人。到了黄昏，这些群众在野地里没有可吃的。但主藉着一个小男孩摆出的五饼二鱼，望天祝福，而食饱了五千人。（14～21。）十九节说，祂‘拿着五个饼两条鱼，望着天祝福’。主耶稣仰望祂在天上的父，这指明祂知道祝福的源头不是祂，父才是祝福的源头。因此主望着天，向着天上的父敞开，从父得着祝福。</p>
+<p>读圣经的人大多注意到主从无变有的神迹。但我们必须看见，主在此所设立的榜样。主在门徒面前仰望天上的父，并祝福五饼二鱼。祂这样祝福之后，就告诉门徒该作什么。祂所作的乃是榜样，要门徒跟祂学。从主的榜样我们看见，我们不是差遣者，我们只是差遣者所差遣的人。无论我们能作多少，我们应当看见，我们仍然需要从源头，就是从那差遣我们者而来的祝福，使我们能把祝福传给人。</p>
+<p>在十九章记载另一个事例：‘那时，有人带着小孩子到耶稣那里，要祂为他们按手祷告，门徒就责备那些人。耶稣却说，让小孩子到我这里来，不要禁止他们，因为诸天之国正是这等人的。祂给他们按了手，就从那里往前去。’（13～15。）在此，主改正门徒，叫他们不要禁止，反要让小孩子到祂这里来，并指出诸天的国正是这等人的。（14。）主也藉着给小孩子按手祝福，训练门徒。（15。）这说出主绝不弃绝软弱、犯错、失败的人；他们乃是像小孩子一样，但主不会忘掉他们，祂仍然为他们祝福。从这事例，一面我们看见主向着人是敞开的，祂不拒绝软弱、幼小的人，反而愿意人人到祂那里得生命；另一面，这事例也教导我们，为着主的权益该敞开的对待人，好把人引到主那里。（参神人的生活，146、162页。）</p>
+<p class="title">抓紧藤枝往上看</p>
+<p>从前，一位传道人来到非洲的比属刚果。一天，要过一座用藤葛编成的桥。两端藤葛交缠树上，高悬空中，飘摇无定；下临深渊，景况非常危险。那位传道人俯瞰下面激流湍急的河水，又想想伏在水中的巨鳄，简直不敢走过那桥。有一位本地人和他同行，知道他非常恐惧，就说，‘不要怕，抓紧藤枝，往上看；不要向下看，这是走过这桥的惟一窍门。’那位传道人照着那人所说的握紧藤枝，并往上看，于是平安到达对岸。基督徒度过险境的惟一秘诀，就是往上看，抬起脸来仰望神。看环境会叫你畏缩不前；仰望神会叫你勇敢直前。（参造就故事上册，123～124页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：凡事仰望、信靠主，以主为祝福和供应的源头，并把祝福传给人。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

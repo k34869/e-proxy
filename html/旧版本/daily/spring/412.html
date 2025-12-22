@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('411')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('413')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">吃西瓜扇扇子</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗15:13　但愿那赐盼望的神，因信将一切喜乐平安充满你们，使你们靠圣灵的能力，充盈满溢的有盼望。Now the God of hope fill you with all joy and peace in believing, that you may abound in hope in the power of the Holy Spirit.</p><p>林弟兄因被误会，关在牢内。将近一年之久，审查结果，无罪释放。当他入狱之时，情节非常严重，有性命的危险；但他是属主的人，不怕误会，内心仍旧平安。当他快要出狱的前几天，一无所知，求神给他一个启示。他看着自己房间的号头，里面就有一个意思，照这号头读诗篇九篇九节：‘耶和华又要给受欺压的人作高台，在患难的时候作高台。’他非常高兴，就对同住的人宣告说，我不久要出狱了。他们问他说，你怎么知道呢？他说，我有高台；神是我的高台，神是受欺压人的高台。你们有后台，有前台；但我有高台。他的内心觉得，三天之内，神一定让他出去。但在外面，一点消息都没有。他就与同房的人说，请你们帮我的忙，作出狱的演习。因为出牢的人必须在两、三分钟之内，把所有的用具，立即捆扎起来离开，也不许与同住的人说话，免得带出消息。林弟兄因为在牢已久，物件很多，所以要在几分钟之内出去，是不容易的事；所以他请同伴的人分三组演习，第一个人给他捆行李，第二个人给他装箱子，第三个人给他整网篮。这样演习过一次，因为时间花了十几分钟，林弟兄认为不满意。第二天，请他们再演习一次，时间还是太长，不合规定。他们又演习一次，把一些东西送给人了。自己赶紧去洗衣服，正洗的时候，心里觉得，也许这衣服还没有干，就叫我出狱。果然到九点钟的时候，有一个职员告诉他说，法官找你讲话。他知道有希望。法官对他说，你的事情已经查清楚了，你可以离开，即刻拿行李，不许与任何人说话。两个刑警仍旧把他架回房间，赶紧整理行李，照着前两、三天所演习的，不到两分钟，拿着行李离开牢狱。弟兄姊妹，你看神膏油涂抹的教训，是何等准确、清楚，在敬畏安静等候祂的人身上，格外显得明白。</p><p>新歌,#99 如今主你就是那灵</p><p>一</p><p>如今主，你就是那灵，是那赐人生命的活灵，</p><p>为进我灵作我生命，你已完成必经的过程；</p><p>你从天降下成肉体，从阴间上来又复起，</p><p>今犹如空气在我口里，随时随在我可享受你。</p><p>对我，你丰富无比，对我，你何等实际，</p><p>丰富无比，何等实际，因你就在我心里！</p><p>_二_</p><p>愿主多赐我以那灵，以你新鲜生命来供应，</p><p>从我中心浸透、充盈，直达圆周，处处都光明；</p><p>你多方运行并工作，像神对膏油在涂抹，</p><p>将我的心，灵全浸润过，且来挑旺我深处爱火。</p><p>有你，我灵会飞扬，有你，我心会歌唱，</p><p>灵会飞扬，心会歌唱，生活如同在天上！</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

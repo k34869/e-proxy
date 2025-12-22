@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('59')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('61')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>所以我要使祂与至大者同分，与至强者均分掳物；因为祂将命倾倒，以至于死，且被算在罪犯之中；惟独祂担当多人的罪，又为罪犯代求。（赛五三12）</p>
+<p>大的榜样—主耶稣（一）</p>
+<p>主耶稣在地上尽职的三年半，处处都可看见祂‘大’的榜样。路加九章记载，主耶稣被接上升的日子将到，祂就定意面向耶路撒冷去，并且打发使者走在祂前面。门徒们就去，进了撒玛利亚的一个村庄，要为祂豫备。那里的人不接待祂，因祂面向耶路撒冷去。主所爱的两个门徒雅各和约翰，主曾给他们起名叫‘雷子’，因为他们的性情急躁，看见撒玛利亚人弃绝人救主，就说，‘主阿，你要我们吩咐火从天上降下来，烧灭他们么？’主转身责备他们，说，‘你们的灵如何，你们并不知道。’又说，‘人子来不是要灭人的性命，乃是要救人的性命。’这里我们看见，雅各和约翰急躁的话，与他们所陪伴之人救主的‘大’相反。（51～56，与54注1。）</p>
+<p>当主耶稣要被钉十字架之前，祂在客西马尼园祷告。有一群人带着刀棒来捉拿祂。彼得看见有人来捉拿耶稣，立刻伸手拔出刀来，将大祭司的奴仆砍了一刀，削掉了他一个耳朵。主耶稣却说，‘由他们到这个地步罢！’又说，‘你想我不能求我父，现在为我派遣十二营多的天使来么？若是这样，经上所说事情必须如此的话，怎能应验？’于是主摸了那奴仆的耳朵，把他治好了。（太二六47～54，路二二49～51。）</p>
+<p>此外，当主耶稣被钉在十字架上时，经过的人都亵渎祂，戏弄、嘲笑祂，说，‘祂救了别人，不能救自己。祂是以色列的王，现在可以从十字架上下来，我们就信靠祂。’连和祂同钉的强盗，也是这样辱骂祂。但主耶稣却在祂的人性里，在十字架上为这些亵渎祂的人祷告，说，‘父阿，赦免他们，因为他们所作的，他们不晓得。’甚至主在十字架上时，祂仍然拯救寻求祂的人。与祂同钉的一个强盗，对主说，‘耶稣阿，你来进入你国的时候，求你记念我。’主回答他说，‘我实在告诉你，今日你要同我在乐园里了。’主这样赦免罪人的过犯，说出祂是何等的大！（太二七33～44，可十五22～32，路二三33～43，约十九17～24。）</p>
+<p class="title">爱仇敌</p>
+<p>托美资是南冰洋群岛中的呵海安岛王。一八一八年，他接受了福音，立刻就有一班拜偶像的人，想要设计谋害他。但他们的诡计—包括烧死所有基督徒—被人查出来了。当他们被抓上岸时，他们想自己是必死的，那知他们惊讶的看见一桌丰盛的筵席，奉主耶稣基督的名，并根据主的教训，摆列着请他们享用。有些人甚至惊奇到不能吃的地步。末了，在这些被抓的人中，有一位酋长站起来说，因为被基督徒的爱心所胜，从今以后绝不再拜偶像。几天之后，岛上没有一个偶像余留，也不再有一个拜偶像者存在。（参倪柝声文集第一辑第七册，44～45页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：效法主的榜样，爱我们的仇敌，为那逼迫我们的祷告。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

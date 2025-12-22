@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('65')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('67')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第2系列 第38课  正确的人性—悔改而不顽梗</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>耶利米书二十六3上 或者他们肯听从，各人回转离开恶道…</p>
+<p>挂在杆上的铜蛇</p>
+<p>以色列人从何珥山起行，沿着通往红海的路走，要绕过以东地。因为路途遥远又难走，百姓走在这路上，心中就烦躁， 开始毁谤神和摩西说，你们为什么把我们从埃及领上来，使我们死在旷野？这里没有粮，没有水，我们的心厌恶这淡薄的食物。 于是耶和华打发火蛇进入百姓中间，蛇就咬他们，以致以色列中死了许多人。百姓到摩西那里，说，我们有罪了，因为我们毁谤了耶和华和你；求你向耶和华祷告，叫这些蛇离开我们。于是摩西为百姓祷告。 耶和华对摩西说，你制造一条火蛇，挂在杆上；凡被咬的，一看这蛇，就必得活。 摩西便制造一条铜蛇，挂在杆上；蛇若咬了什么人，那人一望这铜蛇就活了。焦    点： 忏悔是不坚持你的对，并且承认你所做的事情是错的。当我们做错事时，我们应该道歉，不要顽梗。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦    点： 忏悔是不坚持你的对，并且承认你所做的事情是错的。当我们做错事时，我们应该道歉，不要顽梗。
+</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：假设你早餐想要麦片粥，告诉你妈妈你可以自己倒麦片和牛奶。因为牛奶很重容易洒出来，妈妈想帮你，但你坚持自己做。结果弄洒很多。忏悔就是为洒牛奶和坚持自己而道歉。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>士师记二19下  …他们…总不断绝他们的恶行，和顽梗的行径。</p>
+<p>我们必须脱离顽梗并悔改转向神。在旧约撒木耳上十三章看到扫罗的湖涂献祭，撒木耳对他说，你作了湖涂事。没有遵守耶和华所吩咐你的命令，若遵守耶和华必坚立你的国，直到永远。并在十五章18一19节那里说，耶和华差遗扫罗去击败亚马力人，连人带牲蓄尽都灭尽。但他没有听从耶和华的活，私自把上好的牛羊带回要献与耶和华为祭。然而，撒木耳却对扫罗说，耶和华喜悦燔祭和平安祭，岂如喜悦人听从祂的话呢？看那听从胜于献祭，听命胜于公羊的脂油。悖逆与行邪术的罪相等，顽梗与拜虚神与家神相同。你既厌弃耶和华的活。耶和华也厌弃你作王。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点： 我们应该为错误的做法悔改悔。这意思是我们应该转离错误，而不是故意和重复地做这些事情。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：当我们后悔做了错事时，我们应该远离它，不再做。假设在你的家里有一个规则，你不允许玩电子游戏，直到你的家庭作业完成。有一天你玩一些电子游戏，并且很快的完成了你的作业。即使如此，首先玩电子游戏是在破坏你的家规。还有一个例子：假设你不允许在你的房间里吃任何食物，但是你妈妈发现你在床上吃了一袋薯条。把任何食物带进你的房间，即使你弄乱房间，也会是错误的，而没有为此悔改。为此悔过就是后悔，并且不再这样做了。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传八22 你当悔改，离弃这恶，祈求主，或者你心里的意念可得赦免；</p>
+<p>在约拿逃往他施的途中，耶和华使扫风大作，排江倒海险些使船翻入海里，约拿知道是因自己的缘故，便吩咐众人将他投入海里，正如他自己所说，海水又恢复了平静。船上的众人因此都敬畏神向神献祭许愿。约拿被抛在海里祈求神拯救他脱离大鱼的口，神听了约拿的祷告，吩咐大鱼将其吐在陆地上。   其佢拿悔悔改听从了耶和华的话，向外帮作恶的尼尼微城，传神的福音，结果尼尼微城的人听见神的话从最大的到至小的都悔改，离开所行的恶道，丢弃手中的强暴，神查看他们的行动，知道他们有悔改的心，再也不行他们先前所行的恶神就悦纳他们不在降灾祸与他们了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：我们应该为我们心中不正确的考虑和意图悔改。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：假设你在星期五早上做了一个没有充分准备的测试。你知道如果你不是真的生病了，你就不应该撒谎生病，但是你躺在床上思考你逃避考试的方法。你可能会问自己：“如果我说我胃痛或喉咙痛怎么办？”也许我可以说我感觉不舒服。这些借口有什么用？“我们心中的这些想法揭示出我们有一些不正当的东西。即使我们没有谎或做错任何事，我们心中的考虑可能也是错误的，为此我们需要悔改。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

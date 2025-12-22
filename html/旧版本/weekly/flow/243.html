@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('242')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('244')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">复活的主与退后的门徒同行并同在</p>
+<p>他们彼此说，在路上祂和我们说话，给我们解开圣经的时候，我们心里岂不是火热的么？（路二四32）</p>
+<p>路加二十四章十三至三十五节，记载复活的主向两个门徒显现。当时，这两个门徒全然失望，深深沮丧，所以没有留在耶路撒冷，反而离开耶路撒冷往以马忤斯去。当他们正谈论所遇见的事时，主耶稣亲自就近他们，与他们同行。</p>
+<p>当时，他们不认识复活的主。主与他们同行，从摩西和众申言者起，凡经上指着自己的话，都给他们讲解明白了。虽然他们听了，心里像火那样的发热，却还没有认出主耶稣。等到日头平西，将近以马忤斯的时候，门徒强留主一同住下。到坐席的时候，耶稣拿起饼来，祝福了，擘开，递给他们。这时他们的眼睛开了，才认出主来。耶稣就从他们面前不见了。于是他们起身，回耶路撒冷，向十一个使徒和同他们在一起的人见证耶稣复活了。在此我们看见，虽然门徒因着软弱而走下坡路往以马忤斯去，主却低就他们，与他们同行，好把他们带回耶路撒冷。</p>
+<p>在约翰二十一章，门徒退后去海边打鱼，主也低就他们，与他们一同到了海边。不论他们是否觉得主的同在，主始终与他们同在。主就近门徒，不仅是顾到他们的需要，也借此训练他们知道，如果没有主的引导，即使在适合打鱼的夜晚，到有鱼的海上，也打不着什么；然而若有主的引导，甚至在没有鱼的岸上，主也能给他们鱼。他们必须顾到主的使命，并为着生活信靠主。他们若在主的旨意中，且在祂的旨意下，甚至在不可能的地方，主也会为他们豫备生活上所必需的。</p>
+<p>在二十至二十一章，我们看见主在复活里，不仅同门徒相聚，也同他们行动生活。不论门徒是否觉得主的同在，祂始终与他们在一起；然而，因着门徒的软弱，主有时候就低就他们，显明祂的同在，以加强他们对祂的信心。（参路加福音生命读经，540～544页；十二篮第一辑，4页；创世记生命读经，435～436页；约翰福音生命读经，652、654、645、647页。）</p>
+<p class="title">你的寡妇可以信靠我</p>
+<p>霍尔顿白翠（Betsy Holton，1804～1895）的丈夫去世后，留下九个孤儿，其中一个就是慕迪。邻居们劝她送几个孩子给别人。但是送给谁呢？送那一个去呢？想起这些问题，作母亲的白翠就心痛。一晚，当孩子们熟睡之后，白翠大哭一场。当她拭干了眼泪，打开那本丈夫送给她的圣经时，很奇妙的，她的目光正落在一节宝贵的经节上：‘你撇下孤儿，我必使他们存活；你的寡妇可以信靠我。’（耶四九11。）白翠从这经节得到莫大的安慰，立即在经节旁边，写下简单的几句祷告：‘哦，神！我知道这些孩子是你所赐的。如果我尽母亲之职，我知道你一定会作他们的父亲。’白翠确实尽了她作母亲的职责，她死后墓碑上刻着马可十四章八节：‘她作了她所能的。’主在白翠失去丈夫，深处感到无助时，就近了她，使她从圣经上的话，得到安慰与鼓励。主更与她同行，作她的真丈夫，使她有力量尽心抚育孩子，直到路终。（参福音故事中册，66页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在我们软弱时，主仍低就我们，与我们同行，并与我们同在.</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

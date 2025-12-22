@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+               <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('121')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('123')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第4课  创造—从地看出神的威荣</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>士师记十四18 有什么比蜜还甜呢？有什么比狮子还强呢？</p>
+<p>引    题：小朋友，你知道的动物就有哪些？能说出几种呢？</p>
+<p>课程内容：你在动物园里看到过哪些动物呢？它们都吃什么食物呢？</p>
+<p>长脖子的长颈鹿专吃高处的树叶；大象有个长鼻子，所以高的树叶、低的草，它都可以用鼻子卷进嘴巴里；斑马吃地面上野草的前端，羚羊却喜欢吃斑马吃剩的短草；有一种长颈羚羊专吃中高度的树叶，黑犀牛就吃矮树的叶子，白犀牛则吃地面上的草。你们看，是不是各有各的食物呢？所以它们能和平相处，不会为了吃而打架。这些动物显示出来的壮观和美丽，都在彰显神的威荣！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造显示神的威荣。神创造了许多不同的动物。动物可以彰显神的威荣和荣耀。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：神不是只创造一种动物，祂创造了各种各样的动物。你最喜欢的动物是什么？神创造了一些小巧可爱的动物，神也创造了强大并令人害怕的动物。想想狮子、老鹰和马。狮子是力量和能力的体现；鹰被认为是高贵而优雅的；马强壮而皮毛柔滑。这些动物显示了壮观和美丽的不同方面，并彰显它们的创造者—神，必定是威荣的。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>马太福音六28~29你们细想野地里的百合花…就是所罗门在他极盛的荣耀里，也没有披戴得像这些花中的一朵。</p>
+<p>引    题：小朋友，你们知道神在第三日创造了什么？谁能说出来呢？</p>
+<p>课程内容：神在第三日造了许多东西，他使天下的水都聚在一处，使旱地露出来；然后他又使地长出青草，赐给动物作食物；长出各样结种子的菜蔬，赐给人作食物。不只如此，他还使地长出各种会结果子的树木，结出许多又香又甜、并且包着核的果子，赐给人作食物。你们看，神何等爱我们，为我们预备得多好！</p>
+<p>全世界有好多会结果子的树木，有些是我们从来没有见过的。有些树木结的果子虽然不像水果那么甜，但是也可以当作食物吃。像面包树的果子，就可以拿来填饱肚子。还有椰子树的果子，硬硬的壳里面都是水，只要把它的硬壳打一个洞，把吸管插进去，就可以喝了。这种椰子树都长在比较热的地方，正好让人能随时解渴消暑。你们看，神为人预备得多好啊！还有一些果子很小，人类用不着，就成为小鸟的食物了。</p>
+<p>感谢神，生命树的果子比所有的果子更美妙，能给人永远的生命，就是神的生命。什么是生命树的果子呢？就是神自己，主耶稣自己。小朋友，我们每天除了吃神所为我们造的水果外，更要借着祷告、唱诗、呼求主耶稣的名，来享受生命树的果子，好不好？</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造显示神的威荣。神在地球上创造了许许多多的植物和树木。这些植物和树木体现了神的威荣和光辉。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：神创造了许多种类的植物和树木。你知道的有哪些种类？想想巨大的红杉树，是那样的雄伟。红杉是世界上最大、最高的树木之一。它们可以长到400英尺以上。仰望如此之高的红杉树是多么令人印象深刻！想想看不同类型植物的花朵，它们的颜色都很美。据估计，有超过300000种开花植物，一片花海美丽壮观。神创造了地上所有的植物和树木，来展示祂的威荣和壮丽。带上不同颜色、形状和其他特征的花木图片展示给孩子们。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>尼希米记九6 你，惟独你是耶和华；你造了天和天上的天，并天上的万象，地和地上的万物，海和海中所有的；这一切都是你所保存的；天军也都敬拜你。</p>
+<p>引    题：你知道我们所居住的地球，有多少面积是陆地，有多少面积是海洋吗？</p>
+<p>课程内容：感谢神，我们的神是有智慧、有计划的，他说了一句话：“天下的水要聚在一处，使旱地露出来。”（创一9）真奇妙，事情就照神的话成就了。天下的水统统聚在一块儿，而原来被水淹盖的陆地就露出来了。神称这些露出来的旱地为地，称水聚在一起的地方为海。</p>
+<p>看看这个地球仪，这些土黄色、绿色、深绿色的地方就是地：有亚洲，有欧洲，有非洲，有美洲和澳洲。这些蓝色的地方就是海洋，有太平洋、大西洋、印度洋，还有其他大大小小的海。海洋的面积大约是陆地面积的两倍多一点。这么多的海水会不会再把陆地淹没呢？不会。因为圣经上说，神立了一个永远的规定，用沙作为海的界线，叫海水不能越过（耶五22）。所以我们站在海边，看到海浪一直打上来，又退下去，总不会超过沙滩的范围。</p>
+<p>你们有没有发现，我们的生活，无论是吃的、穿的、住的、行动的、玩的、用的，好多东西都少不了地上和地里的出产。（让孩子们说一说地里出产的东西）。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造显示神的威荣。神创造地球有陆地和水，让许多生物得以生存。神创造的陆地和水都显示出祂的威荣。人的创造没有一样能与神创造的美丽和辉煌相媲美。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：虽然陆地面积只占地球的30%，但它是数百万物种的家园，并支持超过70亿的人口。这块土地包括雄伟的山脉，最高的珠峰，高达29000英尺高。地球的其余部分被水覆盖着。你曾经航行过海洋，并考虑过它有多广阔吗？如果我们从陆地和水来考虑地球的美丽、奇妙、丰富的生命、壮丽和浩瀚，那么我们会从内心深处敬畏神的创造。一切受造之物都展示神的威荣。人类能创造出这样的东西吗？</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

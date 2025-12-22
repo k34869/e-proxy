@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1232')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1234')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 15 课<br />
+适应一切的生命</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：恩典够我用。（诗歌248首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：以纯洁、以知识、以恒忍、以恩慈、以圣别的灵、以无伪的爱、以真实的话、以神的大能，藉着在右在左义的兵器，藉着荣耀和羞辱，藉着恶名和美名，证荐自己是神的执事；似乎是迷惑人的，却是真诚的；似乎不为人所知，却是人所共知的；似乎在死，看哪，我们却活着；似乎受管教，却不被治死；似乎忧愁，却常常喜乐；似乎贫穷，却叫许多人富足；似乎一无所有，却拥有万有。（林后六6～10。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　与神同工—林后六1～2</p>
+<p class="ot1">二　和好职事的够用生命—六3～13</p>
+<p class="ot2">1　十八项资格—4～7上。</p>
+<p class="ot2">2　三组事物—7下～8上。</p>
+<p class="ot2">3　七种人—8下～10。</p>
+<p class="ot2">4　宽宏的心与张开的口—11～13。</p>
+<p class="ot1">三　和好职事的率直劝勉—六14～七1</p>
+<p class="ot1">四　使徒供应的生命对信徒的亲密关切—七2～16</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>新约的执事是藉着适应一切的生命与神同工。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>本课说到新约的执事是如何与神同工。使徒不仅受神托付，有他们的职事，并且与神一同作工；保罗也给我们看见一个神的同工所该具有的资格、证明和记号。在与神同工的事上，我们的所是比我们的所作更为重要。新约的执事是靠着生命（不是任何恩赐）与神同工，这生命是全丰全足、全然成熟的，能适应一切处境，忍受任何对待，接受各样环境，在各种情形里作工，并把握各种机会，好完成他们的职事。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　与神同工</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后六1：而且我们既与神同工，也就劝你们不可徒受祂的恩典。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>作神的同工，意思是我们必须与神绑在一起。神行动，我们就行动；神停止，我们也停止。在主的恢复中没有平信徒，每一个人都是执事、同工。然而我们所强调的，不该在于我们所作的，而该在于我们所是的。神注重我们所是的，过于我们所作的或我们所能作的。祂关心我们是怎样的人，以及我们所过的是怎样的生活。我们所作的，必须以我们所是的来衡量。惟有我们所作的与我们所是的相称，我们所作的才有分量。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>注重我们的所是过于我们的所作，使我们成为神的同工，成为新约的执事。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

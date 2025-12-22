@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('322')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('324')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">小榆树</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">私欲怀了胎，就生出罪；罪既长成，就产生死。（雅1:15）</div>
+<div id="CC">The lust，having conceived，gives birth to sin; and the sin，when it is fully grown，brings forth death.（James 1:15）</div>
+<div id="C">有一位姓赵的人，在城墙脚下盖了一间房子。有一天，他父亲对他说，城墙上头那棵小榆树，必须要拔掉，免得将来长大，弄崩城墙，压倒房子，伤害性命。儿子不听，以为树小，无关紧要。后来父亲去世，自己又忙于作生意，一直没去理会。十年之后，榆树长大。适有一天，狂风暴雨，榆树被吹，摇动甚烈。结果城墙崩溃，压倒他的房子。小儿子立刻被砸死，妻子的腿被压断，自己也受了重伤。每一个罪都得对付，不要以为小罪无关紧要，不去对付。雅各说，“私欲怀了胎，就生出罪；罪既长成，就产生死。”</div>
+<div id="CC">鼓励─儆醒（诗486）</div>
+<div id="C">儆醒啊，黑夜已深！<br/>　儆醒，莫恋红尘；<br/>　儆醒啊，白昼将近！<br/>　儆醒，莫睡沉。<br/>　儆醒啊，主就要来！<br/>　儆醒，莫松腰带；<br/>　儆醒啊，主在等待！<br/>　儆醒，莫懈怠。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

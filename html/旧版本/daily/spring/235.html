@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('234')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('236')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">基督徒的理财</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">叫我们既从仇敌手中被救出来，就可以一生一世在祂面前，坦然无惧地用圣和义事奉祂。（路1:74~75）</div>
+<div id="CC">To grant us that we，having been delivered out of the hand of our enemies，might serve Him without fear，in holiness and righteousness before Him all our days.（Luke 1:74-75）</div>
+<div id="C">自从人堕落，和神出了问题，离弃以神作人一切的地位后，人便落到一种黑暗中：只认财物，不认神；只知倚靠财物，不知倚靠神，甚至事奉财物，以财物为神，让财物顶替了神。然而，我们得蒙主的救恩，使我们从撒但的权下转向神。故此，我们应当转变对待财物的存心和态度。<br/><br/>　圣经给我们看见，生活中一切物质的享受，表面是来自钱财，实际都是神丰富的赐与、供给的。所以，不要寄望于那无定的钱财，乃要寄望于那将百物赐与我们，给我们享受的神（提前六17）。其次，奉献财物乃是撒种，（林后九10，）这种子是神所供给，由神而来的；我们乃是将神赐给我们的，奉献给神。主还说，不要为自己积蓄财宝在地上，只要积蓄在天上（太六19～20）。我们需要把财物积蓄在天上，如济助有需要的人，与他们结交朋友，推广福音等。我们这样作，在善事上富足，甘心分授，乐意与人同享，就为自己积存美好的根基作宝藏，叫我们持定那永远的生命（提前六18～19）。<br/><br/>　我们若肯为着神，将我们的财物分赐施与有需要的人，神就必定也有所给我们的（路六38）。我们将应当给神的，全然奉献给祂，使召会有丰富的供应，神就必为我们敞开天上的窗户，倾福与我们（玛三10）。（生命课程）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

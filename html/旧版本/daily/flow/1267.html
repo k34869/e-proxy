@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1266')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1268')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 1 课<br />
+神的儿子启示在我里面</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　保罗使徒职分的形成（二）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>加一23～24：…那从前一直逼迫他们的，现在将他原先所损毁的信仰当作福音传扬。他们就因着我荣耀神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>犹太的圣徒几乎都没有见过他，不过听说，那从前一直逼迫他们的，现在将他原先所损毁的信仰当作福音传扬。他们就因着保罗而荣耀神。使徒保罗如何因着得着神儿子的启示，而成为奉神差遣的使徒，今天所有的弟兄姊妹都能，也都应当以保罗为榜样，被形成为使徒，成为奉差遣的人。愿我们在这件事上，心思都被更新，准备好，受主的差遣出去，成为新约福音的传扬者。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以使徒为榜样，心思被更新，预备好受主差遣，成为新约福音的传扬者。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神乐意将祂的儿子－基督这活的人位，启示在我们里面。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>你所信的主是怎样的一位，祂在你的经历里是又真又活的么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘神所要的是一个人位，…这个人位远超我们所能领会。祂就是永远无限的神，祂是创造主。然而祂成了肉体。祂活在地上，经过了死，征服了死，并且进到复活里。然后，祂成了赐生命的灵。（林前十五45。）就这样，祂进到我们里面来，现今住在我们的灵里。祂一旦进来，就永远不离开。祂不仅停留，祂还要安居下来。祂要安家在我们心里所有的内室－我们的心思、我们的情感、和我们的意志。</p>
+<p>这就是圣经的心脏。…主的恢复是要把我们带回到心脏。…你愿意清楚这个异象么？要祷告！但不要把祷告的中心摆在事情、人物或环境上，要按着这些经节来祷告。你可以祷告说，“主，你乐意将基督启示在我里面，这是神所喜悦的。神乐意这样作。神所乐意的不是来教导，而是来启示。启示！启示祂的儿子…。神将祂的儿子启示在我里面；不是在我的心思里，而是在我里面。”你如果这样来祷读，你会兴奋起来。你会领略，你不是个普通人。你会想向宇宙宣告，你有基督在你里面。你这个人会有基督感，并且以基督为中心。你身为美国人、德州人、或苏格兰人的骄傲会消失得无影无踪。神乐意将祂的儿子启示在你里面！祂的儿子！</p>
+<p>借着祷读…，你的心思，甚至你的全人，都会置于灵。…你会领略，基督在你里面是你的生命。…当你祷告的时候，悟性会产生。当你消化吸收这些经节时，你会享受其中的丰富。这些话虽然是明言，所表达的却是一个奥秘。…</p>
+<p>好好把你自己祷告到这些经节里去，并且把这些经节祷告到你里面来。这时你会看见，神所要的乃是基督；不是知识道理的基督，而是经历的基督。这位基督必须与你相调为一。祂必须用祂一切的所是来浸透你。你一旦有了这个看见，就会把伦常、道德、宗教、属人的文化、天然的美德、甚至你属灵的追求全都杀死了。在这异象里，惟有基督才能存留。’（生命信息下册，138～141页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>借着祷告，领受对于基督活的启示，并向人传扬。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

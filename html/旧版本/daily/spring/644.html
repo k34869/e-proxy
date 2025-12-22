@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('643')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('645')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">还有七年去作善工</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>使徒行传 20:24 我却不以性命为念，也不看为宝贵，只要行完我的路程，成就我从主耶稣所领受的职事，郑重见证神恩典的福音。</p><p>戴护（AlexanderDuff）在印度传道多年，后因年纪和健康的关系，回国养老。一天，他站在大会讲台上，向听众恳切说明印度的需要，希望有人献身，前往印度传道。语虽恳切，却无一人受感。他在恳劝当中晕了过去，不省人事。医生就来检查他的心脏。不久，他张开眼睛，问说，‘这是何处？’医生说，‘请静卧。你太弱，不可再说话。’但他却说，‘我的话还未说完。请把我抬回去。我要说完我的话。’医生再说，‘请静卧。你太弱，不可再说话。’但他坚强的意志胜过他软弱的身体，勉强站了起来。医生及大会的主席扶他再次登台，全场的人见他登台，不约而同起立致敬。他继续说，‘若维多利亚女王要志愿兵前往印度，千万的青年将奉献自己。但是万王之王今日要召人前往传道，却没有一人愿意。真的苏格兰没有人能往印度么？若苏格兰真的没有人往印度，我虽老朽，愿意再回去。我虽不能传道，却愿卧在印度名河岸上，死在那里；给印度人知道，至少有一人要救他们的灵魂，为着他们舍了性命。’顷刻间，有许多青年回答说，‘我要去。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

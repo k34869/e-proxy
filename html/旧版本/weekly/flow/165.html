@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('164')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('166')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">马利亚安静坐主脚前听主话</p>
+<p>但是不可少的只有一件，马利亚已经选择那美好的分，是不能从她夺去的。（路十42）</p>
+<p>路加十章三十八至四十二节记载两个姊妹的事例：‘耶稣进了一个村庄；有一个女人名叫马大，接待祂到家里。她有一个妹妹，名叫马利亚，在主脚前坐着听祂的话。马大伺候的事多，各方忙乱，就进前来，说，主阿，我妹妹留下我独自一人伺候，你不在意么？请吩咐她同我作她分内该作的事。主回答她说，马大，马大，你为许多的事思虑烦扰；但是不可少的只有一件，马利亚已经选择那美好的分，是不能从她夺去的。’这里有两个姊妹，一个忙着伺候主，却多方忙乱；一个没有作什么，却安静坐在主的脚前听主说话。她们都在那里寻求如何满足主，一个是以工作来满足主，一个却以爱来满足主。主需要工作的事奉，更需要爱的事奉。马利亚虽然没有一双事奉的手在那里忙碌，可是她安静在主的脚前，领受主心里的话，她有一颗虚空的心在那里接受主的话。她当时没有什么举动，可是过不久就有一件惊天动地的举动—打破玉瓶，为主的安葬，豫先膏主的身体。（可十四8。）难怪主耶稣说，‘马利亚已经选择那美好的分，是不能从她夺去的。’</p>
+<p>马利亚坐在主的脚前，这个‘坐’不是外面肉身的坐，而是指里面有一种的安静，停下我们的所是和作为。我们里面需要有这样一种安静。我们在聚会中经常外面看来安静，里面却很忙碌，为许多事思虑烦扰。我们的眼睛常东张西望，心思更如同湖上的涟漪，波动荡漾。当我们的心思这样受搅扰时，就无法返照基督。我们应当安静下来，将心思置于灵。就如诗篇一百三十一篇所说，‘耶和华阿，…我使我的魂平稳安静，好像断过奶的孩子在他母亲怀中；我的魂在我里面真像断过奶的孩子。…当仰望耶和华，从今时直到永远。’（1～3。）这乃是一种谦卑、平稳、安静的心，使我们能听见主的说话，让主以祂自己灌注我们，并将祂自己分赐到我们里面，而照着主的愿望和喜好事奉祂。（参圣经提要第四卷，554～555页；路加福音结晶读经信息摘要，33～34页；诗篇生命读经，587～588页。）</p>
+<p class="title">常从圣经得安慰</p>
+<p>伦敦曾经举行一次圣经见证聚会，其中有衣索匹亚王撒拉西（Selassie）亲临会中作见证。他说，‘我从小敬畏神，也尊敬圣经，长大之后，读经兴趣与日俱增，在国事烦忙之中，常从圣经得到无限的安慰。尤其是主耶稣在马太十一章二十八节说，“凡劳苦担重担的，可以到我这里来，我必使你们得安息。”给我最大的安慰。以后，我设法克服各种困难，将圣经古文译成近代的衣索匹亚文，使全国人民有机会阅读。…总之，对于圣经和圣经的教训，我满心引以为荣。’许多基督徒，整日忙碌世事，不愿安静下来，抽出一点时间读圣经，难怪他们劳苦背重担，总得不着安息。（参造就故事上册，20页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：安静坐在主脚前，听主说话，让主以祂自己灌注我们，并将祂自己分赐到我们里面，而照着主的愿望和喜好事奉祂。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

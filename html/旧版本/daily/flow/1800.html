@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1799')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1801')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 6 课<br />
+在老底嘉的召会，与关于七个召会的结论</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：你愿否作主得胜者。（诗歌647首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我劝你向我买火炼的金子，叫你富足；又买白衣穿上，叫你赤身的羞耻不露出来；又买眼药擦你的眼睛，使你能看见。（启三18。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　在老底嘉的召会—堕落的召会—启三14～22</p>
+<p class="ot2">1　说话者—那阿们，那忠信真实的见证人，那神创造之物的元始—14。</p>
+<p class="ot2">2　召会的情形—15～17，20上：</p>
+<p class="ot2">a　不冷不热，如温水。</p>
+<p class="ot2">b　自夸富足。</p>
+<p class="ot2">c　困苦、可怜、贫穷、瞎眼、赤身的。</p>
+<p class="ot2">d　将要从主口中被吐出去。</p>
+<p class="ot2">e　主站在门外叩门—20上。</p>
+<p class="ot2">3　主的劝告—向主买火炼的金子、白衣和眼药—18。</p>
+<p class="ot2">4　对得胜者的应许—20下～21：</p>
+<p class="ot2">a　主要进来。</p>
+<p class="ot2">b　与主一同坐席。</p>
+<p class="ot2">c　与主同坐宝座。</p>
+<p class="ot2">5　那灵所说的话—22。</p>
+<p class="ot1">二　关于七个召会的结论</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>写给在老底嘉的召会的书信，使我们认识恢复后又堕落的召会，鼓励我们付代价，胜过不冷不热和骄傲的光景，与主同坐宝座。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录三章十四至二十二节是第七封书信。这是给在老底嘉的召会的书信。就表号说，在老底嘉的召会预表恢复后又堕落的召会。主在十九世纪初期恢复了正当的召会后，不到一个世纪，有些恢复的召会堕落了。恢复后又堕落的召会，夸耀她在道理和知识上的富足；然而在主眼中，她是困苦、可怜、贫穷、瞎眼、赤身的。所以主要她付代价买金子、白衣和眼药，使她恢复属灵的实际。我们若胜过不冷不热和骄傲的光景，出代价买所需之物，且开门让主进来；祂的同在就要成为我们的分，我们也就能与主一同坐席。启示录二、三章的七个召会，不仅预言式的表征召会在七个时代的过程，也表征召会历史中的七类召会。头四个召会，最终成了一类的召会，就是背道的召会—罗马天主教。然后就是改革的召会、恢复的召会、以及恢复后又堕落的召会。这四类召会都要存留到主回来。惟有恢复的召会能成就神永远的定旨，也惟有她是主所要的。我们必须接受主的选择。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在老底嘉的召会</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启三14：你要写信给在老底嘉的召会的使者，说，那阿们，那忠信真实的见证人，那神创造之物的元始，这样说。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>老底嘉，原文意平民或平信徒的意见、决断。就表号说，在老底嘉的召会预表恢复后又堕落的召会。老底嘉不是代表改革的召会，乃是堕落的弟兄会；他们堕落不是因着罪，乃是因着骄傲。他们说，‘我们知道创世记，也知道启示录，我们有伟大的教师解释但以理书，有谁知道的比我们还多？’他们在知识上富足，在道理上正确，然而他们眼睛没有被开启，反而被道理弄瞎了，灵里也没有光。所以我们必须承认，这正应验了主在第七封书信的预言，我们看见了，就会说，‘主，怜悯我。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>求主怜悯我们，使我们灵里贫穷。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

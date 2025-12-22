@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('260')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('262')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">输血割肉</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">祂替众人死，是叫那些活着的人，不再向自己活，乃向那替他们死而复活者活。（林后5:15）</div>
+<div id="CC">He died for all that those who live may no longer live to themselves but to Him who died for them and has been raised.（2 Corinthians 5:15）</div>
+<div id="C">有一个中国贫妇，手臂上长了毒瘤，病情严重，住在医院里。一位西国护士把主耶稣介绍给她，但她不肯接受。医生对她说，如果有人肯为她输血割肉，补在她枯干的手臂上，就有希望。她便叫了自己的儿子来，问他是否愿意输血割肉。他竟拒绝了。妇人悲伤绝望的哭泣起来。那位西国护士见她哭泣，愿意把她的血与肉给她。妇人极受感动，虽然不愿这位护士忍受这样大的牺牲，但仍是行了输血割肉的手术。此后，她就渐渐好起来，终于痊愈，一片白色皮肤，长在患过毒瘤而被割去的地方。有一天，那位西国护士见她又在流泪，便问她何故？她说，“我一看见这片白色皮肤，便想到你把你的血与肉给了我，医治了我的病。你为什么肯这样作呢？”那位护士回答说，“只是为了主耶稣的缘故，因为祂把祂的生命给了我。”这位妇人听了又哭起来，抬头说道：“我要信你的耶稣，我自己的儿子都不肯救我的命，但是耶稣竟然使你这样爱我，我要信祂。”这位妇人因而接受了基督。<br/><br/>　当我们想到主耶稣的血为我们流出，身体为我们裂开，使我们得着拯救，我们也当被这受死的爱激励，将自己的身体献上，当作活祭。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

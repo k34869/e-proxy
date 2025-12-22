@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('590')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('592')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">吃糖太多牙齿被虫蛀</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>哥林多前书 6:12 凡事我都可行，但不都有益处；凡事我都可行，但无论哪一件，我总不受它的辖制。</p><p>交通的赦免是一件事，政治的赦免又是一件事。比方，有一个父亲，有几个儿子，天天四点钟的时候，父亲放他们出去玩，六点回家吃晚饭。有一天他们出去和外面的小孩打架，起头父亲赦免他们，还是让他们出去。但是他们出去后，还是和外面的孩子打架，天天打架。事情弄到这样，你想父亲要怎么作？他们能够天天来认罪，他也能够天天赦免他们；但是他要觉得说，我的办法不对，我的政治不对，天天这样放他们出去不对。父亲要说，因为你们天天出去打架，从明天起，都关在家里，不许出去。这就是父亲的手。关一天，关两天，关一周，关两周，关一个月，关两个月，总得等到父亲满意了，觉得说，我的儿子不会闯祸了，我的儿子不会和人相骂相打了。到了那一个时候，也许父亲对儿子说，这两个月，你们很不错，明天可以出去十分钟，政治的手就起首挪开。看见么？这一个十分钟，我们称它作政治的赦免。政治起首改变，不过他要看你出去这十分钟，到底你对于外面的孩子怎样？如果不打架，也许后天可以给你出去半个钟头；也许再过一个月、两个月，每天四点到六点，可以照旧出去玩。到了那一天，可以说政治的赦免，完全给儿子们了。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

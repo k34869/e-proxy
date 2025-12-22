@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('539')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('541')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">要不要我停止修理</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>来12:11　一切的管教，当时固然不觉得喜乐，反觉得愁苦；后来却给那藉此受过操练的人，结出平安的义果。</p><p>一个主人在他园中栽了一枝竹，培植、浇灌、修理，爱它无微不至。竹既长大，美丽可爱，十分感激主人栽培之恩，时思报答。一天，主人对它说，‘我所爱的竹阿，现在我想用你，不知道你愿意不愿意？’竹子顶快的点头答应。主人说，‘在我用你之先，必须把你砍下。’它急忙求道：‘主人，这太难了。你要把我砍下，我就再也没有出头的日子了。别事都可答应，惟有这事不行。’主人说，‘如果我不先把你砍下，我就不能用你。请你记得，栽培你的目的是为什么。’竹子为要报答主人之恩，只好忍痛答应。主人就将它砍下。次日，主人又对它说，‘现在我要把你所有的叶子剪去，不知道你愿意不愿意？’它听了发急的说，‘主人，这未免太苛刻了。我已被你砍倒在地，现在只有这些叶子，放过我吧！’主人摇头说，‘你的叶子若不剪去，我就不能用你。’它无可奈何，含泪首肯。主人就剪下所有的叶子。再过一天，主人又来向它说，‘现在我要把你身上所有枝子削去。’竹子哀声说道：‘叶子已经剪了，若是再把枝子削掉，我便一无所有了。这样未免太不讲理了。’主人说，‘若不这样，我就不能用你。’它因感于主人的恩典，只得顺服。主人就把所有枝子削掉。第四天，主人又来对它说，‘现在我要凿通你的里面。’竹嚎啕大哭，说道：‘我的根已砍断；叶已剪掉；枝已削去；你还要把我里面的节凿通，这未免太残忍了吧！’主人答说，‘我爱上了你，拣选你作合用的器皿。竹阿，必须把你的节凿通，才能用你。否则，我只好把你永远搁在此地了。’它和主人谈判再三，别无通融办法，也就遂了主人的心愿。于是主人把它每节凿通，成为中空的管子，一头接在水源，一头通到田中，灌溉田地。信徒阿！你愿意作神活水流通的管道么？</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

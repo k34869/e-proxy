@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1350')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1352')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 13 课<br />
+基督安家在我们心里</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　神在召会中得荣耀</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗三20～21：然而神能照着运行在我们里面的大能，极其充盈的成就一切，超过我们所求所想的；愿在召会中，并在基督耶稣里，荣耀归与祂，直到世世代代，永永远远。阿们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>三章二十至二十一节说，‘然而神能照着运行在我们里面的大能，极其充盈的成就一切，超过我们所求所想的；愿在召会中，并在基督耶稣里，荣耀归与祂，直到世世代代，永永远远。阿们。’这是一个颂赞、高的赞美，甚至是新约书信里所能找到最高的赞美。主这样论到召会，指明祂要作成祂所说的。因此祂论到召会是神丰满的这话，必要成就。然而就环境一面说，你求升迁，祂却让你被解雇。但是在失业期间，神可能就在你里面运行，使基督安家在你里面。因此，我们所求所想的，应当专注于神的经纶，就是神将祂自己分赐到我们里面，以产生召会作基督的彰显。这时，神要极其充盈的答应我们！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>专注于神的经纶，为召会敢求敢想，经历神的大能，归荣耀与神！</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>真正的召会生活，乃是无限无量、无法测量的基督，亲自安家在我们心里的结果。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督如何安家在我们心里？经历基督安家在我们心里，与召会得建造有何关联？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们需要认识以弗所三章里的两个项目。第一，基督那追测不尽的丰富，该是我们的享受。第二，基督这无限、并追测不尽的一位，应当定居在我们里面，以我们的心为祂的家。这样，我们就不仅有祂的丰富，包括祂神圣的属性和人性的美德，我们也有祂自己这延展无限、没有限量的人位，安家在我们里面。这就是召会生活。如果召会生活是这样，在我们中间就不可能有任何分裂。如果众召会都像这样，一切的批评都要止息，一切的意见都要过去，一切的争论都要消失。这一种召会生活废除一切消极的东西。这应当是我们必须达到的目标，也是我们必须到达的目的地。…</p>
+<p>当我们在旧人里，我们中间就有摩擦。我们初来到召会生活中的时候，可以看作是召会“蜜月”期。在这段时间里，一切都很好。但是后来蜜月过了。一位弟兄可能觉得他不喜欢召会里任何一个人。事实上，他除了自己以外，谁也不喜欢。他只爱他自己。这是在旧人、肉体、天然的人、和己里的生命。这生命从未被基督的十字架除掉，这生命也从未被带进复活，并高举到诸天之上。我们若活这样的生命，怎会有正确的召会生活？</p>
+<p>正确的召会生活，惟有从我们享受基督那追测不尽的丰富而产生。正确的召会生活也是基督亲自安家在我们心里，占有我们里面所是每一角落的结果。我们需要有一种召会生活是享受基督之丰富的结果，也是无限之基督亲自安家在我们全人里面的结果。这样，我们就会有平静的召会生活。至终，我们要在新耶路撒冷完全看见这个。…新耶路撒冷是我们享受基督，并让祂安家在我们心里的终极结果。’（基督身体的内在观点，58～60页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>更多让基督占有我们里面的所是，更在身体里与人建造在一起。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

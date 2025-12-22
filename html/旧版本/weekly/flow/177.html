@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('176')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('178')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">尼希米心思专一、作事专一</p>
+<p>我们建造城墙，城墙就都连接起来，…因为百姓用心作工。（尼四6）</p>
+<p>尼希米可以说是心思专一、作事专一的榜样。在以色列人被掳到外邦之地时，尼希米是作王司酒的，生活起居都在王宫里。在这样的环境中，是何等容易忘记神，而失去与神的交通；何等容易只顾自己的安乐，而不顾神百姓的痛苦。然而，尼希米没有被高贵的地位和优裕的生活所黏住，他一心向神，专以神的事为念。</p>
+<p>亚达薛西王二十年基斯流月，尼希米从哈拿尼得知，耶路撒冷的城墙被拆毁，城门被火焚烧。尼希米就‘坐下哭泣，悲哀几日，在…神面前禁食祷告’，（尼一4，）又冒生命的危险，面带愁容去见王。至终，王应允了他，差遣他回犹大地去，重新建造圣城。当他到了耶路撒冷，就夜间起来，察看城墙被毁坏、焚烧的情形。以后，他对百姓说，‘我们所遭的祸患，耶路撒冷怎样荒凉，城门被火焚烧，你们都看见了。来罢，我们重建耶路撒冷的城墙，免得再受凌辱。’（二17。）尼希米又告诉百姓，神美善的手怎样帮助他，王又怎样应允了他。百姓听见了就说，我们起来建造罢；于是众百姓奋勇作这善工。</p>
+<p>摩押人和亚扪人的首领听见这事，就嗤笑、藐视他们，问他们这样作，是否是要背叛王。尼希米却丝毫不畏惧，回答他们说，‘天上的神必亲自使我们亨通；所以我们作祂仆人的，要起来建造。你们却在耶路撒冷无分、无权、无记念。’（20。）尼希米这样专一向着主，以祷告抵挡仇敌的讥笑和毁谤，众百姓也都同心合意，专心作工，甚至一手作工，一手拿兵器，抵挡仇敌。最后，城墙终于修造完成。一切仇敌和四围的外邦人，听见了都甚惧怕，愁眉不展，因为看见神与他们同在，使他们完成这工。（一～六。）</p>
+<p>尼希米也是一个祷告的人。尼希米记的开始是祷告，结束也是祷告，中间至少有十一次的祷告。尼希米是一个昼夜祷告的人。他熟练祷告，专以祷告解决困难，并胜过仇敌。（参圣经提要第一卷，156～158页。）</p>
+<p class="title">专门读名词和着重字的人</p>
+<p>公开弟兄会中的纽伯瑞（Newberry），是专门读‘名词’的；罗舍汉（Rotherham），是专门读‘着重字’的，圣经每一句都有它所着重的字。比方，马太五章二十一至二十二节上半说，‘你们听见有对古人说的话，…但是我告诉你们，’这里着重的字，是着重在‘我’字上。在希腊文里，每一句话，都有它着重的一个字。罗舍汉花了一生的工夫，就是专门找出圣经里这些着重的地方。在他的圣经里，有的字画一个圈，有的字画两条线。我们无论作什么，也都要有这样专注的态度。（参造就故事上册，33页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：效法尼希米的榜样，一心向着神，专以神的事为念。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

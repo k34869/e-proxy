@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('607')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('609')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">拉琴</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>弗1:23召会是他的身体，是那在万有中充满万有者的丰满。</p><p>有一位母亲，患急症死了，遗下五个孩子。及至长大成人，大家都很相亲相爱。一天，大家谈起逝世多年的母亲，打算找出她的相片，放大挂在客厅里面，作为纪念。可是大家翻箱倒箧，找了半天也没找到。没有法子，只好去请画家来画一张。画家入门，便问：‘给谁画像？’他们说，‘我们的妈妈。’‘你们的妈妈在那里？’‘死去多年了。’‘那怎么好画呢？’画家想了一会儿，就问他们兄弟姊妹共有几位，答说五位。画家就叫他们都到他的跟前说，‘谁的鼻子像妈妈？’老二说，‘大哥的。’又问：‘谁的眼睛像妈妈？’老大说，‘二姊的。’接着二姊说，‘老三的嘴像妈妈。’大哥说，‘对，还有老四的耳朵像妈妈；小妹的脸也很像妈妈。’画家说，‘好啦！请你们都坐好，让我来画你们母亲的肖像。’画家就取他们各人最像母亲的一点来画。画好了，他们都很快乐的说，‘母亲这像画得真像。’于是把它挂在客厅，作为纪念。同样，我们信徒虽然不能完全都像基督；可是最少也有一部分相似。例如，有的很有爱心，这点就像基督；有的很诚实，这点也就像基督；有的很圣洁；有的很热心；大家合起来就成了基督。基督的丰满乃是藉着教会彰显出来。‘教会是祂的身体，是那充满万有者所充满的。’（弗一23。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

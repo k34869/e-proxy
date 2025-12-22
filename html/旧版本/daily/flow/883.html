@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('882')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('884')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 1 课<br />
+九福之下诸天之国子民的性质</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：求主带我上到高山。（诗歌285首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：马太福音五章三至十二节。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　马太福音是一卷论到基督是君王，在地上建立神属天国度的书—二2，四17</p>
+<p class="ot2">1.　神的国是指神一般的掌权，从已过的永远到将来的永远。</p>
+<p class="ot2">2.　诸天的国在神的国里是特殊的部分，只包括今世的召会，和要来千年国的属天部分。</p>
+<p class="ot1">二　马太五至七章乃是国度宪法的颁布—五1～2</p>
+<p class="ot2">1.　国度的宪法给我们看见，诸天之国属灵生活和属天原则的启示。</p>
+<p class="ot2">2.　山表征国度，国度宪法的颁布是在山上—1。</p>
+<p class="ot2">3.　国度宪法颁布的对象是门徒，包括新约所有外邦的信徒—1，二八19。</p>
+<p class="ot1">三　国度子民的性质—五3～12</p>
+<p class="ot2">1.　灵里贫穷的人接受诸天的国—3。</p>
+<p class="ot2">2.　哀恸的人得安慰—4。</p>
+<p class="ot2">3.　温柔的人承受地土—5。</p>
+<p class="ot2">4.　饥渴慕义的人得饱足—6。</p>
+<p class="ot2">5.　怜悯人的人蒙怜悯—7。</p>
+<p class="ot2">6.　清心的人看见神—8。</p>
+<p class="ot2">7.　制造和平的人称为神的儿子—9。</p>
+<p class="ot2">8.　为义受逼迫的人有分于诸天的国—10。</p>
+<p class="ot2">9.　为基督的缘故被辱骂、逼迫、毁谤的人，得诸天之上的大赏赐—11～12。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识诸天国度宪法的颁布，九福之下国度子民的性质。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>马太福音是一卷论到国度的书，而‘诸天之国’是马太所专用的辞，有别于其他三卷福音书里所用‘神的国’。神的国是指神一般的掌权；而诸天的国在神的国里是特殊的部分，乃是神属天的管治，只包括今世的召会，和要来千年国的属天部分。根据马太福音，诸天的国有实际、外表和实现三方面。诸天之国的实际，乃是诸天之国属天和属灵性质上的内容，也就是马太五、六、七章主耶稣在山上所启示的。本课我们说到诸天之国实际的第一方面：国度子民的性质—灵里贫穷、哀恸、温柔、饥渴慕义、怜悯人、清心、制造和平、为义受逼迫、为基督的缘故受辱骂，这乃是国度子民内里的所是，启示于基督所赐给他们那顾惜人的九重福分。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　国度宪法的颁布</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>你们要悔改，因为诸天的国已经临近了。（太四17下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>诸天的国在神的国里是特殊的部分，指神属天的管治，只包括今世的召会，和要来千年国的属天部分。马太福音是一卷论到诸天之国的书，当然也必须有宪法。诸天之国的宪法共有七段：说到国度子民的性质、影响、律法、义行、财物、待人的原则、以及生活工作的根基。今天我们已经由那灵重生，生在这属天国度里，我们是真正的国度子民。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>被主构成、充满并浸透，而被构成为国度的子民。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

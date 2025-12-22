@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('614')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('616')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">再来合力工作</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗12:4　正如我们一个身体上有好些肢体，但肢体不都有一样的功用；</p><p>有一天，口发怨言，不满意鼻子在他上头，就对鼻子说，‘我的功用多大，天天养活你，你却没有说一声谢谢，反倒爬在我上头。’鼻子说，‘你吃东西若不先由我来闻一闻，是香是臭，是酸是辣，你连垃圾都会吃下去。’鼻子又瞧不起眼睛，很骄傲的说，‘我的功用多么大，这个小小的眼睛竟在我上头，真是不服气。’眼睛反驳说，‘当走路的时候，若不是我注意看前面的东西，你这突在前面的鼻子，必定碰得又红又肿。’眼睛又不满意眉毛说，‘你这几根小毛，实在可有可无，你却爬在我的头上，真是叫我受不了。’眉毛辩说，‘你这人哪，若是把我剃掉，看你像人不像人！下雨流汗，我都在那里保护，否则你这两个眼睛，早就瞎了。’人身上的每一个肢体都是互相为用的，缺一不行。我们在基督里也是互作肢体，相互为用，不可或缺的。所以应该忠心站住各人的地位，服事我们的身体，服事我们的元首主耶稣基督和祂的教会。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

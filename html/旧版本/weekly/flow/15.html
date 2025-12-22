@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('14')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('16')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">准（一）　话语准：说话听话都要准</p>
+<p>我们若凭着灵活着，也就当凭着灵而行。（加五25）</p>
+<p class="title">什么是准</p>
+<p>准就是绝对准确、精确、不偏差。这包括在我们日常生活的说话、听话、时间、作事上，都需要准确、不偏差。然而人多是马马虎虎的，在时间上、话语上、数字上难得准确。许多事都在将就或得过且过中过去。‘差不多’这三个字最害人。我们不能凡事都差不多，必须讲求准确。一件事作了百分之九十九，还有百分之一没作，就等于没作。因此，我们需要养成绝对准确、不马虎的性格；在说话、听话、时间、作事上都要准确。话语准的人得人信靠，时间准的人作事不累，作事准的人得人信任。完全准的人，难能可贵。</p>
+<p>宇宙中最准确的乃是神；祂在宇宙中，布满亿兆的星球，都有各自的星系，有各自运行的轨道。这些星球，亿万年来都按着一定的速度，准确的沿着各自的轨道，生生不息，循环不止的运行。再看看神所创造为着人居住的地球，和太阳的距离恰恰好，不太远也不太近，若再近一点，可能就会热死；再远一点，就会被冻死。这一切都说明神是准确的。</p>
+<p>这位准确的神，已经经过过程成了赐生命的灵，现今就在我们的灵里。在召会生活中，当我们倚靠那灵并受那灵规律时，我们就会以神惟一的目标—基督与召会—为我们生活的方向和目的，而竭力追求基督，实行召会生活，以成全神在基督里对召会的意愿。因此，我们必须以那灵为我们的基本原则、基础准则；（加五25注；）凡事对准那是灵的基督，使我们一切所行的，都在神经纶的中心线上。 （参性格，1、12页。）</p>
+<p class="title">谁造的</p>
+<p>大科学家牛顿是一虔诚信神的人。他有一位朋友，也是一个大科学家，但不信神。牛顿有一机械师，为他造了一具精巧的太阳系模型，中央是一镀金的大球，代表太阳，周围是些较小的球，按照太阳系的顺序排列，各球分别代表水星、金星、地球、火星等，各星利用齿轮、带子套在一起，一拉曲柄，各个星球便能和谐运转。一天，牛顿正在书房看书，他的朋友走了进来，一眼瞥见这具精巧模型，十分惊奇。走近模型，轻拉曲柄，各个星球便按相对速度运转起来，他很钦佩，称赞道：‘呀！这具模型精巧极了，谁造的？’‘没有谁。’牛顿答道，连头也没有抬起，仍是看书。‘你根本不明了我的问题，我是问这具模型是谁造的？’他的朋友再问。‘不是谁造的，乃是偶然成了这个样子。’牛顿抬起头来冷静的告诉他。‘你完全把我当作一个傻子，无论怎样，总是有人造它，并且这人一定是个天才，我要知道他是谁。’他的朋友显出不耐烦的样子。牛顿立刻站起来，拍着朋友的肩膀说，‘你既相信这具模型不可能是偶然有的，必定有人造它，你岂能不信这具模型所代表的太阳系更有一位造它的神么？’他的朋友即被牛顿说服，也就信了创造宇宙的神，并且成了一个坚定的信徒。（福音故事上册，209页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：倚靠那灵并受那灵规律，竭力追求基督，实行召会生活。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

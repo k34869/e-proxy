@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('795')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('797')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">法官试验凡事谢恩</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>约翰福音 14:23</p><p>耶稣回答说，人若爱我，就必遵守我的话，我父也必爱他，并且我们要到他那里去，同他安排住处。</p><p>Jesus answered and said to him, If anyone loves Me, he will keep My word, and My Father will love him, and We will come to him and make an abode with him.</p><p>四个小孩都争着对母亲说，‘妈妈我爱你。’以利说，‘没有人比我更爱妈妈，因为我最大，我爱妈妈最久。’安娜说，‘我更爱妈妈，因为我是家中惟一的女孩。’雅各说，‘妈妈，我非常喜欢你。如果有熊追赶你，我要一枪把它打死。’最小的撒母耳说，‘妈妈，我爱你，但我不知道要怎样说。’说着两手抱着母亲的颈项，亲她的嘴。接着其他三个孩子都和母亲亲嘴。母亲说，‘很好，孩子们，我很高兴听你们说爱我。’一会儿，门铃响了，邮差送来一封信。孩子们抢着要将那信递给母亲。母亲拆开信，读完以后说，‘这封信很要紧，必须立刻回信，今晚就要送到邮局。谁愿为我送去？’以利望望窗外，正在下雨，并且还有五个算术题要作，就想，这信为何不能留到明天再送呢？明天上学之时一道送去，不是很方便么？雅各也望望窗外，天已黑了，又下着雨，因此不想出去。安娜想，我是女孩，妈妈不会让我去的，况且以利和雅各不都在家里么？母亲写好信出来，看见孩子们都在作事；独有撒母耳穿好靴子、雨衣，望着母亲。母亲把信给他，对他说，‘外面下雨，又冷又黑，你不怕一人独自去么？’孩子回答说，‘妈妈，不怕，因为我爱你。’你们想，谁是最爱母亲的孩子呢？‘耶稣回答说，人若爱我，就必遵守我的道；我父也必爱他，并且我们要到他那里去，与他同住。’（约十四23。）‘凡遵守主道的，爱神的心在他里面实在是完全的。’（约壹二5。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

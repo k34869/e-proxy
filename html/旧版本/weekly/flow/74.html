@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('73')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('75')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>一个妇人有十个银币，若失落一个，岂不点上灯，打扫屋子，细细的找，直到找着么？（路十五8）</p>
+<p class="title">圣灵在人里面细致的分赐与寻找</p>
+<p>约翰一章三十二节说到鸽子是那灵的象征：‘约翰…作见证说，我曾看见那灵，仿佛鸽子从天降下，停留在祂身上。’施浸者约翰不仅引荐基督是神的羔羊，（29，）也引荐祂是带着鸽子的羔羊。羔羊是要除去世人的罪，鸽子是要将神带给人作生命。羔羊是为着救赎，要把堕落的人赎回归给神；鸽子是为着生命的分赐和施膏，以神的所是涂抹人，将神带进人里面，也将人带进神里面，并且使信徒在神里面联结一起。在消极一面，羔羊解决人罪的问题；在积极一面，鸽子将神带给人。羔羊使人与罪分开，鸽子将神联于人。鸽子表征为着分赐生命、重生、施膏、变化、联结、并建造的圣灵。鸽子是为着生命，不是为着能力；鸽子没有能力，但它满了生命和洞察力，这是由它的眼睛所指明。鸽子最美丽的部分就是眼睛。在雅歌里，主称赞寻求祂者的眼睛好像鸽子眼。（一15。）所以，鸽子乃是生命的象征，是可爱、微小、且满了生命的。</p>
+<p>此外，路加福音将那灵比喻为寻找神所失落之财宝的细心妇人：‘一个妇人有十个银币，若失落一个，岂不点上灯，打扫屋子，细细的找，直到找着么？找着了，就召齐朋友、邻舍，说，和我一同欢喜罢，因为我失落的那个银币已经找着了。我告诉你们，一个罪人悔改，在神的使者面前，也是这样为他欢喜。’（十五8～10。）灯象征神的话，（诗一一九105，130，）为那灵所用，光照并暴露罪人的地位和光景，使他悔改。妇人打扫屋子，细细的找，直到找着失落的银币。‘扫’这字指明，那灵搜寻并洁净罪人的里面。在福音书里，子来完成救赎；然后那灵来寻找我们，并且找着了。因着那灵找着我们，我们就悔改，并归向父神。那灵细致的寻找、光照和找着，结果使我们醒悟过来，悔改归向父神。（参新约总论第四册，25～28页。）</p>
+<p class="title">何处没有基督徒</p>
+<p>有一个少年人因为受不了他父母向神的热心，他受不了这样属灵的空气，以为他的本乡基督徒太多了；他厌烦与他们同处，厌烦听他们所说属天的话，就搭火车，准备到别处避开他们。当他上火车时，他看见对座有两个老人打开圣经，谈论属灵的事。他不禁怒火中烧，生气这样的人怎么会这么多。下车之后，他听见有几个老妇在谈话，她们所说的也是主耶稣的事。那个地方有个湖，有许多人去游湖。他就坐上渡轮，往湖的对岸去。他在渡轮上又遇见许多人谈论天上的事。他们都是基督徒！原来这是一个基督徒学校的旅行团；这叫他急得不得了。后来，他就走上船舱，与船主谈话。他气愤的问船主说，‘我要跑到那里，才不会遇到基督徒呢？’船主尖锐的回答他说，‘除非到地狱去。’圣灵藉着这句话，深深刺入这少年的心，在他里面细细的搜寻、说话、感动他，叫他在不久之后，也成为一个基督徒了。（参倪柝声文集第一辑第七册，18页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：经历那灵细致的、细细的光照我们里面的人，也就是光照我们的良心、心思、情感和意志。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

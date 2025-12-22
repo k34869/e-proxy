@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1246')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1248')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 17 课<br />
+使徒权柄的表白</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：恩典代罪而兴。（诗歌248首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：祂对我说，我的恩典够你用的，因为我的能力，是在人的软弱上显得完全。所以我极其喜欢夸我的软弱，好叫基督的能力覆庇我。（林后十二9。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　藉着属灵的争战—林后十1～6</p>
+<p class="ot1">二　藉着神尺度的度量—十7～18</p>
+<p class="ot1">三　藉着他为基督所起的妒忌—十一1～15</p>
+<p class="ot1">四　藉着他被迫的夸口—十一16～十二18</p>
+<p class="ot2">1　夸他的身分、劳苦和患难—十一16～33。</p>
+<p class="ot2">2　夸主给他的异象和启示—十二1～10。</p>
+<p class="ot2">3　夸他使徒职分的标记—11～18。</p>
+<p class="ot1">五　藉着所赐给他的权柄—十二19～十三10</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>新约的职事乃是启示加上苦难所产生；然而基督自己作了够用的恩典，使祂的能力在人的软弱上显得完全。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>由于热中犹太教的假使徒所引起召会的破坏，使徒保罗乃表白他使徒的权柄并为新约的启示争战。使徒是勇敢而有界限的，他完全在主的限制之下。他也照着度量的神所分给他的度量夸口。他告诉哥林多人，他曾把他们许配一个丈夫，要将一个贞洁的童女献给基督。这深深摸着我们的心，挑旺我们对主耶稣的爱。这乃是真正的职事，就是将生命和对主这新郎的爱供应给人。为这职事，神也量给使徒许多苦难，好叫他所看见的启示能藉此‘烧’在他身上，与他成为一。真正的职事总是带我们享受基督，并且同祂受苦，为建造基督的身体补满祂患难的缺欠；祂自己则作了那够用的恩典，使祂的能力在我们身上显得完全。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　属灵的争战</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后十4～5：我们争战的兵器，本不是属肉体的，乃是在神面前有能力，可以攻倒坚固的营垒，…又将各样的思想掳来，使它顺从基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>阻挡人认识神的理论和思想是在心思里，也属于心思。这些乃是神的对头撒但，在悖逆神的人心思里坚固的营垒。保罗题到属灵的争战，目的是要将各样的思想掳来，使它能够顺从基督。属灵的争战不是抵挡肉体，乃是抵挡属灵的势力。今天这争战仍然进行着，仇敌仍然藉着各种情形，攻击主恢复中纯正的真理，阻挡人认识神。愿神兴起祂的召会，不用属肉体的方式，而用属灵的方式，一同起来祷告，为神争战，抵挡仇敌的诡计。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>祷告，为神争战，抵挡仇敌的诡计。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

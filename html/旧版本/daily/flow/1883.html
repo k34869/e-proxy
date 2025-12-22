@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1882')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1884')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 17 课<br />
+新耶路撒冷（二）金、珍珠、宝石</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　城的光与灯</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启二一23　那城内不需要日月光照，因有神的荣耀光照，又有羔羊为城的灯。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神与基督就是一个光。在新天新地里，仍有昼夜之分，但在新耶路撒冷里就没有这样的区分。因为我们有神自己作更强烈的光，不分昼夜，一直照耀；甚至列国要藉着城的光行走。今天召会该是如此照耀的光，我们的邻舍都该行在我们照耀的光中。今天召会是带光体，带着基督为光照耀这世代。当神彰显出来的时候，那就是荣耀。我们已被命定要得这荣耀，并蒙召来得这荣耀。现今我们正在变化好进入这荣耀，并要被带进这荣耀里。至终我们要与基督同得这荣耀，在新耶路撒冷里带着神的荣耀作神的彰显。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>成为带光体，带着基督为光照耀这世代，将神彰显出来。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在新耶路撒冷我们不需要天然的月光、日光，也不需要人造的光。这是因为我们有上等的光，就是众光的源头。这光就是神，在基督里照耀，透散到列国身上。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为什么新耶路撒冷不需要日月光照？‘列国要藉着城的光行走’，在今天的属灵应用是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们不能活在黑暗里，我们只能活在光中。新耶路撒冷将会有一种特别的光—救赎并照耀的神。（启二一23。）救赎的神照耀出来，就是照耀的神。神这照明的荣耀，乃是基督里面的光；而救赎的基督是容纳光的灯。神总是容纳在基督里；基督是神惟一的容器。神的荣耀是城的光；神作内容由基督盛装，藉着基督照耀出去。</p>
+<p>并且，新耶路撒冷整座城是透光体，将神圣的光透散到城外的列国。（24上。）我们是透光体，将光扩散出去。神至少花了六千年来建造一座城，这座城需要光。没有光，城就在黑暗里。这照明的光就是神自己在祂的荣耀里，由基督作灯盛装着。这灯是在透光体里。今天这扩散神圣之光的透光体乃是基督的身体。至终，整个新耶路撒冷要成为神圣之光的透光体。在城周围的列国，都要在这有神作荣耀之光和基督作盛装之灯的透光体所透散的光之下。</p>
+<p>圣城的光乃是独一、永远、神圣的光，神所救赎的选民要在城内这光中生活并行动，无需神所造之日月天然的光，或人所造之人工的光。（23，25，二二5上。）在全宇宙中只有三种光。第一种是神所造之日月天然的光。然后有人所造之人工的光。第三是真实的光，真正的光，就是神自己。启示录告诉我们，在新耶路撒冷我们不需要天然的月光、日光，也不需要人造的光。这是因为我们有上等的光，就是众光的源头。这光就是神，在基督里照耀，透散到列国身上。’（新耶路撒冷的解释应用于寻求的信徒，43～44页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>成为透光体，带着基督为光照耀这世代，将神彰显出来。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

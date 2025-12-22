@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1231')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1233')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 14 课<br />
+瓦器里的宝贝</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　在基督里的新造</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后五17：因此，若有人在基督里，他就是新造；旧事已过，看哪，都变成新的了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>一个简单向主活的人，自然有一种职事，将人完全带回来归主，神在基督里，叫世人与祂自己和好，且将这和好的话语托付了我们。我们替基督求你们：要与神和好。和好有两步。第一步的和好是使罪人蒙救赎脱离罪而与神和好。为此，基督在十字架上担当我们的罪，替我们受了神的审判，为我们的罪死了，使我们的罪蒙神赦免。神还要叫那些已经与神和好，却还活在天然生命中的信徒脱离肉体，这是进一步与神和好。为这目的，基督替我们这个‘人’死了，使我们能在复活的生命里向祂活着。愿我们都经历这两步的与神和好。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历两步的与神和好，使我们成为基督的大使，将罪人带回，使他们完全、圆满的归向神。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督是那宝贝在我们这瓦器里，显出神超越的能力。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督徒跟一般人有什么不同的地方？</p>
+<p>为什么基督徒能在一些特别的环境里（如受苦、病痛、被误会、遭辱骂…），胜过外面的苦难？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们若以为信耶稣只是得着平安、喜乐、福气，我们就仅仅认识宝贝的外表。好比你到珠宝店买钻石，钻石装在精美的盒子里；…我们许多人对救恩的认识，就是这样。为什么信耶稣？因为要免苦难，求平安，有精神寄托；要的是那精美的盒子。不认识神的救恩乃是基督作我们的生命，我们充其量不过是要那个盒子，而没有看见里面的钻石。保罗在林后四章七节说，“我们有这宝贝在瓦器里。”这宝贝是什么？就是基督自己，就是神自己。</p>
+<p>新约的中心，就是给我们看见，我们得救的人乃是得着神在我们里面。不错，神的确给我们平安、喜乐、福气，但这不过是外面的；神所给我们救恩的内在，乃是神自己，就是基督自己。祂是宝贝在我们这瓦器里。</p>
+<p>一个基督徒若真得救了，就有基督在他里面，作他的另一个人位。基督住在我们里面，是我们必须清楚看见的事实。基督徒所以能够忍受苦难，因为基督在他里面；基督徒所以能够牺牲、奉献，因为基督在他里面；基督徒所以迫切要传福音，因为基督在他里面。基督徒所有的能力、动力和负担，都来自他里面的基督。’（基督并祂钉十字架，44～47页。）</p>
+<p>这宝贝，内住的基督，在我们这些瓦器里，乃是基督徒生活神圣供应的源头。作新约执事的使徒，靠这宝贝超越的能力，就能过钉十字架的生活，使他们所供应基督复活的生命得以显明。因此，他们将真理显扬出来，使福音得以照耀。’（神圣三一的神圣分赐下册，457～458页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>靠着我们里面的宝贝，过钉十字架的生活，显明这超越的能力是出于神，不是出于我们。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

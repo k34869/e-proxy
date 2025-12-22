@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('244')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('246')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">来到施恩的宝座前就近主</p>
+<p>我们只管坦然无惧的来到施恩的宝座前，为要受怜悯，得恩典，作应时的帮助。（来四16）</p>
+<p>主既是体恤人的大祭司，我们所需要作的，就是坦然无惧的来到施恩的宝座前就近祂。（来四16。）施恩的宝座，是指天上神的宝座。（启四2。）神在宝座上掌权管理宇宙，因此这宝座是神行政的宝座。然而对我们信徒，这宝座却成了施恩的宝座，由至圣所里见证柜上，洒了基督宝血的平息座（施恩座）所表征。神就是在这里，与祂的百姓相会。（出二五21～22。）</p>
+<p>不过，当我们还活在地上时，怎能来到天上神和羔羊（基督）的宝座前？秘诀在于希伯来四章十二节所说我们的灵。那在天上坐在宝座上的基督，（罗八34，）现今也在我们里面，（10，）就是在我们的灵里，（提后四22，）这灵就是神居所的所在。（弗二22。）伯特利是神的家，神的居所，也是天的门；在那里基督是梯子，把地联于天，并把天带到地。（创二八12～17，约一51。）我们的灵今天既是神居所的所在，这灵就是天的门，在这里基督是梯子，把我们在地上的人联于天，并把天带给我们。因此，每当我们转到灵里，就能藉着基督作天梯，进入天的门，摸着天上施恩的宝座。（来四16注1。）</p>
+<p>许多时候，我们简直无法忍受我们的环境，并且不能面对将要遭遇的事。然而，有一个地方叫作施恩的宝座。我们可以向主祷告：‘主，我来到施恩的宝座前。在你的施恩宝座前，我得着恩典作我应时的帮助。主，我每分钟都需要你的恩典。不仅每年、每周、每天、每小时，我需要你的恩典，更是每分钟都需要你的恩典。没有你的恩典，我简直什么也不能承当。’</p>
+<p>我们不需要作什么，只需要简单来到施恩的宝座前，敞开并接受怜悯和恩典，作应时的帮助。每一天，从这恩典而来的帮助，都是应时、新鲜的，正合我们当时的光景和需要。（参希伯来书生命读经，359～363页；创世记生命读经，461～462页。）</p>
+<p class="title">我抱东西你抱我</p>
+<p>一天，慕尔郝（Henry Moorhouse，1840～1880）弟兄回家，手里拿着一包礼物，想要送给他的妻子。他的小女儿是瘸腿的，对父亲说，‘让我把这礼物，拿去送给妈妈。’慕尔郝说，‘我亲爱的女儿，这对你太重了。’女儿回答说，‘请你让我试一试。’于是，父亲把那包礼物给她。她既接着那包礼物，就对父亲说，‘亲爱的爸爸，我抱东西，你抱我。’正如这个小女孩所认知的，我们也能经历，全备供应的神在我们里面，与我们是一，使我们能承担我们本身的力量所来不及的事物。（参造就故事下册，83页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：藉着运用灵，来到施恩的宝座前，受怜悯，得恩典，作应时的帮助。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('237')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('239')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">我没有手</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">祂在木头上，在祂的身体里，亲自担当了我们的罪，使我们既然向罪死了，就得以向义活着。（彼前2:24）</div>
+<div id="CC">Who Himself bore up our sins in His body on the tree，in order that we，having died to sins，might live to righteousness.（1 Peter 2:24）</div>
+<div id="C">人不论作什么，都不能离开身体。拿东西要用身体，走路要用身体，出门要用身体；神为拯救世人，也曾给主预备了一个身体，挂在木头上，亲身担当了人的罪。我们学习事奉主的人，也是需要身体，但我们的身体肯不肯献给主用呢？有一个人祷告说，“主啊，我的朋友不信你，求你用你的手刺他的心，叫他信主。”主说，“我没有手，用你的手刺他吧。用你的脚走到他那里，用你的口劝他。”根据罗马十二章，我们献上身体为着召会生活是很实际的：首先，时间必须分别出来；其次，身体需要实际的来到聚会中，或出外看望、拜访人。这样，主才能借着我们这些流通的管道，将生命供应给人。</div>
+<div id="CC">奉献─全都献主（诗339）</div>
+<div id="C">主，你得着我一生，<br/>　使它归你成为圣；<br/>　得着我日与我时，<br/>　归你使用永无止。<br/>（副）<br/>　为我荆棘冠冕你肯戴，<br/>　为我钉死苦架你受害；<br/>　为你我愿献上我命与我爱，<br/>　事你、爱你到万代。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

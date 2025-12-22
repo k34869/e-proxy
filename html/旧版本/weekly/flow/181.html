@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('180')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('182')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">专一走主所命定的道路</p>
+<p>祂使我的魂苏醒，为自己的名引导我走义路。（诗二三3）</p>
+<p>马可六章四十五节记载：‘耶稣随即催门徒上船，先到对岸伯赛大去。’这节说出，我们都有主所命定的道路。这里的‘催’含有‘激励’的意思。主激励门徒上船。主有一条道路给门徒走，主命令他们走。基督徒一生最要紧的事，就是寻找主所命定的道路，并忠心的行走在其中。为此，我们必须安静的，等候的，祷告的，顺服的，将自己交在主的手里，专心寻求主的指示，愿意顺服祂，愿意只遵行祂的旨意，求主叫我们知道祂所定规的道路；然后出一切的代价，一心一意的行在其中。</p>
+<p>四十六节接着说，‘祂既辞别了他们，就往山上去祷告。’这启示主如何离开门徒，升到父的右边去作代祷的工作，而留门徒在世上，奔跑祂所分派给他们的道路。四十七至四十八节说，‘到了晚上，船在海中，耶稣独自在岸上，看见门徒，因风不顺，摇橹甚苦。夜里约有四更天，祂在海上走向他们，想要走过他们去。’‘到了晚上，’指明这世界是在一个长期的黑夜里。‘船在海中，’指明我们的路程还未达到终点，所以尚有危险，尚有变动的可能。我们不能过于自恃，以为我们的结局是定规的了。我们在正当的程途中，固然可喜；然而，我们如何奔跑，并如何结局，也是一个问题。门徒行走时，‘因风不顺，摇橹甚苦！’这说出我们走主所命定的道路，乃是逆风的。如果我们从来没有受过世人的反对、讥笑或逼迫，就我们所在的地位，必定不是主所给我们的。我们若在主所命定的道途中，就要觉得风不顺，真是苦！但是宁可摇橹甚苦，总比飘流的好。宁可走艰难的道路，总比走容易的道路而飘流的好。飘流是用不着力气的。我们若要站住，就要觉得苦。爱世界是不必费力的，跟从世界是不必费力的。为主的缘故站住、忠心，就必定有逆风，就要觉得摇橹甚苦。但愿我们都专一走在主所命定的道路中。（参十二篮第十一辑，42～45页。）</p>
+<p class="title">专心事奉并持守信仰直到路终</p>
+<p>李渊如姊妹有一次读到路加十二章八节，定意要在人前承认她已信了耶稣，但却缺乏勇气。她挣扎许久，也很难受。直到有一天，她里面有一个声音说，‘你肯否撇下一切跟从我呢？’她便对主说，‘主阿，我肯。’后来神要她离开教职，专心事奉祂。于是她在一九二○年三月辞职，答应了主的呼召。</p>
+<p>离开教职以后，李姊妹与一位美国女教士同工七年，得到她不少帮助与栽培。然而，李姊妹有心要找一条正直的路。最后，主带她到南京，在那里遇见几位属灵的弟兄姊妹，得了他们的帮助，于是她开始学习分辨什么是出乎人的，什么是出乎神的。</p>
+<p>中国大陆局势改变之后，李姊妹也豫感自己会下监，于是她一一拜别众亲友，并请他们不要来看望她，免得受牵累。一九五六年一月底，李姊妹与其他几位同工被捕，因着信仰被判刑十五年。到她七十五岁被主接去为止，她始终专心一意的持守信仰，直到路终。（参唱诗人第二卷第四期，17、20页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：专心寻求主所命定的道路，愿意出代价，一心一意的行在其中。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

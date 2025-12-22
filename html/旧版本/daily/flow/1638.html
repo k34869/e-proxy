@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1637')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1639')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 18 课<br />
+奔跑赛程，仰望信心的创始者与成终者</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　为着召会生活经历基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来十三13：这样，我们也当出到营外就了祂去，忍受祂所受的凌辱。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们要过真实且稳固的召会生活，就必须持定那昨日、今日、直到永远是一样的基督，不被各样怪异的教训带入歧途。我们经历基督，不是藉着吃宗教的食物，乃是藉着进入幔内—至圣所，享受基督在属天的祭司职分里，作属天的圣别人者。并出到营表征属人和属地的组织外，忍受祂所受的凌辱，跟随祂走十字架圣别人的路，丢弃地和属地的爱，将基督供应给需要的人。我们也藉着祂向神献上赞美的祭，就是承认主名之嘴唇的果子。‘愿恩典与你们众人同在。阿们。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历基督昨日、今日、直到永远，都是一样的。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>望断以及于耶稣，就是我们信心的创始者与成终者；留在至圣所，我们的灵里，就是继续不断的奔跑赛程。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督徒的人生是一个奔跑的赛程，在这赛程中我们应当注意那几件事？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘你要凭信而行并凭信受苦，就必须望断一切事物，不要看你的室友，不要看长老，不要看年长的姊妹，也不要看我；要望断以及于耶稣，因为惟有耶稣才是，一切其他的都不是。一切耶稣以外的人都一无所是，所以除了耶稣以外，不要看任何人。我们所信靠的是主，我们不信靠任何别的人。惟独祂是；所以要望断一切不是的事物，以及于那是一切的耶稣。这就是信。耶稣是我们信心的创始者与成终者，所以我们的信心乃是耶稣。祂是我们信心的起始和完成。’</p>
+<p>‘停留在至圣所里，也就是一直奔跑赛程。根据我们的经历，每逢我们在心思里打算妥协一点，我们深处的灵里就会觉得失去神的同在，而不在至圣所里。我们接触神的路，也就立即变成曲而不直。这个弯曲把我们引离至圣所，离开见证的柜、隐藏的吗哪、发芽的杖、和见证的版。虽然在开头的时候，我们离开至圣所只有一点点，后来就发现离开得很远了。</p>
+<p>我们所奔跑的赛程，最终必须是在至圣所里。我们若只在外院子里奔跑赛程，就太肤浅了。我们必须在至圣所里奔跑赛程。或许你会想，至圣所那么小，怎能奔跑赛程。不错，帐幕里的至圣所，仅仅是一个长宽高各十肘的立方体。（出二六8，16。）但在圣殿里，长宽高则各为二十肘。（王上六20。）至终，新耶路撒冷长宽高各有一万二千斯泰底亚。（启二一16。）至圣所长宽高的尺寸，不论在帐幕，在圣殿，以及新耶路撒冷，都表征神那永远所是的完全。无论从那一个角度看，神都是完全而完整的；并且祂的完整和完全也是永远无限的。</p>
+<p>我们越奔跑，至圣所就越扩大。从帐幕扩大到圣殿，最终扩大到新耶路撒冷。…今天，我们一直奔跑的赛程是在至圣所里，这不间断之赛程的路径都必须修直。我们要修直路径，就需要恩典。我们必须奔跑赛程，不可坠落离开恩典。我们需要恩典，才能奔跑赛程。’（希伯来书生命读经，691～692页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>脱去重担和容易缠累我们的罪，凭着忍耐奔跑赛程。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

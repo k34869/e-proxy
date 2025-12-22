@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('261')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('263')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第24课  创造-人的受造奇妙可畏（十）意志</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十六9 人心筹算自己的道路，惟耶和华指引他的脚步。</p>
+<p>伦伦的新球鞋</p>
+<p>妈妈帮伦伦买了一双蓝白相间的新球鞋，鞋头和鞋跟是白色的，鞋身是深蓝色的。上面还绑著白色的鞋带，穿起来好神气哦！伦伦好喜欢他的新球鞋，天天穿著这双鞋到处跑,下雨了，妈妈要伦伦穿雨鞋出去，伦伦不要，他还是要穿他心爱的球鞋。伦伦拿著小伞，走在妈妈的旁边，一路走，一路高兴的踢阿踢，跳阿跳。妈妈说，『伦伦，好好走，别跳来跳去，踩到水了。』伦伦没听到妈妈的说话，还是高兴的又踢又跳。唉呀！前面有一滩水，伦伦没看见，一跳就跳到水滩里去了。白色的鞋头沾满了污泥，蓝色的鞋身被污水给溅湿了。等伦伦回到家，一双新球鞋变得又湿又脏。</p>
+<p>隔壁的张妈妈邀伦伦去他们家儿童排，妈妈说，『你换双鞋子去吧，这么脏的鞋子，会把别人的家给弄脏了。』伦伦说，『不要，我要穿我的新球鞋去。』伦伦来不及蹲下来穿鞋，他用力把两只脚塞进鞋子里，踹两下，就跑去张妈妈家。阿明、新城、大光都来了，他们的鞋子整齐的排在门口。伦伦看见他的好朋友新城，就迫不及待的要去和新城玩，他用力踩鞋跟，把两只脚拔出来，一跳跳进客厅去了。可怜的鞋子，歪歪斜斜的躺在地板上，还散了一地的沙。张妈妈说，『这是谁的鞋子阿，鞋跟被踩扁了，又沾满泥沙，我们把它丢掉好了。』伦伦大叫：『不，那是我的新球鞋！』所有的小朋友都笑起来了，因为那鞋子看起来一点都不新，看起来好像是去爬山回来，穿坏了的鞋子呢！伦伦觉得很不好意思，脸都胀红了。细心的张妈妈安慰伦伦：『不要难过，回家把鞋子洗干净就好了。』于是张妈妈请小朋友坐在玄关的地板上，然后为他们示范如何正确的穿鞋、脱鞋。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神给了我们自由选择的意志。我们需要运用意志做出正确的选择。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：神给我们创造了意志，我们可以做出选择和决定。当我们挑选衬衫的时候，当我们决定吃什么东西的时候，当我们选择是否要服从父母的时候。我们应该用意志做出正确的选择，而不应该仅仅基于我们的感觉、喜欢或不喜欢做选择。讨论孩子们可能遇见的其他情况，让他们学习做“正确” 的选择，而不是选择他们愿意做的事。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇二五12 谁是敬畏耶和华的人？耶和华必指示他当选择的道路。</p>
+<p>摩西的选择</p>
+<p>摩西在埃及的王宫长大，法老的女儿让他受到最好的教育，学会了埃及人一切的学问。摩西也越发俊美非凡，并且满有智慧，说话行事，都满有能力。摩西长大了，但他始终记得年幼的时候，妈妈对他所说的话。埃及的王宫虽然好，埃及人所敬拜的，却是污秽的偶像，是神所恨恶的；他知道，他不能作埃及人，享受一辈子的罪中之乐，他应当回到神的百姓，以色列人那里，与他们同受苦难。</p>
+<p>于是，摩西选择离开埃及的王宫，不作埃及的王子，他成为牧羊人，在旷野经历风吹雨淋，日晒霜寒，牧羊四十年。因着摩西有这样的勇气，不怕得罪法老，愿意作神的子民—以色列人。有一天，神大大的使用他，成为神合用的器皿。神使摩西刚强，在法老面前行了十二个神迹，并带领以色列人离开埃及，他又靠着神的大能，使红海的水分开，众百姓从分开的海水中经过，法老的追兵，却淹没在海水中。</p>
+<p>从此，以色列子民脱离了法老，成为神的子民，专一的事奉神。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神给了我们自由选择的意志。我们需要用意志做出正确的选择。我们需要刚强（坚持自己的意志），不要被别人强迫或被说服，而去做我们认为是错误的事。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：我们的意志，可以选择好的、正确的，拒绝不好的、错误的。我们需要用自己的意志，选择合适的朋友和活动。当别人做错事或坏事时，我们需要做出选择，不要和他们一起去。设定一个情景，让孩子们做出正确的决定，然后试着反对他们正确的决定，看他们会怎样做。说明我们需要一个坚强的意志来坚持做正确的选择。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约书亚二四15下 至于我和我家，我们必定事奉耶和华。</p>
+<p>约书亚二四22 约书亚对百姓说，你们自己选择耶和华，要事奉祂，你们向自己作见证罢。他们说，我们愿意作见证。</p>
+<p>诺亚造方舟</p>
+<p>小朋友知不知道挪亚造方舟的故事？那是发生在很久很久以前的事。当时的世代非常邪恶，地上的人犯了许多罪，逼得神不得不用洪水来淹没地。那时地上有一个人名叫挪亚，他在神眼中是正直、遵行神旨意的。神就吩咐挪亚用木头造了一只很大的方舟，为了让他和他一家的人，以及各种活物可以进到方舟里，当神降下洪水时，他们就不至于被洪水淹没。挪亚非常听从神的话，凡神所说的，他都照着去作，一点也没有自己的意见，也没有觉得造方舟太麻烦。可是周围的人，没有一个相信神对挪亚所说洪水要来的话是真的，他们讥笑挪亚，但挪亚没有因此就放弃了。他在造方舟的事上，以非常坚强的意志，听从神的话，抵挡所有从撒但来的意见。最后，方舟造好了，只有挪亚一家进方舟，免去了洪水的审判，地上所有其余的人，都被洪水淹没了。（创六。）</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：神给我们自由的意志拣选祂、拒绝撒但。我们需要用意志来选择神和属神的东西，并拒绝撒但的诱惑。当我们决定去作一件正确的事时，应当有一个坚强的意志。因为仇敌撒但，常常会借着环境或周围的人说服我们，不要那么麻烦，不必那么坚持。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：我们应该运用意志来拣选神和属神的东西。我们应该选择阅读圣经，参加儿童聚会，向我们的朋友讲说神。有时，我们可能会做一些我们知道神会不高兴的事情，比如，对兄弟姐妹大喊大叫，跟父母顶嘴，看不合适的电视节目，玩暴力的电子游戏，或者说一些卑鄙的话。这些都是神的仇敌撒但的诱惑，我们需要运用意志来拒绝他。我们越用意志选择神和属神的事物，我们的意志就越容易倾向神，也就越容易拒绝来自撒但的试探。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

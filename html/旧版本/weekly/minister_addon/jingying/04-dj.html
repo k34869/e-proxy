@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link href="../../../html/shenggeng/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>经营小排</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              
+            </v-card>
+            <br />
+            <v-card elevation="0">
+              <div class="banner">
+           
+                经营小排
+                <br />
+               第四篇 经营小排——盯生活
+              </div>
+        
+          </div>
+         
+          <p class="nav">读经：</p>
+          <p class="hymn">来 10:24 且当彼此相顾，激发爱心，勉励行善；</p>
+<p class="hymn">来 10:25 不可放弃我们自己的聚集，好像有些人习惯了一样，倒要彼此劝勉；既看见那日子临近，就更当如此。</p>
+          <p class="hymn">徒 2:42 他们都坚定持续在使徒的教训和交通里，持续擘饼和祷告。</p>
+          <p class="hymn">雅 2:15 若有弟兄或姊妹经常是赤身露体的，又缺了日用的食物，</p>
+<p class="hymn">雅 2:16 而你们中间有人对他们说，平平安安的去吧，愿你们穿得暖，吃得饱；却不给他们身体所需用的，有什么益处？ </p>
+
+          <p class="hymn">林前 12:24 至于我们俊美的肢体，就不需要了。但神将这身体调和在一起，把更丰盈的体面加给那有缺欠的肢体，</p>
+          <p class="hymn">腓 2:1 所以在基督里若有什么鼓励，若有什么爱的安慰，若有什么灵的交通，若有什么慈心、怜恤，</p>
+<p class="hymn">腓 2:2 你们就要使我的喜乐满足，就是要思念相同的事，有相同的爱，魂里联结，思念同一件事，</p>
+<p class="hymn">腓 2:3 凡事都不私图好争，也不贪图虚荣，只要心思卑微，各人看别人比自己强；</p>
+<p class="hymn">腓 2:4 各人不单看重自己的长处，也看重别人的。</p>
+          
+
+
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../html/shenggeng/js/vue.js"></script>
+    <script src="../../../html/shenggeng/js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "04.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

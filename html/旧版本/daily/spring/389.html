@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('388')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('390')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">无理要钱六万八</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>约壹2:27　你们从祂所领受的膏油涂抹，住在你们里面，并不需要人教导你们，乃有祂的膏油涂抹，在凡事上教导你们；这膏油涂抹是真实的，不是虚谎的，你们要按这膏油涂抹所教导你们的，住在祂里面。And as for you, the anointing which you have received from Him abides in you, and you have no need that anyone teach you; but as His anointing teaches you concerning all things and is true and is not a blie, and even as it has taught you, abide in Him.</p><p>有位弟兄本来应该去领一次聚会；但他里面觉得很空，没有话语，就请另外一位弟兄前去，供应一点话语。那位弟兄去的时候，里面感觉要作一点见证；向来他的个性是不大喜欢作见证的，但是圣灵一直催促，要他作见证，所以到时他就作了他个人的一点见证。这次聚会中，有两位朋友，来听过几次道，都听不懂，觉得没有什么意思，那一天，又被一位弟兄勉强来听。勉强他们来的弟兄就为他们两人祷告，求主为他们安排合式的话语。结果，那一位弟兄所作的见证，就是为着他们两人的，正是适合他们的需要，大大的帮助了他们。在每一次聚会中，弟兄姊妹们若是都能顺服圣灵的引导，就必大大的供应聚会，使许多人得到帮助。</p><p>儿童,#836</p><p>我们是小神人</p><p>一</p><p>我们是小神人，操练过神生活，神属性，藉人性，显出来。</p><p>说话真，作事真，不虚假，不遮掩。灵和真，敬拜神，荣耀神。</p><p>二</p><p>我们是小神人，操练过神生活，神属性，藉人性显出来。</p><p>说话准，听话准，传话准，作事准，时间准，彰显神，荣耀神。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

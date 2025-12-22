@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('847')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('849')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 14 课<br />
+主医治病人的职事（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：耶稣恩主是人惟一需要。（诗歌723首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：祂在木头上，在祂的身体里，亲自担当了我们的罪，使我们既然向罪死了，就得以向义活着</p>
+<p>因祂受的鞭伤，你们便得了医治。（彼前二24。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主医治百夫长的仆人—太八5～13，路七1～10</p>
+<p class="ot1">二　主医治患血漏的妇人，并使睚鲁的女儿复活—太九18～26，可五21～43，路八41～56</p>
+<p class="ot1">三　主洁净麻疯病人</p>
+<p class="ot2">1.　主怜悯麻疯病人，伸手摸他，使他得医治—太八1～4，可一40～45，路五12～15。</p>
+<p class="ot2">2.　主在经过撒玛利亚的路上医治十个麻疯病人—路十七11～19。</p>
+<p class="ot1">四　主在安息日医治病人</p>
+<p class="ot2">1.　主医治一个枯干一只手的人—太十二9～13，可三1～5，路六6～10。</p>
+<p class="ot2">2.　主医治一个患水臌的人—路十四1～6。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>因着主对付罪并分赐神圣的生命，所以祂能医治病人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>疾病是罪的结果，也是人因着罪，在神面前不正常光景的标记。所以主耶稣在祂的职事里，来医治人身体和属灵的疾病，使他们恢复正常能服事祂。主医治人乃是因着祂人性里的怜悯与恩慈。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　医治百夫长的仆人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这是要应验那藉着申言者以赛亚所说的，说，‘祂亲自取去了我们的软弱，担当了我们的疾病。’（太八17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>百夫长是罗马军队中管理一百名士兵的军官，他听见耶稣的事，求耶稣来全然拯救他的奴仆。然而他却告诉主，求主不必亲自去，只要说一句话，就能叫他的仆人得医治。百夫长认识主的权柄，晓得主的话带有医治的权柄。他不仅相信君尊的救主，也相信祂的话。这是更强的信心，使救主觉得希奇。所以主说，‘去罢，照你所信的，给你成就了。’他的仆人就在那时得了医治。今天因着主向我们说话，我们也相信这话，就得了医治，我们属灵的功能得以恢复，得以服事我们的主。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>相信福音那点活人的、重生人的话，以得医治，恢复属灵的功能，得以服事主。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

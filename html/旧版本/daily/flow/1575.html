@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1574')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1576')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 9 课<br />
+对召会败落的预防剂</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　预防的抗毒剂并对预防者的鼓励</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>提后三15～17：　　　…这圣经能使你藉着相信基督耶稣，有得救的智慧。圣经都是神的呼出，对于教训、督责、改正、在义上的教导，都是有益的，叫属神的人得以完备，为着各样的善工，装备齐全。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>提摩太得着预防的抗毒剂，就是神圣的话。在主恢复里的圣徒，尤其是青年人。我们需要运用我们的眼睛、心思和灵，来读主的话，使我们不仅领会某段圣经的意义，也吸入神圣的气，接受生命的供应。保罗说到对预防者的鼓励，就是要来的奖赏。保罗的生活、工作是以主的显现和祂的国度为鼓励、为目标。要忠信尽他话语的职事，无论合时不合时，时机便利不便利，受不受欢迎，都要传道，讲说关于基督与召会的神圣启示。将基督一切的丰富供应给罪人和信徒，以建造基督的身体。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>运用我们的眼睛、心思和灵，来读主的话，接受生命的供应。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>圣经都是神的呼出，对于教训、督责、改正、在义上的教导，都是有益的，叫属神的人得以完备，为着各样的善工，装备齐全。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>根据提后三章，圣经能够叫我们在那些方面被装备齐全？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘在神一面，圣经是神的呼出。在我们一面，圣经是叫我们在四件事上得着益处—教训、督责、改正和教导。…</p>
+<p>教训实际上一点不差就是神圣的启示。…启示就是揭开帕子。你教导…人时，该除去帕子，使他们看见关于三一神的事。你在召会的聚会中说话时，你的说话该是卷去帕子，陈明启示。</p>
+<p>教训之后是督责，…每当我们看见神的事，我们就看见我们的错误、过错、缺点，和我们的罪。结果我们就受督责，受责备。这个督责来自我们所接受的启示。…但每当我们读圣经得着启示时，这启示就会督责我们，责备我们。</p>
+<p>在督责之后是改正。教训或启示，带来督责，而督责产生改正。改正就是矫正错误，使人转到正路，恢复到正直的情形。</p>
+<p>我们受改正以后，就会得着正确的教导—在义上的教导。…我们受督责并受责备，原因是我们在许多不同方式和方面都是错误的。我们也许对神，对基督，并对那灵是错误的。我们也许对召会，对弟兄姊妹，对我们的父母，对我们的邻居，甚至对我们自己，也是错误的。我们也许在用钱的方式上，在用时间的方式上，在穿着的方式上，或在梳理头发上，都是错误的。因着我们也许在许多不同的事上是错误的，我们就在读圣经时受所得的启示责备。…我们乃是受话语教训的责备，结果我们就受调整。</p>
+<p>我们…的目标是要陈明一个教训又一个教训，一个启示又一个启示，使…人能看见神，看见自己，并且受督责、改正并教导，使他们与神、与人都是对的，叫属神的人得以完备，为着各样的善工装备齐全。这样的人将是真实属神的人，真正的神人，一直吸入三一神，因而接受启示、督责、改正、和义上的教导。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在读主的话时，不断的吸入三一神，因而接受启示、督责、改正、和义上的教导。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

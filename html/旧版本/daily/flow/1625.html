@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1624')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1626')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 17 课<br />
+信心的历史和见证人</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我心所追求乃是神自己。（诗歌270首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：人非有信，就不能得神的喜悦；因为到神面前来的人，必须信有神，且信祂赏赐那寻求祂的人。（来十一6。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　第四个警告—要向前进入至圣所，不可退缩回到犹太教—来十19～39</p>
+<p class="ot1">二　信—独一的路—十一1～40</p>
+<p class="ot2">1　信的定义—1：</p>
+<p class="ot2">a　是所望之事的质实。</p>
+<p class="ot2">b　是未见之事的确证。</p>
+<p class="ot2">2　信的见证人—2～40：</p>
+<p class="ot2">a　古人在这信上得了美好的见证—2。</p>
+<p class="ot2">b　因着信，知道宇宙是凭神的话结构起来的—3。</p>
+<p class="ot2">c　历代信的见证人—4～39。</p>
+<p class="ot2">d　因着新约的信徒得以完全—40。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识希伯来书中第四个警告，以及信心的定义，并历代信的见证人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>希伯来十章十九至三十九节是本书中第四个警告，鼓励希伯来的信徒要本于信活着，向前进入至圣所，不可退缩回到犹太教，以致遭毁坏。按照神的经纶，一切的旧祭已经了结，旧路也已经封闭。耶稣的血已为我们开创了一条又新又活的路。故此我们应当彼此相顾，激发爱心，勉励行善，并且不可放弃我们自己的聚集。希伯来十一章，是说到信心和信心的历史。一至二节说到信的定义：‘是所望之事的质实，是未见之事的确证。’三至四十节向我们陈述信的简史，从神的创造，经过历代神的选民，直到所有新约的信徒，终极完成于永世里的新耶路撒冷，证明信乃是寻求神的人得祂应许，走祂道路的惟一途径。列在这个信心历史上的每一个人，都是见证人。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　前来进入至圣所</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来十19～20：弟兄们，我们既因耶稣的血，得以坦然进入至圣所，是藉着祂给我们开创了一条又新又活的路，从幔子经过，这幔子就是祂的肉体。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>希伯来十章二十节的幔子预表基督的肉体。当基督的肉体钉死十字架时,就为我们开了一条路，使我们得以进入至圣所。我们要进入至圣所，就必须有真诚的心，十分确信的信，被血洒过的良心，并且全人是洗净了的。进入至圣所的秘诀就是我们的灵。这位在天上的基督，现今也在我们的灵里。因此，我们一转到灵里，就进入了至圣所，在那里与施恩宝座上的神相会。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以真诚的心，十分确信的信，前来进入至圣所。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

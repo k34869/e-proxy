@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('875')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('877')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 18 课<br />
+主职事的扩展</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我今愿跟随耶稣。（诗歌346首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：就对他们说，庄稼固多，工人却少；所以要祈求庄稼的主，催赶工人收割祂的庄稼。（路十2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主呼召并选立十二门徒—太十1～4，路六12～16</p>
+<p class="ot2">1.　主耶稣上山整夜祷告，与神交通，为祂的职事寻求神的旨意和喜悦。</p>
+<p class="ot2">2.　主在选立门徒的事上与神是一，在神里面、凭着神并同着神行动。</p>
+<p class="ot1">二　门徒受差遣扩展主的职事—太十5～15，可六7～13，路九1～6</p>
+<p class="ot2">1.　主给门徒能力、权柄，制伏一切的鬼，并医治疾病。</p>
+<p class="ot2">2.　门徒走遍各乡，宣扬神的国，传扬福音，治病赶鬼，并传道叫人悔改。</p>
+<p class="ot1">三　主对受差遣之门徒的嘱咐—太十16～十一1</p>
+<p class="ot2">1.　受逼迫和应付逼迫的路—十16～33。</p>
+<p class="ot2">2.　跟从主走十字架的道路—34～39。</p>
+<p class="ot2">3.　主与受差者是一—十40～十一1。</p>
+<p class="ot1">四　主选立七十门徒扩展职事—路十1～17</p>
+<p class="ot1">五　跟从主的妇女们—路八1～3</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主在地上的职事需要藉着祂的门徒，就是跟从主的人，得着扩展。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主在地上尽职的时候，祂不只是个人在地上尽职，更是呼召了一批门徒，来扩展祂的职事。祂首先在加利利呼召了十二使徒，而后在撒玛利亚往耶路撒冷的路上，祂又呼召了七十个门徒，为着这职事广大的需要。主给门徒能力、权柄，制伏一切的鬼，并医治疾病。门徒就走遍各乡，宣扬神的国，传扬福音，治病赶鬼，并传道叫人悔改。主也告诉门徒，他们将要受逼迫和应付逼迫的路。他们若要跟从主，就必须否认自己的魂生命，来跟从主走十字架的道路。然而，他们若这样否认己来跟从主，主也必与他们是一。除了这班跟从主的门徒之外，还有一班曾受主医治的妇女们，她们不仅跟从主，也供给主和门徒生活上的需要。主与门徒，和跟从祂的妇女们，可说是主在地上所形成的第一个‘活力排’。藉着这第一个活力排，主在地上的职事得以扩展。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主呼召并选立十二门徒</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>那些日子，耶稣出去上山祷告，整夜祷告神。到了天亮，祂就叫门徒来，从他们中间挑选十二个人，称他们为使徒。（路六12～13。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主耶稣上山整夜祷告，是为了要与神交通，为祂的职事寻求神的旨意和喜悦。主需要选立一些人作祂的助手，作奉差遣出去接触人的使徒；在这要紧的事上，主没有在自己里面或凭自己行动，祂乃是弃绝自己，将自己摆在一边，完全在神里面并同着神作这事。若是主凭着自己选立门徒，祂是无所不知的，祂不可能不知道加略人犹大是个贼，又是将来要出卖祂的。但祂没有照自己的意愿和喜好来拣选使徒，乃是向父祷告，照着父的心意来选立使徒。主耶稣为我们立了榜样，我们也应当操练像主一样，凡事藉着祷告求问神，寻求神的喜悦和旨意。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>凡事藉着祷告求问神，寻求神的喜悦和旨意。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('183')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('185')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">单单与神交涉是可能的</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">信靠祂的人，必不至于羞愧。（彼前2:6）</div>
+<div id="CC">He who believes on Him shall by no means be put to shame.（1 Peter 2:6）</div>
+<div id="C">一次，慕勒刚从德国回来，在主的工作上遭遇极大的经济困难。数日之后，接到一位时常捐助孤儿院的弟兄来函说，“你所负责的工作是否有急需？我知道你从不求人，单单仰望你所事奉的主；可是答复人的询问，似乎有点不同。这是正当的。我愿意晓得你目前工作上的经济状况，请你通知我，目前你需要多少，或者将来盼望多少？”此时慕勒手中只剩二十七便士，有数百孤儿需要供应，但他覆信说，“我感激你的爱心，同意你的意见，向人要钱和答复询问确有不同。但我觉得没有自由可以向你报告我们的经济状况，因为在我手中工作的主要目的，在乎领导一些信心软弱的人看见，单单与神交涉是可能的。”回信寄出之后，慕勒为这位弟兄祷告，将需要献给这位永活的神：“主啊，你知道为着你的缘故，我没有把需要告诉这位弟兄。现在，主啊，求你再一次的显明，单单向你吐露我们的需要是行得通的。所以求你对这位弟兄说话，使他帮助我们。”神感动这位弟兄，送来一百金镑。款收到时，慕勒两手正已空空。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('812')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('814')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 9 课<br />
+主生命供应的职事（一）生命的重生</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：神之于人一切正常故事。（诗歌450首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：耶稣回答说，我实实在在的告诉你，人若不是从水和灵生的，就不能进神的国。从肉体生的，就是肉体；从那灵生的，就是灵。（约三5～6。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　生命的原则—变死亡为生命—约二1～11</p>
+<p class="ot2">1.　耶稣赴迦拿的婚筵，表征祂在复活里，在人生的享乐中临到软弱、脆弱的人—1～2。</p>
+<p class="ot2">2.　婚筵的酒用尽了，表征人属人的生命用尽，为死亡所充满—3～7。</p>
+<p class="ot2">3.　耶稣变水为酒，表征基督将人的死亡变为永远的生命—8～11。</p>
+<p class="ot1">二　生命的目的—建造神的家—二12～22</p>
+<p class="ot2">1.　耶稣洁净殿—12～17。</p>
+<p class="ot2">2.　耶稣那是殿的身体被拆毁，在复活里被建立起来—18～22。</p>
+<p class="ot1">三　生命的重生—三1～36</p>
+<p class="ot2">1.　人的需要—由神的灵在人灵里的重生—1～13。</p>
+<p class="ot2">2.　人肉体中撒但的邪恶性情，在十字架上藉着基督在蛇形中的死受了审判，使信徒得着永远的生命—14～21。</p>
+<p class="ot2">3.　重生的人成为基督的新妇作祂的扩增—22～30。</p>
+<p class="ot2">4.　无限量的神子给人相信以得永远的生命—31～36。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主耶稣来到人死亡的光景中，将死亡变为生命，为着神家的建造；并使人重生，得着神永远的生命，进入神的国，成为基督的扩增。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主在地上所行的第一件神迹—变水为酒，说出主行事的原则乃是生命的原则，就是变死亡为生命；主洁净圣殿，则说出生命的目的，乃是为着建造神的家。人需要重生，就是在人的生命之外，再接受神的生命，好使人能进入神的国，就是神的掌权以及神圣的范围里。而重生乃是藉着我们运用灵与神的灵接触，神的灵进入我们的灵，与我们的灵调和为一。因着人堕落，撒但的毒素进入人里面，使人成为罪的肉体。我们需要基督成为罪之肉体的形状，为我们死在十字架上，对付我们里面的蛇性，并废除古蛇。当人接受这位被钉死又复活的基督，我们里面属撒但的性情就被对付，我们就得着重生，得着神永远的生命。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　生命的原则—变死亡为生命（一）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神爱世人，甚至将祂的独生子赐给他们，叫一切信入他的，不至灭亡，反得永远的生命。（约三16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>当主耶稣来到迦拿的婚筵时，众人正在享受快乐。然而就在这时，婚筵享受的中心—酒，用尽了。当酒一用尽，婚筵的快乐就了了。这表征人生虽有享受，这享受却是短暂的，当人的生命用尽时，人生的享受也就结束了。人生的享受结束了，人的生命也完结了。然而，就在这时，主耶稣来到我们的处境中。祂来遇见我们，并且使我们里面的死亡变为生命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在任何处境中转向主，经历基督将我们里面的死亡变为生命。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('415')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('417')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第4课 性格—忍耐</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>雅各五11 看哪，我们称那忍耐的人是有福的…</p>
+<p>挖油井</p>
+<p>从前有一个人，投资采挖油井，花了许多时间，耗费几万元，却不见一滴油，于是十分失望，便廉价卖出油井。不料，买主继续再往下挖六个小时，油即如泉涌出。这头一个主人，因为中途放弃，损失难以估计。同样的，多少祷告未蒙应允，是因为人等得不耐烦，灰心失望，中途舍弃。主要我们“常常祷告，不可灰心”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：忍耐是长时间持续作某事。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当我们作事时，我们需要有忍耐（例如，作家务、收拾玩具、整理床铺等）。我们不应该半途而废，或只是因为自己不想再作了，而要求别人为我们作。我们需要学习完成所作的。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>雅各一4 但忍耐也当成功，好使你们齐备完整，毫无缺欠。</p>
+<p>著名的音乐家贝多芬，自幼生长在一个穷苦的家庭。父亲约翰虽然在德国皇室里担任宫廷乐师，却因终日酗酒，耗尽所赚来的钱，以致家用始终入不敷出。贝多芬四岁时，就展露出对音乐的喜好和才华，能立即把父亲弹过的曲调照样弹奏出来。然而，父亲训练他弹琴的目的，却是要他登台演奏，赚钱补贴家用。因此，从贝多芬开始学钢琴起，只要父亲在家，就经常逼着他彻夜练琴。若是贝多芬忍受不住父亲的脾气，稍有反抗，父亲立刻怒气冲天，甚至会拿起皮鞭抽打他。幸好，贝多芬的母亲总是在旁不断地鼓励他，要成为伟大的音乐家，就必须忍耐，吃得住苦，勤奋的练习。母亲的鼓励与陪伴，成为贝多芬能继续练琴的最大力量。</p>
+<p>母亲为了让贝多芬学习到正统的音乐理论和作曲，特别去拜访当时有名的音乐家尼法。尼法也很乐意免费指导这个天才少年。然而，尼法是一位教学严谨的教师，总是给贝多芬繁重的功课，让他累得喘不过气来。同时，只要发现一点不满意的地方，尼法就会严厉的训斥。贝多芬受不了尼法的斥责，就向母亲表示，他不想再跟着尼法先生学琴了。没想到母亲知道原因后，不但没有同情他，反而严厉的告诫他，伟人的成功是经过千锤百炼而造就出来的。小时候，被父亲抽着鞭子整夜弹琴的痛苦都熬过来了，即便再有任何学习的辛苦，应该都能忍受得住。经过母亲的提醒，贝多芬省悟过来，他不该受了一点挫折，就打消学习的念头，于是他重新振作精神，努力学习，顺利成为宫廷的风琴手。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：忍耐是能够持续作某件事很长时间而不中断或停止。这意思是要努力完成任务，并为此付出一切。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：带一些美国人造奇迹的照片（拉什莫尔山，金门大桥，美国帝国大厦，胡佛大坝）。描述所涉及的工作条件、时间和力量。工人们需要很大的忍耐来完成这些项目。想象一下如果没有完成这些项目会是什么样子。没有完成的桥或大坝没有任何用处。同样，正确的性格就是我们在一项任务上需要学习忍耐和坚持，直到将其完成。在玩或看电视之前，我们需要先将作业作完。学习乐器时，我们应该不断练习，直到我们学好为止。在一项运动中出类拔萃，需要无数次的训练。所有这些都要求我们努力完成而不中断或停止。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>罗马书十二12 在指望中要喜乐，在患难中要忍耐，在祷告上要坚定持续。</p>
+<p>挪亚恒忍造方舟并传扬义</p>
+<p>在旧约挪亚的时代，神见地上的人日渐败坏，就心里忧伤，要毁灭这地。神告诉挪亚，祂要用洪水毁灭这地。挪亚听见这话，除了照神所吩咐的，建造了一只方舟之外，他还作了一件重要的事，就是向周围的人传福音。彼得后书清楚地告诉我们，挪亚一家八口是“传扬义”的人（二5）。传扬义就是反对当时邪恶的世代；因为挪亚的世代是邪恶的，地上充满了强暴，没有一件事是义的。挪亚花了许多时间建造方舟，他也必定关心周围的人。因此，挪亚向周围的人传扬神的义，告诉他们，要转向神，要与神、与人、并与自己都是对的，否则神公义的审判就会临到他们。只是当时的世代，除了挪亚的家人之外，竟没有人相信挪亚的传扬，没有人相信洪水会临到他们。当挪亚将方舟建造好时，照着神所吩咐的，神降洪水在地上共四十昼夜。地上一切有血肉的动物，以及所有的人都死了，只有挪亚一家，和那些与他同在方舟里的活物得以存活（创六~八）。</p>
+<p>挪亚花了一百年的时间造方舟，这期间他和神都需要很多的忍耐。彼前三20告诉我们，神的心恒忍热切等待挪亚时代的人悔改。挪亚一面造方舟，一面向周围的人传扬义；他传扬义的时间可能超过一百二十年。可惜经过这么久，仍然没有人相信他所传所作的，以致后来借水得救的，只有挪亚一家八口。这给我们看见，神正恒忍热切等待我们回转向祂，我们千万不要向主硬着心。另一面，我们传福音时也需要主作我们的忍耐。主耶稣说，人子的日子要和挪亚的日子一样。人们要吃、喝、嫁、娶，但主要忽然来到，正如挪亚的时候洪水来到一样（太二四38~39）。今天的“方舟”就是召会生活。我们同过召会生活，就是建造今日的方舟。我们都必须是今日的挪亚，接受启示，相信神的话，并坚定持续地传扬福音，好使我们周围那些愿意相信并接受主的人，能与我们一同过召会生活，得蒙保守和拯救（参创世记生命读经，四七三~四七五、四八五、四九一页）。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个正确的性格必须有忍耐。忍耐就是有能力应付长期的艰难和困苦。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：完成一项任务需要忍耐，因有时可能会有困难或困苦。摩西是一个在面对艰难和困苦时有忍耐的人。他不得不面对法老的一再拒绝，以及以色列人的批评和抱怨（出五—十三）。雅各必须忍受拉班的对待，并服事他十四年（创二十九）。有时我们可能会经历一些困难，比如在某件事上，尽管我们尽了最大努力，却没有取得好成绩。当这种情况发生时，我们不应该气馁或放弃。相反的，我们应该忍耐着继续学习，直到我们取得好成绩。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

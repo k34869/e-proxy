@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('197')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('199')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">神乐意向罪人敞开</p>
+<p>你们一切干渴的都当就近水来，没有银钱的也可以来；你们都来，买了吃；不用银钱，不用价值，也来买酒和奶。（赛五五1）</p>
+<p>全本圣经给我们看见，神向着祂所创造的人是敞开的。在创世记二章，神把人安置在生命树跟前，（9，）意思是要人接受基督作生命，得着喜悦和满足。随着生命树又有一道河，从伊甸流出来，滋润那园子，从那里分为四道。（10～14。）这道河从神这源头与中心流出来，普及到四方的人，目的是要人饮于这水，而得着神作生命。</p>
+<p>再者，以赛亚书五十五章进一步揭示，神将自己当作活水作人的救恩。五十三章记载了基督所完成大能的救赎；接着，在五十五章一节，神便邀请人就近水来喝：‘你们一切干渴的都当就近水来，没有银钱的也可以来；你们都来，买了吃；不用银钱，不用价值，也来买酒和奶。’在此，我们看见神的意念是，我们可以来，白白的饮于祂。六至七节又说，‘当趁耶和华可寻找的时候寻找祂，相近的时候呼求祂。…归向耶和华，耶和华就必怜恤他；当归向我们的神，因为祂必广行赦免。’这说出神向着人是敞开的、相近的。当人转向神、寻求神、呼求神，神就怜恤他们，向他们广行赦免。神也要用祂口中的话来滋润我们，如同雨雪从天而降，滋润地土，（10～11，）使我们被神的话充满，得更新，得加力。</p>
+<p>在圣经的末了，启示录二十一章更进一步给我们看见，圣城新耶路撒冷有十二个门，在圣城的四边，每边有三门，这门作为城的入口，向着地的四方—东、西、南、北—所有的人，都是便利的。这表征经过过程并终极完成的神，乐意敞开，将悔改的罪人接纳到祂永远经纶的终极完成里。今天，这位神乐意接纳悔改的罪人前来，接受祂的救恩。因此，我们需要与神一同出到地的四方，往世界各地，向人陈明神对人的心爱美意，把人带进神的国，好扩展祂的经纶。（参创世记生命读经，176、178～179页；以赛亚书生命读经，242～243、246～247页；新耶路撒冷的解释应用于寻求的信徒，20～21页。）</p>
+<p class="title">小鹿知水源</p>
+<p>有一骆驼队，在沙漠中旅行。途中，饮用的水用完了，每一队员都口渴难熬，个个脸上满带愁烦与疲乏。于是他们极力去寻找水源，但是经过一天的努力，仍旧没有着落；因为许多沼潭和水洞都因久旱干涸了。日落的时候，有人发怨言，继而争闹、呼喊、哭泣，因他们干渴难当，以致绝望。这时，有一个人想到一个主意，将他所带的一对小赤鹿释放出去。鹿儿仰首向着四方嗅了一会儿，突然朝着一个方向直奔而去。于是，他们的轻骑带着水罐紧跟着它们；两个小时后，队里起了欢呼，因为水源找着了。神将饥渴的本质放在人的心里，是要引导人来寻求神并归向神，成全神的旨意。（参造就故事中册，65页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：学习转向神、寻求神、呼求神，饮于神这活水，使我们被祂的话充满，得更新，得加力。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

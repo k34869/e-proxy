@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('19')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('21')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>你当竭力将自己呈献神前，得蒙称许，作无愧的工人，正直的分解真理的话。（提后二15）</p>
+<p class="title">准的操练（一）说话要准确</p>
+<p>一个作主工作的人必须说准确的话，在话语上一点不能马虎。因为只有说话准确，才能作一个为神传话的人。如果我们在别的事上常常随便说话，不受约束的把话说个痛快，当我们来传神的话时，在听的人身上的力量就放松了。我们平日就需要操练受约束，讲准确的话，当我们传主的话时，才能彰显出能力。说准确的话与读圣经也有关系，圣经是最准确的一本书。全世界只有一种话是最准确的，就是神的话。我们若没有讲准确话的习惯，就不能读圣经，更不能传圣经。马虎的人把神的话都漏光了，根本就领会错了。如果我们说话马虎，我们就看不见神的话的准确。李常受弟兄见证，他得救后就喜欢研读圣经，特别是新约。为着释放生命读经的信息，必须写注解，就逼得他将每个重要的字摸透，以准确了解经文本意。最终，圣经中那些重要的点，都丰富的存在他里面。因此，他能亲自带领中文恢复本的翻译，目的就是要使圣经能准确无误的翻译出来。</p>
+<p>许多时候，我们并没有意思要说谎言，但说话说得不准确，结果就变成似是而非，听起来好像是对的，其实是错的。说话一口两舌，凭好恶说话，凭希望说，加进自己的意思，夸大其辞，增加数字等等，都是说话不准确，而造成的谎言；这些我们要绝对的避免。此外，我们也需要操练不说闲话。主告诉我们：‘人所说的每句闲话，在审判的日子，都必须供出来。因为要凭你的话，称你为义；也要凭你的话，定你有罪。’（太十二36～37。）神的儿女要学习作敬畏神的人，学习拒绝一切不准确的话，学习说准确的话。凡与我无干，与我无益，也与人无益的话，都不要说。（参主工人的性格，102～105页；作主合用的器皿，51页；初信造就下册，24～33页。）</p>
+<p class="title">台上讲道路上戏言</p>
+<p>某农夫病危，把牧师请到家中。寒暄毕，农夫说，‘远在二十年前，我曾在教堂里听过先生讲道，当时我心颇受感动，觉得我是一个罪大恶极的人，若不悔改，必遭沉沦。散会回家途中，你我恰巧同走一路，本想就近先生聆教数语，开我迷蒙；但是先生途中与一友人所谈多系戏谑之辞。我想，先生所讲的道，定规不是真的，不然何以途中所说的话，和讲台上所说的话如此悬殊呢？因此不复为罪存有恐惶之心。但是现在死期将至，为罪恐惶之心复萌。不知先生何以教我？’信徒们！当你与人接触之时，所有淫辞、妄语、和戏笑的话都不相宜，总要说感谢的话，方合圣徒的体统。因为一句话语不彀检点，就能把人绊倒。‘淫辞、妄语、或是粗鄙的戏言，都不相宜，宁可说感谢的话。’（弗五4。）（造就故事上册，209页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：拒绝一切不准确的话，学习说准确的话。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

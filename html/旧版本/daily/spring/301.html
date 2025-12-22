@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('300')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('302')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">叫我的灵松一松</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">只是不可忘记行善和供输，因为这样的祭物是神所喜悦的。（来13:16）</div>
+<div id="CC">But do not forget doing good and sharing with others，for with such sacrifices God is well pleased.（Hebrews 13:16）</div>
+<div id="C">有一个人名叫沙波，说到他自己亲身的经历：“我年少时，有一天，我的父亲叫我和他同去铁匠柴塞尔店里。我父亲有些东西在他店里修理，现在要去拿回来。我们到了铁匠店里，看见我们的东西已经修好了，好像新的一样。父亲就给他修理费；他坚持不受，父亲一定要他收。铁匠回答的话，就是经过一千年，我也会记得。他说，‘朋友，你不容让我有时作一、两件事，叫我的灵松一松吗？’”<br/><br/>　你是否常常服事别人，叫你的灵松一松呢？你是否把你的财物供给缺少的人，叫你的灵松一松呢？</div>
+<div id="CC">奉献─同主争战（诗350）</div>
+<div id="C">谁是在主这边？<br/>　谁要跟随主？<br/>　谁要为主活着，<br/>　走祂的道路？<br/>　谁要撇开世界，<br/>　去为主争战？<br/>　谁是在主这边，<br/>　跟随主向前？<br/>（副）<br/>　借着你的救赎，<br/>　并借你恩典，<br/>　可爱、荣耀救主，<br/>　我在你这边。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('599')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('601')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">我们是弟兄从英国来</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>太10:40　接待你们的，就是接待我；接待我的，就是接待那差遣我的。</p><p>相传俄罗斯的伊凡（Ivan）大帝，有时化装，亲到民间视察。一天晚上，他化装为一个乞丐，在莫斯科郊外挨户讨饭，请求投宿。家家都予拒绝。最后来到一家茅屋门前。那位贫穷家主请他进去，给他一杯清水，一片面包，让他睡在干草床上；并对他说，‘对不起，我没有更多力量来招待你；我的妻子刚刚生了一个孩子，需要我的照顾。’这位皇帝躺在那里睡觉，十分满意。次晨，他道谢而去。几天以后，一辆御车来到，皇帝带着侍从，在他门前下车。那个穷人十分惊慌，连忙跪在皇帝面前。皇帝把他扶了起来，说道：‘不要惊慌。那天晚上睡在你草床上的就是我，你接待了皇帝。你所给的东西虽然不多，却是诚心款待。现在我来报答你，酬赏你的爱心。把你的小孩子抱来。’他立刻把才生的婴孩抱来。皇帝说，‘你可以用我的名字叫他。他长大时，我要教育他，给他一个宫中的职位。’接着皇帝给他一袋金子说，‘这给你们用。如果还有任何需要，不要忘记告诉那位曾经睡在你草床上的人。’皇帝走后，这位穷人为了曾经接待化装的皇帝，心中有说不出来的欢喜。‘人接待你们，就是接待我。…无论何人，因为门徒的名，只把一杯凉水给这小子里的一个喝，我实在告诉你们，这人不能不得赏赐。’（太十40，42。）‘王要回答说，我实在告诉你们，这些事你们既作在我这弟兄中一个最小的身上，就是作在我身上了。’（二五40。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

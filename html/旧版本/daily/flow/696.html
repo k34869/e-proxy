@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('695')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('697')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 10 课<br />用金银宝石建造新人</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周三　尊崇神</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>你要专心仰赖耶和华，不可倚靠自己的聪明；在你一切所行的事上，都要认定祂，祂必指引你的路（箴三5～6）。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>尊崇神包括三方面，第一是敬畏神。敬畏耶和华是知识和智慧的开端；认识至圣者便是聪明（一7，九10，十五33）。知识、智慧和聪明都是从神而来。我们若敬畏祂，尊崇祂，这些就会成为我们的产业。我们若寻找智慧如寻找银子，搜求智慧如搜求隐藏的珍宝，我们就懂得敬畏耶和华，得以认识神（二4～5）。敬畏耶和华，便是恨恶邪恶（八13）。敬畏耶和华，使人日子加多；但恶人的年岁必被减少（十27）。行动正直的，敬畏耶和华；行事乖僻的，却藐视祂（十四2）。敬畏耶和华的，大有倚靠；祂的儿女，也有避难所。敬畏耶和华，就是生命的泉源，可以使人离开死亡的网罗（26～27）。</p><p>尊崇神的第二方面是信靠祂。箴言三章五至八节嘱咐我们，要全心信靠耶和华，不可倚靠自己的聪明。在我们一切的道路上，都要认定祂，祂必修直我们的途径。不要自以为有智慧；要敬畏耶和华，远离恶事。这便医治我们的身体，滋润我们的百骨。二十六节告诉我们，耶和华是我们所信赖的，祂必保守我们的脚不被缠住。十六章二十节说，留心训言的，必得好处；信靠耶和华的，便为有福。三十章五至六节说，神的言语，句句都是炼净的；凡避难于祂的，祂便作他们的盾牌。祂的言语，我们不可加添；恐怕祂责备我们，我们就显为说谎言的。</p><p>尊崇神的第三方面是指尊荣神。三章九至十节说，我们要以财物，和一切初熟的出产，尊荣耶和华；这样，我们的仓房，必充满有余，我们的酒醡，必喷溢新酒。至少我们所初熟出产的十分之一，必须献给神。并且我们该一直将神所赐给我们的东西，慷慨的馈送给人，这乃是尊荣神。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>尊崇神：在每件事上敬畏祂、信靠祂并尊荣祂。</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

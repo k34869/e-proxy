@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1596')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1598')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 13 课<br />
+来到施恩的宝座前</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：多年疲惫未能寻到一泉源。（诗歌254首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：因为神的话是活的，是有功效的，比一切两刃的剑更锋利，能以刺入、甚至剖开魂与灵，骨节与骨髓，连心中的思念和主意都能辨明。（来四12。）</p>
+<p>所以我们只管坦然无惧的来到施恩的宝座前，为要受怜悯，得恩典，作应时的帮助。（16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　第二个警告—不要赶不上那应许的安息—来三7～四13</p>
+<p class="ot2">1　不可存不信的恶心，将活神离弃了—三12。</p>
+<p class="ot2">2　将起初的确信坚守到底，就必作基督的同伙—三15。</p>
+<p class="ot2">3　存留之安息日的安息—四1～11：</p>
+<p class="ot2">a　基督作我们的安息，由迦南美地所预表—申十二9，来四8。</p>
+<p class="ot2">b　召会生活是神的安息—三6～7，四7～9。</p>
+<p class="ot2">4　神活而有功效的话—四12～13。</p>
+<p class="ot1">二　基督超越亚伦（一）—四14～16</p>
+<p class="ot2">1　基督是尊大的大祭司—14。</p>
+<p class="ot2">2　祂能同情我们的软弱，因祂在各方面受过试诱，只是没有罪—15。</p>
+<p class="ot2">3　坦然无惧的来到施恩的宝座前—16。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识希伯来书中第二个警告—不要赶不上那应许的安息，以及基督超越亚伦，是尊大的大祭司。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>希伯来三章七节至四章十三节是著者给希伯来信徒的第二个警告—不要赶不上那应许的安息。著者劝勉信徒，不可存不信的恶心，将活神离弃了。倒要将起初的确信坚守到底，就必作基督的同伙，并要竭力进入那为我们存留之安息日的安息。进入安息的路，乃是藉着神活而有功效的话，刺入并剖开我们的魂与灵，辨明心中的思念和主意。四章十四至十六节说到基督是尊大的大祭司，超越亚伦。祂能同情我们的软弱，因祂在各方面受过试诱，只是没有罪。所以我们只管坦然无惧的来到施恩的宝座前，就是在我们的灵里，就能蒙怜悯，得恩典，作我们应时的帮助。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　基督的同伙</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来三15：我们若将起初的确信坚守到底，就必作基督的同伙了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>迦勒乃是在进入迦南占有美地的事上，作约书亚的同志、伙伴和同伙。基督今天是我们的真约书亚，我们必须是祂的迦勒。当我们跟从基督时，我们乃是祂的同伙。基督的事业就是要取得并占有迦南这块美地，好在其上建造神的居所。我们乃是祂在这事业中的同伙。为着进入神所应许的美地，我们需要天天彼此相劝，不被罪迷惑而硬着心，将活神离弃了。反要将起初的确信坚守到底，就要作基督的同伙了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>天天彼此相劝，不被罪迷惑而硬着心，反要将起初的确信坚守到底，作基督的同伙。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

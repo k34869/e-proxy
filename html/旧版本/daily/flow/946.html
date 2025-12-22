@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('945')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('947')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 10 课<br />
+主在路加福音里特别的教导</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：飘渺人生何短暂。（诗歌722首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你们要给人，就必有给你们的，用十足的量器，连摇带按，上尖下流的倒在你们怀里。（路六38上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　以不义管家的比喻，教导我们作精明的管家—路十六1～13</p>
+<p class="ot2">1.　藉着玛门结交朋友，指明要照着神的引导，用钱财行事帮助人—9。</p>
+<p class="ot2">2.　在不义的玛门上忠信，指明我们该在神所交给我们的财物上操练忠信，使用钱财叫别人得益处，好使我们对来世永远的家业忠信—10～13。</p>
+<p class="ot2">3.　‘你们要给人，就必有给你们的，用十足的量器，连摇带按，上尖下流的倒在你们怀里’—六38上。</p>
+<p class="ot2">4.　操练财物奉献为着主的恢复、召会、及众圣徒的需要。</p>
+<p class="ot1">二　以财主和拉撒路的故事，警告我们要听神的话—十六19～31</p>
+<p class="ot2">1.　阴间有两部分—快乐的部分以及痛苦的部分，两部分中间有深渊彼此隔绝—26。</p>
+<p class="ot2">2.　财主虽然富有，但他不听从反弃绝神的话，死后到了阴间痛苦的部分，结局是永远的沉沦—23。</p>
+<p class="ot2">3.　拉撒路虽然贫穷，但因着听从神的话，死后到了阴间快乐的部分，被放在亚伯拉罕的怀中—22。</p>
+<p class="ot2">4.　我们应当听从神的话，也应当传福音给人，好叫别人听见并接受神的话—29～31，约五24，罗十14。</p>
+<p class="ot1">三　以寡妇烦扰审判官的比喻，教导我们要恒切祷告—路十八1～8</p>
+<p class="ot2">1.　就某种意义说，在基督里的信徒在今世是寡妇，因他们的丈夫基督不在他们这里了—3上。</p>
+<p class="ot2">2.　信徒的对头魔鬼撒但，并在其权势之下邪恶的世代，使我们受打岔甚至被逼迫，无法享受基督—3下。</p>
+<p class="ot2">3.　我们需要为此光景向主恒切祷告，不可灰心—1，5，7。</p>
+<p class="ot2">4.　主来时要在地上寻找向祂有这样信心的人—8。</p>
+<p class="ot1">四　以法利赛人和税吏祷告的比喻，教导我们要降卑自己—十八9～14</p>
+<p class="ot2">1.　法利赛人自义的祷告控告别人，又向神自夸—11～12。</p>
+<p class="ot2">2.　税吏认罪的祷告，降卑自己到极点—13。</p>
+<p class="ot2">3.　每个得救的人都该降卑自己并被主征服—14。</p>
+<p class="ot1">五　警告提防经学家并称赞穷寡妇—路二十46～二一4，可十二38～44</p>
+<p class="ot2">1.　经学家善于言辞，但道德低落且空洞、虚空—路二十46～47，可十二38～40。</p>
+<p class="ot2">2.　穷寡妇照着高标准的道德生活，活出内里的实际—路二一1～4，可十二41～44。</p>
+<p class="ot2">3.　我们需要学习珍赏实际并提防虚空。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主在路加福音的比喻和事例中，教导我们关于钱财、听从神的话、恒切祷告、降卑自己、及活出内里实际的事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>本课说到路加福音中五个独特的比喻及事例：教导作精明管家的比喻、财主和拉撒路的故事、寡妇恒切祷告的比喻、法利赛人和税吏祷告的比喻、以及财主并穷寡妇奉献的事例。主藉这些比喻和事例，教导门徒为着国度生活，需要正确的使用钱财，听从神的话，向主恒切祷告不灰心，降卑自己，并照着最高标准道德活出内里的实际。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　精明的管家</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我又告诉你们，要藉着那不义的钱财，为自己结交朋友，到了钱财无用的时候，他们可以接你们到永远的帐幕里去。（路十六9。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>路加十六章说到精明管家的比喻，这指明我们被接纳到神的家以后，应当成为管家。主用不义的管家，说明在神家中之管家的事奉，不是说主教导我们事奉的时候要不义，乃是教导我们要精明，要见机行事，抓住手边的机会。主说，要藉着那不义的钱财，为自己结交朋友；这意思是指，我们要照着神的引导，用钱财行事帮助弟兄姊妹。那时，那些因我们正确使用钱财而得利益的人，会欢迎我们进到永远的帐幕里去。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>作主精明的管家，见机行事，抓住手边的机会事奉神</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

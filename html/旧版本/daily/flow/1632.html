@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1631')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1633')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 18 课<br />
+奔跑赛程，仰望信心的创始者与成终者</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：当我跑尽应跑道路。（诗歌773首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我们既有这许多的见证人，如同云彩围着我们，就当脱去各样的重担，和容易缠累我们的罪，凭着忍耐奔那摆在我们前头的赛程，望断以及于耶稣，就是我们信心的创始者与成终者；祂为那摆在前面的喜乐，就轻看羞辱，忍受了十字架，便坐在神宝座的右边。（来十二1～2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　第五个警告—要奔跑赛程，不可坠落离开恩典—来十二1～29</p>
+<p class="ot2">1　要奔跑赛程—1。</p>
+<p class="ot2">2　望断以及于耶稣—我们信心的创始者与成终者—2。</p>
+<p class="ot2">3　受管教而得圣别—3～14。</p>
+<p class="ot2">4　不可坠落离开恩典—15～17。</p>
+<p class="ot2">5　旧约与新约景象的比较—18～24。</p>
+<p class="ot2">6　不能震动的国—25～29。</p>
+<p class="ot1">二　召会生活实行的十项美德—十三1～7，16～19</p>
+<p class="ot1">三　为着召会生活经历基督—8～15</p>
+<p class="ot1">四　结语—20～25</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识希伯来十二章中第五个警告—要奔跑赛程，不可坠落离开恩典，并十三章论到召会生活实行的十项美德，以及为着召会生活经历基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>希伯来十二章是作者给希伯来信徒的第五个警告，说到信徒应当奔跑赛程，并望断以及于耶稣—我们信心的创始者与成终者。我们是父的儿女，因此要受管教而得圣别，不可坠落离开恩典。作者又以旧约与新约景象的比较，给我们看见我们所得着的新约，是属天、属灵、永远的，是不能震动的国。因此，我们需要与这位圣别的神合作，好叫我们得着国度的赏赐。希伯来十三章说到召会生活实行的十项美德：弟兄相爱、接待人、记念受苦的肢体、尊重婚姻、不贪爱钱财、记念作神话语执事的人、行善、供输、信从并服从那些带领我们的、以及为使徒祷告。最后，我们需要为着召会生活而经历基督。持定那不改变的基督，过真实且稳固的召会生活。并靠恩典得坚固，留在新约里，享受基督作恩典。藉着进入至圣所的幔内有分于祂这位属天的圣别人者；并藉十字架这圣别人的路，跟随祂出到营外，忍受祂所受的凌辱。同时也藉着耶稣，常常向神献上赞美的祭，就是承认主名之嘴唇的果子。使我们能实行神的旨意，行神看为可喜悦的事。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　要奔跑赛程</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来十二1：　所以，我们既有这许多的见证人，如同云彩围着我们，就当脱去各样的重担，和容易缠累我们的罪，凭着忍耐奔那摆在我们前头的赛程。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>希伯来十二章是本书作者给希伯来信徒的第五个，也是最后一个警告，要他们奔跑赛程，不可离开恩典。基督徒的一生就是一个赛程，所有得救的基督徒，都必须奔跑这赛程，好赢得奖赏。这奖赏不是指一般的救恩，乃是指特别的赏赐。在这赛程中，作者嘱咐希伯来的信徒几件事，第一，是要脱去各样的重担。第二，要脱去缠累的罪。第三，要凭着忍耐。我们要奔跑基督的赛程，就必须凭着忍耐忍受反对，绝不可疲倦灰心。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>脱去重担，和容易缠累我们的罪，凭着忍耐奔跑赛程。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('823')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('825')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">照父亲一样</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>彼得前书 2:21</p><p>你们蒙召原是为此，因基督也为你们受过苦，给你们留下榜样，叫你们跟随祂的脚踪行；For to this you were called, because Christ also suffered on your behalf, leaving you a model so that you may follow in His steps;</p><p>有一个人，每次上工之时总上路旁酒店先饮一杯酒，习以为常。一天早晨，路上满了积雪，他照常前往上工，每走一步，即留脚印一个。忽然听见后面有一微小的脚步声，回头一看，竟是他的七岁小孩，跟随他的脚踪而行。父亲就说，‘儿子，你来要作什么，这样你会伤风的，赶快回去。’小孩回答说，‘我喜欢在你的脚印中行。’那次父亲经过酒店之时，便有一种感觉，叫他不要进去；他就没有进去。到了工作的地方，仍然听见他儿子的声音，绕在他耳边：‘我喜欢在你的脚印中行。’他就仔细思想：‘我每晚醉酒回家，随便骂人，我爱我的儿子，他也爱我，他要跟随我的脚步，但是我的脚步乃是引他沉沦。’这时，他很感觉扎心，于是双膝跪下，接受耶稣基督作他的救主；并且立志要作儿子的榜样，引导他的脚步进入永生。父母的脚印对于儿女是何等重要！</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

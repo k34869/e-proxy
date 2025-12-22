@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('116')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('118')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">完全为着神并照着神的撒母耳</p>
+<p>至于我，断不停止为你们祷告，免得我得罪耶和华。（撒上十二23）</p>
+<p>撒母耳在神的行政里，是一个转移时代的人，他把祭司的时代转移到申言者和君王的时代。撒母耳能成为这样的人，在他身上有些属灵的特点。第一，他不为自己寻求或得着什么。他是一个拿细耳人，不用剃头刀剃他的头，也不喝任何酒；他完完全全是为着神。神要他去那里，要他作什么事，他都乐意去行。他是一个照着神，就是合乎神心的人。因此他能为神所使用，以完成神的经纶。撒母耳作为拿细耳人，有一颗心，作神心的返照；他是一个为着神权益的拿细耳人。第二，撒母耳向着神忠信，照着凡在神心中和心思中的去行。不只他的作为、生活、和工作是照着神，他的全人和所是，都是照着神。撒母耳的所是和神的心乃是一。神的心思就是撒母耳的思想，撒母耳没有别的思想、考量或想法；他的生活和工作乃是为着完成凡在神心中的。</p>
+<p>第三，撒母耳对于神的经纶，以及仇敌为破坏神在地上的经纶所作的，有清楚的看见。撒母耳对于神的经纶和环境中的各种情形，满有洞察力。至终，神也作了一些事来配合他，使以色列人回转归向神，在神面前哀恸，愿意除去一切的偶像。在这个改变发生之前，有两面的豫备。在百姓那一面，他们回转归向神；在撒母耳这一面，他受成全，得装备，彀资格为着神在地上的行动。在这种情形里，那些认识一些关于以色列和神的事，且想要用他们的赎愆祭来贿赂神的非利士人，就完全被击败了。第四，撒母耳是一个祷告的人，他不停止为神的选民以色列人祷告，使他们蒙保守在神的道路上，与神成为一，不落在外邦偶像的网罗里，并使神对祂选民之旨意的愿望得以成全。在撒母耳的思想里，停止为神的选民祷告是得罪神的。撒母耳在他那特别的环境中，并不容易为神站住；但他顾到神的权益，并且转移了时代。照着旧约，撒母耳在为着神和神权益的事上，是与摩西并列的。（参撒母耳记生命读经，36～37、42～ 43、56～57页。）</p>
+<p class="title">一个认识神与神同在的人</p>
+<p>劳伦斯（Lawrence，1605～1691）是一位在厨房里工作的弟兄，他每天从早到晚要给许多人豫备饭食。用餐的时候，许多人向他要食物，声音嘈杂，盘子乱响，但是劳伦斯的里面不受他们影响。如果是我们的话，就忙得好像与神要失去交通了，但是劳伦斯里面与神的交通一点不受外面事情的影响。他在祷告的时候感觉神的同在，他在工作忙碌的时候也感觉神的同在，外面的声音不影响到他里面去。哦！他真是一个认识神与神同在的人。他外面是一直在那里忙，但是里面是一直坐在主的脚前。外面也许有许许多多的事情要作，但是里面一点都没有被外面的事烦扰。他是一直在灵里深处与神交通来往，享受神的人。（参十二篮第三辑，94页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：将自己奉献给神，照着神生活和工作，并为神的权益、为弟兄姊妹祷告。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

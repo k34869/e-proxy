@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1169')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1171')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 6 课<br />
+使徒的表白与主的筵席</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：为这筵席我献感谢。（诗歌178首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我们所祝福的福杯，岂不是基督之血的交通么？我们所擘开的饼，岂不是基督身体的交通么？因着只有一个饼，我们虽多，还是一个身体，因我们都分受这一个饼。（林前十16～17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　使徒的表白—林前九1～27</p>
+<p class="ot2">1　他的资格—1～3。</p>
+<p class="ot2">2　他的权利—4～15。</p>
+<p class="ot2">3　他的忠信—16～23。</p>
+<p class="ot2">4　他的努力—24～27。</p>
+<p class="ot1">二　以色列人的预表—十1～13</p>
+<p class="ot2">1　受浸归了摩西—1～2。</p>
+<p class="ot2">2　吃一样的灵食，喝一样的灵水—3～4。</p>
+<p class="ot2">3　大都倒毙在旷野—5～10。</p>
+<p class="ot2">4　从以色列人受鉴戒—11～12。</p>
+<p class="ot2">5　忍受试诱并经历信实的神为我们开路—13。</p>
+<p class="ot1">三　保守主的筵席脱离拜偶像—十14～22</p>
+<p class="ot2">1　主的血和主的身体的交通—14～18。</p>
+<p class="ot2">2　主的筵席和鬼的筵席的分别—19～22。</p>
+<p class="ot1">四　正当的吃—十23～十一1</p>
+<p class="ot2">1　建造别人，寻求别人的益处—十23～30，32～33。</p>
+<p class="ot2">2　荣耀神—十31。</p>
+<p class="ot2">3　效法使徒—十一1。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>明白保罗在林前九至十章所陈明的四件事：使徒的表白，以色列人的预表，保守主的筵席脱离拜偶像，以及正当的吃。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在林前九至十章，以四件事情来补充对付吃祭偶像之物一事：第一，他表白他使徒的资格和权利，以及他的忠信，并他如何努力奔跑这赛程。第二，他举以色列人在旷野的事例，说明基督徒的旅程中，应当以基督作我们每日生命的供应。又从以色列人不讨神喜悦以致倒毙旷野的事例，提醒哥林多人要受鉴戒。第三，要保守主的筵席脱离拜偶像，基督徒既有分于主的血和主的身体的交通，就不可因吃祭偶像之物，而有分于鬼的筵席。第四，信徒应当有正当的吃喝，其中包含四个关于信徒行事为人的原则：（一）凡事信徒都可行，但他们所行的必须都有益处，不使人遭受任何亏损。（二）无论那一件，信徒总不可受它的辖制。（三）信徒所行的事，都必须建造别人。（四）信徒所行的，必须为荣耀神而行。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　使徒的资格</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前九1：我不是自由的么？我不是使徒么？我不是见过我们的主耶稣么？你们不是我在主里所作之工么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>‘使徒’原文意受差遣者。主的使徒，乃是受主差遣，有他的权柄传神的福音，教导神圣的真理，并建立众召会的信徒。在使徒行传中，彼得和约翰是这样的使徒（在犹太人中间），保罗和巴拿巴也是这样的使徒（在外邦人中间）。只要人有能力传福音，有恩赐教导神圣的真理，并且能建立召会，他就有资格并得印证，是受主差遣、有主使命和权柄的使徒。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在灵里藉属灵的启示认识主。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

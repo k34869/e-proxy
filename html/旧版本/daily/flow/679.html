@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('678')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('680')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 7 课<br />诗人对神殿与基督的爱</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周日　诗人的祷告</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在你的院宇住一日，胜似在别处住千日；宁可在我神殿中看门，不愿住在恶人的帐棚里。因为耶和华神是日头，是盾牌，要赐下恩惠和荣耀；祂未尝留下一样好处，不给那些行动正直的人。万军之耶和华阿，倚靠你的人，便为有福（诗八四10～12）。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>诗人喜爱神的院宇，认为在神的院宇住一日，胜似在别处住千日；宁愿在神殿的门槛，不愿住在恶人的帐棚里。门槛是里面和外面的分界线。在圣经中，一千表征一个完整单位最完满的度量。我们在主的居所中所领受的祝福是最完满的、最极致的；我们在别处无法像在神的院宇中，得着那样完满的祝福。在神的殿这里，我们享受神作日头和盾牌（11）。日头是为着供应，盾牌是为着保护。在召会生活中，神是我们的供应，也是我们的保护。我们在这里享受祂的恩惠和祂的荣耀。恩惠是里面的享受，荣耀是外面的彰显。在召会生活中，我们有里面恩惠的享受，和外面荣耀的彰显；我们有供应如同日头，并有神自己作我们的盾牌。哦！召会生活何等有福！（12）。</p><p>召会生活是最完满的祝福之地。你若要使美好的一日成为千日，就必须来到地方召会中。你若去参加一个你认为很贫穷的聚会，而觉得没有得着什么，你也许就以为留在家里更好。但你若留在家里不参加聚会，三个月之后，你就要回到世界中。不管你在家里得着多少，这绝不能与你在地方召会中所领受的祝福相比。即使地方召会是贫穷的，你也只管来到其中，就会得着祝福，并且是完满的祝福</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>积极参加召会各种聚会，宝爱召会生活并留在其中，享受完满的祝福。</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

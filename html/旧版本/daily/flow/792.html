@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('791')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('793')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 6 课<br />
+受浸、受膏与受试验</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我对撒但总是说不。（诗歌640首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：青年人，我刚写信给你们，因为你们刚强，神的话住在你们里面，你们也胜了那恶者。（约壹二14下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主的受浸—太三13～15，可一9，路三21</p>
+<p class="ot2">1.　以人的身分，照着神新约的作法，尽全般的义。</p>
+<p class="ot2">2.　让自己摆到死与复活里，使祂以复活的作法来尽职。</p>
+<p class="ot1">二　主的受膏—太三16～17，可一10～11，路三22</p>
+<p class="ot2">1.　诸天开了，指明主的受浸被诸天所悦纳并印证。</p>
+<p class="ot2">2.　神的灵仿佛鸽子降下，为要膏祂，为着祂的职事。</p>
+<p class="ot2">3.　父的说话，乃基督是爱子的见证。</p>
+<p class="ot2">4.　子从水里上来，灵降在子身上，父说到子，证明父、子、灵同时存在。</p>
+<p class="ot1">三　主的受试验—太四1～10</p>
+<p class="ot2">1.　魔鬼（撒但）的第一个试诱，是关于生活的试诱—1～4。</p>
+<p class="ot2">2.　魔鬼（撒但）的第二个试诱，是关于宗教的试诱—5～7。</p>
+<p class="ot2">3.　魔鬼（撒但）的第三个试诱，是关于属世荣耀的试诱—8～10。</p>
+<p class="ot2">4.　主站在人的地位上，并取用圣经的话，胜过撒但三次的试诱—4，7，10。</p>
+<p class="ot1">四　主受试验的结果—11</p>
+<p class="ot2">1.　魔鬼完全失败，就离开了耶稣。</p>
+<p class="ot2">2.　天使进前来服事主。</p>
+<p class="ot2">3.　证明主够资格来尽祂的职事。</p>
+<p class="ot1">五　胜过撒但试诱的秘诀—腓四12～13</p>
+<p class="ot2">1.　取用主的话，让主的话丰丰富富的住在我们里面—太四4，弗六17，西三16，来四12，约壹二14下。</p>
+<p class="ot2">2.　住在那加力者—基督里面—腓四12～13。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主的职事开始于祂的受浸并为父神所膏；主被带到旷野，受魔鬼的试诱并击败魔鬼，使祂够资格尽职。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主的职事开始于祂的受浸并为父神所膏。主以人的身分来到施浸者约翰那里受浸以尽全般的义。主受浸也是让自己摆到死与复活里，以复活的作法来尽职。主的受浸带进三件事：天开了，神的灵降下来膏主，以及父说话。此后主受那灵引导，去旷野受魔鬼的试诱。主耶稣站在人的立场上，并靠着圣经上的话，完全胜过仇敌的试诱，证明祂够资格完成祂的职事。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主的受浸</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>众百姓都受了浸，耶稣也受了浸。（路三21。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在圣经里，‘义’就是照着神所命定的作法生活、行事、为人，成为对的。在旧约里，遵守神所赐的律法就是义。而在施浸者约翰的时代，神命定受浸为一条路。任何人要进入诸天的国，必须经过约翰的浸这条路，人受浸就是尽了在神面前的义。主耶稣既是以人的身分来尽职，祂也必须到约翰这里，受他的浸，否则，祂就缺了经过这门的义。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>藉着受浸进入了义门，并且行走在义路上。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

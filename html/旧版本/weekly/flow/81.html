@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('80')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('82')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>你们饶恕谁什么，我也饶恕；我若曾有所饶恕，我所已经饶恕的，是在基督的面前，为你们饶恕的。（林后二10）</p>
+<p class="title">细的榜样（三）保罗活在基督面前，受那灵引导</p>
+<p>保罗在林后二章十节说，他在基督面前饶恕一个弟兄。这里的‘面’指眼睛周围的部分，是一切内在思想和感觉的标示，表明一个人所想的是什么，里面感觉如何。保罗在基督的面前，照着基督眼睛所表露祂全人的标示，饶恕那位弟兄。保罗不仅在主面前，也在基督内在感觉和思想的标示下生活。因着保罗注视主眼睛的标示，知道他必须饶恕那位弟兄。他的饶恕，不是照着他自己，乃是在基督面前，在基督的面光、思想中，在基督的感觉和思想的表达下。（参10注3。）因着保罗这样活在基督的面前，他在感觉、在爱、在怜悯、并在怜恤上，都是非常柔细的。他不是天然的富有情感，而是在灵的管制之下，柔细的顾到弟兄姊妹。</p>
+<p>按照行传十六章，使徒保罗和他的同工为着开展福音而有的行动，不是照着他们的定意和爱好，也不是照着人议定的行程，乃是藉着圣灵，照着神的意旨。他们想要到亚西亚讲道，圣灵禁止他们。到了每西亚的边界，他们试着要往庇推尼去，耶稣的灵却不许。向左，圣灵禁止；向右，耶稣的灵不许，指明保罗和他的同工该向前直走。我们若看地图，会看见这样往前的方向是朝着东欧，特别是朝着马其顿和亚该亚。然而，保罗并没有想要往那里去，所以主在夜间给他异象；在那异象中，马其顿人的召唤临到保罗。当圣灵禁止，耶稣的灵不许时，使徒们需要更新他们的心思，受那灵引导，使他们能领会异象的意义。于是他们改变了原来的方向，直接往马其顿去，使主的行动能有重要的往前，开展到了欧洲大陆。（参我们人的灵，74页；徒十六6～10与6注1，7注2，10注3。）</p>
+<p class="title">眼看见军舰</p>
+<p>一位弟兄和他的女婿一同站在海边。这位弟兄看海面上什么也没有，但他的女婿却说，远处有一艘军舰来了。因着他的女婿在海军受过操练，所以平常人看不出来的，他看得出来。的确，过了一些时候，一艘军舰出现了。有这样的眼力，是操练出来的。同样的，属灵的感觉也在于操练。有些圣徒从来没有操练里面的感觉，没有顾到，也没有培养这个感觉；不仅对主的工作如此，对别人，甚至对自己，都是整天糊里糊涂的。一句话该说不该说，里面平安不平安，他都不管，只要他想到什么就说什么。这样不顾里面感觉的人是粗野的，是没有受过操练，没有被启发过，也是无心向着神的人。一个爱神的人，关心神的事的人，乃是一个有心的人，也是一个细心的人，他会留意去关切神家里的事，以及圣徒们的属灵光景。（参召会是基督的身体，248页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：照着主眼睛的标示，活在主面前，柔细的行事为人，并柔细的顾到圣徒。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

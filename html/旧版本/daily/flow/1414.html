@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1413')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1415')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 4 课<br />
+以基督为我们常时的救恩</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　使徒对信徒的关切</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓二22：但你们知道提摩太蒙称许的明证，他为着福音与我一同事奉，像儿子待父亲一样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗对信徒的关切，就是关心基督的事在关心召会与众圣徒的事上，保罗虽然有许多同工，但只有提摩太与他同魂。因着保罗和提摩太是同魂的，他们能经历基督到顶点。保罗也题到以巴弗提为基督的工作，冒着性命的危险，他为着召会和圣徒，甘愿牺牲他的魂。</p>
+<p>在此我们看见两个要点：第一，我们必须在魂里是一；第二，我们必须愿意牺牲或不顾我们的魂。我们若要对召会同众圣徒有真正的关切，就该在魂里是一，并且愿意不顾我们的魂，与我们亲爱的同工们是一。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>关心召会和众圣徒，愿意牺牲、不顾自己的魂，而能与人在魂里是一。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>凡所行的，都不发怨言，不起争论，作神无瑕疵的儿女，好像发光之体显在世界里，将生命的话表明出来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>根据腓立比二章，我们从怨言与争论中得救的路是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘〔腓立比〕二章的救恩，是脱离怨言与争论。姊妹们发怨言，弟兄们起争论。怨言与争论是经历基督的两个小仇敌。因为它们看起来很小，我们通常不在乎它们。但它们是两个征兆，指明我们在活基督这件事上，已经被击败了。没有一个活基督的人是发怨言，起争论的。怨言与争论杀害我们活基督的生活。我们应当过一种没有怨言与争论的生活。…由于我们发怨言，起争论，我们就无法作成我们的救恩。…</p>
+<p>作事不发怨言，不起争论，是我们必须作成之救恩的两个元素。…要在弯曲悖谬的世代中，作神无瑕疵的儿女，我们必须从怨言与争论中得救。…今天这悖谬的世代乃是弯翘不平、扭曲的。在这样一个世代中，我们作神儿女的，既有神的生命和性情，就“好像发光之体显在世界里，将生命的话表明出来”。（腓二15～16。）</p>
+<p>我们必须像发光之体显出来。…基督是真光，（约一9，八12，）由太阳光所表征。我们是发光体，将这光返照到世界上。…我们应当一直有一些基督的东西，可以陈明、供献给世上的人。将基督表明出来，就是发光。只有谈论是不够的，我们必须发光。这样的发光是在于我们所是的，不在于我们所说的。我们必须是因返照基督这光，而发光的人。’（生命的经历与长大，104～106页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练在凡事上不发怨言，起争论，并像发光体，将生命的话表明出来。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

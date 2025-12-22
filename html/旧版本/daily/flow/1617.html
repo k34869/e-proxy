@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1616')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1618')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 15 课<br />
+君尊、神圣的大祭司和更美的新约</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　新约的内容</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来八10下～12：我要将我的律法赐在他们心思里，…写在他们心上；我要作他们的神，他们要作我的子民。…他们从最小的到至大的，都必认识我；因为我要宽恕他们的不义，绝不再记念他们的罪。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在新约里，最主要的福分就是神圣生命的分赐，使我们得到内里的生命之律；使我们得着神作我们的神，我们作祂子民的福分；也使我们得着内里认识主的能力。神要成就这些事，就必须宽恕我们的不义，忘记我们的罪。祂宽恕我们的不义，并赦免我们的罪，就使祂有立场把祂自己的生命分赐到我们里面。在新约里，生命及其丰富都已赐下，罪及其邪恶都已除去。这就是新约的内容，赞美主！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们有内里认识主的能力，得享神的生命及所有丰富。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督的新约超越旧约，是更美的约。新约的内容有四个主要项目：赦罪、生命之律的分赐、神作我们的神，我们作祂的子民、认识神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为什么基督的新约超越旧约？这新约的内容是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘新约超越旧约，因为旧约只是影儿、预表，而新约是实际，是预表的应验。基督将自己献上，当作为着罪的真祭物，流血洗去我们的罪；祂藉着流血，为我们立定了这约。…</p>
+<p>新约的内容有四个主要项目，其中之一是赦罪。（来八12。）因着这约，我们有权利要求神赦免我们的罪。…如果我们认识这约的内容，就不需要乞求神赦免我们。…这可由房屋的所有权状来说明。如果某人买了房子，拥有权状，不论原来的屋主是否乐意，他都可以叫那人把房子交给他，因为所有权是他们协议的一项内容。基督流血所立新约主要的一项就是赦罪。</p>
+<p>这约的另外一项，就是有属生命的东西分赐到我们里面。（10上。）主将祂的律法赐在我们心思里这件事，完全是生命的，就是神圣的生命，连同生命一切的丰富，包括生命的律、生命的交通、和生命的感觉。我们必须认识这约，认识这“所有权状”内容的丰富。…这乃是神自己分赐到我们里面。</p>
+<p>这约的另外一项是，祂是我们的神，我们是祂的子民。（10下。）我们有权利要求神作我们的神，因为这是权状、契约中的一项。如果我们买了一项地产，持有它的权状，我们就拥有其上的一切，可以照着权状要求一切的东西。新约乃是凭着基督的血签字并盖印的所有权状。</p>
+<p>这约的下一个项目是我们认识神。（11。）我们不该向神哭求认识祂的能力，却应当到神面前取用认识祂的权利，因为认识神不仅是神的应许，也是协议、签了字之权状的一项。’（由基督与召会的观点看新约概要卷三，390～393页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>经历生命之灵的律在我们心的各部分规律我们。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

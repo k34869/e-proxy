@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('53')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('55')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">为金银凿地</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">他心里所愿的，你已经赐给他；他嘴唇所求的，你未尝不应允。（诗21:2）</div>
+<div id="CC">You have given him his heart's desire and have not withheld the request of his lips.（Psalm 21:2）</div>
+<div id="C">有一个人名叫撒都，有一次旅行到巴基斯坦，到了一个村庄；那里没有井，也没有泉。他们所用的水，是从三里外取来的。撒都在那里遇见一个人，他告诉撒都那里一切的事。这人有两个儿子，他要他们去开凿一块田，就对他们说，“那里埋有宝藏。”他们就很欢喜，满带盼望的说，“我们不久要在那里掘出许多金银。”他们开始动工；然而从早到晚，一连掘了三天，却什么也没找着。他们就去告诉父亲。父亲说，“那里宝藏很多，我信你们一定可以找着。”第四天，他们仍旧开凿，以致疲倦，就说，“我们纵然得着金银，也难止住口渴，如今最需要的乃是水。”忽然间，有泉涌出，他们喜出望外。一人跑去告诉父亲。父亲说，“这就是为什么我不告诉你们‘去开凿水泉’。因为若是如此，你们一定不肯去作。我只好对你们说，那里有宝藏，你们就去了。我的意思是要你们为着金银而去，却要得着比金银更宝贵的东西。”我们的祷告有时也是如此，所求的是祂的祝福，但祂所给的，却是祂的自己。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

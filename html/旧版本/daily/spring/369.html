@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('368')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('370')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">吃好东西不胖</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>提前一19  持守信心和无亏的良心；有人丢弃这些，就在信仰上犹如船破，Holding faith and a good cconscience, concerning which some, thrusting these away, have become shipwrecked regarding the faith;</p><p>司布真听见一个老年姊妹，因为不能付清房租，立刻就要被迫搬迁。于是就从朋友中间替她募集一笔足以购买那所房子的款项，骑马赶着远路送去，满心以为可以解决她的困难，使她大大欢喜。那知到了门前叩门，无人开门。他虽再三叩门，还是没人开门。失望之余，只好回去。过了几天，老姊妹来到司布真家中，苦哭诉说他们已将那所房子拍卖了，她即将被撵出去！司布真十分忧愁，对她说道：‘我当时就怕他们要如此行，所以早几天带着一笔款项要送给你，去买那所房子，可惜那时你不在家阿！’老姊妹回答道：‘那是你么？我在家里，以为乃是房东要来撵我出去，所以不敢开门。</p><p>哦！因着有亏的良心，常受撒但的控告，不知失去了多少属灵的祝福！‘常存信心，和无亏的良心；有人丢弃良心，就在真道上如同船破坏了一般。’（提前一19。）</p><p>儿童诗歌807 顺从在我心中</p><p>顺从在我心中，</p><p>顺从在我心中，</p><p>恩主耶稣喜爱我小孩；</p><p>顺从在我心中，</p><p>顺从在我心中，</p><p>恩主耶稣喜爱我小孩。</p><p>当我顺从，</p><p>我就讨主喜爱，</p><p>我就讨主的喜爱，</p><p>顺从在我心中。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

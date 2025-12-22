@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('106')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('108')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">仰望我们信心的创始者与成终者凭着忍耐奔跑赛程</p>
+<p>望断以及于耶稣，就是我们信心的创始者与成终者；祂为那摆在前面的喜乐，就轻看羞辱，忍受了十字架，便坐在神宝座的右边。（来十二2）</p>
+<p>希伯来十二章一至二节告诉我们：‘我们既有这许多的见证人，如同云彩围着我们，就当脱去各样的重担，和容易缠累我们的罪，凭着忍耐奔那摆在我们前头的赛程，望断以及于耶稣，就是我们信心的创始者与成终者；祂为那摆在前面的喜乐，就轻看羞辱，忍受了十字架，便坐在神宝座的右边。’主耶稣是我们忍的榜样，祂因着国度的喜乐，便轻看羞辱，忍受十字架的苦难。羞辱是人给祂的，祂轻看；十字架是神给祂的，祂忍受。祂被人误会，被人驱逐，被人控告，被人唾弃，被人定罪，但是祂不以为意。并非羞辱不厉害；祂所受的羞辱，乃是常人所没有受过的。并非祂圣洁的情感不觉得被人侮辱的可羞；祂的感觉也许比别人还要来得敏锐。但是祂轻看，祂并不重视羞辱。神所给祂的十字架并非不重；在人面前，在鬼魔面前，在天使面前，祂所要经过的，并非不难；但是我们的主忍受了十字架。祂接受，祂忍受。结局怎样呢？祂得胜的到了祂的终点—‘坐在神宝座的右边’，等候荣耀的显现。</p>
+<p>我们所仰望的耶稣，就是这样的一位；祂如此，我们也当如此。在这条路上跑的人，不只应当脱去容易缠累的罪，放下各样的重担，还应当‘凭着忍耐’奔那摆在我们前头的赛程。何以须凭着忍耐呢？因为赏赐不是在一起头就给你，也不是在中途就给你，乃是在路终才给你，是在跑完最后一步才给你。起头虽好，中途虽好，但未必至终能跑得好。起头得胜，中途得胜，最后也得胜，才算得胜。没有到终点以先，没有一个人敢担保他是必定得赏赐的。也许在最后的五步就失败了。如果要得胜，你就当小心。没有到终局，就不能说你必定得着。保罗尚且说，‘这不是说，我已经得着了，或已经完全了，我乃是竭力追求，’（腓三12，）何况我们呢！（参十二篮第三辑，77～ 78、72～73页。）</p>
+<p class="title">你尚未到家</p>
+<p>马礼逊是主忠信的仆人，曾经旅行各处布道。有一次，他抵达纽约，与他同船的，是一位刚从非洲回来的大猎士，名为罗斯福泽德。在纽约码头，迎接罗斯福泽德的人至少有数千位；迎接马礼逊的却是一个人也没有。马礼逊说，‘当时魔鬼对我说，世上的伟人何等受人恭维。你—布道家—有谁理你？’马礼逊的心中有点难过，但神却用轻微的声音对他说，‘亨利，你尚未到家呢！’我们的荣耀还在将来，所以今日只得忍耐。‘我们如果忍耐，也必与祂一同作王。’（提后二12。）（参造就故事下册，63～64页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：凭着忍耐奔那摆在我们前头的赛程，望断以及于耶稣。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

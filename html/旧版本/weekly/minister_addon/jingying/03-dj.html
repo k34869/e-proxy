@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <link href="../../../html/shenggeng/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>经营小排</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              
+            </v-card>
+            <br />
+            <v-card elevation="0">
+              <div class="banner">
+           
+                经营小排
+                <br />
+               第三篇 经营小排（三）：盯聚会
+              </div>
+        
+          </div>
+         
+          <p class="nav">读经：</p>
+          <p class="hymn">林前 14:26 弟兄们，这却怎么样？每逢你们聚在一起的时候，各人或有诗歌，或有教训，或有启示，或有方言，或有翻出来的话，凡事都当为建造。</p>
+          <p class="hymn">诗 119:130 你的言语一解开，就发出亮光，使愚蒙人通达。</p>
+          <p class="hymn">西 3:16 当用各样的智慧，让基督的话丰丰富富的住在你们里面，用诗章、颂辞、灵歌，彼此教导，互相劝戒，心被恩感歌颂神； </p>
+
+          <p class="hymn">可 9:9 他们下山的时候，耶稣嘱咐他们说，除非人子从死人中复活，你们不要将所看见的对人述说。</p>
+<p class="hymn">可 9:10 门徒将这话存在心里，彼此讨论什么是从死人中复活。</p>
+<p class="hymn">可 9:11 他们就问耶稣说，经学家为什么说，以利亚必须先来？</p>
+          <p class="hymn">来 10:25 不可放弃我们自己的聚集，好像有些人习惯了一样，倒要彼此劝勉；既看见那日子临近，就更当如此。</p>
+          
+
+
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../html/shenggeng/js/vue.js"></script>
+    <script src="../../../html/shenggeng/js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "03.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

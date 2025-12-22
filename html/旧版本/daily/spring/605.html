@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('604')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('606')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第31课  性格-有次序</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>路加福音一章3节:……就认为也该按着次序写给你。</p>
+<p>《衣橱》</p><p>夏天到了，妈妈掂着脚把夏天的衣服从衣橱里拿出来，贝贝忙把衣架递给妈妈问道:“妈妈上面的衣服都取出来了，下面这衣服是春天穿的吗？”妈妈笑着说:"是的宝贝，这里装的是春秋装，刚放进去的，紧挨的那柜衣服是冬天穿的。″。贝贝忙打开看看，“哦好整齐呀，妈妈你这样放真好，什么时候需要，随时都能找到！"“是的宝贝，我们要学会整理房间，整理衣服、鞋子把它们都放在合适的地方。我们的家才会干净整洁，""是，妈妈，我一定好好学习，帮您整理"，母女会心的笑了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点:有次有序的人是保持整洁和条理的人，他做事不随便，而是合理安排、秩序井然。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用:当你在学校整理课桌时，你会把废纸、铅笔屑收拾干净吗？还是把这些东西随便一丢，只要老师看不见就好了，你房间里的东西都是干净完好的放在适当的地方吗？当你需要时，你知道在哪里找到吗？一个有次序的人会妥善存放自己的物品，细心的看管它。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>帖撒罗尼迦后书三章7节:你自己原知道，应当怎样效法我们，因为我们在你们中间未尝不守规拒。</p>
+<p>《我好高兴​》</p><p>老城超市开业了，人真多啊！妈妈带着茜茜买好东西，看到三个结帐区都排起了长队，看到南边的人少些，最后面是一对年轻夫妻好象在看奶制品脱离了队伍，妈妈推着车，茜茜也扶着手推车排了上去。那对年轻夫妻一看这情况，奶也不买了连忙推着推车撵了过来，妈妈一看人家来了，就忙后退几步让出地方让那对年轻夫妻排在前面，她们互相看着微笑点头。"妈妈，我好高兴”，茜茜扑闪着大眼看着妈妈，并来一个热情的拥抱，"怎么了宝贝？"妈妈问，茜茜说:"前天和爷爷来逛超市，到了结帐这里看到人多直接往前挤着要结帐，惹得后面好多人都在不满意的吵着，爷爷无视他人，我羞得脸通红，真想找个地缝钻进去。"妈妈说:”好女儿，你长大了妈妈真高兴，我们要与人相睦相处，大家都在排队有次有序的结帐，收银员阿姨才会不慌乱不出错。“是的妈妈，我知道了，这样与人相处真是开心呀！"。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：有次有序的人是正确与他人相处的人，他的行为、举止是和平、有度的，不是野蛮的。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：在学校里，老师让自由活动的时候，你是疯狂的跑来跑去，还是保持良好的秩序与他人互动？你需要和其他人友好地玩耍互动，因为和行为端庄的人一起玩，会让人感觉非常的愉快。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传二十一章24节下:……反而你自己却是按规律而行，遵守律法。</p>
+<p>《乘车日记》</p><p>好多人都在公交站牌处等车，一个个都朝公交车来的方向看去，只见1号公交车徐徐开来，"各位旅客煤山站到了，带上您的行李从后门下车，上车的旅客请依次序排好队从前门上车，大家不要拥挤注意安全″听到车上播音员美妙悦耳的声音，大家都依次排好队准备上车，后门下车的旅客已经下完了，公交车师傅关闭了后门，前门打开了，排好队的人一个接一个地往车上走，忽然从后面传来了吵杂声，只见一个青年人正在往车门这里挤来，引起众人的不满，青年人大声说:“我有急事麻烦让让！”说着就抬脚准备上车，“你有急事，大家都是忙人，你怎么可以插队？耽误大家的时间”，只听咔的一声，车门关了，那青年人很是不服气，却也知道自己应当遵守交通规则，于是走到队伍的后边，这时车门咔喳开了，大家都欢欢喜喜依照次序的上了车。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：有次有序的人是遵守法律，遵守规则的人，他们是守法公民，有良好的品德和行为</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：当你和家人外出吃饭时，你应该保持正确的举止，对服务员有礼貌，不可大声喧哗，以免打饶别人用餐。你乘坐汽车时要系安全带，骑自行车或乘滑板时，要戴头盔。当你要去某个地方，那里排了长队，你会插队或寻找其它方法溜进去吗？有次有序的人会自觉排队遵守规则。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

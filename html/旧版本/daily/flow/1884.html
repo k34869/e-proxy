@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1883')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1885')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 18 课<br />
+生命水河与生命树</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：　喝吃看。（补充本诗歌216首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：　那灵和新妇说，来！听见的人也该说，来！口渴的人也当来；愿意的都可以白白取生命的水喝。（启二二17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　城的中心—神和羔羊的宝座—启二二1</p>
+<p class="ot1">二　城的供应—生命水河与生命树—1～2</p>
+<p class="ot2">1　生命水河—1。</p>
+<p class="ot2">2　生命树—2。</p>
+<p class="ot1">三　神所救赎的人在永远里的福分—3～5</p>
+<p class="ot1">四　结语—主最后的警告，与使徒末了的祷告—6～21</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>从圣城的中心—神和羔羊的宝座流出一道生命水的河，以及河两岸的生命树，乃是新耶路撒冷全城的供应，说出三一神在祂元首权柄之下将自己分赐给祂所救赎的人，直到永远。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>本课来到启示录的最末了。启示录二十二章，我们看见关于圣城之中心与供应的启示；首先说到神和羔羊的宝座，作为圣城之神圣荣耀的中心，乃是神圣行政的源头与目标，也是神圣交通的源头。然后是一道生命水的河，象征神在基督里成为那灵，将自己流进祂所救赎的人里面，作他们的生命和生命的供应。这描述三一神—神、羔羊和生命水所象征的那灵—如何在祂元首权柄之下，将自己分赐给祂所救赎的人。生命水的河在街道当中流着，表征神圣的生命在神圣的性情里涌流，作神赎民日常生活的惟一道路。第三乃是生命树，长在河的两岸，每月都结出果子。重生的信徒吃生命树的果子，使他们得享神圣的生命，直到永远；复兴的万民是靠生命树的叶子得医治，使他们过人的生活，直到永远。并且，在新天新地里再没有咒诅了。神和羔羊的宝座，是神所救赎的人在永世里所要享受的福分。他们要事奉神和羔羊，见神和羔羊的面，享受神自己的光照，作王直到永远！启示录的末了，我们看见那灵和新妇说话如同一人，他们说‘来！’—表达对主再来的渴望，也发出对罪人的呼召。至终，使徒约翰也祷告说，‘主耶稣阿，我愿你来！’使得整本圣经结束于我们对主再来的渴望发表成为祷告。这真是一个宇宙的罗曼史，何等甜美！</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　神和羔羊的宝座</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启二二1天使又指给我看在城内街道当中一道生命水的河，明亮如水晶，从神和羔羊的宝座流出来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>每个国家都有一个中心。国家的中心就是首都，是中央政府的所在地。新耶路撒冷也有一个中心，就是我们救赎神的宝座，神和羔羊的宝座。这个宝座乃是生命供应的惟一源头。神藉着祂的行政，将祂自己分赐到我们里面作生命和生命的供应，作永远、绝对、包罗万有的恩典。只有藉着顺从神的权柄、管理，我们才能有分于祂全丰全足的恩典。今天如果有人问我们：‘你有宝座么？’我们应当说：‘已过我没有宝座，但今天我有。我有神的宝座，我在祂的行政里。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>顺从神行政的宝座，享受祂作生命和生命的供应。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

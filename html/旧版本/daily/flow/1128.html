@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1127')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1129')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 18 课<br />
+变化的召会生活及结语</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：遇见你们。（补充本诗歌751首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：因为神的国不在于吃喝，乃在于公义、和平、并圣灵中的喜乐。（罗十四17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　在接纳信徒上的变化—罗十四1～十五13</p>
+<p class="ot2">1.　照着神的接纳—十四1～9。</p>
+<p class="ot2">2.　在审判台的光中—十四10～12。</p>
+<p class="ot2">3.　在爱的原则里—十四13～15。</p>
+<p class="ot2">4.　为着国度的生活—十四16～23。</p>
+<p class="ot2">5.　照着基督—十五1～13。</p>
+<p class="ot1">二　结语—福音的成就—十五14～十六27</p>
+<p class="ot2">1.　献上的外邦人—十五14～24。</p>
+<p class="ot2">2.　外邦与犹太圣徒的交通—十五25～33。</p>
+<p class="ot2">3.　众召会之间的关切—十六1～24。</p>
+<p class="ot2">4.　结束的赞美—十六25～27。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>了解在接纳信徒上所需要的变化，以及众召会之间的问安与交通。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>罗马十四章至十五章十三节，说到在接纳信徒上变化的五方面：照着神的接纳，在审判台的光中，在爱的原则里，为着国度的生活，以及照着基督。我们若这样接纳圣徒，就要因信得着主的祝福同盼望、喜乐、平安，并经历那赐忍耐、鼓励与盼望的神，使我们靠圣灵的能力，充盈满溢的有盼望。从罗马书最后一段保罗对众召会的推荐与问安，说出召会生活的五方面：服事召会；为召会将自己的性命置于度外；让召会在我们家中；承认召会是基督的召会；接待召会里每个人，并接待全召会。保罗的问安也揭示一地召会和众召会之间正确召会生活的重要指标，以及许多亲爱圣徒的特质。这给我们看见地方上的众召会，以及在许多圣徒的属性和美德上所彰显真正召会生活的细节。福音的终极总结乃是召会生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　照着神接纳</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因为我们没有一个人向自己活，也没有一个人向自己死；我们若活着，是向主活；若死了，是向主死。所以我们或活或死，总是主的人。（罗十四7～8。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们要接纳在主里的信徒，就需要变化，否则我们就很难与别人相处。只要人属于主并向主活，只要父神接纳我们众人，只要我们相信主并向他活，我们就该彼此接纳，不是照着我们的口味或爱好，乃是照着神的接纳，我们若不清楚接纳信徒的事，就会破坏召会生活；。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>接纳神所接纳的圣徒，不判断所争论的事。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

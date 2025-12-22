@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('214')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('216')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">开荤烧偶像</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们又是怎样离弃了偶像转向神，来服事又活又真的神。（帖前1:9）</div>
+<div id="CC">And how you turned to God from the idols to serve a living and true God.（1 Thessalonians 1:9）</div>
+<div id="C">郑大强弟兄原先虔修佛道，清斋十八年半，断绝油盐一年，且能演易占卜，入定游魂。后来突患离奇重病，弟兄们为他祷告。他梦见异象，信了耶稣，病即不药而愈。得救后不久，即行开荤，被弟兄们请上菜馆，吃起鱼肉。他烧毁所有偶像，往日看如珍宝的经典，通通付之一炬；占卜用具也捣毁无遗，古铜香炉抛入嘉陵江中。那时，郑弟兄住在张郁岚弟兄家中，楼下就是聚会的所在。隔壁住有一位妇人，多年患病，用尽医药，耗尽所有，病也未见好转。她见郑弟兄焚毁偶像经典，很为郑弟兄担心害怕，以为偶像会来惩罚降灾。那知过了一些日子，看见郑弟兄平安无事，完全恢复健康，充满喜乐。她心里十分诧异。有一天，弟兄们正在聚会祷告，她忽推门进来，立刻跪下，求主医病。祷告后，她全身发抖冒汗，湿透棉袄，身心顿感轻松，当时病就好了；三十年来抽烟的恶习也除去了。第二天，她作见证说，耶稣真是活神。<br/><br/>　基督徒得救后，所有迷信的事必须一概断绝，一切与迷信及偶像有关的邪污东西，都应该除尽。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

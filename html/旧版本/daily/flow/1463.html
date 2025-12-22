@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1462')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1464')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 11 课<br />
+神的管家职分</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　照着基督的运行竭力奋斗</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西一29：我也为此劳苦，照着祂在我里面大能的运行，竭力奋斗。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>将人在基督里成熟的献上，是十分艰苦的工作；因此，这工作惟有照着基督的运行，竭力奋斗，才能成就。阿利路亚！这位内住的基督在我们里面运行。这运行就是祂的加力。基督的运行，乃是大能的运作。这大能无疑的就是复活生命的大能，运行在使徒和所有的信徒里面。我们需要带着悔改的心到主面前说：【主啊！我还是这么天然，这么在自己里面。主啊！赦免我，用你的宝血洁净我。我渴慕蒙光照、得洁净、全人透亮。求你指示我，你在我身上所要的。暴露我，好使我能被你充满。】我们若这样祷告，基督的运作就有路在我们里面运行。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>照着基督在我们里面的运行竭力奋斗，好将各人在基督里成熟的献上。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神新约经纶里管家的职分。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>说说在每人的家里，谁是主要供应全家人食物的？并由此引到‘经纶’一辞，说明神的家也需要有为着神经纶的‘管家职分’，为着将基督的丰富分赐给神的儿女。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘这里的经纶一辞不是指时代或神对待人的方法；乃是指神将祂的丰富分赐到祂所拣选的人里面。这个经纶就是神的执事们，带着分赐职事的管家职分。这个分赐的职事也是神的行政。今天神乃是藉着把祂自己分赐到我们里面来施行祂的行政。这个管家的职分，这个分赐，这个行政，就是神的经纶。在神新约的经纶里，迫切的需要神的管家职分。…管家的职分是指王家或上等家庭里之富源的分赐。神君尊的家庭在基督里是丰富的。…这个管家职分就是新约里的职事。新约的职事，乃是将包罗万有的基督那追测不尽的丰富，分赐到神家的众人里面。使徒保罗将基督的丰富分赐到圣徒里面。这正是我们今天在这个职事里所作的。’（歌罗西书生命读经，108～109页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在召会生活中，享受基督丰富的分赐。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

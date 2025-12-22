@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1638')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1640')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 1 课<br />
+基督徒实行的完全</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我王必定快要再临。（诗歌756首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：一切美善的赐与、和各样完备的恩赐，都是从上头，从众光之父降下来的，在祂并没有变动，或转动的影儿。（雅一17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　引言—给散居的十二支派—雅一1</p>
+<p class="ot1">二　基督徒之完全的实行美德—一2～五20</p>
+<p class="ot2">1　藉信忍受试炼—一2～12。</p>
+<p class="ot2">2　神所生的，拒绝试诱—13～18。</p>
+<p class="ot2">3　藉栽种的话，照完备自由的律法，过敬畏神的生活—19～27。</p>
+<p class="ot2">4　在弟兄间不看外貌—二1～13。</p>
+<p class="ot2">5　在信徒关系上本于行为的称义—14～26。</p>
+<p class="ot2">6　勒住舌头—三1～12。</p>
+<p class="ot2">7　以智慧行事—13～18。</p>
+<p class="ot2">8　对付宴乐、世界与魔鬼—四1～10。</p>
+<p class="ot2">9　不批评弟兄—11～12。</p>
+<p class="ot2">10　不信靠己意，只信靠主—13～17。</p>
+<p class="ot2">（警告富足的人—五1～6。）</p>
+<p class="ot2">11　恒忍等候主来—7～11。</p>
+<p class="ot2">12　说话诚实，无需起誓—12。</p>
+<p class="ot2">13　召会生活中健康的实行—13～20。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>雅各书的主题是基督徒实行的完全。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>雅各书是主的兄弟雅各，写给散居的以色列十二支派的书信，说到基督徒之完全的实行美德，包括藉信忍受试炼、神所生的拒绝试诱、藉栽种的话，照完备自由的律法，过敬畏神的生活、在弟兄间不看外貌、在信徒关系上本于行为的称义、勒住舌头、以智慧行事、对付宴乐、世界与魔鬼、不批评弟兄、不信靠己意，只信靠主、恒忍等候主来、说话诚实，无需起誓、召会生活中健康的实行等项目。雅各所著重基督徒的完全，乃是在律法和恩典二者之下，藉着老旧天然的人，也藉着重生的新人，这是一个混杂。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　雅各书简介</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>雅一1：神和主耶稣基督的奴仆雅各，写信给散居的十二个支派：愿你们喜乐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>雅各书著者为主耶稣肉身兄弟雅各。主复活后成了一位使徒，并且是耶路撒冷召会中领头的长老；与彼得、约翰同被称为召会的柱石，且被保罗题为三柱石之首。雅各是一个脚踏两个时代的人，他没有清楚看见神的时代经纶。雅各书主题是基督徒实行的完全。但这不是整本新约里所启示真正基督徒的完全。真正基督徒的完全，乃是全然在神完全的恩典之下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识并分辨圣经启示不同时代中不同的完全，并经历在神恩典之下活出真正的完全。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

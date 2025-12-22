@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('704')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('706')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">一个烧煤炭的人</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>提前2:1　所以我劝你，第一要为万人祈求、祷告、代求、感谢；</p><p>在英国有一种家庭，常常打开家来，给有的客人住，不是旅馆，是很好的人家。有两个姊妹，在一个家庭里，也接待客人。来的都是上等人；有的时候，有二十个，或是三十个，同时住在那里。她们两个都是信主的姊妹，她们看见那些来往的人，所谈的话，都是世界上的事、好笑的事，他们所穿的衣服，都是很时髦的。有一天，她们觉得有一件事不对，坐下来谈话的时候，总是那些不相干的笑话，所以就想要胜过他们。但怎样胜过他们呢？他们人多，我们人少，怎么作呢？她们姊妹商量好，一个坐在这一头，一个坐在那一头，她们两个从两头来拉住他们。一个一个的替他们祷告，总是把他们带到主面前去。第一天，她们吃过饭在客堂里谈话的时候，一个坐在这一头，另一个坐在那一头，一个一个的祷告过去。一个从这一边祷告过去，另一个从那一边祷告过来，总是把所有的人都祷告过。结果那许多人都改变了。第一天为他们祷告了，大家都笑不出来，大家也谈不起劲，就问这是怎么一回事？第一天一个人得救。第二天有一个人的妹妹得救了。就这样，一个人，一个人，被带到主面前去。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

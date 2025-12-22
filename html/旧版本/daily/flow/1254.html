@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1253')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1255')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 18 课<br />
+使徒的劝勉、问安与祝福</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：赞美父乃祝福之源。（诗歌第5首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：末了，弟兄们，要喜乐，要被成全，要受安慰，要思念相同的事，要和睦，如此那爱与和平的神，必与你们同在。（林后十三11。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　使徒末了的劝勉与问安—林后十三11～13</p>
+<p class="ot2">1　喜乐的生活。</p>
+<p class="ot2">2　被成全。</p>
+<p class="ot2">3　受安慰。</p>
+<p class="ot2">4　思念相同的事。</p>
+<p class="ot2">5　要和睦。</p>
+<p class="ot2">6　享受爱与和平的神。</p>
+<p class="ot1">二　神圣三一的祝福—14</p>
+<p class="ot2">1　子基督的恩。</p>
+<p class="ot2">2　父神的爱。</p>
+<p class="ot2">3　圣灵的交通。</p>
+<p class="ot2">4　三一神将祂自己分赐到人里面，为着给人享受并有分，作我们独一的祝福。</p>
+<p class="ot1">三　新约执事的榜样</p>
+<p class="ot2">1　保罗的榜样。</p>
+<p class="ot2">2　倪柝声弟兄的榜样。</p>
+<p class="ot2">3　李常受弟兄的榜样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒在哥林多后书末了的劝勉、问安与祝福。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在哥林多后书的末了，使徒保罗以诚恳的劝勉，和甜美亲切的问安，劝哥林多的信徒在主里喜乐且受成全，为着召会思念相同的事，和睦且彼此相爱。最后他以三一神的三重祝福祝福信徒，要他们认识三一神在祂神圣三一里的分赐，作了他们的经历并享受。本课最后以三位新约执事的榜样—使徒保罗、倪柝声弟兄、李常受弟兄—作为实例，说明新约执事如何藉着启示加上苦难而被构成，以及他们的行事为人如何照耀基督的荣光，将生命供应到信徒里面，为着基督身体的建造。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　喜乐、被成全、受安慰</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后十三11上：末了，弟兄们，要喜乐，要被成全，要受安慰。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>照新约来看，基督徒的生活该是喜乐的生活。如果不喜乐你的基督徒生活就不正常。我们该藉着歌唱、赞美、呼喊、或呼求主名而喜乐，这是我们重要的特征。保罗在林后也呼吁哥林多人要被成全，被成全就是被恢复、修补、修理并调整，被带回到正确的地位上，并被带回归于正轨，使我们与别人在身体中同被建造。基督是我们的安抚、满足、加强、加力和喜乐，带给我们一切所需的，使我们有力量在基督徒生活和召会生活中往前，不至丧胆。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在召会生活中主动接受成全，经历基督是我们的安慰，使我们得满足、加强、加力和喜乐，而有力量放胆往前。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

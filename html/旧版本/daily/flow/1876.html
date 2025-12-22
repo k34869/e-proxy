@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1875')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1877')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 16 课<br />
+新天新地与新耶路撒冷（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　律法与天使</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>罗八4使律法义的要求，成就在我们这不照着肉体，只照着灵而行的人身上。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>门上有十二位天使，指出在神永远的经纶里，天使是服役的灵，这些天使要为我们的产业看门，我们却要享受神永远经纶里丰富的产业。并且，在这里，以色列代表旧约的律法，指明新耶路撒冷的门上有律法的代表。律法在看守并观看，以保证圣城一切的交通、进出都合乎律法的要求。我们都应悔改认罪说，‘哦，主耶稣，我犯了许多的罪，我只配死；何等感谢你不仅为我的罪死了，你也为我死了。’这样的悔改和认罪成就了律法的要求，使我们能合法进城。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>藉着基督的死与复活，成就了律法的要求，使我们够资格进城。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>今天在召会时代，国度对我们是操练；在来世千年国里，国度对我们是赏赐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们如何才能得着千年国的赏赐？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们得救以后，神把国度摆在我们面前作我们的操练。一面说我们是生在神的家中，却又是在神的国里操练。家是为着出生和享受的地方，但国度是为着操练和责任的地方。我们重生以后，必须要有操练。家是享受恩典的地方，但国度是操练尽责的地方。我们不该顾此失彼。…我们享受家，是藉着有分于恩典。我们分享国度，是藉着操练尽责。今天在召会时代，国度对我们是操练。在来世千年国里，国度对我们是赏赐。我们今天若操练得好，主将在那日赏赐我们。我们今天若操练得不好，我们将失去国度的赏赐。藉此神的智慧就得以证实，神的公义也得以维护。救恩是永远的；我们一旦得着就永不会失去。（约十28～29。）然而我们可能会失去国度的赏赐而受亏损，虽然我们仍然要得救。（林前三8，14～15。）除了救恩之外，还有国度，需要我们在今世有操练，好叫我们在来世得赏赐。…</p>
+<p>我们今天若不活在诸天之国的实际里，不在属天的管治下，我们在下个世代里就不能进入国度的实现作赏赐。我们若要在下个世代进入国度的实现，就必须今天活在诸天之国的实际里。换句话说，我们若要在下个世代掌权，就必须在今世受管治。我们必须在国度的事上操练，好进入国度掌权。’（诸天之国的要义，40～41、45页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在今世得成全，在家庭和召会生活里受对付。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

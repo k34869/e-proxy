@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('62')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('64')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>所以我劝你，第一要为万人祈求、祷告、代求、感谢；为君王和一切有权位的也该如此，使我们可以十分敬虔庄重的过平静安宁的生活。（提前二1～2）</p>
+<p class="title">大的操练（一）同众圣徒领略基督的阔、长、高、深</p>
+<p>在大的操练上，首先我们要与众圣徒一同认识并经历基督这阔、长、高、深的宇宙量度。（弗三18。）我们对基督的经历，不该只有一度，像一条线，而该有二度，像一平面。我们对祂若只有‘线’的经历，就容易走到极端。比如，有的基督徒圣经知识渊博，却很少花时间祷告；有的则只爱祷告，对圣经少有认识。有的人以为只要留在家中享受主就可以了，不必参加召会的聚会；相反的，有些人只顾聚会，没有分别出时间有个人的祷告、读经和享受主。这都是极端。我们要经历基督的宇宙量度，就需要召会生活，与身体的众肢体一同经历基督。我们若在召会生活中经历基督的量度，就会逐渐被织成‘地毯’，而不只是‘线条’。在经历基督的阔和长之后，我们开始经历高和深。至终，我们对基督的经历，就从二度进到三度，从‘平面’进到‘立方体’。当我们成为一立方体时，我们就是大的、稳的，既不倒也不破。</p>
+<p>再者，因着我们常常享受主，将心转向主，接触祂并接受祂，这位包罗万有、延展无限的基督，就能藉着我们的信，安家在我们心里。这样，我们的心就能像主那样广大，满有爱和怜悯，能彼此饶恕，彼此赦免，如同主赦免了我们一样。</p>
+<p>现今，主是在诸天之上，作大祭司为我们代求。（来七25～26。）这样的生命在我们里面，使我们也能多多的为人代求。如同使徒保罗对提摩太的劝勉：‘第一要为万人祈求、祷告、代求、感谢；为君王和一切有权位的也该如此，使我们可以十分敬虔庄重的过平静安宁的生活。’（提前二1～2。）我们可以为弟兄姊妹，或为尚未得救的亲人和朋友，为国家和执政掌权者，甚至为我们不喜欢的人代祷；使我们能像我们的天父一样，一无分别的爱我们周围的人。（太五44～48。）（参以弗所书生命读经，342～349页。）</p>
+<p class="title">他的手比我的大</p>
+<p>一位母亲带着她的小孩，去一间杂货店买日常用品。杂货店的主人对那孩子说，‘请拿一些樱桃吃罢。’小孩站在那里，犹豫了很久。主人又说，‘你不爱吃樱桃么？’小孩说，‘我很爱吃樱桃。’于是店主伸手，抓一大把樱桃放在小孩的两只小手中。后来，小孩的母亲问他，为何不自己伸手去拿，却等着店主伸手拿呢？小孩说，‘因为他的手比我的大！’借此，我们可以得到一个属灵功课：信徒不必为自己图谋，为自己抓取，只要专心等候神；祂所豫备的，远胜我们自己挣扎得来的更多、更美！（参造就故事下册，88页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：为万人祈求、祷告、代求、感谢，甚至为我们所不喜欢的人代祷，一无分别的爱我们周围的人。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

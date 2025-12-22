@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('230')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('232')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">不能代免债务</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">他的儿女要求穷人的恩惠，他的手要赔还不义之财。（伯20:10）</div>
+<div id="CC">His children seek the favor of the poor，and his hands return his wealth.（Job 20:10）</div>
+<div id="C">从前有一个部队长，下了一道命令，任何官兵都不许向人借钱。后来有个士兵，向另外一个士兵借了几十块钱，但无力偿还。他就来到长官面前认错，承认违背长官命令，愿意接受长官的处罚，请求长官赦免他的罪过，并要求欠那士兵的钱可以不必还。你看，这个要求，长官能否替另外一个士兵作主，不要他还呢？长官只能赦免那个士兵借钱的罪，但不能替另一个士兵赦免他的债务。<br/><br/>　今天我们亏欠人，一面是得罪人，一面是得罪神；我们不能说得罪了人，亏欠了人，不必向人赔偿，只要向神认罪就了事。神不能替别人赦免我们的亏欠。</div>
+<div id="CC">得救的证实与快乐─被主释放（诗244）</div>
+<div id="C">罪恶失权势，<br/>　情欲不能羁绊，<br/>　今生的忧虑也难再将我缠，<br/>　属地的捆索也都已被斩断；<br/>　主耶稣已把我释放！<br/>（副）<br/>　释放！释放！荣耀释放！<br/>　我不再被罪恶捆绑；<br/>　宝血洗净我，<br/>　全人明亮、清爽；<br/>　主耶稣已把我释放！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('931')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('933')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 8 课<br />
+国度里的关系</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：当人弃绝地的贿赂。（诗歌355首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我又实在告诉你们，你们中间若有两个人在地上，在他们所求的任何事上和谐一致，他们无论求什么，都必从我在诸天之上的父，得着成全。（太十八19。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　国度子民在诸天之国里该有的生活行动—太十八1～35</p>
+<p class="ot2">1.　谦卑变成像小孩子一样—2～4。</p>
+<p class="ot2">2.　不绊跌人，也不立下绊跌人的事—5～9。</p>
+<p class="ot2">3.　不轻看信主的一个小子—10～14。</p>
+<p class="ot2">4.　要听召会，不要被召会定罪（在活力排的原则里，为犯罪的弟兄有和谐一致的祷告）—15～20。</p>
+<p class="ot2">5.　无限度的赦免弟兄—21～35。</p>
+<p class="ot1">二　国度的要求—十九3～26</p>
+<p class="ot2">1.　对付情欲—3～12。</p>
+<p class="ot2">2.　对付骄傲—13～15。</p>
+<p class="ot2">3.　对付贪财—16～26。</p>
+<p class="ot1">三　国度的赏赐—十九27～二十16</p>
+<p class="ot2">1.　在今世得百倍—29下。</p>
+<p class="ot2">2.　在来世承受永远的生命—29下。</p>
+<p class="ot2">3.　在复兴的时候与基督同王—28。</p>
+<p class="ot2">4.　不是出于律法，乃是出于恩典—30～二十16。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识国度子民在国度里该有的生活行动、国度的要求、以及国度的赏赐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>马太十八至二十章说到国度子民在国度里的关系。十八章说到国度子民在诸天之国里该有的生活行动：要回转变成像小孩子一样；不要绊跌人，也不立下绊跌人的事；不可轻看信主的一个小子；要听召会，不要被召会定罪；且要无限度的赦免弟兄。十九章说到国度的要求，包括对付情欲、骄傲以及贪财。那些撇下一切跟从主的人，要得着国度的赏赐：在今世得百倍，在来世承受永远的生命，并在复兴的时候与基督同王，这不是出于律法，乃是出于恩典。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　国度子民该有的生活行动（一）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我实在告诉你们，你们若不回转，变成像小孩子一样，绝不能进诸天的国。（太十八3。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在国度生活里，我们若要和人有正确的关系，我们的骄傲就需要被对付。所有绊跌的事都是因着骄傲发生的。因此我们需要谦卑，回转像小孩子一样，才能进国度，这段话也启示我们，不论我们多微小，我们在父眼中都是可爱的，并且祂顾念我们。祂不喜欢看见任何人被绊跌。谦卑能拯救我们，不被人绊跌，也不绊跌人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>谦卑回转像小孩子，不被人绊跌，也不绊跌人。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

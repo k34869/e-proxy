@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('213')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('215')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">大盗归正</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">所以你们要悔改，并要回转，使你们的罪得以涂抹，这样，那舒爽的时期，就得以从主面前来到。（徒3:19）</div>
+<div id="CC">Repent therefore and turn，that your sins may be wiped away，so that seasons of refreshing may come from the presence of the Lord.（Acts 3:19）</div>
+<div id="C">林不，福建安溪人，是一个陆海大盗，手下甚多。后来因政府搜捕，逃往厦门。有一天，他路过教堂，忽然觉得后面有人跟踪，便怀疑是警察，就慌张的溜进教堂，混在会众中间，假装听道。不料，传道人的话语，非常刚强，感动了他，使他深觉扎心，立即悔改，接受救主。林不信主后，立刻回家，劝勉手下也要信主，改邪归正；并将财产分给他们，另谋正业。解散手下，结束旧业之后，他就献身为主活着，热心传扬福音，到处为主作见证。</div>
+<div id="CC">得救的证实与快乐─生命改变（诗241）</div>
+<div id="C">我生命有何等奇妙的大改变，<br/>　自基督来住在我心；<br/>　神荣耀的光辉，<br/>　照耀在我魂间，<br/>　自基督来住在我心。<br/>（副）<br/>　自基督来住在我心，<br/>　自基督来住在我心；<br/>　喜乐潮溢我魂，<br/>　如海涛之滚滚，<br/>　自基督来住在我心。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('400')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('402')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">禁止与牧师拉手</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗8:6　因为心思置于肉体，就是死；心思置于灵，乃是生命平安。 For the mind set on the flesh is death, but the mind set on the spirit is life and peace.</p><p>有一位姊妹疑惑她的得救，就去请教一位年长姊妹。那位年长姊妹实在知道她里面有基督的生命，不过她自己尚无感觉而已。这位年长姊妹就对她说，我们来拜马利亚的像，请她帮忙我们得着救恩吧！这位少年姊妹非常惊讶的说，我们只可敬拜主耶稣，怎么可拜马利亚？年长姊妹问她说，你说的很对，你心里如何感觉呢？她说，刚才你说要拜马利亚的时候，我心里立刻非常难过，里面有一股力量，不许我去拜它。年长姊妹就告诉她说，这就是膏油涂抹的教训，这就是圣灵内住的凭据，也就是你得救的见证。因为每一个得救的人，都有圣灵住在他心里。当你违背祂的时候，你就觉得痛苦；当你顺从祂的时候，你就感觉舒服，就得着膏油涂抹的滋润。</p><p>儿童,#702 当我心亲近救主</p><p>当我心亲近救主，祂使我心快乐；</p><p>当我心忧愁痛苦，祂使我口唱歌；</p><p>祂以柔声细语招呼，招呼我亲近主，</p><p>祂使我心高声歌唱，永远永远歌唱。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

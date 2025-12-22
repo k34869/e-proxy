@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1281')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1283')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 4 课<br />
+基督成形在我里面</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：神的心意所喜所爱。（诗歌399首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：而且因你们是儿子，神就差出祂儿子的灵，进入我们的心，呼叫：阿爸，父！这样，你不再是奴仆，乃是儿子了；既是儿子，也就借着神为后嗣。（加四6～7。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　儿子名分的灵顶替律法的监护－加四1～7</p>
+<p class="ot2">1　律法的功能是监护人与管家－1～3。</p>
+<p class="ot2">2　神经纶的中心乃是儿子的名分－4～5。</p>
+<p class="ot2">3　儿子的灵进入我们的心，呼叫：阿爸，父－6～7。</p>
+<p class="ot1">二　基督需要成形在承受应许者的里面－8～20</p>
+<p class="ot2">1　加拉太人的光景：受奴役、被欺骗－8～18。</p>
+<p class="ot2">2　保罗为加拉太人受生产之苦，使基督成形在他们里面－19～20。</p>
+<p class="ot1">三　按灵生的儿女，与按肉体生者相对－21～31</p>
+<p class="ot2">1　两个约与两种儿女－21～27。</p>
+<p class="ot2">2　从那灵而生，以接受那灵－28～31。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>儿子名分的灵顶替律法的监护，使我们不再作按肉体生的儿女，乃是按灵生的儿女，且让基督成形在我们里面。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们虽是神的儿子，但在我们还作孩童的时候，的确需要一位监护人，就是律法，直到父神所预定的时候，就是新约时期，基督来把我们从律法的监护下赎出来，成为神的儿子。而且因我们是儿子，神就差出祂儿子的灵，进入我们的心，呼叫：阿爸，父。使我们在灵里享受父神与我们之间生命的关系，让基督成形在我们这些承受应许者的里面。使徒保罗也指出旧约亚伯拉罕的妻子和妾象征两个约，生出两种不同的儿女；按灵生的儿女，与按肉体生者相对，因此我们应当离开律法下肉体的努力，一直不断接受那灵，好活出神儿子的生命。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　神经纶的中心－儿子名分的灵</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>加四4～5：及至时候满足，神就差出祂的儿子，由女子所生，且生在律法以下，要把律法以下的人赎出来，好叫我们得着儿子的名分。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>照新约的启示，儿子的名分乃是神经纶的中心点。神的经纶不是使我们成为守律法的人。基督的救赎是将我们带进神儿子的名分里，将自己分赐到我们里面，成为我们的生命，我们成为祂许多的儿子，要作祂团体的彰显。儿子的名分包含生命、成熟、地位和特权。父重生我们使我们有父的生命；我们必须继续在这生命里成熟。生命与成熟就给我们地位和特权来承受父所有的一切丰富。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识神的经纶乃是要产生儿子，我们需要在神的生命里成熟，以承受父所有的一切丰富。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

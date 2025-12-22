@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('166')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('168')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">静的操练（二）祷告以过平静安宁的生活</p>
+<p>所以我劝你，第一要为万人祈求、祷告、代求、感谢；为君王和一切有权位的也该如此，使我们可以十分敬虔庄重的过平静安宁的生活。（提前二1～2）</p>
+<p>保罗在提前二章一节劝勉提摩太：‘第一要为万人祈求、祷告、代求、感谢。’这指明正确的召会生活首先必须有祷告的生活。在召会生活中，我们应当以祷告的生活来代替争辩、闲谈、批评的言语。保罗要提摩太为万人祈求、祷告、代求、感谢。祷告是一般的，带着敬拜和交通的成分；祈求是专一的，为着特殊的需要。代求，乃是个人倾心吐意的亲近神，因此是在神面前关心别人的事，为他们求益处。此外，我们必须献上感谢。保罗在二节接着说，‘为君王和一切有权位的也该如此，使我们可以十分敬虔庄重的过平静安宁的生活。’平静安宁的生活，是一种不仅在外面环境上，连里面的心和灵，都是平静安宁，没有搅扰的生活，使我们可以敬虔庄重的过可享受的召会生活。敬虔是彰显神，庄重是向着人。我们基督徒的生活，该以一种博得人极度尊敬的可敬品格，向人彰显神。这样的生活在我们的救主神面前，是美好且蒙悦纳的。（3。）</p>
+<p>活基督的生活该是平静、安宁、平安、且安静的。反之，风波的生活是活撒但的生活。谦让宜人（腓四5）是安宁生活最重要的元素。谦让宜人是待人合理，体谅，顾到别人，不严格要求合法的权利。我们若要过平静的生活，就必须谦让宜人。谦让宜人包括忍耐和适度，但还不只这些。我们若谦让宜人，就不会与人争辩，与人争斗，或与人争论。我们也许有许多可说的，但我们若是忍耐并适度的对待别人，即使我们被惹动或激怒时，也不会说什么以回应。每当我们私图好争、贪图虚荣、发怨言、起争论的时候，就没有平静、安宁，也没有谦让宜人。然而我们若活基督，就不会与别人争辩，反叫众人知道我们的谦让宜人。活基督需要绝对的安宁与平静。（参提摩太前书生命读经，31～32、34～36页；腓立比书生命读经，270～273页。）</p>
+<p class="title">深处平静安适</p>
+<p>据科学家说，即使最猛烈的暴风冲袭着海洋，弄得狂涛骇浪，船只樯倾楫摧。然而，这不过搅动海面数百尺深的水，海的深处却丝毫不受影响。表面看，海浪冲天，汹涌澎湃，但海洋内部却平静安适。照样，基督徒可能在外面环境上遭遇狂涛骇浪，若与主交通，必能因神所赐出人意外的平安，保守我们的心怀意念，使我们里面平静安适。</p>
+<p>‘应当一无罣虑，只要凡事藉着祷告、祈求，带着感谢，将你们所要的告诉神；神那超越人所能理解的平安，必在基督耶稣里，保卫你们的心怀意念。’（腓四6～7。）（参造就故事上册，92～93页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：为万人祈求、祷告、代求、感谢，使我们可以十分敬虔庄重的过平静安宁的生活。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

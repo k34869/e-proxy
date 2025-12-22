@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1456')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1458')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 11 课<br />
+神的管家职分</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：在荣耀里有一人。（补充本诗歌27首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：神愿意叫他们知道，这奥秘的荣耀在外邦人中是何等的丰富，就是基督在你们里面成了荣耀的盼望；我们宣扬祂，是用全般的智慧警戒各人，教导各人，好将各人在基督里成熟的献上。（西一27～28。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　神的管家职分—西一24～25，28～29</p>
+<p class="ot2">1　在肉身上补满基督患难的缺欠—24。</p>
+<p class="ot2">2　召会的执事—25。</p>
+<p class="ot2">3　完成神的话—25。</p>
+<p class="ot2">4　将各人在基督里成熟的献上—28。</p>
+<p class="ot2">5　照着基督大能的运行竭力奋斗—29。</p>
+<p class="ot1">二　基督—神经纶的奥秘—26～27</p>
+<p class="ot2">1　向圣徒显明的奥秘—26。</p>
+<p class="ot2">2　奥秘荣耀的丰富—27上。</p>
+<p class="ot2">3　荣耀的盼望—27下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>陈明按照神经纶的管家职分。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>歌罗西一章二十四至二十五节，使徒保罗说到一个神所赐的管家职分。神的家在基督这位包罗万有并居首位者里面是特别丰富的，这样一位基督的丰富，需要分赐到神家的众人里面。这个分赐的事奉，称为神的管家职分，乃是使徒保罗的工作。今天这也该是我们的工作。但我们若渴望有分于神的管家职分，就是有分于召会的事奉，就必须准备受苦。主耶稣经历了两种苦难：为着救赎的苦难，以及为着产生并建造身体（就是召会）的苦难。我们没有人能有分于祂救赎的苦难。但我们若向祂忠信，就必须有分于祂产生并建造祂身体的苦难。这乃是补满基督患难的缺欠。管家职分的另一面乃是完成神的话。使徒保罗在神的奥秘（基督），以及基督的奥秘（召会）这两点上，完成了神的话，将神的经纶完满的启示给我们。并且关于基督与召会的奥秘，是从永远，从各时代以来一直隐藏着，直到新约时代才显明给圣徒，包括我们众人，就是在基督里的信徒。因此今天我们需要在实行上完成神的话。我们需要清楚认识祂的恢复，供应基督作赐生命的灵，与召会站在一起，在正确的地方立场上，作基督活的彰显。基督现今是那满了荣耀的奥秘。当基督回来叫祂的圣徒得荣耀时，这荣耀要彰显到极点。这是荣耀的盼望。为这盼望，我们的职事，无论是宣扬基督，或用全般的智慧警戒、教导各人，都是将基督供应人，使他们以基督作神圣生命的元素，而长大成熟，得以完全并完整。这乃是照着内住基督的运行，竭力奋斗，而得以成就。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　神的管家职分</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西一25：我照神为你们所赐我的管家职分，作了召会的执事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>管家的职分乃是一种经纶。这个管家职分就是新约里的职事。在神，这是经纶的事；在我们，这是管家的职分。照神的经纶，所有的圣徒，所有基督身体上的肢体，不论他们看来多微不足道，都有一分职事；每位圣徒都能将基督的丰富分赐到别人里面。我们都需要抓住机会，将基督的丰富分赐、供应给人，好尽我们的管家职分。我们都渴望有分于神的管家职分，有分于召会的事奉。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>抓住机会，将基督的丰富分赐、供应给人，好尽管家的职分。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

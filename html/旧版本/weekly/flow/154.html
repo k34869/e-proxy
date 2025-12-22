@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('153')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('155')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">正的操练（四）过平衡的生活，为主作见证</p>
+<p>在河这边与那边有生命树，生产十二样果子，每月都结出果子，树上的叶子乃为医治万民。 （启二二2）</p>
+<p>何西阿七章八节说，‘以法莲是没有翻过的饼。’什么叫没有翻过的饼呢？虽然我们不都作过饼，但是我们总吃过饼。即便我们不知道怎么烤饼，但是，我们总看见过人煎过豆腐，煮过菜。无论是煎豆腐，或是煮菜，若是煎一面，煮一面，总不翻，必定是一面太熟，一面还是生的。那边火力太大，这边火力不足。凡是煮菜，或者煎豆腐，那边需要多少火，这边也需要多少火。如果这一边一直烤，一直烤，结果就这边烤焦了，那一边还是生的。烧焦了的东西，不能算为粮食，不能供给人吃。‘没有翻过的饼’这句话，是神给我们一个生活的原则。如果一个人对于一件事过度的注重，就是没有翻过的饼。只有这一面让火烧，固然可以叫这一面烤熟；但是，若不把那一面也翻过来烧，就不会熟，反而无用。在基督徒生活中，最要紧的是两面平衡：不只应当有热心，也应当有信心；不只知识应当长进，生命也应当长进。</p>
+<p>我们为主作见证也是如此；不仅是口里作见证，更必须有生活的见证。例如，家里、房间的摆设都当大方、正派，显出圣徒的体统；我们的穿着也要高雅、端庄，但不要奢华，或是土里土气。我们既然爱主，也经历主是又活又真的，并且知道祂还要再来，有一天我们都要见祂，就当在今日的生活中活基督，活出一个真实的见证。这样，我们生活在人群中，别人看见我们的出入、穿戴、装扮、谈吐，就会知道我们是最正派、最可靠的人。当他们遭遇困难或有事要相托时，必定头一个想到我们。这就是我们的见证。我们若是这样正当的生活，天天活基督，我们的生活就是福利社会。启示录二十二章二节说，生命树上的叶子乃为医治万民。在圣经里，树叶是指人的行为说的；这指明好行为能医治人的败坏。我们行事为人规矩、正派，就会影响周围的人，这就是最好的见证。（参因信而活，66～67、71页；跟上时代重建圣殿，68～69页。）</p>
+<p class="title">问卦式的求问</p>
+<p>有的信徒用一种问卦式的方法来寻求神的旨意，他们把圣经摆在面前，祷告说，‘神阿，求你使我手指指的那一节圣经，就表明是你的旨意。’</p>
+<p>他们祷告完了，仍闭着眼睛，把圣经打开，用指头指在一个地方，然后睁开眼一看，就把那一节圣经当作神的旨意。有些幼稚的信徒用这种方法来求问神，心很迫切，所以神有时也会因着他们的无知，迁就他们一下，给他们指示。可是，这绝不是一种正当的方法，不但多数人行不通，多数时候也行不通，并且极有错误和危险的可能。</p>
+<p>弟兄姊妹请记得，我们是已经有神生命的人，已经有了神的灵住在我们里面，我们应当求神藉着圣灵把祂的话指示我们。我们总得在平日经常的、好好的读圣经，并背圣经节，好让圣灵能在我们有需要的时候，用我们读过的圣经对我们说话，使我们得着神正确的引导。（参初信造就中册，180～181页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：作一平衡的基督徒，有热心和信心，并在知识和生命上长进。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1484')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1486')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 15 课<br />
+新人的成分</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：　为神永远的经纶。（补充本诗歌427首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：并且穿上了新人；这新人照着创造他者的形像渐渐更新，以致有充足的知识；在此并没有希利尼人和犹太人、受割礼的和未受割礼的、化外人、西古提人、为奴的、自主的，惟有基督是一切，又在一切之内。（西三10～11。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　与基督同有一个地位、生命、生活、定命和荣耀—西三1～4</p>
+<p class="ot1">二　基督—新人的成分—5～11</p>
+<p class="ot2">1　治死我们情欲的肢体—5～7。</p>
+<p class="ot2">2　脱去旧人同旧人的行为—8～9。</p>
+<p class="ot2">3　穿上了新人—10～11：</p>
+<p class="ot2">a　照着创造他者的形像渐渐更新，以致有充足的知识—10。</p>
+<p class="ot2">b　在此没有任何天然的人—11上。</p>
+<p class="ot2">c　基督是一切，又在一切之内—11下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督乃是新人的成分，因此，在他里面，没有任何天然的人；基督是一切，又在一切之内。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们与基督同有一个地位，一个生命，一个生活，一个定命和一个荣耀。祂在那里，我们就在那里。并且祂成了我们的生命。祂要我们活祂的生命，不活自己天然的生命。因此我们活着乃是为着神的经纶、定旨和行政。我们在基督属天的祭司职分里与祂是一。然后我们需要经历基督是召会这新人的成分。我们必须脱去许多旧的、基督以外的事物；首先治死身体的私欲，接着脱去魂的邪恶，最后脱去整个旧人同旧人的行为。并且因这新人原是用我们属于旧造的人创造的，所以新人还需要更新。这更新主要的发生在我们的心思里，照着基督的形像，渐渐更新，以致有充足的知识。至终，在新人里只有基督有地位，任何天然的人都没有地位；在召会中我们什么也不是，而那包罗万有的基督，既是新人一切的肢体，也在一切的肢体之内。在新人里祂是一切，又在一切之内。新人的每一肢体、每一部分都是基督。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　与基督一同藏在神里面</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西三3：因为你们已经死了，你们的生命与基督一同藏在神里面。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们的生命与基督一同藏在神里面，就是与基督一同藏在诸天之上。经历与基督同有一个地位最好的操练，就是学习与主成为一灵；藉着运用灵呼求主、享受主，而不断接受属天的传输，好像房间里的灯藉着电流联于发电厂，我们也藉着从天上神的宝座流到我们灵里之神圣的传输而联于天。如果我们实际的与基督同有一个生活，一切消极的事物就都要在我们的脚下，召会生活也会大大的提高。愿主得着我们，天天操练把自己祷告到灵里，到诸天界里，联于基督，执行神的经纶！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>祷告到灵里，联于基督天上的职事。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

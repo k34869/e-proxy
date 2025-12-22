@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="css/vuetify.min.css" rel="stylesheet" />
+    <link href="css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>造就课程</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+              造就课程
+            
+              
+              </div>
+            </v-card>
+          </div>
+          <div class="nav" @click="jump('./z0-1.html')"> 鸟瞰</div>
+          <div class="nav" @click="jump('./z1.html')"> 前言　关于造就聚会</div>
+          <div class="nav" @click="jump('./index1.html')"> 壹　入门</div>
+          <div class="nav" @click="jump('./index2.html')"> 贰　学习</div>
+          <div class="nav" @click="jump('./index3.html')"> 叁　对付</div>
+          <div class="nav" @click="jump('./index4.html')"> 肆　表显</div>
+          <div class="nav" @click="jump('./index5.html')"> 伍　托付</div>
+   <br />
+   <br />
+<p class="heading">圣徒得造就的秘诀</p>
+           <p class="heading">一   对主-有最高的珍赏</p>
+            <p class="heading">二   对话-有最深的渴慕</p>
+            <p class="heading">三   对会-有最强的看重</p>
+            <p class="heading">四   对人-有最广的联结</p>
+            <p class="heading">五   对己-有最真的雕刻</p>
+            <p class="heading">六   对敌-有最大的得胜</p>
+
+
+
+        </v-main>
+      </v-app>
+    </div>
+   <script src="js/vue.js"></script>
+    <script src="js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

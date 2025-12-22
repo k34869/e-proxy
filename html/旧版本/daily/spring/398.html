@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('397')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('399')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">不喝提摩太酒了</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>腓2:13　因为乃是神为着祂的美意，在你们里面运行，使你们立志并行事。For it is God who operates in you both the willing and the working for His good pleasure.</p><p>有一位俞弟兄，在没有信主以前，很喜欢喝酒。每年冬天，他都要喝大量的酒；并且他所喝的酒还是自己酿造的。后来他得救了，他的妻子也得救了。可是，他识字不多，不大会读圣经。有一天，他预备了一点菜，也预备了酒，像往年一样，要喝酒。他起来谢过了饭，问他的妻子说，‘基督徒到底可以不可以喝酒？’他的妻子说，‘我不知道。’他说，‘可惜这里没有人可以问。’他的妻子就说，‘酒也预备好了，菜也预备好了，今天先喝了再说，以后再问好了。’后来他又谢饭。谢完了饭，仍然觉得不对。他想现在是基督徒了，总该知道基督徒到底可以不可以喝酒才对。他就请他妻子把圣经拿来，但是打开一看，也不知道该从那里看起，无从解决问题。后来有人遇见他，谈起这事，问他那天到底喝了没有。他说，‘那天到底没有喝，因为里面当家的不许，所以就不喝了。’</p><p>儿童,#702 当我心亲近救主</p><p>当我心亲近救主，祂使我心快乐；</p><p>当我心忧愁痛苦，祂使我口唱歌；</p><p>祂以柔声细语招呼，招呼我亲近主，</p><p>祂使我心高声歌唱，永远永远歌唱。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

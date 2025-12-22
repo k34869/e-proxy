@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('701')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('703')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">带总工程师得救</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>提前2:7上　我为此被派，在信仰和真理上，作传扬者，</p><p>在英国有一个女人，家里有许多的钟。（十九世纪时，不只满清的皇帝喜欢钟，世界许多有钱的人，都喜欢钟，都特别有这一种嗜好。）为了这些钟，她必须雇一个人天天来对钟。总不能一架钟是十点，一架钟是十一点，一架钟是十二点，一架钟是一点。这不是谁听谁的问题，这也不是平均的问题，所以总是要雇人来把它们较准。有的人，家里就长年包给那些对钟的人，天天来对。她家里也包了一个对钟的人，天天来对。她这一个人也是一个替人祷告的人，一个名字、一个名字记在簿子上。有一天，她忽然想起这一个对钟的人天天来，她一次都没有向他题起主的名字，也没有替他祷告过一次。她觉得主把这一个名字摆在她心里，所以就把他记在簿子里。她就祷告说，神阿！他来对我的钟，让我来对他的灵魂。她为着他天天祷告。起头的时候，没有向他讲，后来就向他讲。那一个对钟的人，总是：是，是，是的，一点都不动。过几天，她再向他讲，他还是不动。因为她是主人，所以那一个对钟的人对她很客气，但是，总是一动都不动。一直到十五个月之后，钟是天天对好的，他的灵魂也对好了。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('820')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('822')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">诗歌成为护蔽</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>申33:27　亘古的神是你的居所；祂永远的膀臂在你以下。祂在你前面撵出仇敌，说，毁灭罢！</p><p>The God of old is your habitation, And underneath are eternal arms. And He drove out the enemy before you And said, Destroy!</p><p>一个寒冬早晨，瑞典大军迫临德境，要杀害更正教信徒。晚上，一位老妇坐在简陋的田舍里面。她的儿子带来这个可怕的消息—杀害更正教徒的军队已经迫近，或许就在今夜经过此村，于是催劝母亲速逃山里避难。母亲却回答说，‘如果神不许可，祂必保护。’说完跪下祷告。继则点灯，歌唱‘有墙筑在我们周围’一诗。她的儿子急了，说她这样何等不智；因为灯光、歌声都能招引敌人前来捉拿。但她不听，仍然唱诗。儿子更加着急的说，‘神怎能在我们周围筑一道墙阿！’她轻声回答：‘祂若愿意，祂必定能！’说完又唱下去。次日早晨，儿子前去开门，发现门被封了。原来一夜大雪，不但把门塞住，房子几乎也被埋没。就是这样，当仇敌夜里经过之时，大雪把他们遮蔽了。‘永生的神是你的居所；祂永久的膀臂在你以下。’（申三三27。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

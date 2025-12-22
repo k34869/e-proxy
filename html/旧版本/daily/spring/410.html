@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('409')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('411')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">田弟兄离川</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>腓2:13　因为乃是神为着祂的美意，在你们里面运行，使你们立志并行事。For it is God who operates in you both the willing and the working for His good pleasure.</p><p>有一传道人，讲道很出名，常到各地领会。一班绑匪看上了他，想绑他的票，敲他竹杠；于是写信约他前去讲道，说，‘我们要悔改信耶稣，请你于某日某时来到某地讲道。’传道人不知是计，按时前去讲道。到了目的地，刚刚举手要按电铃，里面感觉不平安。他认识圣灵，曾经多次学过功课，就顺服感觉回去了。事后法院传他问讯，要他那一封信；他想他从来没有犯过法，为何法院会传他呢？原来这班土匪案发被捕，说出他们的罪行，并说他们曾想绑传道人的票，没有成功。所以法院传他问讯，查明事实，他才恍然大悟。</p><p>新歌,#99 如今主你就是那灵</p><p>一</p><p>如今主，你就是那灵，是那赐人生命的活灵，</p><p>为进我灵作我生命，你已完成必经的过程；</p><p>你从天降下成肉体，从阴间上来又复起，</p><p>今犹如空气在我口里，随时随在我可享受你。</p><p>对我，你丰富无比，对我，你何等实际，</p><p>丰富无比，何等实际，因你就在我心里！</p><p>_二_</p><p>愿主多赐我以那灵，以你新鲜生命来供应，</p><p>从我中心浸透、充盈，直达圆周，处处都光明；</p><p>你多方运行并工作，像神对膏油在涂抹，</p><p>将我的心，灵全浸润过，且来挑旺我深处爱火。</p><p>有你，我灵会飞扬，有你，我心会歌唱，</p><p>灵会飞扬，心会歌唱，生活如同在天上！</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

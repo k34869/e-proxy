@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('352')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('354')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第9课  十戒—爱人（不可偷窃）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十15 不可偷盗。</p>
+<p>v有一个人，请了十几个人吃饭。其中有一位品行不好，乘人不注意的时候，把主人家里的一个闹钟偷来，藏在怀里，还若无其事，坐在那里，有说有笑，谈吐文雅，举止大方，俨然一位君子。不料到了坐席之时，正十二点钟，偷藏在他怀里的闹钟忽然响了起来。当时羞惧交加，面色骤变，拔腿就走</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：第八条诫命是要爱别人，而不要偷窃。偷窃是在未经允许的情况下拿走属于他人的东西。未经他人许可，我们不应拿走属于他人的任何东西。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：孩子们可能都经历过想要一些不属于他们的东西。看看他们是否察觉自己处于这种情况：他们的朋友有一袋饼干，他们想要一个。朋友放下袋子去玩，孩子发现有吃饼干机会。这样作就是偷窃。相反的，我们需要获得许可，问问我们是否可以吃。偷窃不一定要偷大的或昂贵的东西——它可以涉及一些小的东西。因为他还有那么多（比如只吃一块饼干），我们可以拿走它，即使我们认为拿走一个也不会有什么异常，只要我们不经许可就拿走另一个人的东西，那就是偷窃。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书四28 上 偷窃的不要再偷。</p>
+<p>某一小学，学生下课离开教室，到操场游玩；只有一个学生留在教室，看见一把美丽小刀，起了贪心，把它偷去。大家回到教室时，失主发现小刀不在，报告老师。老师究问学生，大家都说没有偷取。老师就一面讲课，一面暗中观察。其中有一学生不敢抬头看老师，老师马上问他说，“你为什么不敢抬头看我，莫非你偷了小刀？”这位小孩许久不敢开口，后来才战战兢兢的承认说，“是的。”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：第八条诫命是人不应该偷窃。偷窃可以包括习惯性地“借用”那些不是我们的东西，“忘记”归还它们，或者拿走一个看起来是被主人遗失的物品。我们应该归还我们偷的任何东西。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：偷窃可包括上面“焦点”列出的描述/情况。例如，在一天结束时，当你离开教室，你会发现地板上有一个手镯。你不知道它属于谁，它似乎已经被丢弃了，所以你捡起来留下了。或者，你反复要求你的朋友借铅笔（或橡皮擦，或某物），并且永远忘记归还这些东西。这些情况下，我们拥有不属于我们的东西就等于偷窃。所有这些东西都需要退还。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>路加福音十九8 撒该站着，对主说，主啊，看哪，我把家业的一半给穷人，我若讹诈了谁，就还他四倍。</p>
+<p>税吏是专门收税金的官，因为税金的多少完全是税吏规定的，他们总是想贪多少，就收多少。因此以色列人痛恨并藐视税吏，他们看税吏如同罪人一样，总是拿取别人的财物。撒该不仅是一个税吏，还是个税吏长，若税吏是专门收税金的官，因为税金的多少完全是税吏规定的，他们总是想贪多少，就收多少。因此以色列人痛恨并藐视税吏，他们看税吏如同罪人一样，总是拿取别人的财物。撒该不仅是一个税吏，还是个税吏长，若是所有的税吏都贪，他恐怕是贪得最多的一个。他在没有遇见主耶稣以前，不知道贪了多少不义之财。当主耶稣要进耶利哥城的时候，撒该因为很矮，就爬上一棵桑树要看主耶稣。奇妙的是，进城的人很多，他找了半天也找不着哪一个是主耶稣。主耶稣却老早就看见他在树上，也知道他叫撒该，主从树下经过的时候，就抬头往上一看，对他说，“撒该，快下来，今天我必须住在你家里。”撒该就急忙下来，欢欢喜喜的要接主耶稣去他家里住。旁边的人却都议论纷纷：主耶稣竟去住在一个罪人的家里。但是奇妙的事发生了，因着主耶稣说了这句话，撤该竟然想起他对人的亏欠。所以他还没有回家，就站着对主说，“主啊，看哪，我把家业的一半给穷人，我若讹诈了谁，就还他四倍。”撒该因着主的来到，心里就蒙到光照，看见他已往讹诈人，对人的亏欠，并且当众认了他的罪（路十九1~10）。　　撒该的故事给我们看见，真正能帮助我们去对付偷盗的，乃是主自己。借着我们常常与主的交通、祷告，每当主提醒我们有对人的亏欠时，我们就立刻去对付。而每当我们这样去清理已往的错误，神总是喜悦的。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：第八条诫命是不要偷窃。偷别人对人和神都是不敬的。我们也应该尊重神，为我们提供我们所需要的。我们应该求神的供应而不是偷窃。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：从人身上偷东西是不对的，也不尊重人或神。拿属于别人的东西表明我们不关心他们，也不爱他们。我们应该尊重别人，也尊重别人的东西。我们也应该尊重神，因为祂供给了我们所需要的。当我们偷窃时，我们就是不相信神会供给我们需要的东西。无论我们需要什么，我们都应该求神供给而不是偷窃他人。不仅如此，如果我们偷了什么东西，我们需要承认并归还它们（恢复原状）。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

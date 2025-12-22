@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('130')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('132')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">没有水管的水龙头</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">人若不住在我里面，就像枝子丢在外面枯干了，人收集起来，扔在火里烧了。（约15:6）</div>
+<div id="CC">If one does not abide in Me，he is cast out as a branch and is dried up; and they gather them and cast them into the fire，and they are burned.（John 15:6）</div>
+<div id="C">一个生长在穷乡僻壤的人，有一年为了谋生，从乡下搬进城市；他租了一个小房间，既没有电灯，也没有自来水。他看见邻舍的墙上有自来水龙头，一扭开，水就哗啦出来。他心里想：“我家若有这个东西，就太方便了。”便去问邻居：“这个东西要多少钱？在那里买？”打听之后，就上街买了一个回来，在墙上凿一个洞，把水龙头装上。可是等了好久，不见一滴水。他以为是水龙头有毛病，就去换一个；再等了半天，还是一滴水也没有。就去责问老板说，“为什么卖给我的水龙头，个个都是坏的呢？”老板接过来一看，没有毛病，就问他：“老兄，你是装在什么地方？那里有自来水管没有？”他回答：“我没有看见水管子。”老板就哈哈大笑说，“没有水管，即使有水龙头，也滴不出水来。”这时他才明白，自来水龙头必须装在自来水管上，才能有水。<br/><br/>　亲爱的圣徒！请问你与基督的关系是正常的，还是脱节的？我们若不在交通中碰着主的生命，人生就会变得枯燥、乏味，更谈不到为主发光、为主作工了。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

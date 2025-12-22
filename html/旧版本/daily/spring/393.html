@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('392')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('394')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">怕东西给土人搬光</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>路加6:38　你们要给人，就必有给你们的，用十足的量器，连摇带按，上尖下流的倒在你们怀里；因为你们用什么量器量给人，也必用什么量器量给你们。Give, and it will be given to you; a good measure, pressed down, haken together, and running over, they will give into your bosom. For with what measure you measure, it shall be measured to you in return.</p><p>一位弟兄，有一次缺一百五十元的用度，那时住在乡下，时已周六，用度是下周一必需的。轮船往来，一周中只有定规的几次。周六后，周一前是没有船来的，他口袋里只有二元了。他去祷告神。神的灵在他里面给他一个感觉，说你还有二元呢，今天才是周六，等那二元用完了，到下周一再说。他就顺服神，看这二元怎样用法。他出去布道，碰见一位木匠，对他说，有一天我修理你的窗户，还没有向你取工资；他就照例给他一元，现在口袋里只有一元了。再往前去，碰见一个讨饭的，向他讨钱，他想，只有一元了，这一元变得特别宝贵了；他打算换成角子，把一半给讨饭的。但是灵里来一感觉，另一转念就知道这是错了，就把一元全部给他。这一元一出去，神就进来了。他顶快乐，他说，他在世上一点倚靠都没有了，神必要顾念、祝福他。他回去睡觉，主日照常作工。顶希奇，到了周一，一位朋友电汇给他一笔款子，刚好一百五十元，所花的汇费却有三、五十元之多。到了用款时候，应当付出的，一点也不缺少。</p><p>补充,#738你要给人</p><p>你要给人神必给你，并且要用十足升斗，</p><p>连摇带按，上尖下流，倒在你怀，倒在你怀。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

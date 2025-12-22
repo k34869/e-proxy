@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('195')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('197')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">公的操练</p>
+<p>与喜乐的人要同乐，与哀哭的人要同哭。要彼此思念相同的事，不要思念高傲的事，倒要俯就卑微的人，不要自以为精明。（罗十二15～16）</p>
+<p>罗马十二章所描绘召会生活的图画，正是‘公’的实行。我们要过正常的召会生活，首先该对别人有爱。因此保罗说，‘爱不可假冒，’（9，）‘爱弟兄，要彼此亲热；’（10上；）又说，‘恭敬人，要互相争先。’（10下。）在恭敬人的事上，我们的行动必须快，而且要抢先恭敬别人。在服事上，要按照我们的能力，乐意顾念圣徒的缺乏，使主生命的恩典，能随着物质的分享，在基督身体的肢体中间得以流通、传输。（13注1。）在接待客旅的事上，我们要主动追寻机会。（13。）</p>
+<p>再者，我们该有适宜的情感，能与喜乐的人同乐，与哀哭的人同哭，（15与注1，）并要尽力与众人和睦。（18。）我们也该有变化过的心思，‘彼此思念相同的事，不要思念高傲的事，倒要俯就卑微的人，不要自以为精明。’（16。）面对逼迫者和仇敌，我们‘只要祝福，不可咒诅’。（14。）同时，不要以恶报恶，（17，）宁可以善报恶，正如主对我们作的。也不要为自己伸冤，因为伸冤在主。（19。）当我们这样操练实行，就是活出最高美德的召会生活。</p>
+<p>保罗在腓立比二章进一步说到，在召会生活中，我们‘要思念相同的事，有相同的爱，魂里联结，思念同一件事，凡事都不私图好争，也不贪图虚荣’；（2～3上；）这意思是说，我们不应该争竞，倒要‘心思卑微，各人看别人比自己强；各人不单看重自己的长处，也看重别人的’。（3下～4。）</p>
+<p>操练公的性格，使我们能与众人配搭，在爱里将身体建造起来。这也就是以弗所四章十六节所说，‘本于祂，全身藉着每一丰富供应的节，并藉着每一部分依其度量而有的功用，得以联络在一起，并结合在一起，便叫身体渐渐长大，以致在爱里把自己建造起来。’</p>
+<p class="title">炽炭离炉</p>
+<p>有一位基督徒，在他刚蒙恩得救时，为主大发热心，之后遇到环境，就冷淡下去，不聚会了。后来，一位传道人前去探望他。他们坐在火炉旁边取暖，二人相对，无话可说。传道人用火剪，从炉中取出炽炭一块，放在地上，二人静静的看着那块灼红炽炭，渐渐熄灭，直到灭尽；传道人也就告别离去了。那位信徒，起初觉得很奇怪，既而圣灵借此对他说话：‘你就是这块离开火炉的炽炭，离开召会的结果就是如此。’那位信徒因此醒悟过来，向主认罪悔改，恢复与召会的交通。这个故事被人登在报上，正好被一位两年不聚会的弟兄看见，不禁大受感动，深觉自己若不回到召会生活，结果也将会如此；于是，立即与众圣徒恢复交通，得到复兴。（参造就故事中册，171页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：操练罗马十二章和腓立比二章所描述‘公’的实行，与众人配搭，在爱里将身体建造起来。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

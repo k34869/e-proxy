@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('66')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('68')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">越过海洋的祷告</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">耶和华拯救我的神啊，我昼夜在你面前呼求。（诗88:1）</div>
+<div id="CC">O Jehovah，the God of my salvation，I have cried out by day and in the night before You.（Psalm 88:1）</div>
+<div id="C">美国俄亥俄州的某个村子里，有一名铁匠，他和妻子都是热心信主的人。他们节衣缩食，资助一位印度的女子，在学校里读书。一个周六晚上，这位铁匠回到家中，刚要坐下吃饭，发现餐桌上摆着一封信，是从印度寄来的。拆开一看，脸色显得十分沉重，就对妻子说，“我不能吃饭了，必须去祷告。”原来那封信是一位女宣教士寄来的，说到这对夫妇所资助读书的那位女子，无论怎样都不肯悔改信主；并且不但自己不信，还拦阻别人相信。学校为了保全其他学生的缘故，若是她不早些悔改，只有把她开除，别无办法。<br/><br/>　这位铁匠读了信，再也顾不得吃饭，急忙进入内室祷告。大家都知道，美国俄亥俄州的周六晚上，已是印度的主日早晨。那天早晨，那位女宣教士照例召集全班学生，去上主日学。课才开始不久，那位顽劣的女生，竟然不由自主，从座位上跳了下来，跑到女宣教士面前，痛哭流涕，俯伏悔改，接受基督作她的救主。那天早晨，全班学生得到了救恩。<br/><br/>　在美国一个乡村的地方，有人在那里恳切祷告，却远在印度成就了大事。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

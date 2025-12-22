@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('831')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('833')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">奥古斯丁母亲九年哭泣</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>以弗所书 1:16</p><p>也就为你们不住的感谢，在我的祷告中常题到你们；</p><p>约翰牛顿（John Newton, 1725～1807）从十余岁就离开家庭，去当水手，常常醉酒，败落不堪。他的母亲年老，白发苍苍，常常为他祷告，再祷告，不住的祷告。有时一面两手繁忙洗衣，一面流泪为她儿子祷告。这位母亲相信两件事：一是祷告的能力，二是她的儿子必会改变。所以不住为他祷告，毫不灰心。到底神应允了她的祷告，改变了约翰的心。他不仅悔改信主，并且成了著名的布道家，不但自己得救，并且带领千万人归主。其中有一位名叫多玛史哥德（Thomas Scott）利用文字工作，得了千万人的心，其中有一位是威廉古柏，他的诗句曾使许多人得到属灵的帮助。古柏又领了千万人归主，其中一位是解放奴隶的英国政治家韦伯福斯（William Wilberforce）也领了千万人归主，其中有一位是神的大仆人瑞齐蒙得（Leigh Richmond），他是个作家，写了‘场主的女儿’一书，译成四十余种文字，多人因着这本书里所表现的爱火归向了基督。这些果子都是因着一位母亲抓住神的话语，不住的祷告，求神得着她的儿子。结果神就藉此兴起许多有属灵分量的人来。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

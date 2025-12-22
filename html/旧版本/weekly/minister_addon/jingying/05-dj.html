@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../html/shenggeng/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>经营小排</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              
+            </v-card>
+            <br />
+            <v-card elevation="0">
+              <div class="banner">
+           
+                经营小排
+                <br />
+             第五篇 经营小排——盯繁殖
+              </div>
+        
+          </div>
+         
+          <p class="nav">读经：</p>
+          <p class="hymn">提前 5:9 寡妇记在册上，不可少于六十岁，只作过一个丈夫的妻子，</p>
+          <p class="hymn">弗 5:15 你们要仔细留意怎样行事为人，不要像不智慧的人，乃要像有智慧的人；</p>
+ <p class="hymn">弗 5:16 要赎回光阴，因为日子邪恶。</p>
+ <p class="hymn">弗 5:17 所以不要作愚昧人，却要明白什么是主的旨意。</p>
+          <p class="hymn">约 15:16 不是你们拣选了我，乃是我拣选了你们，并且立了你们，要你们前去，并要你们结果子，且要你们的果子常存，使你们在我的名里，无论向父求什么，祂就赐给你们。 </p>
+
+          <p class="hymn">来 10:24 且当彼此相顾，激发爱心，勉励行善；</p>
+ <p class="hymn">来 10:25 不可放弃我们自己的聚集，好像有些人习惯了一样，倒要彼此劝勉；既看见那日子临近，就更当如此。</p>
+          <p class="hymn">可 6:39 耶稣吩咐他们叫众人一组一组的，坐在青草地上。</p>
+ <p class="hymn">可 6:40 众人就一班一班的坐下，有一百一班的，有五十一班的。</p>
+          
+
+
+        </v-main>
+      </v-app>
+    </div>
+   <script src="../../../html/shenggeng/js/vue.js"></script>
+    <script src="../../../html/shenggeng/js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "05.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>负担落实</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              
+            </v-card>
+            <br />
+            <v-card elevation="0">
+              <div class="banner">
+           
+                第三篇  恢复起初之爱 恢复弟兄相爱 活出身体实际
+                
+              </div>
+        
+          </div>
+         
+          <p class="nav">读经：</p>
+          <p class="hymn">启示录 2:4　然而有一件事我要责备你，就是你离弃了起初的爱。</p>
+          <p class="hymn">5　所以要回想你是从哪里坠落的，并要悔改，行起初所行的。不然，我就要临到你那里；你若不悔改，我就把你的灯台从原处挪去。</p>
+          <p class="hymn">歌罗西书 1:18　祂也是召会身体的头；祂是元始，是从死人中复活的首生者，使祂可以在万有中居首位； </p>
+          <p class="hymn">希伯来书 13:1　弟兄相爱要持久。 </p>
+          <p class="hymn">罗马书 12:10　爱弟兄，要彼此亲热；恭敬人，要互相争先。 </p>
+           <p class="hymn">彼得前书 4:8　最要紧的，是彼此热切相爱，因为爱能遮盖众多的罪。 </p>
+          <p class="hymn">以弗所书 4:16　本于祂，全身借着每一丰富供应的节，并借着每一部分依其度量而有的功用，得以联络在一起，并结合在一起，便叫身体渐渐长大，以致在爱里把自己建造起来。 </p>
+
+
+
+
+
+
+
+
+
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "03.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

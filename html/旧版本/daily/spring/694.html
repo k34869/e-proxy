@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('693')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('695')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">发光需要双倍电力</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>太5:16　你们的光也当这样照在人前，叫他们看见你们的好行为，就荣耀你们在诸天之上的父。</p><p>有一天晚上，火车辗死了一个人。管理红灯的人被人控诉，法院开庭审问。法官问他：‘你的工作是什么？’他回答说，‘管理红灯。火车未到之前，我就高举红灯，用力摇动，警告行人止步，让火车过去，免被辗死。’法官又问：‘你在那天晚上，曾否举起红灯摇动？’他坚决的说，‘我曾举起红灯，并且尽力的摇。’几经法官和律师们的盘问，他总是坚决承认曾经举起红灯，尽力摇动。第二天，铁路管理局局长，召他到他的办公室，很欣慰的对他说，‘昨天我真为你害怕。在法官和众律师面前，我惟恐你一不小心，把事实说错了，不但你要被定罪，连我们的铁路局也会坏了名声。’他说，‘局长阿，那是事实，我不会弄错的。我真的举起红灯，拼命的摇。我昨天最怕的，就是怕那律师问我：“你的灯里有光么？”倘他如此问，我就无话可说了。’基督徒若是有名无实，有灯无光，别人就会说，信耶稣的还不是这样！可能因此就误了人的灵魂。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1154')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1156')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 3 课<br />
+召会—神的耕地和建筑</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　万有为着召会，召会为着基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前三21、23：所以谁都不可拿人夸口，因为万有全是你们的，…但你们是基督的，基督又是神的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前三章十八节说若有人自以为有智慧，他就该变作愚拙，好成为有智慧的。变作愚拙，乃是弃绝哲学的智慧，接受基督和祂十字架简单的话。保罗又说，因为万有全是我们的。万有，包括消极的事物，如世界和死亡，都是为着我们。因为神使用每一件事和每一个人，来成全爱祂的人。只要我们爱主，我们就有把握，祂一直使用每一件事成全我们，使我们成为基督的身体。我们如果看到这一点，就不会发怨言，有偏爱、拣选或挑选。我们也会满意的接受神为我们所命定的一切，并为此赞美神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识万有都是为着我们，接受神为我们所命定的一切，并为此赞美神。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们是神的耕地，需要藉着栽种、浇灌，在生命中长大。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督徒的生命如何长大？你觉得自己有什么属灵上的长进？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘生命的第一个结果乃是长大。各种形态的生命—人的生命、动物的生命、和植物的生命—都展示长大；神圣的生命也是一样。仅有教导，没有什么东西会长大。但任何栽种的东西，都是生命的东西；有生命就有长大。…保罗也说，亚波罗浇灌了。…我们需要浇灌弟兄们，不仅仅是造就他们；…枯干的植物需要浇灌。…</p>
+<p>你若一直到植物面前来造就并改正它，植物会死去。反之，你该浇灌它。同样，我们不该试着改正弟兄们，乃该浇灌他们。不要说，“弟兄，你不该这样。你太在你的怒气里了。你需要一些改正。”你若这样作，就会把他杀了。他所需要的不是改正，乃是浇灌。弟兄的怒气就像病菌，有时候病菌必须出来，病菌若留在里面，就杀死人。这位弟兄需要得浇灌。基督是生命，而生命需要栽种和浇灌。…只要浇灌人，并且要忍耐。不要快快的改正别人，那的确杀死人。要浇灌他们，使他们长大。</p>
+<p>就一面说，长大不是那么快，有孩子的母亲都知道这事。就他们孩子的长大而论，今天几乎和昨天一样，明天又几乎和今天一样。我们天天看自己的孩子，他们似乎每天都是一样。但赞美主，一年又一年后，他们就不再一样。一段期间后，长大就能看得见。生命会长大。这似乎相当慢，但事实上这的确很快。作母亲的，主要的就是喂养孩子，这就使孩子长大。…我们必须核对自己。我们说我们将基督接受进来作生命，结果如何？当然，我们无法期望迅速长大成人，但一段期间后，我们该能看见一些不同。</p>
+<p>你已呼求主名一阵子，但有长大么？你若仍与六周前一样，我就为你担心。你若仍是一样，那意思是缺少长大。你若吃得正确，没有疾病，六周后必然显明你有长大。我们都需要长大。我们若认真呼求主的名，我确信会有长大。若没有长大，就有地方不对了。我们若天天将基督接受进来，就不可能没有长大的结果。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>享受与弟兄姊妹彼此的栽种和浇灌，一同生长基督。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

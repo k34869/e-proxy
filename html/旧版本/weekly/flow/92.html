@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('91')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('93')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">稳（二）　心志稳：心志稳固不改变</p>
+<p class="title">神和基督作为石头是我们稳固的根基</p>
+<p>主耶和华如此说：看哪，我在锡安放一块石头，作为根基，是试验过的石头，是宝贵的房角石，作为稳固的根基；信靠的人必不着急。（赛二八16）</p>
+<p>诗篇十八篇启示，大卫经历神是他的岩石和磐石。二节说，‘耶和华是我的岩石，…我的解救者；是我的神，我的磐石，我所投靠的。’六十二篇六至七节说，‘惟独祂是我的磐石和我的拯救，…我必不动摇。我的拯救和我的荣耀，都在于神；我力量的磐石，我的避难所，是在神里面。’岩石、磐石都是稳固不摇动的，在各种的环境中，我们能经历神是我们避难的岩石和磐石，享受祂作拯救的神。</p>
+<p>圣经其他卷书也启示基督是石头。首先，在出埃及十七章，以色列百姓在旷野没有水喝。神吩咐摩西击打磐石，磐石就裂开，流出水来解百姓的干渴。（1～7。）保罗在林前十章四节说，以色列人‘也都喝了一样的灵水；所喝的是出于随行的灵磐石，那磐石就是基督’。基督在十字架上受死，被神律法的权能所击打而受苦；借此祂就裂开，流出活水给我们喝。</p>
+<p>其次，以赛亚二十八章十六节揭示，基督是试验过的石头，宝贵的房角石，作为稳固的根基，信靠祂的人必不着急。基督这石头，从祂成为人的时候起，在祂地上生活的每一天，祂都受试验而没有失败。祂是完美、完全、稳固、刚强的，彀资格作我们的根基。此外，基督也是宝贵的房角石，为着神建造的连接。基石托住整个建筑，而房角石连接建筑的两部分。新约根据诗篇一百一十八篇告诉我们，基督是房角的头块石头，（罗九33，弗二20，）将犹太信徒和外邦信徒这两面墙连接起来，使神的建筑因此能站立。今天，我们不仅以祂作我们的基石托住我们，也以祂作我们的房角石，将我们联结一起，在祂里面同被建造，成为神在灵里的居所。（21～22。）基督作为宝贵的房角石，建造神的建筑；祂乃是我们稳固的根基，是我们足能信靠的一位。（参诗篇生命读经，148、541～542页；出埃及记生命读经，546～555页；以赛亚书生命读经，377～381页。）</p>
+<p>‘约翰，抓紧石头！’</p>
+<p>有一天，小约翰同他的姐姐徒步穿过一个长而狭窄的火车山洞。山洞里有一些凿好的小洞穴，当火车经过时，作为行人躲避的地方。他们走在山洞中，不久听见火车来了，非常害怕，但姐姐看见旁边有小洞穴，立刻带弟弟到小洞穴中，自己也躲在另一个洞穴里。火车疾驰而过，姐姐急忙喊说，‘约翰，抓紧石头！’他们因躲在小洞穴内而安全稳妥。在漫长人生路上，不知会有多少风波祸患袭击我们，惟有基督是我们稳固的避难处，可靠的磐石，永不动摇。信靠主的人，也要稳固，如同锡安山。（诗一二五1。）（参福音故事中册，149～150页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在各种的环境中，经历神是我们避难的岩石和磐石，享受祂作拯救的神。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

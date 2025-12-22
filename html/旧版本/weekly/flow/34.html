@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('33')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('35')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>但彼得、约翰回答他们说，…我们所看见所听见的，不能不说。（徒四19～20）</p>
+<p class="title">彼得至死跟从主</p>
+<p>主耶稣复活之后，与跟从祂的门徒同行。主首先恢复了三次否认主而失败的彼得，恢复他对主的爱，并嘱咐他要𫗪养主的羊。接着主豫言彼得将要为主殉道：‘我实实在在的告诉你，你年轻的时候，自己束上带子，随意往来；但年老的时候，你要伸出手来，别人要把你束上，带你到不愿意去的地方。’耶稣说这话，是指明彼得要怎样死荣耀神。说了这话，就对他说，‘你跟从我罢。’（约二一18～19。）主借此教导彼得要至死跟从祂。</p>
+<p>彼得在跟随主的三年半中，常受主责备，也常会软弱，甚至三次否认主，还曾回去打鱼过。但因着主成了赐生命的灵，进到彼得里面，又在五旬节那天，将经纶的灵浇灌下来，使他能和十一位使徒勇敢的站起来传福音，结果有三千人得救，另一次有五千人得救，耶路撒冷的召会也因此建立。至终，彼得被变化成了建造召会的活石。主对彼得所说的话，彼得一生都牢牢记得。他在书信中勉励我们要成为活石，被建造成为属灵的殿；他也忠信的照着主的托付，一直在召会中照顾、牧养神的群羊，与主在天上的职事配合。他忠信的紧紧跟随主，直到他为主殉道，成了主荣耀的见证人。我们都必须跟从主这位内住者。我们所要跟从的那位，就在我们里面。我们不可凭自己的意愿跟从主，乃要照着祂的带领。我们至死跟从祂，就是荣耀神。不仅如此，我们必须跟从主，而不在意别人的看法。我们必须不计代价爱主，并且不惜任何牺牲跟从祂到底。（参约翰福音生命读经，655～664页。）</p>
+<p class="title">不愿失掉机会</p>
+<p>在伦敦有一热心的基督徒，被一富翁请到家中吃饭。饭后，主人问客人喜欢上那里去走走。客人说慕迪在某大戏院讲道，愿到那里去听。主人勉强陪他到了戏院。这时候，戏院已经坐满了人。这位基督徒不愿失掉引人归主的机会，就写一张纸条，递给招待的人，请他帮忙找合式的座位。招待的人把他们引到最前排，面对慕迪而坐。自从讲道开始，富翁的眼就盯住慕迪，没有片刻离开。会后，富翁说，‘我要再来听听这人讲道。’富翁果然连续来了几次，终于受感，悔改归主，并且引导他的儿子也信了主。这位富翁就是斯杜德爱德华（Edward Studd）。他的儿子（C. T. Studd，剑桥七杰之一）后来舍弃了他父亲遗留给他的全部财产，前往中国，后到非洲，宣扬福音。抓住机会引人归主是何等的重要，不知不觉会结出佳美的果子。（造就故事下册，48～49页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：不计代价爱主，并且不惜任何牺牲跟从祂到底。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

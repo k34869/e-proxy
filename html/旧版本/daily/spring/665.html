@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('664')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('666')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">不传深奥的道理</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗马书 1:5 我们借着祂，领受了恩典和使徒的职分，为祂的名在万国中使人顺从信仰，</p><p>八岁的小雅各跟着父亲上街，路上遇见一辆消防车，当当疾驶而去。雅各就问父亲，这是什么？父亲告诉他说，这是消防队的消防车，专到失火之处替人灭火。有一天，雅各的父母到朋友家去吃饭，留下雅各一人在家。雅各在家玩火箭，一不小心，把房中的帐子烧起来了。雅各想起专门替人灭火的消防队，于是往外直跑，去找消防队。等到消防队员请来时，房子差不多已烧光了。他父母回来，看见房子烧光了，就问他失火的原因。他就将失火的经过说了一遍。父亲听了暴跳起来，责备雅各说，‘当帐子刚刚烧起来的时候，只须舀两盆水，就可以把火扑灭了，何至这样愚笨，去找消防队，以至烧到这样地步呢？’雅各听了，十分不服，振振有辞的质问父亲说，‘爸爸，那天我们在街上遇见消防队的时候，你不是告诉我说，消防队是专门替人救火的么？今天我看见帐子烧起来了，本想舀水去泼，忽然想起你曾告诉我，消防队是专门救火的，因此我一分钟也没有停留，就赶快去把消防队找来，要把火扑灭。你怎么反倒责备我呢？’大家都要笑雅各的愚蠢，岂知我们也和他一样。许多基督徒自己信主得救了，但是他的家人亲戚朋友还未信主。他从来不向他们作见证传福音，以为说，这作见证传福音是传道人专门作的事；这岂不是和雅各说救火是消防队专门作的一样愚蠢么？</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

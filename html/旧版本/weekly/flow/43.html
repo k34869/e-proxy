@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('42')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('44')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">勤（一）祷告勤：殷勤祷告不懒惰</p>
+<p>懒惰人羡慕，却无所得；殷勤人必得丰裕。（箴十三4）</p>
+<p class="title">什么是勤</p>
+<p>勤就是殷勤，不懒惰，不怕事，不让有事情变作没有事情；殷勤就是热心、赶紧、尽心、竭力，也就是把围在你周围的事和加到你身上的事，都彻底的作透了。不仅如此，殷勤乃是在爱中热诚的顾念人，如同乳养的母亲热切顾惜她所𫗪养的孩子，甚至连自己的性命都不顾。殷勤的人是不会空闲的，乃是一直的寻找事情作，总是在神面前思想，在神面前祷告，在神面前仰望，在神面前考虑，尽量的找出事情作。一个事奉主的人，必须养成殷勤的性格。殷勤也是主仆人身上最厉害的性格。圣经里充满了殷勤的教训；只有殷勤的人才能为主作工。</p>
+<p>殷勤的反面是懒惰。在圣经里，懒惰的意思是懈怠、闲、闲懒、为难，甚至是荒芜、慢、延迟、犹豫，或者根本就是“不”、不跑、不工作。总而言之，懒惰的意思就是，有许多事情却根本不作，总是有事化无事。懒惰也是在那里拖延，能拖多久就拖多久，把一件事情慢慢的作。一天可以作完的，却作了十天；一个月可以完成的，却作了三个月。处理事情总是慢慢来，这就是懒惰。懒惰也有徘徊的意思，就是要走又不走，不走又想走，下不了决心。懒惰是人的天性和环境中的习性养成的。懒惰人的光景就是爱睡觉、脏又乱、理由多、找借口。懒惰是可恨的，因为会把我们自己浪费掉。懒惰吞吃了我们的光阴，最后会吞吃我们的一生。箴言中有多处经节，把懒惰人和殷勤人作比较：“殷勤人的手必掌权；懒惰的人必服苦役。”（十二24。）“懒惰人羡慕，却无所得；殷勤人必得丰裕。”（十三4。）“闲懒的手，造成贫穷；殷勤的手，使人富足。夏天聚敛的，是明智之子；收割时睡觉的，是贻羞之子。”（十4～5。）（参主工人的性格，73～76、79～80页；性格，13页。）</p>
+<p class="title">天天操练</p>
+<p>波兰着名音乐家帕得勒说，“我若一天不练琴，手便觉得生涩，但只有我个人感觉得出来；我若间断两天不练琴，我的家人能听出弹奏的差别；我若停止三天不练习，我的朋友能彀知道；倘若我七天不弹琴，连一般听众也瞒不过。”早起晨兴也是如此。只要一天没有晨兴，你自己知道；两天没有晨兴，你的家人会感觉到；三天没有晨兴，你周围的同伴都会感觉到你与主的交通间断了。在享受主的事上，我们需要殷勤；就像写诗的人所说的：“我趁夜更未换，将眼睁开，为要默想你的话语。”（诗一一九148。）（参造就故事上册，6页。</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：作事热心、赶紧、尽心、竭力，养成殷勤不懒惰的性格。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

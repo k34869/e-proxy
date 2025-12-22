@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1519')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1521')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 2 课<br />
+为着召会生活之圣别生活的抚育与坚固</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主使我更爱你。（诗歌297首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：只在你们中间为人温和，如同乳母顾惜自己的孩子。我们这样切慕你们，不但乐意将神的福音分给你们，连自己的性命也愿意分给你们，因你们是我们所爱的。（帖前二7～8。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　为着召会生活之圣别生活的抚育—帖前二1～20</p>
+<p class="ot2">1　乳养之母与劝导之父的照顾—1～12。</p>
+<p class="ot2">2　抚育信徒者所得的赏赐—13～20。</p>
+<p class="ot1">二　为着召会生活之圣别生活的坚固—三1～13</p>
+<p class="ot2">1　为着信与爱的鼓励—1～12。</p>
+<p class="ot2">2　以盼望鼓励—13。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见为着召会生活之圣别生活的抚育与坚固。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在帖前二章说到为着召会生活之圣别生活的抚育，就是作乳养的母亲抚育、顾惜年幼的信徒，并作劝导的父亲照顾、劝勉他们，使他们的行事为人配得过神，引导他们进入神的国。保罗在这事上是信徒正确的榜样，以他自己活基督的生活来喂养他属灵的儿女。而这样抚育、照顾初信者所得的赏赐，乃是所照顾的人成了他们的荣耀、喜乐和冠冕。帖前三章说到为着召会生活之圣别生活的坚固，就是使信徒在信上得坚固并安慰，在爱上得鼓励，心得以坚固，在圣别上无可指摘，盼望我们所信、所爱，亲爱的主回来。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　服事主者的榜样</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖前二4：但神怎样验中了我们，把福音托付我们，我们就照样讲，不是要讨人喜欢，乃是要讨那察验我们的神喜欢。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖前二章给我们看见，在召会生活中一个服事主者的榜样。从保罗的榜样我们看见，在召会中没有尊贵的人。我们不是尊贵的人，乃是彼此服事的奴仆，不要求尊严或维护权柄。同时，我们要成为正确的榜样，首先动机必须单纯，我们的贪婪必须受对付。我们不该说谄媚的话，不该藉掩饰而贪婪，也不该为自己寻求荣耀，或想要讨人的喜欢。反而我们要尽全力讨神的喜欢。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>不为自己寻求荣耀，或讨人的喜欢，尽全力讨神的喜欢。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

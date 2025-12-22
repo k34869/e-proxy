@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('406')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('408')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">俞弟兄打算回家</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>西3:15　又要让基督的平安在你们心里作仲裁，你们在一个身体里蒙召，也是为了这平安；且要感恩。And let the peace of Christ arbitrate in your hearts, to which also you were called in one Body; and be thankful.</p><p>张弟兄在未信主前，是一个剧本的编著。有一天，走过电影院，正在放映他所编的电影；他便想看看演得如何，于是前往排队买票。等了许久，刚刚挤到窗口，里面甚觉不安，看见那些看电影的人，好像要往地狱去的样子，面孔显出鬼的形状来。但他心里还是说，看电影也不能说是犯罪，为什么神不许我看呢？但是外面虽然讲理，内心却很痛苦。当时几乎就要晕倒，赶快出队离开。一同买票的人觉得这位先生真是奇怪，排了一个钟头，刚刚到窗口，却又溜走。张弟兄离开电影院后，连忙跑到淡水河边无人之处，大大认罪祷告，内心方才恢复平安。圣灵的教导常与我们的理智、欲望相反。圣灵才是是非的绝对标准，我们必须跟从，才有真正的平安。</p><p>补充832</p><p>我听见了主耶稣说：“我是世界的光，</p><p>转眼看我，晨星必出现，照耀你的途径。”</p><p>我从自己转向耶稣，祂是我晨星、太阳。</p><p>生命光中，欢乐行走，行尽客旅路程。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

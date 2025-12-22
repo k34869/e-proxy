@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1742')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1744')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 15 课<br />
+神圣膏油涂抹的教导</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　膏油涂抹内里的教导</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹二27:你们从祂所领受的膏油涂抹，住在你们里面，并不需要人教导你们，乃有祂的膏油涂抹，在凡事上教导你们；这膏油涂抹是真实的，不是虚谎的，你们要按这膏油涂抹所教导你们的，住在祂里面。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约翰在二十七节结束的话，是劝勉人住在三一神里面。住在祂里面就是住在子里面，并住在父里面。这就是停留并居住在主里面。这也是住在神圣生命的交通里，并且行在神圣的光中，就是住在神圣的光中。我们该照着包罗万有之膏油涂抹的教导，实行这种居住，使我们与神的交通得以维持。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>照着包罗万有之膏油涂抹的教导，住在主里面，使我们与神的交通得以维持。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>这世界和其上的情欲都要过去，惟独实行神旨意的，永远长存。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>约壹二章十五至十七节的‘世界’，意义为何？在你身上有对‘世界’的爱好么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘那恶者就在世界里，所以，不要爱世界。什么是世界呢？世界上的事，就是肉体的情欲、眼目的情欲、并今生的骄傲。这些事统统都要过去。我们若是在这些里面，就不在父里面，也不爱父；我们若爱世界，神的爱或爱神的心就不在我们里面。…我们为着主并不只是遵行神旨意而已，乃要实行神的旨意。实行神旨意的才永远长存。神的目标是要青年人对付祂的仇敌，好达到祂的目的。这个动力的来源是神的爱。…青年人胜过撒但的那个能力，乃是神的爱，使他爱神。神的爱在我们里面，乃是一个激动的力量，叫我们平静，使我们平安。</p>
+<p>不仅如此，凡爱神的人都爱神的话；神的爱在人里头一发动，就使人爱慕神的话，渴慕神的话。我们里面有神的爱，也有神的话，结果就使我们刚强。什么叫作刚强？刚强就是，在宇宙中虽有许多与神相反的事物，你却能在那里，像一颗种子种在地里，经过一层层土壤那厚重的压力，而从地里长出来。…</p>
+<p>青年人里面有神的爱，也有神的话。这使他们刚强，什么都不能胜过他们，这爱叫他们不爱世界，不转向世界；这爱叫他们转向神。</p>
+<p>若是我们因着额外的加班，圣经也不读，会也不聚，福音也不传，召会生活也没有了，这是什么？这是出卖人口，我们是把自己贩卖了。我们应当看见，我们今天所作的职业也罢，事业也罢，按规矩说，都是我们的副业。若是我们把事业当主业，那就是世界上的事，就是肉体的情欲、眼目的情欲、今生的骄傲；父的旨意乃是与这些遥遥相对的。我们必须认清，世界里的这两种情欲加上一种骄傲，是一直在那里和神的旨意对立的。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>思念并实行神旨意的事，保守我们脱离世界和其上的情欲。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

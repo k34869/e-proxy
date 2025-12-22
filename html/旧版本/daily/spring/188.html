@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('187')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('189')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">神听见倒面缸的声音</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">坛内的面果然没有用完，瓶里的油也没有短缺，正如耶和华借以利亚所说的话。（王上17:16）</div>
+<div id="CC">The barrel of meal did not give out，nor did the jar of oil fail，according to the word of Jehovah，which He had spoken through Elijah.（1 Kings 17:16）</div>
+<div id="C">在英国苏格兰有一位寡妇，她的子女很多，虽然她多方节俭，也仅仅足以维持衣食。但她的心完全倚靠神，并教导她的儿女也照样倚靠主。可是有一天，钱袋空了，面粉缸里也仅剩面粉一把。她预备将所有的面粉作些食物，给孩子们充饥，但用完了这些面粉，下一餐的食物从何而来，完全不知。当她将面粉缸底的面粉倒尽时，不禁伤心，流出泪来。她的孩子罗伯见她流泪，就走近来，安慰她说，“神岂没听见你倒面缸的声音吗？”她的信心立刻又增强起来，说道：“是的，罗伯，神是知道的。一切虽然没有了，但神仍然存在。神说，祂要供给我们一切的需用。”这位寡妇虽然贫穷，但神用奇妙的方法供给她，使她没有缺乏。</div>
+<div id="CC">试炼中的安慰─主的信实（诗506）</div>
+<div id="C">我们因信欢乐唱说：<br/>　祂不误我，祂已许过！<br/>　祂不误我，祂乐施恩！<br/>　祂不误我，因祂是神！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

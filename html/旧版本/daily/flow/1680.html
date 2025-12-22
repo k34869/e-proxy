@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1679')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1681')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 6 课<br />
+以基督为榜样活出佳美的品行（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　基督，我们的牧人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前二25：你们好像羊走迷了路，如今却归到你们魂的牧人和监督了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们的难处是我们好像羊走迷了路。但现今我们已经归到、转回我们魂的牧人和监督。牧人照顾羊群物质的需要，我们的牧人基督照顾我们魂的需要。。祂照顾我们的心思、情感和意志。基督也是我们魂的监督。主作监督，不是管治我们或管辖我们；祂乃是照顾我们，像母亲照顾孩子一样。母亲监督孩子，目的是要照顾孩子，她要顾到他们每一需要。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受基督作恩典，作榜样，并作美妙的救主、牧人和监督。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>享受基督作恩典，作榜样，并作美妙的救主、牧人和监督，过一种绝对在神行政下的生活，在基督的复活里向义活着。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>根据彼前二章十八至二十五节，叙述信徒经历基督的五方面，并作一个你经历基督的见证。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘‘彼前二章十八至二十五节里有五件重要的事，就是基督的五方面：恩典、榜样、救主、牧人和监督。基督是我们里面的恩典，祂也是作我们属灵方向的榜样。不但如此，基督也是我们的救主、牧人和监督。祂拯救我们，牧养我们，并且照顾我们，因而成就与我们有关的三重工作。我们都需要基督为我们所作这恩典三重的工作。我们需要祂的拯救、牧养和监督。</p>
+<p>彼得经历基督作恩典，作榜样，并作救主、牧人和监督。他经历神圣生命在他里面的推动，以及在他生活中的彰显，在人与神眼中，成为甜美、可蒙悦纳的。…别人在我们生活中看见这样的彰显，也许说，“这是恩典。这是值得感谢神的事。”</p>
+<p>那在我们里面作恩典的基督，成了榜样、范本、原版，好用于属灵影印的过程。如我们所指出的，我们藉着这过程成为基督的复制品。</p>
+<p>二十四节有基督作我们救主的图画，…基督向罪死了，使我们得以向义活着，就是在神的行政下过正确的生活。不但如此，藉着基督所受的鞭伤，一种致死的受苦，我们的死亡得了医治，使我们在祂的复活里活着。</p>
+<p>现今我们有基督作照顾我们魂的牧人和监督。基督的牧养主要的不是照顾我们的身体或我们的灵，主要的乃是照顾我们的魂。然而，基督作牧人和监督，乃是从我们的灵里照顾我们。祂不是从诸天之上牧养我们或监督我们。今天我们的牧人和监督在我们的灵里，乃是赐生命的灵住在我们里面。祂的牧养和监督开始于我们的灵，然后扩展到我们魂的每一部分。这就是说，基督从我们的灵达到我们魂的各部分—心思、情感和意志—并顾到我们一切的难处、需要和创伤。何等美妙！这是我们的基督！’（彼得前书生命读经，233～234页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>享受基督作恩典，作榜样，并作美妙的救主、牧人和监督。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

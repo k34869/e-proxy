@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('131')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('133')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">主耶稣—无瑕疵无玷污的羔羊</p>
+<p>基督的宝血，如同无瑕疵无玷污的羔羊之血。（彼前一19）</p>
+<p>在出埃及十二章，逾越节也是基督的一个豫表。（林前五7。）基督是神的羔羊，使神能越过我们这些罪人。按照出埃及十二章所描绘的，基督这逾越节的羊羔，必须在逾越节前四天，受察验是否完全；并且必须在逾越节当天被杀，使豫表得着应验。（3～6。）因此，基督在钉十字架之先，在逾越节前六天，（约十二1，）末次上耶路撒冷，受犹太首领察验数日之久。为此主耶稣非常谨慎，不让自己在指定的时间以前或以后被杀。如果祂在逾越节以前被杀，豫言就无法应验。那样的话，祂就不是真的逾越节羊羔。但祂既是真的逾越节羊羔，祂就保守自己，直等祂被献在十字架上的时候来到。</p>
+<p>当主最后一次来到耶路撒冷时，祂每天都回到殿里，目的乃是要将自己交与犹太人，受祭司长、经学家和长老、法利赛人和希律党人、以及撒都该人的察验。主让他们彻底的察验祂，但人在祂身上找不出丝毫的瑕疵，这证明祂是完全、无瑕无疵的，彀资格作我们逾越节的羊羔。</p>
+<p>约翰十七章十九节记载，主耶稣为门徒的缘故，圣别自己，使他们也在真理中得以圣别。主自己是全然圣别的；但祂在地上时，仍然在生活方式上，圣别自己，为门徒立下圣别的榜样。（19注1。）主要门徒成圣，所以祂自己分别为圣。祂给我们留下榜样，使我们跟随祂的脚踪行。（彼前二21。）其实，主不必受限制，但祂却受了限制。到最末了，门徒不能说祂有什么不是；他们都作见证说，主是无罪的。彼得说，主没有犯过罪，口里也找不到诡诈。（22。）彼得是一个常与主同住的人，是最能知道祂心意的；这是一个常与主同住之人所作的见证—祂是无瑕疵、无玷污的。借此，我们看见主的脚踪是何等佳美，我们要跟随祂的脚踪行。（参路加福音生命读经，446～453页；十二篮第七辑，72～73页。）</p>
+<p class="title">梅大卫的钉锤</p>
+<p>梅大卫是闻名的钉锤制造专家，发明了最新式的钉锤。他原本是个农夫，因为买来的钉锤，总令他不满意，他就自己制造。邻舍看他制作得好又合用，便纷纷向他订购。因着他抓住了制造秘诀，钉锤造得特别好，就改行专门制造钉锤。</p>
+<p>后来，有一个朋友问他，为何他制造的钉锤比别人制作的更好用，而且更为牢靠。他回答说，‘我不单要造得好，而且更要求造得极好，好上加好。’有一次，有人来订一大批货，顾客对他说，‘我订这么多货，你该为我造些更好的钉锤。’他回答说，‘我不造就罢了，要造就造顶好的，因为我造每一个钉锤，都像给我自己使用一样，所以我这里没有次等货。’</p>
+<p>神所要的是上等货，不是次等货。凡不是出于基督的，再好也是次等货。‘所献的必须是纯全无残疾的，才蒙悦纳。’（利二二21下。）（参造就故事下册，64～65页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：珍赏主为我们的缘故，圣别自己，使我们在真理中得以圣别。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

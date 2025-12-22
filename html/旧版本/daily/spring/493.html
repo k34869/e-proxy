@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('492')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('494')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第15课  性格—彻底</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>申命记三一24 摩西将这律法的话写在书上，及至写完了。</p>
+<p>一只蜜蜂要酿出一公斤蜂蜜须往来飞行 30 万公里，吸吮 1200 万个花朵的汁液，每次采集归来，还要把汁液从胃里吐出，由另一只蜜蜂吸到自己胃里，如此吞吞吐吐 120 次到 340 次，汁液成蜜汁，但这时的蜂蜜，还有大量的水分，不适宜储藏，蜜蜂还要不断地鼓翅扇风，使水分蒸发掉，最后变成浓稠的蜜糖。由此观之，蜂蜜 酿自于蜜蜂的锲而不舍中。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个彻底的人就是完成需要所作之事的人。他们不会半途而废，反而会一直坚持直到任务完成为止。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：讲述摩西按照耶和华的吩咐写律法的故事。摩西没有半途而废或者抱怨太累了，而不能完成任务。给孩子们一些完成任务的例子。当被要求整理房间时，你应该捡起地上所有的衣服，而不仅仅是大部分的衣服。当寻找一本丢失的图书馆的书时，不要放弃，而是不断地在每一个可能的地方寻找，直到找到。如果给你列出要作的事情，你不应该放弃，而要一直作，直到你完成了清单上所有的项目。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>列王纪上六38 到十一年布勒月，就是八月，殿的各部分都按着指定的样式完成。</p>
+<p>从前在美国标准石油公司里，有一位小职员叫阿基勃特。他在远行住旅馆的时候，总是在自我的签名的下方，写上“每桶四美元的标准石油”字样，在书信及收据上也不例外，签了名。就必须写上那几个字。他因此被同事叫做“每桶四美元”，而他的真名反倒没有叫了。</p>
+<p>公司董事长洛克菲勒明白这件事后说：“竟有职员如此努力宣传公司的声誉，我要见见他。”于是邀请阿基勃特一起共进晚餐。</p>
+<p>之后，洛克菲勒卸任，阿基勃特成了第二任董事长，这是一件谁都能够做到的事，但是只有阿基勃特一个人去做了，而且坚定不移，乐此不疲。嘲笑他的人中，肯定有不少人才华、潜力在他之上，但是最后，只有他成了董事长。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个彻底的人是顾到每一可能的部分或细节的人。一个彻底的人不会遗漏任何事。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：可讲述王上六章所罗门建造完成耶和华的殿的故事。如果所罗门只完成了神殿的一部分，神怎样处理这个只有一个部分的殿？想想你自己的房子……如果建筑工人没有盖屋顶或者没有盖造完成你卧室的最后一堵墙怎么办？你的作业或学习项目呢？只作一半的数学作业或一半的历史项目可以吗？完成三分之二的作业会更好点吗？</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>路加福音十四28 你们中间谁想要盖一座楼，不先坐下计算花费，能盖成不能？</p>
+<p>你一定坐过出租车。那么，今天你出门请再乘一次出租车，做一个试验:上车后，你不要讲话。司机如果问你:去那里,你就说:你自己看着办吧</p>
+<p>你信不信，开了几十年出租车的老司机，这个时候也没有任何办法把车开走。为什么,因为司机只是知道怎样选择最佳路线把你送到你想去的地方。他知道怎样做，他知道方法、手段和技巧，并且把它做好。至于把车往哪里开,至于你想去的地方，司机并不知道;只有你知道你想去的地方，所以，如果连你都不知道你想去哪里，你就无法告诉司机开车的方向和目的地。司机当然就不知道往哪里开。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个彻底的人是顾到每一可能的部分或细节的人。当计划和准备进行一个项目或一次旅行时，一个彻底的人会考虑所有的可能性。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：在计划购买某物之前或去某个地方之前，最好考虑所有细节。可参读路加福音十四章二十八节，并讨论在购买前计算成本的需要。如果你想购买某样物品，你只计算出该物品的确切数量，还是你还考虑税收因素？当你想开始一个项目时，你会考虑所有需要的材料吗？出错或某样东西不起作用，这些额外的事情呢？当你换自行车轮胎时，你会收集所有需要的工具来完成这项工作，还是不断询问父母你所需要的工具？当你打包旅行时，你会考虑所有必要的项目吗？在这些例子中，如果你不彻底，会发生什么？</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

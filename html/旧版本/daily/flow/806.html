@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('805')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('807')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 8 课<br />
+主救恩的职事</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：荣耀的释放。（诗歌246首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：看哪，神的羔羊，除去世人之罪的！（约一29下。）耶稣回答他们说，健康的人用不着医生，有病的人才用得着；我来本不是召义人，乃是召罪人悔改。（路五31～32。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　神的羔羊，除去世人之罪的—约一29～42</p>
+<p class="ot1">二　主成为大光，临到罪人，并呼召他们成为得人的渔夫—太四12～22，路五1～11</p>
+<p class="ot1">三　主医治瘫子，赦免病者的罪—太九1～8，可二1～12，路五17～26</p>
+<p class="ot1">四　主呼召罪人，并与罪人同坐席—太九9～13，可二14～17，路五27～32</p>
+<p class="ot1">五　主拯救税吏撒该—路十九1～10</p>
+<p class="ot1">六　主赦免行淫的妇人—约八1～11</p>
+<p class="ot1">七　主赦免有罪的女人—路七36～50</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>珍赏主全备的救恩，能赦免罪人，并柔细的照顾失丧的人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>从四福音的事例看见在主耶稣的职事里，祂顾到堕落、失丧人类的需要，他们为罪及其一切副产品的重担所压。因着耶稣是神，因着祂愿意为人的罪死，所以祂有权柄，也有立场来赦罪。藉着祂职事的这一面，我们就能接受神完全的救恩。我们需要接受祂的赦罪，爱祂是那赦免我们许多罪的一位，也与祂是一，在祂的名里传悔改以得赦罪之道。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　神的羔羊，除去世人之罪的</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>看哪，神的羔羊，除去世人之罪的！（约一29下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主耶稣来，并不是作一个宗教运动的伟大首领。祂来乃是作神的小羔羊，除去世人的罪。因着人的堕落，使人远离神。神就亲自差祂的儿子主耶稣来成为肉体，（约一14，）并且为我们死，为着救赎我们流出祂的血，好除去世人的罪，解决人身上罪的问题。这乃是主耶稣在地上职事的主要目的，就是藉着祂的死完成救赎，使人蒙赦罪并得着神的救恩。</p>
+<p>我曾看见那灵，仿佛鸽子从天降下，停留在祂身上。…我看见了，就见证这是神的儿子。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>藉着认罪，经历基督的救赎。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

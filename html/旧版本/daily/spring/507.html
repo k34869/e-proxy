@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('506')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('508')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第 17 课 性格—顾念人</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>列王纪下四 10 我们可以为他盖一间小楼房，在其中安放床榻、桌子、椅子和灯。乐于助人的小兔</p>
+<p>小雨了，小兔子打着蘑菇伞赶紧往回跑，路上遇到了小蜜蜂，雨水打湿了小蜜蜂的翅膀飞不动了，于是小兔子就将蘑菇伞都打在蜜蜂身上，等安全送小蜜蜂回家的时候，小兔子的衣服都打湿了。</p>
+<p>小兔到家把湿衣服脱下来，搭在绳上。太阳公公出来了，它笑着对小白兔说：“你可真热心呀， 我会把你的衣服烤干的。”小白兔听了，高兴地笑了。它笑呵呵地说道：“谢谢您! 太阳公公。”</p>
+
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">
+<p>焦	点：一个顾念人的人是给他人让出空间的人。他们让出空间让别人呆在家里，他们让出空间让别人可以参加活动。</p>
+</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：假设你和其他孩子在一张桌子上一起吃饭或吃零食，另一个孩子来和你们一起。为 了容纳那个人，你要腾出空间让他坐在你旁边，或者移动一下，以便腾出足够的空 间。有时你的父母可能会让人来你家作客，他们可能会要求你把你的房间让给他们。如果你顾念人，你就不会抱怨要暂时离开房间，反而会整理你的房间，让它看起来 整洁，使别人可以有一个舒适的住处。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>加拉太书六 2 上 你们的重担要彼此担当。小鸡和小鸭</p>
+<p>在一个晴朗的早晨，小动物们心情都十分好。小鸡妹妹与小鸭哥哥是一对好朋友，它们约定到小河对岸去捉虫子吃。  到了小河边，小鸡妹妹忽然叫了起来：“哎呀，我不会游泳，怎么过河呢？”小鸭哥哥一听，也犯了愁：“小鸡妹妹不会游泳，怎么才能让它顺利地过河呢？” 它俩正想着，突然，聪明的鸭哥哥一拍脑瓜，有了主意。它找来一块木板，指着它，对小鸡妹妹说：“小鸡妹妹，你就坐在这块木板上过河，它向前漂泊，你就会前进。你不用害怕，我会一直在旁边保护你。”	于是，小鸡妹妹就坐在木板上，它一边前进，一边享受着秋风带来的凉爽。	不知不觉，已经到了对岸，小鸡妹妹与小鸭哥哥便开始找虫子了。不一会儿，小鸭哥哥找到了一条又肥又大的虫子。可惜的是，小鸭哥哥的扁嘴巴不会捉小虫，鸭哥哥坐在地上哭了起来。小鸡妹妹听见哭声，连忙跑到鸭哥哥面前，关心地问道：“鸭哥哥，你怎么啦？”小鸭哥哥呜咽着：“我的扁嘴巴吃不了小虫子。”小鸡妹妹赶紧说：“没关 系，我喂给你吃得了。”于是，小鸡妹妹叼起一条条又肥又大的虫子给小鸭哥哥吃。从此，小鸡妹妹与小鸭哥哥的友谊更深了。</p>
+
+
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">
+<p>焦	点：一个顾念人的人是一个考虑别人的要求和需要的人。他们明白别人不同的需求比自己的更甚。</p>
+</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：你可能比另一个孩子更健壮，你在打棒球。游戏只允许每个人投 3 次，但是如果你知道另一个孩子需要投 5 次，你会让他多投几次而不抱怨吗？。你可能想尽快吃午饭，然后跑出去玩，但你知道你的朋友吃得不快，也想出去玩。为了顾念你的朋友， 你需要耐心地坐着等待，直到你的朋友吃完，然后你们两个可以一起玩。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>罗马书十二 16 要彼此思念相同的事，不要思念高傲的事，倒要俯就卑微的人，不要自以为精明。</p>
+<p>骄傲的牡丹花</p>
+<p>五月份，公园里的牡丹花盛开了，中外游客纷纷前来观赏。红的、黄的、白的，争奇斗艳。一天，中外游客，都在交口称赞一朵红牡丹。一位游客说： 你看，这朵红牡丹这么艳，多漂亮！ 不一会儿，游客们走了。</p>
+<p>听到游客称赞自己的红牡丹沾沾自喜，还唱着自己编的歌：我是一朵红牡丹，人见人爱……碰巧被叶子听到了，说： 红牡丹，我真为你高兴。 红牡丹装作不知道，说： 谁，谁在跟我说话？ 是我们，你身上的叶子啊！ 叶子说。红牡丹骄傲地说： 你看看你，这么难看，还配得上我亭亭玉立的红牡丹公主吗？ 带上你只会给我带来难看。快滚蛋。叶子听了非常惊讶，生气地从红牡丹身上跳了下来，离开了。</p>
+<p>一天、两天、三天……红牡丹一点儿也不觉得自己的生命在慢慢地流失。久而久之，红牡丹觉得头昏目眩，慢慢地垂下了头，不久红牡丹枯死了。</p>
+
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">
+<p>焦	点：一个顾念人的人是愿意适应他人的人。他们知道其他人可能有不同的作事方式，或有不同的需要。他们也愿意适应比他们年轻或卑微的人。</p>
+</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：你可能正在玩一个复杂的游戏，有一个特别的游戏方式。然而，一个朋友用另一种 方式玩，或者一个小弟弟不能像你那样玩。为了顾念他们，你可以和你的朋友一起用他的方式玩，或改变规则，让它更简单，使小弟弟也可以玩。可以讲述福音书里神下到我们的水平顾念我们，顾到我们需要的故事。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

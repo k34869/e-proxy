@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('44')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('46')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>因为人子来，不是要受人的服事，乃是要服事人，并且要舍命，作多人的赎价。（可十45）</p>
+<p class="title">主殷勤服事的榜样</p>
+<p>马可福音清楚告诉我们，主耶稣是神的仆人。因此在这卷书里，主少有长篇的教训，也少有一连串的比喻，却多有医病、赶鬼等福音服事的记载。因为主来到地上不是作王，而是作仆人，所以祂所作的，比祂所说的更多。作为神的仆人，主耶稣非常殷勤。从马可一章就可以看见，祂是极其忙碌：当祂在约但河里受浸起来，‘随即’被那灵‘催’到旷野，受撒但的试诱。（12。）之后，祂来到加利利传扬神的福音，（14，）看见雅各和约翰，祂‘随即’呼召他们来跟从祂。（20。）他们到了迦百农，耶稣‘随即’进入会堂施教；（21；）又‘即时’赶逐了被污灵附着之人身上的鬼。（23～26。）他们一出会堂，又进入西门和安得烈的家，有人‘立刻’向耶稣说到西门的岳母患热病躺着，耶稣就医治了她。（29～31。）到了黄昏，日落的时候，他们还未得休息，反而合城的人都聚集在门前，耶稣治好了许多患各样疾病的人，又赶出许多鬼。当祂这样服事了众人，想必已经很晚了；但三十五节说，‘清早，天还黑，耶稣起来，到旷野地方去，在那里祷告。’这简短的记载，说出主耶稣作为服事的奴仆，是何等的殷勤。</p>
+<p>有时，主殷勤服事到一个地步，连饭都顾不得吃，以致给人一个印象说，祂癫狂了。（三20～21。）在六章，主和祂的门徒在福音的服事上殷勤、忙碌和忠心，以致他们连吃饭也没有机会。于是主说，‘来罢，你们暗暗的到旷野地方歇一歇。’他们就暗暗的往旷野地方去。没想到许多人看见他们去，又认出他们，就从各城步行，一同跑到那里，甚至比他们先到。耶稣看见大批群众，又对他们动了慈心，就开始教训他们许多事。时候已经晚了，主恐怕群众在路上困乏，于是把饼和鱼给他们吃，叫大家吃饱了，还叫门徒把零碎收起来。耶稣随即催门徒上船，先到对岸去，祂既解散了群众，就独自上山去祷告。（31～46。）主耶稣殷勤的性格，使祂合于作神的仆人。（参圣经提要第四卷，524页；基督是实际，82～83页；性格，22～23页。）</p>
+<p class="title">依利亚德临死不休息</p>
+<p>美国麻省牛顿城有一处宽广的地方，乃是着名的依利亚德（John Eliot）对印第安人讲道的地方。那里竖立着一个设计特殊的石碑。依利亚德享年八十岁。在离世当天，他还在教导一个站在床边的印第安小孩念字母。一位朋友大吃一惊的问他：‘你为什么还不休息？’依利亚德回答说，‘因为我曾经祈求神，使我活着的时候有用处，神也听了我的祷告；现在我不能传道了，祂仍然赐给我力量，叫我能教导这孩子念字母。’依利亚德实在是我们殷勤服事主的好榜样。圣经告诉我们：‘这些事你要殷勤实行，并要投身其中。’（提前四15。）（参造就故事下册，73页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：珍赏主耶稣作神的仆人，殷勤服事不稍歇息。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

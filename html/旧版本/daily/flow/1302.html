@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1301')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1303')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 6 课<br />
+在基督里作新造</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　主耶稣基督的恩</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>加六18：弟兄们，愿我们主耶稣基督的恩与你们的灵同在。阿们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶稣基督的恩，乃是三一神，借着我们灵的运用，给我们享受。我们若要享受恩典，就需要领悟我们的灵是我们能经历恩典惟一的地方，在灵里我们会遇见主。许多基督徒对主没有什么经历，就是因为他们不运用灵。所以，我们要学习留在灵中，常常操练灵祷告。每当我们转到灵里，呼求主名，来到施恩的宝座前，我们就应当让主登宝座，宝座是涌流恩典的源头。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>常常转向灵，经历主的恩典与我们的灵同在。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以那灵为我们独一的目标，生活行事为着那灵撒种，并从那灵收永远的生命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>你曾否撒过种子、种过东西？你所种的后来长出什么来？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘撒种包括我们基督徒生活的总和。我们所作的每件事都是一种撒种，或是为着肉体，或是为着那灵。我们无论在那里，无论作什么，都是在撒种。…保罗…在加拉太六章八节用“撒种”这辞指向为人生活的真实意义。按着保罗的领会，为人生活乃是一个撒种的过程。我们天天都在撒种，我们是借着我们所说、所作的，并借着我们所是的在撒种。撒种就是把一种会生长，末了会收割的东西散出去。我们在日常生活中，不断的把一些会生长并产生收成的东西散出去。甚至我们所说的话也包含了种子，这种子会落在土壤里生长，并产生收成给我们收割。“撒种”这辞实际上就等于生活。在撒种上谨慎，就是对生活警醒。…</p>
+<p>保罗的话有力的含示，我们需要对于我们的目的、目标作个决定。我们的目的是肉体，还是那灵？…为着肉体撒种，就是以肉体为目标；但为着那灵撒种，意思就是为着成就那灵的目的而撒种。这就是以那灵为我们的目标。因此，那灵不仅该是我们的生命和行事为人，也该是我们生活的目标。在肉体与那灵之间没有中立的立场，我们的目标不是这个，就是那个，不会是别的。</p>
+<p>我们信徒不是漫无目的的，因我们有一个管制并指引我们的目标、目的。我们无论作什么，都是向着这个目标作的。因此，保罗嘱付我们要为着那灵撒种，为着那灵生活，每件事都为着那灵而说而作。我们需要以那灵为我们独一且永远的目标。…</p>
+<p>最终，我们需要看见为着那灵撒种的原因。…为着那灵撒种，结果乃是新造。因此，我们该为着新造，而为着那灵撒种。当我们对准那灵，为着那灵撒种，那灵就使我们成为新造。不仅如此，我们为着那灵撒种，就会凭着那灵而行。然后我们自然而然会实际的成为新造，因神圣的灵使祂自己与我们调和，并用祂自己构成我们，使我们成为新的。为着这新造，我们需要圣灵在我们里面作工，一直保守我们在神圣的交通里。然后我们在日常生活中就会为着那灵撒种，并从那灵收永远的生命。’（新约总论第四册，165～168页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练所作的每一件事，都向着那灵这目标而作。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

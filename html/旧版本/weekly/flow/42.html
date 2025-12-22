@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('41')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('43')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>所以我们有了时机，就当向众人行善，尤其是向信仰之家的人。（加六10）</p>
+<p class="title">紧的操练（四）抓住机会行善并传福音</p>
+<p>加拉太六章十节告诉我们，有了机会，就当行善。趁着机会行善，是神今天所要求于我们的。第一，要赦免人。神是给我们机会赦免人。赦免的机会是会过去的。有谁是不肯赦免人的？请你现在就赦免，再迟，恐怕机会过去了。马太五章说到我们若亏欠弟兄，要赶紧去对付，与他和好。（23～26。）第二，尽力量去爱人、帮助人。彼前四章说到万物的结局已经临近，信徒之间最要紧的就是彼此热切相爱，因为爱能遮盖众多的罪。（7～8。）第三，用我们的钱帮助人。有一位财主说，有钱就当给，不要想我的钱留着为将来更好的用处，等到有更好的用处时，我再拿出更多的钱来。岂知目前的‘好的用处’，比将来的‘更好的用处’还要好。</p>
+<p>不仅如此，我们还要抓住机会传福音救人。使徒保罗说，‘若不传福音，我便有祸了。我若甘心作这事，就有赏赐；若不甘心，管家的职分却已经托付我了。’（林前九16～17。）又说，‘务要传道；无论得时不得时。’（提后四2。）召会在地上的使命，就是为福音而活。我们得救时，神给我们一个新生命，也给我们一个新职业，就是祂的福音。主差门徒去传福音，说，‘你们要去！’（太二八19。）神对传福音的命令，乃是给召会全体的。</p>
+<p>诗歌六百六十八首说到，信徒活着时是白天，死了就进到黑夜。白天是作工的时候；黑夜一到，就没有人能作工。（约九4。）信徒死后要见主，不能空手，需有掳物献给祂。我们得救了没问题，但我们还必须有得胜的生活，好得着掳物献给主。保罗说，他在主面前的盼望、喜乐、或所夸的冠冕，就是他所带得救，站立在主面前的信徒。（帖前二19～20。）我们应当趁着黑夜未到，还在白天的时候，积极作工，多抢救灵魂，好带去献给主。（参倪柝声文集第一辑第十七册，82～85页；主恢复中成熟的带领上册，134～135页；速兴起传福音，25～27页。）</p>
+<p>所以我们有了时机，就当向众人行善，尤其是向信仰之家的人。（加六10）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：趁着今日，积极作工，多抢救灵魂，好带去献给主。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

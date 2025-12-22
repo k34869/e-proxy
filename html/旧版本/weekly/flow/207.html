@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('206')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('208')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">十一个门徒向主敞开</p>
+<p>你们的眼睛是有福的，因为看见了；你们的耳朵也是有福的，因为听见了。（太十三16）</p>
+<p>主耶稣在地上尽职时，除了卖主的犹大之外，有十一个门徒紧紧跟随主。他们与主一同生活，学习跟从主走十架道路，也与主同遭逼迫，同受苦难。主耶稣爱他们，并经常藉着各种环境训练、教导他们。譬如，主教训群众常用比喻，当群众散去后，祂会召聚门徒，并向他们解释比喻的意思，好让他们明白。因着门徒向主是敞开的，所以主说他们的眼睛是有福的，因为看见了；他们的耳朵是有福的，因为听见了。（太十三10～16，路十23～24。）当主被钉十字架以前，祂对门徒们说，‘在我的试炼中，始终和我同在的就是你们。’（二二28。）这含示门徒不仅忠信的跟随主，也一直向主敞开。</p>
+<p>主复活以后，来到门徒中间，向他们吹入一口气，说，‘你们受圣灵。’（约二十19～22。）这是主成为赐生命之灵，吹入门徒的里面。从此，主就进入门徒里面，活在他们里面，并住在他们里面。门徒也因此能与主同活，并住在主里面。主不仅作门徒的生命和一切，也为着祂的使命差遣门徒，使他们有资格，在祂身体的交通里，带着祂的权柄代表祂，执行祂的使命。（参22注1。）门徒因着得到赐生命之灵的加强，就同心合意并坚定持续的在一起，祷告十天之久。同他们在一起的，还有耶稣的母亲和兄弟，以及其他几个妇人，共有一百二十人。（徒一14～15。）到了五旬节那天，门徒都聚在一处，他们就都被圣灵充溢，按着那灵所赐的发表，用别种不同的语言说话，向各地到耶路撒冷过节的犹太人传福音。因着门徒们同心合意，放胆传扬福音，那一天在耶路撒冷共有三千人得救。这些得救的人天天同心合意，坚定持续的在殿里，并且挨家挨户擘饼；主将得救的人，天天和他们加在一起。（二1～11，41，47。）从门徒的事例我们看见，我们需要向神敞开，也向同伴敞开，才能同心合意，并受主差遣，向人传扬福音，叫人得着神。（参路加福音生命读经，239～240页；使徒行传生命读经，42～44页。）</p>
+<p class="title">一看就得救</p>
+<p>司布真（Charles Haddon Spurgeon，1834～1892）是英国着名的传福音者，一生为主作工四十余年，因他得救的约有一百万人。有一次，他对人作见证自己是如何得救的：一天，他出外办事；但因着下大雪，迫使他必须暂停路旁。那时，他看见前面有一小礼拜堂，就进去，里面有一群人唱着诗歌。司布真因为要明白‘得救’的意义，就继续坐在那里听。不久，有一位极瘦弱的人，上台打开圣经，念出以赛亚四十五章二十二节：‘地极的人都当仰望我，就必得救；因为我是神，再没有别神。’（和合本。）接着，那人看着司布真，说，‘青年人！我看你心中忧愁。’这句话说进了司布真的心坎，因为当时他实在是满心忧愁。那个人又对司布真说，‘你总不能逃出来，除非你看这位救主。’接着就举起手来，说道：‘看哪！看！就是看，一看就得救。’因着这话，司布真向神敞开。正如摩西在旷野举蛇，凡举目望铜蛇的人，就得痊愈；（民二一8～9；）司布真因此得着基督，心里立时充满了喜乐。（参福音故事下册，118～119页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：向神敞开，也向同伴敞开，才能同心合意，受主差遣，向人传扬福音，叫人得着神。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

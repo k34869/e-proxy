@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('439')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('441')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">讲道如剑扎心</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗马书 8:27那鉴察人心的，晓得那灵的意思，因为祂是照着神为圣徒代求。</p><p>斐尼应一老人之请，前往一个村子讲道。他按时到达，教室已经坐满了人。他仅能在门口得一立足之地。这里的人从未唱过教会的诗歌；所以唱诗之时，各人喊唱各人的，简直是自由调。斐尼看见这种光景，几近绝望，就跪下祷告。祷告的灵倾倒下来，他就全心恳求；祷后站起来说，‘起来离开这地方，因为耶和华要毁灭这城。’（创十九14。）接着他就叙述关于亚伯拉罕、罗得、所多玛城的事实。听众面露怒气，互相传眼，又向他看看，似乎准备下手打他。斐尼越讲，他们怒气越高。大概讲了一刻钟，就有惊人的严肃临到全会众，他们开始各从座位四向倒下，喊叫救命。不到二分钟，全会众不是跪着，就是仆倒在地，口能说话的，没有一个不为自己祷告。斐尼只好停止讲道，大声叫喊，都不能吸引会众注意。最后只能一个一个的将福音传给他们，带领他们悔改相信。后来他因要赴另一约会，就请那位老人负责这聚会。因着寻求医治的灵魂太多，聚会无法结束，继续达旦。到了早晨，还有人不能过去，便迁入邻近私寓，使学校可以上课。下午他们派人再请斐尼前来，因为他们不能停止聚集。这时斐尼方才清楚，他们昨天发怒的因由：原来这个地方就叫所多玛，而且当地只有这位老人是一虔诚人，他们也都称他罗得。听众以为斐尼故意选这题目，要来严厉对付他们。圣灵的负担变为圣徒祷告的负担，就给神的工作铺了一条道路。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('770')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('772')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 3 课<br />
+主的先锋—施浸者约翰</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：清晨的日光。（补充本诗歌836首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：叫我们既从仇敌手中被救出来，就可以一生一世在祂面前，坦然无惧的用圣和义事奉祂。（路一74～75。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　施浸者约翰的背景与身世—路一5～6，8</p>
+<p class="ot2">1.　出生于犹太教死的宗教背景之下。</p>
+<p class="ot2">2.　出生于事奉神的祭司支派，父亲是正统的祭司—5，8。</p>
+<p class="ot1">二　施浸者约翰的成孕—路一5～25</p>
+<p class="ot2">1.　约翰的母亲不生育，父母年纪又老迈—7。</p>
+<p class="ot2">2.　约翰的出生不是凭着父母天然的力量，而是凭着神圣的能力和方式—19～20。</p>
+<p class="ot2">3.　分别归神作拿细耳人，从母腹里就被圣灵充溢—15。</p>
+<p class="ot1">三　施浸者约翰的出生—路一57～79</p>
+<p class="ot2">1.　神奇的由他母亲所生，邻里亲族因此欢乐，第八日受割礼—57～59。</p>
+<p class="ot2">2.　神奇的起名叫约翰，父亲的舌结开了，就申言颂赞神—60～79。</p>
+<p class="ot1">四　施浸者约翰的幼年和生活—路一80</p>
+<p class="ot2">1.　在灵里长大，灵里刚强—80上。</p>
+<p class="ot2">2.　住在旷野，远离宗教与文化—80下。</p>
+<p class="ot1">五　施浸者约翰的尽职—太三1～12，可一2～8，路三1～15</p>
+<p class="ot2">1.　他的职事：宣讲悔改的浸，引人接受基督—太三1～6，路三1～6，15。</p>
+<p class="ot2">a.　约翰来是为主预备道路，修直人心里的每一部分，好让主进入。</p>
+<p class="ot2">b.　约翰的浸是悔改的浸，把人浸入水里，为着悔改，引导人信主。</p>
+<p class="ot2">2.　他的教训：要人悔改而结出果子，活出高超的生活—太三7～12，路三7～14。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主的先锋施浸者约翰，在犹太宗教的背景下，凭着神圣的能力和方式出生，在灵里长大，在旷野尽职，传悔改的浸，引人归向基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在以色列人把神所赐他们祖宗旧约的一切，都弄成死的宗教规条和仪式之背景下，施浸者约翰由他衰老难以生育的父母，凭着神圣的能力，在神奇的方式里，生于当时的犹太教祭司之家。他从母腹里就被圣灵充溢，虽生为祭司，却远离圣殿，脱开祖传的宗教和文化，而去住到旷野，过一种粗野的生活，一反祖传的一切。在这脱开宗教和文化气氛的旷野，约翰作基督的先锋，发出喊声，为基督铺路，引进基督。约翰传悔改的浸，预备人心接受基督，使人心思转变，归向基督。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　施浸者约翰的背景与身世</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>正如申言者以赛亚书上所记的：‘看哪，我在你面前差遣我的使者，他要预备你的道路；在旷野有人声喊着：预备主的道路，修直祂的途径。’（可一2～3。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>施浸者约翰是新约圣经里首先题到的重要人物，他是主耶稣的先锋，也是带进新约时代的创始人。施浸者约翰是一个以色列人，他的父亲撒迦利亚，乃是一个正统的祭司，他的母亲名叫以利沙伯，是亚伦的后代。他们二人在神面前都是义人，遵行主的一切诫命、典章，无可指摘。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>向主祷告，求主修直我们心中的途径，好让主更多进到我们里面。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

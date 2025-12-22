@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('163')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('165')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第10课  创造—从天看出神的智慧</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一15 并要发光在天上穹苍之中，普照在地上；事就这样成了。</p>
+<p>引    题：1请两位小朋友进前来，将大纸袋套在他们头上，叫他们走几步路，问他们在黑暗里有甚么感觉？</p>
+<p>2 问小朋友喜欢光，还是喜欢黑暗？为什么？</p>
+<p>课程内容：兔子不喜欢黑夜。</p>
+<p>兔子喜欢白天，不喜欢夜晚。天刚黑下来，兔子就嘟嘟囔囔地说：白天太短了，</p>
+<p>天一黑，什么也看不清，只好去睡觉。一个声音怪声怪气地说：“白天够长的了。”兔子抬头看了看，可是，天很暗，兔子看不清。“你是谁？”兔子问。那声音回答说：“我是猫头鹰，白天已经够长了，我到晚上，才能出来玩，才能抓老鼠吃。白天太长，晚上就短了，我会吃不饱，玩不够的。”兔子说：“我就不喜欢黑夜。”猫头鹰说：“我就喜欢黑夜！”......</p>
+<p>为着生命生长，神在创造中创造了太阳和月亮 ，赞美神如此智慧创造了白天与黑夜，白天使我们做事情吃饭，夜晚使我们休息，使我们健康成长。赞美神的智慧</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造向我们展示神的智慧。为着生命生长，神在祂的智慧中创造了太阳和月亮，在白天和黑夜光照大地。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：想象如果神没有创造太阳和月亮，你觉得会是什么样子？天总是黑的，气温会很冷。如果只有太阳没有月亮，会怎么样呢？如果永远是白天，我们的身体就无法休息，而且一些东西会死于恒温。如果总是晚上，我们就不能在外面玩耍或上学。神创造太阳，白天给我们光明，月亮给我们照亮黑夜。神是如此智慧地创造了白天与黑夜，白天使我们做事情吃饭，夜晚使我们休息。这让生命得以成长。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇八3 我观看你指头所造的天，并你所陈设的月亮星宿。</p>
+<p>引    题：</p>
+<p>课程内容：你知道，为什么夜晚没有阳光，但我们却并没有完全陷入黑暗吗？那是因为月亮借着反射太阳光（如镜子）来发光。在夜晚，它把太阳光反射到地球暗的一面，让夜晚的地球不至于完全黑暗。小朋友们，其实月亮对于地球的生物而言还有更多的作用，你们有见过大海的涨潮和退潮吗？事实上，大海涨潮退潮的现象叫做潮汐。是月球引力通过吸引海洋里的水所产生的。潮汐就是海水的涨潮和退潮。许多生物都依赖潮汐来生存，并且形成了像我们人一样日出而作，日落而息的规律。比如，招潮蟹（生活在海滩的一种螃蟹）总是在退潮以后，来到海滩上觅食，涨潮的时候藏在洞底。而牡蛎则在涨潮的时候打开贝壳觅食，退潮的时候关闭贝壳。如果没有这种规律，那么他们很可能会被天敌捕食，或者被潮水带到无法生存的环境。月亮的作用不仅如此，如果地球没有月亮围绕，会旋转的更快。很可能就像太阳系其他行星一样，经常刮起大的风暴，变得很难生存下去。月球能够稳定地球的转轴，反过来促使四季保持平衡，让复杂的生命有足够的时间得以发展，适应和延续。感谢主，多么富有智慧的奇妙创造！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造向我们展示神的智慧。神在祂的智慧中创造月亮绕地球运行，在夜晚给我们光明，并产生潮汐和季节轮换。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：你知道月球上很暗吗？月亮借着反射太阳光（如镜子）来发光。在夜晚它把太阳光反射到地球暗的一面，给我们带来光。月球引力通过吸引海洋的水而在地球上产生潮汐。许多不同种类的海洋生物都依赖潮汐生存。潮汐也有助于净化地球的河流和溪流。而且，地球在没有月亮围绕的情况下会旋转得更快。如果这种情况发生，风可能会越来越强。想象一下，迎着大风工作、说话，或者逆风走路是什么感觉。在海上航行的船会怎样。月球也能稳定地球的轴。这反过来又使季节保持平衡，使复杂的生命有足够的时间得以发展、适应和延续，又不会使四季的时间太长导致生命枯竭。多么有智慧的神！</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言三19 耶和华以智慧立大地，以聪明定诸天。</p>
+<p>引    题：</p>
+<p>课程内容：小朋友们，你们知道，为什么我们只能生存在地球上？而不能生活在其他星球上呢？那是因为，地球是特殊的。他是我们太阳系中唯一一个适宜人类生存的行星。地球周围有一层薄薄的大气层，将地球与寒冷，不适宜居住的空间分割开来。地球大气层由78%的氮气，21%的氧气，1%的其他成分组成。而这是我们能够呼吸和生存和的完美比例！许多行星都具有大气，但是只有地球上的是适宜我们生存的。大气层同时也产生水分，在不同环境下，会下雨或者下雪，对我们生存的环境也是一种调节。另外大气层把来自宇宙的很多有害的辐射，抵挡在了大气层外面，同时那些来自宇宙的流星，石块，在进入大气层时，会与大气层摩擦，再到达地面之前就被烧光了，是一层天然的防护罩。没有大气层，地球就是一片荒芜和死寂。小朋友我们，可以看到，一个复杂的生命，要想正常的生活，生长，发展，需要多么苛刻的环境，而在神智慧的创造里，祂却把这些条件，巧妙的一一加给我们，神的创造是多么的智慧，祂的恩典是何等的宝贵！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造向我们展示神的智慧。神在祂的智慧中把所有的东西放在正确的位置和适当的数量上，使地球适合人类生存。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：地球是特殊的。它是我们太阳系中唯一一个人类可以生存的行星。地球周围有一层薄薄的大气层，将地球与寒冷、不适宜居住的空间分隔开来。地球大气层由78%氮、21%氧和1%种其他成分组成，这是我们能够呼吸和生存的完美比例。许多行星都有大气层，但只有地球的空气是可以呼吸的。大气层也产生水分，使云可以化为雨，从而为我们提供水。它还保护我们免受太阳辐射的影响，保护我们免受流星的伤害，大部分陨石在撞击地面之前燃烧或破裂。没有大气层，地球将是一片贫瘠和死寂，人类将无法生存。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

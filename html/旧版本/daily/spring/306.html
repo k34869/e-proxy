@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('305')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('307')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">对付罪与生命</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">当他进内院，进圣所，在圣所中事奉的日子，要献自己的赎罪祭，这是主耶和华说的。（结44:27）</div>
+<div id="CC">And on the day he enters the sanctuary，into the inner court to minister in the sanctuary，he shall present his sin offering，declares the Lord Jehovah.（Ezekiel 44:27）</div>
+<div id="C">对付罪这件事，并不是一个律法的规条，乃是神的生命在我们里面，一个自然的要求和催促。我们若常在交通中，顺着这生命要求的感觉去对付，我们属灵的生活与事奉，就必刚强释放。我们就能常得着亮光，认识属灵的事；而神的生命在我们里面，也就必定自由舒展，往前长进。反之，无论是圣徒个人，或是召会团体，若是属灵的光景不正常，失去了亮光，里面感觉软弱、受压、沉闷，其原因多半是由于缺少对罪的对付。这是一个很准确的测量。<br/><br/>　对付罪既与我们属灵的生命，有这样密切的关系，我们就必须继续不断的，在这功课上有经历。虽然这经历并不算深，却没有一个人属灵到一个地步，可以不需要对付罪。在这功课上，是难得毕业的。所以，我们不只要查问自己曾否有过这个经历，更要查问现在是否仍旧活在这个经历中。正如我们不只要洗脸，并且要天天洗脸。如果三年前洗过一次，直到今天还没有再洗过，那真不知是一张什么样的脸。照样，除非我们天天不犯一点的罪，否则我们就要天天对付罪。曾有一位少年信徒问道，怎样能叫生命有长进？人就反问他说，“你有多少日子没有对付罪了？”诚然，我们若要生命长进，就要对付罪。那一天不对付罪，那一天生命就没有长进；天天对付罪，就天天生命有长进。（生命的经历）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

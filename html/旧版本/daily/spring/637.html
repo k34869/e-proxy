@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('636')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('638')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">不顾爱子奋勇冲去</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>彼得前书 5:8 务要谨守、儆醒。你们的对头魔鬼，如同吼叫的狮子，遍地游行，寻找可吞吃的人；</p><p>Be sober; watch. Your adversary, the devil, as a roaring lion, walks about, seeking someone to devour.</p><p>有一只狼，在溪涧上游喝水；忽然探见一只小羊站在下游岸边喝水。狼就心里想道：‘这是我的一顿好晚餐阿！等我找一个理由来说服它，然后把它吃掉。’于是狼对小羊大声说，‘你这小东西，怎敢弄浑我的水呢？’小羊答道：‘狼先生，你错了，我是在你下游，怎会弄浑你的水呢？’狼又喝道：‘不要辩论，我认得你，你去年曾经说过我的坏话。’小羊听了，连忙说道：‘阿！狼先生，去年我还未出世呀？’狼又大声叫道：‘如果不是你，就一定是你的爸爸说的。…’小羊没有等它说完，就接着说，‘既然是我的爸爸说的，那么就等我去问问我的爸爸吧！’于是向着山边，大声喊叫起来。山边的老羊听见，急急赶来；牧羊的人也跟着赶来。狼见诡计不得逞，既吃不着小羊，反而招来牧人，只好垂头丧气的逃跑了。到处吞吃人的魔鬼，常常施用许多理由，花言巧语，要来迷惑人。对付那些理由之前，最好先去问问我们的主。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

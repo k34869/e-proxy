@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1764')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1766')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 1 课<br />
+启示录简介及引言</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　哦基督有一荣耀召会。（补充本诗歌508首）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：耶稣基督的启示，就是神赐给祂，叫祂将必要快发生的事指示祂的众奴仆；祂就藉着祂的使者传达，用表号指示祂的奴仆约翰。约翰便将神的话，和耶稣基督的见证，凡自己所看见的，都见证出来。（启一1～2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　启示录简介</p>
+<p class="ot2">1　著者—使徒约翰。</p>
+<p class="ot2">2　着时—约在主后九十年左右，约翰被放逐在拔摩海岛时。</p>
+<p class="ot2">3　着地—拔摩海岛。</p>
+<p class="ot2">4　受者—在亚西亚的七个召会。</p>
+<p class="ot1">二　一本结束的书</p>
+<p class="ot2">1　约翰著作的结束。</p>
+<p class="ot2">2　新约的结束。</p>
+<p class="ot2">3　整本圣经的结束。</p>
+<p class="ot1">三　启示录的主题—照神永远的经纶作神行政中心的基督</p>
+<p class="ot1">四　引言—启一1～8</p>
+<p class="ot2">1　基督的启示与耶稣的见证—1～3。</p>
+<p class="ot2">2　众地方召会的异象—4上。</p>
+<p class="ot2">3　三一神的启示—4下～5。</p>
+<p class="ot2">4　基督的再来—6～8。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录的简介及引言—基督的启示和耶稣的见证。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录是圣经的最后一卷，是全本圣经，整个神圣启示的结束、完成和总结。大多数神圣启示的真理，种子都撒在圣经头一卷的创世记里，在以后各卷，特别在新约各卷，逐渐生长发展，收成乃在启示录。因此本书所说的事物，多半不是全新的，乃是依据圣经前面各卷所已有的，而加以成全，其中心乃是基督惟一终极的启示，并耶稣特殊终结的见证，以及神宇宙永远的经纶。作为一本结束的书，启示录首先是约翰著作的结束，其次是新约的结束，更是整本圣经的结束。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　启示录简介</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启一1:耶稣基督的启示，就是神赐给祂，叫祂将必要快发生的事指示祂的众奴仆；祂就藉着祂的使者传达，用表号指示祂的奴仆约翰。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启示录是圣经的最后一卷，是全本圣经，整个神圣启示的结束、完成和总结。其中心乃是基督惟一终极的启示，并耶稣特殊终结的见证，以及神宇宙永远的经纶。启示录的著者是使徒约翰。在启示录中，有两件主要的事已经成就了：第一就是耶稣的见证已经永远完成；另外在消极一面，就是神的仇敌撒但，已经受了对付。因此，我们读启示录时，我们乃是要领受神给我们的异象，看到生命，看到神的经纶和耶稣的见证。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识启示录乃是全本圣经启示的完成和总结。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

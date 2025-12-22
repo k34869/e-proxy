@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1575')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1577')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 10 课<br />
+召会秩序的维持</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：基督快要再临。（诗歌755首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：因为神救万人的恩典，已经显现出来，教导我们弃绝不敬虔和属世的情欲，好在今世过自守、公义、敬虔的生活，等候那有福的盼望，就是至大的神和我们的救主，耶稣基督之荣耀的显现。（多二11～13。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　提多书</p>
+<p class="ot2">1　引言—一1～4。</p>
+<p class="ot2">2　建立召会中的权柄—5～9。</p>
+<p class="ot2">3　对付犹太教和智慧派的影响—10～16。</p>
+<p class="ot2">4　带各种年龄的圣徒过有秩序的生活—二1～8。</p>
+<p class="ot2">5　嘱咐奴仆在奴役的社会制度中，要行得好—9～15。</p>
+<p class="ot2">6　嘱咐圣徒要与政权保持良好关系—三1～8。</p>
+<p class="ot2">7　对付分门结党的人—9～11。</p>
+<p class="ot2">8　结语—12～15。</p>
+<p class="ot1">二　腓利门书</p>
+<p class="ot2">1　引言—1～3。</p>
+<p class="ot2">2　奴仆重生为弟兄—4～16。</p>
+<p class="ot2">3　推荐弟兄给新人接纳—17～22。</p>
+<p class="ot2">4　结语—23～25。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识召会秩序的维持，并在新人里信徒身份平等的例证。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>提多书说到召会秩序的维持。召会的秩序若要得维持，召会中的权柄就需要得建立，包括设立长老，并长老的职任。在消极一面，要对付犹太教和智慧派的影响。还要带召会中各种年龄的圣徒，过有秩序的生活。为着过这样的生活，我们有供应的源头：为着召会生活，我们有神选民的信仰、真理的知识、永远的生命同其盼望、以及使永远生命显明出来之传扬的话。为着家庭生活，我们有健康教训和健康言语的供应。为着社会制度，我们有神救我们的恩典，这恩典现今教导我们弃绝不敬虔和属世的情欲，并在今世过自守、公义、敬虔的生活。为着与政权良好的关系，我们也有从神而来美妙的供应。保罗在腓利门书中给众召会一个例证，说明奴仆和主人如何同样由基督的生命所重新构成，使他们成为新人的一部分，都是新人的肢体，享有平等的身份。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　提多书引言</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>多一1～3：照着神选民的信仰，与合乎敬虔之真理的知识，根据永远生命的盼望，…作神的奴仆、并耶稣基督使徒的保罗。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗在引言中说到，他作使徒是照着神选民的信仰，与合乎敬虔之真理的知识。使徒的职分就是把神永远经纶的真理、实际，分赐给神信的选民，并在话和灵里，藉着传讲、教导和施行,完成这样的敬虔。保罗作使徒也是根据永远生命的盼望，我们今天对永远生命的享受是预尝，在来世和永远对这生命的承受是全享，这承受就是永远生命的盼望。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>预尝并经历对永远生命的享受，以在来世和永远全享这永远的生命。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

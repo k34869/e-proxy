@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('854')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('856')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 15 课<br />
+主医治病人的职事（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：你的灵岂非已见祂过。（诗歌333首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：主耶和华赐我受教者的舌头，使我知道怎样用言语扶助疲乏的人…。主耶和华开通我的耳朵，我并没有违背，也没有退后。（赛五十4～5。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主医治瞎子—太九27～31，可八22～26，约九1～47，路十八35～43，太二十29～34，可十46～52</p>
+<p class="ot2">1.　瞎眼表明人没有视力，看不见神和有关神的事。</p>
+<p class="ot2">2.　瞎眼是由于我们的罪性，并且我们出生的时候，瞎眼就在本性中了。</p>
+<p class="ot2">3.　瞎子的眼睛得开，表明里面的视力得着恢复，看见神和属灵的事物。</p>
+<p class="ot2">4.　唾沫象征从主口里所出的话，就是灵和生命；用唾沫和泥，表征将人性与主活的话相调。</p>
+<p class="ot1">二　主医治耳聋舌结的人—可七31～37，九14～29</p>
+<p class="ot2">1.　耳聋舌结的人，象征人在属灵上又聋又哑，不能听见神的声音，不能赞美神，也不能为神说话。</p>
+<p class="ot2">2.　主用指头探入这人的耳朵，表征对付这人听话的器官，使他能听见。</p>
+<p class="ot2">3.　主用唾沫抹这人的舌头，表征主用祂口里说出来的话，涂抹哑吧说话的器官，使他能说话。</p>
+<p class="ot2">4.　我们需要主开通我们的耳朵，也需要主话里的素质抹我们的舌头。</p>
+<p class="ot1">三　主医治各样病症为荣耀神—太十五29～31</p>
+<p class="ot1">四　我们需要主医治的职事—太九12下，可四12，赛五十4～5</p>
+<p class="ot1">五　藉神子民的美德得着医病的权柄—太十1，民十五38～39</p>
+<p class="ot2">1.　主给门徒医治疾病的权柄—太十1。</p>
+<p class="ot2">2.　使徒行传中主医病的职事藉着门徒得着继续—徒三2～8，五16，八6～7，九33～34，十九11～12。</p>
+<p class="ot2">3.　基督受诸天管治的行为所生出的美德（由衣服繸子所表征），成了医治的能力—太十四34～36，可六53～56。</p>
+<p class="ot2">4.　在圣经中，繸子象征属天的管治—民十五38～39。</p>
+<p class="ot2">5.　过正当的召会生活，凭基督活出祂拔高的人性，使我们带着能力的美德，医治周围的人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主医治人身上一般的疾病，也医治人身上各部分的器官，好使人各部分的器官能被恢复，得以尽功用。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主不仅一般的医治人各样的病症，主也专特的医治人身上某一部分的器官，如医治人的瞎眼，使人恢复属灵的视力；医治人的耳聋使人能听见属灵的说话；医治人的舌结，使人能开口为主说话。今天，我们都需要经历基督作医治我们属灵疾病的那位。同时我们因着有分于神圣的生命并经历基督人性的美德，就能将这医治的能力供应给别人。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主医治瞎子（一）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶稣就摸他们的眼睛，说，‘照着你们的信，给你们成就了吧！’他们的眼睛就开了。（太九29～30上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在迦百农两个瞎子跟着主耶稣，称主为大卫的子孙。主就带他们到屋子里，藉着主直接的摸，他们的瞎眼得着医治。瞎子的眼睛得开，表明里面的视力得着恢复，看见神和属灵的事物。在第二个事例中，有人带一个瞎子来，求耶稣摸他。主拉着瞎子到村外，吐唾沫在他眼睛上，按手在他身上，这指明主要瞎子和他有一段私下且亲密接触的时间，使主能将恢复视力的元素注入他里面。主的唾沫象征从主口里出来的话，将神生命的光传输给接受的人，使他得复明。主又按手在瞎子身上，指明主与瞎子联合为一，将他医治的元素注入瞎子里面，使他能看见。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>与主有私下且亲密接触的时间，使主能将恢复视力的元素注入我们里面。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

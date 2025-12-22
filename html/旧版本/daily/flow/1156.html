@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1155')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1157')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 4 课<br />
+神奥秘的管家</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　今天神的国度。（诗歌751首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经:　因为我们的逾越节基督，已经被杀献祭了。所以我们守这节，不可用旧酵，也不可用恶毒邪恶的酵，只用纯诚真实的无酵饼。（林前五7下～8。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　神的奥秘的管家—林前四1～21</p>
+<p class="ot2">1　基督忠信的仆人—1～5。</p>
+<p class="ot2">2　对天使和世人的一台戏—6～9。</p>
+<p class="ot2">3　世界上的污秽，与万物中的渣滓—10～13。</p>
+<p class="ot2">4　生身的父—14～21。</p>
+<p class="ot1">二　对付恶弟兄—五1～13</p>
+<p class="ot2">1　恶人受审判—1～5。</p>
+<p class="ot2">2　守除酵节—6～8。</p>
+<p class="ot2">3　将恶人从召会中挪开—9～13。</p>
+<p class="ot1">三　对付信徒间的诉讼—六1～11</p>
+<p class="ot2">1　召会的审判—1～8。</p>
+<p class="ot2">2　没有资格承受神国的人—9～11。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识使徒是神奥秘的管家，并对付哥林多召会中淫乱以及信徒彼此争讼的难处。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>林前四章论到神的奥秘的管家，强调四个要点：基督忠信的仆人，对天使和世人的一台戏，世界上的污秽与万物中的渣滓，以及生身的父。五章论到对付犯淫乱罪之恶弟兄的事，这粗鄙的罪是来自情欲，这样的人需要受审判。六章对付信徒间的诉讼，信徒应该宁愿受冤枉，被亏负，而不该彼此告状，更不应告在不信的人面前。我们在主耶稣基督的名里，并在我们神的灵里，就能主观的经历被洗净、圣别并称义，使我们够资格，预备好承受要来的国度。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　基督忠信的仆人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前四1～2：这样，人应当把我们看作基督的执事，和神的奥秘的管家。还有，在此所求于管家的，是要他显为忠信。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在新约里，管家是一个服事的人，负责把神分赐给祂的家人。神有一个很大的家庭，祂渴望把祂自己分赐到祂所有的家人里面。而管家的责任，就是把神家中丰富的供应，就是神圣生命的供应分配给家人。保罗使用这事作隐喻，指明他自己是神家中的管家。这管家的职分就是职事。职事乃是管家的职分与事奉，把基督的丰富分配到身体的肢体—圣徒里面，以及整个身体—召会里面。在管家职分上最重要的，就是管家要显为忠信。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在主托付我们的职责上忠信，供应分赐基督给基督身体的肢体。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

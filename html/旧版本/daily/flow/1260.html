@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1259')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1261')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 18 课<br />
+使徒的劝勉、问安与祝福</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　新约执事的榜样（三）李常受</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后二14：感谢神，祂常在基督里，在凯旋的行列中帅领我们，并藉着我们在各处显扬那因认识基督而有的香气。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>李常受弟兄也是今时代主恢复中新约执事的榜样。他认识倪弟兄的职事后，就放下北方的工作，与倪弟兄同工。当召会经过风波，他总是刚强坚定的站住，在生命中照顾召会。尔后他更受差遣，从主接受负担，在台湾开始主恢复的工作。六二年受主差遣，把主的恢复扩展至英语世界。更于七○年代在主的带领下，圣徒们开始移民扩展，使主的恢复扩展到全球。七四年开始从主接受负担，一年两次释放圣经生命读经训练，八四年李弟兄已八十高龄，回台湾研究新路，实行生、养、教、建，同时建立全时间训练中心。李弟兄的一生向主全然忠信，传承神圣的启示，毫不懈怠，是今时代新约执事的榜样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>装备真理，被真理构成，以书写基督的活信，将新约的职事扩展到全地居人之处。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>享受神圣三一的祝福—子基督的恩、父神的爱、及圣灵的交通，与我们众人同在。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>什么是神圣三一的祝福？如何经历？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘如果我们要享受三一神，就必须花更多的时间祷告。然而，我们祷告的意义不该是为着许多事物祈求神；我们祷告的意义应该是与神同在。我们可以说，神是焚烧的火，我们则是藉着祷告留在祂这火里面，让这火将属于神自己的东西烧到我们里面。</p>
+<p>如果我们藉着祷告与父同在，我们不仅会经历神的爱，也会经历基督的恩典。我们会有主恩典的丰富给我们享受，而这恩典在我们的经历中是增多的，使我们富足的，也是够我们用的。尤其是当我们供应并分赐基督给别人的时候，这恩典会使我们能以胜任，并且够我们用的。这个够用，是来自我们里面增多并使人富足的恩典。</p>
+<p>我们与爱的父同在，享受主增多的恩典，我们就也在圣灵的交通里。事实上，我们会消失在涌流的灵里；我们里面深处会觉得有东西在我们里面涌流，那就是圣灵在我们里面涌流。这就是享受圣灵的交通，也就是三一神分赐到我们里面。</p>
+<p>如果我们天天这样实行与主说话，神圣的馨香之气就会浸润我们，膏油就会膏我们、印我们，那灵的“墨”就会浸透我们，神圣的光也会照明我们。结果，我们就完全为三一神所浸润。然后，我们就会享受父的爱，子的恩，圣灵的交通。’（神圣三一的神圣分赐下册，488～489页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>藉着更多的祷告，享受神圣三一的同在和祝福。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

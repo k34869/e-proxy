@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('251')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('253')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">随时接触人，将人背负到主前</p>
+<p>我所亲爱所切慕的弟兄们，我的喜乐和冠冕。（腓四1）</p>
+<p>我们如果要在主手里有用，就必须对人感兴趣，喜欢研究人。特别是遇见新来的人，总是主动上前就近他们，接触他们，能帮助他们一下就高兴，和他们谈一谈话里头就觉得痛快。我们必须有这种喜爱接触人的性格，不然我们的事奉会有很大的亏损。</p>
+<p>每一次聚集，我们都该提早到会去等人，渴望见到他们并和他们说话。即使和人接触五分钟也好。若是我们在每次聚会前后，都这样接触两个人，那么一周五次聚会，至少可以接触十个人。也许圣徒们一散会都走光了，我们却可以从聚会的地方陪一个人走到马路口，这样就可以和他谈几句，问他：‘弟兄，你作什么事？你在主面前如何？’有时，就是这几句简单的话，会给人莫大的帮助。我们总要学习随时接触人，随时给人恩典。</p>
+<p>再者，我们也需要前去探访人，这是为圣灵圣别人作豫备。圣灵是圣别人的灵，（彼前一2，）祂圣别人的第一步是寻找失丧的罪人。（路十五8～10。）然而，为了让圣灵去寻找人，我们就需要去探访他们。如果我们不去探访人，圣灵就无法寻找他们。如果我们周而复始的探访人，俯就人，寻找的灵迟早会光照人的心，使他们被主摸着。</p>
+<p>在召会中，以及我们周围的朋友和邻舍中，有许多人需要我们将他们担在肩上，怀抱在胸间，并且前去探访、接触他们，与哀哭的人同哭，与喜乐的人同乐。我们必须爱他们，将他们当作担子来背负，直到他们被主得着。（参性格，68～70页；活力排的训练与实行，151、153页；为着召会的建造正常结果子和牧养的路，16页。）</p>
+<p class="title">推磨开福音的门</p>
+<p>一八○○年代中期，美国长老会的差会来到中国山东烟台。村长下令无论任何人若看到洋人走近，就要敲锣示警。因这缘故，美国传教士郭显德初来中国时，无人接待他，不租房子给他住，也不卖东西给他吃，走在街上，人一见他就齐喊洋鬼子来了，大人纷纷把孩子带回家，家家户户关大门，等他走过去，才会把大门打开。一天，郭教士藏在一户人家的大门框内。那家主人开点门缝，想要看看郭教士走了没有，郭教士立刻把手杖插进门内，一面商量哀求，一面又把一只脚伸进大门去；再商量再哀求，便把身子挤进去了。</p>
+<p>根据中国古时的传统，每家都有一个磨谷物的地方。人们大多用骡子来推磨，如果没有骡子，他们就会使用人力。当郭教士进入那家的院子里，全家的人都出来要赶他走；但郭教士一见有人在推磨，就跑去帮忙。他这么作使整个气氛改变了，全家的人对郭教士无可奈何，便纷纷转身去作其他的事，留下郭教士独自一人在那里推磨。推了一个小时，郭教士挥汗如雨，那户人家的母亲不忍心，就叫儿子拿杯水给他喝。几个钟头之后，那家人过意不去，劝郭教士休息，他就借此传福音给他们。因着郭教士服苦低就的服事，摸着那户人家的心，至终开了福音的门。（参为着召会的建造正常结果子和牧养的路，24～25页；造就故事下册185～186页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：从主领受负担，前去探访、接触人，直到他们被主得着。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

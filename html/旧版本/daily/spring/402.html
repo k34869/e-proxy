@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+               <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('401')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('403')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第2课  性格—可靠</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>路加福音十六10 在最小的事上忠信的，在许多事上也必忠信。</p>
+<p>岳堪纳生长在非洲中部一个布道所里面，自幼就听福音，接受主耶稣作他的救主。有一天，他的教师命他打扫教室。他扫到大书橱的面前，就想：‘书橱后面不必扫。扫或不扫，毕竟无人看见，何必多作此工呢？’可是另有一个思想来到：‘在这整个教室之中，有一地方，我可为主而扫，因为他人不会知道。’于是他就打扫书橱的后面。扫的时候，他就祷告说，‘主阿，我是为你而扫此地。’</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个可靠的人是可以将需要的事信托给他们去作的人。他们可以把事情办好。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当父母、亲戚、年长的兄弟姐妹或老师要求你作某事时，他们期望你会去作。例如，当爸爸要求你喂你的宠物时，他希望你能将食物给你的宠物。如果你不喂你的宠物，它就会生病。你爸爸不知道你没有这样作，他会认为宠物生病是另外的原因。如果你是一个可靠的人，别人会请你作事，因为他们知道你会把事情作好。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇三三4 因为耶和华的言语正直；凡祂所作的，尽都信实。</p>
+<p>早年，尼泊尔的喜马拉雅山南麓很少有外国人涉足。后来，许多日本人到这里观光旅游，据说这是源于一位少年的诚信。一天，几位日本摄影师请当地一位少年代买饮料，这位少年为之跑了3个多小时。第二天，那个少年又自告奋勇地再替他们买饮料。这次摄影师们给了他很多钱，但直到第三天下午那个少年还没回来。于是，摄影师们议论纷纷，都认为那个少年把钱骗走了。第三天夜里，那个少年却敲开了摄影师的门。原来，他只购得4瓶饮料，尔后，他又翻了一座山，趟过一条河才购得另外6瓶，返回时摔坏了3瓶。他哭着拿着碎玻璃片，向摄影师交回零钱，在场的人无不动容。后来，到这儿的游客就越来越多。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个可靠的人在提供所需要的东西上是可信托的。可以指望他们把交代给他们东西的带来。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：在学校里有很多场合，你将被安排在一个小组中，负责承担某项任务或完成某项任务。例如，假设一个男孩被安置在一个小组中，老师安排每人带一种原料作饼干。如果这个男孩没有带他的原料，他会让整个小组失望，因为每种原料都是制作饼干的关键。哪怕只有一个人忘记带他的原料，也没有人能作饼干。（可选）：手工制作饼干，体会每种成分对于制作美味饼干如何是必需的。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>列王纪上六12~14 论到你所建的这殿，你若遵行我的律例，履行我的典章，谨守我的一切诫命，行在其中，我必向你实现我对你父亲大卫所说的话；我必住在以色列人中间，并不丢弃我民以色列。所罗门建造殿宇，并且建造完成。</p>
+<p>马礼逊初到中国传道不久，就发电报给他的祖国，请求增派工作人员。有一人很愿意一生当传教士，但当委办们查问他的资格之时，见他面貌不扬，大有庸夫俗子的气概，就决定不派他，说他太粗俗了。后来，他们又想：‘他虽不配为传教士，或可当一仆役。’于是他们就推选委办中的一位，前往征求他的意见，问他愿意前往中国，非为传教士，只为仆役否？他一听见这话，不费思索的回答说，‘我都愿意，就是作一个仆役，我亦愿意；只要有机会在主的工作上服事主，建立主的圣殿，就是劈柴挑水，都是极大的光荣。’那个粗俗的人就是后来著名的米怜。信徒服事主，是否能得主的称赞，不在事之大小，乃在是否忠心。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个可靠的人是一个可以信赖的人，无论环境多么困难，他都可以作或提供所需要的东西。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：一旦你承诺去作某事，不管它有多困难或者你多么不喜欢作，你都必须把它付诸实施。可以讲述所罗门建造神殿的故事（列王纪上6:1—38）。在那七年里的日子，毫无疑问，所罗门觉得这项任务太艰巨了。但他知道他必须继续下去，这样神才喜悦，并能得着一个为着祂彰显的居所。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

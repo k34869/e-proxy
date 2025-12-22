@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('282')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('284')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第27课  创造—人的受造奇妙可畏（十三）拣选良心</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传二三1下 诸位，弟兄们，我在神面前行事为人都是凭着无亏的良心，直到今日。</p>
+<p>不敢吃忍不住：有一小孩，他的母亲给他六粒糖，叫他留到明天吃。这小孩把糖摆在面前，要吃又不敢，不吃又忍不住，就把每一粒都摆在唇边用舌头舔一舔。这样一次过一次的用舌头把糖舔一舔，起先六粒还是六粒，后来一粒一粒化小了，再后来，吃了一粒，还剩五粒，吃了二粒，还剩四粒，最后一起吃光了。许多基督徒犯罪也是如此。违背良心一下，再违背良心一下，慢慢就把良心摆在一边，向世界找快乐去了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：当神造人时，祂给人造了良心和意志。神希望我们用自己的意志顺从我们良心的感觉。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：如果我们的良心告诉我们“不”，那么我们必须用我们的意志选择不，接受良心的劝勉。我们可能会看到很想吃的饼干，但我们不想询问母亲是否允许我们吃，因为我们认为她会说“不”。所以我们可能会不去问就拿饼干吃。当我们想要吃饼干的时候，我们的良心会告诉我们：“不，不要随便吃饼干。”我们需要运用我们的意志去顺从良心的感觉。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传二四16 我因此操练自己，对神对人常存无亏的良心。</p>
+<p>偷枇杷:倪弟兄一次在漳州聚会，某校校长要将一班小学生带来听道。倪弟兄有些不愿意，因为怕他们在会场中吵闹，妨碍别人。但那校长是个很有经历的人，他说福音是有能力的，也许会救他们中间几个人罢。所以就让这班小学生来听。事后该校的学生中有人来对倪弟兄说，‘现在校中出了事情。认罪之风大起。有一小孩不过七、八岁，曾与数同学偷吃校长室旁边的枇杷，现在知道这是罪，要想认罪罢，又不敢，因为怕校长；不认罪，又不平安，哭了两天，至终向校长认了。’人因犯罪堕落，丢弃了良心的感觉；得救之后，良心的作用恢复，感觉敏锐起来；基督徒必须按着良心的感觉，对付罪恶。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：人既有良心，又有意志。我们的意志需要被训练的刚强，以顺服良心的感觉。我们的意志必须迅速顺从良心。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：或许有一天我们对兄弟姐妹或朋友说错话。我们的良心搅扰我们，告诉我们应该说对不起。我们需要训练我们的意志，迅速做出反应，去做我们的良心要我们做的事。我们不应该“抑制”我们的良心，而应该同意它告诉我们要做的事情。如果我们不训练我们的意志顺从我们的良心，而试图忽略良心所告诉我们的，最终我们会失去良心的感觉。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>路加福音二四47 传悔改以得赦罪之道，从耶路撒冷起，直到万邦。</p>
+<p>不许再开酒店:一九○五年，在挪威的奥斯陆，有一个开酒店的人，同他的妻子去赴隆德的讲道聚会，受了圣灵感动。散会回家，二人夜间都睡不着。那人说，‘我甚是忧愁难过，我的良心不许再开酒店，破坏许多家庭幸福。我虽不知我们将要遭遇什么，但我决心不再贩卖酒类。’他的妻子说，‘我也这样想。但我不敢说，因为若不卖酒，我们将何以为生？’那人说，‘我不晓得怎样。虽然我已年老，且开酒店已经多年，但是我总不能睁着眼睛引人跑往地狱里去！’次日，他们又去赴会，并将此事告知隆德。隆德告诉他们，可将酒店改为一间杂货铺。过了不久，这个杂货铺颇蒙祝福，生意不错。在对付的事上，有时看似损失，其实所得更多。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：纵然人堕落有罪，神也用人的良心和意志保护人类。我们的救赎就是依靠我们用意志顺服我们良心的感觉。接受良心的感觉就是接受神。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：我们的良心是神的代表，告诉我们什么是神所定罪的，什么是神所称许的。当我们做神定罪的事时，我们的良心就会控告我们（让我们内心感到不安）。我们的意志就是我们选择同意神或不同意神的部分。因此，我们的意志需要被训练，以顺服我们的良心。人接受神救恩的第一步是悔改。这意思是他们需要运用意志承认自己的罪，承认他们需要神的拯救。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

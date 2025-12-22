@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('161')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('163')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">邮票簿的应许</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">总没有因不信而疑惑神的应许，反倒因信得着加力，将荣耀归与神。（罗4:20）</div>
+<div id="CC">But with regard to the promise of God，he did not doubt in unbelief，but was empowered by faith，giving glory to God.（Romans 4:20）</div>
+<div id="C">乔治的奶奶答应送他一本邮票簿，可是过了很久，仍然没有给他，而且不再听她提起过。但乔治的同伴来找他玩时，乔治便把所收到的礼物一件件拿出来展示，并且总要加上一句：“奶奶给我一本邮票簿。”乔治的母亲听他说了好几次，觉得奇怪，就问说，“乔治，奶奶并没有给你邮票簿，你为什么常这样说呢？”乔治回答说，“妈妈，奶奶既然答应了，就等于我已经得到了。”乔治的妈妈不再说些什么，恐怕伤了他的信心。有一天，乔治的母亲想试验他的信心如何，就对他说，“乔治，我想奶奶已经忘记了。”乔治立刻说，“不，她绝不会忘记的。”并且脸上现出喜悦的光彩说，“妈妈，你想我要不要写一封信去谢谢她的礼物呢？”妈妈说，“你可以试一试。”几分钟后，他把感谢信写好，寄了出去。不久，回信来了，里面写着：“亲爱的乔治，我没有忘记要给你的邮票簿。我想照你喜欢的样式去买，可是本城买不到，我就向纽约函购。但是寄来之后，我一看仍旧不对，所以我又向芝加哥函购了。你所爱的祖母。”他脸上带着胜利的表情，对母亲说，“妈妈，我不是告诉过你吗？祖母既然答应了，就等于我已经得到了。”他的心里从来没有疑惑过；不久，信心就变成了事实。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

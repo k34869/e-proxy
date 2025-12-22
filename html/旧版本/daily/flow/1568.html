@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1567')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1569')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 8 课<br />
+各面的嘱咐</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　最后的嘱咐</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>提前六17：…不要心思高傲，也不要寄望于无定的钱财，只要寄望于那将百物丰富的供给我们享受的神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗在神面前，并在基督耶稣面前嘱咐提摩太，要过属神之人的生活，直到主耶稣来；好使主能称赞提摩太是凭着神圣生命而活之属神的人。最后保罗嘱咐提摩太，要保守所托付他的，就是他从保罗所领受健康的话，这话不仅是为他自己，也是为着别人。他也要避开世俗的空谈，和那些冒称知识的反论，以免在信仰上偏离目标。愿保罗对提摩太的嘱咐，也成为对我们的嘱咐，使我们都领受并保守这些健康的话语，成为属神的人；持定那真实、永远的生命，为着将来替自己积存美好的根基作宝藏，好叫我们在国度时代，能享受主的赏赐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>持定那真实、永远的生命，为着将来替自己积存美好的根基作宝藏。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>敬虔是彰显神的生活，是为着神圣经纶之神圣分赐的结果，这分赐是在于操练我们的灵，在日常生活中活基督，使神在召会生活中得着团体的显出。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>你有没有发过脾气？试见证自己在想发脾气时，如何操练灵。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>敬虔就是基督从我们身上活出，成为神在肉体的显现。今天这位基督就是那灵，住在我们灵里。（罗八9～10，提后四22。）因此，操练自己以至于敬虔，就是操练我们的灵，在日常生活中活出基督。…我们该从里面被基督所喂养，然后我们该有一种彰显神的生活。</p>
+<p>‘我们必须建立操练灵的习惯。…你早上起来若立即说，“哦，主，”这会有很大的不同。你早上起来如果什么也不说，你可能有例行公事的祷告，却没有真正的摸着主；这是因为你没有操练灵。我们必须建立说“哦，主”的习惯。当我们说“哦，主”的时候，我们就摸着主。这是操练灵的习惯。</p>
+<p>有时候我们可能在艰难的光景中。我们可能病了，或者失业了。那时，我们应当操练我们的灵。我们应当勉强自己说，“哦，主耶稣！”“操练”这个辞含示勉强。操练总是一件勉强的事。当奥林匹克运动员为着练习或竞赛操练自己时，他们必须有刚强的意志。他们勉强自己操练。我们基督徒若要刚强并要在主里长大，就必须勉强自己用我们的灵。</p>
+<p>假定我们…遇到了难处；…那时你如果不操练你的灵，你整个魂，包括你的心思、意志、情感，就会得胜。你的魂就会胜过你，制伏你，征服你的灵。这甚至会使你很厉害的发脾气。因此，每当你在艰难的光景中，你必须勉强自己操练你的灵。勉强你自己操练、使用你的灵，会使你成为不一样的人。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在日常生活中操练我们的灵，以活出基督。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

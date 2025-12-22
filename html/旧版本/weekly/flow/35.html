@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('34')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('36')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>你将这些事题醒弟兄们，便是基督耶稣的好执事，在信仰的话，并你向来所紧紧跟随善美教训的话上，得了𫗪养。（提前四6）</p>
+<p class="title">提摩太紧紧跟随保罗</p>
+<p>提摩太是一个跟随保罗的年轻弟兄，他的父亲是希腊人，母亲是犹太人。他的外祖母罗以，和母亲友尼基，都是以信心传家的姊妹。她们靠着向神的爱心和信心抚养提摩太，将那对神无伪的信心，传输到他里面；也将旧约中摩西的律法教导他。因此，提摩太对圣经充满渴慕，神也赐给他智慧，使他从小就明白圣经。当他渐渐长大，对主和圣经的认识也逐日增加，就成为路司得召会中一位爱主的年轻弟兄。路司得和邻近召会以哥念的弟兄们都称赞他，为他作见证。保罗和西拉来到路司得，看见他如此爱主，就带他一同出外传福音。提摩太也接受了保罗和众长老为他按手祷告，使他得着神的恩赐。从此他一直跟随保罗，接受保罗的带领。提摩太对待保罗就像儿子对待父亲一样，保罗也以为父的心肠培植他，期盼他成为神家中贵重的器皿。提摩太成了保罗得力的助手，被保罗打发到各处去坚固召会；他不仅𫗪养初信的帖撒罗尼迦召会，也去看望有难处的哥林多召会。</p>
+<p>提摩太身上最大的特点，就是紧紧跟随保罗和他一切的教训。甚至保罗在安提阿、以哥念、和路司得等地，传扬福音而遭逼迫时，提摩太仍然紧紧跟随，不离开保罗。后来保罗在耶路撒冷被捉拿，而囚禁在罗马监狱时，其他的同工都不能与保罗同心同魂，惟独提摩太仍为着福音与保罗一同事奉。当保罗第二次被囚，许多同工甚至离开他了，只有提摩太仍亲密的与保罗是一，甘愿为基督的工作，冒生命的危险。至终，提摩太效法保罗，成为一位一生爱主、忠心事奉主的弟兄。因着保罗的成全、以及他自己的学习，提摩太成了神家中贵重的器皿，也成为耶稣基督的精兵。</p>
+<p>最后，他和他属灵的父亲保罗一样，因着坚定传扬神的话，而忠信的为主殉道了。</p>
+<p class="title">倪柝声弟兄受成全</p>
+<p>倪柝声弟兄见证，他的得救与蒙召事奉主是同时的，从他得救那天起，他就决定他的前途是为着事奉主。他知道主救他，一面要他得着主永远的生命，一面是要他来事奉主，并与主同工。他因着寻求主，就与和受恩教士接触。和受恩对主有活的认识，对十字架有深的经历，并且一直操练十字架的功课。每当倪弟兄有问题，或需要属灵上的指导和加强时，他总是去找和受恩。和受恩也把他当作年轻的学习者，常常责备他。那时，有六十多位青年弟兄姊妹，接受和受恩的帮助。她在主里很深，又极其严格，不久之后，这些青年人大都不再去见她了，只剩下倪弟兄一位。因着倪弟兄有意把自己送去给她责备，就从她得着数不尽的帮助，也受了极大的造就与成全。（参倪柝声—今时代神圣启示的先见，9、11～13页；历史与启示上册，35～36页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：紧紧跟随召会中爱主、服事主的榜样，在善美教训的话上得着𫗪养。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('159')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('161')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">开办疗养院</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">凡你们祷告祈求的，无论是什么，只要信已经得着了，就必得着。（可11:24）</div>
+<div id="CC">All things that you pray and ask，believe that you have received them，and you will have them.（Mark 11:24）</div>
+<div id="C">美国加州有位姊妹，因为看见军人和公务员有疗养院，而神的仆人们辛辛苦苦传道一生，到了病老，却没有疗养院，她就求神赐给她二万五千美元，借以开办疗养院。祷告之后，她心里很有把握，便起来感谢神。<br/><br/>　不久之后，她听说有一片土地要出售，看了之后觉得很满意，就拿出数百元付订金，说定某月某日交款，否则订金没收。但是付款日期越来越近，那笔巨款却尚无着落。但她不慌不忙，安如泰山。有一天有人来拜访她，对她说，“按我们考察，有一个矿坑要从你现在所要买的那块地经过，我们想要出钱向你买那块地。”那女士说，“不卖。”那人便问说，“你肯租吗？”她说，“不租。但是有一个办法，就是在某个时期内，你卖煤油所得的钱，百分之五归我，就可以经过那块地。”他们彼此约定后没多久，二万五千元就凑齐了，正好用以付款。后来暴风雨把矿坑洞口塞住，再挖采时，竟然没有油了。真希奇，她求主赐她二万五千元，她有信心，在未得之前心灵早已知道，如同已经得着，并且开口感谢神，这就是信心。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

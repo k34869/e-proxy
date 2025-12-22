@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1168')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1170')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 5 课<br />
+对付婚姻与食物</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　不因食物绊倒软弱的弟兄</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前八8～9：其实食物不能将我们荐与神，因为我们不吃也无亏缺，吃也无盈超。只是你们要谨慎，恐怕你们这权利，竟成了那软弱人的绊脚石。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>论到吃祭偶像之物，那些没有正确知识的人，从前拜偶像，现在信了基督，却还带着拜偶像的习惯感。对这些人，关于偶像的事，他们的良心是软弱的，因此吃祭偶像之物，会玷污他们的良心。我们也当知道，食物不能将我们荐与神。这意思是说，在基督里我们没有规条，可以自由作某些事。但有些事不能将我们荐与神，就如吃祭偶像之物，或是因时髦而染发，或奇特的装扮等等，这些事不能将我们荐与神，我们不作也无亏缺，作了也无盈超，所以我们该学习作那些能将我们荐与神的事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在作各种事情时，都顾到基督和祂的身体。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>重看神所命定的婚姻，不滥用身体的自由。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>班上是否有同学在交往异性朋友？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘看全部圣经，神心目中最恨恶的大罪是拜偶像，其次是淫乱。拜偶像是对神的侮辱，而淫乱是对人的摧残。神造人是为着祂自己神圣的目的，但撒但藉着淫乱把人摧残了。</p>
+<p>在某些特别情形之下，主耶稣撕毁了旧约中的仪文规条，但祂不撕毁关于淫乱的律法，反倒加强它。当法利赛人和祂谈到休妻的时候，主确切的说，摩西许他们休妻是因他们的心硬，但起初并不是这样。（太十九3～9。）主重看休妻的诫命，远超过旧约时代的看法。（五27～28。）这是因为任何事摧残人性都不像淫乱那么厉害。保罗说，“人所犯的，无论什么罪，都在身体以外；惟有行淫的，是得罪自己的身体。”（林前六18。）哦，仇敌是这样狡猾！他先把许多邪恶的念头，注射到青年人心中，而第一个行动是淫乱。…</p>
+<p>青年弟兄姊妹的婚姻，不要进行得太快，也不要把婚姻看得太轻松、太容易。…婚姻是极神圣的关系。（来十三4。）婚姻不许破裂。（太十九6，9。）任何人破坏了婚姻的结合，确实是得罪了神。这件事…必须向着主极其郑重。一旦结了婚，就不可离婚。没有什么得罪主，过于不正当的婚姻；也没有什么摧残人性，过于淫乱。这不仅是道德的问题，更是摧残了神为祂自己的目的所造的人性。’（基督是实际，149～150页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>逃避青年人的私欲，与清心呼求主的人，一同竭力的追求基督。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

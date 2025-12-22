@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('800')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('802')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">司布真跳下马感谢神</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>帖撒罗尼迦前书5:18</p><p>凡事谢恩；因为这是神在基督耶稣里对你们的旨意。</p><p>In everything give thanks; for this is the will of God in Christ Jesus for you.</p><p>华北有一位朱姓基督徒，籍贯朝鲜，家中夫妻两口，生有一男一女，热心爱主，舍己为人。</p><p>一日，幼女忽罹急症，就医、祷告都无效，结果死去。他的妻子哭得死去活来，痛不欲生。可是朱君反而口口声声感谢神。他的妻子很不服气，说，‘孩子死了你感谢，我问你还有什么可感谢神？’朱君答说，‘孩子活着感谢神，孩子死了也应当感谢神，这就叫作“凡事谢恩”。请你擦去眼泪，我再分析给你听听。如今我们全家一共大小四口，神命令要在我们当中取去一个。请问，假使要取我去，而我又不能不去，那么，你就成了寡妇，孩子就成了孤儿；我又要负担家中生活，无论如何我是不能死。那么我不死，你死呢？马上我就成了鳏夫，孩子成了无母的弃儿，即便我能续弦，难保孩子不受苦。所以你现在也是死不得。神在这两个孩子当中要取去一个，自然，我们不愿让大孩子去，因为再过几年，他就能帮助我们。那么就得轮到幼女。她的生命我们看为宝贝，天父更是看为宝贝。所以祂接她去，离开尘世，返回天家，享受我们所不能给她的快乐。何况际此米珠薪桂的日子，神也藉此减轻我们生活的负担；你想该不该感谢神？’当她听了丈夫这番分析，觉得实在有理，也就跪在神前承认埋怨的罪，同声感谢神。‘凡事谢恩；因为这是神在基督耶稣里向你们所定的旨意。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

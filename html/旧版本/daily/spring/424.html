@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('423')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('425')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">印第安人感恩妙法</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗马书十二2  不要模仿这世代，反要藉着心思的更新而变化，叫你们验证何为神那美好、可喜悦、并纯全的旨意。</p><p>有一位圣徒睡在茅屋中，思想自己一生之经历，觉得许多措置颠倒的事，无法理解，想想就睡着了。梦中有人叫自己的名字说，‘约翰，快来！我要把神带领人的道理显示给你。’他就起来，跟着他走。黄昏时，走到一间房子前面叩门。主人开门接待他们进去，并留他们过夜；谈话时，拿出一个金杯来对他们说，‘我的仇人今天和我讲和了，他送给我这只金杯作为纪念。’第二天早晨，和约翰同来的那人偷了主人的金杯，和约翰一同走了。约翰就问他：‘主人这样优待你，你为什么偷他的金杯呢？’同行者责备他说，‘你应该保持缄默。神领人之道就是这样。’第二天晚上，又走到一家门口，同行者叩门；主人很不客气的骂了他们一顿，赶他们走。同行者对约翰说，‘我们还是再走罢。’临走，将偷来的金杯送给责骂他们的人。约翰看见非常诧异，正要开口询问，同行者说，‘应该缄默。神领人之道正是如此。’又来到一户贫穷的人家，主人很欢迎，殷勤的款待他们。同行者问主人：‘你为什么满面愁容呢？’主人说，‘我一生都很殷勤的工作，但是不幸的事总跟着我，因为境况不好，所以东西都卖光了，现在只剩下这所破屋了。’同行者说，‘神必定会扶持你。’次日清早天还未亮，他们二人就动身走了，同行者点火要烧主人的屋子。约翰大怒说，‘不可以这样！’就拉他的手阻止他。同行者又说，‘应当缄默。神领人之道就是如此。’说完就点火烧屋。第三天晚上，又走到一家门口叩门；主人开门款待他们。看那主人的脸，就能知道不是善类。他不大和客人谈话，对他的儿子则显出笑容，表示十分宠爱；因为这是他的独生子。次日，二人动身时，主人说，‘请二位客人和我的孩子一同走，他要到某地去，路中必定要经过一条大河，上面有座独木桥，请二位代为照料，免得发生不幸。’约翰的同行者说，‘神必保护他。’到桥边时，主人的儿子要回家，不要过桥。同行者对约翰说，‘请你先过桥，等我来领小孩过去。’那孩子走到桥当中时，同行者把他推入水中。约翰看见几乎昏倒，厉声责备他说，‘你不是人，你是假冒为善的恶魔！我宁愿饿死在此，或让野兽吃掉，也不愿再和你走一步了。你还敢说，你所行的是显示神领人之道么？你说谎，你必定要和你的谎言一同下入地狱。’同行者忽然显出天使原形，对他说，‘约翰，你放心听我说。我偷那优待我们的主人的金杯，乃是因为他的仇人在这杯中放了毒药，一饮就死；我要保全他的性命，所以把它偷来。第二位主人罪恶太多，应该毁灭他，所以我把杯子送给他。第三位主人殷勤而且良善，我烧掉他的屋子，是因他的屋子地底下藏了很多财宝，屋子烧掉之后，必定要去掘除那些砖瓦，地内财宝因此必被发现，不但可以另建新屋，而且可以救济他的贫穷。我推入水中的孩子，他的父亲是个强盗，孩子大了必定模仿他；现在他的父亲因丧独生子，必定受感改过。约翰，你是人，只见眼前，不明白神工作的妙意，以为是颠倒是非了。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

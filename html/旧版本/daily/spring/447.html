@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('446')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('448')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">作佣工你愿意么</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗六16（上）　那灵自己同我们的灵见证我们是神的儿女。</p><p>美国的浦力金（Prigin），一面作牧师，一面学哲学，打算得一哲学博士。他感到生命不够长进，就在那里祷告。他对神说，我有顶多的不信，有的罪没有胜过；我也没有能力作工。他有两周之久，特别祷告，求神用圣灵充满他；他要得着照圣经所说的得胜的生命和能力。神就对他说，你真是要么？如果你是真要的话，就二个月以后不要考哲学博士，我用不着一个哲学博士。他觉得这件事有点难，他的哲学博士是最稳当要得着的，若是不去，真有点可惜。他就跪下祷告，同主商量，问主为什么不让他一面得哲学博士，一面作牧师。一件事顶希奇，神从来不和人商量，神要求了，就是要求了；神说了，神命令了，是不能更改的。他那两个月是最痛苦的。到末了的一个周六，他里头起了交战，是要哲学博士呢，是要圣灵的充满呢？是哲学博士好呢，是得胜的生命好？别人可以得到哲学博士为神所用，我怎么不能呢？他一直挣扎，一直同神商量；他真是没有办法。哲学博士可爱，圣灵的充满也可爱。但是神不肯让步，要得哲学博士，就不能有属灵的生活；要有属灵的生活，就不能得哲学博士。末了，他流泪说，我顺服。虽然我二年之久学哲学，从小孩起，三十多年来一直盼望得一哲学博士，但是，为着顺服神的缘故，只好不去。他就写信给学校当局，他周一不去应试，从此永远不要哲学博士了。他一夜顶累，第二天上讲台也无道可讲，他就简简单单把顺服主这段故事讲给大家听。那一天，在那里，有四分之三的人流泪，得了复兴。他自己也有了力量了。他说，我若早知结果乃是如此，我早就顺服了。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

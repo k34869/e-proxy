@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1792')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1794')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 5 课<br />
+在撒狄和非拉铁非的召会</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：弟兄和睦同居。(诗歌622首）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：因为你稍微有一点能力，也曾遵守我的话，没有否认我的名。（启三7～8）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　在撒狄的召会—改革的召会—启三1～6</p>
+<p class="ot2">1　说话者—那有神的七灵和七星的—1。</p>
+<p class="ot2">2　召会的情形：按名是活的，其实是死的；那剩下将要衰微的；没有一样行为是完成的—1～2。</p>
+<p class="ot2">3　主的嘱咐与临到—3。</p>
+<p class="ot2">4　得胜者—撒狄还有几名—4～5：</p>
+<p class="ot2">a　未曾因死亡玷污自己衣服。</p>
+<p class="ot2">b　给他们的应许：穿白衣与主同行；名字不会从生命册上被涂抹；主在父和众使者面前承认他们的名。</p>
+<p class="ot2">5　那灵所说的话—6。</p>
+<p class="ot1">二　在非拉铁非的召会—恢复的召会—7～13</p>
+<p class="ot2">1　说话者—那圣别、真实的，拿着大卫的钥匙，开了就没有人能关，关了就没有人能开的—7。</p>
+<p class="ot2">2　召会的情形：稍微有一点能力；曾遵守主的话；没有否认主的名；有一个敞开的门—8。</p>
+<p class="ot2">3　犹太教被征服—9。</p>
+<p class="ot2">4　主的嘱咐与给得胜者的应许：保守他免去那试炼的时候；主必快来；冠冕；在神殿中作柱子；神的名，神城的名，并主的新名，都写在他上面—10～12。</p>
+<p class="ot2">5　那灵所说的话—13。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>写给在撒狄和在非拉铁非的召会的书信，使我们认识召会历史上改革的时期和恢复的时期，鼓励我们穿白衣与主同行，遵守主话并弟兄相爱。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录三章一至六节是第五封书信。这是给在撒狄的召会的书信。就表号说，在撒狄的召会预表从改教至基督再来时的更正教。改教运动是神对背道罗马天主教的反应。按历史来看，改教所作的，没有一样是完成的。一面，改教运动把许多东西恢复了；但另一面，那些恢复的东西有许多都衰微了。改革的召会不能满足主的心，因为他们没有完全回到召会正常的光景。所以主在这里仍呼召得胜者，祂给得胜者的应许，第一是穿白衣与主同行，第二是在生命册上不涂抹他们的名，更要在父和父的众使者面前，承认他们的名。七至十三节是第六封书信，乃是给在非拉铁非的召会的书信。就表号说，在非拉铁非的召会预表十九世纪初期，在英国兴起的弟兄们恢复的正当召会生活。祂给恢复的召会一个敞开的门，无人能关。至终，主应许得胜者，要将神的名，和神城的名，并主的新名，都写在他上面。这表明神的所是，新耶路撒冷的性质并主的人位，全都作到得胜者里面。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在撒狄的召会</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启三1：你要写信给在撒狄的召会的使者，说，那有神的七灵和七星的，这样说，我知道你的行为，按名你是活的，其实是死的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>撒狄，原文意余数、余剩者或恢复。就表号说，在撒狄的召会预表从改教至基督再来时的更正教。罗马天主教成了国际的召会，与所有的国家搀混在一起，而以教皇为首。国教成立以后，许多寻求者不满意，他们反对国教，成立许多不从国教的民间召会，如长老会、浸信会等。然而在主眼中，国教和民间召会都是软弱且满了死亡，改革的召会不能满足主的心，因为他们没有完全回到召会正常的光景。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>满足主的心，完全回到召会正常的光景。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

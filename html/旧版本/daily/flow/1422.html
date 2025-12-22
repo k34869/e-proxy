@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1421')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1423')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 6 课<br />
+以基督为我们的目标和期待</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：神的心意是要我们。(诗歌546首。)</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：弟兄们，我不是以为自己已经取得了，我只有一件事，就是忘记背后，努力面前的，向着标竿竭力追求，要得神在基督耶稣里，召我向上去得的奖赏。（腓三13～14）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主观认识基督并祂复活的大能—腓三10上</p>
+<p class="ot1">二　有分于祂受苦的交通，模成基督的死—10下</p>
+<p class="ot1">三　达到那从死人中杰出的复活—11</p>
+<p class="ot1">四　竭力追求以取得基督—12～16</p>
+<p class="ot2">1　不以为自己已经得着了—12。</p>
+<p class="ot2">2　忘记背后，努力面前的—13。</p>
+<p class="ot2">3　为得奖赏向着标竿竭力追求—14。</p>
+<p class="ot2">4　众人都要思念这同一的事，并按着那同一规则而行—15～16。</p>
+<p class="ot1">五　为着身体改变等待基督—17～21</p>
+<p class="ot2">1　要效法使徒并那些向着标竿追求基督的人—17。</p>
+<p class="ot2">2　要对付身体，不沉缅于物质的需要—18～19。</p>
+<p class="ot2">3　我们的国籍是在诸天之上—20上。</p>
+<p class="ot2">4　我们热切等待救主—20下。</p>
+<p class="ot2">5　我们卑贱的身体要改变形状—21。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>藉着竭力追求基督而赢得祂到最完满的地步，并等待基督将我们的身体改变形状。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在腓立比第三章，教导腓立比的信徒如何对付魂和身体。他以自己为榜样说到他如何竭力追求基督，以基督为他的目标。他对基督不仅有客观、启示上的认识，更有主观、经历上的认识。他也认识基督复活的大能，同祂受苦的交通，并模成基督的死，渴望达到那从死人中杰出的复活。然而，保罗并不以为自己已经得着了，他乃是忘记背后，努力面前的，为得奖赏向着标竿竭力追求。他要腓立比的信徒也都思念这同一的事，并按着那同一规则而行。保罗又对付信徒的身体，不沉缅于物质的需要，而该热切等待救主来临，将我们这卑贱的身体改变形状，同形于祂荣耀的身体。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主观认识基督并祂复活的大能</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓三10上：使我认识基督、并祂复活的大能。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>基督复活的大能，就是使祂从死人中复活的复活生命。在经历上认识复活大能的路，乃是回到我们的灵里，留在我们的灵里。藉着祷告、或简单的赞美、唱诗、得胜的呼喊，都是帮助我们回到灵里，经历基督复活大能的路。许多令我们觉得为难的环境，如婚姻、家庭、学校、甚至召会生活等等，都是模子的一部分。我们要在经历上认识基督复活的大能，就需要被放进苦难的模子里。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>藉着祷告、赞美、唱诗、呼喊主名，回到灵里，经历基督复活的大能。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

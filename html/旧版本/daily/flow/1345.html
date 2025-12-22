@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1344')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1346')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 13 课<br />
+基督安家在我们心里</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　哦我主的神圣丰富。（诗歌403首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：愿祂照着祂荣耀的丰富，藉着祂的灵，用大能使你们得以加强到里面的人里，使基督藉着信，安家在你们心里，叫你们在爱里生根立基，使你们满有力量，能和众圣徒一同领略何为那阔、长、高、深，并认识基督那超越知识的爱，使你们被充满，成为神一切的丰满。（弗三16～19。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　使徒为召会求经历的祷告—弗三14～19</p>
+<p class="ot2">1　要圣徒得加强到里面的人里—14～16。</p>
+<p class="ot2">2　要基督安家在圣徒心里—17上。</p>
+<p class="ot2">3　要圣徒领略基督的量度—17下～18。</p>
+<p class="ot2">4　要圣徒认识基督的爱—19上。</p>
+<p class="ot2">5　要圣徒被充满，成为神的丰满—19下。</p>
+<p class="ot1">二　使徒为着神在召会中，并在基督里得荣耀，向神的赞美—20～21</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识使徒为召会求经历的祷告：要圣徒得加强到里面的人里、使基督安家在圣徒心里、领略基督的量度和祂的爱，至终被充满，成为神的丰满。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以弗所三章的后半，是使徒保罗为召会的第二个祷告。在这祷告中，他要圣徒为着召会经历基督。首先，我们需要照着父荣耀的丰富，凭着祂的大能得着加强，且藉着内住的那灵，加强到里面的人里。当我们得以加强到里面的人里，就使基督在我们里面扩展，从我们的灵扩展到我们的心思、情感和意志里。基督越多在我们里面扩展，就越多定居且安家在我们里面，作我们的人位。基督的量度是阔、长、高、深的宇宙的量度。我们经历基督，先是经历祂所是的阔，再经历祂所是的长，这是平面的。当我们在基督里长进时，就更经历祂丰富的高和深。我们要经历基督的宇宙量度，就需要召会生活，与身体的众肢体一同经历基督。这样我们能被平衡，而且丰富。至终我们能在灵里认识并经历基督那超越知识的爱，且因新陈代谢的吸收基督的丰富而被充满，成为神的丰满，就是祂的彰显，在宇宙中领先归荣耀给神！</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　得加强到里面的人里</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗三16：愿祂照着祂荣耀的丰富，藉着祂的灵，用大能使你们得以加强到里面的人里。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>三章十四至二十一节，是使徒保罗为召会的第二个祷告。是要圣徒为着召会经历基督，我们要主观的经历基督，就需要加强到里面的人里。父乃是藉着内住的那灵来加强我们，并且加强到里面的人里。虽然我们的了重生，主进到我们灵里作我们的生命，然而我们都习惯从灵里出去，而不习惯进到灵里并停留在那里。我们需要不断经历得加强到里面的人里，不断经历被带回到灵里，回到我们里面的人里。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>照着神的荣耀被加强，回到我们里面的人里。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

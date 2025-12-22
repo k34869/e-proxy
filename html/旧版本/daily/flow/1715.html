@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1714')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1716')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 11 课<br />
+神圣的供备与神圣的行政（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　神对异端讥诮者的审判</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼后三9：主所应许的，祂并不耽延，像有些人以为祂耽延一样；其实祂乃是宽容你们，不愿任何人遭毁坏，乃愿人人都趋前悔改。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼得提醒信徒，要记念旧约申言者和新约使徒所说的圣言。那凭神的话存留之现今的诸天和地，照神与挪亚所立的约，不再被水毁灭，却要在不敬虔的人受审判遭毁坏的日子，给火焚烧。不敬虔的假教师和好讥诮的人，要在神圣的行政下受审判遭毁坏。再者，主的心不在意祂的应许得应验的时间，乃在意我们这些祂所宝贵的赎民，没有一人因祂行政的审判受刑罚，反倒有一段延长的时间，让我们因着没有为主来的日子儆醒，以及没有过圣别的生活和敬虔悔改，使我们免受祂的刑罚。我们该殷勤预备自己迎见祂，也该供应生命给别人，这是催促主回来惟一的路。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>时时向主悔改，殷勤预备自己迎见祂，也供应生命给别人，催促主的回来。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>研读圣经，留意申言者的话，接受光的照耀，经历基督是晨星，在我们心里出现，照耀在我们所处之背道的黑暗中。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼后一章十九节说到‘天发亮，晨星在你们心里出现’，有那两面的意义？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘晨星的出现，就是白昼将到的证据。那些在暗中仰望祂的人，就要看见祂，得着祂的安慰。晨星并不是基督的显现，并不是基督在人众前表明祂的荣耀。祂自己作晨星，意思就是祂是睡觉的世界和打盹的召会，所不能看见的。因为他们都是在世上自荣，忘记了现在是黑夜的时候，也忘记了基督的十字架。一个得胜者，乃是在黑夜中儆醒的人。他们不能和罪恶的世界，并腐败的召会，一同睡觉、打盹。他们在黑夜中仰望主，所以主将夜里的诗歌赐给他们，叫他们得着晨星。他们所注意的，乃是将来的事，因为晨星已经在他们心里显现。</p>
+<p>即使召会从古到今，都是忠心的，世界也已经是在黑夜中了；何况再加上召会的腐败呢？太阳升时，乃是呼召人去殷勤作工；而晨星只是为那些不与别人同睡的人，而照耀的。有的人，他们要在太阳出来时看见亮光。然而当太阳未来时，我们就先看见晨星的光，那是何等的好呢！…就是在最黑暗的时候，晨星才发现。所以要得着晨星的人，反要因着环境的黑暗，而知他们看见晨星的时候不远了。</p>
+<p>晨星预言白昼快到。当主耶稣尚未降下灾难审判世界之前，祂就要迎接我们回去。那时我们就要和祂一同掌权。…当那个时候，我们要与我们的主一同有分于祂的政治。这是何等的有福呢！所以，主在这里对圣徒说到他们将来的被接与掌权，好叫他们的心不以现今的世代为目的物，只以将来的荣耀为中心点。</p>
+<p>我们必须这样的知道主，和将来的事情，免得我们受现在环境中背道和腐败的影响。因为我们的心按着天然而论，乃是最会倾向虚荣，盼望在世界里出类拔萃的。若非有将来的盼望，我们的心就不能蒙保守，以离开现今的恶世。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>留意申言者的话，得着基督在我们的心里如晨星出现，照耀在我们所处之背道的黑暗中。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

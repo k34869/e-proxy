@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>申言参考</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('20')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">第 27 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('22')"><div class="bt_text">后一周</div></v-btn>
+
+</v-card>
+          </div>
+         
+          <v-divider></v-divider>
+<div class="banner2">
+                二O二三年冬季训练
+                <br />
+                第六周 基督作我们安息日的安息，由迦南美地所预表
+              </div>
+       <br />
+<p class="heading">鸟     瞰</p>
+<p class="answer"></p>
+<p class="heading">周     一</p>
+<p class="bible_reading">晨祷经节：</p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="heading">周     二</p>
+<p class="bible_reading">晨祷经节：</p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="heading">周     三</p>
+<p class="bible_reading">晨祷经节：</p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="heading">周     四</p>
+<p class="bible_reading">晨祷经节：</p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="heading">周     五</p>
+<p class="bible_reading">晨祷经节：</p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="heading">周     六</p>
+<p class="bible_reading">晨祷经节：</p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="bible_reading"></p>
+<p class="answer"></p>
+<p class="heading">总     结</p>
+<p class="answer"></p>
+     <br />
+<v-divider></v-divider>
+    <br />
+<v-btn color="primary" elevation="5" rounded @click="jump('如何写申言稿.html')"><div class="bt_text">如何写申言稿</div></v-btn>
+     <br />
+<br />
+<br />
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+      });
+    </script>
+    <style>
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        font-size: 25px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+         margin: 1em;
+       
+      }
+      .bt_text {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .bible_reading {
+        background-color: #ffeed5;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-indent: 0em;
+        padding: 8px 8px 8px 10px;
+      }
+      .heading {
+        background-color: #d5ecff;
+        font-weight: bold;
+        text-align: center;
+        padding: 8px 8px 8px 0em;
+      }
+      .answer{
+   background-color: rgb(223, 220, 220);
+  font-size: 1.3em;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  margin-top: 1em;
+  text-align: justify;
+ text-indent:2em
+}
+     .title{
+  
+}
+   .banner2 {
+  font-size: x-large;
+  font-weight: bold;
+  background-color: #ffcb7c;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+    </style>
+  </body>
+</html>

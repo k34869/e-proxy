@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1686')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1688')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 7 课<br />
+以基督为榜样活出佳美的品行（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　荣耀、尊贵的生机联结</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前三21：这水所预表的浸，现在藉着耶稣基督复活，也拯救你们；这浸并不是除掉肉体的污秽，乃是向神诉求无亏的良心。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们受浸并从水里起来以后，我们一切的罪、罪过、过犯、罪愆都得了赦免，缠累我们生活和我们这人的一切难处都埋葬在水里了。所以，我们受浸以后，就有神圣的生命和赐生命的灵，使受浸的表号在我们的经历中对我们成为又真又活的。现今我们日常的行事为人该在复活基督的灵里，就是藉着基督之灵的生命大能，活出复活里的基督。这就是新而佳美且荣耀神的品行。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>日常的行事为人活在复活基督的灵里，藉着基督之灵的生命大能，活出复活里的基督。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以基督为美德，活出佳美、纯洁、贞洁的品行，并以温柔安静的灵妆饰自己，而不重外面的妆饰。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼前三章说到姊妹们应当以什么为她们的妆饰？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘彼前三章四节启示，我们的灵是我们心中隐藏的人；这隐藏的人是温柔安静的灵。我们的灵温柔安静的时候，就是隐藏的。四节指明，我们这人的每一部分都可视为一个人。我们物质的身体是我们外面的人，我们的魂是我们彰显、显明出来的人，我们的灵是我们隐藏的人。</p>
+<p>照着彼前三章，我们这人在神面前最美丽的部分，最可爱的妆饰，就是温柔安静的灵，这是心中隐藏的人。这点表明我们的灵是我们这人最深的部分。所以我们若要在神眼中成为可爱的，就必须从我们这人深处成为可爱的。我们不该只在外面、在物质一面可爱，我们必须在里面、在隐藏的人里可爱。这人在人看来是隐藏的，但在神看来却不是隐藏的，因为这样隐藏的人，就是温柔安静的灵，在神眼中乃是可爱的。…</p>
+<p>四节一面说到隐藏的人，另一面却说这是在神面前。这就是说，温柔安静的灵在人看来是隐藏在我们心中，但在神面前并不是隐藏的。神看得见它。所以这是敬虔的人该有的真正美丽。’（生命的基本功课，163～164页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练圣别、虔诚的敬畏，而有佳美、纯洁、贞洁的品行。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

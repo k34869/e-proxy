@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('142')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('144')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第7课  创造—从地看出神的美丽</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>马太福音六28~29 你们细想野地里的百合花……就是所罗门在他极盛的荣耀里，也没有披戴得像这些花中的一朵。</p>
+<p>引    题：你知道花朵就有哪些形状和颜色吗？</p>
+<p>课程内容：花的形状千奇百怪，有的像喇叭，有的像时钟，有的像蝴蝶，有的像一串鞭炮。花的颜色也是五彩缤纷，白色、橘色、红色、黄色、紫色、蓝色…；有一种我们常见的花叫凤仙花，别名又叫指甲花。指甲花的身体有根、茎、叶子、花、果实和种子六个部分。花颜色多样，有粉红，大红，紫色，粉紫等多种颜色。（简要说一下用途）</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造揭示神美的属性。神不仅使万物各具特色，而且还使它们美得与众不同。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：细想不同类型的开花植物，它们的颜色都很美。据估计，有超过300000种开花植物。花海是一副美丽的景象。神创造了地球上所有的植物和树木来展示祂的美丽。带来不同颜色、形状和其他特征的花木图片展示给孩子们。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>雅歌二12 地上百花开放，百鸟鸣叫的时候已经来到；斑鸠的声音在我们境内也听见了。</p>
+<p>引    题：请问你知道最漂亮的鸟儿叫什么？</p>
+<p>课程内容：鸟儿在空中飞来飞去，看起来多逍遥自在啊！为什么鸟儿会飞呢？因为神为它们造了一对翅膀，并且全身都有羽毛。神为它们所设计的骨头又轻又强壮，有许多是中空的，加强飞翔能力的作用。它们的身体里还有气囊，能使空气出入以加减体重，以适应空中飞翔。有这些特别的构造，鸟儿才能不受地心吸力的影响，在空中飞来飞去。鸟儿身上还有很多趣事，可以看出神的智慧与爱心！</p>
+<p>有一种鸟叫啄木鸟，有没有听过？它们专门吃树干里的蛀虫，好像树木的医生一样。树木被虫蛀以后，在树干里形成一条条的小隧道，就会慢慢枯死，但是啄木鸟来了，它有特别的本事，能发现那棵树里面有虫，又知道虫躲在哪里，就用它那两只像X形的脚趾，和有些硬度的尾巴攀住树干，再用尖尖长长的嘴巴在上面“笃笃笃笃”钻一个洞，然后用它那特长的、前端有倒刺的舌头，伸到小隧道内，就能把害虫取出来了。自己吃饱，还能为树木消灭害虫，保护森林，我们真要赞叹神创造的奇妙啊！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造揭示神美的属性。神美的属性在祂创造的鸟中被看到并听到。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：鸟类不仅用五颜六色的羽毛表达神的美丽，还发出悦耳的声音。几个世纪以来，人们一直被五彩斑斓的鸟类和鸣禽所吸引并陶醉其中。带来不同颜色的鸟的照片，如果可能的话，带一个音频文件或一个鸣禽“鸣叫”的视频，指出神是如何创造了许多不同的鸟类来表现祂的美。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>尼希米九6 你，惟独你是耶和华；你造了天和天上的天，并天上的万象，地和地上的万物，海和海中所有的；这一切都是你所保存的；天军也都敬拜你。</p>
+<p>引    题：你喜欢外出游玩吗？最喜欢哪里呢？为什么？</p>
+<p>课程内容：在神将地铺开的时候，因着神建造大地的美丽，星辰一同歌唱，天使也都欢呼（伯三八7）。神创造了美丽雄伟的山川，浩瀚无际的大海，因着地实在美丽，所以才有这么多人喜欢外出观光旅游。神这样创造地，是为着我们。神是有所喜悦的神， 祂也创造我们作有所喜悦的人。在创世记二章有这 样的话：‘各样的树…可以悦人的眼目。’（创二9。）所有的树都是悦人眼目的。我们怎么知道神喜欢美丽？我们只要看祂为我们创造的地就知道了。不仅如此，我们每天早上醒来，可以看到太阳从东方升起，灿烂阳光照亮大地并带给我们温暧。每天晚上当太阳西沉，地面变得黑暗时，月亮和星星就出现在空中，照亮漆黑的夜晚。每天都是这样。晴朗的夜晚，我们能看见众星是多么的美丽。这一切证明神是美丽的神。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造向我们展示神的美丽。天地万物的创造，不仅展示神的智慧和力量，也展示祂的美丽。神不仅有创造地球的大能，祂也以同样的方式展示了祂的美丽。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：在创造地球的过程中，神不仅仅创造一个简单的生活场所为着人类的生存。祂没有使大地平坦无峰，而是创造地上有山、谷、洞、森林、草地、沙漠、岛屿和极地。祂创造了海洋、溪流、瀑布、河流和湖泊。地球有不同的季节、气候和天气。我们有国家公园，因为我们认识到神创造的某些地方有特殊的美。如果我们看一看神创造的一切，我们就能看到神创造中的壮观。如果我们看到生命的美丽、奇妙、丰富，陆地的广阔，海洋的浩瀚，就会惊叹神所创造的这些是何等的壮丽。带上展现地球美丽的照片，如大峡谷，优胜美地，尼亚加拉瀑布，珠穆朗玛峰，大堡礁等，也可以带些从太空中俯瞰地球的照片。没有一颗行星看上去像地球这样美丽。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

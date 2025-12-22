@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1140')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1142')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 1 课<br />
+哥林多前书简介</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　基督的十字架</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前一18：因为十字架的话，对那正在灭亡的人为愚拙，对我们正在得救的人却为神的大能。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>基督的十字架也是召会难处惟一解答的一部分。十字架解决我们在基督徒生活并召会生活中所面临的一切困扰。人生满了难处与纠缠。按人的方法，协商或谈判是解决问题或脱开纠缠的方法。但神的路乃是把基督供应给我们，并藉着十字架了结我们。我们该专注于基督。我们也需要对十字架有正确的领会。十字架对犹太人为绊脚石，对外邦人为愚拙；但对我们蒙神呼召的人，十字架乃是神的能力和神的智慧。我们需要接受这个十字架，并享受基督；这是召会中所有难处的惟一解答。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>对十字架有正确的领会，接受十字架的了结，并经历十字架是神的能力和神的智慧。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>从哥林多前书中，我们看见在基督里的信徒有两个特征：第一，我们是蒙召的圣徒；第二，我们呼求主的名。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>从哥林多前书中，我们看见在基督里的信徒有那两个特征？什么是蒙召的圣徒？为什么我们要呼求主名？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘保罗在〔林前〕一章九节说，“神是信实的，你们乃是为祂所召，进入了祂儿子我们主耶稣基督的交通。”神呼召我们有分于、并同享祂儿子，也呼召我们同享包罗万有的基督作我们的分。说神呼召我们进入祂儿子的交通，就是说祂召我们进入对祂儿子的享受。神呼召我们进入对这位活基督的享受里。这享受不仅是个人的事，也是团体的事。神呼召我们进入对基督的共同享受里。’（神圣三一的神圣分赐下册，395页。）</p>
+<p>‘保罗写信给在哥林多的召会，然后给在各处呼求主耶稣基督之名的人。这位基督是他们的，也是我们的。基督是我们的。祂是我们的享受，我们的分，所以我们必须呼求祂。…在全本圣经中，没有另一卷书像哥林多前书那样开头。…我们藉着呼求祂的名，享受基督作我们的分。呼求祂是享受祂惟一的路。’（圣经中最大的预言及其应验，54、56页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识我们已蒙召分别归神，一同来呼求主的名；藉着呼求主的名，享受祂作我们的分。</p>
+<p>辅助活动—呼求主名操练灵。小排或主日聚集时，请青少年先一群一群的释放灵呼求主名，再由服事者帮助，一个一个的操练。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

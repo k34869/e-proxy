@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1385')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1387')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 18 课<br />
+属灵的争战</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　神圣的三一与神圣的分赐</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗六10～11上：末了的话，你们要在主里，靠着祂力量的权能，得着加力。要穿戴神全副的军装。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>圣经中关于三一神的启示，并不是为着道理的领会，乃是为着神在祂神圣三一里，将自己分赐到祂所拣选并救赎的人里，给他们经历并享受。神圣的三一乃是整本圣经的架构；特别是以弗所书，乃是以神圣的三一构成的。它是圣经中惟一以神圣的三一为每章之基本元素构成的一卷书。以弗所书的启示，说到召会这基督身体的产生、存在、长大、建造和争战，乃是由神圣的经纶，就是三一神分赐到基督身体的肢体里所组成的；因此，以弗所书的中心要点乃是：神圣的三一神圣的分赐到信徒里面。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受并经历神圣三一的神圣分赐。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们打属灵的仗，需要穿戴神全副的军装，使我们能以站住，抵挡魔鬼的诡计，邪恶的计谋。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以弗所六章十至十七节所说的‘全副军装’包括那些项目？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们在属灵争战时，…还得会积极的使用属灵的兵器。属灵的兵器，就是指以弗所六章十至十七节所说的“全副军装”，包括真理的腰带，义的胸甲，和平福音的鞋，信的盾牌，救恩的头盔，并那灵的剑。这些兵器都是属灵的，我们运用的时候也必须属灵。可说使用属灵兵器的一个基本原则，就是说，一切的活动都必须是出于灵，传福音是出于灵，造就圣徒是出于灵，治理召会是出于灵，无论什么活动都要出于灵，都要让灵来。凡不出于灵的，凡凭自己眼光，凭自己看法，凭自己智慧，凭自己聪明的，都难免是人的方法，都难免是血气的兵器，而不是属灵的兵器。所以我们在争战的时候，一切的活动都要出于灵，都要从灵里面摸出那个感觉来。这也是极其基本的原则。</p>
+<p>属灵争战〔也〕要有争战的祷告。…属灵争战绝不能忽略祷告。因为属灵的争战，大部分就是靠在祷告上。可说撒但最怕的，就是圣徒在主面前的屈膝，就是召会在神面前的祷告。就是在旧约里面，我们也能看见许多争战祷告的例子。比方但以理，他一开始祷告，宝座上就有了动作。但当宝座上的答应要通下来的时候，在天空就通不过。但以理就祷告，继续的祷告，他那个祷告就是争战。一个守住升天地位的人，乃是在天上掌权，又能使用属灵的兵器，他所发出的祷告，就大有功效，能摸着神的宝座，也能影响撒但的权势。神就是盼望圣徒有这样的祷告，来与祂同工，为祂争战。’（生命的经历下册，443～445页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在身体里穿上神全副的军装，与撒但空中的权势争战。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

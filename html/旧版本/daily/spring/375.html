@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('374')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('376')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">骨头戒指</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林后1:12　我们所夸的，是我们的良心见证我们凭着神的单纯和纯诚，在世为人，不靠属肉体的智慧，乃靠神的恩典，对你们更是这样。 For our boasting is this, the testimony of our conscience, that in singleness and sincerity of God, not in fleshly wisdom but in the grace of God, we have conducted ourselves in the world, and more abundantly toward you.</p><p>在波士顿有一　鱼的经销商，是一热心虔诚的基督徒。他最喜爱家庭聚会，这时是他最快乐的一刻。另有两个　鱼商和他商量，将所有的　鱼包买包卖，这样就可抬高　鱼的价钱。他们的计划非常成功。但是这位基督徒商人因为听说波士顿许多人由于　鱼起价大大受苦，他的良心非常不安，在家庭聚会时不能祷告，就立刻跑去和他的朋友说，‘我不要任何的事来拦阻我的家庭聚会。今早我跪下祷告的时候，看见千千万万的　鱼，把神的施恩座遮住；我想从这些　鱼上面越过与神亲近，或从这些　鱼四围绕过与神亲近，都作不到。每次祷告，这些　鱼总是站在神与我之间。这样，我就是得到整个大西洋中的　鱼，又得着千万的金元，于我何益？’他宁愿少赚一点钱，不让他的祷告受阻碍。</p><p>儿诗205 每当我心安静主前</p><p>G大调4/4</p><p>1</p><p>每当我心安静主前，</p><p>灵里静听我主慈言，</p><p>圣灵充满在我心间，</p><p>使我得享平安无限。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

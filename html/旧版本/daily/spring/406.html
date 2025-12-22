@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('405')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('407')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">排队买电影票</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>弗4:30　并且不要叫神的圣灵忧愁，你们原是在祂里面受了印记，直到得赎的日子。 And do not grieve the Holy Spirit of God, in whom you were sealed unto the day of redemption.</p><p>有一位姊妹的先生还未信主，常常要求她，陪他去看戏。这位姊妹屡次推脱，实在不好意思。有一次就陪他去了；一到电影院里面，心里非常不安，她就闭着眼睛陪先生看戏。但是圣灵在她里面，还是叫她过不去。看了一半，就对先生说，我实在受不了，请你准我回家罢。她以后再也不敢进电影院去。一个虔诚爱主的人，稍为沾染一点点污秽，圣灵在他里面就有感觉，与从前没有信主之前迥然不同。从前是巴不得有人请他看戏，越看越喜乐；现在贴他钱去看戏，也不愿意。圣灵一次过一次将神的成分涂到他里头去，使他产生一种分别为圣的感觉。</p><p>补充832</p><p>我听见了主耶稣说：“我是世界的光，</p><p>转眼看我，晨星必出现，照耀你的途径。”</p><p>我从自己转向耶稣，祂是我晨星、太阳。</p><p>生命光中，欢乐行走，行尽客旅路程。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

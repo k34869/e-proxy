@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('139')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('141')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">纯的操练（四）切慕纯净的话奶，靠此长大以致得救</p>
+<p>像才生的婴孩一样，切慕那纯净的话奶，叫你们靠此长大，以致得救；你们若尝过主是美善的，就必如此。（彼前二2～3）</p>
+<p>彼前二章一至三节告诉我们：‘要脱去一切的恶毒、和一切的诡诈、并伪善、嫉妒、以及一切毁谤的话，像才生的婴孩一样，切慕那纯净的话奶，叫你们靠此长大，以致得救；你们若尝过主是美善的，就必如此。’在此，彼得先题到要脱离五件消极的事：恶毒、诡诈、伪善、嫉妒、以及毁谤的话。恶毒是根，是源头，毁谤的话是表现。我们里面也许有恶毒为根，至终就会有毁谤的话作这恶毒的表现。从恶毒到毁谤的话，其间的发展包括诡诈、伪善和嫉妒。我们若有诡诈，也就会有伪善；若有伪善，也就会有嫉妒，最终的表现是毁谤的话。</p>
+<p>如果我们要脱离这五件消极的事，就要像才生的婴孩一样，切慕那纯净的话奶，靠此长大，以致得救。我们藉着重生得着神的生命，就需要由神的话所传输的奶得着滋养，在生命里长大，以致进一步的得救；这样的得救乃是为着神的建造。二节的‘纯净’，意即诚实；与一节的‘诡诈’相对，就是不为着虚假的目的，不为着其他的目标，只为着滋养魂。话奶不是为着身体，乃是为着魂，就是里面的人。这奶是在神的话里传输出来，藉我们理性心思的领会，且由我们心思机能的吸收，滋养我们里面的人。</p>
+<p>我们物质的身体怎样用奶滋养；我们里面的人，我们的魂，也需要用纯净的话奶滋养。这奶包含一种能消除我们诡诈的元素。我们该切慕纯净的话奶，叫我们靠此长大。人都是复杂的；复杂的人要变为单纯，惟一的路就是吃主耶稣。我们越吃祂并接受祂的话，我们就越单纯；如此，我们就会变得纯一且清洁。（参彼得前书生命读经，149～151、154页；出埃及记生命读经，514页。）</p>
+<p class="title">怀特腓认识肉体败坏</p>
+<p>怀特腓（George Whitefield）是一特出的传道人，他论到自己说，‘在我们所有尽本分的行为中，都有败坏搀杂在里面。所以当我们悔改之后，如果主要照着我们的行为，才收留我们，我们的行为就要定我们的罪。因为我们并不能献上什么，能彀像神的道德律所要求的那么完全。我不知道你们要怎么想。但是，我能说，我不能祷告，我只会犯罪；我不能向你们或者向别人传道，我只会犯罪。所以我只能这么说，就是我的悔改，还得再悔改；就是我的眼泪，也得在我的救赎主的宝血里去洗。我们最好的行为，也不过是精采的罪而已。’保罗说，‘我知道住在我里面，就是我肉体之中，并没有善。’（罗七18。）</p>
+<p>出于我们自己的，就是再好，也是不能蒙神悦纳。‘我们…所有的义都像污秽的衣服。’（赛六四6。）（参造就故事中册，84页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：切慕纯净的话奶，从话奶得着滋养，在神圣生命里并因神圣生命而长大。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

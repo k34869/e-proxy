@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1337')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1339')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 12 课<br />
+管家的职分与召会奥秘的启示</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　 我已得到宇宙至宝。（诗歌388首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：这恩典赐给了我这比众圣徒中最小者还小的，叫我将基督那追测不尽的丰富，当作福音传给外邦人，并将那历世历代隐藏在创造万有之神里的奥秘有何等的经纶，向众人照明，为要藉着召会，使诸天界里执政的、掌权的，现今得知神万般的智慧。（弗三8～10。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　管家的职分—弗三1～2，7～8，13</p>
+<p class="ot2">1　基督耶稣的囚犯—1。</p>
+<p class="ot2">2　恩典的管家职分—2。</p>
+<p class="ot2">3　福音的执事—7～8，13。</p>
+<p class="ot1">二　奥秘的启示—3～6，8～13</p>
+<p class="ot2">1　奥秘的启示—3。</p>
+<p class="ot2">2　基督的奥秘—4～6。</p>
+<p class="ot2">3　基督那追测不尽的丰富—8。</p>
+<p class="ot2">4　召会彰显神的智慧—9～13。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>论到恩典的管家职分，与关于召会之奥秘的启示。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>接续前面几课所论到召会的启示，本课开始说到召会的构成。使徒从第三章开始劝勉圣徒，行事为人要照着他的启示，就是与神的呼召相配。他说明自己是一个管家，得了恩典，得了启示，并成了高品福音的执事，传扬基督的丰富为福音，以产生召会。神的经纶就是执行将祂自己分赐到人里面。这是全本圣经的中心点。藉着我们的管家职分，就是分赐基督丰富的职事，我们有分于这经纶。我们是身体的肢体，不论多小，都得到与保罗同样的生命恩典；虽然恩赐各不相同，我们都能作使徒和申言者，把我们所得基督奥秘的启示分赐给人。因此，我们都需要更多的认识基督的奥秘—召会，并与圣徒一起享受同作后嗣、同为一个身体、并同为应许的分享者。也认识基督那追测不尽的丰富，都是为着产生召会；至终，我们要看见宇宙中最奇妙的杰作乃是召会，她是神的夸耀，是神智慧的展示，藉着她，撒但和他的使者就得知神万般的智慧。救赎，犹太人和外邦人中间隔断的墙已经被拆毁，仇恨已经废除了。因此我们不该再坚持任何的规条，反该为着实行召会生活，经历新人的实际，使神能藉着这一个新人成就祂的定旨。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　基督耶稣的囚犯</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗三1：因这缘故，我这为你们外邦人作基督耶稣囚犯的保罗，为你们祈求。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>第三章则说到召会的构成。一节说使徒保罗认为自己是基督的囚犯。表面上他是拘禁在监牢里，实际上他是被囚在基督里。每一个供应神丰富的执事、忠信爱基督的人，迟早要被基督囚禁，且被囚禁在基督里。但基督若是我们的监牢，我们的眼睛就会被开启，看见属天的异象。我们都需要祷告：‘主，为着属天异象的缘故，我愿意失去我的自由。别人也许以为我在受苦，但是当我被囚禁在你里面时，我享受你却到了极致。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受基督作囚牢，看见属天的异象并照此行事为人。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

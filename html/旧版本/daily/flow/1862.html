@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1861')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1863')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 14 课<br />
+两个巴比伦</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　天上的赞美</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启十九1～2上：这些事以后，我听见天上仿佛有大批的群众，大声说，阿利路亚！救恩、荣耀、能力，都属于我们的神。祂的审判是真实、公义的，因祂审判了那用淫乱败坏全地的大妓女。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>敌基督和他的军兵是在一小时之内被基督毁灭，物质的大巴比伦也在同时被主毁灭。巴比伦的毁灭也许是藉着一次大地震而完成；那次地震要使整座城沉入海底。大巴比伦遭毁灭之后，我们看见大批的群众在天上发出大声音，赞美神说，‘阿利路亚！’我们的聚会中应该满了阿们和阿利路亚。既然将来在天上要这样实行，今天我们在地上也可以这样实行。何等的喜乐，能说，‘阿利路亚！’</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练不住的呼求主，并随时的赞美祂！</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>恨恶巴比伦的原则，就是混杂，一半一半，向神不绝对。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>巴比伦的原则是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘巴比伦的原则就是把人的东西和神的道混在一起，就是把属肉体的和属灵的混在一起，就是把出乎人的来假冒出乎神的，就是要得着人的荣耀，就是要满足人的私欲。所以，巴比伦就是那混乱的基督教，也就是败坏了的基督教。我们对于巴比伦应该抱什么态度呢？…神的话是说，一切有巴比伦性质的东西，神的儿女都不能有分在内。所有把人的能力和神的能力混在一起的，所有把人的本事和神的工作混在一起的，所有把人的意见和神的道混在一起的，一切有巴比伦性质的，神说要从那里出来，不能在那里有分。神的儿女要从心里学习与巴比伦有分别，要从心里审判一切巴比伦的作为，这样，才不至和巴比伦一同被定罪。</p>
+<p>神最恨恶巴比伦的原则。我们在神的面前要注意，到底在我们里面有多少不是绝对的？一切不绝对的、一半一半的，就是巴比伦。我们要求神给我们光，让我们在光中审判自己一切不绝对的东西。当我们这样审判自己的时候，就是承认我们也恨恶巴比伦的原则。求主赐恩给我们，不让我们在基督之外求荣耀，不让我们在基督之外求尊贵。主所要我们爱慕寻求的，是作一个绝对的人，不作一个活在巴比伦原则之下的人。’（圣洁没有瑕疵，122～124页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>作一个绝对的人，不作一个活在巴比伦原则之下的人。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

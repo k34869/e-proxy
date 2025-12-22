@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('121')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('123')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">保罗对神有深而隐藏的经历</p>
+<p>祂对我说，我的恩典彀你用的，因为我的能力，是在人的软弱上显得完全。所以我极其喜欢夸我的软弱，好叫基督的能力覆庇我。（林后十二9）</p>
+<p>使徒保罗对主有深的经历，他在林后十二章说，‘夸口固然无益，但我是不得已的。’（1。）保罗写十二章的话，对于他自己是无益的，不过为着别人的缘故，他还得作。保罗说到主给他的异象和启示，是出于不得已的；这是我们所应当抱持的态度。许多弟兄姊妹，经不起神的异象，经不起神的启示，什么时候得着了一点，他们就要吹号，一下子什么人都知道了。但是，保罗知道他说到主的异象和启示，对于他自己是没有益处的。那么，为什么他又说呢？那是不得已的，因为有人疑惑他是不是使徒，在基督信仰的根基上出了问题。他把所得的启示都告诉人么？不。他说，‘我认得一个在基督里的人，〔这一个人就是保罗，〕十四年前，这样的一位被提，直到第三层天里。’（2上。）保罗将这个经历，隐藏了十四年才说，这是何等的深！我们若能把神的东西保守七年已经彀好了，但是保罗藏了十四年。保罗是一个有根的人！</p>
+<p>也许有人要说，保罗，你索性把十四年前的经历都告诉我们罢，把被提到第三层天的经历都说出来，那岂不更能帮助人么？但是他说，‘或在身内，我不晓得；或在身外，我也不晓得；’（2下；）他说，他‘听见不能言传的话语，是人不可说的’。（4。）一直到今天，这个经历还是根，还没有人知道。根是主要的问题。要有保罗的工作，就得有保罗的根；要有保罗的生活，就得有保罗的生命；要有保罗外面的能力，就得有保罗里面的经历。今天的难处，就是在神的儿女中藏不了属灵的东西，藏不了特别的经历。只要有一点的经历，就给许多人知道了。个人的生活都是活在人面前的，没有一部分是隐藏的，这就是没有根。我们要求神给我们看见保罗的经历，带领我们往深处去。（参十二篮第一辑，92～93页。）</p>
+<p class="title">司布真的好母亲</p>
+<p>司布真（C. H. Spurgeon，1834～1892）有一位热心事奉主的好父亲，也有一位经常为他们深切祷告的好母亲。他的母亲伊利莎身材虽然不高，心胸却是非常广大。她给司布真的帮助，远非人所能言。有一次，她跪在神面前，双臂抱着司布真的颈项，祷告说，‘哦，但愿我的儿子活在你的面前！’她会随时针对孩子的毛病，加以劝导，难怪她的八个子女个个都蒙恩得救。某次，司布真的父亲因为不能兼顾儿女属灵的栽培，心中感到非常不安。可是当他回到家里，听见妻子正在楼上，独自在房间里，为孩子们的光景，一一题名祷告时，他就感谢主，说，‘主阿，我可以继续关心你的工作，因为你的孩子们已经有了照顾。’（参造就故事下册，112页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：藉着祷告扎根在神里面，对神有深而隐藏的经历。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

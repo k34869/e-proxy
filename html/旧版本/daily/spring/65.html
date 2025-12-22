@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('64')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('66')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">跪在地图前祷告</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">所以我劝你，第一要为万人祈求、祷告、代求、感谢。（提前2:1）</div>
+<div id="CC">I exhort therefore，first of all，that petitions，prayers，intercessions，thanksgivings be made on behalf of all men.（1 Timothy 2:1）</div>
+<div id="C">在伦敦一处穷人的住宅区内，有一间小房子；这房子就是早年戴德生住的地方。那时戴德生不过是个二十多岁的青年人。在他那房间的墙壁上，悬挂着一幅全中国的大地图。戴德生每天都用几个钟头，跪在地图前祷告。当时中国还有十几个省没有福音传进去，也没有一个人去为主作见证。戴德生没有钱，也没有差会的帮助，并且肯和他一同到中国的人也不多，只有几个朋友，每周来一、二次，和他一同跪在那地图前祷告。那时，戴德生的心里有个一远大的志向，要将福音传遍中国内地。<br/><br/>　截至一九三三年为止，在中国内地会有总堂三百二十八处，支堂二千三百二十五处，西国宣教士一千三百多位。自设立召会以来，受浸的人数约十五万。这样大的事业，都是由于这一个青年人的志向，和他的祷告而来。</div>
+<div id="CC">祷告─凭信心（诗562）</div>
+<div id="C">再唱信心的歌！<br/>　无论夜如何黑；<br/>　你若赞美，神要工作，<br/>　使你所信能得。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

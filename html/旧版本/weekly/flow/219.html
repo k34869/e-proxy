@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('218')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('220')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">彼此相爱，爱邻舍如同自己</p>
+<p>亲爱的，我们应当彼此相爱，因为爱是出于神的。（约壹四7）</p>
+<p>神不仅要我们爱祂，亲近祂，神还给我们一个命令，就是要我们彼此相爱；（约十三34；）因为爱是出于神的。（约壹四7。）我们是从神生的，得着神的生命；这个生命就是神自己，而神就是爱。所以，我们从神得着的生命，乃是爱的生命。所有从神生的人，都有爱在他里面，就自然而然能彼此相爱。神赐给每位基督徒一个爱的生命，神就根据这个生命，给人一个命令：应当彼此相爱。</p>
+<p>神在我们里面，创造了一种需要，使我们觉得需要别人的爱和关心。神也在我们里面，为我们创造了一个亲爱人、关切人的性情，使我们能彀与人彼此相爱，甚至爱邻舍如同自己。如今，我们这班已经重生的信徒，成了神的种类，就是神类。我们既是神的儿女，有神的生命和性情，我们就应当也有爱。这意思是，我们不仅仅爱别人，我们就是爱的本身。我们既是神的种类，就应当是爱，因为神就是爱。</p>
+<p>因着神的第一个属性就是爱，而祂是按着祂的形像，也就是祂的所是，祂的属性造人。因此在受造的人里面，有一个东西，叫他愿意去亲爱人、关切人。甚至在堕落的人里面，也有爱的愿望。那是人的美德，是神爱之属性的彰显。当我们重生时，神就把祂自己这爱灌注到我们里面；这爱在我们里面，使我们能亲爱周围的人，像神一样的爱他们。</p>
+<p>我们亲爱人，并爱邻舍如同自己，乃是要使人认识神是爱的源头，并藉着相信主，得救进入神的家，神的国，也就是召会生活中。以弗所二章说，我们这从前远离神的人，靠着基督的血，已经得亲近了。（13。）如今，我们这些得救的人，不再是外人和寄居的，乃是圣徒同国之民，是神家里的亲人，彼此亲爱的过召会生活。（19。）（参初信造就下册，356～357页；活力排，85～86页。）</p>
+<p class="title">爱在主里的弟兄</p>
+<p>有一个人，他的父亲被人杀了，他定意要报这杀父之仇。但是，他是一个真基督徒。有一天，他去擘饼聚会，聚会的人围着一大圆桌坐着，正好，杀他父亲的那个仇人，就坐在他旁边。他只好离席到外边去，里面起了很大的交战。是杀他呢，还是进去与他一同擘饼？就在这个时候，神给他看见基督的爱。他看见自己原是神的仇敌，基督还救了他。至终，他被神的爱溶化了，就把眼泪擦干，进屋子里去，与他的仇敌一同擘饼。当那人出去的时候，他不看那人是仇人，乃是他在主里一位亲爱的弟兄。（参爱神，3～4页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：亲爱人，使人认识神，相信主，得救进入神的家，神的国，就是召会生活中。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

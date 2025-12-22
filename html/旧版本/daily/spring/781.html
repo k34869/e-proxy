@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('780')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('782')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">折脚小孩折翼小鸟</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>约翰一书 1:7</p><p>但我们若在光中行，如同神在光中，就彼此有交通，祂儿子耶稣的血也洗净我们一切的罪。</p><p>But if we walk in the light as He is in the light, we have fellowship with one another, and the blood of Jesus His Son cleanses us from every sin.</p><p>有一次，达秘到美国北边一个地方开会。当时，有一个人，叫作但以理斯底儿，是相当好的人。斯底儿也顶佩服达秘，不过他们两个有点合不起来。达秘最注重神的恩典，斯底儿最注重神在我们里面的路。虽然两个人路不同，但是达秘讲道，每一次斯底儿都去听。有一次，达秘就讲这一节圣经：‘我们如果在福音的光中行。’用福音的原则来说，像神在福音的光中一样。本来我们不认识神，我们不认识在福音里所启示的神。今天我们认识神，是藉着祂的福音所启示的神。神在祂恩典的光中，启示祂自己，我们也在祂福音恩典的光中，来到神面前，我们就能和神相交。达秘讲到这里的时候，但以理斯底儿在那里受不住了，这根本把他卫斯理会的道理打得粉碎了。他就站起来说，‘达秘先生，我问你，如果他的背朝着光走，怎么办？’达秘说，‘感谢神，这一个光就照在他的背上。’达秘一生说过许多好话，这就是顶好的一句。因为从斯底儿的眼光来看，如果我拒绝光，不要神圣的光，那还得了。但达秘是很简单的答覆他，因为他知道斯底儿，他说，‘弟兄，神的光会照在他的背上，因为神在福音里启示祂自己，把祂自己完全启示出来。今天我们凭着与在福音里启示的神有交通，结果祂儿子耶稣的血就洗净我们一切的罪。祂儿子耶稣的血洗净我们一切的罪，乃是根据于我们在光中行。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

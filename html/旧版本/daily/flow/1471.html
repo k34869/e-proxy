@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1470')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1472')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 13 课<br />
+一切影儿的实体</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：基督是万有惟一的实际。（诗歌374首）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：所以不拘在饮食上、或在节期、月朔、或安息日方面，都不可让人论断你们，这些原是要来之事的影儿，那实体却属于基督。（西二16～17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　不被掳去离开基督—西二8</p>
+<p class="ot1">二　在基督里面得了丰满并受了割礼—9～12</p>
+<p class="ot2">1　基督是神格一切丰满的具体化身—9。</p>
+<p class="ot2">2　在基督里得了丰满—10上。</p>
+<p class="ot2">3　基督是一切执政掌权者的元首—10下。</p>
+<p class="ot2">4　受了非人手所行的割礼，脱去了肉体的身体—11。</p>
+<p class="ot2">5　在受浸中与祂一同埋葬，也一同复活—12。</p>
+<p class="ot1">三　神救恩的经纶—13～15</p>
+<p class="ot2">1　涂抹了规条上所写反对我们的字据，把它钉在十字架上—14。</p>
+<p class="ot2">2　将执政的和掌权的脱下，（一个和平的环境，为着点活祂所拣选的人）—15。</p>
+<p class="ot1">四　一切影儿的实体—16～17</p>
+<p class="ot2">1　礼仪律法的各项，都是在基督里要来之属灵之事的影儿。</p>
+<p class="ot2">2　基督乃是一切正面事物的实际。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督是一切影儿的实体。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>歌罗西的圣徒在作美地的基督里，遭到文化的侵入，受了欺骗，就从对包罗万有之基督的享受里被掳去。所以我们要警觉，认识新约的教训以及圣经才是我们独一无二的标准。因为神格一切的丰满，都有形有体的居住在基督里面，我们在祂里面也得了丰满。所以我们不需要别的源头，我们是已经‘嫁’给祂了，也已经在祂这包罗万有的土壤里生根，就有分于祂一切的丰富。我们乃是藉着非人手所行的割礼—就是正确的受浸；这浸包含基督的死和那灵的大能—除去了肉体、天然的人和己。这正是神救恩经纶的清楚图画：神已叫我们一同与基督活过来；祂也废去礼仪律法的规条、并脱下邪恶天使的权势。所以，律法和天使都不再有地位，我们只该注意基督，祂是一切影儿的实体；饮食、节期、月朔、安息日的实际，都是基督。祂日日、周周、月月、年年对我们都是每一正面事物的实际。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　不被掳去离开基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西二8：你们要谨慎，恐怕有人用他的哲学，和虚空的欺骗，照着人的传统，照着世上的蒙学，不照着基督，把你们掳去。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>歌罗西圣徒的难处乃是文化的侵入。但他们受了那些与经历基督很类似的仪文和做法所欺骗而离开基督，就是智慧派的教训所掳去若是我们以基督作生命，持定祂作身体的元首，认识祂是神的奥秘，经历祂是荣耀的盼望，并在祂这包罗万有的灵里行事为人，我们就不会为任何人事物所欺骗。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在包罗万有的灵里行事为人，不受任何人事物所欺骗。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

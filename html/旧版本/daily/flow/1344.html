@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1343')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1345')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 12 课<br />
+管家的职分与召会奥秘的启示</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　召会彰显神的智慧</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗三10：为要藉着召会，使诸天界里执政的、掌权的，现今得知神万般的智慧。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>三章九至十三节说，‘并将那历世历代隐藏在创造万有之神里的奥秘有何等的经纶，向众人照明，为要藉着召会，使诸天界里执政的、掌权的，现今得知神万般的智慧……’召会所有的肢体，原是在毫无指望的光景中。然而，神凭祂的智慧，使我们成为召会。现今我们不仅得了救赎、拯救、洁净、自由、释放、重生，我们也是联结的。我们与神是一，也彼此是一。所以，我们是召会。召会是神最大的夸耀。召会是神的杰作，使神的智慧得着奇妙的展示。在神眼中，宇宙中最奇妙的东西乃是召会；藉着她，撒但和他的使者就得知神万般的智慧。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保守自己在召会生活中，使神的智慧藉着我们得着奇妙的展示。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>尽管家的职分，作福音的执事，将基督追测不尽的丰富传扬给人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们如何尽管家的职分，传扬基督追测不尽的丰富？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们必须是将基督那追测不尽的丰富当作福音宣报给人的人。在彼前说，我们这些新约祭司传扬福音时，乃是宣扬基督的美德。基督有很多美德，诸如怜悯、慈仁、恩典、爱和赦免。我们有这赦免的美德么？惟一真正能赦免的乃是神。赦免就是忘记。如果我们没有忘记，意思就是我们没有赦免。基督不仅赦免我们的罪，也忘记我们的罪。这是一项大的美德，是基督之丰富的一部分。</p>
+<p>我们需要藉着宣扬基督的美德，来传扬基督。…如果我们不知道该对人说什么，意思就是我们不认识基督。我们若充分的认识基督，就会有许多可说的。我们可以说，“亲爱的朋友，耶稣基督是救主。祂有许多的美德。祂主要的一个美德乃是祂的赦免。”然后我们可以继续说到祂的赦免。保罗说，他是神所指定要将基督那追测不尽的丰富，宣报给外邦人。（弗三8。）犹太人轻视外邦人，但神指定保罗去将基督那追测不尽的丰富宣报给他们。这个指派乃是他的使徒职分和他的管家职分。这是保罗的事业、工作，保罗在新约十四封书信里写下一些他所宣报的。这十四卷书信是何等的宣报！其中满了基督那追测不尽的丰富。</p>
+<p>当我们领受基督的丰富时，我们就得了丰富，我们也成为丰富的。基督的丰富得着彰显时，就成了基督的丰满。召会是基督的丰满，是基督的彰显。藉着享受基督的丰富，我们就成了祂的丰满，以彰显祂。乃是享受基督那追测不尽之丰富的结果。’（基督身体的内在观点，54～55页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练在主日时，在复活的生命里，胜过玛门的霸占，有财物的摆上。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

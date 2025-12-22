@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('429')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('431')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第6课 性格—信实</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多后书一18 但神既是信实的，我们对你们所说的话，就没有是而又非的。</p>
+<p>信守承诺爬行上班</p>
+<p>美国有一个小学校长，为激励全校师生的读书热情，公开打赌：如果学生们在11月9日前读书15万页，他在9日那天爬行上班。学生们完成之后，等着看校长的笑话，觉得他肯定不会兑现。</p>
+<p>没想到，11月9日早晨7点校长果真信守承诺四肢着地开始爬行上班。为了安全和不影响交通，他不在公路上爬，而是在路边的草地上爬。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：信实的人是信守承诺的人。这样的人总会说到作到。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：询问孩子们是否曾向他们的朋友或兄弟姐妹承诺，要给他们什么或与他们分享一些东西，但却没有作到。不论我们承诺什么，我们必须遵守诺言，不找借口。信实是守信。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>罗马书十二7 或服事，就当忠于服事；或作教导的，就当忠于教导。</p>
+<p>因失信而丧生的故事</p>
+<p>济阳有个商人过河时船沉了，他抓住一根大麻杆大声呼救。有个渔夫闻声而致。商人急忙喊：“我是济阳最大的富翁，你若能救我，给你100两金子”。待被救上岸后，商人却翻脸不认帐了。他只给了渔夫10两金子。渔夫责怪他不守信，出尔反尔。富翁说：“你一个打渔的，一生都挣不了几个钱，突然得十两金子还不满足吗？”淦夫只得怏怏而去。不料想后来那富翁又一次在原地翻船了。有人欲救，那个曾被他骗过的淦夫说：“他就是那个说话不算数的人！”于是商人淹死了。商人两次翻船而遇同一淦夫是偶然的，但商人的不得好报却是在意料之中的。因为一个人若不守信，便会失去别人对他的信任。所以，一旦他处于困境，便没有人再愿意出手相救。失信于人者，一旦遭难，只有坐以待毙。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：信实的人总会作他应该作的事情。这样的人在所交给他们的事上是可信托的。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：询问孩子们是否整理床铺或收拾房间。他们每天都这么作吗？询问孩子们的老师是否给他们重复的任务，比如给班级宠物喂食，或是把书架或美术箱整理好等等。他们的父母或老师能指望他们信实地履行他们的职责吗？在最初作某事时可能比较容易，但要作到信实和准确是不容易的。也可以举一些人们必须信实地完成一项任务具体的例子，并指出如果他们不这样作的后果。例如，每天必须完成工作的邮递员，或每天报告工作的警察，或必须打扫教室，每天锁门的门卫等。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>马太福音二五21 主人对他说，好，良善又信实的奴仆，你在不多的事上既是信实的，我要把许多事派你管理；进来享受你主人的快乐。</p>
+<p>记得有一次，同学周末约我出去玩，在校门口集合。她早早来到了校门口，而我却早已把这事抛在脑后了，还在家里悠然自得地画画。直到约定时间5分钟过后，我才想起来。我急急忙忙跑到了校门口，她生气地说：“你究竟怎么搞得，这么慢！以后再这样我不叫你出来玩了！”我很后悔，我和她到了歉。从那以后我再也没失约过。在友情里，诚信原来这么重要！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：信实的人总是信守承诺，作他们应该作的事情。他们不会忘记作事情，也不会错过聚会或活动。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：询问孩子是否信实地在家作作业和作家务。信实是什么意思？他们不用提醒就能作这些事吗？询问孩子是否参与任何体育活动或弹乐器。他们信实地练习吗？教练会喜欢那些表现不一致的球员，还是那些从不错过练习和比赛的球员？谁会信实地作他们应该作的？信实的人总是进步的，也是可信托的。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

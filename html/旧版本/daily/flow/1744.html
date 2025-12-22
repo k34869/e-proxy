@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1743')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1745')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 16 课<br />
+神圣出生的美德以实行神圣的义和爱</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：住在主里面无上的福气。（诗歌418首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：神就是爱。神差祂的独生子到世上来，使我们借着祂得生并活着，在此神的爱就向我们显明了。不是我们爱神，乃是神爱我们，差祂的儿子，为我们的罪作了平息的祭物，在此就是爱了。（约壹四8下～10。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　实行神圣的义－约壹二28～三10上</p>
+<p class="ot2">1　住在主里面而实行神的义－二28～29。</p>
+<p class="ot2">2　神圣的出生与大有前途的盼望－三1～2。</p>
+<p class="ot2">3　洁净自己，不实行不法－3～4。</p>
+<p class="ot2">4　基督曾显现，为要除去罪，消除魔鬼的作为－5，8。</p>
+<p class="ot2">5　不习惯的犯罪而过义的生活，显明是神的儿女，而非魔鬼的儿女－6～10上。</p>
+<p class="ot1">二　实行神圣的爱－三10下～五3</p>
+<p class="ot2">1　借着神圣的生命作神圣的种子和神圣的灵－三10下～24。</p>
+<p class="ot2">2　借着试证诸灵－四1～6。</p>
+<p class="ot2">3　借着神作至高的爱和全备的灵－四7～五3。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神圣出生的美德，以实行神圣的义和神圣的爱。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们借着膏油涂抹所享受神圣生命的第一项美德是实行神圣的义，就是过义的生活。我们里面有义的性情－不属于我们天然人的性情。这义的性情，就是神圣生命的性情，是属于我们的新人。我们顾到里面的膏油涂抹，就是三一神的运行，我们就会习惯的照着这义的性情生活。一天过一天，这位经过过程的三一神作膏油涂抹，引导我们进入神圣生命的美德，就是我们借着神圣的出生所领受的美德。这些美德包含过义的生活、爱弟兄、以及胜过一切消极的事物。借着膏油涂抹所享受神圣生命的第二项美德是实行神圣的爱，这爱乃是借着神圣的生命作神圣的种子和神圣的灵而实行出来，使我们能借神圣生命内里的运行遵守祂的诫命；也行祂看为可喜悦的事。然而信徒需要爱弟兄，却不该接纳假申言者和敌基督的，这就需要能辨别诸灵。最后，也是借着神作至高的爱和全备的灵，使信徒能彼此相爱并彰显神，借此神的爱在我们里面得了成全。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　住在主里面而实行义</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹二28～29:现在，孩子们，你们要住在主里面；这样，祂若显现，我们就可以坦然无惧，当祂来临的时候，也不至于蒙羞离开祂。你们若晓得祂是义的，就当知道凡行义的人也都是从祂生的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>借着神圣的出生，我们得着了神圣的生命，就是永远的生命，作为神圣的种子种到我们里面。出于这种子，神圣生命一切的丰富都从我们里面长出来。藉此我们就住在三一神里面，并在我们的为人生活中活出这神圣的生命，就是活出那不实行罪，却实行义、爱弟兄、胜过世界、且不为那恶者所摸的生命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在我们的为人生活中活出神圣的生命。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

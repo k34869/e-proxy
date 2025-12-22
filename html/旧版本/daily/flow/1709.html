@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1708')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1710')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 11 课<br />
+神圣的供备与神圣的行政（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：阿们神的话语。（补充本诗歌414首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我们并有申言者更确定的话，你们留意这话，如同留意照在暗处的灯，直等到天发亮，晨星在你们心里出现，你们就作得好了。（彼后一19。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">五　神圣的供备（二）神圣真理的照亮—彼后一12～21</p>
+<p class="ot2">1　藉使徒见证的荣耀—12～18。</p>
+<p class="ot2">2　藉申言者话语的亮光—19～21。</p>
+<p class="ot1">六　神圣的行政（一）—二1～三9</p>
+<p class="ot2">1　神对假教师的审判—二1～3。</p>
+<p class="ot2">2　神对天使和人的审判—4～9。</p>
+<p class="ot2">3　假教师的邪恶及其在神审判下的刑罚—10～22。</p>
+<p class="ot2">4　神对异端讥诮者的审判—三1～9。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神圣供备的第二件事—神圣真理的照亮；以及神如何施行祂行政的审判。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼后一章十二至二十一节说到神圣供备的第二件事—神圣真理的照亮。作为信徒神圣供备之神圣的光，包含在神的话里，也就是在旧约申言者和新约使徒的话里。二至三章继续给我们看见，神如何施行祂行政的审判。这包含神对假教师的审判，神对天使和人的审判，假教师的邪恶及其在神审判下的刑罚，以及神对异端讥诮者的审判。彼得最后劝勉信徒不可不理这件事，就是在主一日如千年，千年如一日。因为主所应许的，祂并不耽延，祂乃是宽容信徒，使信徒没有一人因祂行政的审判受刑罚，反倒有一段延长的时间，让我们因着没有为主来的日子儆醒，以及没有过圣别的生活和敬虔悔改，使我们免受祂的刑罚。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　使徒见证的荣耀</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼后一16：我们曾将我们主耶稣基督的大能，和祂的来临告诉你们，并不是随从乖巧捏造的虚构无稽之事，乃是作祂威荣的亲眼见证人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼后一章十六节说，作主威荣的亲眼见证人。这威荣指显赫，在辉煌、尊贵、荣耀、甚至显赫荣耀里的伟大，正如主变化形像时，彼得和雅各、约翰所亲眼看见的。因为当时召会处于背道堕落的光景，其中一种异端，认为主耶稣在荣耀里回来审判地的教训是虚构无稽、迷信的传说。彼得因此有力的向信徒见证，作为对抗这些异端的预防剂。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>今世积极预备主荣耀的再来，作主威荣的见证人。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

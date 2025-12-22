@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('303')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('305')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第2课  十诫—禁戒偶像</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十4上 不可为自己雕制偶像…</p>
+<p>当初神造人的目的，乃是要人接触神，而得着神的生命。所以在人里面，原本就有一个需要，想要寻求神。然而人一再的堕落而远离神，但人里面这需要还存在，人就想了一些法子，自己制造一些偶像，把这些偶像当作神来敬拜。但是人所造的这些偶像，不论是用金子、银子或是用木头、石头作的，都有一个相同的特点，就是有口却不能言，有眼却不能看，有耳却不能听，口中也没有气息（诗一三五15~17）。清朝有一个状元先生，还写了一首短诗，讽刺人所造的这些偶像是毫无用处的：</p>
+<p>“一口无言，二目无光，三餐不食，四肢无力，五官不灵，六亲无靠，七窍不通，八面威风，久坐不动，实在无用。”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：第二条诫命是人不可以制造或跪拜任何偶像。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：偶像是一个雕刻的形象，铸像，被跪拜为神或代替神。我们不应该制造这样的雕像，我们不应该把任何偶像当作神跪拜或以它们取代神。讲述出埃及记32章中的故事，以色列人因为跪拜金牛犊，导致神和摩西的愤怒。神为他们作一切来照料他们，他们却跪拜金牛犊，并称之为他们的神。这是多么可怕啊!</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十4上 不可为自己雕制偶像…</p>
+<p>不可跪拜那些像，也不可事奉它们，因为我耶和华你的神是忌邪的神。（出埃及记20:5上）。</p>
+<p>以色列人拜金牛犊得罪神，但在旧约中我们却看见一个榜样，就是但以理的三个朋友。有一天，巴比伦王尼布甲尼撒，造了一座极大的偶像，命令全国的人都要向这偶像敬拜，谁不敬拜就要扔在火容中。但以理的三个朋友却不畏惧这禁令，不肯向这偶像敬拜，尼布甲尼撒王就很生气，果真将他们三个人捆起来，扔到烈火中，当他们被扔进火宝中，却毫无受伤，一根头发也没有烧烯。同时看见火窑中有四个人，并没有被捆绑，却在火中游行，原来是主与他们一同站在火窑中，因此火不能伤他们（但三）。这给我们看见，何时我们为神的权益站住，不敬拜偶像，神是又真又活的，必定保守、眷顾我们，与我们同在。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：第二条诫命是人不可以制造或跪拜任何偶像。我们的神嫉妒我们，除祂以外，祂不希望我们服事或敬拜任何东西。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：圣经告诉我们，神嫉妒我们。嫉妒我们意味着神爱我们，并且希望我们只爱祂和敬拜祂。祂不想让任何东西在我们心中取代祂。这就是为什么我们不能敬拜偶像，因为他们取代了神。让孩子们考虑一下，如果有一天他们爱的人和爱他们的人（比如他们的父母）不爱他们，而爱上其他人，他们会有什么样的感受。这会让孩子们感觉如何？这种被取代的感觉与因我们选择敬拜神以外的东西，神嫉妒我们的感觉是一样的。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记三四14 你不可敬拜别神；因为耶和华是忌邪的神，名为忌邪者。</p>
+<p>提摩太前书二5因为只有一位神，在神和人中间也只有一位中保，就是那人基督耶稣。</p>
+<p>以色列人曾经因为拜偶像而遭受到很重的审判，这件事情发生于神在西乃山上，将十诫传给摩西的时候。因为神对摩西讲了很多话，所以摩西在山上待了四十天之久。以色列百姓看见摩西迟延不下山，就聚集到摩西的哥哥亚伦那里去，对他说，“亚伦，我们在这个旷野里待了那么多天，又不知往前的道路，再这样下去我们都会死在这里的。带我们出埃及的那个摩西，到现在还不回来，不知道他是遭遇了什么事？不如你为我们作个神像来给我们引路，好离开这里吧！”</p>
+<p>亚伦听见百姓这样争闹，就对他们说，“你们去把你们妻子、孩子耳朵上的金环拿下来给我。”他们照着作了，亚伦就把这些金环集中起来，融化在一起，又用雕刻的器具作成一只牛犊。作好了以后，亚伦就对他们说，“以色列啊，这就是领你出埃及地的神。”百姓看见这像，就向这偶像献祭，又高兴的坐下吃喝，起来玩耍。神在山上，知道亚伦造了金牛犊来敬拜，就吩咐摩西说，“你快下去吧！因为你从埃及领出来的百姓已经败坏了。他们快快偏离了我的话，为自己造了一只金牛犊，还向它下拜献祭，认那只金牛犊是带他们出埃及的神。我要向他们发怒，灭绝他们，让你的后代成为大国。”摩西听见，立刻为着百姓向神恳求，叫神回心转意，不要除灭他们。因着摩西的求情，神才不把灾祸降给以色列人。</p>
+
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">
+<p>焦点：第二条诫命是人不可以制造或跪拜任何偶像，因为神嫉妒我们。神希望我们直接接触祂，而不是“通过”一个偶像。在我们对神的敬拜中取代神的任何人或事物都可以成为偶像。</p>
+</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：所有人都是为敬拜神而创造的，但有些人敬拜偶像是因为他们不知道神是谁，或是不知道如何就近神。他们被引导去敬拜偶像，认为偶像会把他们带到神身边。例如，有些人会对着图片祈祷，他们祈祷时手握十字架。但是圣经告诉我们，神希望人们直接接触祂。我们不需要借任何偶像，铸象或人处在我们和神之间为我们去接触神。例如，你的朋友如果需要告诉你一些事情，他们可以直接告诉你。他们不需要对你的照片说话，以便与你交谈，或通过另一个朋友与你交谈。这与神一样，我们可以直接与神对话。我们不需要对一个铸像或人说话，也不需要通过物体或人说话。任何一个铸象或人介入我们对神的敬拜，都会对我们成为偶像。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

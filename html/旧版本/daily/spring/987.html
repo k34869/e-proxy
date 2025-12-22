@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('135')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('137')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">溪水冲洗污秽</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">祂便救了我们，并不是本于我们所成就的义行，乃是照着祂的怜悯，借着重生的洗涤，和圣灵的更新。（多3:5）</div>
+<div id="CC">Not out of works in righteousness which we did but according to His mercy He saved us，through the washing of regeneration and the renewing of the Holy Spirit.（Titus 3:5）</div>
+<div id="C">古希腊有一个国王，吩咐一个大力士，作一件极难的事，就是要他把一间很大豢养牲畜的房子，扫除干净。那间房子坐落在山谷里，多年累积污秽畜粪，堆积得很厚。但是国王既然如此为难他，究竟该怎么办呢？后来，那个大力士想出一招妙法。他走到山顶，找着一条溪水，便设法把它引导下来，流过那间大房子。这样日夜冲洗，水源滔滔不绝，不到几天，好大的房子都洁净了。我们若要靠自己努力，是无法圣洁的，必须活在交通里，靠神的生命洁净，才能除去污秽。</div>
+<div id="CC">福音─见证（诗739）</div>
+<div id="C">在十字架我救主舍命，<br/>　所流宝血洗罪有权能；<br/>　这宝贝血已将我洗清；<br/>　荣耀归主名！<br/>（副）<br/>　荣耀归主名！<br/>　荣耀归主名！<br/>　主宝贝血已将我洗清；<br/>　荣耀归主名！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

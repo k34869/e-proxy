@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('248')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('250')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">腓利向埃提阿伯太监传福音</p>
+<p>那灵对腓利说，你上前去，贴近那车走。腓利就跑上前去。…腓利就开口，从这经上起，向他传耶稣为福音。（徒八29～30，35）</p>
+<p>行传八章，给我们看见腓利就近人传福音的榜样。五节说，‘腓利下撒玛利亚城去，向他们传扬基督。’借此，福音从纯血统的犹太人开展到混血的撒玛利亚人中。之后，有主的使者吩咐腓利：‘起来，向南走，往那从耶路撒冷下迦萨的路上去。’腓利就起身去了。有一个埃提阿伯人，是个有大权的太监，在埃提阿伯女王干大基手下总管银库，他上耶路撒冷去敬拜，现在回来，在车上坐着，念申言者以赛亚的书。那灵对腓利说，你上前去，贴近那车走。腓利就跑上前去，听见太监正在念以赛亚五十三章，关于基督是救赎罪人之羔羊的经文，便说，‘你所念的，你明白么？’他说，‘没有人指引我，怎能明白？’于是，太监恳求腓利上车，与他同坐。太监问腓利：‘申言者说这话是指着谁？’腓利就从这经上起，向他传耶稣为福音。二人正沿路走的时候，到了有水的地方，太监说，‘看哪，这里有水，我受浸有什么妨碍？’腓利对他说，‘你若是全心相信就可以。’他回答说，‘我信耶稣基督是神的儿子。’于是吩咐车停住，腓利和太监二人同下水里去，腓利就给他施浸。而后，主的灵把腓利提去，太监也不再看见他，就欢欢喜喜走他的路。（徒八26～39。）</p>
+<p>在此，我们看见主的使者吩咐腓利离开撒玛利亚，往那从耶路撒冷下迦萨的路去，腓利立刻顺从去了。之后，腓利照着那灵的引导，就近、接触这位寻求神，饥渴要神的太监，向他传福音。借此，这位古实的后裔，听到完全的福音，就得救了。这是主将祂的福音，开展到道地的外邦人中所采取的第一步。在腓利传福音的事上，我们看见他一切的活动都是在圣灵的指引、带领和引导之下去就近人。后来有人在亚锁都遇见腓利，看见他走遍了所有的城邑，传扬福音，直到该撒利亚。（40。）（参使徒行传生命读经，216～221页。）</p>
+<p class="title">救了一个首相</p>
+<p>十九世纪，在英国内地一个小村庄里，有一穷寡妇，她有五个儿女。一天夜里，她最小的儿子忽然患病，生命垂危。她只好在黑夜中摸索，到十五哩外一座小城去请医生来拯救。途中偏又遇着暴风大雨。那医生看见这穷寡妇，心里犹豫不决：冒着大风雨，老远去医治一个小孩，值不值得？然而，他经不起那母亲的苦求，就动了慈心，觉得该尽医生的天职，便冒着风雨前去。结果，那孩子的病得了医治；长大后，成为英国近代第一等政治家，就是英国首相劳合乔治（David Lloyd George，1863～1945）。他在第一次欧战中领导英国得到胜利，和法国总理克理蒙梭（Georges Clemenceau）同为‘凡尔赛和约’的主要决定人。</p>
+<p>后来那医生见证说，‘我万想不到，那天晚上救了一个穷孩子，是救了一个首相的性命。’（参造就故事下册，22～23页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：珍赏腓利照着那灵的引导，就近、接触寻求神的人，使福音得以开展到外邦人中。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

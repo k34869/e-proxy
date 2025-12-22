@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../html/shenggeng/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>团体神人生活训练与操练（三）</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+                正常的召会生活
+            训练纲要及操练课程目录
+              
+              </div>
+            </v-card>
+          </div>
+          <div class="nav" @click="jump('25.html')">第二十五周 召会是活神的家	</div>
+          <div class="nav" @click="jump('26.html')">第二十六周 主日分别为圣</div>
+          <div class="nav" @click="jump('27.html')">第二十七周 主日的聚会</div>
+          <div class="nav" @click="jump('28.html')">第二十八周 唱诗赞美</div>
+          <div class="nav" @click="jump('29.html')">第二十九周 擘饼聚会</div>
+          <div class="nav" @click="jump('30.html')">第三十周 吃饼喝杯记念主</div>
+          <div class="nav" @click="jump('31.html')">第三十一周 圣经与晨兴圣言</div>
+          <div class="nav" @click="jump('32.html')">第三十二周 申言的聚会</div>
+          <div class="nav" @click="jump('33.html')">第三十三周 人人为主申言</div>
+          <div class="nav" @click="jump('34.html')">第三十四周 儿童青少年</div>
+          <div class="nav" @click="jump('35.html')">第三十五周 生活中经营基督</div>
+          <div class="nav" @click="jump('36.html')">第三十六周 我们是什么</div>
+        </v-main>
+      </v-app>
+    </div>
+   <script src="../../../html/shenggeng/js/vue.js"></script>
+    <script src="../../../html/shenggeng/js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../minister/index.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

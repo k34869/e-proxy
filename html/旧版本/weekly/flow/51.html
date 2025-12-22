@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('50')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('52')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>耶和华阿，早晨你必听我的声音；早晨我必向你陈明我的心意，并要守望。（诗五3）</p>
+<p>你们为什么整天在这里闲站？…你们也进葡萄园去。（太二十6～7）</p>
+<p class="title">勤的榜样（一）大卫</p>
+<p>大卫为神所豫备，成为一个合乎神心的人；如果没有神的豫备，他就不能成为这样一个人。撒下五章四节告诉我们，大卫三十岁登基。大卫约十五岁时，就为撒母耳所膏；然后他受试验约十五年之久，特别是受到扫罗的搅扰和麻烦。至终，大卫通过试验而蒙神称许。神藉着环境，在卑微中训练大卫。大卫是耶西八个儿子中最小的；神特意使他生为最小的、末后的，为要使他谦卑。此外，大卫被父亲指派去旷野照顾羊群，这是一分需要殷勤劳苦的工作。他的七个哥哥没有一个愿意作这样低微的工作。</p>
+<p>从大卫所写的诗篇，我们看见他是一个殷勤享受神的人。诗篇五篇三节说到，大卫早起向神守望：‘耶和华阿，早晨你必听我的声音；早晨我必向你陈明我的心意，并要守望。’一百一十九篇一百四十八节，说他清早思想主的言语：‘我趁夜更未换，将眼睁开，为要默想你的话语。’二十七篇说到大卫是一个经常祷告求问神，向神献祭、歌颂、并寻求神的人：‘有一件事，我曾求耶和华，我仍要寻求；就是一生一世住在耶和华的殿中，瞻仰祂的荣美，在祂的殿里求问。…我要在祂的帐幕里献欢呼的祭；我要唱诗，歌颂耶和华。…那时我的心向你说，耶和华阿，你的面我正要寻求。’（4，6，8。）他甚至一天七次赞美耶和华。（一一九164。）最终大卫成为合神心意的人，（徒十三22，）按着神的旨意，服事了那一世代的人。（36。）（参撒母耳记生命读经，98～99页。）</p>
+<p class="title">不肯起来开门</p>
+<p>在南印度有一个穷人，负债太多，无力偿还。他是一个懒惰的人，不肯殷勤作事。债主们想要把他下在监里。同村里有一个慈善的财主，听说他这种困难的情形，就想帮助他。但他不愿叫人知道，就在夜间带着五千卢比，足彀他还债，并购买一些食物。财主到那人的门前敲门，但这懒汉却懒得起来开门。财主敲了一会儿，心里想这人不配受到这个帮助，就回家去了。第二天早晨，懒汉知道这件事，非常懊悔，然而还有什么用呢？</p>
+<p>按照旧约，神是在清晨把吗哪赐给以色列人，他们必须清早起来拾取。同样，新约的基督徒不能懒惰，必须早起读经，领受神所赐的生命粮食；否则就会过贫穷的属灵生活。问题不是神不给，而是人懒惰，不肯起来接受。（参造就故事上册，7页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在享受主的事上殷勤，早起亲近神，常常祷告赞美神。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

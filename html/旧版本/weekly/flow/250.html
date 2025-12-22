@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('249')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('251')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">保罗向什么人就作什么人</p>
+<p>向软弱的人，我就成为软弱的，为要得软弱的人。向众人，我成了众人所是的；无论如何，总要救些人。（林前九22）</p>
+<p>在林前九章，保罗见证他为着福音的缘故，向着什么人，就作什么人：‘向犹太人，我就作犹太人，为要得犹太人；向律法之下的人，我就作律法之下的人，（虽然我自己不在律法之下，）为要得律法之下的人；向律法之外的人，我就作律法之外的人，（对神，我不是在律法之外，反而对基督，我是在律法之内，）为要得律法之外的人。’（20～21。）这里似乎保罗不是犹太人。事实上，他是犹太人，但他不再过犹太人的生活。反之，他过基督徒的生活。然而，他作犹太人，为要得犹太人；照样，向律法之下的人，他就作律法之下的人，为要得律法之下的人。</p>
+<p>在二十节保罗插进括弧里的话，说，‘虽然我自己不在律法之下，’以指明他不在律法之下。在二十一节，保罗再次用括弧里的话指出，对神，他不是在律法之外，反而对基督，他是在律法之内。这指明保罗是以基督为生命，凭基督活着。那活在他里面作生命的基督，也就是生命的律，（罗八2，）管治、规律他，使他对基督是正当的、合法的、正直的、适当的。因此，保罗向什么人就作什么人，乃是在一个更高、更好的律法之内，服于这生命的律法。</p>
+<p>在林前九章二十二节保罗宣告：‘向软弱的人，我就成为软弱的，为要得软弱的人。向众人，我成了众人所是的；无论如何，总要救些人。’这意指保罗为众人的缘故，调整自己以适应一切的事，也就是适应不同饮食的方式和实行。（23。）他愿意以别人所遵循的方式生活。向众人，他成了众人所是的，为要救些人。保罗俯就各种不同的人，为的是能传福音给各种不同的人，并得着他们。当保罗在监狱中，传福音给逃离主人而触法被囚的奴隶欧尼西母，使他成为主里的弟兄，即是最佳的例证。（门9～10。）（参哥林多前书生命读经，483～485页。）</p>
+<p class="title">买豆饼得着人的灵魂</p>
+<p>一八○○年代中期，当一些西国传教士来到中国的烟台时，村中族老都不准任何人把房子租给‘洋鬼子’。因此，有些传教士不得不住在桥下和地道里。以外，也不准任何人卖吃的东西给他们。这样看来，他们似乎没有活路了，但主有路。有一位住在地道里的传教士，观察到有一个卖豆饼的小贩，每天清晨都会经过。某个早晨，当小贩没有看好他的担子时，那传教士就拿了一块豆饼，并在原处放了比那块豆饼多好几倍的钱。当那小贩回来，他发现有块豆饼不见了，却有钱在那里。每天清晨都发生同样的事，并持续了很长一段时间。最后这个小贩好奇的在暗处等着，要看是谁买他的豆饼。传教士因此和小贩开始有了接触，至终这个小贩得救了。（参为着召会的建造正常结果子和牧养的路，27页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：学习保罗的榜样，为众人的缘故，调整自己以适应一切的事，俯就各种不同的人，为要传福音给他们。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

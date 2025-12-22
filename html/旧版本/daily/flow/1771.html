@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1770')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1772')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 1 课<br />
+启示录简介及引言</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　基督的再来</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启一6:又使我们成为国度，作祂神与父的祭司；愿荣耀权能归与祂，直到永永远远。阿们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>‘基督的再来’也是启示录一章里极重要的项目。关于基督的再来，没有另一卷书像启示录启示得这么清楚。本书启示基督的再来有两方面：一面祂要先像贼一样隐密的临到，（三3，）然后祂要驾云公开的降临。没当基督隐密的来时，祂要来偷取贵重的东西。所以我们要儆醒，我们都当问自己：‘我是不是贵重的？当基督隐密的来时，我配不配被祂偷去？’祂公开来临的日子是在大灾难末了，末次号筒吹响的时候。（帖前四16。）主的显现要像闪电一样，从东到西，划过天空。这种光景，和祂像贼一样隐密的来临，有何等的不同！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识主再来的真理，儆醒预备，等候主来。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录启示的中心乃是基督，在启示录中，对基督的启示是惟一的，又是终极的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录启示的中心是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘〔启示录〕这卷书是耶稣基督的启示。（一1。）耶稣基督的启示并非仅仅是基督所赐客观的启示，揭示将来的一些事情；这乃是关于基督的主观启示，将基督自己启示给我们。“启示”这辞是指揭开幔子，露出隐藏在背后的东西。在这宇宙中，有一件事对于人的眼睛和领会来说是奥秘的、秘密的、隐藏的；这就是基督。但是基督升天以后，幔子已经揭开，如今基督已经启示给我们。“耶稣基督的启示”，意思就是基督启示给我们。</p>
+<p>启示录这卷书长达二十二章，但简单来说，可以分成三段。头三章构成一段，启示在召会中的基督。第二段从四章到二十章，是启示录主要的部分，但不是最重要的部分，向我们启示在神审判和国度中的基督。这十七章圣经给我们看见，在神的审判和国度中，基督是中心。因此，甚至这一段也是基督的启示。这不仅仅是预言的启示，如同有角的兽之类的预言。这十七章有一条贯穿的线，就是这位奇妙、荣耀的基督。这基督是神审判和神国度的素质、实际和中心。第三段是二十一和二十二章，启示基督在永世里是万有的中心点，是中心与普及。在永世里，基督乃是神和人的中心与普及；基督是一切。第一段启示在召会中的基督，第二段启示在神审判和国度中的基督，末了一段启示在永世里的基督。’</p>
+<p>〔启示录这卷书把基督〕启示到这么非凡的地步，我们也必须享受祂到这样的地步。然后，我们的享受就成为祂的见证，这活的见证就是耶稣基督现今的启示。首先祂被启示出来，然后我们享受祂，并成为祂的见证，最终我们的见证成为祂现今的启示。祂现今在我们对祂的经历中启示出来，成为祂的见证。祂启示出来是那位包罗万有、超绝、奇妙、奥秘、美妙的。我们必须在许多细节上经历并享受这样一位基督，使我们的经历不仅能成为祂的见证，也能成为祂现今的启示。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>经历并享受基督，使我们的经历不仅能成为祂的见证，也能成为祂现今的启示。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

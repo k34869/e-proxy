@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1323')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1325')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 10 课<br />
+召会的产生与建造（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　耶稣聚集我们在一起。（补充本诗歌616首）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我们原是神的杰作，在基督耶稣里，为着神早先预备好，要我们行在其中的善良事工创造的。（弗二10）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　召会的产生—弗二1～10</p>
+<p class="ot2">1　死在过犯并罪之中—1～3。</p>
+<p class="ot2">2　与基督一同复活—4～7。</p>
+<p class="ot2">3　神的杰作—8～10。</p>
+<p class="ot1">二　召会的建造—11～15</p>
+<p class="ot2">1　从前远离如今亲近—11～13。</p>
+<p class="ot2">2　拆毁了中间隔断的墙—14。</p>
+<p class="ot2">3　创造成一个新人—15。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识召会的产生与召会的建造的第一面，成为一个新人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在以弗所一章末了，启示基督藉着所达到的，产生召会，到二章，揭示召会产生的背景——死的境界。我们因悖逆，在死的范围里，在神的忿怒之下。然而我们今天已蒙拯救，脱离了悖逆和神的忿怒，而且得救成为基督的身体。因为神富于怜悯，在我们因过犯死了的时候，便叫我们一同与基督活过来，且一同复活，坐在诸天界里。因此我们靠着恩典，藉着信而得救，成为神的杰作。我们从前在肉身上是外邦人，和一切神在基督里的福分无关，也在世上没有指望，但如今靠着基督的血，就得亲近了。并且藉着基督的救赎，犹太人和外邦人中间隔断的墙已经被拆毁，仇恨已经废除了。因此我们不该再坚持任何的规条，反该为着实行召会生活，经历新人的实际，使神能藉着这一个新人成就祂的定旨。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　死在过犯并罪之中</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>罗六6：知道我们的旧人已经与祂同钉十字架，使罪的身体失效，叫我们不再作罪的奴仆。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以弗所书二章是由低处来看召会；说到我们因着死在过犯并罪之中，就丧失接触神的功能；活在我们堕落的性情里，凭肉体的私欲为所欲为；这是何等危险！所以保罗在三节说，我们‘生来就是可怒的儿女’。然而我们今天已蒙拯救，脱离了悖逆和神的忿怒，得救成为基督的身体。现今我们是在基督里，在那灵里，在诸天界里。这是何等的救恩！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为着神拯救我们，脱离悖逆和神的忿怒，得救成为基督的身体，向神献上感谢与赞美。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

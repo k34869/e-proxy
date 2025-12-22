@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1595')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1597')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 12 课<br />
+元帅、大祭司、使徒、神家的建设者</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　可夸的盼望和胆量坚守到底</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来三6：但基督为儿子，治理神的家；我们若将因盼望而有的胆量和夸耀坚守到底，便是祂的家了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>今天，神的家实际上就是召会。神的家就是祂的家庭，也是祂的家人，就是祂的住处。神所差遣的使徒耶稣基督；祂已经构成、建造了祂的家，并且仍在继续作这事。神的家是一个团体的身体。我们若要享受这位使徒，并享受父同祂的实际，就必须在这个家里。因此，我们不能一个人作单独的基督徒。我们一单独，就是一块散开的石头，和这家就无关。今天，我们必须活在召会里，将可夸的盼望与胆量坚守到底。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历基督是使徒，照管神的家；活在召会生活中，成为神的家。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督超越摩西，是配得更多荣耀和尊贵的使徒，祂是从神差遣到我们这里来更大的摩西，照顾我们的需要。不仅是为着我们的享受，更是为着神建造祂的家。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>摩西如何预表基督？基督作使徒，又如何超越摩西？我们要如何成为神的家？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘希伯来书头两章描述并解释基督的身位之后，三章开始告诉我们，基督现今正在为我们作什么。祂不仅是那在已过为我们成功救赎者，祂也是奉神差遣到我们这里来为我们作工者。…〔三章〕一节说到我们所承认为使徒、为大祭司者，这使徒与大祭司就是基督自己。古时在犹太教里，摩西是使徒，奉神差遣来帮助百姓。而今基督是使徒，是奉差遣者。</p>
+<p>犹太教也有一位大祭司，就是亚伦。使徒和大祭司之间有什么不同？使徒是从神那里差遣到我们这里来的，代表神照顾我们，就像摩西在古时所作的；而大祭司是从我们到神那里去的一位，作我们的代表，在属天的法庭里，在神面前料理我们的案件。基督是包罗万有的。祂是受差遣来的一位，又是前去的一位。祂是从神来的一位，又是从我们去的一位。</p>
+<p>摩西怎能与基督相比？基督是建设者，而摩西只是房屋的一部分。四节说，每一座房屋都有建设者，但建设万有的乃是神。这证明建设者基督就是神自己。这使徒—奉神差遣来的一位，就是神自己。祂是宇宙的建设者，是全宇宙独一的建设者。然而，祂职事中心的建设乃是祂的家。…</p>
+<p>今天基督是从神差遣到我们这里来更大的摩西，照顾我们的需要。这不仅是为着我们的享受，更是为着神建造祂的家。基督建造神的家，是藉着带我们经过魂生命，进到我们灵里，就是今天神居住在其中的至圣所，作我们的美地，使我们享受安息和基督一切的丰富。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>经历基督是使徒，照管神的家；活在召会生活中，成为神的家。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

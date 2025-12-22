@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('841')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('843')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">迟到睡觉早退</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>约翰福音 4:24 神是灵；敬拜祂的，必须在灵和真实里敬拜。</p><p>俄国民间流传一个故事：一个主日的早晨，天使在礼拜堂门口遇见了魔鬼，很希奇的问他说，‘你来这里作什么？你不知道今天是主日？人人都上礼拜堂敬拜神么？’魔鬼回答说，‘我知道，但我想这些人上礼拜堂，不都是敬拜神的。’天使当面斥责他说，‘当然都是敬拜神的阿！’魔鬼客气的说，‘让我们坐下，在门口等着看，如果你看见某人进堂，是来为敬拜神祷告的，你就将他的名字记在你的册子上；如果我看见某人进堂，是来为消遣的，我就将他的名字记在我的册子上；到礼拜完了，我们可以比较，看是谁的人多。’天使接受这个挑战，就注意观察进礼拜堂的人，先记下一个名字，好久才写第二个，又等了好久，才写第三个，全堂看完了，只有三个人是虔诚来敬拜的。魔鬼拿起他的册子，写了又写，忙个不停，记了一本又一本，还没记完。据熟悉俄国教会的人说，在俄国革命之前的教会，确是这样。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

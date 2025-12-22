@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('321')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('323')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">种一次收一次</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">为着自己的肉体撒种的，必从肉体收败坏；为着那灵撒种的，必从那灵收永远的生命。（加6:8）</div>
+<div id="CC">For he who sows unto his own flesh will reap corruption of the flesh，but he who sows unto the Spirit will of the Spirit reap eternal life.（Galatians 6:8）</div>
+<div id="C">从前有一个修道士，希望取得毗连修道院的一片田地，但那地主拒绝出售。经过多次劝说、协商，总算答应了；但只答应租给修道院种植一次，收成一次。契约订好之后，岂知那位修道士竟撒下橡树的种子；这次的种收不是一年，而是三百年。<br/><br/>　同样的，撒但先是要求我们的心田，容让一点过犯和污秽。他告诉我们，这是一个不关紧要的罪。结果，他把种子种下去，就永远占据了那片心田。是的，小罪的危险就在于它不会永远“小”。</div>
+<div id="CC">试炼中的安慰─信靠主（诗519）</div>
+<div id="C">当我在我路上遇见试探时，<br/>　撒但就在耳语叫我可放弛；<br/>　但是负担虽重我已不发愁，<br/>　只要一点相信就赶难处走。<div class="l2" id="hymn" style="display:flex;">
+<div>副</div>　<div>主，我相信！主，我相信！求提高我信你的心，使我能以移山；主，我相信！主，我相信！我的疑虑全投在你身畔。</div></div></div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

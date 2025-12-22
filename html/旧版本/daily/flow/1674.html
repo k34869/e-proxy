@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1673')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1675')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 6 课<br />
+以基督为榜样活出佳美的品行（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：恩主耶稣你名我是。（诗歌61首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你们蒙召原是为此，因基督也为你们受过苦，给你们留下榜样，叫你们跟随祂的脚踪行；（彼前二21。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　在外邦人中作寄居者—彼前二11～12</p>
+<p class="ot2">1　要禁戒属肉体的私欲—11。</p>
+<p class="ot2">2　要活出佳美的品行—12上。</p>
+<p class="ot2">3　叫人亲眼看见你们的好行为，便在眷顾的日子荣耀神—12下。</p>
+<p class="ot1">二　对人的制度—13～17</p>
+<p class="ot2">1　要服从人的制度和掌权者—13～14。</p>
+<p class="ot2">2　神的旨意是要我们行善—15。</p>
+<p class="ot2">3　不可用自由遮盖恶毒，却要作神的奴仆—16。</p>
+<p class="ot2">4　要尊敬众人，爱众弟兄，敬畏神，尊敬君王—17。</p>
+<p class="ot1">三　仆人对主人—18～20</p>
+<p class="ot2">1　在凡事上敬畏服从主人—18。</p>
+<p class="ot2">2　因着对神的感觉而受冤屈之苦，因行善受苦而忍耐，是甜 　美的—19～20。</p>
+<p class="ot1">四　基督的五方面—18～25</p>
+<p class="ot2">1　是里面的恩典—18～20。</p>
+<p class="ot2">2　是榜样给我们跟随—21～23。</p>
+<p class="ot2">3　是救主拯救我们—24。</p>
+<p class="ot2">4　是牧人牧养、引导我们—25。</p>
+<p class="ot2">5　是监督照顾我们—25。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督是信徒的恩典、范本、救主、牧人和监督，使信徒能活出各面佳美品行的生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼得前书的第三段（二章十一节至四章十九节）说到基督徒的生活及其苦难。首先，说到对众人在各面佳美品行的生活。看见我们在地上是作客旅和寄居的，所以要在外邦人中有佳美的品行。其次说到为主的缘故，要服从人的一切制度。再说到仆人要在凡事上敬畏服从主人。信徒在地上能活出这样的生活，乃因有基督作我们的恩典、范本、救主、牧人和监督。基督是我们里面的生命，作我们的恩典；祂也是给我们跟随的榜样。我们若凭著作我们里面生命的基督而活，就是凭着内住的基督自己而活，我们就会经历属灵影印的过程，成为基督的复制品。同时，我们会经历祂作拯救我们的救主，作带领并引导我们的牧人，并作照顾我们的监督。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在外邦人中佳美的品行</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前二12：你们在外邦人中，要有佳美的品行，好叫他们在何事上毁谤你们是作恶者，就在何事上，由于亲眼看见你们的好行为，便在眷顾的日子荣耀神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>佳美的品行，必是圣别的行事为人以及在基督里的好品行，是一种不仅为着神，更被神充满并浸透的生活。这样的品行与不信者虚妄的生活相对。信徒的品行该是佳美的，他们的行事为人应当在美德上是美丽的。我们在外邦人中，需要有这样的品行。这样，他们由于亲眼看见我们的好行为，便在眷顾的日子荣耀神。圣徒们在神眷顾的日子是在祂爱的照顾之下，即使被毁谤，他们仍在神恩典的眷顾之下，过奇妙、佳美的生活。他们佳美的品行和神的眷顾，至终使反对者悔改并荣耀神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在神恩典的眷顾之下过奇妙、佳美的生活，活出佳美的品行以荣耀神。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

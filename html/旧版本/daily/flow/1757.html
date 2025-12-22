@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1756')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1758')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 17 课<br />
+胜过世界、死、罪、魔鬼和偶像</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　保守自己远避偶像</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹五21：孩子们，你们要保守自己，远避偶像。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约翰一书启示的中心，乃是神圣生命的神圣交通，我们要保守自己住在神圣的交通里，需要对付三样消极的东西：首先是罪、世界、偶像；抵挡魔鬼邪恶作为的保障，乃是我们神圣的出生带着神圣的生命；再者，我们神圣的出生，带着那种在我们里面之人里的神圣种子，能使我们不至习惯的活在罪中，倘若我们偶尔犯罪，我们有我们的辩护者作平息的祭物，在父神面前顾到我们的案件，祂那永远有功效的血也洗净我们</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保守自己住在神圣的交通里，对付罪、世界和偶像。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>与我们亲近的弟兄姊妹若犯了不至于死的罪，就当为那人祈求，将生命供应给他。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在召会生活中，你曾否经历一些被绊跌的事？或看见、听见一些消极的事？通常遇到这些事时，你会怎么作？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们在召会生活中必须学习供应生命，这是我们所需要的。不要尝试别的路，帮助人最好的路就是供应生命。</p>
+<p>你也许不赞成，认为你自己还缺少生命，怎么能把生命供应给别人？也许你真的缺少生命。那么你该怎么办？不要去劝戒人或责备人，甚至不要去找另一方。你自己必须转向主，说，“主，怜悯我。我的弟兄犯了罪，他需要生命的供应，他缺少生命。但是，主，我也缺少生命，我也没有多少生命。怜悯我们，但是先怜悯我，我需要更多的生命。我必须有更多的生命。”你的负担沉重，甚至到一个地步要禁食，要缩短睡眠时间来祷告，为要得着更多的生命。我可以向你保证，你一定会得着供应。你汽车的汽油若快用完了，你可以转入加油站，在那里把油箱装满。不到一会儿工夫，你的汽油供给就充足了，你就可以继续上路。当你自己得着供应，你就可以供应别人。</p>
+<p>我们必须知道，不论什么弟兄或是什么姊妹犯了罪，就很强的指明这位弟兄或这位姊妹缺少生命。我们若要帮助人，就必须先察看我们是不是有生命。我们有生命的富余么？我们所有的比我们所需要的多么？若不然，我们就必须祷告、禁食等候主，直到我们得着丰富的供应。这样我们就能够用这个供应来服事人。在这个堕落基督教的时代里，这是在召会生活中往前的路。’（约翰的修补职事，125页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练学习用积极的生命来供应所接触的各种人。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

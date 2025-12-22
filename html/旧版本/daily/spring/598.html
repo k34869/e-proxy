@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('597')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('599')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第 三十课  性格  不懒惰</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言六6  懒惰的人哪，你去查看蚂蚁的行径，就 可得智慧。</p>
+<p>佳音，佳美，是一对姐妹花，星期天，妈妈吃过早饭，有事要出门，临走时对她和妹妹说，吃了饭把碗洗一下，她们俩个异口同声的答应了。</p>
+<p>妈妈刚出门，妹妹说：”我们看电视吧。佳音经不起诱惑，也同意了，一看电视啥都忘了，妈妈回来时，她们俩正躺在沙发上津津有味的看着电视。看到妈妈回来了，立马想起妈妈交代的事，佳音赶紧去收拾碗筷，拿去洗，佳美拿抹布擦 桌子。这才免去妈妈的一顿数落。</p>
+<p>下午她们参加儿童排，讲的是利百加的故事，看看勤劳善良的利百加，再看看自己，一点家务都不想做，每次妈妈指派点活，心里还极不情愿，找各种借口，不 懂爸妈的付出和爱，不懂感恩，多少时候让妈妈不喜乐，便向主祷告认罪悔改，主耶稣:叫我成为殷勤不懒惰的人。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点:要做一个殷勤的人，成为正确的榜样。）</div></v-alert>
+         
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>耶利米书十五16，我着你的言语，就当食物吃了；你的言语成了我心中的欢喜快乐；因我是称为你名下的人。</p>
+<p>【叨雷勤读圣经】叨雷听见慕迪讲道说，“信心能作任何事。”他就尝试要得着信心，但仍然缺少信心。有一天，他读到罗十17：“可见信是由于听，听是借着基督话。”他突然领悟到，要有信心，就必须勤读圣经，从神的话语得着喂养。</p>
+<p>从此，他每天都花时间读圣经，用希腊文读新约圣经，又用希伯来文读旧约圣经，还用英文、德文、法文来读圣经。因着叨雷勤奋不懈的读圣经，神的话语成为他信心的泉源。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：我们都该向叨雷一样，作一个殷勤的人，殷勤的人会常常读圣经，从主的话得着喂养，得着信心，信心能作任何事。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：当你在学习上遇到不会做的题或在什么事上遇到难处，一定要祷告相信神，神会帮助你。懒惰的人，不读圣经，不祷告就不能从主得着什么。我们一定要做一个殷勤的人，多读主话，好好学习文化课，也要帮妈妈扫地，擦桌子，洗碗筷等等，我们一定要做一个殷勤的人，才合乎主的心意。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇五3，耶和华啊！早晨你必听我的声音，早晨我必向你陈明我的心意，并要守望。</p>
+<p>【勤的榜样大卫】</p>
+<p>大卫为神所预备，成为一个合乎神心的人；如果没有神的预备，他就不能成为这样一个人。撒下五4告诉我们，大卫三十岁登基。大卫约十五岁时，就为撒母耳所膏；然后他受试验约十五年之久，特别是受到扫罗的搅扰和麻烦。至终，大卫通过试验而蒙神称许。神借着环境，在卑微中训练大卫。大卫是耶西八个儿子中最小的；神特意使他生为最小的、末后的，为要使他谦卑。</p>
+<p>此外，大卫被父亲指派去旷野照顾羊群，这是一分需要殷勤劳苦的工作。他的七个哥哥没有一个愿意作这样低微的工作。</p>
+<p>从大卫所写的诗篇，我们看见他是一个殷勤享受神的人。诗五3说到，大卫早起向神守望：“耶和华啊，早晨你必听我的声音；早晨我必向你陈明我的心意，并要守望。”一百一十九篇一百四十八节，说他清早思想主的言语：“我趁夜更未换，将眼睁开，为要默想你的话语。”二十七篇说到大卫是一个经常祷告求问神，向神献祭、歌颂、并寻求神的人：“有一件事，我曾求耶和华，我仍要寻求；就是一生一世住在耶和华的殿中，瞻仰祂的荣美，在祂的殿里求问。…我要在祂的帐幕里献欢呼的祭；我要唱诗，歌颂耶和华。…那时我的心向你说，耶和华啊，你的面我正要寻求。”他甚至一天七次赞美耶和华。最终大卫成为合神心意的人，按着神的旨意，服事了那一世代的人。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：大卫是一个殷勤的人，他甘愿作低微的工作，殷勤劳苦牧放父亲的羊群，他还早起亲近神，趁夜更未换默想主话，还向神祷告并赞美，甚至一天七次赞美神。</div></v-alert>
+            
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

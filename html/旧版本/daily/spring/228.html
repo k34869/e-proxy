@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('227')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('229')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">偿还二十年前电费</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">因怜悯真实，罪孽蒙遮盖；因敬畏耶和华，人就远离恶事。（箴16:6）</div>
+<div id="CC">By lovingkindness and truth iniquity is expiated，And by the fear of Jehovah men depart from evil.（Proverbs 16:6）</div>
+<div id="C">有一位弟兄来见李弟兄说，“李弟兄，你帮帮我的忙，我在二十几年前，偷用人家的电，现在祷告时不平安，你说怎么办？”李弟兄就说，“这只有偿还人家，你写一封信，注明你的姓名及详细住址，从你偷电那一天起，算一算多少钱，另外加上利息，写一张现兑的支票，附在信上。”他说这太简单了，就照着去办。这一封信到了电力公司，经理看了这信，非常惊奇。有一天，经理对一位王弟兄说，“老王啊，信耶稣真奇妙，你看这一封信，还有一张支票。一个人信了耶稣，将多年前偷电的钱送来了。不是一年前、二年前，而是二十年前偷的电费都还过来了。”王弟兄一看这信，就向那位经理传福音说，“世界上的人都不诚实，唯有真信耶稣的基督徒，才能这样诚实。”</div>
+<div id="CC">得救的证实与快乐─借恩得救（诗251）</div>
+<div id="C">从前我愚昧，罪恶辖我心，<br/>　使我的脚步完全远离神；<br/>　今被主寻回，能不欢欣？<br/>　现今是个罪人蒙主恩！<br/>（副）<br/>　我是个罪人蒙主恩！<br/>　我是个罪人蒙主恩！<br/>　这是我身份，<br/>　荣耀归给神，<br/>　我是个罪人蒙主恩！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

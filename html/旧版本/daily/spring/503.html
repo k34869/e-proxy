@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('502')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('504')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">凭情感求神救儿子</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林前十二27 你们就是基督的身体，并且各自作肢体。</p><p>知更鸟一年到头都会唱歌，但有两种不同的歌声，春天唱的叫作‘新歌’，冬天唱的叫作‘旧歌’。在人听来或许没有什么分别，但就它们听来却是大有分别。一到春天，知更鸟就唱‘新歌’，招呼伴侣前来筑巢，同居育子，彼此帮助，共同享乐。到了七月，它们开始分居，有的远飞而去，有的就在树林或庭园之中选择一个小小的范围，占为己有，过着独居的生活，互不侵犯。范围一经定好，它们开始另唱一种歌声，叫作‘旧歌’。这种歌声乃是自私孤僻的声音，通知同伴不许进入它的范围。它一看见同伴飞来，立即发声阻止。若是不听，仍旧飞来，它就出而驱逐之，虽死不避。就是自己从前的配偶，或是所养育的儿女，也是不能例外。这时它们极其自私，只顾自己的范围和食物，不让任何同伴插足，即使同伴极其饥饿，亦所不顾。有时看见人来，勉强飞走短短的距离，或在空中盘桓一些时候，又飞回来，栖息原来的地方。它们把自己限定在狭窄的圈子里。但是春天来了，它们又唱‘新歌’。这种歌声说出它们里面的性情已有一些更变，愿为同伴工作，愿为同伴牺牲，愿与同伴同乐，不再专顾自己。基督徒既然蒙了重生，得与神的性情有分，就当脱去旧人的自私，唱出‘新歌’荣耀神，招呼别人同来享受神在基督里所赐给我们的生命和喜乐。单独，是‘己’很厉害的表现。只能个人祷告，不能同人一起祷告；只能个人读经，不能同人一起读经；只能个人事奉，不能同人配搭事奉；只能单独作工，不能和人同工；这些都是很厉害的‘己’。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

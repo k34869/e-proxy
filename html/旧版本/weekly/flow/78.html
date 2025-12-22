@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('77')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('79')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">细（二）　生活细：为人柔细生活细</p>
+<p>又赐她〔新妇〕得穿明亮洁净的细麻衣，这细麻衣就是圣徒所行的义。（启十九8）</p>
+<p class="title">活出基督作主观的义</p>
+<p>启示录十九章八节说，‘又赐她得穿明亮洁净的细麻衣，这细麻衣就是圣徒所行的义。’细麻衣指明基督徒得胜的生活，就是从他们里面活出来的基督自己。按照整本圣经的启示，得救的人需要两件衣服。为着救恩，需要一件袍子作遮盖，就是路加福音里穿在浪子身上的袍子。（十五21～22。）这袍子就是基督作得救之人的义，使他们在神面前被称义。我们都有这第一件袍子，就是基督作我们的义，作我们的称义，得以站在公义的神面前。然而，我们还需要第二件衣服，就是马太福音里的婚筵礼服。（二二11～12。）这件衣服不是为着我们的救恩，而是为着我们的奖赏，使我们有资格参加神儿子的婚筵。这第二件衣服乃是圣灵在我们里面的工作，实际上，这就是我们所凭以生活并活出来的基督自己，也就是在我们的日常生活中，藉我们彰显出来的基督。这就是启示录十九章八节所说圣徒的义。</p>
+<p>这两件衣服也见于诗篇四十五篇十三至十四节，王后的两件衣服：一件相当于客观的义，使我们得救；另一件相当于主观的义，使我们得胜。四十五篇的王后表征召会，她的第一件衣服是‘用金线交织成的’，第二件是‘刺绣的衣服’。在圣经里，金表征神的神圣性情。在我们得救时，我们接受了一件金线织成的衣服，使我们能到神面前。此外，我们还需要另一件衣服，就是刺绣的衣服。刺绣表征圣灵变化的工作。今天，圣灵正在我们身上作变化的工作，如同刺绣的人，把基督一针一针的绣到我们里面，使我们有第二件衣服，就是启示录十九章所题明亮洁净的细麻衣，也就是圣徒所行的义。在召会生活中，圣灵也藉着众圣徒，如同许多小针，来作刺绣的工作。藉着圣灵把基督一针一针的刺绣到我们里面，我们就会有一件刺绣的衣服，这衣服要使我们有资格在基督的审判台前见祂。（参启示录生命读经，729～730、732页；诗篇中所启示并豫表的基督与召会，84～85页。）</p>
+<p class="title">印第安地毯</p>
+<p>印第安人织的地毯非常秀丽悦目。看他们织地毯很有趣；织的时候，看不出什么样子或花纹，但是设计却很细致完全。织成之后，就是一条精美绝伦的地毯，叫人不得不钦佩他们的本领。他们使用各种颜色的线，虽然颜色以鲜艳夺目、灿烂绚丽的居多；但是也有一些黯淡无光，灰黑褐黄的颜色。在外行人看来，或许以为有损地毯的美观；但当他们把那些黯淡的线织在一定的地方，就更能增添那些彩线的光耀华丽。这是因为他们善用背景、对比、和衬托的缘故。基督的身体也是如此；神细致的将每个肢体俱各安置在身体上，都有肢体各自的功用，缺一就不美了。（参造就故事中册，172页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：每天经历圣灵将基督刺绣到我们里面，使我们得着明亮洁净的细麻衣。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

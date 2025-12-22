@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('422')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('424')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第5课 性格—精确</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>利未记十九36 要用公道的天平、公道的法码、公道的伊法、公道的欣…</p>
+<p>误认灯光</p>
+<p>一九五三年，一艘法国一万二千余吨的巨轮搁浅在峭石上，以致船身中部折断。数十人因此丧生；其余乘客虽得幸生还，却被迫挤在黑暗的尾舱中，饱受惊慌；财物也损失不少。这艘巨轮是怎样遇险的呢？据说是因当时起雾，驾船者误认岸上的灯光为灯塔的灯光，而招致大祸。作事不准确，小则损及个人利益；大则危及他人生命财产之安全，不容忽视</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：精确的人是指在他们所作的工作中充分并完全正确、准确的人。一个精确的人会按照老师要求他们的作作业，而不剩下或走捷径作。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：问问孩子们，如果木匠用一条和另外三条的高度不完全相同的腿，作一张桌子或椅子，或者裁缝师用不同长度的袖子缝件衬衫，那会是什么样子？如果老师要求整齐地写10个句子，他们会怎么作？他们会完全按照老师的要求写，还是会乱写，或只作一半的作业？</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>马太福音五37 你们的话，是，就说是，不是，就说不是；</p>
+<p>一天，荒唐村许多村民群情激昂，跑到村委会办公室大闹。质问村主任唐石头为啥将扶贫单位赞助的30万元修公路款私吞了。</p>
+<p>唐石头听了，好似是一头雾水，静了静，威而不怒地说：“说我贪了30万元，那是谣传。乱造谣可是要犯法的！”唐石头说：</p>
+<p>“扶贫单位为咱村做好事是真的，也拿了3万元钱修路，但若说是30万元则是没有的事。”</p>
+<p>“哼，还说是没有的事。要不是咱们无意中看了去年的一份报纸，那30万元大部分还真是让你们这些领导给贪污了呢。”</p>
+<p>唐石头一怔，感到事情有点蹊跷，便说：“让我看看报纸。”</p>
+<p>“哼，你别装了！看，就让你看，以免你说有人造谣，白纸黑字，是市委的机关报，难道还有假？”说罢，周老二便将报纸递给了唐石头。</p>
+<p>唐石头一瞧，只见报纸上刊登了这样一篇新闻：《扶贫工作讲实效 三十万元入村来》。细看，确实是写荒唐村的事，作者就是乡里的宣传干事小胡。恰巧，小胡正在芳塘村养猪场采访，唐石头便对村民说：“这么说，给钱的事可能是有的，只是暂时那修路款未到村里，待我去问问小胡，待了解真相后，就给你们一个准确的答复。”</p>
+<p>唐石头便找到了小胡，指着那篇报道对小胡说：“胡干事呀，上面扶贫单位赞助咱村30万修路的款，如今村民都在追问，你是写这篇报道的当事人，可咱村只收到3万元，你知道余下的钱现在在何处？由谁管着？”</p>
+<p>小胡一怔，脸瞬时红了，尴尬地说：“那是去年我为了让稿件见报，夸……夸……夸大其词了。”</p>
+<p>唐石头恍然大悟地说:“唉，原来是这样啊，你这么一夸大，说起来挺容易，可村民以为我贪污了，你让我怎么向村民交差呀?”</p>
+<p>箴言八8 我口中的言语都是公义，其中并无弯曲乖僻。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：精确的人在他们的说话上充分并完全正确、准确。精确的人不会有过度或不及之处。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：创建一个场景，如突然溢出水，或你走路时绊倒。让孩子们描述他们所看到的。一个精确的人在描述时会不漏任何细节，也没有夸大或不精确的信息。当孩子们说到他们的成就或经历，或其他与自己有关的事情，会怎么样呢？他们能准确地表达了自己的能力吗？</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记三十九32 这样，会幕的帐幕，一切的工就作完了；凡耶和华所吩咐摩西的，以色列人都照样作了。</p>
+<p>缺少一根钉马蹄铁的钉子</p>
+<p>一四八五年，英国国王理查三世（Richard III）与理奇蒙（Richmond）伯爵对战，这场战争将决定谁是统治英国的国王。开战的那一天早晨，理查派一个马夫去看事情是否已经准备妥当。马夫对铁匠说，“国王希望骑这匹马率领他的军队。”铁匠回答说，“过去这几天，我已经为国王整个军队的马钉上蹄铁，现在铁钉没有了，我必须去拿一些铁来。”马夫很不耐烦的大叫说，“敌人已经来了，我们必须到战场上迎战了，以你所有的应付一下吧！”因此，铁匠用一块铁条，作了四个马蹄铁，敲敲打打，将蹄铁装到马蹄上，然后开始用钉子钉住这些蹄铁。但是当他钉好三个蹄铁后，他才发现少了一个钉子将蹄铁钉上，必须再花时间打造钉子。马夫很不耐烦的说，“我已经听见喇叭吹号的声音了，你不能用手边现有的应付一下么？”铁匠说，“可以把铁条装上，但是不牢靠。”马夫问说，“可以附着在马蹄上么？”铁匠说，“会！但不敢保证。”结果勉强装上。两军交战时，理查身陷激烈的战斗中，来回奔驰于战场，为他的士兵加油并且和敌人作战。但这时，他的马有一个蹄铁掉了，马摔了一跤，理查也被摔到地上。受惊吓的马奔驰而去，理查看到士兵转身逃亡，敌军围拢过来，挥着剑大喊：“给我一匹马！给我一匹马！我愿以我的王国来换一匹马。”但是他的士兵都忙着自救；不久战争就结束了。这提醒我们马虎、应付、不耐烦的作事，不仅事情作不成功，也有可能导致更大灾祸的发生。作事准的人是不马虎的。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：精确的人是充分并完全正确、准确地遵守嘱咐的人。一个精确的人不会只把事情作的“足够接近”或“足够好”，而是完全遵守所指示的。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：问问孩子们，如果人们不准确地作他们的工作，例如，医生开药，建筑工人盖造房子，售货员找零等等，会发生什么。考虑给孩子一些详细的指示，比如列出菜谱配料的分量，或者画一张路线图，看看如果他们准确照作，或没有准确照作，将会发生什么。让孩子们分享他们作的“差不多”的经历，让他们意识到作的差不多还不够好，例如数学计算、科学实验、给别人指路或电话号码等。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

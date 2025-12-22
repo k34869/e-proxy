@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('832')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('834')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">凭小孩祷告断案</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>以弗所书 6:18</p><p>时时在灵里祷告，并尽力坚持，在这事上儆醒，且为众圣徒祈求，</p><p>奥古斯丁的母亲名叫莫妮卡（Monica），是北非的一个女子。她的丈夫是一贫穷的异教徒，性情粗暴，不听人言。因着莫妮卡的祷告，她的丈夫后来也归向了基督，并且性情大有改变。但是不久，丈夫去世了。因此教养奥古斯丁的责任，就由这位年轻的寡母完全负责。奥古斯丁早年时赋有天才，是一顽皮的孩子，很不听话。莫妮卡对于这个儿子的教导，完全是用祈祷和眼泪来浇灌！奥古斯丁十六岁时，因得同乡之助，得赴迦太基上大学。因他专心力学，而有长足的进步；但因恶劣环境之渲染，他竟实行了不合法的婚姻，和一女子同居。这叫莫妮卡在家为他忧虑，朝夕祷告。他毕业以后，决定要到更远的罗马寻找幸福。罗马的社会比迦太基更坏，恶风败俗较之有过而无不及。</p><p>莫妮卡听闻之后，十分恐惧，亟谋能与儿子再晤一面，令他回心转意。那天一夜不能成眠，心灵深处不住向神祈祷。那知她的儿子已经起程了。孤独的孀母，站立海边几乎发狂，口中连连哀诉呼号。她回到家中，重新为自己的儿子祷告。她深信祷告必蒙垂听，不过神的时候尚未来到。以后奥古斯丁由罗马到米兰，结识了安波洛兹（Ambrose）主教，他的宗教观念，由此改变，决定作一信徒。母亲闻讯欢喜异常，经历艰险航程赶到米兰，与她儿子同住。奥古斯丁初信脚步不稳，犯罪之故态复萌。母亲又受了很大的痛苦，屡次迫切祷告。直至奥古斯丁在花园中听见邻屋儿童的声音，翻读圣经罗马十三章十三至十四节的话，得到圣灵的光照，蒙了重生。母亲由此放心了。</p><p>在莫妮卡死前，曾嘱咐儿子说，‘儿子，我一生中没有更大的喜乐，大过你悔改得救的。我的工作仅此为止，我的希望已经完成。但有一事，令我留恋，就是我愿在死前，能看见你轻看世俗的快乐，成为神的仆人。这样，我就心满意足了。’奥古斯丁对于他所敬爱的母亲，有如此的追述：‘她为我的堕落，九年之中哭泣没有停止，痛苦丝毫没有减轻，直到我悔改以后才停止。她实在是外穿妇人衣服，内藏男性的信心，包围母亲的慈爱，显出基督的虔诚。她最后的成功是儿子信了她的信仰。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

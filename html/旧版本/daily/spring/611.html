@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('610')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('612')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">不离前人脚迹</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>诗133:1　看哪，弟兄和睦同居，是何等的善，何等的美！</p><p>约翰．法色生于一七四○年，十六岁时因听怀特腓弟兄讲道而得救，后来也出来事奉主。二十六岁迁居约克都的小村，服事村民，生活清苦。转眼七年过去，一七七二年时，忽然接到伦敦教会邀请他前去作工，因此决定前往服事。</p><p>圣徒苦苦挽留无效；临行时法氏夫妇和前来送行的弟兄姊妹一一握手。只见圣徒个个恋恋不舍，脸上流露着一片真情，甚至挥泪泣诉。其妻不禁号啕大哭，回顾丈夫说：“约翰，我心里实在受不了，我们怎能离开这些可爱的弟兄姊妹？”法氏含泪答说：“我内心也是同样难过，觉得不该离开这儿。”他们夫妇定意不再离开。</p><p>法氏在该小村忠心事奉达五十一年之久，一生实际的活在弟兄相爱里，除此之外，别无所求。因基督在众圣徒里那爱的力量，使他将全部的生命浇奠在约克都的圣徒身上。</p><p>诗歌621</p><p>_一_</p><p>福哉以爱联系，圣徒心心相契；彼此交通一情一意，真如在天无异。</p><p>_二_</p><p>在父恩座之前，同心寻求眷怜；有望同盼，有苦同难，同忧、同乐、同安。</p><p>_三_</p><p>软弱彼此体谅，重担互相担当；人心伤，众人泪淌，充满同情心肠。</p><p>_四_</p><p>每逢彼此分离，总是难免依依，但身虽离，灵仍一起，且有再会之期。</p><p>_五_</p><p>盼望那日快显，再无离别辛酸；相爱更亲，相交更甜，同乐直到永远。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

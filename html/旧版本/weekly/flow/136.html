@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('135')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('137')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">但以理立志不受玷污</p>
+<p>但以理却立定心意，不以王的膳和王所饮的酒玷污自己，所以求太监长容他不玷污自己。（但一8）</p>
+<p>但以理是犹大王室的后裔。当尼布甲尼撒第一次攻破耶路撒冷时，他还年幼，就被掳至巴比伦。那时王吩咐太监长，从以色列人的王室后裔和贵胄中，带进几个人来，要年少没有残疾，相貌俊美，通晓各样智慧，知识通达，思想敏捷，足能侍立在王宫里的，要教他们迦勒底人的学问和语言。但以理和他的三个同伴，就被选入宫中受教育，准备侍立王前。王派定将自己所用的膳和所饮的酒，每日赐他们一分，养他们三年。但巴比伦王的食物是献给偶像的食物，所以是不洁的。但以理和他的同伴立定心意，不以王的膳和王所饮的酒玷污自己。太监长对但以理说，‘王已经派定你们的饮食；为何叫他看见你们的面貌，比你们同岁的少年人瘦弱难看呢？’但以理求太监长让他们试十天，只吃蔬菜，喝白水，看看他们的面貌会如何。过了十天，他们的面貌更显俊美，比用王膳的一切少年人更加健壮；于是委办撤去派定他们用的膳、饮的酒，只给他们蔬菜吃。（但一3～16。）</p>
+<p>王所给上好的膳食是已经献给尼布甲尼撒的神，所以是受玷污、不洁的。但以理和他的同伴若吃那些食物，就要受到玷污，也就是接受偶像，结果会与撒但成为一。他们若这样作，神就完了，在这地上就没有什么能为着神自己和神的权益了。然而，但以理和他的同伴是为着神的；他们紧紧联于神，忠心持守神，因着接受神而与神是一。</p>
+<p>在但以理身上有一个重要的原则，就是自愿奉献。虽然表面看，但以理不是拿细耳人，但实际上他也是一个拿细耳人，因为拿细耳人是清酒、浓酒都不喝的。这意思是，凡人生里头的娱乐，他都不享受。在但以理身上，就是这个原则。那些在世人身上能叫人感觉甜美、快乐、痛快的，但以理都不要；他的心单纯，绝对为着神。（参但以理书生命读经，12～13页；转移时代的人，12页。）</p>
+<p class="title">竹篮子洗米</p>
+<p>有一次，一位姊妹告诉倪柝声弟兄，她记性差，读完圣经立刻就忘。她问倪弟兄，这样一直读圣经有什么用处。倪弟兄回答时，说到中国妇女用竹篮子洗米的方式。她们把装满米的篮子浸到水里，再提上来，上上下下许多次。每次她们把篮子提上来时，水都从篮子漏出去。虽然篮子没有盛住水，但篮子和米都洗干净了。倪弟兄接着把这个例子应用到读主的话上。他说，‘我们所读的也许一点也没有留下，但我们被洗涤了，得洁净了。’愿我们都受激励，一再到主的话这里来得洗净。让我们把自己像这竹篮子一样，放在神活话的水里，一再被洗涤。虽然水从篮子漏出去，但我们要得着洁净。（参以弗所书生命读经，554页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：效法但以理作拿细耳人，不受玷污，心单纯，绝对为着神。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

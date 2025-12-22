@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('156')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('158')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第9课 创造—从地看出神的大能</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记八1下 …神叫风吹地，水就渐落。</p>
+<p>引    题：小朋友，你能感受到风的吹动吗？说一说你的感受？</p>
+<p>课程内容：风是由空气流动引起的一种自然现象，它是由太阳辐射热引起的。风有时候很温柔，让人感觉很舒服，有时候又很狂暴，让人感到害怕。</p>
+<p>风是分等级的，一级风到五级风属于轻风，小浪，微风，和风，轻浪，劲风。到了六七级风就是强风了，大树枝摆动，电线呼呼有声，举伞行走都很困难。到八级九级风，树枝折毁，人向前行感觉阻力甚大，建筑物有损坏（烟囱顶部及屋顶瓦片移动）。到十级风以上就是狂风、台风，陆地上少见，即使见时也可使树木拔起，将建筑物损坏严重，其摧毁力极大。十三级到十七极风都是属于海啸了，是非常可怕的灾难了！所以，风的力量也显示出创造主的大能！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造向我们展示神的大能。风的力量显示创造主的大能。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：在地球上有很多东西告诉我们神满了大能。风就是一个例子。风是运动的空气。我们可以穿过空气，但当它吹起来，就变成能量。风很强，甚至可以推倒树木和建筑物。风力是风能的来源，风车利用风力发电。带一些展示风摧毁东西能力的图片，或风车发电的图片。考虑使用玩具风车或风筝进行户外活动。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇八九9 你管辖海的狂涛：波浪翻腾，你使它平静。</p>
+<p>耶利米书三一35下…又搅动大海，使海中波浪匉訇的，万军之耶和华是祂的名，祂如此说。</p>
+<p>引    题：请描述一下你见过的水浪。或者去过大海边的小朋友，说一说大海的风浪。</p>
+<p>课程内容：风和日丽，当你嬉戏在小溪、湖泊或者沙滩的海边，微风吹过，水面荡起层层涟漪，一波一波的推向前去，带给人心灵上的舒适与美好，就像在“外婆的澎湖湾”一样，让人享受。</p>
+<p>可是你知道吗，当狂风大作，如空气强对流引起的台风，大风带起的大浪，狂浪有十几米高，非常令人害怕、惊恐。哪位同学读过“老人与海”这部文学作品？风浪太高，船被掀翻，主人公被鲸鱼吞吃。还有更厉害的海浪呢。就是海底地震引起的。</p>
+<p>地震会引起海面有很大的波动，这叫海啸。形成的巨浪更高，威力，破坏力更大。海啸发生时，震荡波在海面上以不断扩大的圆圈，传播到很远的地方。它以每小时600-1000公里的高速，在毫无阻拦的洋面上驰聘1万-2万公里的路程，掀起10-40米高的拍岸巨浪，吞没所波及的一切，有时最先到达的海岸的海啸可能是波谷，水位下落，暴露出浅滩海底;几分钟后波峰到来，一退一进，造成毁灭性的破坏。</p>
+<p>剧烈震动之后不久，巨浪呼啸，以摧枯拉朽之势，越过海岸线，越过田野，迅猛地袭击着岸边的城市和村庄，瞬时人们都消失在巨浪中。港口所有设施，被震塌的建筑物，在狂涛的洗劫下，被席卷一空。事后，海滩上一片狼藉，到处是残木破板和人畜尸体。印度尼西亚，夏威夷，日本等都是经常发生海啸的国家。</p>
+<p>世界上最大的地震海啸：八重山海啸，1771年4月24日发生在日本琉球群岛中的石垣岛(估计巨大海浪的波峰高达84.7米，排山倒海的巨浪将重量达850吨的整座珊瑚礁抛出2.092公里以上。这次海震所击起的海浪，据测它的行进速度为每小时788.557公里)。</p>
+<p>是谁管辖海的狂涛，波浪翻腾，你使它平静呢？</p>
+<p>又是谁又搅动大海，使海中波浪匉訇呢？</p>
+<p>在这样的大能面前，谁又能站立的住呢？</p>
+<p>耶和华啊，你是神，你是大能的一位，赞美你！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造向我们展示神的大能。惊涛骇浪显示创造主我们的神的大能。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：波浪是由海来的大风造成的。波浪强大到足以推动人并摧毁建筑物。海啸是海洋中的一个巨浪，通常是由地震或火山爆发引起的。它可以达到100英尺（10层楼）的高度。海啸比商业喷气机的速度更快，在到达海岸时会造成巨大的破坏。波浪还可以通过不断地撞击海岸线，使其碎裂而侵蚀陆地。带来海浪长久冲刷海岸线或海蚀柱的图片。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哈该书二6 因为万军之耶和华如此说，过不多时我必再一次震动天、地、海与旱地。</p>
+<p>引    题：你参加过学校组织的地震演练吗？请描述一下你知道或者想象中的地震。</p>
+<p>课程内容：地壳某些脆弱地带造成岩层突然发生破裂或错动，这就是地震。我国将地震烈度分为12度。如1976年唐山7.8级地震，</p>
+<p>3度，少数人有感。</p>
+<p>4-5度，睡觉的人惊醒，吊灯摆动。</p>
+<p>6度，器皿倾倒，房屋轻微破坏。</p>
+<p>7-8度，房屋破坏，地面裂缝。</p>
+<p>9-10度，桥梁、水坝损坏，房屋倒塌，地面破坏严重。</p>
+<p>11-12度，毁灭性破坏。</p>
+<p>据统计，地球上每年约发生500多万次地震，即每天要发生上万次的地震。其中绝大多数太小或太远，以至于人们感觉不到;真正能对人类造成严重危害的地震大约有十几二十次;能造成特别严重灾害的地震大约有一两次。</p>
+<p>1960年智利大地震时，最大的晃动持续了3分钟。地震造成的灾害首先是破坏房屋和构筑物，造成人畜的伤亡，如1976年中国河北唐山地震中，70%~80%的建筑物倒塌，人员伤亡惨重。</p>
+<p>古今中外地震死亡人口之最：大约1201年7月，近东和地中海东部地区的所有城市都遭地震破坏，死人最多， 估算约达110万。1556年1月23日发生在中国陕西华县的8.0级地震造成的死亡人数比前者确凿一些，广大灾民病死、饿死，数百里山乡断了人烟，估计死亡83万余人。</p>
+<p>哈该书二6 因为万军之耶和华如此说，过不多时我必再一次震动天、地、海与旱地。地震是再来的一个兆头，是主清理审判这个堕落世界的一个方法。</p>
+<p>在这样的大能面前，谁又能站立的住呢？</p>
+<p>耶和华啊，你是神，你是大能的一位，赞美你！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造向我们展示神的大能。从地震可以看见神的大能。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：地震给我们看见神是何等有大能。地球表面突然摇动、滚动或突然的震动时就会发生地震。地震足以使树木连根拔起，建筑物和道路倒塌，引发山崩和雪崩，也会引发洪水和海啸。1994年洛杉矶州北岭区发生6.7级地震。地震造成了85英里以外的巨大破坏，阿纳海姆体育场的记分板坍塌到几百个空位。在不到20秒的时间里，地震造成了200亿美元的损失。更详细地讨论地震的强度，可使用一些适合这个年龄段的地震图片或视频。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

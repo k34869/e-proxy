@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1280')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1282')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 3 课<br />
+那灵－信基督所得应许之福</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　浸入基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>加三26～27：因为你们众人借着相信基督耶稣，都是神的儿子。你们凡浸入基督的，都已经穿上了基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>新约启示我们已经浸入父、子、圣灵的名里，浸入基督里，浸入基督的死里，并且浸入基督的身体里。在消极方面，了结我们老旧的生命；在积极方面，用三一神永远的生命，使我们得重生。如今我们已穿上基督为我们的衣服、遮盖和彰显，我们只该凭基督而活，并活基督；这会使我们正确的实行召会生活，叫神的定旨得以完成。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>穿上基督为我们的衣服、遮盖和彰显，凭基督而活，并活基督。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>那灵乃是应许给亚伯拉罕的福分，今日我们借着信基督，而得以接受这应许的福分。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神所应许给亚伯拉罕的福分是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘加拉太三章十四节说，“为叫亚伯拉罕的福，在基督耶稣里可以临到外邦人，使我们借着信，可以接受所应许的那灵。”因为这节将所应许的那灵与亚伯拉罕的福结合一起，所以极其重要。亚伯拉罕的福，就是神为着地上的万国，应许给亚伯拉罕的福。（创十二3。）这应许已经成就了，这福已经在基督里，借十字架的救赎临到了万国。加拉太三章十四节指明，那灵就是神为着万国所应许亚伯拉罕的福，也是信徒借着相信基督所接受的。那灵，就是复合的灵，实际上就是三一神自己经过成为肉体的过程，给我们接受，作我们的生命和一切。这是神福音的中心。</p>
+<p>神应许亚伯拉罕物质方面的福乃是美地，作包罗万有之基督的预表。（西一12。）因着基督至终实化为包罗万有赐生命的灵，这应许之灵的福，就与应许亚伯拉罕之地的福相符。事实上，那灵作基督在我们经历中的实化，就是美地，作神全备供应的源头，给我们享受。</p>
+<p>我们所接受作新约福音之福的复合之灵，就是出埃及三十章二十三至二十五节里复合的膏所预表包罗万有、复合的灵。香料与橄榄油复合，以产生膏，预表基督的人性、死、复活与神的灵复合，以产生包罗万有的灵。这灵在神新约的经纶里，对信徒是全备的供应。我们借着信接受了这灵，作神所应许亚伯拉罕福音的福。那灵作经过过程的三一神，是包罗万有的基督作美地的完满实现。这是那灵作福音完全的福。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>享受神在基督里传给亚伯拉罕的福音，得着神所应许的福。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

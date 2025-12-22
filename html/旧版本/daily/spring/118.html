@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('117')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('119')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">默想和读经</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">还要借着各样的祷告和祈求，接受救恩的头盔，并那灵的剑，那灵就是神的话。（弗6:17）</div>
+<div id="CC">And receive the helmet of salvation and the sword of the Spirit，which Spirit is the word of God，by means of all prayer and petition.（Ephesians 6:17-18）</div>
+<div id="C">一位活在交通中的姊妹，见证自己进入交通的经历。她说，“引人进入交通的方法有两个：一是默想；二是一面读经，一面默想。”这里的第二个方法，就是拣选一小段紧要又能实行的经节，先读一读，再仔细品尝、消化，从里面将精华取出来。当我们尝得有味道时，就不必再往下读；一直到味穷时再往下读去，仍照前面的方法去品尝。<br/><br/>　这样的读经，可以用婴孩吃奶作为很好的比方。起初他用力吸奶，及至奶汁流出来的时候，只要吃下，就不必再吸；不然易使自己被奶呛到。我们读经最好一次不要过量，因为叫我们得益处的，不是量多，乃是方法合宜。<br/><br/>　第一个默想的方法，在读经时可实行，随时随地也都可实行。就是运用信心，将自己放在神面前，想起一段有喂养和滋补性的真理，便用柔顺、甜蜜的态度，专注在真理上，咀嚼其中的美味。这样就能遏制心思往外游荡，不至分心，而远离外面的纷扰，向里面迈进，在深处亲近神。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

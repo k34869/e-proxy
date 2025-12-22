@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('415')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('417')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">李弟兄蒙召事奉主</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>诗二五14耶和华亲密的指教敬畏祂的人；祂必使他们得知祂的约。</p><p>和受恩教士有一次觉得神的旨意要她预备十几间房子，专门接待信徒，好像一个公寓的性质。她就为这事祷告。顶希奇的，神就叫附近一所工业学校停办，将这学校租给她，事就这样成了。过了四年，那个学校又要开办。倪弟兄的父亲是该校董事之一，他一得知这个确实消息，特别去见和教士，问她知不知道这个消息。她说，她已得着他们的通知，定规秋天要开学，且从美国请了两位工程师，都已动身，按他们看，事在必行。倪弟兄就问她搬不搬？她说，不搬。问她祷告了没有？她说，没有，这次连祷告也不必。旁边有位青年的信徒说，她要受撒但的欺骗了。她说，你慢慢说，等等看。倪弟兄问她怎么这样有把握？她说，神不会拿我们开心。神说要办一个公寓，我就办；神没有命令我停，难道祂把我们撵出去么？于是她安安静静的上山去，好像没有这回事。快到下山的时候，对方忽然有一封信给她说，学校不开了，还是请她继续把房子租下去。原来他们突然有了非常的变动，因为某种缘故破产了。我们若认识一个人的脾气，我们就可以预料他的举止。同样的，我们若认识神，就必知道某件事祂要怎样作。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('236')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('238')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">传福音、拯救灵魂要火热</p>
+<p>我观看，见暴风从北方刮来，有一朵大云，有火不断的闪烁，周围有光辉；从其中，就是从火中所发出的，看来好像光耀的金银合金。（结一4）</p>
+<p>传福音的能力，在于我们对包罗万有之灵的享受。为此，我们传福音之前，必须先祷告、接触神并享受祂。这就是‘等候’；藉着祷告等候、享受主，我们就被主福音的灵焚烧。这样，当我们出去时，我们就有福音的能力。另一面，我们也必须学习真理，明白真道。行传六章四节彼得说，‘我们要坚定持续的祷告，并尽话语的职事。’祷告就是接触神，尽话语的职事就是把主的福音释放给人。使徒们这样作，结果就使主的话扩长、繁增，并且得胜。（7，十二24，十九20。）</p>
+<p>要领受福音的能力，我们必须享受主。当我们享受主，主就作我们的气，作我们的大风。正如以西结一章所描绘的，大风带来大云，大云带来烈火；我们越经历风、云、火，就越有金银合金构成在我们里面，使我们成为满了三一神并彰显祂荣耀的人。（4注5。）</p>
+<p>不仅如此，我们也要学习讲说福音的真理。我们把家打开，请人来，不能闭口不言，乃要放胆讲论。也许我们不懂科学，天文、地理也不清楚，但我们晓得福音的道，也清楚圣经的真理。这就彀了，我们要把主的话传给人。</p>
+<p>福音的能力在于以下三项：神自己作为终极完成的灵，我们的祷告，以及我们传讲神的话。神乃是生命和能力的灵，在我们里面作生命，在我们身上作能力；我们享受祂、等候祂，向祂祷告，并且学习祂的话，就得着能力。福音本是神的大能，要救一切信的人。（罗一16。）福音就是神的话，带着神自己，经过我们的享受、祷告，就变作能力。为此，我们打开家、接待人之前，要先享受祂，先领受能力。我们祷告祂，等候祂，风就吹起，云就来到，火也带来，结果就产生金银合金，也就是救赎之神的辉煌彰显。（参速兴起传福音，59～60页。）</p>
+<p class="title">因你唱诗得救</p>
+<p>杰弗逊是一贫寒黑人，以作晒衣夹维生，作好出去沿街叫卖。得救以后，热心为主传福音。有一天，他在街上叫卖。有母女二人出来，买了几个晒衣夹。然后对他说道：‘杰弗逊，你给我们唱一首歌儿听听。’杰弗逊原是个火热爱主的人。当下，他的心被主的爱充满，便由衷唱出‘耶稣替我受苦’，非常感人。他唱完，母女二人满面泪痕，大哭起来。杰弗逊以为闯了大祸，吓得逃跑，再也不敢在那里作生意。过了大约二十年，杰弗逊作了传道人，有一天，在一处带领聚会。一位妇人过来，说道：‘你认识我么？’杰弗逊回答：‘我不认识你。’妇人说，‘你不记得二十年前，曾在某某门口唱诗么？’杰弗逊说，‘不错。’妇人说，‘我们母女二人就是因你唱的那首诗歌得救的。’（参造就故事下册，51～52页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在生活中享受主，领受福音的能力，把主的话传给人。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

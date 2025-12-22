@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('75')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('77')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>你们从祂所领受的膏油涂抹，住在你们里面，并不需要人教导你们，乃有祂的膏油涂抹，在凡事上教导你们；…你们要按这膏油涂抹所教导你们的，住在祂里面。（约壹二27）</p>
+<p class="title">细的操练（一）顺从膏油涂抹的教导</p>
+<p>那灵在我们里面的膏油涂抹，有一个自然的结果，就是产生膏油涂抹的教导。膏油本身就是圣灵，也就是神自己。当这膏油在我们里面涂抹的时候，就给我们抹上神的成分。这膏油的涂抹既是圣灵的一个动作，就定规叫我们里面有感觉。我们里面一有了膏油涂抹的感觉，我们的心思就能在这涂抹的感觉里，领会神的意思，知道什么是神喜悦的，什么是神不喜悦的；什么是神要的，什么是神不要的。这个领会、知道，就是我们从膏油涂抹所得着的教训。藉着膏油的涂抹，我们里面就更多得着神自己，更多有神的成分；同时我们能摸着神的意思，而活在神里面。我们一切属灵生活的关键，就在于膏油的涂抹。我们一活在膏油涂抹的教训里，就是随从灵而行，活在与主的交通中，也就是活在神面前。</p>
+<p>那灵在我们身上的膏油涂抹既是细致的，我们就必须是个细致的人。在我们的经历中，如果我们不祷告，我们就会松散粗心；但我们祷告后，那灵在我们里面，就使我们作某些事没有平安。我们在主的生命里有多少长进，就看我们有多细致。如果我们作事又粗又快，就说明我们没有照着膏油涂抹的教导。我们需要凡事回到灵中问问主，好得着膏油涂抹的教导，住在主里面。</p>
+<p>再者，按照出埃及三十章的豫表，复合的膏是用来膏抹帐幕，和一切与帐幕有关的器物。不仅如此，祭司也为这复合的膏所膏抹。这表征复合之灵的供应，是为着基督的身体—召会，神的家，也是为着对神的事奉。我们若不在基督的身体里，或不顾神的事，我们就很难有分那灵的供应。要享受那灵，我们需要是帐幕和祭司体系的一部分，是神的居所并对祂的事奉的一部分。这样，我们自然会为复合的灵所膏，并享受耶稣基督之灵全备的供应。（参生命的经历上册，162、184页；那灵同我们的灵，153～154页；新约总论第四册，109～110页。）</p>
+<p class="title">外面要回去，里面说不要</p>
+<p>有一次，倪柝声弟兄访问某地，遇见一位弟兄也到那地访问。这位弟兄对那地召会有很多批评；他很会讲道，也知道那地召会有顶多属灵的东西可以给人，但他心里不佩服。他碰着倪弟兄的时候，总是说，在他所在的地方是怎样怎样作的，但是在那地又是如何如何作的，意思是他作的好得多。有一天，他实在说得太多了，倪弟兄就对他说，‘你说这里这样不好，你走好了，为什么还在这里呢？’他指着心说，‘原因在这里，因为它（心）要在这里。’他每一次到房间收拾行李要回去的时候，心里就不平安。有的时候，一天到房间去收拾行李三次，但是每一次要走的时候，里面就觉得不应该，觉得不能走。有一次已经回去两周了，还得写信说还要再回来。</p>
+<p>基督徒的事奉，不是凭着己意，乃要照着那灵细致的涂抹和教导，住在主里面，服事主基督。（参造就故事中册，43页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：顺从膏油涂抹的教导，随从灵而行，活在与主的交通中。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

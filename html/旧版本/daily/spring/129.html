@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('128')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('130')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第5课  创造—从天看出神的秩序</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一1 起初神创造诸天与地。</p>
+<p>引    题：小朋友，你知道太阳有多大吗？太阳距离地球有多远吗？</p>
+<p>课程内容：神创造天地时，祂把一切都放在正确的位置，按着适当的顺序，太阳离地球大约有一亿五千万公里。这个距离，如果搭飞机的话，要飞十七年才能到达。这乃是神奇妙的安排；因为太阳是一个气体的大火球，它的表面温度有六千度。你们想想看，假若太阳离我们居住的地球近一点，我们是不是就会像烤肉一样被烤焦了？那么太阳离地球再远一点好不好？也不好，因为这么一来，地球到处都会结冰，所有的生物也都会被冻死啦！所以，神修造太阳，把太阳的位置和温度都造得恰好适合地球，为地球带来光与热，使地球上的生物能够生生不息，繁衍增多！看，神的创造多么有秩序！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造给我们看见神是有秩序的。当神创造天地时，祂把一切都放在正确的位置,按着</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当神创造太阳系时，祂把地球安放在精确的位置。如果地球离太阳太近，地面上将会很热，生物就无法生存；如果地球离太阳太远，地上就会太冷，生物依然无法生存。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>列王纪下十九15 惟独你是地上万国的神，你曾创造诸天与地。</p>
+<p>课程内容：我们居住的地球，在宇宙中它是太阳系里面的一颗星星。太阳系就是以太阳为中心，和所有受太阳吸引的天体组合。这些天体都有自己的运动路线，都围绕着太阳旋转。围绕太阳公转的轨道在同一平面内，公转方向也相同。公转周期同它们与太阳的距离成正比，八大行星自转方向多数也和公转方向一致着太阳有巨大的吸引力，他们都像听话的孩子，乖乖的，围着太阳转，都不会跑太远哦。看！我们神的创造是多么有次有序！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造给我们看见神是有秩序的。神把太阳系的一切都安置在正确的位置。太阳系中的每个行星都有它自己的轨道，防止它与其他行星相撞。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：太阳系中的每个行星都照着椭圆轨道围绕太阳转动。这是由于太阳的引力和行星本身的速度所产生的。任何较慢的速度都会导致行星落到太阳上，任何更快的速度都会使行星脱离轨道。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>耶利米 五一15耶和华用能力造作大地，用智慧建立世界，用聪明铺张诸天。</p>
+<p>课程内容：太阳是恒星，和地球的关系非常密切。我们已经说过，地球是转动的，一面自己转动，一面地球以每小时66660英里的速度绕着太阳转动；自转一圈是一天，绕太阳转一圈是一年。多奇妙阿！如果地球不这样转动，那么向着太阳的这一面就一直是白天，背着太阳的一面又一直是晚上，生活、休息就没有规律。又因为地球的自转轴和绕太阳转的轨道垂直面有二十三度半的倾斜，造成春、夏、秋、冬一年四季的变化，昼夜也有长、有短。每一天、每一年，都非常有规律。地球向着太阳，我们就起林读书、工作；地球背着太阳，我们就睡觉休息。夏天温度高，觉得比较热，白天也较长；冬天温度低，觉得比较冷，白天比较短，这都是太阳在管理的呢！看！神创造的这一切都是这么有质有序！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造给我们看见神是有秩序的。地球以合适的轨道和速度绕太阳运行，使地球适合人类居住。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：地球以每小时66660英里的速度围绕太阳运行。这个速度随着地球轴的倾斜产生每三个月的季节变化。如果地球的速度减半，将使每个季节的时间增加一倍。冬季和夏季的六个月极端漫长的严寒或酷暑将导致生命不可能存在。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

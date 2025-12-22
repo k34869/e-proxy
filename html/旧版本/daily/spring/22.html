@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('21')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('23')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">佩带圣经</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我今日所吩咐你的这些话，要放在心上。……你也要将这些话系在手上为记号，戴在额上为头带。（申6:6，8）</div>
+<div id="CC">And these words，which I command you today，shall be upon your heart; ……and you shall bind them on your hand as a sign，and they shall be as frontlets between your eyes.（Deuteronomy 6:6，8）</div>
+<div id="C">在英国伯明罕有位女学生，在布道会里受感而接受救主。得救后，她就立志要去救别人。后来她升入大学，经常对同学讲论主耶稣。有一次，她和同学谈论福音，想要引圣经证明耶稣的话；但那时她身边没有带圣经，就走上楼去取。不料下楼后，同学已经走了。她很懊悔失去了大好机会。从那天起，她定意把圣经放在衣袋里，以备不时之需。当时许多人都仿效她，一一佩带圣经。<br/><br/>　然而，信徒不仅需要经常带着圣经，更要让神的话丰丰富富地住在心里，以备不时能供应人的需要，也能随时供应自己的需要。</div>
+<div id="CC">这宝贵的圣经（儿523）</div>
+<div id="C">一<br/>　这宝贵的圣经，<br/>　是神的话可信，<br/>　我靠这话得站立稳固，<br/>　我最爱这圣经。<br/>　二<br/>　圣经是神的话，<br/>　是我脚前的灯，<br/>　圣经也是我路上的光，<br/>　我最爱这圣经。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

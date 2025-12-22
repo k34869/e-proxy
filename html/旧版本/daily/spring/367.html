@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('366')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('368')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第11课  十戒—爱人（不可有贪心）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十17上 不可贪爱邻舍…一切所有的。</p>
+<p>1不可贪婪</p>
+<p>我们已经说过第六条至第九条诫命：不可杀人、不可奸淫、不可偷盗、不可作假见证，这些诫命都是对付我们外面的过犯和罪行。这一堂课，我们要说到十诫中的最后一诫—不可贪婪。这条诫命并不是对付我们外面犯罪的行为，而是对付我们里面犯罪的存心和思想，就是贪婪。人外面有了犯罪的行为，很容易被人发现看见；但人里面有了贪心的念头，别人却不一定看得出来。但是主在我们里面，他知道我们的存心和意念，他也不仅对付我们外面犯罪的行为，也要对付我们里面犯罪的存心和思想，特别是在贪婪这件事上。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：第十条诫命是爱人，不要贪图别人拥有的东西。贪婪就是想要别人的东西。我们应该为我们所拥有的感恩，而不贪恋别人拥有的。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：询问孩子们曾经有没有想要兄弟姐妹或朋友的东西，例如，更大的乐高套装、花式自行车、漂亮的洋娃娃等等。当他们的兄弟姐妹得到一个新玩具时，他们是否也想要一个新玩具？想要别人拥有的感觉是贪婪的。贪图使我们嫉妒或贪婪。帮助孩子们感激他们所拥有的一切。让他们去识别他们能并且应该感激的事情是很有益的。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十17 不可贪爱邻舍…一切所有的。</p>
+<p>2亚干因贪婪而犯罪的例子</p>
+<p>从圣经中我们看见，有好多的罪行，都是因为先有贪婪的心而引起的。首先我们来看约书亚七章亚干的例子：</p>
+<p>当以色列人在旷野经过四十年以后，神带领他们过了约但河，进入迦南美地。他们要争战击败那地的居民，神也与他们同在，曾使一座大城耶利哥倒塌，以色列人便得了那城。但是后来，他们派了三千人去攻打一座小小的艾城，没想到那三千人竟被艾城的人打败而逃跑了，并有三十六人被杀，众民的心就都消化如水。这时候带领以色列人的元帅约书亚，就撕裂衣服，在神的约柜前俯伏敬拜，又问神说，为什么他们竟被敌人击败。神就告诉约书亚，以色列民中有人犯了罪，达背了神的吩咐，取了当灭的物，偷窃行诡诈，把那当灭的物放在他们的家具里。因此他们在仇敌面前站立不住，转背逃跑。神吩咐约书亚，要将那当灭之物从百姓中间除掉，神才能与他们同在。</p>
+<p>约书亚清早起来，就使以色列人按着支派、宗族、家室、人丁前来，最后查出是犹大支派中一个叫亚干的人犯了罪。亚干这才向约书亚承认，他在攻打耶利哥城的时候，在所夺取的财物中，看见一件美好的衣服，和许多的银子、金子，就贪爱这些财物。神早已吩咐以色列人，要将敌人的财物灭绝，不可留下。亚干却因贪爱这些财物，就偷偷留下来，藏在他的帐棚内的地里，又把银子藏在衣服底下。亚干因着贪婪，私自留下当除灭的财物，不仅害了他自己，也害了所有的以色列人，使他们被仇敌击败。他受了当受的审判，被众人用石头打死，他的财物也被火焚烧了。这个例子给我们看见，若不对付贪婪的存心，会使我们进而犯罪。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：第十条诫命不可有贪心触及我们心中贪婪的问题。当我们不感恩我们所拥有的东西，却想要别人拥有的东西时，这就为我们打开了谎言和偷窃之门，甚至会伤害他人。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：询问孩子们曾经有没有想要他们学校的同学或朋友有的东西，例如，更好的背包、独特的学校用品、更有趣的玩具和游戏等等。如果他们注意到同学的桌子上一支漂亮的钢笔又真的想要，那该怎么办呢？如果他们继续贪恋那笔，会发生什么？如果他们不对付内心的贪婪，那支笔可能以错误的方式被自己占有。我们对事物的贪婪，无论大小，都能使我们撒谎，偷窃，或伤害他人以获得这些东西。和孩子们讨论（儿童和成人）说谎是如何发生的。强调需要感恩，甚至满足于他们所拥有的东西。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十17 不可贪爱邻舍…一切所有的。</p>
+<p>3使徒保罗的榜样</p>
+<p>使徒保罗不仅教导我们不可贪财，他自己也是一个不贪婪的人，他不贪图任何人的财物。他一心要带领人归于基督，为此他昼夜劳苦，未曾贪图过任何人的金、银、衣服，还亲手作工来供应自己以及同伴们的需要（徒二十33~35）。他并不企求从人身上得着什么好处，反而甘愿为着弟兄姊妹的缘故花费所有，甚至完全花上自己（林后十二15）。他能够这样不贪婪，并且劳苦服事人，成为弟兄姊妹的榜样，是因为他记念主耶稣所说的：“施比受更为有福。”（徒二十35）他自己实行这句话，他也劝勉弟兄姊妹这样去实行。一个愿意将自己的所有给出去的人，必定是一个不贪婪的人。焦    点：第十条诫命不可有贪心，暴露我们的内心。即使我们得到了生活所需的东西，我们的心还是想要更多。它从不满足于它所拥有的东西。因为贪婪没有一个人是无罪的，也没有一个人是不需要神的救恩的。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦    点：第十条诫命不可有贪心，暴露我们的内心。即使我们得到了生活所需的东西，我们的心还是想要更多。它从不满足于它所拥有的东西。因为贪婪没有一个人是无罪的，也没有一个人是不需要神的救恩的。
+</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：询问孩子们想要占用别人拥有的东西经历。虽然我们可能并不撒谎、欺骗、偷窃或伤害他人，但内心却不由得有想要占用其他人的东西感觉。这种感觉、欲望或愿望（即使没有任何外在的行为）也是贪婪的罪。帮助孩子们认识到神的诫命是我们不可有贪心。有谁没有贪心？因为每个人都贪婪于某种东西，所以每个人都对神犯了罪，因此需要都神的拯救。（如果这一点真正地或深刻地触及任何一个孩子，服事者就可以考虑分享神救恩的福音。）</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

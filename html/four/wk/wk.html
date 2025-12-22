@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <title>Mr</title>
+    <link rel="stylesheet" href="../../../assets/index.css" />
+    <script src="../../../assets/crypto-js/crypto-js.js"></script>
+    <link rel="stylesheet" href="../../../assets/mine.css" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+      #con {
+        margin-top: 10px;
+      }
+      #date_view {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        color: #000;
+      }
+      #main {
+        /* margin-top: 1em; */
+        text-align: center;
+      }
+      #date {
+        margin: 10px 10px 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <van-nav-bar :title="title" @click-left="back" @click-right="toPath('../../../主页.html')">
+        <template #left>
+          <van-icon name="arrow-left" />
+        </template>
+        <template #right>
+          <van-icon name="wap-home" />
+        </template>
+      </van-nav-bar>
+      <div id="date_vi">
+        <div id="date">
+          <van-cell @click="show = true">
+            <div id="date_view">{{ dateString + ` 第 ${weekDay} 周` }}</div>
+          </van-cell>
+          <van-calendar :show-confirm="false" v-model:show="show" @confirm="onConfirm" :default-date="new Date(dateString)" :row-height="48" :min-date="minDate" :max-date="maxDate"></van-calendar>
+        </div>
+        <div id="main">
+          <van-space>
+            <van-button type="success" @click="dayJump(-7)">上一周</van-button>
+            <van-button :type="disTodayButton?'default':'primary'" @click="backToday" :disabled="disTodayButton">本周</van-button>
+            <van-button type="success" @click="dayJump(7)">下一周</van-button>
+          </van-space>
+          <div id="con">
+            <van-cell>
+              <div style="text-align: center">
+                <van-space>
+                  <van-button v-for="item in data" :color="item.color" @click="jumpTo(item.name)">{{item.text}}</van-button>
+                </van-space>
+              </div>
+            </van-cell>
+          </div>
+        </div>
+        <van-back-top></van-back-top>
+      </div>
+    </div>
+  </body>
+  <script src="../../../assets/v3.js"></script>
+  <script src="../../../assets/min.js"></script>
+  <script src="../../../assets/mine.js"></script>
+  <script src="../../../data/four/wk/reality.js"></script>
+</html>

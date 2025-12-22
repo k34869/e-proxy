@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('485')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('487')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第14课 性格—单纯</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>马太福音五8 清心的人有福了…</p>
+<p>有一天，乌鸦从外面叼回一块肉，正站在树上休息，被树下的狐狸看到了，呀！油花花的肉，散发出香喷喷的味道，狐狸馋得口水都流出来了。</p>
+<p>但是乌鸦在高高的树上，狐狸又不会爬树，那可怎么办啊？狐狸想了又想，眼珠子一转，有主意了！他就走出来抬头跟乌鸦说：“噢，亲爱的乌鸦，您好吗？”乌鸦知道狐狸从来都没安什么好心，就没有搭理他。狐狸又挤着笑脸说：“噢，亲爱的乌鸦，您的孩子们都好吗？”乌鸦又看了狐狸一眼，还是没有回答他。</p>
+<p>狐狸急得直摇尾巴，心想：要出绝招了！他就跟乌鸦说：“噢，亲爱的乌鸦，您的羽毛这么漂亮，比孔雀还要漂亮一百倍！您的身材这么好，肯定是世界上的百鸟之王！噢，还有还有，您的声音这么好听，如果能让我听一听那就好了！“</p>
+<p>乌鸦得意极了，抖了抖身上的羽毛，迫不及待地想展示自己的歌喉！没想到，刚刚张开嘴巴肉就掉了下去，狐狸赶紧捡了肉躲到洞里去吃了起来。乌鸦这才发现自己上当了，气得大喊大叫，但是也没有什么办法了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：单纯与我们的动机有关。一个单纯的人不会作别有用心的事。当他送给别人什么东西时，他不期望得到任何回报。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：假设你有一个玩具，比如一个填充玩具或洋娃娃等等。你看到你的朋友抱着一个漂亮的新玩具，你真的想玩。当你走到你朋友身边，问她是否想玩你的玩具。其实你给他你的玩具，是因为你希望她会让你玩她的新玩具。这就是不单纯。你看到另一个没有玩具的朋友。你会给他你的玩具或与他一同玩你的玩具吗？单纯就是与别人分享而不期待任何回报。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>提摩太前书四12 不可叫人小看你年轻，总要在言语、为人、爱、信、纯洁上，都作信徒的榜样。</p>
+<p>谁最爱母亲</p>
+<p>一次，有四个小孩都争着对母亲说，“妈妈我爱你”，以利说，“没有人比我更爱妈妈，因为我最大，我爱妈妈最久。”安娜说，“我更爱妈妈，因为我是家中唯一的女孩。”雅各说，“妈妈，我非常喜欢你。如果有熊追赶你，我要一枪把它打死。”最小的撒母耳说，“妈妈，我爱你，但我不知道怎样说。”说着，两手抱着母亲的颈项，亲她的嘴。接着其他三个孩子都和母亲亲嘴。</p>
+<p>母亲说，“很好，孩子们，我很高兴你们爱我。”一会儿门铃响了，邮差送来一封信。孩子们抢着要将那信递给母亲母亲拆开信，读完以后说，“这封信很要紧，必须立刻回信，今晚就要送到邮局。谁愿意为我送去？”以利望望窗外，正在下雨，并且还有五个数学题目要作，就想，这信为何不留到明天再送呢？明天上学时一起送去，不是很方便吗？雅各也望望窗外，天已经黑了，又下着雨，所以不想出去。安娜想，我是女孩子，妈妈不会让我去的，况且2个哥哥不都在家吗？</p>
+<p>母亲写好信出来，看见孩子们都在做自己的事；唯独撒母耳穿好靴子、雨衣，望着母亲。母亲把信给他，对他说“外面下雨，又黑又冷，你不怕一个人独自出去吗？”他回答说，“妈妈，不怕，因为我爱你。”请问，谁是最爱母亲的孩子呢？</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：单纯与我们的动机有关。一个单纯的人不会作别有用心的事。当他说另一个人的好话时，他并不是为了得到回报而说的。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：假设你意外地打破了你母亲最喜欢的花瓶。当她从商店回来的时候，你马上跟她说她是多么伟大的母亲，她是如此的关心人、有智慧和慈爱，一个好厨师等等。你这样作的动机是什么？或者假设你的同学带了一个精美的水族馆来展示并讲解。你想成为第一个看到和触摸它的人，所以他一走进教室你就恭维他。在这两个例子中，说好话是为了得到一些回报。单纯就是说的是什么，意思就是什么，不期待任何回报。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>腓立比书四8 末了的话，弟兄们，凡是真实的，凡是庄重的，凡是公义的，凡是纯洁的，凡是可爱的，凡是有美名的；若有什么德行，若有什么称赞，这些事你们都要思念。</p>
+<p>单纯爱他自己</p>
+<p>美国有一位青年因为经商而致富。许多女子都爱慕并追求他，渴望嫁给他。那位青年为要得知谁是真心爱他，就暂时关闭公司，不做生意；并拆仆人到处宣传，他事业失败，买卖破产。于是，女友一个一个相继离开他；只剩下一个女子仍然爱他。她说，“我爱他自己不是爱他的钱财；虽然他已破产，我仍然要跟随他。”最后，青年便和这位女子结婚。我们若是真心爱主，必是单纯爱 祂自己，不是爱 祂的祝福。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：单纯与我们的动机有关。一个单纯的人不会作别有用心的事。当他为别人作事时，他不期望得到任何回报。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：假设在课间休息时，你正在操场上玩，这时你看到有人摔倒并受伤。你不乐意帮忙，因为你正忙着和朋友们玩。突然，你看见你的老师朝操场走去。你马上跑向受伤的人，扶他起来。这是单纯的吗？你这样作是为了受到老师的表扬吗？讨论在单纯和隐秘中作事的例子，如在没有人要求下摆放会议厅里的椅子而不被人看见；帮助老人过马路而不期望得到回报；捡起别人的垃圾或玩具，而没有人注意到，也没有人在身边感谢你或奖励你。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

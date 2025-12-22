@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('743')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('745')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">你尚未到家呢</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>太20:28　正如人子来，不是要受人的服事，乃是要服事人，并且要舍命，作多人的赎价。</p><p>马礼逊（Robert Morrison, 1782～1834）初到中国传道不久，就发电报给他的祖国，请求增派工作人员。有一人很愿意一生当传教士，但当委办们查问他的资格之时，见他面貌不扬，大有庸夫俗子的气概，就决定不派他，说他太粗俗了。后来，他们又想：‘他虽不配为传教士，或可当一仆役。’于是他们就推选委办中的一位，前往征求他的意见，问他愿意前往中国，非为传教士，只为仆役否？他一听见这话，不费思索的回答说，‘我都愿意，就是作一个仆役，我亦愿意；只要有机会在主的工作上服事主，建立主的圣殿，就是劈柴挑水，都是极大的光荣。’那个粗俗的人就是后来著名的米怜（W. Milne）。罗马十二章十六节说，‘不要志气高大，倒要俯就卑微的事。’主耶稣说，‘你既在最小的事上有忠心，可以有权柄管十座城。’（路十九17。）信徒服事主，是否能得主的称赞，不在事之大小，乃在是否忠心。并且，在不多的事上忠心，主会派他管理许多的事。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

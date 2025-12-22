@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1106')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1108')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 15 课<br />
+得荣—荣耀的后嗣</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：父阿你赐何等慈爱。（诗歌25首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你们所受的不是奴役的灵，仍旧害怕；所受的乃是儿子名分的灵，在这灵里，我们呼叫：阿爸，父。那灵自己同我们的灵见证我们是神的儿女。（罗八15～16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　儿子名分的福分—罗八14～27</p>
+<p class="ot2">1.　儿子名分的灵—15。</p>
+<p class="ot2">2.　那灵的见证—16。</p>
+<p class="ot2">3.　那灵的引导—14。</p>
+<p class="ot2">4.　那灵的初熟果子—17～25。</p>
+<p class="ot2">5.　那灵的帮助—26。</p>
+<p class="ot2">6.　那灵的代求—26～27。</p>
+<p class="ot2">7.　完满的儿子名分，就是身体得赎且改变形状，达到得荣—17～19，21，23。</p>
+<p class="ot1">二　模成的后嗣—17，28～30</p>
+<p class="ot2">1.　和基督同作后嗣—17。</p>
+<p class="ot2">2.　模成长子的形像—26～30：</p>
+<p class="ot2">a.　里面藉着那灵的工作—26～27。</p>
+<p class="ot2">b.　外面藉着万有互相效力—28。</p>
+<p class="ot1">三　与神的爱不能隔绝的后嗣—31～39</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识得荣的意义—作神荣耀的后嗣，模成的后嗣，与神的爱不能隔绝的后嗣。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>罗马书的第五段说到得荣，就是我们要成为神荣耀的后嗣。得荣的目标就是神儿女完满的儿子名分。定罪需要称义，称义是为着圣别，圣别是为着得荣，而得荣是为着神儿女完满的儿子名分。在这章里首先说到儿子名分的福分，包括儿子名分的灵、那灵的见证、那灵的引导、那灵的初熟果子、那灵的帮助、那灵的代求，最终的结果使我们得着完满的儿子名分，就是身体得赎，改变形状，且进入荣耀。其次说到我们里面藉着那灵的工作，外面藉着万有互相效力，被模成神长子的形像，成为模成的后嗣，和基督同作后嗣，并且是与神的爱不能隔绝的后嗣。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　儿子名分的福分</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>你们所受的…乃是儿子名分的灵，在这灵里，我们呼叫：阿爸，父。那灵自己同我们的灵见证我们是神的儿女。（罗八15～16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们领受儿子的名分，乃是借着那进到我们灵里神儿子的灵，我们的灵与那灵乃是一，每当我们呼叫‘阿爸，父’，　祂就加入与我们一同呼叫，那灵在我们的呼叫中呼叫。不要怀疑我们是不是神的儿子，只要我们能甜美的呼叫‘阿爸，父’，就能确定我们是神的儿子。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受儿子名分的灵，在生活中见证我们是神的儿女。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

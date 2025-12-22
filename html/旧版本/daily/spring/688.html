@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('687')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('689')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">没有减短分寸</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>可5:20　那人走了，就在低加波利，传扬耶稣为他作了何等大的事，众人就都希奇。</p><p>有一个工人名叫培尔，染上狂饮恶习，屡欲戒绝，都归徒然；因此成了酒奴，全家几遭毁灭。但感谢主，有一天，他来到主耶稣的面前，得着了拯救。从此他的口，和他的生活都为主作了美好的见证。他的朋友们常与他辩论。他很有智慧，只说他所知道的事，绝对不谈他所不知道的。有一天，他的朋友中有一个说，‘我不信耶稣会行神迹。’又一个说，‘我也不信耶稣用水变酒的事，简直令人笑死。’又一个转向培尔问说，‘培尔，你信耶稣将水变酒么？’培尔回答说，‘我信。’他们同声说，‘你能证明祂曾把水变酒么？’培尔说，‘我不能。’他们都笑起来。有一个就不客气的问他说，‘你既不能证明祂把水变酒，怎么会相信呢？’培尔说，‘因为祂在我家里曾把酒变成新的家具。’作见证时，不要辩论，不要说你所不知道的事；只要把主在你身上所作的事，告诉出去。主耶稣在格拉森赶鬼后，对那从前被鬼附着的人说，‘你回家去，到你的亲属那里，将主为你所作的，是何等大的事，是怎样怜悯你，都告诉他们。’（可五19。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('26')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('28')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">加尔博士利用花生</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">耶和华的律法完全，能苏醒人的魂；耶和华的法度可靠，能使愚蒙人有智慧。（诗19:7）</div>
+<div id="CC">The law of Jehovah is perfect，restoring the soul; the testimony of Jehovah is faithful，making the simple wise.（Psalm 19:7）</div>
+<div id="C">黑人科学家加尔博士，自幼生长在美国南部，常劝他的黑人同胞，除了种棉花，还要再种其他农作物。这样，若是棉花歉收，才不至完全失望。后来，他终于说服他们种植花生。出乎意料之外，花生收成太好，除了食用，剩余甚多。他们便去请教加尔。加尔是个虔诚的基督徒，便去求神赐他智慧，叫他知道如何利用这些花生。<br/><br/>　神垂听他的祷告，叫他发现花生不但可以榨油，还可以用在作面包、咖啡、雪糕、牛奶、染料、药品等百种以上的东西。后来，他应邀出席美国国会的一个特别会议。主席问他：“加尔博士，你怎能发明这许多东西呢？”加尔回答说，“我是从一本古书上学来的。”“什么书呢？”“圣经。”“圣经里有讲论关于花生的事吗？”“没有，但是圣经叫我认识了那位创造花生的神。我求祂赐我智慧，祂便指示我怎样利用这些花生。”<br/><br/>　敬畏耶和华是智慧的开端，认识至圣者便是聪明（箴九10）。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

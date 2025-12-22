@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1406')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1408')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 3 课<br />
+以基督为我们的榜样</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　公开承认耶稣基督为主</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓二10～11：叫天上的、地上的和地底下的，在耶稣的名里，万膝都要跪拜，万口都要公开承认耶稣基督为主，使荣耀归与父神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗在十节所说的跪拜和在十一节所说的承认，含示我们一面向主跪拜，一面呼求祂的名。我们乃是藉着呼求主，公开承认主的名。腓立比二章五至十一节的经文给我们看见基督是我们活的榜样。这榜样的原则就是，一个有最高生命和地位的人，愿意谦卑的活着。我们里面有一个能倒空自己并降卑自己的生命，这生命使我们即使有最高的标准和地位，也能将那摆在一边，降低我们的标准，甚至为着神的荣耀和工作奉献我们的财富，这就是真实的以基督为我们的榜样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历基督人性生活的七步降卑，以基督为榜样。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>思念基督耶稣里面所思念的，为着召会生活经历主观的基督作我们的享受。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗要腓立比的圣徒思念同一件事，是指着那一件事？在召会生活的实行上，这包含那些要点？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘虽然腓立比人已经从“狗”变化成为神的儿女，但到了一个时候，他们又转回去吃狗食。我们今天也很容易作同样的事。装满狗食、废物的垃圾桶，主要的是在弟兄们的心思里，和姊妹们的情感里。所以，思念同一件事并在魂里联结，就是把垃圾桶和其中所有的狗食丢弃。我们重生成为神的儿女，不是在我们的心思或情感里，乃是在我们的灵里。我们的餐桌乃是在我们灵里。当我们进到灵里，我们就在基督所在的餐桌这里。主耶稣基督是我们的食物，餐桌就在我们灵里。</p>
+<p>腓立比二章，保罗鼓励腓立比人思念同一件事，并且魂里联结。这同一件事所指的不仅是客观的基督，更是为着召会生活经历主观的基督作我们的享受。这一件事该一直占有我们的心思。我们该不断思念如何经历基督作我们丰富的享受，使我们能有正确的召会生活。身体生活乃是对基督之经历和享受的结果。当我们享受基督，召会生活就自然而然产生出来。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>让基督浸透并占有我们的魂，使我们魂里联结，思念相同的事。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

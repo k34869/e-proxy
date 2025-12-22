@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('126')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('128')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">纯（一）　心思纯：心思单纯转向主</p>
+<p>清心的人有福了，因为他们必看见神。（太五8）</p>
+<p class="title">什么是纯</p>
+<p>纯就是单纯而不搀杂，动机单纯，作事不带副作用。马太五章八节说，‘清心的人有福了，因为他们必看见神。’我们的灵是接受基督的器官，我们的心是基督这生命种子生长的土地。要使基督能在我们里面毫无拦阻的长大，我们就需要心里纯洁专一。（8注1。）诗篇七十三篇二十五节说，‘除你以外，在天上我有谁呢？除你以外，在地上我也没有所爱慕的。’一个清心的人，他的心清到一个地步，是只专一的要神，而不要神之外的东西。我们若愿意专一的让神在我们里面作工，头一步就得将心转向神。</p>
+<p>神在许多人身上无法作工，是因他们的心不在神身上。他们要主，但他们也要主以外的东西。有些人爱主，却又爱钱财；有些人爱主，又爱人的称赞。人愿意服事，表明人爱主；但服事了没被称赞，心里就不舒服。说他们不爱主，冤屈他们；说他们爱主，又冤枉主。他们里头真是复杂。爱原是单纯的，作妻子的爱她们的丈夫，不是因为金条，基督徒爱神也不是因为神给金条。然而许多人爱神，是把神当作求讨的对象。</p>
+<p>许多时候，我们会感到疑惑，为什么那些清心的人，不怎么发达，但那些不爱主的人倒很发达。这问题在进入神的圣所后，就清楚了。别人得的是地上的喜乐平安，清心的人得的是神的自己。这是一颗清洁的心所有的。请记得，神不能在我们里头作工，是因我们里头不彀干净；神在我们身上很难作工，是因我们的心不清。我们的心一不正当，我们的眼光就难得正确；所以圣经说，我们的心几时转向主，帕子就几时除去了。（林后三16。）许多神的儿女，没有法子看到神在他们里头的工作，正是因为他们的心不在神身上，而是在钱财或儿女上。有的人是一半的心向着神，有的人是完全背着神。请记得，我们向着神的心有多少，神就作工多少。但愿我们向着祂都是清心的人。（参性格，3页；清心的人，7～8页。）</p>
+<p class="title">纯洁的意义</p>
+<p>什么是纯洁呢？纯洁与清洁不同；清洁是指干净而言，意思是没有污秽；但是纯洁比清洁更进一步，不只是没有污秽，还得没有杂质。杂质不一定是污秽，但是一样东西有了杂质，就不能说是纯洁的。比方：盐是海水晒干而成的。然而，在海水里面有污秽的东西，也有盐和其他的杂质。晒盐的人可以将污秽的东西除去，叫我们看上去是清洁的。但是，以化学家的眼光来看，就知道还有许多别的东西，如钙、镁、碘、钾等等，夹杂在盐的里头；这些东西按医学上的常识来说，还都是人体所需要的。所以如果人要获得纯盐，就是纯净的氯化钠，这些杂质就得设法除去。所以纯洁的意思，不只是没有污秽，而且是没有一点杂质。（参十二篮第九辑，113页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：将心转向主，纯洁专一的爱主，让神在我们里面作工。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1525')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1527')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 2 课<br />
+为着召会生活之圣别生活的抚育与坚固</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　以盼望鼓励</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖前三13：好使你们的心，当我们主耶稣同祂众圣徒来临的时候，在我们的神与父面前，得以坚固，在圣别上无可指摘。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>从帖撒罗尼迦前书中我们看见，我们已经从父神重生，与主耶稣基督有了生机的联结，因而有了圣别生活的结构，就是一种充满信、爱、与盼望的生活，这乃是正确的基督徒生活。这样一种圣别的生活，乃是完全分别归神的生活，一种绝对为着神、凭着神、与神同在，且在神里面的生活。我们为基督活着，我们彰显祂，我们是祂的身体。我们充满了盼望，等候祂的回来。我们的盼望、定命、目的地不在地上，而是完全集中于主耶稣的回来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为着召会生活，过一种绝对为着神、凭着神、与神同在，且在神里面的生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们需要在信上得坚固并安慰，在爱上得鼓励，心得以坚固，在圣别上无可指摘，盼望我们所信、所爱，亲爱的主回来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在召会生活中，我们需要从那几面来坚固初信的信徒？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们要受到警告并提醒，也要学习儆醒，以信心为根基，以爱心为过程，并以祂的再来为盼望，而与祂一同往前。我们不该在乎我们为祂受了多少苦或损失，因为我们知道，我们要见祂。每一种的麻烦、逼迫和受苦，在祂的同在里都要成为荣耀。…</p>
+<p>我们需要在主再来的光中行事为人、工作并生活。祂的再来必须一直在我们面前。我们不敢失败或贪爱世界、属肉的事、以及今生的事，因为有一天我们必要见祂。我们也不在乎我们的受苦或损失，因为有一天祂要在祂的同在中赏赐我们。我们必须是忠信的执事，忠信的仆人，忠信的信徒，并祂身体上忠信的肢体，因为有一天我们要在祂的荣耀里站在祂面前。…</p>
+<p>忍耐是我们真实的力量，我们若有忍耐，就能作一切事。忍耐来自荣耀的盼望。我们盼望要见祂，有一天祂要来，并且有一天祂和我们要在荣耀里；藉此我们有忍耐。这忍耐乃是我们受苦、劳苦、竭力往前、为祂而活、并为祂牺牲一切的能力和力量。力量乃是在忍耐里，而忍耐是在盼望中。’（由基督与召会的观点看新约概要卷二，326～327页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在信心、爱心和盼望上得着抚育并坚固。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

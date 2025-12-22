@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+               <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('107')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('109')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第2课  创造—从地看出神的伟大</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一11 神说，地要长出青草，和结种子的菜蔬，并结果子的树木，各从其类…</p>
+<p>课程内容：（参起初神创造第七课  参一 仙人掌  参二 花朵树 木）</p>
+<p>总    结: 这些都是从哪里来的，都是神创造的，我们看出神的伟大。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造彰显神的伟大。神创造了各种各样的生物。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：第三天神创造了植物。想想神创造了多少种不同的植物。用许多不同种类的花和果树的图片来说明这一点。让孩子们说出他们最喜欢的水果和花，并比较它们在颜色、味道和外观上的差异。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一20 神说，水要多多滋生有生命的物；要有禽鸟飞在地面以上，天空之中。</p>
+<p>课程内容：在广大的海洋里、河流里、池塘里、琥珀里，小水沟里，可以发现就什么？</p>
+<p>鱼的种类大概一万五千多种，鸟类一万种。海里动物最大的蓝鲸长三十公尺，大概十层楼高的长度。最小的比如变形虫、草履虫小到一个地步用显微镜才能看到</p>
+<p>总结:这些都是神在第五日创造的，从这些奇妙的创造中给我们看出神的伟大</p>
+<p>参一:起出神创造16课海马。参二:18课  鹰</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造彰显神的伟大。神创造了各种各样的生物。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：第四天神创造了海里的鱼，第五天祂创造了空中的鸟。用许多不同种类的鱼和鸟的图片来说明这一点。让孩子们尝试说出不同种类的鱼和鸟。让他们对种类的繁多留下深刻印象（15000种鱼类，10000种鸟类）。也可以考虑讲述具体的细节：蜂鸟（小，可盘旋，凶猛）或鹰（大，快，极好的视力）。所有这些都证明了神的创造的伟大。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一25 于是神造出走兽，各从其类；牲畜各从其类；地上一切爬物，各从其类；神看是好的。</p>
+<p>课程内容：第六日—神造各种牲畜和野兽。神造出野兽，各从其类动物园里有好多野兽：狮子、老虎、豹、象、长颈鹿、斑马、猴子、狒狒、猩猩、熊等，都是小朋友喜欢的。感谢神，他在第六天造了地上各样的野兽，也造了各种牲畜。有那些动物是牲畜呢？有牛、羊、马、骆驼、驴、猪等，也可以把狗、猫、小兔子、小黄金鼠、天竺鼠算在内</p>
+<p>材料一:牛的功用。材料二:老虎、狮子20课</p>
+<p>神所造的太多太多了，科学家们说有870万种，只有伟大的神才能创造出如此多种类的动物，</p>
+<p>总    结:尽管地球上奇奇妙妙的动物展开了神的伟大，但没有一样能比得上神创造神的伟大</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造彰显神的伟大。神创造了各种各样的生物。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：第五天，神创造了地上的生物。通过讨论有多少种类的动物使孩子们对神是何等伟大留下深刻的印象。这个数字对人类来说很难计算，科学家们说有870万。只有伟大的神才能创造出如此多种类的动物。选择两种或三种动物，讨论它们在外观、大小和能力上的不同。如果需要预备讲福音，可以说尽管地球上奇奇妙妙的动物展示了神的伟大，但没有一样能比得上神创造人的伟大。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

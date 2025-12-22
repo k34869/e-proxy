@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1729')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1731')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 14 课<br />
+神圣交通的条件</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：爱使我们相聚一起。（新歌18首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义。（约壹一9。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　认罪－约壹一5～二2</p>
+<p class="ot2">1　住在是光的神里面－一5。</p>
+<p class="ot2">2　实行与撒但之谎话相对的神圣真理－一6。</p>
+<p class="ot2">3　在与撒但之黑暗相对的神圣之光中行－一7上。</p>
+<p class="ot2">4　为耶稣的血所洗净－一7下。</p>
+<p class="ot2">5　不自欺－一8，10。</p>
+<p class="ot2">6　认自己的罪－一9。</p>
+<p class="ot2">7　与父同在的辩护者－二1。</p>
+<p class="ot2">8　耶稣为我们的罪作了平息的祭物－二2。</p>
+<p class="ot1">二　爱神并爱弟兄－二3～11</p>
+<p class="ot2">1　在经历上认识神－3。</p>
+<p class="ot2">2　遵守祂的诫命，遵守祂的话－4～5上。</p>
+<p class="ot2">3　神的爱在我们里面得了成全－5下～6。</p>
+<p class="ot2">4　旧诫命成为新的－7～8。</p>
+<p class="ot2">5　弟兄相爱－9～11。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识信徒神圣交通的条件，乃是认罪，爱神并爱弟兄。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>约壹一章五节至二章二节，说到关于神圣交通的第一条件，乃是认罪。与这条件有关的，乃是住在是光的神里面、在神圣的光中行、以及实行神圣的真理这几件事。我们是在光中还是在黑暗里，决定于我们有否对付罪。我们若犯罪，就是在黑暗里；但我们若认罪，对付罪，经历神的赦免和洗净，我们就要在光中。二章三至十一节，说到关于神圣交通的第二条件，是我们遵守主的话，并且爱弟兄。我们是在黑暗里还是在光中，决定于我们是否爱弟兄。我们若恨弟兄，就是在黑暗里；但我们若爱弟兄，就是在光中。当我们在光中，我们就是在神圣的交通里。但是当我们在黑暗里，我们就与这交通无分无关。神圣交通的两个条件在消极方面与罪有关，在积极方面与爱有关。在消极方面，我们需要对付罪；在积极方面，我们需要操练自己爱神并爱弟兄。因此，罪必须受对付，爱必须得成全。我们若对付罪，并操练爱神、爱弟兄，我们就履行了保守自己在神圣生命交通里的条件。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　与认罪有关的几件事</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹一5:神就是光，在祂里面毫无黑暗；这是我们从祂所听见，现在又报给你们的信息。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>信徒在生命里与神的关系是牢不可破的，但他们与神的交通却可能中断。因此约翰在说到神圣的交通之后，紧接着告诉我们维持神圣交通必须履行的条件。第一个条件乃是认罪。与这条件有关的，乃是住在是光的神里面、在神圣的光中行、以及实行神圣的真理。当我们住在是光的神里面，又在神圣的光中行，我们就自然习惯的实行真理。乃是当我们在光中，我们才看见真理，凡我们所作的就是实际的，并且会保守自己在神圣的交通里。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>住在是光的神里，在神圣的光中行，自然习惯于实行真理。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

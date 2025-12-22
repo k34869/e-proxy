@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1134')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1136')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 1 课<br />
+哥林多前书简介</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：耶稣这名何其甘甜。（诗歌70首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：同着所有在各处呼求我们主耶稣基督之名的人；祂是他们的，也是我们的。（林前一2下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　著者、著时及内容</p>
+<p class="ot2">1　著者—使徒保罗—林前一1。</p>
+<p class="ot2">2　著时—约在主后五十九年，保罗住在以弗所满了三年时—徒二十31，林前十六8。</p>
+<p class="ot2">3　内容—基督徒生活、召会生活、和身体生活的例证—林前一10～十六9。</p>
+<p class="ot1">二　受者</p>
+<p class="ot2">1　在哥林多神的召会，就是在基督耶稣里被圣别，蒙召的圣徒—林前一2上。</p>
+<p class="ot2">2　同着所有在各处呼求我们主耶稣基督之名的人—2下。</p>
+<p class="ot1">三　引言</p>
+<p class="ot2">1　问安—3。</p>
+<p class="ot2">2　起初的恩赐—4～8。</p>
+<p class="ot2">3　有分于基督—9。</p>
+<p class="ot1">四　主题—基督与十字架，是召会一切难处的解答</p>
+<p class="ot2">1　基督—神经纶的中心—西三10～11，一12，林前一2，9。</p>
+<p class="ot2">2　十字架—神的能力，神的智慧—林前一18～24。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>简介哥林多前书的著者、内容、受者、引言与主题。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>哥林多前书是保罗住在以弗所满了三年的时候，写给哥林多召会的书信。然而这卷书不仅仅是给哥林多圣徒的，也是给所有在各处呼求主耶稣基督之名的信徒。这证明召会有地方的一面，也有宇宙的一面。这卷书的内容，乃是给我们基督徒生活、召会生活、和身体生活的例证。一章一至九节是本书的引言，说到许多重要的点。首先有关于使徒的正确领会—不是自派的，而是蒙神所召的。然后有对召会和圣徒的清楚观点。接着保罗给我们看见，藉着重生，我们都得着了起初的恩赐，这恩赐需要发展，成为生命长大的恩赐。最后，保罗说到基督的交通，神已经呼召我们进入基督的交通。保罗也揭示本书的主题，乃是基督与十字架，是召会一切难处的解答。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　著者、著时及内容</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前一1～2上：凭神旨意，蒙召作基督耶稣使徒的保罗，和弟兄所提尼，写信给在哥林多神的召会。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>哥林多前书的著者是使徒保罗住在以弗所满了三年时写的。在这卷书里，使徒保罗乃是蒙主呼召的。他写了这本书，不仅喂养、建造哥林多的圣徒，也规正、调整那里的召会。在本书里，说到个别的基督徒，召会和身体。因此本书说明三类的属灵生活：个人的基督徒生活、团体的召会生活、以及生机的身体生活。因着我们活在召会时代中，我们需要以哥林多前书为我们所在地之召会生活的例证和写照，过一个正确的基督徒生活、召会生活、和身体生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>过一个正确的基督徒生活、召会生活、和身体生活。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

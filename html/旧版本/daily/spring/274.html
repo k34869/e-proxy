@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('273')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('275')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">借破伞给女王</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">还有几个得医治，脱离恶灵和疾病的妇女，……和好些别的妇女，都是用自己的财物供给耶稣和门徒。（路8:2~3）</div>
+<div id="CC">As well as certain women who were healed of evil spirits and infirmities，…… and many other women，who ministered to them out of their possessions.（Luke 8:2-3）</div>
+<div id="C">有一天，外面正下着大雨，一个女人朝着一间简陋的小屋走去；她开口向住在屋内的老妇人借一把雨伞。那位老妇十分吝啬的借一把破伞给她。第二天，来了位皇家的御使，把那破伞带来还给老妇人。老妇人大大惊讶，便懊悔说，“哎呀，如果我早认识她是维多利亚女王，我早就把好伞借给她了。”<br/><br/>　你今天奉献得这么可怜，有一个最大的原因，就是因为还不认识祂是谁。</div>
+<div id="CC">奉献─主的荣美吸引（诗333）</div>
+<div id="C">你的灵岂非已见祂过？<br/>　你的心曾否被祂所夺？<br/>　你当认祂为人中第一人，<br/>　欢喜选那上好的福分。<br/>（副）<br/>　你是千万人中之第一人！<br/>　哦，求你开我眼，<br/>　并夺我心，<br/>　摔碎众偶像，<br/>　并欢然加冠<br/>　你为千万人中之第一人！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

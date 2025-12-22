@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('711')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('713')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">叨德和狄营长</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗1:16　我不以福音为耻；这福音本是神的大能，要救一切信的人，先是犹太人，后是希利尼人。</p><p>有一个年老的人，他每周都上礼拜堂去，但是没有得救。虽然他自己没有得救，但是他认为上礼拜堂是个好习惯。所以，他自己每周都去，也要全家人都去。但是回到家里，总是发脾气，全家的人都怕他。什么话都要骂，一气闷就要骂人。他从来没有接受主，但是礼拜堂总是周周去。因为一个英国的绅士，总是以为上礼拜堂是一件好的事。人可以仍然上礼拜堂，但一回家，就什么脾气都发。有一天，他的一个出嫁的女儿来看他，他这个女儿是相信主的。当她来看他的时候，带着一个四、五岁的小女孩。他就把那一个小外孙女，也带到礼拜堂去。从礼拜堂出来的时候，那一个小女孩看看她外祖父，觉得她的外祖父不像一个相信主耶稣的人。走在路上的时候，她就指着她的外祖父说，你相信耶稣么？老祖父就说，小孩子不要说话。再走几步，她又对外祖父说，我看你不像是相信耶稣的。老人家就再说，小孩子不要多说话。等一等，那个小女孩又对她外祖父说，你为什么不相信耶稣？这一个老人没有办法。那么凶的一个人，那一带的人个个都对他没有办法，就给一个小孩子这样问过两、三句的话，把他问得救了；就从那天起他接受了主。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

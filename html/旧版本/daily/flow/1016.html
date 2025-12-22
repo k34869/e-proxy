@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1015')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1017')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 2 课<br />
+圣灵的浇灌与召会生活的开始</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：圣灵的大风。（诗歌212首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：他们天天同心合意，坚定持续的在殿里，并且挨家挨户擘饼，存着欢跃单纯的心用饭，赞美神，在众民面前有恩典。主将得救的人，天天和他们加在一起。（徒二46～47。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　门徒的预备—徒一12～26</p>
+<p class="ot2">1.　持续祷告—12～14。</p>
+<p class="ot2">2.　拣选马提亚—15～26。</p>
+<p class="ot1">二　犹太信徒的灵浸—二1～13</p>
+<p class="ot2">1.　圣灵经纶的充溢—1～4。</p>
+<p class="ot2">2.　百姓的惊讶—5～13。</p>
+<p class="ot1">三　彼得对犹太人的第一篇信息—二14～41</p>
+<p class="ot2">1.　解释圣灵经纶的充溢—14～21。</p>
+<p class="ot2">2.　见证作工、受死、复活并升天的耶稣—22～36。</p>
+<p class="ot2">3.　劝导受灵感的人悔改、受浸、得救—37～41。</p>
+<p class="ot1">四　召会生活的开始—二42～47</p>
+<p class="ot2">1.　信徒坚定持续在使徒的教训和交通里，持续擘饼和祷告—42。</p>
+<p class="ot2">2.　众人都起了敬畏，有许多奇事神迹藉使徒行出来—43。</p>
+<p class="ot2">3.　信的人都在一处，凡物公用—44。</p>
+<p class="ot2">4.　各人卖了田产家业，照所需用的分给各人—45。</p>
+<p class="ot2">5.　天天同心合意在殿里并在家中擘饼，存着欢跃单纯的心用饭—46。</p>
+<p class="ot2">6.　赞美神，在众民面前有恩典。主将得救的人，天天和他们加在一起—47。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主升天后，门徒留在耶路撒冷，藉着同心合意的祷告，得着五旬节圣灵的浇灌，并产生召会。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主升天后，门徒照着主的嘱咐回到耶路撒冷，留在那里等候并预备。他们约有一百二十人，同心合意、坚定持续的在一起祷告了十天，并拣选马提亚补足十二使徒的数目。在五旬节，就是主被钉十字架后第五十日，当门徒聚集的时候，圣灵如同大风充满他们所坐的屋子，又有舌头如同火焰落在他们身上，使徒们就在素质一面被圣灵充满，又在经纶一面被圣灵充溢，说起别国的方言。这使所有从各处来的百姓惊讶，这也是从创世记十一章，人类在巴别背叛神，而被变乱语言之后，神所祝福真正的合一。藉着彼得所传的第一篇信息，那一天有三千人悔改并受浸，领受所赐的圣灵，并产生了耶路撒冷的召会。这些信徒坚定持续在使徒的教训和交通里，持续擘饼和祷告。他们天天同心合意，坚定持续的在殿里，并且挨家挨户擘饼，存着欢跃单纯的心用饭，且得众民的喜爱。主也将得救的人，天天和他们加在一起。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　门徒的预备</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这些人同着几个妇人，和耶稣的母亲马利亚，并耶稣的兄弟，都同心合意，坚定持续的祷告。（徒一14。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在耶路撒冷等候的期间，门徒天天聚集在一起，同心合意，坚定持续的祷告。主升天了，但他们仍有主在他们里面，并且一起祷告了十天之久，这是一件大事。他们能够同心合意祷告这样长久，因为他们有基督在里面作他们的生命和人位。这也证明他们因着看见主升天的异象，已经在神新约的经纶上得了加强，使他们能够同心合意的祷告，不怕任何的威胁与逼迫。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>与同伴同心合意的祷告。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

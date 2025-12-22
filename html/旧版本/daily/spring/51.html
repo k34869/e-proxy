@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('50')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('52')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">求树不求果子</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">所以我们只管坦然无惧地来到施恩的宝座前，为要受怜悯，得恩典，作应时的帮助。（来4:16）</div>
+<div id="CC">Let us therefore come forward with boldness to the throne of grace that we may receive mercy and find grace for timely help.（Hebrews 4:16）</div>
+<div id="C">有一个人名叫撒都，他曾见证说，“在我悔改以后的两、三年内，常为种种事物祈求，但我现在只求得着主自己。譬如有一棵树，结满果子，你可以去向树的主人求一点或是买一点。然而，你若是能得着那棵树，那么树上所有的果子就都是你的。照样，假若神是你的，天上地下所有的东西也都是你的；因为祂是你的父亲，你的一切。否则，你就要像乞丐一样，去乞求你所需要的某种事物，等到用完，还得再来。所以，不要去求礼物，只要求那赐礼物的神；不要去求生命所需要的，只要求那赐生命的神。如此，生命和生命所需要的一切，都要加给你们了。”</div>
+<div id="CC">来到施恩座（补415）</div>
+<div id="C">我们坦然来到施恩座，<br/>　得着怜恤恩惠作帮助；<br/>　不再环绕十字架敬拜，<br/>　因为我主已不在彼。<br/>　祂已冲破了死亡捆绑，<br/>　复活升天得荣耀！<br/>　现今祂从施恩宝座，<br/>　用祂生命供应我。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

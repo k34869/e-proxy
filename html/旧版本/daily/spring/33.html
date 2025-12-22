@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('32')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('34')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">戴德生的读经法</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">凡听见我这些话就实行的，好比一个精明人，把他的房子盖在磐石上。（太7:24）</div>
+<div id="CC">Everyone therefore who hears these words of Mine and does them shall be likened to a prudent man who built his house upon the rock.（Matthew 7:24）</div>
+<div id="C">戴德生从年少的时候，就按次序有系统的读圣经。他在六十八岁时作见证说，他四十年之久，读过圣经从创世记到启示录四十遍，大约每天读旧约三章，新约一章，诗篇一篇。有时因思想贯串，读得多些；有时因为多默想，读得少些。每年总把圣经读一遍。在他看来，读圣经不但得着喂养，并且作他生活工作的指导。圣经对他来说，真是脚前的灯，路上的光。他常说，“有一位活神，这位活神在圣经里说话；神说一句，就算一句，凡神应许的，无不成就。圣经是活神所说的活话；凡神所说的，都靠得住。”戴德生平日习惯早起，守晨更。无论在任何环境中，绝不改变。他说，“那有先开音乐会，然后才调和乐器呢？每天读经、祈祷，先与神调和，然后再与人见面办事。”在他看来，研究圣经，在乎遵行圣经的话；所以他解经讲道，都注重实行这一方面。正是因为他实行他自己所知道的，顺服圣经的命令、应许，所以他能明白圣经的深奥。知道即行，越行越知道。如经上所记：“你们既晓得这事，若是去行就有福了。”（约十三17。）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

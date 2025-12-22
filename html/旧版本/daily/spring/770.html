@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('769')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('771')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">天天讲基督</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗5:11　不但如此，我们现今既藉着我们的主耶稣基督，得与神和好，也就要藉着祂， 在神里面夸耀着，在祂的生命里得救了。</p><p>英国维多利亚女王很得人民爱戴。有一小孩，常常听到母亲讲说女王的事，很想去看女王。一天，他就自己一人走到白金汉宫门前，想要进去。两个高大的卫士拦阻了他，问他作什么？小孩说他要见女王。卫兵大声呵斥说，‘不行，不行。’小孩只好坐在王宫外面哀哭。正在那时，走来一个人，问他为何哭。他说他要去见女王，卫兵不许他进去。那人说，‘不要紧，你拉住我的衣角，拉牢了跟我走。’那人带他走进宫门。这次两个高大的卫兵没有拦阻。那人也没说什么话，只是一直走进去，到了女王宝座前，叫一声‘母亲！’说，‘这个小孩要看你。’小孩就是这么容易到了女王面前，瞻仰女王丰采，接受女王恩赐。原来那个带他进入王宫的人就是王的儿子，以后的英王爱德华七世。照样，我们也是藉着基督得以进到神的面前，接受祂的恩赐，以祂为乐。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

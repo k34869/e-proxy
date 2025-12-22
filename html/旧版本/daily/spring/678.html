@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('677')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('679')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">打是你的责任</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>撒上16:7　耶和华却对撒母耳说，不要看他的外貌和他身材高大，我不拣选他。因为要紧的不是人怎样看；人是看外貌，耶和华是看内心。</p><p>多年前，英国内地一个小村庄里，有一穷寡妇，她有五个儿女，一天夜里，她最小的儿子，忽然患病，很是危险。她只得黑夜摸索到十五哩外一座小城去请医生来拯救。途中偏又遇着暴风大雨。那医生看见这穷寡妇，心中想：冒这样大风雨，老远去医治一个穷小孩，实在不值得；即使救了那穷小孩子的性命，长大也不过是一个穷农夫；就犹预不决。但经不起那母亲的苦求，心里也动了慈心，觉得该尽医生的天职，终于冒着风雨去了。结果那小孩的性命得了拯救。长大了，成为英国近代第一等政治家，就是英首相劳合乔治（David Lloyd George）。（第一次欧战中领导英国得到胜利的首相。他和法国总理克理蒙梭是凡尔赛和约的主要决定人。）后来那医生作见证说，‘我万想不到，那天晚上救的那穷孩子，是救了一个首相的性命。’</p><p>传福音也是这样，有时不知不觉也会救了神所大用的仆人，慕迪就是一个例子。有一次，慕迪在美国波士顿，参加一个少年查经班。人家读新约约翰福音；他在旧约里乱找，当然是找不到的。其他少年信徒因而暗暗笑他；但是那位带领查经的弟兄却很和气、很爱护的帮助他，翻读约翰福音。会后又走到他的面前，以手扶他肩膀说，‘你愿意作个基督徒么？’慕迪就在那天成为一个基督徒。可是，那位领查经的弟兄并不知道他暗中结了一个大果子，更不知道他将成为一代的大布道家，救了百万灵魂。倘若那天把他忽略，可能他就不会被主得着。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

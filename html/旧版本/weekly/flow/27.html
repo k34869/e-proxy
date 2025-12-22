@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('26')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('28')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>逾越节以前，耶稣知道自己离世归父的时候到了。祂既爱世间属自己的人，就爱他们到底。（约十三1）</p>
+<p class="title">主耶稣作事准的榜样</p>
+<p>按照旧约的豫言，主受死的地点和时间都是确定的。主耶稣是逾越节的羊羔，必须在逾越节那天被杀。因此，祂必须在逾越节以前上耶路撒冷去，使祂能照着神豫定的时间和地点，在逾越节当天被捉并受死。按照关于逾越节羊羔的豫言，祂需要受察验四天。所以，祂最晚必须在钉十字架前四天到耶路撒冷。我们在福音书中看见，主耶稣非常谨慎，不让自己在指定的时间以前或以后被杀。如果祂在逾越节以前被杀，豫言就无法应验。那样的话，祂就不是真的逾越节羊羔。但祂既是真的逾越节羊羔，祂就保守自己，直等祂被献在十字架上的时候来到。这就是主在约翰七章六节说，‘我的时候还没有到’的原因。</p>
+<p>照着神所命定的，四福音详细记载了主耶稣最后一次上耶路撒冷，并在被钉十字架前四天，通过祭司长、经学家和长老、法利赛人和希律党人、撒都该人、及律法师的察验，成为那为我们牺牲的逾越节羊羔。逾越节以前，耶稣知道自己离世归父的时候到了。祂为祂的离世作了许多豫备，包括洗门徒的脚，设立饼杯，为门徒的祷告。最后，祂自愿且勇敢的交出自己，以经过过程，完成祂的受死、复活、升天，成为赐生命的灵，并将祂自己吹入门徒里面。（约十三～二十。）祂在完成救赎以分赐生命并完成神经纶的事上，是何等准确，没有任何的误失，使旧约的豫言能以丝毫不差的应验。（参路加福音生命读经，446～447页。）</p>
+<p>‘验’与‘历’</p>
+<p>某传道人前往看望一位年长姊妹，见她正在虔读圣经，圣经旁边或写一个‘验’字，或写一个‘历’字。传道人觉得十分奇特，就再仔细翻看那本圣经，发现那本圣经从头到尾，几乎每页边上都写有‘验’字或‘历’字。传道人就问那位年长姊妹，这是什么意思？年长姊妹满面欢容答道：‘凡我写有“验”字的，表示这句圣经我已亲自试验过，知其所言确实；凡我写有“历”字的，表示此句圣经是我亲自阅历过，知其所言确是这样。’今日读经的人很多，可是活在圣经之中的人太少了。（造就故事上册，22页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：为着主照旧约豫言所豫定的，为我们钉死、复活、升天，成为赐生命的灵，进入我们里面，以完成神的经纶而感谢主。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

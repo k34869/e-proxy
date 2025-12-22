@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>二O二三年秋季训练申言参考</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">第 2 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('3')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+
+          <div class="title">第二周 可称颂之神荣耀的福音</div>
+          <v-divider></v-divider>
+
+          <v-btn block color="primary" elevation="1" tile><b>鸟瞰：</b></v-btn>
+          <div class="contents">
+            <v-divider></v-divider>
+            <p>荣耀是神的属性，也是神的彰显，就是辉煌的彰显出来的神；神造我们作贵重、预备得荣耀的器皿；我们蒙祂主宰预定，作祂器皿以彰显祂荣耀的所是。神借着基督荣耀的福音，呼召我们进入祂永远的荣耀里。这世代的神—撒但弄瞎不信者的心思，叫基督荣耀之福音的光照，不照亮他们；如放下观念，将心转向主，帕子除去，撒但在人里面就没地位，神荣耀福音要照在人心。神的荣耀与基督经过过程—成肉体，死，复活，升天，再来，永世有关；基督荣耀的福音，先照在我里，再从我里照耀出去，使接受者得基督作为珍宝，成为盛装基督，这无价宝贝的瓦器。
+</p>
+            
+            <v-divider></v-divider>
+            <br />
+
+             <v-btn block color="primary" elevation="2" rounded >周一</v-btn>
+            <br v-show="show" />
+<br />
+            <p class="ot2" >晨祷经节：…当日我们的祖宗亚伯拉罕…还未住哈兰的时候，『荣耀的神』向他显现，（徒七2）</p>
+            <p class="ot1">1 请阐释荣耀的神，向亚伯拉罕显现的意义？</p>
+            <p class="ot2" >荣耀的神呼召亚伯拉罕，亚伯拉罕就被那荣耀吸引并抓住。今天对我们原则也是一样。被荣耀的神吸引，意思就是神将自己灌输到祂所呼召的人里面，而他们并不感觉这事。一旦神将自己灌输到我们里面，我们就无法逃跑；我们必须相信祂。</p>
+            <p class="ot1">2 请解明人成为祂荣耀的器皿？</p>
+            <p class="ot2" >神创造人作器皿以备装祂；从这些器皿中祂拣选我们，盛装祂这尊贵的神，而成为祂贵重的器皿。至终祂将祂的荣耀彰显在我们这器皿上，使我们成为祂荣耀的器皿。这些都是出于祂的怜悯，也都在于祂的怜悯，是我们的努力所望尘莫及的！</p>
+           
+  
+
+<v-btn block color="primary" elevation="2" rounded >周二</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：…这世代的神弄瞎了…心思，叫基督荣耀之福音的光照，『不照亮』…（林后四4）</p>
+            <p class="ot1">1 请描述世代的神弄
+瞎人的心思？</p>
+            <p class="ot2" >林后四4 保罗说到，这世代的神就是那迷惑者撒但，现今世代的管辖者；他统治着今天的世界，弄瞎人的思想和心思，猎取人的敬拜。在这一节，弄瞎的意思就是蒙蔽人的悟性。此外，这一节的心思是指悟性或思想。</p>
+            <p class="ot1">2 请解明我们若要接受神儿子的启示，该如何？</p>
+            <p class="ot2" >就必须放下我们的观念。每一个观念，不论是属灵的或属世的，都是帕子。我们要接受启示，在神那边没有问题，问题全在我们这边。我们需要除去帕子，那就是放下观念。我们的祷告是很重要的：『主，帮助我除去任何是帕子的东西。』</p>
+
+<v-btn block color="primary" elevation="2" rounded >周三</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：耶稣回答说，人子『得荣耀』的时候到了。（约十二23）</p>
+            <p class="ot1">1 请解明祂的肉体，遮藏了祂的荣耀？</p>
+            <p class="ot2" >在约一14 告诉我们，基督借着成为肉体所穿上的人性，成了遮藏祂神性之荣耀的外壳。基督的神性本身就是神圣的荣耀。就如神是光，照样，神性就是荣耀。当基督在肉体里，在祂人性里，祂的肉体遮藏祂神性的外壳，因而遮藏祂的荣耀。</p>
+            <p class="ot1">2 请阐述祂得着荣耀
+的根据？</p>
+            <p class="ot2" >因着神圣荣耀遮藏在肉体的外壳里，祂必须得荣耀。在约十二23 祂说，人子得荣耀的时候到了。在约十七1 祂祷告说，『父阿，时候到了，愿你荣耀你的儿子，使儿子也荣耀你。』在五节祂继续说，『父阿，现在求你使我与你同得荣耀。』</p>
+
+
+
+
+<v-btn block color="primary" elevation="2" rounded >周四</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：祂是神荣耀的『光辉』，是神本质的印像，用祂大能的话维持…万有…（来一3）</p>
+            <p class="ot1">1 请交通世代的神，如何弄瞎人的心思？</p>
+            <p class="ot2" >撒但，这世代的神，弄瞎了不信之人的思想和心思，使基督荣耀之福音的光照，不照进他们心里。这就像照相机的镜头被遮住，光就无法将对象照进照相机里。我们一按快门，就有办法把光连同物体影像和形像照进相机里面，而印在底片上。</p>
+            <p class="ot1">2 请描述在召会中，正在实行属天的摄影？</p>
+            <p class="ot2" >光照进我们里面，就把基督的形像照进来。这光透过我们的心思，照进我们的灵里。我们的灵可以比作底片。光透过我们敞开的心思，进到我们里面时，就碰着我们的灵，而将基督的影像，就是神的形像，照进我们里面。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周五</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：那说光要从黑暗里照出来的神，已经照在我们心里，为着『光照人』…（林后四6）</p>
+            <p class="ot1">1 请解述林后四4 的话及其应用？</p>
+            <p class="ot2" >1 林后四4 指明，『神』、『像』、『基督』、『荣耀』、『福音』和『光照』都与彼此同义；因此，这些辞都是指同一个美妙的人位。神是像，像是基督，基督是荣耀，荣耀是福音，而福音就是光照。我们若看见神的像就看见神；神的像就是神自己。</p>
+            <p class="ot1">2 请阐明当这福音临及，乃借光照耀？</p>
+            <p class="ot2" >福音是照明，光照。福音乃是基督荣耀的福音，照明、照射、照耀在人心里。当这福音临及我们时，它乃是借着光照耀我们，这照耀将基督带到我们里面；基督本是经过过程之三一神的像。结果，基督这活的人位就照进我们里面。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周六</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：但我们有这宝贝『在瓦器里』，要显明这超越的能力，是属于神…（林后四7）</p>
+            <p class="ot1">1 请论述如何经历，基督荣耀的福音？</p>
+            <p class="ot2" >基督荣耀的福音先照进我们里面，然后要从我们里面照出来。荣耀越在我们里面照耀，就越穿透我们并浸透我们。至终，这里面的荣耀要销毁、吞没我们整个里面的人。然后基督荣耀之福音的光要借着我们照耀出去。</p>
+            <p class="ot1">2 请阐述林后四6 的话，如何实化？</p>
+            <p class="ot2" >林后四6 神照在我们心里，结果使我们认识，那显在耶稣基督面上之神的荣耀，就是光照我们，使我们认识基督荣耀的福音。神照在宇宙中产生旧造。但祂照在我们心里，使我们成为新造，因这照耀将荣耀基督这宝贝，带到我们这瓦器里面。</p>
+
+<v-btn block color="primary" elevation="2" rounded >总结</v-btn>
+<br />
+            
+            
+            <p class="ot2" >原则上，凡拦阻人领略基督福音的，如哲学、宗教、文化传统等，都是帕子。因此，我们不仅需要有一个没有帕子遮蔽的脸，也需要有一个敞开的心思。这样，当光透过我们敞开的心思，进到我们里面时，就碰着我们的灵，而将基督，就是神的形像，照进我们里面。旧造出自于神从黑暗里外在的照耀，新造乃是借着神在我们心中内里的照耀所成就。每当我们亲切、亲密的呼求主，我们就在祂的面前，而神也照耀在我们的心里。我们乃是这样接受内里的照耀。把我们所接受的再照耀出来，我们的行事为人，就是为着照耀基督荣耀的福音。</p>
+           
+  
+        
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+      });
+    </script>
+    <style>
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

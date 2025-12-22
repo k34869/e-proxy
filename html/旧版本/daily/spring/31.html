@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('30')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('32')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">一遍又一遍</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">求你使我明白你训辞的道路，我就默想你的奇事。（诗119:27）</div>
+<div id="CC">Cause me to understand the way of Your precepts，and I will muse upon Your wondrous deeds.（Psalm 119:27）</div>
+<div id="C">路德马丁常说，“要明白神的话，非亲自经验不可。圣经不只叫人记得、懂得，乃是要人生活经历。”又说，“我年轻的时候，将圣经读过一遍又一遍，以至十分熟悉。只要你一题某一节，我立刻知道是在何处。我是先熟悉圣经的内容，然后才参考注释；因为其中有许多，是使我良心不能赞同的，有的竟与圣经的本文相冲突。亲眼看见，总比别人的眼睛看好些。”<br/><br/>　慕安得烈在荷兰读书时，他父亲曾在信中叮咛他说，“无论人介绍你看什么书，都不可忽略读圣经。这件事必须每日去作，并且要用谦卑和许多的祷告，仰望圣灵的引导。”</div>
+<div id="CC">读经─从主话得喂养（诗586）</div>
+<div id="C">主啊，我心我灵又渴又饥，<br/>　今来就你，求你给我供给；<br/>　我所需要乃是你的自己，<br/>　作我生命供应，作我能力。<br/>（副）<br/>　喂我饮我，<br/>　主，喂我饮我！<br/>　充我饥饿，<br/>　主，解我干渴！<br/>　使我快乐，<br/>　并且有力生活，<br/>　喂我饮我，<br/>　主，喂我饮我！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

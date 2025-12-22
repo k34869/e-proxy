@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                  <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('37')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('39')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第2系列 第34课  正确的人性—不比较（要知足）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二八25 贪婪的人挑启纷争，信靠耶和华的必得丰裕。</p>
+<p>小华在学校上学时，总喜欢和别人比较。别人吃什么零食，他回去就嘟嘟着嘴要妈妈买给他吃。别人买了好看衣服，他也闹着让妈妈买给他穿。别人用了漂亮的铅笔盒，他也闹着要跟别人一样。慢慢的他发现，别人所拥有的，也不过如此，并不像想象中的让人自豪或满足。原来都是虚荣心惹的祸。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：我们不应该把自己和别人比较，或者拿别人和我们所拥有的相比。如果我们比较，我们可能变得贪婪，想要拥有别人拥有的东西；我们会抱怨，而不是为我们拥有的东西感恩。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：小朋友们，当我们聚会结束分发零食的时候，你有否向主感恩？如果当你看到有一部分小朋友分的零食和我们的零食种类不一样，或是看见他们的零食比我们多时，你里面会不会不舒服？这个不舒服是从何而来？就是因为比较。我们不应该和别人比较。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多后书十12 因为我们不敢将自己，和那些自荐的人同列相比。</p>
+<p>苏格拉底是古希腊大哲学家，在他没有结婚的时候，曾和几个朋友住在一间狭窄的小屋里。尽管十分拥挤，但他毫不介意，一天到晚总是乐呵呵的。有人觉得疑惑为他：“那么多人挤在一起，有什么好高兴的？”苏格拉底笑着说：“朋友们住在一起，随时可以谈论问题，交流情感，这难道不值得高兴吗？”过了一点时间，朋友一个一个都结了婚，相继都搬出去只剩下苏格拉的一个人显得特别冷清，但他仍然和从前一样快乐。那人又问：“你一个人孤孤单单的，还有什么好高兴的？”苏格拉底又笑着说：“我屋里还有那么多书啊，一本书就是一个老师，和那么多老师在一起，时时刻刻都可以向他们请教，这怎么能不令人高兴呢？”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：我们不应该把我们能做的事情和别人能做的事情进行比较。神使我们都有不同的能力。我们应该根据自己的能力，尽自己最大的努力，而不是把自己和别人所能做的相比。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：小朋友们，神所赐给我们每个人的能力都不同：有的人聪明，有的人强壮有的人善于运动，有的人富有创造力…。常常我们总认为自己的能力是最好的，或者是希望有别人的能力？当我们比较的时候，我们就不能满足。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>腓立比书四11 因为我已经学会了，无论在什么景况，都可以知足。</p>
+<p>哥林多后书十13我们却不要过了度量夸口，只要照度量的神所分给我们尺度的度量夸口。</p>
+<p>有自个因生意失利，不光花光了自个一切的积蓄，还欠了一屁股债。他像只斗败的公鸡，失去了日子的勇气和决心，整天陷入心慌意乱和无尽的担忧中。但是一次偶遇改变了这一切。一天他在街上走着的时分，看到迎面过来一个没有双腿的人，他坐在一块小木板上，木板装在有4个轮子的溜冰鞋上，两手各拿来一块木板在地面上支撑滑动前进。过了街，他把自个举高几英寸以跳过马路抵达人行道。当他吃力地举高他身下的木板时，他看见了这个失落的人，并向他粲然一笑。“早上好，先生！今天天气不错。”他的声响里充溢了生机。这个充溢失落的人看着他，不由感叹自个是多么富有。和他比较，自个最少还有两条腿能够走路，那一刻，这自个禁不住对自个的低沉感到廉耻。他告知自个，一个失去了双腿的人还能这么高兴、高兴并充溢自傲，而自个还有一双好腿，为何都不能做到？他登时觉得决心十足起来。本来他只想着试试看能不能再找个工作，但如今，他有决心宣布自个创业。成果，他如愿以偿。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：我们与他人比较的主要原因是因为我们不满足于我们所拥有的。神已经为我们量好了一切。我们所拥有的和我们能做的是按照神的法则（量度）。我们应该满足于神赐给我们的东西。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：小朋友们，当你们和其他孩子的房子、汽车和衣服相比较时，会发生什么事？很多时候，比较使我们嫉妒别人，或轻视我们的父母和我们所拥有的东西。嫉妒和轻视别人的人不是一个正确的人。我们应该满足于神赐给我们的东西。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

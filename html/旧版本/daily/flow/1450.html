@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1449')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1451')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 10 课<br />
+众圣徒的分、神的像、创造并复活里的首生者</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主你是神的爱子。（诗歌163首）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：感谢父，叫你们够资格在光中同得所分给众圣徒的分；祂拯救了我们脱离黑暗的权势，把我们迁入祂爱子的国里。（西一12～13。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　基督—众圣徒的分—美地—西一12～13</p>
+<p class="ot2">1　感谢父叫我们够资格同得这分—12。</p>
+<p class="ot2">2　在光中有分于基督—12。</p>
+<p class="ot2">3　脱离黑暗的权势，迁入祂爱子的国里—13。</p>
+<p class="ot1">二　基督—神的像和在创造并复活里的首生者—15～23</p>
+<p class="ot2">1　爱子是那不能看见之神的像—15上，19。</p>
+<p class="ot2">2　一切受造之物的首生者—15下～17。</p>
+<p class="ot2">3　从死人中复活的首生者—18～23。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督是众圣徒的分、神的像、和在创造并复活里的首生者。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒保罗藉着感谢那是一切祝福源头的父，将我们带进主题—在光中同得所分给众圣徒的分，就是包罗万有的基督。并且为着基督作身体的头，并为着我们信徒作祂身体的肢体，神需要拯救我们脱离黑暗的权势，就是撒但的国，把我们迁入神爱子的国里。这使我们够资格分享基督作我们的分。这个分，指的乃是业分，就好像以色列人分得迦南美地之分，作他们的产业。我们这些新约信徒，今天也有我们所分得的分，但不是物质的土地，乃是包罗万有的基督。祂是众圣徒所分得的分，作了我们神圣的基业，给我们享受。不只如此，基督如今实化为那灵，在我们的里面，因此我们该在灵里生活行动，且过一种照着灵，并经营基督的生活，像以色列人在美地上天天劳苦经营，至终使他们有丰富的出产好献给神，也为着彼此的享受。另外，这位基督乃是神的像和在创造并复活里的首生者。作为神的像，祂乃是在创造里彰显神；基督是创造得以进行的主动凭藉。作为一切受造之物的首生者，基督是人，有分于受造的血肉之体，所以祂是受造之物的一部分。一切受造之物的首生者，是指基督在一切受造之物中居首位。末了，祂也是召会身体的头；是从死人中复活的首生者，使祂在旧造的宇宙并新造的召会中，都是居首位的。这位包罗万有的基督，祂乃是一切！</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　在光中有分于基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西一12：感谢父，叫你们够资格在光中同得所分给众圣徒的分。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>祂是世界的光，跟从祂的，必要得着生命的光。神就是光，基督的生命也是光，惟在光中我们才能享受基督。有分于基督并享受基督，唯一的路就是在光中。神与基督就是光。当我们转向主，进入祂的同在里，我们就在光中。借着祷读主的话，进到主的面光中，我们与主交通并跟随里面膏油的涂抹，就实际的在里面经历祂做生命，这生命就是光。再者，我们需要与圣徒有交通，且在召会生活里，参加聚会，这一切都是凭借，叫我们能在光中享受基督作众圣徒的分。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在光中享受基督作众圣徒的分。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

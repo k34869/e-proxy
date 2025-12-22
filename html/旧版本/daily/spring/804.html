@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('803')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('805')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">马来土人不谢恩</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>希伯来书13:15</p><p>所以我们应当借着耶稣，常常向神献上赞美的祭，这就是承认主名之嘴唇的果子。</p><p>Through Him then let us offer up a sacrifice of praise continually to God, that is, the fruit of lips confessing His name.</p><p>从前有一位西班牙国王，听说宫中孩子们，每餐吃饭都不祷告，也不感谢神恩。于是想了一个方法，用来教训他们。一天下午，国王大摆筵席，约请孩子们来赴宴。个个孩子听见这好消息，连中餐也不吃了。到时，他们就坐，见菜便吃，那儿想到要祷告神，感谢主恩。正在吃得高兴之时，突然闯进一个乞丐，满身褴褛，又龌龊，又难看，挤在他们中间，不用餐具，伸手便抓，捧起就吃，狼吞虎咽，不到几分钟，桌上的菜都被吃光了。孩子们见了又惊又怕，张大眼睛望望对面的国王。但是国王一声不发，也不驱逐，任他大吃大喝。那乞丐吃饱了，抹抹嘴，拔足就走，也不说声谢字。孩子们哭丧脸说，‘那里来的讨饭鬼，这么无礼！’国王走过来，吩咐孩子们不要作声，说，‘孩子们，你们都以为这个乞丐不讲礼，不知恩么？岂不知你们自己更不讲礼，更不知恩！你们每餐吃饭，都是天父赐给你们的，你们倒不祷告神，也不多谢神，和这乞丐又有什么分别呢？’孩子们听了，既不敢哭，也不敢作声。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

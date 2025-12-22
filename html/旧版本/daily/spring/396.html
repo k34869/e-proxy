@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('395')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('397')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">外面要回去里面说不要</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林后2:9　为此我也曾写信给你们，要知道你们经过试验的品德，看你们是否在凡事上都顺从。 For to this end also I wrote, that I might know your approvedness, whether you are obedient in all things.</p><p>某弟兄送一传道人到车站去。途中神感动他，替那传道人买车票。他不顺服，和神讲理说，‘昨天很多人来见这位传道人，必有很多的人送钱给他，也许已经有人替他买了车票。所以到车站时，我若看他坐着不动，我就不买；若是看他买票，我才替他买票。’到了车站，他看见那位传道人坐着很像没有事情一样。他想：‘传道人一定已经买了票，才坐着候车，幸而我没有替他买。’此时忽然看见一个少年弟兄，骑脚踏车赶来，快快替他买票。他便瞪着眼睛，哑口无言，心中有极大的责备说，‘神已感动我买票，我却用诸多理由来辩论，现在多难过阿，因我不肯顺服哪！’</p><p>儿童,#702 当我心亲近救主</p><p>当我心亲近救主，祂使我心快乐；</p><p>当我心忧愁痛苦，祂使我口唱歌；</p><p>祂以柔声细语招呼，招呼我亲近主，</p><p>祂使我心高声歌唱，永远永远歌唱。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

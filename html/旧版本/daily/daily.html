@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日进度</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jumpDay(-1)"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">{{today}}</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jumpDay(1)"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <br />
+          <div style="text-align: center">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="100">
+			  
+              <v-btn color="primary" elevation="5" rounded large @click="openSpring()"><div class="bt_text">泉兴</div></v-btn>
+              <v-btn color="primary" elevation="5" rounded large @click="openFlow()"><div class="bt_text">流兴</div></v-btn>
+            </v-card>
+          </div>
+          <div style="margin: 2em">
+            <v-alert :value="alert" color="pink" dark border="top" transition="scale-transition" shaped prominent type="error">日期超出范围，请重新选择日期</v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          today: "",
+          url: "",
+          start: [2022, 12, 5],
+          end: [2023, 12, 31],
+          today_time: [],
+          alert: false,
+          dtRight: false,
+          cwwl_url: "",
+          life_url: "",
+          timeMS: 0,
+          showLife: false,
+          spring_url: "",
+          flow_url: "",
+		  nmr_url:"",
+        }),
+
+        methods: {
+          openFlow() {
+            window.location.href = this.flow_url;
+          },
+          openSpring() {
+            window.location.href = this.spring_url;
+          },
+          openLife() {
+            window.location.href = this.life_url;
+          },
+			          openNmr() {
+            window.location.href = this.nmr_url;
+          },
+
+          backtohome() {
+            window.location.href = "../../day/index.html";
+          },
+          jumpDay(act) {
+            let mouths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            let dt = this.today_time;
+            let yy = dt[0];
+            let mm = dt[1];
+            let dd = dt[2];
+            let td = dd + act;
+            if (td > mouths[mm - 1]) {
+              td = 1;
+              if (mm == 12) {
+                yy++;
+                mm = 1;
+              } else mm++;
+            } else if (td == 0) {
+              if (mm == 1) {
+                mm = 12;
+                td = 31;
+                yy--;
+              } else {
+                mm--;
+                td = mouths[mm - 1];
+              }
+            }
+            this.today_time = [yy, mm, td];
+          },
+          cmp(id) {
+            let yy = id[0];
+            let mm = id[1];
+            let dd = id[2];
+            let sy = this.start[0];
+            let sm = this.start[1];
+            let sd = this.start[2];
+            let ey = this.end[0];
+            let em = this.end[1];
+            let ed = this.end[2];
+
+            if (sy == ey) {
+              if (mm >= sm && mm <= em && dd >= sd && dd <= ed) {
+                return true;
+              }
+              return false;
+            } else {
+              if (yy == sy && mm >= sm && dd >= sd) {
+                return true;
+              } else if (yy == ey && mm <= sm && dd <= ed) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+          openCWWL() {
+            window.location.href = this.cwwl_url;
+          },
+          jumpMr() {
+            if (this.dtRight) window.location.href = this.url;
+            else {
+              this.alert = true;
+              setTimeout(() => {
+                this.alert = false;
+              }, 3000);
+            }
+          },
+          getDiffWeek(val) {
+            let start = "2023-1-2";
+            let dt = start.split("-");
+            let yy = dt[0];
+            let mm = Number(dt[1]) - 1;
+            let dd = dt[2];
+            let staTime = new Date(yy, mm, dd);
+            let d = Math.round((this.timeMS - staTime.valueOf()) / 86400000);
+            let weekN = Math.ceil((d + staTime.getDay()) / 7);
+            this.differWeek = weekN;
+          },
+          get_life() {
+            let dayid = "";
+            let url = 0;
+            if (this.differWeek > 0) {
+              let baseDay = (this.differWeek - 1) * 3;
+              let toD = new Date(this.timeMS);
+              let day = toD.getDay();
+              if (day == 1) {
+                url = baseDay + 1;
+                this.showLife = true;
+              } else if (day == 4) {
+                url = baseDay + 2;
+                this.showLife = true;
+              } else if (day == 0) {
+                url = baseDay + 3;
+                this.showLife = true;
+              } else {
+                this.showLife = false;
+              }
+              dayid = `./life/${url}.html`;
+              return dayid;
+            } else this.showLife = false;
+          },
+          get_spring() {
+            let d1 = new Date("2022/11/14");
+            let dif = (this.timeMS - d1.getTime()) / 1000 / 60 / 60 / 24;
+            let url = (845 + dif) % 981;
+            if (url == 0) url = 981;
+            return `./spring/${url}.html`;
+          },
+          get_flow() {
+            let d1 = new Date("2022/11/14");
+            let dif = (this.timeMS - d1.getTime()) / 1000 / 60 / 60 / 24;
+            let url = (260 + dif) % 1980;
+            if (url == 0) url = 1980;
+            return `./flow/${url}.html`;
+          },
+		   get_nmr() {
+            let d1 = new Date("2023/5/29");
+            let dif = (this.timeMS - d1.getTime()) / 1000 / 60 / 60 / 24;
+            let url = (1 + dif) % 365;
+            if (url == 0) url = 365;
+            return `./nmr/${url}.html`;
+          },
+        },
+
+        watch: {
+          today_time(val) {
+            let yy = val[0];
+            let mm = val[1];
+            let dd = val[2];
+            let rem = Number(mm) - 1;
+            let nd = new Date(yy, rem, dd);
+            this.timeMS = nd.getTime();
+            this.getDiffWeek();
+            this.dtRight = this.cmp([yy, mm, dd]);
+            this.today = `${yy}年${mm}月${dd}日`;
+            this.url = `./mr/${yy}-${mm}-${dd}.html`;
+			this.nmr_url = this.get_nmr();
+            this.cwwl_url = `./cwwl/${mm}-${dd}.html`;
+            this.life_url = this.get_life();
+            this.spring_url = this.get_spring();
+            this.flow_url = this.get_flow();
+          },
+        },
+        computed: {},
+        mounted() {
+          let dt = new Date();
+          let yy = dt.getFullYear();
+          let mm = dt.getMonth() + 1;
+          let dd = dt.getDate();
+          this.today_time = [yy, mm, dd];
+        },
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .v-btn {
+        margin: 1px;
+      }
+      b {
+        color: tomato;
+      }
+      .bt_text {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    </style>
+  </body>
+</html>

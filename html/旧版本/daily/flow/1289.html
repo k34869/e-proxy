@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1288')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1290')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 5 课<br />
+神儿女的行事为人</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：基督是我生命。（诗歌436首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但那灵的果子，就是爱、喜乐、和平、恒忍、恩慈、良善、信实、温柔、节制；这样的事，没有律法反对。但那属基督耶稣的人，是已经把肉体连肉体的邪情私欲，都钉了十字架。我们若凭着灵活着，也就当凭着灵而行。（加五22～25。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　不要在律法下受奴役的轭挟制－加五1</p>
+<p class="ot1">二　不要与基督隔绝－2～12</p>
+<p class="ot1">三　不可放纵肉体，倒要凭爱服事－13～15</p>
+<p class="ot1">四　凭着灵，不凭着肉体而行－16～26</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>不要与基督隔绝，当凭着灵而行，不凭着肉体而行。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>本课说到神儿女的行事为人。首先，神的儿女不当受奴役的轭挟制，若想靠肉体守律法，就从恩典中坠落了。因此我们不要与基督隔绝，反要终日住在这包罗万有者里面，享受祂的丰富。第二，我们虽是自由的，但还需要在运用自由这件事上受限制，使我们不放纵肉体，倒要凭着爱像奴仆服事圣徒。这样生活的秘诀，乃在于凭着灵而行，不凭着肉体而行；因肉体所作的，是没有生命的行为；那灵所产生的，是满了生命的果子。那灵的果子，就是生命之灵不同的表现，就如爱、喜乐、和平…等。故我们要学习在基督的钉死里，把肉体连肉体的邪情私欲，都钉了十字架。最后，为着我们一般的基督徒生活，和为着完成神定旨的召会生活，我们还需要两种的凭着灵而行：一种是借着不住的祷告，过一种与主是一的日常生活；第二种则是借着凭那灵的引导、新造的准则、追求基督和实行召会生活的准则，过一种步伐一致，如军队行伍前进的生活，为着达到神经纶的目标。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　不要与基督隔绝</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>加五6：因为在基督耶稣里，受割礼不受割礼，全无效力；惟独借着爱运行的信，才有效力。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗对我们行事为人的第一项嘱咐是：不要受奴役的轭挟制，不要与基督隔绝，不要从恩典中坠落了。反而我们都需要祷告：‘主，怜悯我们，赐给我们恩典，好叫我们不与你隔绝。使我们终日住在你这包罗万有者里面，享受你的丰富。’我们不会与基督隔绝，反而因着那包罗万有之灵全备的供应而得着加强，更完成了神儿子的名分，使神得着团体的彰显。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>不与基督隔绝，终日住在这包罗万有者里面，享受祂的丰富。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

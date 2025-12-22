@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('221')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('223')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">打破玻璃</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">撒该站着，对主说，主啊，看哪，我把家业的一半给穷人，我若讹诈了谁，就还他四倍。（路19:8）</div>
+<div id="CC">And Zaccheus stood and said to the Lord，Behold，the half of my possessions，Lord，I give to the poor，and if I have taken anything from anyone by false accusation，I restore four times as much.（Luke 19:8）</div>
+<div id="C">一个教堂里，有一块大玻璃，约值四十块美金，被一个小孩因为玩球而打破了。那个教堂的牧师没有追究，只见一个小孩来到教堂门口，张望一下就走了。后来那个小孩的母亲过世，许多信徒都来为他母亲安葬，因此这个小孩受到基督爱的激励，接受耶稣作救主。他得救后，就有心愿要了结打破玻璃的事；所以，一有余钱，就寄给那教堂的牧师。起初先赔一毛，以后有时多赔，有时少赔。有时来信说，我最近需要补习，这个月不能多赔，只能赔二毛。以后又来信说，我现在手里多一点了，能赔一元。这样继续有款寄来，已经超过玻璃的价值了。那个教堂的牧师召集大家商量，应该怎样办理？后来定规登报，要他停止赔偿。从登报那天起，他才不再寄钱来。十年后，该教堂有次新旧牧师的交接，那位新的牧师，竟然就是那个打破玻璃的小孩。他站起来说了这个故事，众圣徒大受感动。<br/><br/>　这是一个了结已往的好例子，并且也是一个赔偿的好结果，不只成为神的儿女，更成为神的工人。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

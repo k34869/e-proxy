@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('380')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('382')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">拉带子</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗8:14　因为凡被神的灵引导的，都是神的儿子。For as many as are led by the Spirit of God, these are sons of God.</p><p>李弟兄年幼的时候，一次随母亲到外婆家过端午节。吃饭的时候，摆出各种美味，还有许多粽子，另有一盘白盐和一盘白糖；糖是为蘸粽子，盐是为调味。李弟兄只见又白又细，以为两盘皆是白糖，于是拿起粽子在盐里面大大的蘸了一下。一口咬下，咸得要命，又不好当众吐出，只好勉强咽下，吃了大亏。这个可以给我们一个证明，知识与感觉的不同。知识是出于头脑，照人的想法，以为又白又细，定是白糖；但是咸味的感觉告诉我们，那个是盐。我们基督徒断定是非，不可凭知识，不可凭眼见，要凭内心的感觉，作为断定是非的标准。小孩子头脑幼稚，不知道什么是苦，什么是甜，什么是辣，什么是咸。但是他对苦的东西，辣的东西，生来就有一个感觉，觉得不舒服会把它们吐出去。对于那些甜的，他就笑着吃下去。知识虽不够，却有一种生命的感觉，告诉他什么是该要的，什么是该弃绝的。我们作基督徒，遇见不该作的事，里面就有一个拒绝的感觉；对于该作的事，里面就有一个平安喜乐的感觉。生命的感觉是高过良心的感觉的，认为不对的，生命的感觉固然定它是罪；但是有的良心认为可行的，而不是出于神的，生命的感觉仍会定它为罪。</p><p>倪弟兄见证说，‘我在一个地方，碰着一个七十多岁的老太太，一个字都不认识，圣经也没有读过，但是没有碰着一个人得着神的引导，像她一样。她信主只有四个月，一个字都不识，一点圣经知识都没有，如果讲起律法来，她一点都不知道，一条诫命都不会背。但是她里面知道，她里面会告诉她。是非是从里面来的，不是从外面来的。’</p><p>儿童诗歌 | 第206首 圣灵今在我心内</p><p>圣灵今在我心内，我要以祂为我主；</p><p>因爱耶稣，我敬畏祂最小的宣布。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

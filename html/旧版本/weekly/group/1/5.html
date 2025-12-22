@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>二O二三年秋季训练申言参考</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('4')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">第 5 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('6')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+
+          <div class="title">第五周 在神的家中当怎样行—操练自己以至于敬虔</div>
+          <v-divider></v-divider>
+
+          <v-btn block color="primary" elevation="1" tile><b>鸟瞰：</b></v-btn>
+          <div class="contents">
+            <v-divider></v-divider>
+            <p>保罗所服事给提摩太的，完全是关于在召会—神的家中当怎样行。要知在召会中当怎样行，就须遵循两个原则：尊重基督的元首权柄，以及担负真理。我们要在神的家—召会—中有正确的行事为人，就需要顾到健康的教训。敬虔是个奥秘，敬虔就是神显现于人，像神，彰显神；追求敬虔乃是过一种显明神的日常生活。在召会生活中行事为人的路，就是操练自己以至于敬虔。我们都必须操练我们的灵，我们需要建立起运用灵的习惯：每当我们在艰难的光景中，我们必须勉强自己操练我们的灵。操练我们的灵，乃是将我们的心思置于灵，乃是辨明我们的灵与魂。
+</p>
+            
+            <v-divider></v-divider>
+            <br />
+
+             <v-btn block color="primary" elevation="2" rounded >周一</v-btn>
+            <br v-show="show" />
+<br />
+            <p class="ot2" >晨祷经节：倘若我耽延，你也可以知道在神的家中『当怎样行』…真理的柱石和根基。（提前三15）</p>
+            <p class="ot1">1 请阐释要在神的家中当怎样行，该遵循那两个原则？</p>
+            <p class="ot2" >保罗所服事给提摩太的，完全是关于在堕落的时期，在召会中当怎样行。我们必须尊重基督的元首权柄。尊重基督元首权柄会保护我们，免于许多错误。第二件事乃是，全召会都是真理的柱石和根基。召会中每个肢体都该认识真理成为柱石。</p>
+            <p class="ot1">2 请解说在神家中有正确行事为人，需顾到健康教训？</p>
+            <p class="ot2" >提后四3 说，因为时候要到，那时人必『容』不下健康的教训，反而耳朵发痒…且转耳离弃真理。用『容』字是指忍受某种苦难。对某些人而言，健康的教训成了他们必须忍受的事物。在召会中行事为人，不该照我们发痒耳朵，反需要照健康的教训。</p>
+           
+  <v-btn block color="primary" elevation="2" rounded >周二</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：大哉！敬虔的奥秘…『祂显现于肉体』…被传于万邦…被接去于荣耀里。（提前三16）</p>
+            <p class="ot1">1 请解释『敬虔』的辞意？</p>
+            <p class="ot2" >『敬虔』这名词在提摩太前后书使用九次。『敬虔』这辞的正确定义是神显现于肉体，或神在肉体的显现。提前三章十五节说，召会是活神的家，真理的柱石和根基。十六节指明，召会是神显现于肉体，或，神在肉体的显现。</p>
+            <p class="ot1">2 请解述提前三16 的话，指召会的被提？</p>
+            <p class="ot2" >大部分的圣经学者都不了解，十六节启示：敬虔的奥秘就是神显现于召会；他们认为这节仅仅指着基督。然而，因为『被接去于荣耀里』是十六节的最后一句，所以这必定不仅指基督的升天，也指召会被提，因基督升天在祂被传万邦之前。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周三</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：为君王和一切有权位的…可以十分『敬虔庄重』的过平静安宁的生活。（提前二2）</p>
+            <p class="ot1">1 请以提前二2 说明，生活中该活出敬虔？</p>
+            <p class="ot2" >提前二2 我们需要十分敬虔的过平静安宁的生活。我们在卧室里所挂的图画，可以指明我们在个人生活中，是否在意敬虔。我们所选的图画可能将神显示给别人，也可能显出其他的东西。我们可以将同样的原则应用在日常生活的千百件事上。</p>
+            <p class="ot1">2 请解述在生活中，我们的谈话如何显出敬虔？</p>
+            <p class="ot2" >我们口中所出的话，应该给人一种印象，就是神显现于肉体。我们不该让松散的谈论和闲谈进到召会生活中来。我们必须操练我们的灵，拒绝这种谈论，这种谈论不会给人神显现于我们肉体的印象。即便在小事上，也需要十分敬虔的过生活。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周四</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：只是要弃绝那世俗的言语…并要『操练自己』以至于敬虔。（提前四7）</p>
+            <p class="ot1">1 请阐释我们在召会生活中，行事为人的路？</p>
+            <p class="ot2" >我们在召会生活中行事为人的路，就是操练自己以至于敬虔。任何事若对于别人不是正确、敬虔的见证，我们都不该作。我们不需要思考一件事是否合乎律法或是否正确，而该思考它是否有敬虔的彰显，就是神显现于肉体。</p>
+            <p class="ot1">2 请解述来自神的分赐的敬虔生活，在于操练灵？</p>
+            <p class="ot2" >神的经纶就是要将祂自己分赐到我们里面。祂的分赐产生敬虔的生活。事实上，敬虔乃是神圣分赐的结果。这样来自神的分赐的敬虔生活，在于操练我们的灵。敬虔的生活来自神的分赐，神的分赐在于我们的配合，配合就是操练我们的灵。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周五</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：因为心思置于肉体，就是死；心思『置于灵』，乃是生命平安。（罗八6）</p>
+            <p class="ot1">1 请交通学习将心思置于灵？</p>
+            <p class="ot2" >心思是魂的大部分，而魂是居于肉体和灵之间。我们必须学习将心思置于灵。我们的心思非常多话。若不控制我们的心思，就会飘荡幻想遍游地球。所以我们必须将我们心思引到我们的灵。我们这样作时，就会向主歌唱，赞美主并说出主来。</p>
+            <p class="ot1">2 请阐述来四12『辨明』这辞？</p>
+            <p class="ot2" >神的话能剖开我们的灵与魂，连心中的思念和主意都能『辨明』。我们的思念通常是欺骗人的。但我们若操练我们的灵，就会辨明我们的思念是邪恶的，因为在我们的思念背后有邪恶的主意。辨明心中的思念和主意，等于剖开灵与魂。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周六</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：…我题醒你，将那借我按手，在你里面神的恩赐，再『如火挑旺』起来。（提后一6）</p>
+            <p class="ot1">1 请解明提前四7，操练以至于敬虔？</p>
+            <p class="ot2" >我们弃绝那世俗言语，和老妇虚构无稽之事，应当操练以至于敬虔。这样的操练，就像体操。敬虔就是基督从我们身上活出，成为神在肉体的显现。今天这位基督就是那灵住在我灵。操练自己以至于敬虔，就是操练我们的灵，在生活中活基督。</p>
+            <p class="ot1">2 请见证要将我的灵挑旺起来，该如何？</p>
+            <p class="ot2" >就必须敞开口，敞开心，敞开灵。保罗照着经历写提后一章六至七节。他题醒提摩太要将神在他里面的恩赐挑旺起来。神所赐给我们的灵乃是能力、爱、并清明自守的灵。能力属于我们的意志，爱属于我们的情感，清明自守属于我们的心思。</p>
+
+<v-btn block color="primary" elevation="2" rounded >总结</v-btn>
+<br />
+            
+            
+            <p class="ot2" >我们的聚会需要满了灵的运用。我们来在一起聚会，在唱诗、祷告、读经、作任何事以前，我们众人都该运用我们的灵。在我们所有的聚会中，都该有这样敬拜的灵。所有的圣徒都必须起来运用他们的灵。我们必须帮助圣徒们领悟，我们需要使用我们的灵敬拜。我们必须帮助圣徒们领悟，我们人的灵是神的灯，适合为神所用。不仅如此，这灵作为隐藏的人，在神面前是美丽的。并且，我们的灵得重生时，成为里面的人。隐藏的人是不显明的人，但里面的人却能非常主动积极。照着以弗所三章，里面的人必定非常主动，非常积极的活出主来。</p>
+           
+  
+        
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+      });
+    </script>
+    <style>
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="css/vuetify.min.css" rel="stylesheet" />
+    <link href="css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>造就课程</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+              造就课程——表显
+            
+              
+              </div>
+            </v-card>
+          </div>
+      
+          <p class="heading"> 神心的喜悦： </p>
+          <div class="nav" @click="jump('./xz27.html')"> 第二十七篇   寻求神旨意</div>
+          <div class="nav" @click="jump('./xz28.html')"> 第二十八篇   圣徒的理财</div>
+          <div class="nav" @click="jump('./xz29.html')"> 第二十九篇   职业的选择</div>
+          <div class="nav" @click="jump('./xz30.html')"> 第三十篇   婚姻的学习</div>
+   <div class="nav" @click="jump('./xz31.html')"> 第三十一篇   配偶的选择</div>
+         <p class="heading"> 人伦的美德： </p>
+           <div class="nav" @click="jump('./z33.html')"> 第三十二篇   夫妇的相处</div>
+          <div class="nav" @click="jump('./z34.html')"> 第三十三篇   父母的榜样</div>
+        <div class="nav" @click="jump('./z35.html')"> 第三十四篇   交友的对象</div>
+<p class="heading"> 圣别的显出： </p>
+      <div class="nav" @click="jump('./z36.html')"> 第三十五篇    圣徒的消遣</div>
+          <div class="nav" @click="jump('./z37.html')"> 第三十六篇   说话与听话</div>
+        <div class="nav" @click="jump('./z38.html')">第三十七篇   衣服与饮食</div>
+   <div class="nav" @click="jump('./z39.html')"> 第三十八篇 情欲与禁欲</div>
+        <div class="nav" @click="jump('./z40.html')">第三十九篇  疾病的学习</div>
+   
+ <br />
+ <br />
+        </v-main>
+      </v-app>
+    </div>
+   <script src="js/vue.js"></script>
+    <script src="js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "index.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('981')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('2')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">清早享受主</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+              <div id="chap1"></div>
+              <br />
+              早起
+              <div id="CC">每早晨这些都是新的；你的信实，极其广大。（耶利米哀歌3：23）</div>
+              <div id="CC">They are new every morning; great is Your faithfulness.（Lamentations 3:23）</div>
+              <hr />
+              清早享受主
+              <div id="CC">耶和华啊，早晨你必听我的声音；早晨我必向你陈明我的心意，并要守望。（诗5:3）</div>
+              <div id="CC">O Jehovah，in the morning You will hear my voice; in the morning I will set forth my words in order to You，and I will watch.（Psalm 5:3）</div>
+              <div id="C">
+                有一位圣徒曾说过几句很好的话：“一个人爱主的心有多少，第一就看他在床和主中间的拣选。你爱你的床多，还是爱主多？爱床多，就多睡一点；爱主多，就早起一点。”这位圣徒到死，没有一天是在五点以后起床的，几十年都是这样。
+                <br />
+                <br />
+                　为什么基督徒应当清早起来？因为清晨是人遇见主最好的时候。健康的人，总是越早起越好。因为清早是遇见主，与主有来往、与主有交通最好的时候。吗哪总是在日出以前收取的。日头一出来，吗哪融化了，就吃不到了。信徒在神面前要得着属灵的培养，要有属灵的交通，要有属灵的粮食，就得早一点起来。起迟了就吃不到吗哪。在清早的时候，神特别要将祂属灵的食物，圣洁的交通，分给祂的儿女。谁太迟来拿，就拿不到。
+                <br />
+                <br />
+                　清早，是一天最好的时候。我们不应当把最好的时候用在别的事情上，应当把我们一天之中最好的时候，清晨的时候，用在神面前。（初信造就）
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

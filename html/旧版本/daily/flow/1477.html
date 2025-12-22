@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1476')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1478')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 13 课<br />
+一切影儿的实体</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　不可让人论断你们</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>可二27～28：祂又对他们说，安息日是为着人的，人不是为着安息日的；所以人子也是安息日的主。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>照神的算法，只有基督才有价值，道理和意见都无关紧要，重要的乃是基督，为着我们日日、周周、月月、并年年的生活。在召会生活中，我们应该只有一个因素、一个理由、一个元素、一个源头，就是基督。在召会中，我们都要普遍化，没有人该是特别的。我们不该让任何事物代替了基督。只有我们都同样的注意基督，在其他事上不再特殊的时候，才真正彰显基督。哦，愿我们更多进入对基督的经历！是我们所有的怪癖都消失，唯有基督存留。我们要留在对基督的经历里，使我们能完满的享受祂，而不在意任何宗教或伦理的作法。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>注意基督，不坚持自己的怪僻和意见。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督是一切影儿的实体。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>请举一个在日常生活中，享受基督作生活细节之实际的例子。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘律法和天使被撤去之后，所留下来的一切正面事物都是基督的影儿。诸天、太阳、月亮、星宿、食物和饮料，都是基督的影儿、表征；基督乃是这些影儿的实体、实质。我们肉身生活每天、每周、每月、每年所需的一切，都是影儿；惟有基督是实际、实体。不仅如此，敬拜天使对神乃是极大的侮辱。照样，我们若尊重肉身的、物质的东西过于基督，也是侮慢神；因为这一切都是基督的影儿。我再说，律法已经撤去了，天使也被脱下了，而物质的东西都是影儿。因此，我们有立场说，基督是一切，又在一切之内。祂是我们的律法、规条、仪文、天使、宇宙、日、月、星辰、天、地、食物和饮料。祂是我们每日、每周、每月、每年生活中一切正面事物的实际。’（歌罗西书生命读经，249～250页。）</p>
+<p>‘当一个人站在光中时，就有影子，但影子不是真实的人。真实的人是那影子的实体。在整个宇宙中，一切的事物只是影儿；基督自己才是实际。我们所穿的衣服不是真实的衣服，只是影儿。基督是我们的真衣裳。我们若没有将基督穿在身上，我们在神面前就仍是赤身的。我们所看见的光，不是真实的光。基督是光的实际。即使我们有最好的光，若没有基督，我们仍是在黑暗中。太阳不是真实的太阳，只是预表。太阳的实际乃是基督这公义的太阳。（玛四。）甚至我们所住的房子，也不是我们真实的住处。我们的真住处乃是基督。我们所需的一切都是影儿；一切事物的实际乃是基督。当然，基督不是宇宙中消极事物的实际，如罪、世界、己、撒但和邪灵。宇宙中一切积极的事物才是基督的影儿。’（由基督与召会的观点看新约概要卷二，292页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在作每一件事情，接触每一件事物时，祷告并经历主是那件事物的实际。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

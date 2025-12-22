@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1092')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1094')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 13 课<br />
+圣别（一）在生命中作王</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：神所赐恩典最高的定义。（诗歌376首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：那些受洋溢之恩，并洋溢之义恩赐的，就更要藉着耶稣基督一人，在生命中作王了。（罗五17下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　从外面称义的地位转到里面圣别的性质—罗五10～11</p>
+<p class="ot1">二　第一个人，第一种行为及其结果—五12～21</p>
+<p class="ot2">1.　第一个人—亚当—12，林前十五47上。</p>
+<p class="ot2">2.　第一种行为—亚当在园子里的过犯—罗五14。</p>
+<p class="ot2">3.　第一样结果—罪进入，使多人构成罪人，众人被定罪而死，死作了众人的王—12，18～19，14。</p>
+<p class="ot1">三　第二个人，第二种行为及其结果—五12～21</p>
+<p class="ot2">1.　第二个人—基督—15，林前十五47下。</p>
+<p class="ot2">2.　第二种行为—基督在十字架上的顺从—罗五18～19。</p>
+<p class="ot2">3.　第二样结果—恩典来临，使多人构成义的，被称义得生命，恩典藉着义作王，叫人得永远的生命—15，18～19，21。</p>
+<p class="ot1">四　四件作王的事物—五12～21，六12</p>
+<p class="ot2">1.　罪在死中作王—五21，六12。</p>
+<p class="ot2">2.　死藉着一人作了众人的王—五14，17上。</p>
+<p class="ot2">3.　恩典藉着义洋溢并作王，叫人得永远的生命—五15，20～21。</p>
+<p class="ot2">4.　信徒藉着那人基督在生命中作王—五17。</p>
+<p class="ot1">五　神圣的迁移—在基督的死与复活中与祂联合—六1～5</p>
+<p class="ot2">1.　信徒藉着浸入死与基督一同埋葬—3～4。</p>
+<p class="ot2">2.　信徒在基督复活的样式里与祂联合生长—4～5。</p>
+<p class="ot1">六　知道与算—六6～11</p>
+<p class="ot2">1.　知道我们的旧人已经与基督同钉十字架—6。</p>
+<p class="ot2">2.　在基督耶稣里，向罪算自己是死的，向神却算自己是活的—11。</p>
+<p class="ot1">七　藉拒绝并献上以合作—六12～23</p>
+<p class="ot2">1.　将自己献给神作奴仆—13下，16，19，22。</p>
+<p class="ot2">2.　将肢体献给神作义的兵器—13，19。</p>
+<p class="ot2">3.　拒绝罪并与神合作—12～13。</p>
+<p class="ot2">4.　献上的结果是圣别，结局是永远的生命—22。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识信徒藉着受浸所经历神圣的迁移，并主观经历与基督的联合。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>圣徒不仅经历基督在十字架上的死客观的拯救，还要经历基督进入我们里面，祂的生命主观的拯救我们，脱离我们的性情、旧人、己、天然的生命等，使我们得着性质上的救恩。这乃是信徒藉着受浸，在基督的死与复活里与祂联合并生长，经历神圣的迁移—从亚当里迁到基督里。藉此我们看见自己向罪是死的，向神是活的；并算自己向罪死，向神活。基于这算，我们献上自己作神的奴仆，并献上我们的肢体作义的兵器。这给我们里面神圣的生命机会，作圣别的工作。然后我们学习拒绝罪，并与神合作。这一切的结果就是圣别，结局乃是永远的生命。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　客观的称义与主观的圣别</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>不但如此，我们现今既藉着我们的主耶稣基督，得与神和好，也就要藉着祂，在神里面夸耀着，在祂的生命里得救了。（罗五11。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神的称义改变了我们的地位，从被神定罪转到被神称义。在地位上我们已经在基督里了，但我们还需要往前，祂的生命必须进入我们里面，活在、住在我们里面，主观的拯救我们脱离我们的性情、旧人、已和天然的生命。在亚当里我们承受了罪和死，赞美神！我们在基督里承受了永远的生命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>领悟我们在基督里的恩赐，远超过在亚当里的承受。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

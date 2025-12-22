@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('243')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('245')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">主作大祭司，俯就同情体恤我们</p>
+<p>因我们并非有一位不能同情我们软弱的大祭司，祂乃是在各方面受过试诱，与我们一样，只是没有罪。（来四15）</p>
+<p>基督在升天里，仍然在人性里作我们的大祭司，顾惜我们。希伯来四章说，我们并非有一位不能同情我们软弱的大祭司，祂乃是在各方面受过试诱，与我们一样，只是没有罪。（15。）因着基督在凡事上受过试诱，与我们一样，祂就很容易低就我们，同情、体恤我们的软弱。换句话说，祂在人性里作大祭司，同情我们的软弱，藉着一直顾惜我们，来照顾我们。</p>
+<p>基督这位大祭司所经历的苦难，比我们所经历的更难千万倍，因此我们可以信赖、祈求祂。我们若有什么难处，祂与我们一同感觉。祂要恩待扶助我们，使我们得平安。多少时候，我们觉得别人不看重我们的事，也没有人与我们表同情，来安慰扶助我们。那时，我们必定觉得担子是重的，心情是苦的。然而，我们有一位与我们表同情的大祭司，我们可以坦然无惧的来到祂施恩的宝座前，祂要实际的背负我们的重担。</p>
+<p>再者，基督在天上作大祭司，也为我们代求。七章二十五节说，‘那藉着祂来到神面前的人，祂都能拯救到底；因为祂是长远活着，为他们代求。’基督既是长远活着，永不改变的，祂在程度上、时间上和空间上，都能拯救我们到底。基督作我们的大祭司，为我们代求，承担我们的案件。祂为我们显在神前，为我们祷告，使我们蒙拯救，并完全被带进神永远的定旨。我们只要简单的安息、信靠并享受祂的代求。我们有一位永久、不变、永远的代求者，祂知道我们何等容易跌倒，而且一跌就留在落下去的光景中。但祂的代求迟早要胜过、征服、并拯救我们。藉着祂的代求，至终我们每个人都会完全被征服，完全蒙拯救。神设立基督作大祭司来看顾我们，现今祂正在藉着祂的代求来拯救我们，并要拯救我们到底。（参活力排，133页；十二篮第二辑，55～56页；希伯来书生命读经，456～457页。）</p>
+<p class="title">折脚小孩折翼小鸟</p>
+<p>有一小孩坐在路旁，手中有一折翼小鸟。一位仁慈的老妇人经过，就问那孩子可否将那只可怜的小鸟交给她带回去医治、看护，等到它完全复原后，再放它走，让它享受自由。小孩思想片刻，回答说，‘对不起，我想还是自己看顾它好了。’接着又说，‘因我懂得它的难处。’老妇人不大明白小孩的意思，等他站了起来，她才明白；原来小孩也是折脚，脚上尚有石膏固定着。因他自己折脚，所以懂得小鸟折翼的难处。自己经历难处的人，才能体恤、低就、并帮助有同样难处的人。（参造就故事下册，85～86页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：基督作为在人性里的大祭司，同情、体恤我们的软弱，并为我们代求。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

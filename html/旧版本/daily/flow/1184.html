@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1183')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1185')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 8 课<br />
+对付恩赐（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我们在一起。（补充本诗歌618首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：爱是恒久忍耐，又有恩慈；爱是不嫉妒；爱是不自夸，不张狂，不作不合宜的事，不求自己的益处，不轻易发怒，不计算人的恶，不因不义而欢乐，却与真理同欢乐；凡事包容，凡事相信，凡事盼望，凡事忍耐。(林前十三4～7。)</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　管治的原则—林前十二1～3</p>
+<p class="ot1">二　那灵的表显—十二4～11</p>
+<p class="ot1">三　一个身体，许多肢体—十二12～27</p>
+<p class="ot2">1　身体的构成—12～13。</p>
+<p class="ot2">2　肢体的不可缺—14～22。</p>
+<p class="ot2">3　肢体的调和—23～27。</p>
+<p class="ot1">四　恩赐的设立—十二28～31</p>
+<p class="ot1">五　极超越的路—为着运用恩赐—十三1～13</p>
+<p class="ot2">1　爱的需要—1～3。</p>
+<p class="ot2">2　爱的定义—4～7。</p>
+<p class="ot2">3　爱的超越—8～13。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>正确的认识恩赐，并得着恩赐极超越的路—爱。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗从林前十二章起，对付恩赐的问题。恩赐管治的原则乃是用我们的灵并凭着那灵，以基督为中心而说话。恩赐是由那灵分给的，各种不同的恩赐，都是那灵的表显，为着叫召会得益处，使基督身体的肢体在生命里长大，并使基督的身体得建造。得着恩赐的路，是藉着说话，并且顾到身体，留在身体里，这使我们能蒙保守在那灵里，而有那灵的恩赐。恩赐的运用也必须是为着身体，因此我们必须看见身体上每一肢体的不可缺，也必须看见神调和身体上的每一肢体，使肢体彼此同样相顾而得建造。神在召会中所设立的恩赐，包括使徒、申言者、教师、行异能的、医病的、帮助的、治理的、说方言的…。使徒告诉我们，应当切慕那更大的恩赐。使徒也把得着恩赐极超越的路指示我们，就是爱。爱顾到身体，并建造身体。因此我们该专注于那建造身体的爱，追求爱，留在身体里，以享受那灵。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　属灵恩赐的管治原则</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十二3:所以我要你们知道，在神的灵里说话的，没有人说，受咒诅的，耶稣！若不是在圣灵里，也没有人能说，主，耶稣！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>召会乃是基督的身体，这身体有许多肢体，每个肢体都有恩赐。因此保罗在说到作头和身体之后，就说到属灵的恩赐。我们身体的每个肢体，无论看起来多么微小或多不重要，都有恩赐。只要是身体的肢体，就有恩赐，有恩赐就有功用。藉着身体所有肢体的功用，身体就能工作。身体所有肢体之恩赐的功用加起来，就是身体的工作。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以正确的灵说，‘主，耶稣！’在圣灵里，有分于、享受并经历圣灵。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

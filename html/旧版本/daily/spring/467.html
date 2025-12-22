@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('466')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('468')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">拔去挂镜钉</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>马太福音五23-24　所以你在祭坛前献礼物，若想起你的弟兄向你怀怨，就要把礼物留在坛前，先去与你的弟兄和好，然后来献礼物。</p><p>有一位老太太脾气顶大，有人得罪她，她能骂人三天三夜，喉咙骂哑了还是要骂。后来有人带她信主，她就认罪悔改。有一天，她家里的三只来亨鸡，走到邻居的菜园里偷菜吃，邻居的菜上撒了杀虫药粉，就把这三只来亨鸡全都毒死了。老姊妹又不好去找人的麻烦，心中却非常忿恨。因为信耶稣，外面虽不敢吵骂，里头却越想越气，非常痛苦。另外有一位邻居太太劝她说，‘你信耶稣不好骂人，我教你一个法子，叫他三年不长菜。’她说，‘什么法子？’邻居说，‘到夜晚的时候，把他所种的菜秧子，连根都拔掉。’她觉得这法子非常好，到夜晚人静的时候，就去拔菜。因为菜上洒有药水，烧得她手发痛，更使她生气，就用藤绷坐在菜秧上压菜，好多菜通通被压坏了。回家之后，手指头痛得难受。这时，她想起主来，知道一定是她犯罪，神来罚她。她就赶紧祷告，求神赦免，并且定规第二天早晨去赔人家的菜，手才不痛。第二天早晨，要到邻居家里认罪赔菜的时候，心里觉得非常难为情，又不能不去。走到菜园边上，一看压倒的菜，因着一夜的雨水，又直起来了，所以她就不去认罪了。这一种肉体的发动，在基督徒身上，若不天天彻底对付，他就不会懂得属灵的事。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

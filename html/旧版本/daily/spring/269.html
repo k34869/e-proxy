@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('268')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('270')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第25课  创造—人的受造奇妙可畏（十一）良心</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传二四16 我因此操练自己，对神对人常存无亏的良心。</p>
+<p>亚当和夏娃</p>
+<p>小朋友，你们知不知道，我们所住的地球，是谁创造的？是我们的神。神造了美丽的天地以后，又造了一个人，名字叫作亚当。又为他造了一个配偶，作他的妻子，名叫夏娃。神派亚当管理伊甸园，又告诉亚当：『这园子里面，各样树上的果子，你都可以随意的吃。可是善恶知识树上的果子，你不可以吃，因为你吃的日子必定死。』</p>
+<p>亚当和夏娃原本也都很听神的话，根本没想要碰那善恶知识树的果子。可是有一天，撒但借一条狡猾的蛇，想要诱骗亚当和夏娃，吃那致人于死的果子。狡猾的蛇先去找夏娃，对她说：『夏娃，神真的说过，不许你们吃园中所有树上的果子么？』神当然不是这么说的。夏娃回答说，『园中树上的果子我们可以吃；只有园子当中那棵树上的果子，神曾说，我们不可吃，也不可摸。』蛇对夏娃说，『我告诉你，你们吃那果子不一定死！而且你们吃了那果子以后，眼睛就会变得明亮，像神一样聪明，能知道善恶了。』</p>
+<p>夏娃听了蛇的话，忍不住，就摘了一颗果子往嘴里送。当他们把善恶知识树的果子吃下去以后，眼睛真的明亮了。这时候，他们才发现，原来自己并没有穿衣服，是赤着身子的。他们赶紧摘了无花果树的叶子，为自己编条裙子穿上。</p>
+<p>天起了凉风，耶和华神在园中行走。亚当和夏娃听见神的声音，吓得赶紧躲了起来，因为他们没有遵守神的吩咐。神呼唤亚当，对他说，『亚当，你在哪里？』亚当说，『神阿，我在园中听见你的声音，我就害怕，因为我赤身露体。』</p>
+<p>神知道，亚当和夏娃是受了蛇的诱骗，吃了善恶知识树的果子。神审判蛇，对它说，『你既诱骗了人，就必受咒诅。你必用肚子行走，并且终身吃土。』因为这缘故，今天我们看见的蛇，是没有脚的，必须用肚子走路。神又审判夏娃，使她必须受怀胎和生产的苦，并且受丈夫的管辖。神也审判了亚当，要终身劳苦，汗流满面，才能从地里得到吃的。因为亚当和夏娃没有听从神的吩咐，吃了善恶知识树的果子，罪和死就进到他们里面，也进到所有人类，就是亚当的后代里面。犯了罪的人，不能再与这位圣别、公义的神亲近，从此，伊甸园和通往生命树的那条道路，就封住了。</p>
+<p>活动建议：让孩子们围成一圈走路。当他们走路时，告诉他们不同的情况（例如，帮助朋友，听老师的话，和你的父母顶嘴，打某人，等等）。如果孩子们认为某种情况困扰他们的良心（不好的感觉），他们就要停止行走。如果没有不好的感觉，他们可以继续走路。良心是我们的红绿灯。如果某事使我们的良心受困扰，我们就需要留心并停下来。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神在我们的灵里造了良心。当我们做神所喜悦的事时，我们的良心感觉快乐，当我们做神不喜悦的事时，我们的良心感到难过。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：问问孩子们如果他们做了他们不应该做的事有什么感觉。比如，对父母撒谎，不听老师的话，抢别人玩具等等，这种困扰的感觉是来自我们的良心。当我们做错事时，当我们的良心困扰我们，使我们内心感到不安时，我们该怎么办？我们需要道歉，把事情处理好。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传二三1 诸位，弟兄们，我在神面前行事为人都是凭着无亏的良心，直到今日。</p>
+<p>倪述祖的改变</p>
+<p>倪述祖在福州十分有名的三一中学念书，因为自小天资聪颖，他念书几乎不花什么功夫，就常名列第一。可是独有一科，他最不爱读，就是圣经这一科。但他又好胜，不愿因为一科考不好，成绩输给别人。聪明的倪述祖，想了一个办法，每次考圣经这一科，倪述祖就将重要的经节，抄在自己的手掌上。那时的衣服袖子很长，可以将手掌遮住，这样试了好几次，竟然每次都瞒天过海，没被人发现。信主以后，圣灵在倪述祖里面不断的说话，要他去向老师及校长，承认作弊的事。这怎么行呢？在这所名校，作弊的人是要被开除的。何况，大家都认为他是好学生，若是知道他作弊，会怎样嘲笑他？倪述祖挣扎不已，最后神的爱感动了他，叫他看见，耶稣基督比一切更宝贵。他终于下定决心，去向校长自首，承认他从前作弊的罪。校长见他如此诚实，愿意认错，也深受感动，原谅了他。从此以后，倪述祖完全改变了，他不再浪费片刻光阴，专心认真的读书，并且热切向同学传福音，带了许多人得救。他更蒙主呼召，撇下一切，一生传福音事奉主，建立许多召会，完成主的心意。他将自己的名字改为『倪柝声』，意思是儆醒打更的更夫，向黑夜里的人，发出打更的声音。。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神在我们的灵里造了良心。我们的良心是神的代表，赞成神喜悦的，反对神不喜悦的。而动物没有良心</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：有时我们的良心会困扰我们，即使我们的朋友认可我们的所作所为。在这种情况下，我们应该顺从我们的良心，即使要面对一些不好的结果。讨论一些例子和经验（例如，在课堂上作弊，偷别人的东西，对老师不敬，取笑其他孩子等等）。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>罗马书九1 我在基督里说真话，并不说谎，有我的良心在圣灵里同我作见证。</p>
+<p>黑人和鸭子</p>
+<p>一位牧师在非洲传道。那里生活便宜，请了几个工人。一个黑人小孩会拿橡皮作成弓箭，射无不中，十分好玩。一天，一箭射死主人的一只鸭子。不得了，主人若要他赔，他赔不起，怎么办呢？想了一个办法，快快挖了一坑，把那死鸭埋掉。虽然没人看见，心里却是常常不安，时时记起那只死鸭。一天，厨子对他说，‘你去替我挑水。’他说，‘挑水不是我的事。’厨子说，‘你要小心阿，你射死鸭子，我要告诉主人。’他害怕了，快快去挑水。厨子叫他去劈柴，他说，‘我没有力。’厨子说，‘你射死鸭子，我去告诉主人。’他又害怕，就去劈柴；他天天作厨子的奴仆，心里又不安，因为有个死鸭子。一天，他到主人面前跪下流泪。主人问什么事？他就告诉主人怎样射死一只鸭子，怎样把它埋掉了。主人说，‘知罪认罪，我赦免你。’他心里从此平安了。有一天，厨子又叫他挑水。他说，‘我不挑。’厨子问他记不记得那只死鸭子。他说，‘我不怕你。’厨子说，‘我去告诉主人。’他说，‘你去告吧！我不怕。我认了罪，我心平安了。’信徒有罪若是不肯承认，会受魔鬼控告，心里不安，以致落在他的手中；什么时候向主一认罪，心里立刻就会得到平安，那恶者也就无能为力了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：神在我们的灵里造了良心。我们需要学会照着良心的感觉。当我们的良心谴责我们时，我们需要马上处理这个问题。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：当我们做错事时，我们试图为自己的行为辩护或辩解，但我们的内心深处还是感觉不安或受责备。在这时，我们需要顺从良心的感觉悔改。如果我们欺骗了父母，良心感觉不安，我们就需要向神悔改，并向父母道歉。帮助孩子们认识，他们需要借着特定的方式悔改，或立即悔改，一直顾到他们良心的感觉。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

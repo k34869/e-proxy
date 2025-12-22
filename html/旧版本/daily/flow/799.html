@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('798')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('800')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 7 课<br />
+主尽职的开始</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：清晨的日光。（补充本诗歌836首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我差你到他们那里去，叫他们的眼睛得开，从黑暗转入光中，从撒但权下转向神，又因信入我，得蒙赦罪，并在一切圣别的人中得着基业。（徒二六18。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主职事的开始—太四12～25，路四16～22</p>
+<p class="ot2">1.　在加利利的海边—表征被撒但所败坏的世界—太四12。</p>
+<p class="ot2">2.　成为照在黑暗里的大光—16。</p>
+<p class="ot2">3.　宣扬神悦纳人的禧年—路四14～21。</p>
+<p class="ot1">二　主职事的内容—可一14～15，21～34，路四31～41，太四17，23～25，八14～17</p>
+<p class="ot2">1.　传扬福音—可一14～15。</p>
+<p class="ot2">2.　教导真理—太四17，23，可一21～22，路四31～32。</p>
+<p class="ot2">3.　赶逐污鬼—可一23～28，路四33～37。</p>
+<p class="ot2">4.　医治各样的病症—可一29～34，路四38～41，太四23～25，八14～17。</p>
+<p class="ot1">三　忠信跟随主的脚步，传扬福音并教导真理—罗一16，徒二六18</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主在加利利的海边开始祂的职事，主职事的内容包括传扬福音，教导真理，赶逐污鬼，以及医治疾病。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主在祂的职事里传扬神的福音，教导神圣的真理，赶出霸占人的污鬼，并医治人因犯罪而有的各种疾病。祂的传扬是将神的喜信报给受辖制悲惨的人；祂的教训是以真理神圣的光，照亮黑暗中无知的人。在主耶稣的传扬里，祂吩咐人要悔改，并相信福音。悔改，主要的是在心思里；相信，主要的是在心里。悔改就是心思改变，懊悔已往，为着将来而转变。相信是信入我们所信的事。相信基督就是信入祂并将祂接受到我们里面。主也教训真理，在主耶稣的教训里，祂释放出亮光的话，光照在死亡黑暗里的人，使他们得着生命的光。祂的教训将人从撒但的黑暗里，带到神圣的光中。（徒二六18。）首先，我们需要相信福音并接受主的教训。然后我们需要向别人传扬福音并教导真理。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主职事的开始</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>那坐在黑暗中的百姓，看见了大光；并且向那些坐在死亡的境域和阴影中的人，有光出现，照着他们。（太四16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主是在加利利的海边开始尽祂的职事。加利利是犹太人和外邦人杂居之地，因此称为外邦人的加利利，为正统的犹太人所藐视。（约七41，52。）主耶稣却在这样一个被藐视的地方，开始祂的职事。但加利利海表征被撒但所败坏的世界。主耶稣来到这被撒但所败坏的世界，祂成为照在黑暗中的大光。当祂来到加利利这黑暗之地，那些坐在黑暗中的百姓，就看见了大光；这些在加利利海边捕鱼的渔夫，也被主这一道照在死亡之黑暗中的大光所吸引，而跟从了主。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历受主的光照，而被吸引跟从主。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

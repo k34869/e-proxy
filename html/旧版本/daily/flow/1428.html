@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1427')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1429')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 6 课<br />
+以基督为我们的目标和期待</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　身体改变形状</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓三21：祂要按着祂那甚至能叫万有归服自己的动力，将我们这卑贱的身体改变形状，使之同形于祂荣耀的身体。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神在祂的救恩里，首先重生我们的灵，约三6，）现今变化我的魂，罗十二2，）最终要将我们的身体改变形状，使我们全人三部分都与基督相同。我们的目标该是正确的顾到身体，使其健康，作主的彰显。但我们的存心不该是要过度享受物质的事物，藉此炫耀物质的身体。我们的身体乃是在主回来的时候得荣耀；那时候，祂要将我们卑贱的身体改变形状，藉此将我们带进神救恩的终极完成。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>正确的顾到身体，使其健康，作主的彰显，并期待主的回来。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督是在我们里面的享受，也是摆在我们前面的标竿。我们需要向着标竿竭力追求，使我们可以赢得奖赏。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>腓立比三章十三至十四节的‘标竿’和‘奖赏’指的是什么？得着这标竿和奖赏的路又是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘腓立比三章给我们看见，基督必须是我们的标竿和标的。十四节说到标竿。我们是在一个竞赛中，而我们的标竿乃是包罗万有的基督。标竿就是基督自己作为奖赏，赏给我们。在旧约里，迦南美地就是所有以色列百姓蒙拯救，离开埃及后的标竿。他们在旷野飘流并往前时，他们前面有一个标竿。迦南美地乃是基督的预表，祂是我们的标竿。’　‘标竿与奖赏都是基督。基督在我们里面，但祂也在我们前面，在赛程的终点，是我们努力要达到的标竿。说基督是标竿，意即祂是最高的享受。…标竿乃是对基督最高的享受，就是杰出的复活。</p>
+<p>不管我们今天多么经历基督，我们还没有达到对基督最高享受的标竿。对基督这样的经历，仍然在我们前面。我们一旦达到标竿，标竿就立刻成为奖赏。你得到奖赏时，就会因对基督最高经历的享受而欢呼。到那时候，你会有杰出的复活作拔尖的享受。所以，享受是基督，经历是基督，标竿是基督，奖赏也是基督。基督是在我们里面的享受，也是摆在我们前面的标竿。我们需要向着标竿竭力追求，使我们可以赢得奖赏。</p>
+<p>我们要这样竭力追求基督，就需要积极进取，多多操练自己。没有一个懒惰的人能成为逼迫基督的人。每一个逼迫基督的人都有坚强的性格。…我们都必须以逼迫的方式来竭力追求基督。我们需要说，“主耶稣，我有意要逼迫你。我整天要作逼迫你的人。我要强迫你来为着我，并且成为我的经历。”你曾否如此祷告？我们需要这样祷告，告诉主我们要逼迫祂，直到祂成为我们的经历。我们若这样作，至终就会达到标竿，得着奖赏。’（经历基督，224～225页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>不停留在已往对基督的经历中，忘记背后，努力面前的，向着标竿竭力追求，为要得着奖赏。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('688')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('690')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 9 课<br />终结的赞美</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周三　基督—律法的实际</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>你的话是我脚前的灯，是我路上的光（诗一一九105）。</p><p>你的言语一解开，就发出亮光，使愚人通达（诗一一九130）。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>律法的功用是神活的话，将神的生命和光分赐给爱律法的人（25，116，130）。这能否成为我们的经历，在于我们向着神及神的话，是否有正确的态度。照着诗篇一百一十九篇，我们该寻求神（2），爱祂的名并记念祂的名（32，55），求祂的恩（58），求祂的脸光照（135），行在祂面前（168）。并且我们对神的话也该有正确的态度：拣选神的话（30，173），相信神的话（66），阿们神的话，向神的话举手（48），爱神的话（47，48，97，113，119，127，140，159，163，165，167），喜悦神的话（16，24，35，47，70，77，92，174），尝神的话（103），以神的话为乐（14，111，162），歌唱神的话（54），看重神的话（6，117），学习、宝贵神的话（73，71，14，162，72，127，111），将神的话珍藏在心里（11），记念神的话而不忘记（52，16，93），畏惧神的话（161），持守神的话（31），不离弃、转离、偏离、迷失，而转步归向神的话（87，102，51，157，110，59），遵守、谨守、实行神的话（33，69），行在其中，往它的路上直奔（1，32），看神的话比蜜更甜，胜于精金（103，127），并以神的话为我们脚前的灯，路上的光（105）。盼望我们都能操练，以正确的态度来到神和祂的话面前，神的话对我们必是丰富、宝贵，满带着生命和光，且使我们欢乐。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受主话的生命和亮光。看重神的话，学习、宝贵神的话，将神的话珍藏在心里，记念神的话而不忘记</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

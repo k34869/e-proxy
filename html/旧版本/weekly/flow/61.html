@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('60')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('62')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>那藉着祂来到神面前的人，祂都能拯救到底；因为祂是长远活着，为他们代求。（来七25）</p>
+<p>大的榜样—主耶稣（二）</p>
+<p>主耶稣不仅因为爱我们，在十字架上将命倾倒，为要拯救我们；现今祂更是属天的大祭司，在神面前不断为我们代求。希伯来七章二十五节说，‘那藉着祂来到神面前的人，祂都能拯救到底；因为祂是长远活着，为他们代求。’拯救到底的意思是，拯救得全备、完整、完全，拯救到极点，拯救直到永远。因为基督是长远活着，永不改变的，所以祂在程度上、时间上和空间上，都能拯救我们到底。换句话说，祂的拯救能临到我们，直到极点。</p>
+<p>基督作我们的大祭司，为我们代求，承担我们的案件。祂为我们显在神前，为我们祷告，使我们蒙拯救，并完全被带进神永远的定旨。我们只要安息，简单的信靠祂，并享受祂的代求；我们就会经历藉着祂的代求而得蒙拯救。这样一位永久、不变、永远的代求者—我们神圣的大祭司，祂的代求迟早要胜过、征服、并拯救我们。倘若这事今天或明天不作成，也必在明年、来世、或最终在新天新地作成。藉着这位大祭司的代求，至终我们每一个人都会完全被征服，完全蒙拯救。</p>
+<p>二十六节继续说，‘像这样圣而无邪恶、无玷污、与罪人分别，并且高过诸天的大祭司，原是与我们合宜的。’基督是圣而无邪恶、无玷污、与罪人分别的。祂是这样完全的一位，必然是与我们合宜的。我们这些还带着堕落、败坏天性的人，需要这样一位大祭司，时时拯救我们。此外，祂也是高过诸天的。基督升天时，经过了诸天，（四14，）所以现今祂不仅在天上，（九24，）并且高过诸天，远超诸天之上。（弗四10。）无论我们有多少难处，我们的难处不会比诸天高。我们的大祭司高过诸天，祂能救拔我们，而且能拯救我们到底。（参希伯来书生命读经，456～458页。）</p>
+<p class="title">孩子和大书</p>
+<p>有一位父亲正在楼上整理书房。他的孩子也尽他所能的，帮父亲搬书，忽然他大哭起来；原来他抱着一本大书，怎么拖也拖不动，就坐在地上哭了。他的父亲从楼上下来，看见这情形，就把孩子，连大书一起抱上楼去。照样，神是大的，祂足能背负我们和我们的重担。诗篇六十八篇十九节说，‘天天背负我们重担的主，就是拯救我们的神，是应当称颂的。’（国语和合本。）（参造就故事下册，83页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：经历基督是我们的大祭司，只要安息，简单的信靠祂，并享受祂的代求，而得蒙拯救。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

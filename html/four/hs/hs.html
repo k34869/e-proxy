@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <title>HS</title>
+    <link rel="stylesheet" href="../../../assets/index.css" />
+    <script src="../../../assets/crypto-js/crypto-js.js"></script>
+    <link rel="stylesheet" href="../../../assets/mine.css" />
+
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <van-nav-bar title="活石材料" @click-left="back" @click-right="backHome">
+        <template #left>
+          <van-icon name="arrow-left" />
+        </template>
+        <template #right>
+          <van-icon name="wap-home" />
+        </template>
+      </van-nav-bar>
+      <div id="main">
+        <div id="bookList" v-if="show == 0">
+          <van-cell>
+            <div class="link text" @click="showToc('s1')">2024年五十二周信息</div>
+          </van-cell>
+        </div>
+        <div v-if="show == 1">
+          <van-cell v-for="item in tocData" @click="showMsg(item[2])">
+            <div v-text="item[0]" :class="item[1]"></div>
+          </van-cell>
+        </div>
+        <div v-if="show == 2">
+          <van-cell v-for="item in msgData">
+            <div v-text="item[0]" :class="item[1]"></div>
+          </van-cell>
+        </div>
+      </div>
+      <van-back-top></van-back-top>
+    </div>
+  </body>
+
+  <script src="../../../assets/v3.js"></script>
+  <script src="../../../assets/mine.js"></script>
+  <script src="../../../assets/min.js"></script>
+  <script src="../../../assets/router.js"></script>
+  <script src="../../../data/four/hs/grace.js"></script>
+  <script src="../../../data/four/hs/reality.js"></script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('686')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('688')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 9 课<br />终结的赞美</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周一　对基督最高的启示</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶和华对我主说，你坐在我的右边，等我使你仇敌作你的脚凳。……当你争战的日子，你民要以奉献为彩饰，甘心献上自己。你的少年人对你必如清晨所产的甘露（诗一一○1，3，另译）。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>“当你争战的日子，你民要以奉献为彩饰，甘心献上自己。”（3上，另译）。今天仍是争战的时候，因为基督还没有得着脚凳。在主眼中，我们甘心的奉献，将自己献给祂，乃是一种彩饰。虽然召会堕落了，历世纪以来仍有一条线，就是以奉献为彩饰、荣美，甘心将自己献给主的人。“你的少年人对你必如清晨所产的甘露。”（3下，另译）。基督喜欢那些将自己献给祂的人，祂也需要少年人，在清晨被孕育为滋润基督的甘露。我们若不早起晨兴，就会失去机会成为清晨的甘露，用以滋润基督。四至七节说到，基督是祭司、审判官和得胜者。祂是君王祭司，是治理列国的君王，也是照着麦基洗德的等次照顾我们的祭司。当祂回来的日子，祂将是最大的得胜者，必打伤列王，粉碎仇敌的头，并在列邦中施审判。“祂要喝路旁的河水；因此必抬起头来。”（7）。抬起头来说出基督将是得胜的。基督争战的时候是干渴的，祂需要喝“路旁的水”；那些以奉献为彩饰，献上自己的人，就是清晨的甘露，滋润基督，也是河水，解祂的干渴。这些人也就是得胜者.</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>甘心乐意将自己献上给主，早起晨兴，享受清晨的甘露</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

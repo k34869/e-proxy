@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('171')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('173')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">亚伯拉罕专一信靠神</p>
+<p>总没有因不信而疑惑神的应许，反倒因信得着加力，将荣耀归与神，且满心确信，神所应许的，祂也必能作成；所以这就算为他的义。（罗四20～22）</p>
+<p>亚伯拉罕在迦勒底的吾珥时，荣耀的神向他显现。（徒七2。）当神呼召亚伯拉罕离开吾珥时，神只告诉他要离开他的本地、亲族和父家。神并没有给他一张地图，也没有告诉他该往那里去。神这样作，是要亚伯拉罕专一信靠祂，不断的在祂面前生活行动。神的同在，乃是亚伯拉罕的地图、方向、带领和指引。亚伯拉罕舍弃了一切，除了信靠神以外，无法往前。他必须专一信靠神，因为他不知道要往那里去。</p>
+<p>亚伯拉罕也是照着神的显现而行走。神的显现若在某方向，亚伯拉罕就往那方向行动。亚伯拉罕是以这方式享受神的丰富。按照创世记的记载，神曾经几次向亚伯拉罕显现。（十二7，十七1，十八1。）亚伯拉罕凭自己并不是信心的大汉，他和我们一样软弱，但是荣耀的神一次又一次向他显现，每一次都将祂神圣的成分，传输、注入到他里面，使他能凭神的信活着。我们可以将亚伯拉罕的经历比作电池，电池充电后很好用，但一段时间后，需要再充电。神呼召亚伯拉罕从迦勒底的吾珥出来，乃是藉着一次又一次向他显现，带领他往前。</p>
+<p>除了经历神的显现之外，亚伯拉罕也呼求主名。（十二7～8。）这就是说，神是那活在祂显现中并呼求祂名之人的神。因为亚伯拉罕活在神的显现中，并呼求神的名，他就享受神作生命树。</p>
+<p>亚伯拉罕所信的神，乃是那称无为有、叫死人复活的神。（罗四17。）因他无法生出后嗣，但神宣告：‘要有以撒。’至终，以撒出生了；证实神称无为有。当神叫亚伯拉罕献上以撒时，亚伯拉罕顺从了，他信神会叫以撒从死人中复活。（来十一17～19。）亚伯拉罕信神会叫他儿子复活，他会在复活里得回他的儿子。他的一生就是这样专一的信靠神。（参创世记生命读经，203～204、229～230页；罗马书生命读经，84～85页。）</p>
+<p class="title">慕特专一事奉神</p>
+<p>诗歌二百三十八首：‘我的所有希望根基’，乃是慕特所写的诗歌。慕特年少时，是个迷糊度日、不务正业的人，经常在街上闲逛胡混。等到他年纪稍长，从事经商后，就埋头钻营，不知道有神的存在。直至有一天，他听见福音，才悔改接受主。</p>
+<p>由于慕特的父母拒绝救恩，所以慕特从小就被禁止接触圣经。然而，慕特自从蒙恩得救后，便非常渴慕主的话。圣经这本满了生命之话、以及神无限丰富的宝库，成为他日常生活中，爱不释手的宝贝。随着慕特属灵生命的长大，他渐渐觉得该完全的倚靠神，专一的事奉祂。于是，他竭力追求主的话，接受主更多的成全与造就，后来他奉献全部的时间，来事奉神。临终时他说，‘多年来，我一直站在我所信、所传讲的真理上，从不偏离，’随即安然离世。</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在生活中的大小事上，藉着祷告专一信靠神。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('185')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('187')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">空面缸中唱“三一颂”</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">所以不要忧虑，说，我们要吃什么？喝什么？披戴什么？……你们的天父原知道你们需要这一切。（太6:31~32）</div>
+<div id="CC">Therefore do not be anxious，saying，What shall we eat? or，What shall we drink? or，With what shall we be clothed? ……For your heavenly Father knows that you need all these things.（Matthew 6:31-32）</div>
+<div id="C">戴德生过去在中国北方讲道时，常说，“一个人若有真正的信心，才能将头放在空面缸中唱‘三一颂’。”说了这话不久，这样的事便临到他。<br/><br/>　一天，他的妻子把他拉到厨房。他问妻子说，“有什么事？”她说，“我要你来唱‘三一颂’。”他果然看见一个空面缸。她说，“亲爱的，我常听你讲道说，如果有真信心，才能在面缸空了时，将头放进去，唱‘赞美父乃祝福之源，……赞美三一神是我分’（诗歌第5首）。看哪！你的机会来了，现在实行你所讲的道吧！”那空面缸立在那里，张口向他望着。戴德生摸摸口袋，空空如也，也没有进款的希望。这时要寻找信心，似乎信心已溜走了；想要逃走，妻子堵在门口，手里拿着舀面粉的杓子。戴德生就说，“我可以把头放在空面缸里唱‘三一颂’，但有一个条件，就是你也要把头放在空面缸里，一同来唱才行！你记得我们结婚时，你曾经答应我要同甘共苦。”于是他们把头一同伸进空面缸中，同唱“三一颂”。<br/><br/>　那时，他们心中充满喜乐。当头伸出来时，沾了不少面粉。第二天，一家杂货店送来一袋面粉。虽然他们从来不曾知道，究竟是谁送来的面粉；却笃定天上的父知道他们的需要。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

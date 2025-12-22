@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('261')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('263')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">为我你舍何情</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">原来基督的爱困迫我们，因我们断定：一人既替众人死，众人就都死了。（林后5:14）</div>
+<div id="CC">For the love of Christ constrains us because we have judged this，that One died for all，therefore all died.（2 Corinthians 5:14）</div>
+<div id="C">有一个画家，画完一幅耶稣钉十字架的画后，又替一位女孩画像。当他正在专心绘画时，那位女孩看到那幅耶稣钉十字架的图画，心里觉得非常惊奇，为何这位慈颜悦色的人，竟被钉在十字架上？因此便问那个画家。那个画家只好停下他的画笔，把耶稣钉死十字架，拯救罪人的事，从头到尾讲给她听。这位女孩很受感动，流泪问道：“祂为你舍了性命，你为祂舍了什么呢？”这位画家听了这话，觉得非常扎心，就把这句话题在画旁：“我为你舍了性命，你为我舍去什么？”这画后来陈列在一个展览馆里。那时，有一个年轻的伯爵，名叫新生铎夫，前往展览馆参观，看见这幅图画，大受感动，久立呆望不去。画上所提的话，深深打动了他的心。这位伯爵后来成为主所大用的仆人，摩尔维亚召会的领袖。赫维格尔姊妹曾经以此为题，写了一首诗，就是我们所唱的诗歌三百三十一首。</div>
+<div id="CC">奉献─主爱激励（诗331）</div>
+<div id="C">“为你，我流宝血，<br/>　为你，我舍生命，<br/>　将你洗得清洁，<br/>　使你从死复生。<br/>　为你，为你，我舍生命，<br/>　为我，你舍何情？</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

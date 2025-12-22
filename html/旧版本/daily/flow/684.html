@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('683')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('685')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 8 课<br />神借基督作王以恢复地</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周五　借着锡安，地转向主</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>你起初立了地的根基；天也是你手所造的。天地都要灭没，你却要长存；天地都要如外衣渐渐旧了；你要将天地如里衣更换，天地就都改变了；惟有你永不改变；你的年数，没有穷尽（诗一○二25～27）。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>一百零二篇的第二段，十二至二十二节，告诉我们基督如何是主，祂怜恤锡安，建造锡安，使人在锡安传扬祂，在耶路撒冷赞美事奉祂。十三节说，“你必起来怜恤锡安，因现在是可怜她的时候；日期已经到了。”这必是指殿和城荒凉，圣徒们渴望看见复兴的时候。“你的仆人原来喜悦她的石头，可怜她的尘土。”（14）。这里石头预表作召会建造材料的信徒（彼前二5），尘土预表召会的立场。我们该喜悦召会所有的肢体，也该顾到召会的立场。当表征召会的锡安被建立、得复兴后，万民和列国都要赞美敬拜耶和华。借着召会，世界要转向主。第三段是二十三至二十八节，说到基督因着祂永远、不变的存在，是使地转向主的关键。基督死而复活，如今祂在复活里活到永远：“天地都要灭没，你却要长存；天地都要如外衣渐渐旧了；你要将天地如里衣更换，天地就都改变了；惟有你永不改变；你的年数，没有穷尽。”（26～27）。基督的复活使召会得以继续存在。在这篇诗的开头，基督是受痛苦、遭患难的一位；但在这篇诗的末了，祂是永远的一位，是从永远到永远的这位神，永不改变，永远长存的一位。愿我们对基督有这样的认识.</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识并赞美祂是永远的一位，是从永远到永远的这位神，永不改变，永远长存的一位</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

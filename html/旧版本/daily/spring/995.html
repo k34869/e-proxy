@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('191')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('193')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">井中月亮</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">他们举目不见一人，只见耶稣。（太17:8）</div>
+<div id="CC">And when they lifted up their eyes，they saw no one except Jesus Himself alone.（Matthew 17:8）</div>
+<div id="C">一年中秋，明月皎洁，高悬天空，月光如同水银倾泻大地。有一家兄弟五个，在庭院里玩捉迷藏。最小的弟弟因为躲在井旁，无意中发现井底也有一个月亮，既亮且圆，并不亚于天上的。他就向哥哥们招呼说，“哥哥，看啊！井里有个月亮多么美啊！”哥哥们一听他的召唤，便都围拢来看。<br/><br/>　老三平常就很调皮，当他跑来时，就先捡了一块石头，藏在身上。当五兄弟看得出神时，老三忽然拿起预先准备的石头，往井里一丢，听到噗咚一声，大家都吓了一跳。因为井底的水波震动，月亮的影子就显得支离破碎。最小的弟弟哭丧着脸说，“哥哥，为什么月亮变成这个样子？”哥哥说，“弟弟，别难过，你看天上的月亮，还是那么圆，那么亮。”他抬头一看，立刻破涕为笑了。<br/><br/>　事实告诉我们，人间的盼望，脆弱如同玻璃，经不起任何的打击，战争、疾病、患难一来，就把我们的美梦打得粉碎。让我们抬起头来，把目光转移，集中在那昔是、今是、以后永是的基督耶稣身上。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

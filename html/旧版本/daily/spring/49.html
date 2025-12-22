@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('48')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('50')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">两面的祷告</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">有一件事，我曾求耶和华，我仍要寻求；就是一生一世住在耶和华的殿中，瞻仰祂的荣美，在祂的殿里求问。（诗27:4）</div>
+<div id="CC">One thing I have asked from Jehovah; that do I seek: to dwell in the house of Jehovah all the days of my life，to behold the beauty of Jehovah，and to inquire in His temple.（Psalm 27:4）</div>
+<div id="C">一个为主所用的人，定规是一个祷告的人。使徒说，他们要坚定持续地祷告，并尽话语的职事（徒六4）。尽话语的职事就是作主工，为主用；而祷告正是作主工为主用的原因。他们所以能为主用，因为他们坚定持续地祷告。没有一个忽略祷告，不会祷告，以及不祷告的人，能为主用。<br/><br/>　祷告第一面的意义就是用灵来接触神，吸取神，将全人调回到灵里与神交通。当我们这样接触神，吸取神，和神交通的时候，神就有机会把祂自己启示、灌输到我们的里面。这是祷告第一面的意义，就是进入交通。那是祷告的基础。这个基础打好了之后，才可以有第二面的祷告，就是求问的祷告。这里的求问，包括为主工作的求问，也包括为个人需要，就如病症、难处等的求问。<br/><br/>　在我们的祷告里面，求问应该过于求告。不是你的意思给神知道了，乃是神的意思给你知道了。好像是你在问，却是神给你的感觉。这时你一面觉得里面很重的负担，另一面里面却满了生命、自由和平安。当你这样求问的时候，很容易摸着神的引导，你就可以照着那引导去作。（来到施恩的宝座前）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

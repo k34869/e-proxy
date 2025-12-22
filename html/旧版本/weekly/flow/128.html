@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('127')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('129')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">神的属性是单纯、纯诚的</p>
+<p>我们所夸的，是我们的良心见证我们凭着神的单纯和纯诚，在世为人，不靠属肉体的智慧，乃靠神的恩典。（林后一12）</p>
+<p>按照出埃及二十五章三十一节，圣所里的灯台是用纯金作的。纯金是整个灯台的本质、元素。在豫表上，纯金表征纯一神圣的性情，就是父神的性情。我们若思想灯台的本质和元素，就会看见父神纯一的性情就是灯台的本质。在灯台这里，有表征父的本质，以及表征子的结实形状。台是一个形状，表征子神作为父神的具体表现。灯台的形状如何是金的具体表现；照样，基督作为父的具体表现，为着父的彰显，乃是纯一神圣的。</p>
+<p>神是纯净的，祂的话语也是纯净的。诗篇十二篇六节说，‘耶和华的言语，是纯净的言语，如同地上炉中炼过的银子，精炼过七次’藉着享受神这纯净的话，我们也会逐渐成为纯净的。</p>
+<p>在林后一章十二节，保罗说到神的单纯（简单）和纯诚。简单是祂的一个属性。神是智慧、全能的，但祂也是单纯且简单的。我们的神对我们是简单的。每当我们和祂谈话的时候，我们就发现祂不是复杂的。祂说‘白’或‘黑’，意思就是白或黑，不是灰。无论神在一个时候对我们感觉。</p>
+<p>如何，祂对我们总是简单的。因着神的简单和单纯，我们一直从祂领受无保留的祝福。</p>
+<p>在基督徒中间所以有混乱和分裂，根源就在于信徒里面复杂。所有的基督徒若成为简单的，就不会有难处。召会里的难处总是来自复杂。这是哥林多人中间的情况，保罗写信给他们，说到他凭着神的简单和纯诚在世为人。神的简单和神的纯诚，都是神圣的属性，是神在祂信实上所是的属性。纯诚是随着简单，也是出自简单。在简单中爱基督，并享受基督，（林后十一3，）就是在神简单的属性上经历祂。纯诚的人总是简单的。我们有简单、单一，就会有纯诚。（参出埃及记生命读经，1253、1257页；新约总论第七册，326页；第一册，112～113页。）</p>
+<p class="title">凭神的单纯行事为人</p>
+<p>和受恩教士每天下午都要拿着手杖步行一两个小时，有人批评她喜欢游山玩水。倪柝声弟兄告诉她，有多少人因此在论断她。她就回答说，‘基督徒活着，是凭着人所说的？还是凭着我们所知道的？’事实上，和教士早已知道有人在议论她。但她不用人的政策，只凭神的单纯；她不去辩解，也不去表白，只照着神的旨意而行。</p>
+<p>又有一次，和受恩教士顶厉害的对付一位有难处的姊妹。这位姊妹哭得很厉害。倪弟兄就劝阻和教士，问她为何要这么厉害的责备那位姊妹。和教士就问倪弟兄：‘她是为自己哭呢？或是为主哭？’从这些事上，可以看见和教士是一个绝对向着神的人；她绝不看人的情面，她也绝不留情面给人。她真是有神那样的单纯与纯诚。（参倪柝声文集第二辑第二十四册，150～151页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：享受神纯净的话，成为纯净的，并凭着神的单纯和纯诚，在世为人。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

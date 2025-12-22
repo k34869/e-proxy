@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1840')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1842')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 11 课<br />
+妇人和男孩子</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　龙与妇人其余的儿女争战</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启十二17：龙向妇人发怒，去与她其余的儿女争战，这些儿女就是那守神诫命，和持守耶稣见证的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>男孩子把龙摔到地上之后，龙就要逼迫妇人其余的部分。我们若不是得胜者，就将留下来经过末后的三年半，面对生气的龙。然而，神怎样带领以色列人脱离法老的逼迫；照样，祂也要在大灾难期间，带领祂的子民脱离撒但的逼迫。全能的神要将属天的力量赐给祂的子民，使他们得以逃离撒但的逼迫。</p>
+<p>不过，神要用地震使地裂开，吞灭撒但所差来的军队。虽然神要保守祂的子民，但我们宁愿在大灾难以前被提，也不愿意享受那个保守。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>持守耶稣的见证，并求主使我们不经过大灾难。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>切慕成为男孩子的一部分，在大灾难之前被提，在天上与撒但争战，并把他摔到地上。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为什么撒但已经受了审判，却还需要男孩子到天上争战？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘男孩子是神子民中较刚强的部分。在神子民当中，甚至在今日主恢复的神子民当中，有较刚强的部分。妇人要被留在地上经过大灾难；但较刚强的部分，就是男孩子，要在大灾难前被提到神的宝座那里。（启十二5下～6。）男孩子要在大灾难之前被提，因为神需要男孩子在天上与撒但争战，并把他摔到地上。（9。）虽然神有许多与撒但争战的天使，但对仇敌最后的胜利，不是因着天使而赢得的，乃是因着男孩子。神需要男孩子，神要使用撒但所败坏的人击败撒但，藉此羞辱他。…男孩子要争战直到宝座那里，将撒但从诸天上摔到地上。虽然耶稣在十字架上已将撒但击败，但仍然需要召会执行祂在仇敌身上的得胜。因着身体上许多肢体在这事上失败了，所以只有身体较刚强的部分，就是男孩子，要来执行基督对撒但的得胜。男孩子要被提到诸天之上，以完成这工作。</p>
+<p>被提主要不是为着我们自己的福分。我们不该只是说，“被提到诸天之上有多好阿！”我们必须领悟，神需要我们被提；我们必须被提到天上，争战抵挡仇敌。若有人听见这事就说，“我不想到天上去卷入一场战争，”这表示他不够资格在灾前被提。任何人若不到天上对付撒但并将他摔下来，撒但就要下到地上对付他并征服他。我们必须是男孩子。我切慕成为男孩子的一部分。我不满意于仅仅作妇人的一部分。我要被包括在那较刚强的部分里。’（耶稣的见证，121～122页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练作神子民中较刚强部分的男孩子，与神的仇敌争战。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

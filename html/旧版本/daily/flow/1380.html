@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1379')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1381')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 18 课<br />
+属灵的争战</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　为建造。（补充本诗歌605首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：所以要站住，用真理束你们的腰，穿上义的胸甲，且以和平福音的稳固根基，当作鞋穿在脚上；此外，拿起信的盾牌，藉此就能销灭那恶者一切火烧的箭。还要藉着各样的祷告和祈求，接受救恩的头盔，并那灵的剑，那灵就是神的话。（弗六14～17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　在父子伦常关系上需要的生活—弗六1～4</p>
+<p class="ot1">二　在主仆伦常关系上需要的生活—5～9</p>
+<p class="ot1">三　对付属灵仇敌需要的争战—10～20</p>
+<p class="ot2">1　属灵的争战—10～12。</p>
+<p class="ot2">2　神全副的军装—13～17。</p>
+<p class="ot2">3　藉祷告应用神各项的军装—18～20。</p>
+<p class="ot1">四　结语—21～24</p>
+<p class="ot2">1　推荐—21～22。</p>
+<p class="ot2">2　祝福—23～24。</p>
+<p class="ot1">五　神圣的三一与神圣的分赐</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>论到信徒在父子、主仆关系中所需要的生活，以及对付神仇敌之属灵的争战。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以弗所书第六章的开头，保罗题出一个我们所要学习的极其重要的功课，就是为召会生活的缘故，需要在现今的世代，有正确的为人生活。他在此特别题到父子和主仆关系的生活。而十至二十节是以弗所书具有战略性的一段，论到属灵的争战。因为撒但的意志是对抗神的意志的，所以人是选择神的意志还是选择撒但的意志，就成了决定的因素。为了进行属灵的争战，我们需要在身体里穿上神全副的军装，这包括了真理的腰带，说出我们全人需要用真理加强；义的胸甲，为要遮盖我们的良心；和平福音的稳固根基，这是鞋，用以站住；还有信的盾牌，保护我们不受仇敌的攻击；救恩的头盔，这是为着遮盖我们的心思，抵挡那恶者射到我们里面的消极思想；以及那灵的剑，在神军装的六项中，惟有这一项是为着攻击的。至终，我们更需要祷告，祷告可视为军装的第七项。这一项是惟一、具决定性、不可或缺的凭藉，叫我们藉以应用其他各项，使军装实际的供我们使用。六章的末了是保罗甜美的交通与祝福；这指明使徒和圣徒之间爱的关切，是我们今日需要尽力实行的。总结整卷以弗所书，我们看见其中心要点乃是：神圣的三一神圣的分赐到信徒里面。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　父子、主仆关系中的生活</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗六1：作儿女的，要在主里顺从你们的父母，因为这是正当的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>顺从父母乃是藉着与主成为一；凭着主，不凭自己；是照着主的话，不照自己天然的观念。这样的孝敬父母，是第一条带应许的诫命，也是第一条关于人与人之关系的诫命。作儿女的，都需要学习顺从父母，同时也尊敬他们。我们若要在世上活得长久，得享福乐，就需要孝敬父母。那些不孝敬父母的人，乃是慢性自杀。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练在主里顺从并尊敬父母。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

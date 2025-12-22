@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('914')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('916')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">投银元响高举钞票</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>玛拉基书 3:10</p><p>万军之耶和华说，你们要将当纳的十分之一，全然送入仓库，使我家有粮，以此试试我，是否为你们敞开天上的窗户，倾福与你们，甚至无处可容。</p><p>我在得救以后，不知如何奉献财物。有位曹弟兄作见证说，他虽得救三十多年，不知如何奉献，从未照着玛拉基三章所说的，将当纳的十分之一归给神的仓库，以致贫穷不堪。虽在铁路局当一科员，到了月底，只有大葱蘸甜酱作为饭菜。后来听到一位弟兄根据玛拉基三章对他说，你的贫穷是因未将当纳之款归神之故，并且劝他照着圣经试试看。曹弟兄很被开启，从那一日起，无论够用不够用，先将所得十分之一投入奉献箱中。真是奇妙，第一个月收入虽未加多，但是开支甚少，竟能够用。已往十个不够，如今九个反够用了。下一个月照样投入十分之一，奇迹来了，一位圣徒送他一张冻疮药膏秘方。那时正值冬天，他就试着自制出卖，果有功效，以后大量制销，外地也来函购。从此生活改观，奉献更加忠心，收入也更加多，月底不只不感缺乏，且可吃荤，后来不只吃荤，且吃鸡鸭。</p><p>那时我在他家聚会，实情皆是目睹，更觉他的见证确实，因而影响了我的奉献生活。那时我任技术司职务，有专用轿子上山，有专用汽车出门，但是薪水收入只是二双新皮鞋价值，穷得连新汗衫皆买不起，只买了一件旧汗衫。穿久袖子坏了，剪去一段，变为短袖汗衫，再坏变为背心。虽然如此穷，还是献上十分之一，只许多，不许少。第一个月可以结结巴巴的过去。我与家乡多年不通信，忽在第二个月奉献后，转来一笔卖田款，贴补了一年生活之需，尝到神的奇迹供应；奉献仍不稍懈。当钱将要用完之时，接着华东化学厂来到重庆开分厂，我是发起人，又是股东，从此不愁生活缺乏矣，一直供给直到回南京。自那时起，迄今约有二十年，对于当纳的奉献不敢少于十分之一收入的物资，礼物也得抽出十分之一以上，奉献与神。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

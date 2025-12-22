@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('76')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('78')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>不要叫神的圣灵忧愁，你们原是在祂里面受了印记，直到得赎的日子。（弗四30）</p>
+<p class="title">细的操练（二）听主微小的声音，不叫圣灵忧愁</p>
+<p>常藉着圣灵，在我们里面用微小的声音对我们说话，来引导我们。在约翰十章二十七节主耶稣说，祂的羊听祂的声音，也跟从祂。主的声音，是主带领我们跟从祂的一种引导；我们属主的人该注意主的声音，照着这声音跟从主。主在我们灵里给我们的声音，有时是引导，有时是禁止。行传十六章六至七节，描述保罗和他同工们的经历：‘圣灵…禁止他们…，耶稣的灵却不许。’这犹如两条铁轨所铺成的铁道。火车在铁轨上跑，是顶自然的；若是出轨，就不自然了。圣灵的‘禁止’和‘不许’，在凡事上作我们的轨道。我们顺着圣灵而行时，就感觉顶自然；什么时候我们走出圣灵引导的路轨，我们就觉得不自然，就感觉里面有‘禁止’，有‘不许’。我们里面若有不自然的感觉，觉得有一点不通顺，那就是圣灵的禁止和不许。这时，我们应当顺服里面这微小的感觉，听主的声音。</p>
+<p>在以弗所四章三十节保罗说，‘并且不要叫神的圣灵忧愁，你们原是在祂里面受了印记，直到得赎的日子。’圣灵在我们里面的感觉是细致的；叫圣灵忧愁，就是使祂不喜悦。一旦那灵进入我们里面，祂就一直与我们同在，并且永远住在我们里面，（约十四16～17，）绝不离开。即使我们得罪祂，祂仍在我们里面。我们不会与那灵分开，但是当我们不照着灵而行，（罗八4，）就会叫那灵忧愁。我们若常常觉得不喜乐，那种不喜乐的感觉，事实上就是圣灵的感觉。然而，当祂在我们里面觉得喜乐时，我们也会喜乐。我们已经受了圣灵为印记，这种印涂要继续进行，将神圣元素带到我们里面，使我们里面神圣的标记更加明显，并且神对我们的主权也得以加强。（参圣经要道卷二，481～483页；新约总论第四册，154～155页。）</p>
+<p class="title">忽然止步</p>
+<p>一位昆虫学家和他的商人朋友在野地散步。昆虫学家忽然止步，走向附近树林里去，似乎在寻找一件东西；但他的朋友并不知道他在寻找什么。不久，昆虫学家找到一只蟋蟀似的小虫，给他的朋友看，并说，他听见那虫的鸣声，所以停下来去找。他的朋友觉得十分希奇，那昆虫的声音太微弱，他根本听不见，昆虫学家竟然听得见。不久，他们离开野地，走在热闹马路旁的人行道上。那位商人也忽然止步，弯下腰捡起一个五分的钱币。昆虫学家却一直往前走，丝毫没有听见那钱币掉落的声音。</p>
+<p>由此可见，什么样的人就听什么样的声音；属世界的人就听世界的声音，属神的人就听神的声音。历代以来，爱主的基督徒都会仔细的留意，并听从神在他们里面微小的声音。</p>
+<p>在启示录二至三章，主多次告诉我们：‘那灵向众召会所说的话，凡有耳的，就应当听。’有许多人是没有可听的耳朵，来听主的话。你如果有耳朵，就应当仔细倾听主的话。（参造就故事上册，3页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：顺服主在我们里面微小的声音，不叫神的圣灵忧愁。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

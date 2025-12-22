@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('81')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('83')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">脱离狮口</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">救我脱离狮子的口；求你应允我，使我脱离野牛的角。（诗22:21）</div>
+<div id="CC">Save me from the mouth of the lion; indeed while I am in the horns of wild oxen，answer me.（Psalm 22:21）</div>
+<div id="C">多年以前，非洲有英国军队驻守，他们宿营在广大的树林里，野荒兽多。有一回，一个士兵迷了路，找不到宿营地点。天色渐黑，林中野兽吼叫，极其可怕，他心中万分焦急。就在他体倦力疲时，忽然看见一个洞穴，便爬了进去，倒下就睡着了。天亮之前，忽然听到狮子吼叫的声音，自远而近。不一会儿，果然有一头猛狮进入洞中，发现那人睡在里面。这头猛狮因一夜已经吃得饱足，就用脚爪抓住那人胸部，无心再吃，并在那人旁侧睡了下去。这个士兵吓得面如土色，动也不敢动。这时，他想起幼时常常坐在母亲膝前，听母亲祷告，自己却未曾祷告过一次；现在生死关头，他只有祷告一途，别无他法。于是他低头祷告说，“主耶稣啊，求你救救我。你若救我，脱离狮子的口，我必信靠你。”祷告后听听声音，知道那狮子已经睡得很甜。他就慢慢的将狮子的爪，从自己身上挪开；他一面挪移，一面不住地祷告。主使狮子沉睡，那个士兵便能把狮爪从他身上挪开，爬出狮洞，狂奔回营。他的朋友们，因他得以从狮子口中逃了出来，都归荣耀给神。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

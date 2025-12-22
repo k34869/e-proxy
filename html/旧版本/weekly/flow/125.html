@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('124')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('126')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">深的操练（四）建立祷告的生活</p>
+<p>你们要坚定持续的祷告，在此儆醒感恩。（西四2）</p>
+<p>何西阿十四章五至七节说，‘我必向以色列如甘露，他必如百合花开放，如利巴嫩的树木扎根。他的枝条必延伸，他的荣华如橄榄树，他的香气如利巴嫩的香柏树。曾坐在他荫下的必归回，发旺如五谷，开花如葡萄树；他的名声如利巴嫩的酒。’利巴嫩山上有一种香柏树，树身很高大，根是顶深的。圣经以利巴嫩的香柏树，代表世上最大、最高的树，也用香柏树代表那些往下深深扎根的人。这段经文三次题到利巴嫩。第一次与百合花有关。百合花生长在野地，完全靠日光雨露养活它。我们基督徒是谷中的百合花，（歌二1，）是完全倚靠神的栽培和维持的。纯洁、美丽的属灵生活，是因与神有不间断的交通而有的。</p>
+<p>第二次题到利巴嫩与橄榄树有关。橄榄树是油果树，橄榄树的荣华就在于它的果子。基督徒的荣美，是在乎结出圣灵的果子。这是往深处扎根才有的。第三次题到利巴嫩与葡萄树有关。葡萄花是很微小的，才开花不久就已经结成葡萄了。我们从来没有看见人把葡萄花插在花瓶里。神所看重的花不是供人欣赏的，而是能像葡萄那样结果的。所以神对基督徒的要求，是往下扎根，多结果子。</p>
+<p>这里三次说到利巴嫩，都是要我们注意到深处的生活。这深处的生活，虽然如百合花生长在隐僻的山谷中，如橄榄树外表并不华美，如葡萄树开花并不显着，却是单纯仰望神而活的，是能多结果子的。这是我们基督徒该有的生活。要有这样的生活，就得在平日操练往深处扎根，每天至少划出专一的时间读经祷告。往深处扎根，不是一句空话，乃是要在日常的生活中付诸实行。你开始学习的时候，是需要付上代价的。但愿主的爱吸引我们，带领我们天天往深处去，使我们的根越扎越深。（参十二篮第七辑，135～137页。）</p>
+<p class="title">先为里面的人寻求食物</p>
+<p>慕勒将离世的时候，写了一段关于他自己的经历，非常宝贵。他说，他多年来每日早晨都是先祷告，后读经。他祷告的时间是从清早起床开始，一直到吃早餐的时候；但他要祷告到一刻钟或半点钟之后，才能感觉神的同在。后来他把次序更换，先读经，后祷告。读经成为他起床后的第一件事。他读神的话，默想神的话，从其中寻找他里面的人所需要的食物，不到几分钟，他就感觉神的同在，结果就是从深处向神承认自己的软弱，或是感恩，或是赞美，或是祈求。因此他作结论说，神的儿女，每日早晨第一件事，应当先为里面的人寻求食物，里面的人的独一食物，就是神的话语。若是没有神的话语，祷告就会成为空的、肤浅的。（参造就故事上册，1页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：每天划出专一的时间为众圣徒、众召会、以及神的权益祷告。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

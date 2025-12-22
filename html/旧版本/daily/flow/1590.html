@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1589')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1591')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 12 课<br />
+元帅、大祭司、使徒、神家的建设者</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：神我赞美你的计划。（诗歌603首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：原来万有因祂而有，藉祂而造的那位，为着要领许多的儿子进荣耀里去，就藉着苦难成全他们救恩的创始者，这对祂本是合宜的。（来二10。）</p>
+<p>所以祂凡事该与祂的弟兄一样，为要在关于神的事上，成为怜悯、忠信的大祭司，好为百姓的罪成就平息。因为祂既然在所受的苦上被试诱，就能帮助被试诱的人。（17～18。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　第一个警告—要注重论到子的话—来二1～4</p>
+<p class="ot2">1　要越发注重所听见的，恐怕我们随流漂去—1。</p>
+<p class="ot2">2　不可忽略这么大的救恩—3。</p>
+<p class="ot1">二　基督超越天使（二）是人的儿子—是人—5～18</p>
+<p class="ot2">1　成为人来完成神的定旨—5～9。</p>
+<p class="ot2">2　成为救恩的元帅，要领许多的儿子进荣耀里去—10。</p>
+<p class="ot2">3　那圣别人的，和那些被圣别的，都是出于一—11。</p>
+<p class="ot2">4　主在召会的聚中宣告父的名—12～13。</p>
+<p class="ot2">5　亲自有分于血肉之体，藉着死废除那掌死权的，并释放、救拔我们—14～16。</p>
+<p class="ot2">6　成为怜悯、忠信的大祭司，帮助、供应我们—17～18。</p>
+<p class="ot1">三　基督超越摩西，是配得更多荣耀和尊贵的使徒—三1～6</p>
+<p class="ot2">1　摩西是神家的一部分；基督是神家的建设者，是神自己—2～4。</p>
+<p class="ot2">2　摩西在神的全家忠信；基督治理神的家，就是我们—5～6。</p>
+<p class="ot2">3　摩西给将来的事作见证；基督比摩西被断为配得更多的荣耀和尊贵—5、3。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督是人的儿子超越天使，并超越摩西，是配得更多荣耀和尊贵的使徒。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>希伯来书的著者在说完基督是神的儿子，超越天使之后，给希伯来信徒第一个警告，要他们越发注重所听见的，恐怕他们随流漂去。并且他们既是救恩的承受者，不可忽略这么大的救恩，就是神完全的救恩。希伯来二章说到基督超越天使的第二面—基督是人的儿子—是人。祂成为人来完成神的定旨，并经过受苦的死，成为救恩的元帅，要领许多的儿子进荣耀里去。祂也成为怜悯、忠信的大祭司，帮助、供应我们。三章一至六节继续说到基督超越摩西，是配得更多荣耀和尊贵的使徒。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　这么大的救恩</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来二1、3上：所以，我们必须越发注重所听见的，恐怕我们随流漂去。…我们若忽略了这么大的救恩，怎能逃罪？</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这么大的救恩不仅指基督所已经为我们作成的，和将要为我们作的，也指那能拯救我们到底的基督自己。我们若忽略了，就要失去这莫大救恩的两部分：（一）最宝贵的部分—在今世享受基督作拯救我们的生命和安息；（二）最荣耀的部分—在来世承受基督的国度和荣耀。所以我们应当谨慎，恐怕会随流漂去，离开‘这么大的救恩’。但愿我们都不忽略这么大的救恩，让我们一同过河，跟着我们救恩的元帅进荣耀里去。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识我们所得着的大救恩，谨慎不随流漂去。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

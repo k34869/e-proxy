@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('241')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('243')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">主拯救失丧者，使病者得医治</p>
+<p>人子来，是要寻找拯救失丧的人。（路十九10）</p>
+<p>路加十九章记载主耶稣拯救撒该的故事。一节说，‘耶稣进了耶利哥。’耶利哥代表咒诅之地，也就是代表世界。耶稣不是原来就在耶利哥的，祂乃是从别处进来的；祂从天上来到地上，进了耶利哥这个受咒诅的地方。税吏长撒该想要看看耶稣是谁，只因人多，他的身量又矮，所以不能看见，于是先跑到前头，爬上一棵桑树。耶稣经过那里，往上一看，对他说，‘撒该，快下来，今天我必须住在你家里。’撒该要看耶稣，结果反被耶稣看见。他就急忙下来，欢欢喜喜的接待耶稣。结果，撒该得救了，并且大大改变了。从前他是一毛不拔的，是讹诈人的，现在他把他所有的一半赒济穷人，并且他讹诈了谁，就还谁四倍。主特意住撒该家里，为要顾惜他，用祂的救恩𫗪养他。</p>
+<p>当主呼召门徒时，祂特意在加利利海边行走，好遇见彼得、安得烈、雅各以及约翰，并呼召他们来跟随祂。（太四18～22。）又如税吏马太替罗马人收税，为犹太人所定罪、藐视并厌恶。然而，主并不因此弃嫌他，反而特意走过马太所坐的税关，并呼召他来跟从主。（路五27。）以后，他且被选立为十二使徒之一，这是主何等的怜悯。（参可二14注2。）</p>
+<p>在约翰四章，耶稣特意绕道去一座小城，为要顾惜一个干渴、不道德的妇人，并将自己作为涌流生命的活水赐给这妇人喝，使她得着生命的满足。在五章，耶稣在安息日就近一个病了三十八年、无法起来行走的人，问他说，‘你想要痊愈么？’（6。）又对他说，‘起来，拿你的褥子走罢。’这软弱的人听见主那点活人的话，立即痊愈，就拿起褥子走了。（8～9。）然而，犹太人却逼迫耶稣，想要杀祂，因为主在安息日治病。在此我们看见，主知道人的需要，并亲自就近人。祂甚至不惜任何代价，为要顾到人生命的事。（参倪柝声恢复职事过程中信息记录下册，599～604页；活力排，105、124页；约翰福音生命读经，192～195页。）</p>
+<p class="title">最安全的地方</p>
+<p>有位传道人在痳疯院中传道。有人问他：‘在痳疯人中传道，岂不太危险么？你不怕被传染么？’传道人回答说，‘若是神的旨意要你在痳疯人中传道，痳疯院就是最安全的地方，比任何地方都要安全。’主在地上曾嘱咐门徒：‘要医治病弱的，复活死亡的，洁净患痳疯的，把鬼赶出去；你们白白的领受了，就要白白的施与。’（太十8。）因为人子来，是要寻找拯救失丧的人。（路十九10。）（参造就故事下册，18～19页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：珍赏主亲自就近软弱的人，甚至不惜任何代价，来顾到人生命的事。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

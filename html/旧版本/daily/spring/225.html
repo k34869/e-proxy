@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('224')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('226')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">六枚铜元</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们不可偷盗，不可欺骗，也不可彼此说谎。（利19:11）</div>
+<div id="CC">You shall not steal; neither shall you deceive nor deal falsely with one another.（Leviticus 19:11）</div>
+<div id="C">一个孩子，约十一、二岁。几年前，他在学校门前看见同学买糖果吃，自己却没有钱。他就想到，某某先生卧房桌上放有好些铜元；若是他不在房内，就可以拿几枚铜元去买糖吃。想着想着就跑去，果然先生不在。他取了六枚铜元，买糖吃了。有一天，他听见福音，就为着这罪非常难过。他想去偿还，却没有钱，就去对他姊姊说，“请你一定给我六个铜元。”姊姊问他为何如此，要他说出个理由。弟弟一直不肯，只说，“无论如何请你给我。”姊姊没有办法，只得给他，并跟着他去看他到底要作什么。他把这钱拿到先生那里，对他说，“几年前我曾在你房中，偷取六枚铜元买糖吃，现在我把这钱还你，求你原谅。”从此以后，他心里才真正平安下来。</div>
+<div id="CC">得救的证实与快乐─借恩得救（诗248）</div>
+<div id="C">恩典代罪而兴，<br/>　在我灵中执政，<br/>　使我脱离罪的权能，<br/>　脱离败坏天性。<br/>（副）<br/>　恩典够我用！<br/>　永不感力穷；<br/>　基督活在我灵中，<br/>　使我受恩着重。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

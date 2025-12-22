@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="css/vuetify.min.css" rel="stylesheet" />
+    <link href="css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>造就课程</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+              造就课程——托付
+            
+              
+              </div>
+            </v-card>
+          </div>
+      
+          <p class="heading"> 元首的掌权： </p>
+          <div class="nav" @click="jump('./z41.html')"> 第四十篇    政治的赦免</div>
+          <div class="nav" @click="jump('./z42.html')"> 第四十一篇  神圣的管教</div>
+          <div class="nav" @click="jump('./z43.html')"> 第四十二篇  圣灵的管治</div>
+          
+         <p class="heading"> 仇敌的蒙羞： </p>
+           <div class="nav" @click="jump('./z44.html')"> 第四十三篇   魔鬼的抵挡</div>
+          <div class="nav" @click="jump('./z45.html')"> 第四十四篇  蒙头的问题</div>
+        
+<p class="heading"> 身体的建造： </p>
+      <div class="nav" @click="jump('./z46.html')"> 第四十五篇 召会的道路</div>
+          <div class="nav" @click="jump('./z47.html')">第四十六篇  合一与分裂</div>
+        <div class="nav" @click="jump('./z48.html')">第四十七篇  弟兄的相爱</div>
+   <div class="nav" @click="jump('./z49.html')"> 第四十八篇  祭司的职分</div>
+        <div class="nav" @click="jump('./z50.html')">第四十九篇   基督的身体</div>
+<div class="nav" @click="jump('./z51.html')"> 第五十篇   召会的权柄</div>
+    <br />
+<div class="nav" @click="jump('./z52.html')">第一篇　神是可享受的</div>
+<div class="nav" @click="jump('./z53.html')"> 第二篇　神要人享受祂</div>
+ <br />
+ <br />
+        </v-main>
+      </v-app>
+    </div>
+   <script src="js/vue.js"></script>
+    <script src="js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "index.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

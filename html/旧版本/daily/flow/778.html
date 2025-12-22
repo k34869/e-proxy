@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('777')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('779')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 4 课<br />
+基督的出生</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：听阿天使赞高声。（诗歌74首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：她将要生一个儿子，你要给祂起名叫耶稣，因祂要亲自将祂的百姓从他们的罪里救出来。（太一21。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　基督的成孕—太一18～21，路一26～56</p>
+<p class="ot2">1.　是旧约预言的应验—创三15，撒下七13～14，赛七14，九6。</p>
+<p class="ot2">2.　凭着神主宰的权柄—太一18，路一26～27。</p>
+<p class="ot2">3.　藉着马利亚的降服—路一26～38。</p>
+<p class="ot2">4.　出于圣灵的能力—太一18，路一35。</p>
+<p class="ot2">5.　同着约瑟的降服与合作—太一19～21，24～25。</p>
+<p class="ot2">6.　基督乃是由带着神圣素质的圣灵，在带着属人素质的童女马利亚里成孕—太一18，20。</p>
+<p class="ot1">二　基督的起名—太一21，23</p>
+<p class="ot2">1.　神藉天使起名为耶稣，意‘耶和华救主’或‘耶和华救恩’—21。</p>
+<p class="ot2">2.　人称祂为以马内利，就是神与我们同在—23。</p>
+<p class="ot1">三　基督的出生—路二1～20</p>
+<p class="ot2">1.　在该撒亚古士督的统治之下，是出于神的主宰—1～3。</p>
+<p class="ot2">2.　在伯利恒出生，以应验旧约的预言—路二4～5，弥五2。</p>
+<p class="ot2">3.　被放在马槽里，成为祂一生卑微的表号—路二7。</p>
+<p class="ot2">4.　由天使向牧人宣告，是关乎万民大喜的好信息—8～10。</p>
+<p class="ot2">5.　大队天兵同天使赞美神，说出基督使神得荣耀，叫人得平安—13～14。</p>
+<p class="ot2">6.　牧羊人亲眼看见并向人述说，荣耀赞美神—15～20。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督的出生是旧约预言的应验，凭着神的主宰所预备，并藉着圣灵来执行，以产生一位神人。祂名为耶稣，是耶和华我们的救主；祂也是以马内利—神与我们同在。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在神主宰的权柄里，把马利亚和约瑟带到一起，使他们成为婚配，而生出基督。他们二者都是适当的人选，使基督有一个正确的家谱；他们二人为着基督的出生，付了极高的代价。耶稣基督是直接由圣灵成孕，有神圣的素质。祂由童女所生，有人的素质。如此，基督乃是神人，兼有神性和人性。以这样方式出生的这一位称为耶稣（耶和华救主）和以马内利（神与我们同在）。　祂是耶和华，是神，祂是所预言的君王，要来将国度从天带到地上。每当我们呼求耶稣，我们就经历祂是耶和华我们的救主，成了我们的救恩；我们也感觉神与我们同在。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　神主宰权柄的预备并完成</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>必有童女怀孕生子，人要称祂的名为以马内利。（太一23。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在创世记第三章，女人的后裔要伤蛇的头，蛇要伤祂的脚跟。（15。）这女人的后裔就是指着基督将要出生，并在十字架上毁坏撒但说的。在撒下七章，神应许大卫，神必坚立他后裔的国位，这指明基督—神的儿子，将要在人性里出生，作大卫的后裔，就是人的儿子。到了以赛亚书，申言者以赛亚说，‘因有一婴孩为我们而生，有一子赐给我们；…祂名称为…全能的神、永在的父、和平的君。’（九6。）这些经节都指明，基督将要在祂的人性里出生，这是神早就预定好，为着完成祂永远经纶的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>学习顺服神在环境中主宰的安排。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1141')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1143')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 2 课<br />
+基督是我们的智慧</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我已得到宇宙至宝。（诗歌388首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但你们得在基督耶稣里，是出于神，这基督成了从神给我们的智慧：公义、圣别和救赎。（林前一30。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　基督和祂的十字架，是召会中所有难处的惟一解答—林前一10～31</p>
+<p class="ot2">1　基督不是分开的—10～17。</p>
+<p class="ot2">2　钉十字架的基督，是神的能力和神的智慧—18～25。</p>
+<p class="ot2">3　基督是我们的智慧：公义、圣别和救赎—26～31。</p>
+<p class="ot1">二　钉十字架的基督，是使徒职事的中心—二1～16</p>
+<p class="ot2">1　使徒尽职事的路—1～5。</p>
+<p class="ot2">2　神奥秘中的智慧—基督是神深奥的事—6～10。</p>
+<p class="ot2">3　用属灵的话，向属灵的人，解释属灵的事—11～16。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>说明基督和祂的十字架，是召会中所有难处的惟一解答，而使徒向哥林多信徒尽职的中心，乃是这位钉十字架的基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>哥林多信徒因着他们哲学的属世智慧，有了不同的心思和意见，说不同的话，有不同的偏好和拣选。这些不同的意见和说法，给许多邪恶的事开了门，使其进到召会生活中。保罗因此有负担引导哥林多那些受打岔、崇尚哲学的基督徒转向基督。保罗向他们传讲钉十字架的基督，是召会中所有难处的惟一解答。钉十字架的基督是神的能力，为要拯救我们；也是神的智慧，为要完成祂的计划。祂也是从神给我们的智慧：公义、圣别和救赎。使徒职事的中心就是传扬钉十字架的基督，这位基督乃是神隐藏的奥秘，是神在万世以前，为使我们得荣耀所预定的。我们若要领略并有分于这深奥之事，就不仅需要信祂，也需要爱祂，使我们与神有亲近、密切的交通，能进入神的心，领略神心中一切的秘密。再者，属魂的人不领受神的灵的事，惟有属灵的人能看透万事。因此信徒必须在我们重生并与神的灵调和的灵里，运用我们的灵，才能领略这些神深奥的事。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　基督不是分开的</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前一10：弟兄们，我藉我们主耶稣基督的名，恳求你们都说一样的话，你们中间也不可有分裂，只要在一样的心思和一样的意见里，彼此和谐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>从林前一章十节起，保罗对付哥林多召会中第一个难处，就是分裂。保罗首先藉着主耶稣基督的名，恳求哥林多的信徒都说一样的话。这里所说‘一样的话’，意思是基督并祂钉十字架。我们说一样的话，意思就是我们都说基督并祂钉十字架。虽然我们来自不同种族、国家，说不同的方言，但当我们都专注于包罗万有的基督，以祂为我们独一的中心、独一的分和独一的享受，我们就能说一样的话，在我们中间就有真实的一。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以包罗万有的基督为独一的中心、独一的分和独一的享受。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

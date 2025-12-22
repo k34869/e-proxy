@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('206')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('208')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">一支手枪四颗子弹</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">但那属基督耶稣的人，是已经把肉体连肉体的邪情私欲，都钉了十字架。（加5:24）</div>
+<div id="CC">But they who are of Christ Jesus have crucified the flesh with its passions and its lusts.（Galatians 5:24）</div>
+<div id="C">有一个人，爱上一个女子；但那女子又被另外一个男人爱上，跟着那人逃走了。他就恨之入骨，卖了田地，买了一支手枪和四颗子弹。他试打了二枪，结果很准，便留着二颗子弹，要找那男人，打死他。然而遍找不着，就觉得作人乏味，准备自杀了事。有一天，遇见一个信耶稣的人，在乡间布道，许多人拥挤成一团。他就上前观看，听见灵魂得救的问题，便信了耶稣，并且祷告。他心想，灵魂的问题解决了，现在可以死了。回家之后，穿上新衣，睡在床上，把被子蒙在头上，手枪隔着被窝，准备对着脑门一扣板机，了此一生。扣了二次，子弹都未击发；他急忙起身检查手枪，原来子弹卡在枪膛里，打不出来。后来一想，我已相信耶稣，已是一心归主，这个女人既然犯罪不要我，我也不要她了，何必自杀呢？随即将积存的一捆情书一起烧光，又将与女人有关系的照片杂物一概除尽，一心归主。<br/><br/>　一个人一旦得救，已往的一切便到此了结，今后开始过全新的生活。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

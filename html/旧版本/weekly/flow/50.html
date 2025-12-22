@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('49')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('51')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">勤（二）　服事勤：灵里火热勤服事</p>
+<p>殷勤不可懒惰，要灵里火热，常常服事主。（罗十二11）</p>
+<p class="title">殷勤是作主工人的基本条件</p>
+<p>在马太二十五章十四至三十节银子的比喻里，那领一他连得的奴仆，去掘开地，把他主人的银子埋藏了。后来，主人回来，就责备他作‘又恶又懒的奴仆’。这段圣经给我们看见，殷勤不可懒惰，是作主工人的基本条件。这里的这个仆人，他基本的难处有两点：一是‘恶’，一是‘懒’。当他把银子埋藏在地里时，他心所想的是‘恶’的，他手所作的是‘懒’的。他心里想主人是怎样的主人，那个思想是恶的思想；他所该作的他不作，却把银子埋在地里，这样的行为是懒惰的。这个懒惰的性格，是我们许多人最大的难处。</p>
+<p>懒惰的人是不会有事情作的；因为即使他看见了事情，他也会当作没有事情。许多基督徒都是抱持这个态度，大事化小事，小事化无事；大工作化小工作，小工作化没有工作。按经历来说，在工作上，只有一种人有用处，就是殷勤的人。懒惰的人是最可恶的。有位弟兄说，懒惰的人，连撒但都气他没有用。箴言十九章二十四节说，‘懒惰人把手放在盘子里，就是向口撤回也不肯。’人一懒惰，就什么事都不肯作。为什么不肯作？因为怕累。手放在盘子里，连撤回去都不肯。要吃，不能不吃，却盼望最好有人把盘子里的食物送到他口里。</p>
+<p>懒惰的人，神不用他。所有能为神用的仆人，都是辛苦、劳碌的在地上事奉神；他们不让自己的时间空转，不让自己的力量空花掉。那些天天盼望休息、调养的人，不像是主的仆人。主的仆人无法过懒惰的生活，他们都是抓紧时间过日子的。（参主工人的性格，71～72页。）</p>
+<p class="title">磨光和锈光</p>
+<p>有一位农夫已经七十岁了，还跟年轻人一样，整天在田里忙碌，勤劳不息。朋友劝他说，‘你儿孙满堂，尽可以休息养老了，何必再如此劳苦呢？’他回答说，‘人生就好像一把快刀，要使它耗损的方法有两种：一种是不去用它，放着让它生锈烂光；一种是用它作工，久而久之，自然磨光。在这二者之间，我宁愿让工作磨光，也不愿闲着锈光。’‘你们为什么整天在这里闲站？…你们也进葡萄园去。’（太二十6～7。）（参造就故事下册，73页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：不让自己的时间空转，不让自己的力量空花掉，抓紧时间过日子。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

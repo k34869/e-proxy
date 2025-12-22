@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1210')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1212')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 11 课<br />
+一个在灵里之人的自传</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　联于基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后一21～22：然而那把我们同你们，坚固的联于基督，并且膏了我们的，就是神；祂既印了我们，又赐那灵在我们心里作质。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神把我们联于基督，产生三件事：第一是施膏，将神的元素分赐到我们里面；第二是盖印，使神圣的元素形成一种印记，彰显神的形像；第三是作质，给我们预尝，作我们对神全享的样品和保证。我们要有这三面的经历，需要藉着十字架的工作经历基督。有时主将我们带到一个环境的尽头，这使我们经历十字架的工作，在我们里面就有那灵的施膏，和内里的印涂。至终，我们越被神印涂，就越有神的形像。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历十字架的工作，以及那灵的施膏、盖印和作质，而与主调和。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在生活中经历十字架的工作，不信靠自己，只信靠那叫死人复活的神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>你觉得课业压力很重么？你在生活中还有其他的压力么？（来自父母、师长、兄弟姊妹、以及自己给自己的压力…）通常你会用什么方式抒解自己的压力呢？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘保罗告诉我们，他和他的同工被压太重，力不能胜，甚至“连活命的指望都绝了”。（林后一8。）许多年轻的弟兄很有力量；但迟早主要一再的压你，你会尽力忍受苦难，至终你会说，“主阿，我放弃我的忍耐，因为你的压力远超我的力量所能胜。”当你在一种苦难之下，绝不要运用你自己的力量，靠自己忍耐；绝不要想靠自己胜过。但你越运用你的力量，你就越受压。最终，你会承认，压力远超过你的力量。为着使我们力不能胜的压力，我们赞美主！…</p>
+<p>保罗的话给我们看见，我们需要被了结。我们需要被带到尽头。然后我们就学会不信靠自己，乃信靠神。我们说我们需要信靠神，不信靠自己，是容易的；但要在这事上被作透，是需要一些经历的。神藉着十字架作工来了结我们；神在作工，好把我们带到尽头，甚至把我们的属灵、我们属灵的成就，带到尽头。对某些人来说，智慧也许是用聪明的办法应付某种光景，但这智慧来自我们的肉体。属肉体的智慧是你自己所有的，要为你自己作一些事；神的恩典乃是你不作任何事，而让神在你里面作一切。不是你作事来应付光景，乃是你让神在你里面，并为你作一切。这就是神的恩典。</p>
+<p>保罗说他凭着神的单纯和纯诚为人。…神是简单的，神是单纯的。我们越在肉体里，在魂里，就越复杂；但我们越在至圣所里，在灵里，我们就越变得简单；我们越在灵里，我们就越简单、单纯。（一个在灵里之人的自传，6～8页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在课业及生活的压力中，经历十字架的了结及基督复活的能力，不信靠自己，而信靠神的恩典。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

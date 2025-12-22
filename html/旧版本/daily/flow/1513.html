@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1512')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1514')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 1 课<br />
+为着召会生活之圣别生活的结构与起源</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主活在我里面。（补充本诗歌120首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我们为你们众人常常感谢神，在祷告中常题到你们；在我们的神与父面前，不住的记念你们信心的工作，爱心的劳苦，并对我们主耶稣基督之盼望的忍耐。（帖前一2～3。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　帖撒罗尼迦前书简介—帖前一1</p>
+<p class="ot2">1　著者—保罗、西拉和提摩太。</p>
+<p class="ot2">2　着时—约主后五十四年。</p>
+<p class="ot2">3　受者—帖撒罗尼迦召会的圣徒。</p>
+<p class="ot2">4　内容—为着召会的圣别生活。</p>
+<p class="ot1">二　为着召会生活之圣别生活的结构—2～3</p>
+<p class="ot2">1　信心的工作。</p>
+<p class="ot2">2　爱心的劳苦。</p>
+<p class="ot2">3　盼望主耶稣基督的忍耐。</p>
+<p class="ot1">三　为着召会生活之圣别生活的起源—1～10</p>
+<p class="ot2">1　三一神为起源—1～2，5～6，10。</p>
+<p class="ot2">2　藉着话语的传讲—5。</p>
+<p class="ot2">3　信徒对话语的领受—6。</p>
+<p class="ot2">4　所传讲的话在信徒里面成为信心—8。</p>
+<p class="ot1">四　基督徒生活的特征—9～10</p>
+<p class="ot2">1　离弃偶像转向神。</p>
+<p class="ot2">2　服事又活又真的神。</p>
+<p class="ot2">3　等候神的儿子从诸天降临。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为着召会生活之圣别生活的结构与起源。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在第二次出外时到帖撒罗尼迦城，传福音给那里的人并建立帖撒罗尼迦的召会，他离开他们之后不久，就写了帖撒罗尼迦前书，因此这封书信是为着召会生活中幼嫩的信徒。帖前一章包括两个重点：为着召会生活之圣别生活的结构，以及为着召会生活之圣别生活的起源。这种生活的结构是由信心的工作、爱心的劳苦、以及盼望的忍耐所组成。这种生活的起源乃是福音的传扬，以及领受所传讲的话语，结果就是离弃偶像转向神，服事又活又真的神，并且等候神的儿子。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　简介与引言</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖前一1：保罗、西拉和提摩太，写信给…帖撒罗尼迦人的召会：愿恩典与平安归与你们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖撒罗尼迦前后书是保罗在哥林多约在主后五十四年写的。这两封书信提供给我们特别的帮助，在有关年幼的基督徒生活，和幼嫩的召会生活的事上。在帖撒罗尼迦前书中，每一章都结束于主的再来。主的再来在本书中是极重要的一件事。在这封书信里，保罗先说到基督徒的行事为人，接着他用主的再来鼓励信徒。保罗也藉着说到主耶稣的再来，鼓励、安慰那些失去盼望的人。因此帖撒罗尼迦前书也是一卷以主的再来激励信徒，鼓励信徒往前的书信。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>受主再来的异象激励，在信仰上不断往前。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

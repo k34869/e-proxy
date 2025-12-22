@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('134')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('136')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">里面不肯外面不能</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">因为乃是神为着祂的美意，在你们里面运行，使你们立志并行事。（腓2:13）</div>
+<div id="CC">For it is God who operates in you both the willing and the working for His good pleasure.（Philippians 2:13）</div>
+<div id="C">潘汤曾经讲过一个故事，说到有一位医生，吩咐看护去叫病人作一件事。看护就照医生所说，去叫病人作。但是，那个病人说，“我不能作。”看护就回报医生说，“他不肯作。”医生便去查看那个病人为何不作。察验之后，医生就说，这个病人不是不能，也不是不肯，乃是“不能肯”。<br/><br/>　我们在里面是不肯，在外面是不能；里面不肯丢世界，外面就不能丢世界。但是，神能在我们里面运行，直到我们真肯、真愿照着神的美意而行，并且也能行得出来。</div>
+<div id="CC">得救的证实与快乐─被主释放（诗244）</div>
+<div id="C">我因归耶稣，<br/>　全人得着释放；<br/>　耶稣我救主，<br/>　今在我心作王；<br/>　圣灵充满我，<br/>　使我终日欢唱；<br/>　主耶稣已把我释放！<br/>（副）<br/>　释放！释放！荣耀释放！<br/>　我不再被罪恶捆绑；<br/>　宝血洗净我，<br/>　全人明亮、清爽；<br/>　主耶稣已把我释放！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('81')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('83')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>使我认识基督、并祂复活的大能、以及同祂受苦的交通，模成祂的死。（腓三10）</p>
+<p class="title">细的榜样（四）倪柝声与李常受弟兄</p>
+<p>倪柝声弟兄是个完全被主浸透的人，也是个活在主面前的人。经过和受恩教士多年的成全，他的个性、性格、和行为被变化了。他能聆听别人的说话和意见而不打岔。他这人内里的所是被主摸过，并且因着被主对付而得了丰富的经历。这使他能听任何一种人讲话，而不会给人印象他是优越的。他被变化到一个地步，能与任何人建造在一起；无论别人的情形如何，他总不会因人的缺点或幼稚而受挫。他也不强使他的权柄；反之，他亲自设立榜样：早起，工作时间有规律，不轻率行事，不随意行动，不怠惰。他从不以自己为‘老板’，也不要求别人作他所不作的事。他亲手作工，并教导别人一同作工时要温柔、有爱心、忍耐并合作。他不只将神所给他关于召会的启示教导人，也将启示付诸实行。</p>
+<p>李常受弟兄在早期服事主的时候，非常注重生命的经历。当他在上海与一位同工同住时，有一次从厨房拿水到房间，不小心有几滴水滴在那位同工的床上，这叫他很不安。虽然他立刻将水擦掉，但直到他请那人原谅之后，他才有平安。这指明他是一个在行为上不随便，并且学习注意里面细致感觉的人。李弟兄也是个不凭自己，而凭神圣生命生活行动的人。他不运用人的谋略，不信靠自己的聪明，不夸自己的能力；乃是将自己完全摆在一边，一直的尊荣神，给神绝对的地位和主权。他所过的乃是模成基督之死的生活。</p>
+<p>他不只尽职时传输神圣的生命，甚至在他的生活行动中，只要你与他同在，你也能得着神圣生命的传输，以至于蒙光照、被暴露、受牧养、得激励。李弟兄病重时，曾约一些配搭的同工来交通，其中一位同工因为迟到而心里自责。他向李弟兄说对不起，李弟兄回答他说，‘永远不会太迟。’李弟兄柔细的顾到这位同工，使这位同工得着莫大的鼓励。（参倪柝声—今时代神圣启示的先见，132页；那灵同我们的灵，152页；李常受弟兄记念专辑，102页。）</p>
+<p class="title">在圣经上花工夫</p>
+<p>在世界各国，有许多人投入心血来翻译圣经。然而，翻译圣经需要非常仔细。像达秘（J. N. Darby）是作得最好的。神使用他翻了义大利文、法文、德文、和英文的圣经。翻译圣经非常费时，每一节都得花上几十个钟头。譬如中文和合本圣经，每一节都花了十一个小时。因此，完成一本圣经的翻译，必须在神面前花上好几年的工夫。所以我们在读主话的时候，也理当下功夫，仔细研读。在倪柝声弟兄所出版的复兴报第八期中，有这样一段文字：‘我们不愿意神的真理只储藏在人的脑府里，或者老搁置在人的书架上；乃是愿意它消化在人的灵里，表显在人的生活上。’我们读圣经时，需要花工夫来细心体会它。不是知道了真理，真理就成为我们的，乃是经历了真理，我们才能得着这真理的拯救与自由。（参造就故事上册，30页；倪柝声—今时代神圣启示的先见，109页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：凭着神圣生命生活行动，注意里面细致的感觉，尊荣神，给神绝对的地位和主权。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

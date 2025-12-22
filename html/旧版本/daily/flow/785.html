@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('784')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('786')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 5 课<br />
+婴孩与幼年时期</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主当我们把你思念。（诗歌157首，一至三节。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：祂在耶和华面前生长如嫩芽，像根出于干地；祂无佳形美容，我们看见祂的时候，也无美貌使我们羡慕祂。祂被藐视，被人厌弃，多受痛苦，常经忧患。（赛五三2～3上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　受割礼、命名、被献上、受称扬—路二21～39</p>
+<p class="ot2">1.　第八天受割礼—21。</p>
+<p class="ot2">2.　被献上并受称扬—22～39。</p>
+<p class="ot1">二　为星象家寻访并朝拜—太二1～12</p>
+<p class="ot2">1.　受星—属天异象—的引导—2。</p>
+<p class="ot2">2.　受属人的观念打岔—1。</p>
+<p class="ot2">3.　受圣经的改正—4～6。</p>
+<p class="ot2">4.　再度受那星引导，寻得并敬拜基督—9～10。</p>
+<p class="ot2">5.　以黄金、乳香、没药为礼物献上—11。</p>
+<p class="ot2">6.　受指示从别的路回去—12。</p>
+<p class="ot1">三　逃往埃及并返回拿撒勒—太二13～23</p>
+<p class="ot2">1.　使何西阿十一章一节论到基督的预言得着应验—15。</p>
+<p class="ot2">2.　希律王恼怒而杀害伯利恒城里并四境两岁以内的男孩，应验了耶利米三十一章十五节的预言—16～18。</p>
+<p class="ot2">3.　返回拿撒勒居住，应验了众申言者的预言，被称为拿撒勒人—19～23。</p>
+<p class="ot1">四　身量长大，刚强有智慧—路二40～52</p>
+<p class="ot2">1.　在祂的神性里，以父的事为念—43～50。</p>
+<p class="ot2">2.　在祂的人性里，服从肉身的父母—51。</p>
+<p class="ot2">3.　在智慧和身量，并在神与人面前所显明的恩典上，都不断长大—52。</p>
+<p class="ot1">五　静默的时期—十二岁至三十岁之间—赛五三2～3，五二14</p>
+<p class="ot1">六　得着活星的引导，寻得基督，并以第一位神人的生活为模型—彼后一19，但十二3，彼前四1，腓二8</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>生为神而人者的耶稣，是一个真正、正常的人，并且必须长大，经过一段静默的时期，才达到成熟，开始尽祂的职事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>马太二章和路加二章记载了主耶稣婴孩和幼年时的故事。这些章节给我们看见，虽然基督是无限的神，祂也是一个真正的人，必须以一个正常的方式长大并发展。耶稣是神，祂是无所不知的；但祂也是人，需要在智慧上长大。主耶稣是第一个神人，在祂作为第一个神人的生活里，祂设立了榜样给我们跟随。这榜样的一面，是祂从十二岁到三十岁的静默时期。虽然主十二岁的时候很关心神的家，但神并没有托付祂完成他的职事，直到祂三十岁那年。这指明顾到神在地上权益的真正职事，需要生命的成熟。甚至主耶稣也需要达到某种程度上属人的成熟，才能来尽职。在这十八年的静默期间，主耶稣就像根出于干地，没有吸引人的威严和令人羡慕的外貌；祂被人藐视厌弃，受过试诱，只是没有罪。我们需要认识祂，珍赏祂是这样的一位，并以祂为模型，过神人的生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　受割礼、命名、被献上、受称扬</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因为我的眼睛已经看见你的救恩，就是你在万民面前所预备的，是启示外邦人的光，又是你民以色列的荣耀。（路二30～32。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为使基督成为在神和人面前作正确的以色列人，约瑟和马利亚在第八天为耶稣行割礼并命名，以除去祂的肉体。又带着孩子上耶路撒冷去，将祂献与神，以成为圣别。献上一对斑鸠或两只雏鸽为祭物，（利十二8，）指明约瑟和马利亚是贫穷的，无力献上羊羔为祭物；贫穷也是基督一生的特征。他们在圣殿的时候，受到两位敬虔之长者—西面和亚拿的称扬。西面的称扬启示基督是以色列的安慰、神的救恩、外邦人的光、以色列民的荣耀，西面也预言基督的一生，是受试验、并受人反对的一生。亚拿则为着基督称谢神，并讲说基督是神子民的救赎。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>珍赏并经历基督是以色列的安慰、神的救恩、外邦人的光、以色列民的荣耀。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../css/vuetify.min.css" rel="stylesheet" />
+    <link href="../css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>祷告负担</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+                祷告负担
+              
+              </div>
+            </v-card>
+            <br />
+            
+          </div>
+         
+<p class="ot2">一  为平衡实行主恢复的三方面祷告：</p>
+<p class="ot">1 在真理追求上：认真进入一年七次特会；每天规律读经，并进入生命读经。</p>
+<p class="ot">2 在神人生活上：借着坚定持续地操练四面祷告和神人生活七件事，在婚姻生活、家庭生活、召会生活以及社交生活中过活基督显大基督的神人生活。</p>
+<p class="ot">3  在召会实行上：落实陪人晨兴，福音的生活，家中喂养，经营小排，擘饼申言的负担。</p>
+<p class="ot">4  为受成全的圣徒建立福音的生活和牧养的生活祷告。</p>
+<p class="ot2">二  为专项祷告： </p>
+<p class="ot">1  为四活：活泉、活流，活水，活石祷告，培养下一代，使主的恢复后继有人。</p>
+<p class="ot">2  为四环工商，公仆，教师，医护祷告，为使在职圣徒积极尽生机的功用，使召会的素质不断被拔高。</p>
+<p class="ot">3 为长青祷告：求主保守长青圣徒身体健康，灵里火热，叫更多的圣徒参与祷告，使守望祷告的组数人数不断增加，全召会往前毫无阻碍。</p>
+<p class="ot2">三  为月重点实行祷告：</p>
+<p class="ot"> 
+一、二月祷告福音；</p>
+<p class="ot">三至五月家中成全；</p>
+<p class="ot">六月普遍牧养；</p>
+<p class="ot">七、八月三活服事；</p>
+<p class="ot">九月普遍爱宴；</p>
+<p class="ot">十月主日相调 ；</p>
+<p class="ot">十一、十二月真理追求。</p>
+<p class="ot2"> 
+四  为同心合意祷告:</p>
+<p class="ot">1  愿主在这些日子里供应同工们和带领弟兄们，赐给他们健康的身体，照着主的负担，并赐运用神的智慧带领、牧养神的子民往前。</p>
+<p class="ot">2  求主使全地的众召会同心合意，用同一的口荣耀我们的神与父，以带进一个新人的实际。愿主加强、扶持并兴旺全地的众召会。</p>
+<p class="ot2">五  求主炼净祂的召会，除去不同的教训以及一切分裂的因素，使召会在一里蒙保守、被建造。</p>
+<p class="ot2">六 愿仇敌撒但被捆绑，愿魔鬼的工作被摧毁，愿那控告弟兄们的被摔下去，愿神为圣徒伸冤，对付仇敌。</p>
+<p class="ot2">七 求主使我们的国家，繁荣昌盛，国富民强，和谐安定。</p>
+
+
+            
+            
+            
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../../weekly/weekly.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

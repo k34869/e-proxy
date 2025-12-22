@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1148')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1150')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 3 课<br />
+召会—神的耕地和建筑</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我若稍微偏离正路。（诗歌468首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我照神所给我的恩典，好像一个智慧的工头，立好了根基，有别人在上面建造，只是各人要谨慎怎样在上面建造。因为除了那已经立好的根基，就是耶稣基督以外，没有人能立别的根基。（林前三10～11。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　我们是神的耕地，需要在生命中长大—林前三1～9</p>
+<p class="ot2">1　哥林多人尚未长大的表记—1～4：</p>
+<p class="ot2">a　需要喝奶，不能吃干粮—2。</p>
+<p class="ot2">b　满了嫉妒分争，是属肉体的—3。</p>
+<p class="ot2">c　高举属灵大汉而造成分门别类—4。</p>
+<p class="ot2">2　在生命中长大的路—6～8：</p>
+<p class="ot2">a　栽种—把生命供应并分赐给一个在属灵方面死了的人，叫这个人活过来，成为神耕地上活的植物。</p>
+<p class="ot2">b　浇灌—把生命的成分，供应给那些已经有神圣生命的人，使他们自然而然的长大。</p>
+<p class="ot2">c　惟有神使人生长。</p>
+<p class="ot2">d　栽种者和浇灌者都是神的同工，将来要得赏赐。</p>
+<p class="ot2">3　神的建筑是神永远的目标—9：</p>
+<p class="ot2">a　召会是耕地产生材料，使神完成祂的目标，得着建筑。</p>
+<p class="ot2">b　耕地是为着在生命里的长大，建筑是为着神目标的完成。</p>
+<p class="ot1">二　两种材料与两种结果—10～17</p>
+<p class="ot2">1　保罗是智慧的工头，立好建造的根基，就是基督—10。</p>
+<p class="ot2">2　各人要谨慎，在已经立好的根基上建造—10～11。</p>
+<p class="ot2">3　用变化的材料—金、银、宝石所建造的工程，能存留得住，并要得赏赐—12上，14。</p>
+<p class="ot2">4　用天然的东西—木、草、禾秸所建造的工程，将要被烧毁，自己却要像从火里经过一样得救—12下，15。</p>
+<p class="ot2">5　警告勿毁坏殿，就是不把天然的成分带进召会的建造—16～17。</p>
+<p class="ot1">三　万有都是为着召会，召会是为着基督—18～23</p>
+<p class="ot2">1　要变作愚拙，好得着神的智慧—18～20。</p>
+<p class="ot2">2　神藉着万有来成全我们，好成为基督的身体，作神的彰显—21～23。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>明白召会是神的耕地和神的建筑。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在林前三章以三个主要的辞说到召会：耕地、建筑和殿。在基督里得了重生，有神生命的信徒，乃是神所耕种的田地，神新造里的农场，生长基督，好为着神的建造产生宝贵的材料。召会也是神的殿，殿是建筑，是由耕地上所生长的材料产生的。这不是普通的建筑，乃是圣别之神的圣所，神的灵所居住的殿。我们这些建造这样圣别之殿的人，都当晓得这事，好叫我们谨慎，不用木、草、禾秸等没有价值的材料建造，乃用符合神性情和经纶的金、银、宝石等贵重的材料建造。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　需要在生命中长大</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前三6：我栽种了，亚波罗浇灌了，惟有神叫他生长。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前三章中，保罗向哥林多人说到需要在生命中长大的事。虽然哥林多信徒接受了生命中一切初期的恩赐，一无所缺，但他们接受以后，并没有在生命里长大。保罗在三章七节指明，栽种的和浇灌的都算不得什么，只有使生命长大的神才是一切。我们都应当操练藉着传福音，将生命供应并分赐给罪人，使他们成为神活的植物；我们也应当操练藉着祷读主话，帮助那些较软弱或年幼的圣徒接触神，使他们得着生命的供应而自然的长大。并且，我们必须凭信有把握，惟有神能使人生长。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>藉着传福音，将生命供应并分赐给罪人；藉着祷读主话，帮助年幼的圣徒接触神，得着生命的供应而长大。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

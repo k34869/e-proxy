@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('229')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('231')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">两块银元</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">忠信人必多得福；急于发财的，难免受罚。（箴28:20）</div>
+<div id="CC">A faithful man will abound with blessings，but he who makes haste to be rich will not go unpunished.（Proverbs 28:20）</div>
+<div id="C">钟弟兄在得救之前，曾向下属借了两块银元，一直没有归还。因着是上司与下属的关系，所以他根本不打算归还。得救后，在一次聚会中蒙了光照，觉得该去了结这事，却又找不到对象。他就祷告，求主安排。不久，他在路上巧遇这位多年不见的下属，正是归还的好机会。那知口袋中的现钞不够两块银元的价值；于是，就把手上一钱重的金戒脱下兑换，按市价再加上十元台币，偿还给他的下属。他的下属坚持不收；他见下属不收，就再加上十元。他的下属见他如此诚意，只好收下。回家后，他满了喜乐。过了数日，有位老友来访，这位老友很久前曾向他借两钱金子，这次特地先来还他一钱金子。<br/><br/>　所有的亏欠，都必须尽快还清，不然，神无法祝福。</div>
+<div id="CC">得救的证实与快乐─生命改变（诗242）</div>
+<div id="C">喜乐满我心！<br/>　满我心！满我心！<br/>　喜乐满我心！<br/>　主将我石心，<br/>　换成了肉心；<br/>　圣灵来更新，<br/>　使我成为新人：<br/>　喜乐满我心！<br/>　满我心！满我心！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

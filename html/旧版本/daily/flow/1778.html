@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1777')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1779')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 2 课<br />
+行走在金灯台中间的人子</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　右手中拿着七星</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启一16:祂右手中拿着七星，从祂口中出来一把两刃的利剑，面貌如同烈日中天发光。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>那七星就是七个召会的使者，七灯台就是七个召会。星，代表地方召会的使者，是单个的个体。在召会堕落的黑夜里，需要集体的召会发光，也需要单个的使者发光。使者乃是众召会中属灵的人，担负着‘耶稣的见证’的责任。他们应当像星一样，有属天的性质，并在属天的地位上。要羡慕作发光的星。不要作一个徒有地位的人，要作一颗发光的星。基督行走在众召会中间的时候，祂的右手握着这些领头的人。这是何等的安慰！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在召会中作一颗发光的星，在黑夜里发光。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们必须主观的经历金灯台各方面的细节，好使我们能成为灯台的复制，就是三一神的彰显。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在启示录中，七个金灯台表征什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们都必须看见，召会乃是基督正确的复制。基督是惟一的灯台，众召会乃是在性质、素质、样式、形状、和功用上相同的众灯台。就着出埃及记的灯台而言，我们可以说召会是基督的复制。就着撒迦利亚书的灯台而言，召会是那灵的翻版。召会终极的定义乃是：召会是基督的复制与那灵的翻版。’（召会是那灵的翻版，7页。）</p>
+<p>愿我们众人向祂敞开，接受祂的光照，并让祂的生命供应我们。然后我们就会变化，并有基督的形像。我们蒙里面的灯光照，就会实际的在我们的地方上成为金灯台，彰显三一神。这样，祂就要得着祂的见证。</p>
+<p>有时候神想要在我们里面照耀，我们却不愿向祂敞开。这就是为什么我们祷告片时以后，有时候就再也没有什么可说的。我们用我们的灵祷告，灵就尽功用，作照耀的灯，鉴察我们魂所有的部分。灵也许照耀在我们的心思上，但我们拒绝让主进到那里。…灵也许照耀在我们的情感上，尤其是姊妹们的情感，但我们关闭，有时候甚至哭泣，请求主不要摸那范围。同样的事也许发生于我们的意志，…我们若关闭我们的意志，灵就无法尽其照耀的功用。我们向主的照耀关门，就不再有什么话祷告。</p>
+<p>我们用我们的灵正确的祷告，就有照耀的灯。我们若觉得这灯照耀在我们的心思上，我们就能说，“主，我向你敞开我的心思。照耀在我里面，暴露我的思想。”在祂的光中我们承认我们的罪。祂照耀在我们的情感上，我们就能敞开，并承认祂所显示我们的错处。然后祂会照耀在我们的意志上，我们也能向祂敞开这房间。我们将所有的内室逐一敞开，灵就会照耀，我们就会承认我们的罪。我们能长时间一直祷告。我们越祷告，就越蒙光照。我们内里的部分会彻底被主鉴察。这样祷告以后，我们就会觉得光明、透亮、被神充满。这是灯的一方面，就是我们的灵在里面的照耀。’（生命信息下册，304、364～365页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>过正常的召会生活，经历召会中灯台的照亮。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+               <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('184')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('186')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第13课  创造—从创造看出神完美的设计和计划</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一〇四24 耶和华阿，你所造的何其多！这些都是你用智慧造成的；遍地满了你的造物。</p>
+<p>引题：1小朋友，你们知道神的创造有多少种类吗？2  请说出你喜欢的一种动物和植物？</p>
+<p>课程内容：神的创造何其多，各从其类，遍满地面，你若仔细观察，了解它们的生活习性，就会发现这些都是神完美的设计和计划比如说植物和动物之间也有彼此共存，相互依赖。动物是植物的好帮手，植物也是动物的食物来源，例如：蜜蜂、蝴蝶这种昆虫，就是积极帮助植物授粉的植物界的“好帮手”，没有它们，许多植物在地球上的生长和繁殖都会受到很大的影响。昆虫帮助植物可以结果生籽，繁衍生长；同时，昆虫自己才会有充足而源源不断的食物来源。赞美神完美的创造</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造揭示出必须有一个创造者，祂计划、设计，并把一切放在合适的位置，而不是随着时间推移有所变化。这完美的设计可以从受造之物相互的依赖中看出。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：蜜蜂和开花植物彼此共存。蜜蜂需要花朵来酿蜜。这些花需要蜜蜂授粉和传播种子。这种关系并不是随着时间的推移而进化的。它是由神计划、设计和落实的。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一〇四24下~25 …这些都是你用智慧造成的；遍地满了你的造物。那边有海，又大又广；其中有爬物无数，大小活物都有。</p>
+<p>中级</p>
+<p>引    题：1小朋友，你们知道神的创造有多少种类吗？2  请说出一种或几种海中的动物。</p>
+<p>课程内容：神的创造何其多，各从其类，遍满地面，你若仔细观察，了解它们的生活习性，就会发现这些都是神完美的设计和计划，并且它们之间有些还会互相依赖生存，例如海葵和寄居蟹，那么他们是怎样相互依赖生存的呢？</p>
+<p>海葵有一圈向四周散开的触手，就像玫瑰花的“花瓣”，难怪有人称它为“海底玫瑰”。它的每只“花瓣”尖端有一个毒囊，毒囊里盘有一条条带尖的线，一旦遇到猎物，其中一根线就会向前将皮刺破，于是毒液就流了出来，许多海洋生物都对它敬而远之。</p>
+<p>海葵唯一的遗憾就是不能自由活动，它要为自己寻找一双“腿”，在遍布沙泥的海底，稳定的硬底质是十分罕见的，但拥有坚硬外壳的寄居蟹显然是非常不错的合作者。由于寄居蟹喜好在海中四处游荡，使得原本不移动的海葵随着寄居蟹的走动，扩大了觅食的领域。对寄居蟹来说，海葵会将捕捉的小动物慷慨地分一部分给寄居蟹，同时海葵分泌的毒液，可杀死寄居蟹的天敌，因此保障了寄居蟹的安全。这样海葵和寄居蟹双方都得到好处。 神的创造中相互依赖生存的动物还有很多，它们这些相互依赖生存的关系表明，没有任何事情是偶然或意外发生的，，一切都是有神计划，设计和创造的，主啊！赞美你的创造！！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造揭示出必须有一个创造者，祂计划、设计，并把一切放在合适的位置，而不是随着时间推移有所变化。这完美的设计可以从受造之物相互的依赖中看出。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：小丑鱼和海葵相互依赖生存。海葵保护小丑鱼不受捕食者的攻击，小丑鱼从海葵消化完的残渣获得食物，并且小丑鱼保护海葵免受食肉动物和寄生虫的侵害。讨论其他相互依存的关系，如鳄鱼和犁鸟，斑马和啄木鸟，鲨鱼和领航鱼等。这些相互依存的关系表明，没有任何事情是偶然或意外发生的。一切都是由神计划、设计和创造的。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以赛亚书四五18 创造诸天的耶和华，就是那塑造并造作地的神；祂使地坚立；祂创造地，并非使其1荒废，祂塑造地，是要给人居住；祂如此说，我是耶和华，再没有别神。</p>
+<p>引     题：</p>
+<p>课程内容：神的创造何其多，各种动植物各从其类，如果你仔细观察了解，就会发现其实世界万物都是息息相关，被巧妙的构筑在了一起。祂把一切，都放在合适的位置，让万物互相依存。人和动物需要氧气来生存，吸收氧气，释放二氧化碳。二氧化碳过多时，会使地球温度升高，造成温室效应。神让植物在阳光下，吸收二氧化碳，并释放氧气，既减缓了温室效应，又让动物能够正常的活下来。多么巧妙的共生关系！这一切都在神的计划里，神啊，我们赞美你的智慧和创造！为着万物向祂献上感谢！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造揭示出必须有一个创造者，祂计划、设计，并把一切放在合适的位置，而不是随着时间推移有所变化。这完美的设计可以从受造之物相互的依赖中看出。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：植物需要大气生长。通过光合作用，植物借着阳光从大气中吸收二氧化碳，然后产生它们生长需要的碳水化合物。地球的大气也受到植物的影响。由于二氧化碳是最主要的温室气体之一，通过植物从大气中除去二氧化碳能够减缓地球变暖，从而影响气候。这种关系一定是精心设计的。它不是偶然发生的，也不是随时间演化的。天、地、地上的一切都是神所计划、设计、创造的。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

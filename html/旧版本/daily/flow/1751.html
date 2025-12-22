@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1750')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1752')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 17 课<br />
+胜过世界、死、罪、魔鬼和偶像</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　为神永远的经纶。（补充本诗歌427首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：人有了神的儿子，就有生命；没有神的儿子，就没有生命。我将这些话写给你们信入神儿子之名的人，要叫你们晓得自己有永远的生命。我们若照祂的旨意求什么，祂就听我们；这是我们向着祂所存坦然无惧的心。我们若知道祂听我们一切所求的，就知道我们所求于祂的无不得着。（约壹五12～15。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　藉着在子里永远的生命—约壹五4～13</p>
+<p class="ot2">1　重生的灵胜过世界—4上。</p>
+<p class="ot2">2　胜过世界的，是我们的信，就是那信耶稣是神儿子的—4下～5。</p>
+<p class="ot2">3　那灵见证耶稣是神的儿子—6。</p>
+<p class="ot2">4　神凭水、血与那灵，见证耶稣是所赐给我们神的儿子—7～10。</p>
+<p class="ot2">5　在子里有永远的生命—11～13。</p>
+<p class="ot1">二　藉着赐人生命的祈求—14～17</p>
+<p class="ot2">1　照神的旨意求—14。</p>
+<p class="ot2">2　知道我们得着所求的—15。</p>
+<p class="ot2">3　祈求与赐给生命—16～17。</p>
+<p class="ot1">三　藉着真神作永远的生命—18～21</p>
+<p class="ot2">1　重生的人保守自己不犯罪，也不为那恶者所摸—18。</p>
+<p class="ot2">2　我们是属神的，整个世界都卧在那恶者里面—19。</p>
+<p class="ot2">3　神的儿子来到，且将悟性赐给我们，使我们认识那位真实的—20。</p>
+<p class="ot2">4　保守自己远避偶像—21。</p>
+<p class="ot1">四　约翰修补职事基本且实质的元素</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识信徒神圣出生的美德，以胜过世界、死、罪、魔鬼和偶像。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>约壹五章着重的论到留在神圣的交通里，以藉着在子里永远的生命，凭着基督的血和圣灵，胜过世界、死、罪、魔鬼和偶像。我们里面重生的灵和我们的信使我们胜过世界；藉着那赐人生命的祈求，使我们能得着永远的生命，而胜过死；再者，藉着真神作永远的生命，使重生的人能保守自己不犯罪，也不为那恶者所摸；最后，我们这些真神的真儿女，应当儆醒、保守自己，远避一切代替真神的偶像，使我们与神在生机上是一，在祂里面生活、行动、为人。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　重生的灵胜过世界</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹五4：…凡从神生之物，就胜过世界，胜过世界的，就是我们的信。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹五章最后一段，说到信徒凭着在子里的永远生命，胜过五类消极的事物—世界、死、罪、魔鬼和偶像。并说到信耶稣是神的儿子，使我们从神而生，得着神圣生命的信，藉此，我们就能胜过撒但所组织并霸占的世界。六至八节神用三个步骤见证耶稣是神的儿子：凭着水、凭着血、凭着那灵。藉着这样的见证，祂便将神的儿子分赐到我们里面，作我们的生命</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>与三一神生机的联结，以胜过世界。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

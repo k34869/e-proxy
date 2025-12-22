@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('113')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('115')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">多多益善一毛不拔</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">塞耳不听穷人哀求的，他将来呼求也不蒙应允。（箴21:13）</div>
+<div id="CC">Whoever closes his ear to the cry of the poor man also will cry and will not be heard.（Proverbs 21:13）</div>
+<div id="C">一个富足的信徒，在往教堂去的路上，遇见他素来所相识的一位邻居，这人一向乏人照管奉养，是个老病穷苦的妇人。妇人看见这富足的人，就发出了凄惨的声音，呼求几角钱的周济。那富足的信徒心想，我手中实在有不少的钱，不过我的钱怎好这么容易就给她呢。然而为免得她麻烦我，就给她两枚铜币吧。这样作过后，他便离开，往教堂去。到了堂中，跪在神前，就感谢祈求说，“神啊，我感谢你，因为你使我一切所需用的都充足，又保护我得享平安。求你把更多的恩典加给我，使我的身心都能得福充盈；凡你所有的恩典，求你样样都赐给我。”为着别人，他一毛不拔；为着自己，却要求多多益善。这种祷告，不会蒙悦纳，因为“塞耳不听穷人哀求的，他将来呼求也不蒙应允”。</div>
+<div id="CC">祷告─甜美之时（诗578）</div>
+<div id="C">祷告之时、甘甜之时！<br/>　使我离开烦恼之事，<br/>　来到神的座前发表所有意愿、<br/>　所有需要；<br/>　当我遇到重压、忧愁，<br/>　我灵却常得着自由，<br/>　不陷恶者所有布置，<br/>　因为有你─祷告之时！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1196')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1198')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 9 课<br />
+对付恩赐（二）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　关于妇女</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十四39～40：所以我弟兄们，你们要切慕申言，也不要禁止说方言。凡事都要端正得体的按着次序行。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>根据林前十一章五节，女人蒙着头可以申言（当然是公开的）。然而在提前二章十二节不许女人施教，那是指不可作权柄施教，或断定教义。就用权柄施教以及断定教义这两面的意义说，姊妹们在召会的聚会中，应当静默。不准她们说话，因为她们应当服从男人。这与神在他行政里所命定的权柄有关。在神行政的命定里，不准女人用权柄说话辖管男人。姊妹可以祷告，也可以申言，主要的乃是为主说话并说出主。然而，她们必须在弟兄的遮盖下作这事，因为这里吩咐她们要服从。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历钉十字架的基督，并经历在复活里的基督，以实行申言建造召会。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>切慕更大的恩赐—申言，并在生活中，对主有享受与经历，在祷告中与主有交通，为着聚会预备自己。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为什么我们在聚会中需要说话？</p>
+<p>什么是申言？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘藉着享受基督而在生命里长大，所发展的一切恩赐中，最高的恩赐乃是申言。这是超越的恩赐，因为这恩赐建造召会。（林前十四4下～5。）…恩赐有许多，有的较大，其余的较低。就着建造召会而言，说方言和医病这类神奇的恩赐是低下的。更大的恩赐是对建造召会最有益处的恩赐。…</p>
+<p>切慕一辞在哥林多前书用了三次—十二章三十一节，十四章一节，和十四章三十九节。保罗有负担，要我们都切慕申言。保罗也说，我们必须为着召会的建造，寻求得以超越。（十四12。）只说方言是停在低下的境界里，但申言就得以超越。</p>
+<p>十四章也给我们许多证据，指明申言不是说预言。你申言的时候，是对人讲说建造、勉励和安慰。（3。）在聚会里若众人都申言，与会的人就会被劝服、审明，他们心里的隐情就会显露出来。（24～25。）申言在此不是说预言，乃是建造、勉励、安慰、劝服、审明，并显露人心里的隐情。在所有的恩赐中，最高的、最超越的就是申言，因为申言建造召会。’（建造召会的超越恩赐，20～21页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在聚会前预备灵，在聚会中释放灵为神说话。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

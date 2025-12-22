@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1526')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1528')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 3 课<br />
+为着召会生活之圣别生活的劝勉、盼望、儆醒与谨守</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：儆醒阿黑夜已深。（诗歌486首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但我们既是属于白昼，就当谨慎自守，穿上信和爱的胸甲，并戴上救恩之望的头盔。（五8。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　为着召会生活之圣别生活的劝勉—帖前四1～12</p>
+<p class="ot2">1　圣别对淫乱—1～8。</p>
+<p class="ot2">2　弟兄的相爱—9～10。</p>
+<p class="ot2">3　得体的行事—11～12。</p>
+<p class="ot1">二　为着召会生活之圣别生活的盼望—13～18</p>
+<p class="ot2">1　为死了的信徒—13～14。</p>
+<p class="ot2">2　为活着还存留的信徒—15～18。</p>
+<p class="ot1">三　为着召会生活之圣别生活的儆醒与谨守—五1～11</p>
+<p class="ot2">1　主的日子来临如贼—1～3。</p>
+<p class="ot2">2　信、爱、望的保障—4～11。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见为着召会生活之圣别生活的劝勉、盼望、儆醒与谨守。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>帖前四章第一段说到为着召会生活之圣别生活的劝勉，包括了三个要项：圣别对淫乱、弟兄的相爱、以及得体的行事。第二段说到为着召会生活之圣别生活的盼望，就是信徒的复活和被提，这和主的来临—巴路西亚—有关，不仅是为死了的信徒，也是为活着还存留的信徒。帖前五章第一段则是为着召会生活之圣别生活的儆醒与谨守。首先说到主的日子来临如贼，并有忽然的毁灭临到。为此信徒需要儆醒并谨守，穿戴军装以保障我们的信、望、爱，并过一种与主同活，等候主回来的生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　圣别对淫乱（一）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖前四3～4：神的旨意就是要你们圣别，禁戒淫乱；要你们各人晓得，怎样用圣别和尊贵，持守自己的器皿。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>圣别，重于指在神面前圣别的光景；尊贵，重于指在人面前可敬的地位。人为着神的定旨被造，有崇高的地位。保罗要我们各人晓得，怎样用圣别和尊贵，持守自己的器皿，不放纵私欲的邪情。使徒认为人的身体是他的器皿，用圣别和尊贵，保守或保全人的器皿，不放纵私欲的邪情，乃是防止淫乱的保障。我们必须是一班圣别归神，并在人面前是尊贵的人。要成为这样的人，就必须完全禁戒淫乱，在这事上不给人猜疑的余地。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>用圣别和尊贵持守自己的器皿，不放纵私欲的邪情。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

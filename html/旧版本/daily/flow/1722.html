@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1721')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1723')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 12 课<br />
+神圣的供备与神圣的行政（三）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　彼得对神经纶的观点（二）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前一3～4：我们主耶稣基督的神与父是当受颂赞的，祂曾照自己的大怜悯，藉耶稣基督从死人中复活，重生了我们，使我们有活的盼望，可以得着不能朽坏、不能玷污、不能衰残，为你们存留在诸天之上的基业。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>第三，从撒但一面说，撒但是信徒的对头，是魔鬼，如同吼叫的狮子，遍地游行，寻找可吞吃的人。第四，从宇宙一面说，堕落的天使被定罪，等候永远的审判；背道的假教师和异端的讥诮者，以及过邪恶生活的人，都要受审判遭毁坏；诸天和地要被烧尽；并且所有的死人和鬼都要受审判。然后，那作新宇宙的新天新地就要来到，有神的义居住在其中，直到永远。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受主作生命和生命的供应，不断在主的恩典和知识上长大。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>追求认识主和主的话，在主的恩典并主的知识上长大。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼得书信的结语是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘彼后三章十八节说，我们需要在恩典上长大。恩典乃是神自己带着神性经过成肉体、死、复活、和升天的过程。这一切恩典的元素都在我们里面，与我们成为一。恩典乃是神自己作我们的生命，与我们成为一，拯救我们，安家在我们里面，并成形在我们里面。我们需要在这样的恩典里长大，使祂得荣耀，从现今直到永远之日。十八节是使徒彼得著作的结语，指明他所写的一切，乃是属于神的恩典、在神的恩典里、凭着神的恩典、并藉着神的恩典。’（罗马书的结晶，327～328页。）</p>
+<p>‘我们何等容易从恩典里出来，而与人相争。看见恩典的人就认识基督，在他就没有什么可争的。今天凡是在争论的，都不认识恩典。我们怎么站在恩典中？具体的说，就是回到我们的灵里。我们必须操练回到灵里。我们一回到灵里，就站在恩典中。无论别人怎么批评，怎么论断，怎么争论，千万不要开口，不要理论，要学习回到灵里。一理论就起争论了，再一讲就发怨言。不要争论，不要发怨言，不要在头脑里，也不要在情感里，要在灵里。一在灵里，你就在基督里，那就是站在恩典中。有的时候你祷读一节经文，唱一首诗，主的话会把你带到在基督里的恩典中。本来你满有理由，满有怨言，但你一回到灵里，你就站在恩典中。结果从你口里出来的，就是恩典。神在祂的经纶中，不要你作什么。神在祂的经纶中乃是要基督，就是三一神的化身，来作你化身的恩典。祂在我们里面活着，我们也在祂作恩典里活着。这样，神才能得着一个生机体。’（神在祂经纶中的律法与恩典，43～44页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>追求认识主和主的话，在主的恩典并主的知识上长大。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

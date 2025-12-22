@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1701')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1703')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 10 课<br />
+神圣的供备与神圣的行政（一）盼望、儆醒与谨守</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主你是我生命。（诗歌381首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：神的神能，藉着我们充分认识那用祂自己的荣耀和美德呼召我们的，已将一切关于生命和敬虔的事赐给我们。藉这荣耀和美德，祂已将又宝贵又极大的应许赐给我们，叫你们既逃离世上从情欲来的败坏，就藉着这些应许，得有分于神的性情。（彼后一3～4。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　彼得后书的简介</p>
+<p class="ot2">1　著者：耶稣基督的奴仆和使徒彼得—一1。</p>
+<p class="ot2">2　著时：主后六十九年左右，保罗殉道之后，耶路撒冷被毁之前。</p>
+<p class="ot2">3　著地：可能是罗马城。</p>
+<p class="ot2">4　受者：分散在外邦的犹太信徒。</p>
+<p class="ot1">二　彼得后书的主题—神圣的供备与神圣的行政</p>
+<p class="ot1">三　引言—给分得同样宝贵之信的信徒—1～2</p>
+<p class="ot1">四　神圣的供备（一）神圣能力的分赐—3～11</p>
+<p class="ot2">1　一切关于生命敬虔的事，同神的性情—3～4。</p>
+<p class="ot2">2　藉生命长大发展，得丰富进入永远的国—5～11。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>圣徒得着神圣供备的第一项，就是一切关于生命敬虔的事，同神的性情；并藉生命长大发展，得丰富进入永远的国。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>信徒已分得奇妙的同样宝贵之信，作为包罗万有的种子。一切神圣的丰富都在这种子里，但我们必须殷勤，将这些丰富发展为美德；在美德上发展知识；在知识上发展节制；在节制上发展忍耐；在忍耐上发展敬虔；在敬虔上发展弟兄相爱；并在弟兄相爱上发展爱。藉着发展这些美德，我们就长大，至终达到成熟，结果使我们充满基督，得着丰富充足的供应，进入主和救主耶稣基督永远的国。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　神圣的供备与神圣的行政</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼后三13：但我们照祂的应许，期待新天新地，有义居住在其中。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在彼得后书里，我们看见神的能力如何供给我们需要的一切供应。不但如此，彼得后书给我们看见彼得前书所揭示神行政之图画的延续。一节说到本书著者，彼得用了‘耶稣基督的奴仆和使徒西门彼得’来形容自己。西门是彼得的旧名，指他生来的旧人；彼得是主给他起的新名，指他重生的新人。这里二名合为一名，表征旧人西门现今成了新人彼得。他是耶稣基督的奴仆和使徒。‘奴仆’指明彼得对主的服从，‘使徒’指明主给他的使命。服从和使命含示我们与主之间双向的交通。我们自己服从祂，祂就会将事情托付我们。奴仆身上有服从，但使徒身上有主的使命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>效法使徒彼得，与主之间双向的交通：服从祂，得着主的托付和使命。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('938')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('940')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 9 课<br />
+三一神对罪人拯救的爱</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主耶稣我羡慕活在你面前。（诗歌290首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但是不可少的只有一件，马利亚已经选择那美好的分，是不能从她夺去的。（路十42。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　路加福音的特点</p>
+<p class="ot2">1.　陈明救主基督是真实、正常、且完全的人，这人启示神在人中间，向堕落的人类施行神拯救的恩典。</p>
+<p class="ot2">2.　是写给一般人的福音书，要将好信息报给万民。（二10。）其中包含许多独特的福音信息、比喻和事例。</p>
+<p class="ot2">3.　藉着这些福音的信息、比喻和事例，看见主耶稣在地上的生活是由神圣的属性所加强并丰富，而活在最高标准的道德里。</p>
+<p class="ot2">4.　由整卷路加福音，我们看见一幅基督藉着宣扬恩典的禧年，开始祂职事的图画—四18～19，九1～17。</p>
+<p class="ot1">二　好撒玛利亚人的比喻—十25～37</p>
+<p class="ot2">1.　基督藉着律法师的试探，描绘自己为撒玛利亚人，为自高自义的法利赛人和这自以为义的律法师所藐视并毁谤—25～29，33。</p>
+<p class="ot2">2.　基督在祂寻找失丧者并拯救罪人之职事的旅程中，来寻找我们这被打伤的罪人—30～33。</p>
+<p class="ot2">3.　基督以油（那灵）和酒（神圣的生命）包裹我们这被打伤的罪人—34上。</p>
+<p class="ot2">4.　基督将我们带到召会中—34下～35。</p>
+<p class="ot2">5.　我们先接受基督的爱，才能以这爱来爱邻舍—36～37。</p>
+<p class="ot1">三　马大和马利亚的事例—十38～42</p>
+<p class="ot2">1.　我们领悟救主的慈心和爱而得救以后，就应当事奉祂—38。</p>
+<p class="ot2">2.　我们事奉主不该照着自己的意见、观念或领会，却该照着祂的心意和爱好—39～42。</p>
+<p class="ot1">四　路加十五章的三个比喻说明三一神对罪人拯救的爱—1～32</p>
+<p class="ot2">1.　牧人寻羊的比喻，表征子基督的救赎—3～7。</p>
+<p class="ot2">2.　妇人找钱的比喻，表征那灵寻找的工作—8～10。</p>
+<p class="ot2">3.　父亲接子的比喻，表征父神接纳悔改的罪人—11～32。</p>
+<p class="ot2">4.　神圣的三一藉着子，凭着灵作工，将罪人带回归父—弗二18。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识三一神在拯救罪人上之爱的关切和工作。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>本课说到路加福音里四个重要的比喻和一个事例：十章里好撒玛利亚人的比喻启示我们都是被打伤的罪人，需要救主基督藉着那灵和神圣的生命，给我们温情的医治和拯救的照顾。马大与马利亚接待主的事例指明当我们经历主的救恩之后，我们就应当照着神的心意和爱好，听祂的话，爱祂并事奉祂。十五章里牧人寻羊、妇人找钱和父亲接子的比喻，启示三一神因着对罪人的爱，藉着子的救赎，灵的光照与搜寻，并父的等候与接纳，来拯救失落的人，带他们归回神家。藉着这几个比喻我们不仅看见自己的需要，也看见在基督，我们的救主里神的救恩。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　路加福音的特点</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主的灵在我身上，因为祂膏了我，叫我传福音给贫穷的人，差遣我去宣扬被掳的得释放，瞎眼的得复明，叫那受压制的得自由，宣扬主悦纳人的禧年。（路四18～19。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>路加福音陈明救主基督是真实、正常、且完全的人，这人启示神在人中间，向堕落的人类施行神拯救的恩典。路加福音的主要信息说到基督藉着宣扬恩典的禧年开始祂的职事。在禧年里，没有一人是贫穷的，每个人都被充满且饱足。在禧年里，没有被掳的；相反的，被掳的都得到释放，被带回对神的享受里。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>珍赏路加福音中基督神圣的属性与祂具有最高标准道德的人性美德。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

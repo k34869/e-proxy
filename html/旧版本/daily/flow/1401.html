@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1400')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1402')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 3 课<br />
+以基督为我们的榜样</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：你是至高荣耀的神。(诗歌77首。)</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你们里面要思念基督耶稣里面所思念的：祂本有神的形状，不以自己与神同等为强夺之珍，紧持不放。反而倒空自己，取了奴仆的形状，成为人的样式；既显为人的样子，就降卑自己，顺从至死，且死在十字架上。（腓二5～8。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　魂里联结，思念同一—腓二1～4</p>
+<p class="ot2">1　思念相同的事，有相同的爱—2上。</p>
+<p class="ot2">2　魂里联结，思念同一件事—2下。</p>
+<p class="ot2">3　不私图好争，不贪图虚荣—3上。</p>
+<p class="ot2">4　心思卑微，各人看别人比自己强，看重别人的美德与品性—3下～4。</p>
+<p class="ot1">二　以基督为榜样—5～8</p>
+<p class="ot2">1　思念基督里面所思念的—5。</p>
+<p class="ot2">2　基督有神的形状，不以自己与神同等为强夺之珍，紧持不放—6。</p>
+<p class="ot2">3　基督降卑的步骤—7～8：</p>
+<p class="ot2">a　倒空自己。</p>
+<p class="ot2">b　取了奴仆的形状。</p>
+<p class="ot2">c　成为人的样式。</p>
+<p class="ot2">d　降卑自己。</p>
+<p class="ot2">e　成为顺从的。</p>
+<p class="ot2">f　顺从至死。</p>
+<p class="ot2">g　死在十字架上。</p>
+<p class="ot2">4　这榜样成为我们的救恩。</p>
+<p class="ot1">三　基督的高举—9～11</p>
+<p class="ot2">1　主降卑自己到极点，神却将祂升为至高，又赐给祂那超乎万名之上的名—9。</p>
+<p class="ot2">2　在耶稣的名里，万膝都要跪拜，万口都要公开承认耶稣基督为主—10～11上。</p>
+<p class="ot2">3　我们承认耶稣是主，结果使父神得荣耀—11。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督这位倒空并降卑自己，被神高举并荣耀的神人救主，作我们的榜样，并以祂为我们的榜样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在腓立比二章鼓励腓立比的圣徒要思念相同的事，就是思念基督耶稣里面所思念的，以基督为他们的榜样。使他们能魂里联结，思念同一件事，不私图好争，不贪图虚荣，心思卑微，各人看别人比自己强，看重别人的美德与品性。这位作我们榜样的基督有神的形状，不以自己与神同等为强夺之珍，紧持不放，反而倒空自己，取了奴仆的形状，成为人的样式，降卑自己，成为顺从的，顺从至死，且死在十字架上。所以神将祂升为至高，又赐给祂那超乎万名之上的名，在耶稣的名里，万膝都要跪拜，万口都要公开承认耶稣基督为主，使父神得荣耀。如今这位基督就是在我们里面的生命，成为我们的救恩，使我们能经历祂的倒空、降卑、钉十字架并被高举，过与祂同样的生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　魂里联结、思念相同</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓二2：你们就要使我的喜乐满足，就是要思念相同的事，有相同的爱，魂里联结，思念同一件事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓立比书既是说到对基督的经历和享受，其结果乃是喜乐。腓立比人使保罗喜乐满足的路乃在于思念相同的事，甚至是思念同一件事。从腓立比书全文看，同一件事必是指对基督主观的认识和经历。保罗也说到魂里联结，思念同一件事。我们需要在魂里联结，好使我们对众圣徒能有一样的爱。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>让基督浸透并占有我们的全魂，使我们在魂里成为一。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

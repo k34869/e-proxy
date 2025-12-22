@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1371')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1373')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 16 课<br />
+新人的生活</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　在灵里被充满</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗五18～19：不要醉酒，醉酒使人放荡，乃要在灵里被充满，用诗章、颂辞、灵歌，彼此对说，从心中向主歌唱、颂咏。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这一段特别说到在灵里被充满的事。在灵里被充满，就是在我们重生的灵里被充满。我们的灵不该是空的，乃该被基督的丰富所充满，成为神一切的丰满。当我们的灵充满基督的丰富，我们在基督徒的生活中就不会有问题。我们实在需要藉着这样被充满而赎回光阴。在这邪恶的世代，电视、网路、报纸…都足以迷惑我们，浪费我们的时间。我们的行事为人必须有智慧且儆醒，明白主的旨意，把握每一可用的时机。藉着更多的与圣徒彼此对说、欢唱诗歌，我们能被主充满并涌流祂。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>从心中向主歌唱、颂咏，在灵里被充满而赎回光阴。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们这些神的儿女，应当在爱和光中行事为人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们如何能过一个满了爱和光的生活？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘以弗所五章一节说，“所以你们要效法神，好像蒙爱的儿女一样。”要过一个满了爱和光的生活，我们有一位可以效法的。我们有一位是爱又是光的父。我们既是父的儿女，就有祂的生命和性情。…每一个效法父的儿女，都是父的“复印”。我们对神不是陌生人，努力想要效法祂；我们乃是神的儿女，有神的生命，享受神的性情。凭着我们父神圣的生命，我们能效法祂。</p>
+<p>我们也有基督作我们的榜样。二节说，“也要在爱里行事为人，正如基督爱我们，为我们舍了自己，作供物和祭物献与神，成为馨香之气。”供物是为着与神交通所献的礼物，祭物是为着使我们得赎脱罪。基督爱我们，（2，25，）基督也光照我们。（14。）祂是我们的榜样，使我们过一种在爱里并在光中的生活。我们凭自己无法像基督爱我们那样爱别人。我们能像祂爱我们那样的爱人，是因为祂是我们的生命。我们有祂作我们的生命和我们的人位。在我们里面有一个人位，祂爱我们，现在凭着这个人位，在这人位里并同着这人位，我们能像祂那样的爱人。这是生机的，是生命的事。</p>
+<p>光之儿女的生命，使我们够资格在基督新妇的预备里有分。…羔羊的婚娶到了，我们这些光的儿女就要成为新妇，使那位爱我们的得着满足。要预备好，就需要有所准备。我们准备自己成为基督新妇的路，乃是作光的儿女，常常在爱和光中行事为人并工作，如同我们的救主所行的。我们能效法我们的父神，并以基督作我们的榜样，在爱和光中行事为人并工作。’（基督的身体，52～53页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>效法神和基督，在爱和光中行事为人，结出善、义和真实的果子。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

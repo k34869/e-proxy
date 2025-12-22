@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('412')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('414')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">三月六日</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>提后1:12　为这缘故，我也受这些苦难；然而我不以为耻，因为知道我所信的是谁，也深信祂能保守我所托付的，直到那日。For which cause also I suffer these things; but I am not ashamed, for I know whom I have believed, and I am persuaded that He is able to guard my deposit unto that day.</p><p>有一位曹弟兄，他在衡.阳被人误会，关在牢里。多方祷告、祈求，求神给他一个启示。忽有一个感觉告诉他说，到吃西瓜扇扇子的时候，就要释放你了。等了半年，天气渐渐热了起来，忽然听到窗外叫卖西瓜的声音；他说，主阿，时候已经到了，卖西瓜的已经来了，怎么没有看见人扇扇子呢？又过了两天，在牢里同住的一位，用草纸编成扇子，在那里扇；他说，主阿，西瓜有了，扇子也有了，我怎么还不出狱呢？忽然来了一位警.员，对他说，你的案子查清楚了，现在可以出去了。他就赞美不尽，神的话在他里面特别显为真实。</p><p>新歌,#99 如今主你就是那灵</p><p>一</p><p>如今主，你就是那灵，是那赐人生命的活灵，</p><p>为进我灵作我生命，你已完成必经的过程；</p><p>你从天降下成肉体，从阴间上来又复起，</p><p>今犹如空气在我口里，随时随在我可享受你。</p><p>对我，你丰富无比，对我，你何等实际，</p><p>丰富无比，何等实际，因你就在我心里！</p><p>_二_</p><p>愿主多赐我以那灵，以你新鲜生命来供应，</p><p>从我中心浸透、充盈，直达圆周，处处都光明；</p><p>你多方运行并工作，像神对膏油在涂抹，</p><p>将我的心，灵全浸润过，且来挑旺我深处爱火。</p><p>有你，我灵会飞扬，有你，我心会歌唱，</p><p>灵会飞扬，心会歌唱，生活如同在天上！</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

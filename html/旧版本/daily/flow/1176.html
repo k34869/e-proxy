@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1175')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1177')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 6 课<br />
+使徒的表白与主的筵席</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　正当的吃</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十31：所以你们或吃、或喝、或作什么事，一切都要为荣耀神而行。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在吃喝的事上，信徒不要为良心的缘故查问什么，因为地和地的丰满，都属于主。然而若有人指出肉是向偶像献过祭的，就必须为别人良心的缘故不吃。（十28。）总之，我们或吃、或喝、或作什么事，一切都要为荣耀神而行。不论对信与不信的人，我们都不该成为别人的绊脚石，却该效法保罗，像保罗效法基督一样，凡事都叫众人喜悦，不寻求自己的益处，只寻求多人的益处，叫人可以得救。我们跟从那些效法基督的人，就是跟从基督，也成为效法基督的人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>凡事叫众人喜悦，不寻求自己的益处，只寻求多人的益处。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主嘱咐保罗奔跑赛程，他就努力奔跑。我们也需要这样奔跑基督徒的赛程，使我们得着在国度里的享受为赏赐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督徒的一生可以比喻作什么？</p>
+<p>为着参加赛跑，通常我们必须在赛前有那些预备？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘在〔林前十〕章这里，使徒正在场上奔跑；（26；）在他晚期的一封书信，腓立比书里，他还在奔跑；（三14；）直到提后四章六至八节，他奔跑到了最后一刻，才有把握会在主显现时得他的赏赐。在这奖赏的光中，使徒嘱咐哥林多信徒，要跑这一场赛跑，使他们能得着赏赐。（林前九24。）</p>
+<p>在〔林前九章〕二十六至二十七节保罗说到他自己…痛击，原文意，把眼睛以下的脸面打得又黑又青。这不像禁欲主义者苦待身体，也不像智慧派认为身体是邪恶的。这是要治服身体，使其成为被征服的俘虏，像奴隶一样服事我们，好成就我们神圣的目的。这相当于治死我们在地上的肢体，（西三5，）并治死身体的行为，（罗八13，）不让我们的身体用为放纵情欲，除了神看为圣的事，也不凭自己作什么。</p>
+<p>保罗也告诉我们，他叫身为奴。这是一种隐喻，意带领着被征服、作了俘虏和奴隶的人，将他奴役，使他作奴仆，为征服者的目的效力。这指明我们需要征服我们的身体，并治服它。我们的身体已被情欲所掳掠。现今我们必须拯救它，并掳掠它，将它带进一种非常正面的奴役，使我们的身体成为圣灵的殿，和基督的肢体。</p>
+<p>我们需要实行痛击己身，叫身为奴，正如保罗一样。例如，你的眼睛不要读圣经，你就需要痛击你的眼睛，征服它们，使它们在读圣经上为你的目的效力。</p>
+<p>主嘱咐他奔跑赛程，他就努力奔跑。我们也需要这样奔跑基督徒的赛程，使我们不至不蒙称许，被弃绝，不合格，失去要来国度里的享受为赏赐。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>不牵涉拜偶像的事，而在主日享受主的筵席。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

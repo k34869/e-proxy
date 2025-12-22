@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1407')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1409')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 4 课<br />
+以基督为我们常时的救恩</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主你是我生命。（诗歌381首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：这样，我亲爱的，你们既是常顺从的，不但我与你们同在的时候，就是我如今不在的时候，更是顺从的，就当恐惧战兢，作成你们自己的救恩。（腓二12。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　作成我们的救恩—腓二12～13</p>
+<p class="ot2">1　我们的榜样基督，就是我们的救恩—5～8。</p>
+<p class="ot2">2　神为着祂的美意在我们里面运行，使我们能达到神无上救恩的顶点，而我们藉着顺从祂与祂合作—13。</p>
+<p class="ot1">二　将基督表明出来—14～16</p>
+<p class="ot2">1　不发怨言，也不起争论—14。</p>
+<p class="ot2">2　无可指摘，纯洁无杂，在弯曲悖谬的世代中，作神无瑕疵的儿女—15上。</p>
+<p class="ot2">3　好像发光之体显在世界里—15下。</p>
+<p class="ot2">4　将生命的话表明出来—16。</p>
+<p class="ot1">三　浇奠在信徒信心之祭物上的奠祭—17～18</p>
+<p class="ot2">1　奠祭乃是附加在五种基本祭物上的祭，为着使神喜乐。</p>
+<p class="ot2">2　使徒享受基督而被基督这属天的酒充满，成为献给神，使神喜乐的奠祭。</p>
+<p class="ot2">3　信徒因着经历并享受基督而构成信心的祭物，让神满足。</p>
+<p class="ot2">4　使徒与信徒彼此一同喜乐。</p>
+<p class="ot1">四　使徒对信徒的关切—19～30</p>
+<p class="ot2">1　使徒对信徒的关切就是关心基督的事，也就是对众召会和众圣徒的关切—20～21。</p>
+<p class="ot2">2　提摩太与保罗在魂里是一，这使他们能经历基督到极点—22。</p>
+<p class="ot2">3　以巴弗提为召会和圣徒不顾自己的魂—25，30。</p>
+<p class="ot2">4　对召会真正的关切，乃是与使徒同魂，不顾自己的魂生命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>经历基督为我们常时的救恩，为我们信心的祭物和奠祭，并在魂里与使徒是一，而对召会有真正的关切。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在腓立比二章的后半说到要以基督为我们常时的救恩，并完成这救恩，就是神为着祂的美意在我们里面运行，使我们能达到神无上救恩的顶点。我们藉着顺从神，与祂合作，不发怨言，不起争论，使我们无可指摘，纯洁无杂，在弯曲悖谬的世代中，作神无瑕疵的儿女，将基督表明出来。保罗也说到他因着享受基督而被基督这属天的酒充满，成为献给神，使神喜乐的奠祭。腓立比的信徒则因着经历并享受基督而构成信心的祭物，让神满足。为此使徒与信徒彼此一同喜乐。最后使徒表达他对信徒的关切，就是关心基督的事，也就是对众召会和众圣徒的关切。在这事上，提摩太与保罗在魂里是一，以巴弗提为着召会和圣徒不顾自己的魂，甚至甘愿牺牲自己的魂，这使他们对基督的经历达到高峰。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　作成我们自己的救恩</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓二12：这样，我亲爱的，你们既是常顺从的，不但我与你们同在的时候，就是我如今不在的时候，更是顺从的，就当恐惧战兢，作成你们自己的救恩。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这里的救恩是天天、时刻、实际的救恩。是为着所有的信徒，在日常生活的一般景况中，从普通的事物中得救。凭信接受救恩，是一次永远的；完成救恩，是一生之久的。因此保罗嘱咐我们，当恐惧战兢，作成我们的救恩。我们有恐惧战兢的态度，常常且绝对的顺从，就能经历基督在我们里面是主观的榜样，作成我们自己的救恩。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历基督在我们里面是主观的榜样，作成我们自己的救恩。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

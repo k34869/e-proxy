@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <title>SS</title>
+    <link rel="stylesheet" href="../../assets/index.css" />
+    <link rel="stylesheet" href="../../assets/mine.css" />
+
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <van-nav-bar title="生命读经" @click-left="back" @click-right="backHome">
+        <template #left>
+          <van-icon name="arrow-left" />
+        </template>
+        <template #right>
+          <van-icon name="wap-home" />
+        </template>
+      </van-nav-bar>
+      <div id="main">
+        <div style="text-align: center">
+          <van-space wrap>
+            <div style="text-align: center">
+              <van-button @click="jumpTo(1)" style="margin: 3px" type="primary">创</van-button>
+              <van-button @click="jumpTo(2)" style="margin: 3px" type="primary">出</van-button>
+              <van-button @click="jumpTo(3)" style="margin: 3px" type="primary">利</van-button>
+              <van-button @click="jumpTo(4)" style="margin: 3px" type="primary">民</van-button>
+              <van-button @click="jumpTo(5)" style="margin: 3px" type="primary">申</van-button>
+              <van-button @click="jumpTo(6)" style="margin: 3px" type="danger">书</van-button>
+              <van-button @click="jumpTo(7)" style="margin: 3px" type="danger">士</van-button>
+              <van-button @click="jumpTo(8)" style="margin: 3px" type="danger">得</van-button>
+              <van-button @click="jumpTo(9)" style="margin: 3px" type="danger">撒</van-button>
+              <van-button @click="jumpTo(11)" style="margin: 3px" type="danger">王</van-button>
+              <van-button @click="jumpTo(13)" style="margin: 3px" type="danger">代</van-button>
+              <van-button @click="jumpTo(15)" style="margin: 3px" type="danger">拉</van-button>
+              <van-button @click="jumpTo(16)" style="margin: 3px" type="danger">尼</van-button>
+              <van-button @click="jumpTo(17)" style="margin: 3px" type="danger">斯</van-button>
+              <van-button @click="jumpTo(18)" style="margin: 3px" type="success">伯</van-button>
+              <van-button @click="jumpTo(19)" style="margin: 3px" type="success">诗</van-button>
+              <van-button @click="jumpTo(20)" style="margin: 3px" type="success">箴</van-button>
+              <van-button @click="jumpTo(21)" style="margin: 3px" type="success">传</van-button>
+              <van-button @click="jumpTo(22)" style="margin: 3px" type="success">歌</van-button>
+              <van-button @click="jumpTo(23)" style="margin: 3px" type="primary">赛</van-button>
+              <van-button @click="jumpTo(24)" style="margin: 3px" type="primary">耶</van-button>
+              <van-button @click="jumpTo(25)" style="margin: 3px" type="primary">哀</van-button>
+              <van-button @click="jumpTo(26)" style="margin: 3px" type="primary">结</van-button>
+              <van-button @click="jumpTo(27)" style="margin: 3px" type="primary">但</van-button>
+              <van-button @click="jumpTo(28)" style="margin: 3px" type="primary">何</van-button>
+              <van-button @click="jumpTo(29)" style="margin: 3px" type="primary">珥</van-button>
+              <van-button @click="jumpTo(30)" style="margin: 3px" type="primary">摩</van-button>
+              <van-button @click="jumpTo(31)" style="margin: 3px" type="primary">俄</van-button>
+              <van-button @click="jumpTo(32)" style="margin: 3px" type="primary">拿</van-button>
+              <van-button @click="jumpTo(33)" style="margin: 3px" type="primary">弥</van-button>
+              <van-button @click="jumpTo(34)" style="margin: 3px" type="primary">鸿</van-button>
+              <van-button @click="jumpTo(35)" style="margin: 3px" type="primary">哈</van-button>
+              <van-button @click="jumpTo(36)" style="margin: 3px" type="primary">番</van-button>
+              <van-button @click="jumpTo(37)" style="margin: 3px" type="primary">该</van-button>
+              <van-button @click="jumpTo(38)" style="margin: 3px" type="primary">亚</van-button>
+              <van-button @click="jumpTo(39)" style="margin: 3px" type="primary">玛</van-button>
+            </div>
+          </van-space>
+          <van-divider></van-divider>
+          <van-space wrap>
+            <div style="text-align: center">
+              <van-button @click="jumpTo(40)" style="margin: 3px" type="danger">太</van-button>
+              <van-button @click="jumpTo(41)" style="margin: 3px" type="danger">可</van-button>
+              <van-button @click="jumpTo(42)" style="margin: 3px" type="danger">路</van-button>
+              <van-button @click="jumpTo(43)" style="margin: 3px" type="danger">约</van-button>
+              <van-button @click="jumpTo(44)" style="margin: 3px" type="danger">徒</van-button>
+              <van-button @click="jumpTo(45)" style="margin: 3px" type="primary">罗</van-button>
+              <van-button @click="jumpTo(46)" style="margin: 3px" type="primary">林</van-button>
+              <van-button @click="jumpTo(47)" style="margin: 3px" type="primary">林</van-button>
+              <van-button @click="jumpTo(48)" style="margin: 3px" type="primary">加</van-button>
+              <van-button @click="jumpTo(49)" style="margin: 3px" type="primary">弗</van-button>
+              <van-button @click="jumpTo(50)" style="margin: 3px" type="primary">腓</van-button>
+              <van-button @click="jumpTo(51)" style="margin: 3px" type="primary">西</van-button>
+              <van-button @click="jumpTo(52)" style="margin: 3px" type="primary">帖</van-button>
+              <van-button @click="jumpTo(53)" style="margin: 3px" type="primary">帖</van-button>
+              <van-button @click="jumpTo(54)" style="margin: 3px" type="primary">提</van-button>
+              <van-button @click="jumpTo(55)" style="margin: 3px" type="primary">提</van-button>
+              <van-button @click="jumpTo(56)" style="margin: 3px" type="primary">多</van-button>
+              <van-button @click="jumpTo(57)" style="margin: 3px" type="primary">门</van-button>
+              <van-button @click="jumpTo(58)" style="margin: 3px" type="primary">来</van-button>
+              <van-button @click="jumpTo(59)" style="margin: 3px" type="primary">雅</van-button>
+              <van-button @click="jumpTo(60)" style="margin: 3px" type="primary">彼</van-button>
+              <van-button @click="jumpTo(61)" style="margin: 3px" type="primary">彼</van-button>
+              <van-button @click="jumpTo(62)" style="margin: 3px" type="primary">约</van-button>
+              <van-button @click="jumpTo(63)" style="margin: 3px" type="primary">约</van-button>
+              <van-button @click="jumpTo(64)" style="margin: 3px" type="primary">约</van-button>
+              <van-button @click="jumpTo(65)" style="margin: 3px" type="primary">犹</van-button>
+              <van-button @click="jumpTo(66)" style="margin: 3px" type="warning">启</van-button>
+            </div>
+          </van-space>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../../assets/v3.js"></script>
+  <script src="../../assets/min.js"></script>
+  <script>
+    const Composition = {
+      setup() {
+        const back = () => {
+          history.back();
+        };
+        const backHome = () => {
+          window.location.href = "../../主页.html";
+        };
+        const jumpTo = name => {
+          window.location.href = `life${name}.html`;
+        };
+        return { back, backHome, jumpTo };
+      },
+    };
+
+    const app = Vue.createApp(Composition);
+    app.use(vant);
+    app.use(vant.Lazyload);
+    app.mount("#app");
+  </script>
+
+  <style></style>
+</html>

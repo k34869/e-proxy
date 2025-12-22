@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1533')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1535')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 4 课<br />
+与神的工作合作</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：除去我的遮蔽。（诗歌324首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：且愿和平的神，亲自全然圣别你们，又愿你们的灵、与魂、与身子得蒙保守，在我们主耶稣基督来临的时候，得以完全，无可指摘。（帖前五23。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　信徒的合作—活出属灵圣别的生活—帖前五12～22</p>
+<p class="ot2">1　敬重带领的人，彼此和睦—12～13。</p>
+<p class="ot2">2　劝戒、鼓励、扶持、恒忍—14～15。</p>
+<p class="ot2">3　喜乐、祷告、谢恩、挑旺灵、申言—16～22。</p>
+<p class="ot1">二　神的工作—圣别并保守信徒—23～24</p>
+<p class="ot2">1　且愿和平的神，亲自全然圣别我们—23上。</p>
+<p class="ot2">2　愿我们的灵、与魂、与身子都得蒙保守—23中。</p>
+<p class="ot2">3　在我们主耶稣基督来临的时候，得以完全，无可指摘—23下。</p>
+<p class="ot2">4　那召我们的是信实的，祂必作成这事—24。</p>
+<p class="ot1">三　结语—25～28</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见为着召会生活的圣别生活，我们需要与神的工作合作，使我们全然圣别，灵、魂、体都得蒙保守。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>帖前五章的第二段告诉我们与神合作的路，就是在召会生活中要敬重带领的人，彼此和睦，并彼此劝戒、鼓励、扶持、恒忍。常常喜乐，不住的祷告，凡事谢恩，不销灭那灵，不藐视申言者的话。这样和平的神就要全然圣别我们，并使我们的灵、魂、身体都得蒙保守，在我们主耶稣基督回来的时候，得以完全，无可指摘。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　敬重带领的人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖前五12～13：弟兄们，我们还请求你们，要敬重那些在你们中间劳苦，并在主里带领你们，劝戒你们的人，又因他们所作的工，在爱里格外尊重他们；你们也要彼此和睦。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗在十三节嘱咐我们，要因带领的人所作的工，在爱里格外尊重他们。如果地方召会中的圣徒不尊敬带领的人，就不会和睦。家庭生活的原则也是这样，子女若不尊敬自己的父母，怎么会和睦？在这样的光景里，一个家庭是不可能和睦的。照样，在召会生活中，圣徒需要尊敬带领的人，才有彼此和睦的光景。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>敬重在召会中带领我们的人，并与众圣徒彼此和睦。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

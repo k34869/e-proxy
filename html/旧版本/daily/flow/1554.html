@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1553')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1555')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 6 课<br />
+神的经纶与不同的教训相对</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　神愿意万人得救</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>提前二4～6：祂愿意万人得救，并且完全认识真理；因为只有一位神，在神和人中间，也只有一位中保，就是那人基督耶稣；祂舍了自己，为万人作赎价，在适当的时期，这事就证明出来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗嘱咐提摩太第一要紧的事就是要为万人祷告，因为这与神的愿望有关，就是提前二章四至七节所说的：‘祂愿意万人得救，并且完全认识真理；因为只有一位神，在神和人中间，也只有一位中保，就是那人基督耶稣；祂舍了自己，为万人作赎价，在适当的时期，这事就证明出来；我为此被派，在信仰和真理上，作传扬者，作使徒，（我说的是真话，并不是谎言，）作外邦人的教师。’我们该为万人祷告，因为我们的救主神愿意万人得救，并且完全认识真理。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>向周围的人传福音，宣告基督为人作赎价。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>教导不同的事拆毁神的建造，废掉神的经纶；甚至一点不同的教训，也会毁坏主的恢复。所以我们必须远避不同的教训，并专注于神的经纶。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>什么是不同的教训？要对抗不同的教训，我们必须持守什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘〔提摩太前书〕这封书信完全是一种预防注射。当召会往前去的时候，有一种又一种的毒素注射到基督徒的召会中。保罗在他著作的职事结束时，写了提摩太前书，给召会预防注射，以对抗这一切毒素。…教导不同的事，会把人杀死，拆毁神的建造，而废除神的整个经纶。我们都必须看见，甚至教导一点点不同的事，也会将主的恢复拆毁。…你无须释放一篇完整的信息。只要说一句话，表达出你的那一种观念，就把一切都拆毁了。…你的说话能建造，也能拆毁。很可能你的说话是在拆毁、消杀并废除。</p>
+<p>保罗在提前一章三节告诉提摩太说，他把提摩太留在以弗所，好嘱咐那几个人不可教导不同的事。我们也许问，所有的基督教教师惟一该教导的是什么？今天基督教教师教导人许多的事，就如长老治会、受浸、监督方式、圣洁、如何传福音，以及教导圣经的路。我们都同意，教导犹太教是错误的，但教导如何传福音呢？传福音有什么不对？我们必须看见，甚至教人传福音也会造成分裂。这是错误的。只有一种职事始终建造、造就、成全人，完全没有拆毁。新约所称义、提倡、高举甚至荣耀的，只有那惟一的职事。在提前一章四节，保罗接着告诉提摩太，那些教导不同之事的人，应当满心被神的经纶所占有。…只有一种职事，是建造而绝不拆毁的，就是神的经纶。’（长老训练第三册，41～42页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>藉着阅读属灵书报及参加一年七次的特会训练，进入职事的话语，而被神的经纶所充满、占有。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

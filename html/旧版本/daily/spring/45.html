@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('44')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('46')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第2系列 第35课 正确的人性-不嫉妒</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多前书十三4上爱是恒久忍耐，又有恩慈；爱是不嫉妒；</p>
+<p>小黑猫因长得丑，被主人放到麻袋中扔进河里。后来被卡梅利多和卡门救上来，并让住在鸡舍。小黑猫生活安稳了。但是一个名叫小胖头的小鸡经常嘲笑小黑猫，说他是被主人抛弃的丑猫。小黑猫宽容大度，不和小胖头吵。不久小胖头的灾难来了，有一天一大群黄鼠狼来了，小胖头被抓了，小黑猫不计前嫌，不顾自已安危，飞快冲向黄鼠狼，经过一阵搏斗，救回了小胖头，小胖头惭愧地向小黑猫道歉致谢，大家都称赞小黑猫。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：爱是不计前嫌，原谅他人的过错。
+</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：小朋友们，当你的朋友和别人玩的时候，你感觉如何？你会要求他们只跟你一人玩吗？你会让他们必须选择和谁玩吗？当你的朋友有了新朋友时，我们不应该嫉妒，反而你应该很高兴。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>雅各书三16 因为何处有嫉妒和私图好争，何处就有扰乱和各样的坏事。</p>
+<p>同是两根竹子，一支做成了笛子，一支做成了晾衣杠。晾衣杠不服气地问笛子：我们都是同一片山上的竹子，凭什么我天天日晒雨淋，不值一文。而你却价值千金呢？笛子回答说：因为你只挨了一刀，而我却经历了千刀万剐，精雕细做。人生亦是如此，经得起打磨，耐得起寂寞，扛得起责任，肩负起使命，人生才会有价值。看见别人辉煌的时候，不要嫉妒，因为别人付出的比你多。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：嫉妒是对他人成功的怨恨。当某人得到比我们更多的注意或他们某方面比我们更好时，我们不应该嫉妒。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：小朋友们，如果你的队友踢足球比你强，你感觉如何？你会感觉很好，还是忽视他们？我们应该支持队友的成就，而不是嫉妒他们。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言六34 因为嫉恨乃是男人的烈怒，在报仇的日子绝不留情。</p>
+<p>清朝雍正年间有个白泰官，是当时八大武术家之一。他成亲后因故离家多年，一直浪迹江湖。有一次回乡途中，他恰巧遇到个小孩正对着一块大石头练功，掌到之处，火光四溅。白泰官心想：“我家乡竟有这样的小孩，现在武功就如此了得，长大后肯定超过我。”在强烈嫉妒心的驱使下，他竟一掌把孩子打死了。在断气之前，孩子只说了一句：“我爹爹白泰官一定会找你报仇!”白泰官一听，如五雷轰顶，方知杀的是自己儿子，但悔之晚矣。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：内在的嫉妒可能导致邪恶的行为。我们应该对付我们对他人的嫉妒。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：讲述该隐和亚伯的故事（创世记4:3-9），或约瑟和他的兄弟们的故事（创世记37章12节31节）。讨论他们内心的嫉妒导致了什么。强调内在嫉妒的严重性和需要留意并对付它。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('205')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('207')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">慕勒了结旧生活</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">一切苦毒、恼恨、忿怒、喧嚷、毁谤，同一切的恶毒，都要从你们中间除掉。（弗4:31）</div>
+<div id="CC">Let all bitterness and anger and wrath and clamor and evil speaking be removed from you，with all malice.（Ephesians 4:31）</div>
+<div id="C">慕勒年少时，行为放荡，酗酒偷窃，欺骗伪造，样样都来。那时，他不只是个大学生，而且还被接纳，预备承接圣职，特准在国教的教堂传道。他虽一再努力改良，却一再遭遇失败，因为他尚未找到能力的秘诀。后来，在一次家庭聚会中，他蒙了光照，清楚得救，立刻就有一种新的洁净，和成圣的能力，使他憎恶罪中之乐，远避旧时的同伴，从此绝迹酒肆；并且在言语上受约束，仿佛在他的嘴唇设立了守望，每句话都经过检点。<br/><br/>　当时他正在翻译一本法文小说，希望利用所得酬金，逛游巴黎等地。他先是放弃了这个旅行计划，却仍继续小说的翻译。后来，他清楚晓得这事不是出于信心，乃是出于罪恶，便把全部译稿付之一炬。从此常常读经、祷告，成为一个在主里的信徒。他不停的参加聚会，勇敢的站在主这一边，忍受昔日同学的讥刺、羞辱，并愿意付上一切代价跟随主，结果成为一位主所大用的仆人。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

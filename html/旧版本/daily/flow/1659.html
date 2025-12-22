@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1658')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1660')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 3 课<br />
+信心的试验与魂的救恩</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　那灵对神救恩的实际应用</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前一12：他们得了启示，知道他们供应这些事，不是为自己，乃是为你们；那些靠着从天上差来的圣灵，传福音给你们的人，现在将这些事报给你们；天使也渴望详细察看这些事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>使徒的传讲乃是那灵在新约里对神救恩的实际应用。申言者的预言和使徒的传讲都是那灵的应用。每当我们参加职事话语供应的聚会，如一年七次的特会和训练，我们就在基督之灵的应用之下。在召会的聚会中，我们也需要传讲基督、基督的死、和基督各种的荣耀，使更多的人藉着这职事并靠着那灵，接受神救恩的应用。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>参加职事话语供应的聚会，藉着那灵的应用接受基督；在召会的聚会中传讲基督，使人藉着那灵接受神救恩的应用。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在试炼中有信心，认识我们的信心受试验，便能得着信心的结果，就是魂的救恩。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神为什么要允许我们经过苦难与试炼？这试炼的结果能叫我们得着什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘逼迫乃是苦难。然而，试炼不仅仅是苦难，因为试炼有试验并验证我们的目的。我们天上的父为我们安排不同的试炼。这一切的试炼对我们都是有益的。正如考试是为了学生的益处，所以，我们基督徒所面临的诸般试炼，对我们也是益处。</p>
+<p>或许你在相信主耶稣之后，以为基督徒的生活中没有苦难或试炼。你也许有过这样的想法，认为你是神的儿女，父不会允许任何坏事临到你。这是许多信徒的想法，但是试炼终究会来。我们信徒必须经过的诸般试炼，乃是要试验、察验、并验证我们。这些试炼对我们基督徒实行上的完全是一个帮助，因为神用这些试炼来成全我们。</p>
+<p>如果我们明白神乃是用试炼来成全我们，我们就会感谢神，因祂藉着试炼来成全我们。试炼不仅对我们属灵的教育和生命的经历有帮助，也对我们的性格和日常生活中的行事为人有帮助。许多信徒能见证，藉着试炼，神在他们的基督徒生活中实际的成全了他们。’（新约总论第六册，361页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在试炼中有信心，认识我们的信心受试验，便能得着信心的结果，就是魂的救恩。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1784')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1786')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 3 课<br />
+在以弗所和士每拿的召会</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　生命的冠冕</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启二10下：你务要至死忠信，我就赐给你那生命的冠冕。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>给士每拿的书信所给得胜者的应许有两面：积极的一面是得着生命的冠冕，消极的一面是不受第二次死的害。我们都要作得胜者。若我们今世不是得胜者，来世就要受第二次死的害。这不是说我们还要沉沦。这是指在我们复活以后，还要从主那里，按照我们今日的行事为人，接受一些对付。这事曾被蒙蔽了好长的时间，少有基督徒敢去碰它。但是主永不忽略祂的话。所以我们要受警告，必须胜过患难、受苦、逼迫，使我们可以得着生命的冠冕，而且不受第二次死的害。愿主怜悯我们！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>胜过患难、受苦、逼迫，使我们可以得着生命的冠冕。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>不离弃起初的爱，享受基督作生命，我们就会将祂如同光照耀出来，也会成为照耀的灯台，作耶稣的见证，并要在千年国里，在神的乐园里享受基督作我们的赏赐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>什么是起初的爱？你如何在日常生活及召会生活中经历基督作起初的爱？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘召会离弃了对主起初的爱。从外面看，没有什么不对的事；从外面来说，一切都没有问题，都是正常的。但从里面来说，召会失去了她对主起初的爱。…她若不悔改，就要在两方面受到亏损。第一，灯台要从以弗所挪去。第二个亏损是，信徒得不着神乐园中生命树的享受为赏赐。</p>
+<p>我们必须在结什么种的领带，梳什么样的发型，并一切的小事上得胜。在一切事上，我们都必须让基督居首位。我们若这样作，我们基督徒的生活就会不同，我们的感觉也会不同。我们终日会在主里快乐。当我们在主里喜乐并同主喜乐时，凡事都令人愉快。另一面，当我们没有在主里喜乐，没有同主喜乐时，凡事就都令人不愉快。只有爱主的人才享受主作恩典。因此，我们第一件要胜过的事乃是胜过离弃起初的爱。离弃起初的爱，是历世代以来召会失败的根源和主要的原因。</p>
+<p>你如果不让主居首位，也不享受主，即使只一个月，召会生活就可能对你成为不愉快的地方。…你可能不会这么说，但你在深处会想，召会生活中并不怎么好。这样，召会对你就完全不再是乐园了。但是当你胜过了失去起初的爱，并维持吃基督，就是维持对主的享受，召会生活立即要成为你的乐园。因此，我们对召会的感觉和态度乃在于我们的光景。我们若在凡事上让主居首位，并终日享受祂作生命树，不管召会的情形怎样，召会要立即成为我们的乐园。…</p>
+<p>如果我们今天在凡事上以基督为第一，我们就会有爱，我们就会享受祂作生命，我们就会将祂如同光照耀出来，我们也会成为照耀的灯台，作耶稣的见证。这至终要成为我们的赏赐，不仅在今世，更是在来世。在千年国里，我们要在神的乐园里享受基督作我们的赏赐。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练每天对主说，‘主耶稣，我爱你。’</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

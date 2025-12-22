@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('207')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('209')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">保罗向主并向人敞开</p>
+<p>哥林多人哪，我们的口向你们是张开的，我们的心是宽宏的。（林后六11）</p>
+<p>保罗是藉着亚拿尼亚，基督身体上的一个肢体，按手而得救的，（徒九10～18，）因此他的得救是在身体里。不仅如此，他得救后也是立刻活在身体里，这可从他在大马色和门徒同在，以及他的门徒在夜间用筐子把他从城墙上缒下去，逃避犹太人的杀害，得着证明。（19，23～25。）保罗被主得着后，就是一个向主敞开的器皿。他在加拉太书里见证，神乐意将祂儿子启示在他里面；（一16；）又说，他藉着律法，已经向律法死了，叫他可以向神活着。（二19。）在哥林多后书中，保罗更将自己比喻为：在凯旋行列中庆祝基督得胜的俘虏，带着香并散放基督香气的人，用基督为内容所写的信，观看并返照基督荣耀的镜子，盛装荣耀基督这超越宝贝的瓦器。（参四7注1。）这五种身份都说出保罗是敞开且被基督充满，并让基督从他身上活出的器皿。</p>
+<p>再者，保罗竭力传扬福音，要将基督那追测不尽的丰富，当作福音传给外邦人。（弗三8。）为此，他向着什么人，就作什么人，好与人同享这福音。（林前九20～23。）他不仅传福音，也活福音。他向帖撒罗尼迦人是敞开的，使他们可以看见他的行事为人。（帖前一5。）他更写信告诉哥林多人，他向着他们，口是张开的，心是宽宏的。因着保罗的敞开与宽宏，他能将误入歧途、被岔开的信徒，带回到与神和好的情形里。（参林后六11与注1。）</p>
+<p>保罗无论在那里都有同伴。他在哥林多传福音，就住在亚居拉和百基拉的家里，与他们一同配搭服事。（徒十八1～4。）此外，提摩太、以巴弗提、阿尼色弗、西拉、路加等等，都与他一同在主里劳苦。甚至保罗写信给在罗马的召会，问安的对象多达二十多位。（罗十六。）他写给歌罗西召会的书信，结语也满了问安和交通。（西四7～17。）这交通给我们看见一幅新人的图画。这也是一幅向基督身体敞开，作基督身体一的见证的图画。</p>
+<p class="title">狱中写天路历程</p>
+<p>本仁约翰（John Bunyan，1628～1688）是一位修理洋铁壶的匠人。他每天出去，一面作生意，一面向人传道。每天听他传道的人很多。当时的政府不准人民随便传道，但他不顾一切，仍旧热心传道，因此被下在监里。然而，他向人敞开的心、以及对福音的热切，一点也不受监牢的限制。他在狱中写了一本‘天路历程’，因这本书得救的不知有多少万人。现在这本书被译成几十种文字，甚至有些学校将它当作教科书使用。因着这本书，福音传到了世界各地，叫世世代代的人得着益处。（参造就故事下册，52～53页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：向主敞开被主充满，并向人敞开，得着属灵同伴和配搭，作基督身体一的见证。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

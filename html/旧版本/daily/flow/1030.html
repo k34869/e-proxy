@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1029')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1031')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 4 课<br />
+召会受逼迫与福音的扩展</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：速兴起传福音。（诗歌664首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但司提反满有圣灵，定睛望天，看见神的荣耀，又看见耶稣站在神的右边，就说，看哪，我看见诸天开了，人子站在神的右边。（徒七55～56。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　使徒的神迹与议会的捉拿—徒五12～28</p>
+<p class="ot1">二　使徒的见证并议会的禁止与释放—五29～42</p>
+<p class="ot1">三　七位执事的选立—六1～6</p>
+<p class="ot1">四　神话语的扩长与门徒的繁增—六7</p>
+<p class="ot1">五　犹太宗教徒逼迫的扩增—六8～八3</p>
+<p class="ot2">1.　司提反的殉道—六8～七60：</p>
+<p class="ot2">a.　受抵挡、被捉拿—六8～七1。</p>
+<p class="ot2">b.　作见证—七2～53。</p>
+<p class="ot2">c.　被杀害—七54～60。</p>
+<p class="ot2">2.　耶路撒冷召会的遭害—八1～3。</p>
+<p class="ot1">六　分散的人往各处去，传神的话为福音—八4。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒行传中初期召会生活的描述：七位执事的选立、司提反的殉道、召会受逼迫并圣徒分散传福音。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主藉使徒的手，在民间行了许多神迹奇事，信的人越发增多。这却引起议会的捉拿，但使徒放胆见证‘顺从神，不顺从人，是应当的’，又见证犹太首领所弃绝杀害的那人耶稣，已被神高举，为元首、君王，并作救主，拯救神所拣选的人。最后议会只得释放他们。此外，使徒行传也描述初期召会第二件消极的事，是因不同语言的人住在一起，而产生的问题。使徒智慧的选立七位执事管理饭食，好使他们能专心祷告，尽话语的职事。这指明召会的责任不该落在少数人身上，人人都应当尽功用、负责任，神的话就得到扩长，门徒也因此繁增。此时犹太宗教徒却起来逼迫门徒，司提反被捉拿、作见证、被杀害，耶路撒冷的召会也大遭逼迫，扫罗更带头残害召会。然而这是主的主宰，要使信徒分散，往各处去传神的话为福音，使主在行传一章八节的应许得到应验。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　使徒的神迹与议会的捉拿</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主的使者，夜里开了监门，领他们出来，说，你们去站在殿里，把这生命的话，都讲给百姓听。（徒五19～20。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主借着使徒的手，在民间行了许多神迹奇事。然而我们需要看见，奇事神迹只是证实使徒所传讲、所供应以及所行的，绝对是出于神，不是出于人。因着他们同心合意的见证，信的人越发加添归主，连男带女很多。这却引起大祭司和议会的人忌恨，就把他们下在监里。但主的使者却在夜间来解救他们，要他们去站在殿里，把这生命的话，都讲给百姓听。‘这生命’乃是指彼得所传讲、供应、活出的神圣生命，这生命胜过了犹太首领的逼迫、恐吓和监禁。我们需要寻求从主来的怜悯与恩典，叫我们每逢讲说神圣的生命时，就是讲说我们所活的生命的话，将生命供应给人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>寻求从主来的怜悯与恩典，讲说生命的话，将生命供应给人。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

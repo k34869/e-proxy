@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1736')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1738')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 15 课<br />
+神圣膏油涂抹的教导</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：奇妙的恩膏住我里。（诗歌215首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你们从祂所领受的膏油涂抹，住在你们里面，并不需要人教导你们，乃有祂的膏油涂抹，在凡事上教导你们；这膏油涂抹是真实的，不是虚谎的，你们要按这膏油涂抹所教导你们的，住在祂里面。（约壹二27。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　关于神圣的三一，照着生命的长大－约壹二12～19</p>
+<p class="ot2">1　使徒约翰称所有的信徒为‘孩子们’，指明信徒重生后与父有生命的关系－12。</p>
+<p class="ot2">2　召会中的父老们认识那从起初原有的，指明那些在神圣生命里成熟的信徒，因着对神的经历而认识神－13～14。</p>
+<p class="ot2">3　召会中的青年人因着神的话，而胜了那恶者－13～14。</p>
+<p class="ot2">4　召会中的小孩子们认识父－13。</p>
+<p class="ot2">5　信徒不要爱世界和世界上的事，却要实行神的旨意－15～17：</p>
+<p class="ot2">a　人若爱世界，爱父的心就不在他里面－15下。</p>
+<p class="ot2">b　世界上的事，就是肉体的情欲、眼目的情欲、今生的骄傲，都不是出于父－16。</p>
+<p class="ot2">c　这世界和其上的情欲，正在过去－17上。</p>
+<p class="ot2">d　惟独实行神旨意的，永远长存－17下。</p>
+<p class="ot2">6　给小孩子们的话－18～19。</p>
+<p class="ot1">二　为着住在三一神里面－20～27</p>
+<p class="ot2">1　我们有从那圣者来的膏油涂抹，教导我们关于神圣三一的事－20～26。</p>
+<p class="ot2">2　膏油涂抹就是内住复合之灵的运行并工作，出埃及三十章二十三至二十五节涂抹的油、复合的膏，是这灵的完全预表。</p>
+<p class="ot2">3　我们在重生时，这从那圣者来的包罗万有赐生命的灵就进到我们里面，并且永远住在我们里面－27。</p>
+<p class="ot2">4　凭着这灵，小孩子们认识父，并且晓得真理－13，21。</p>
+<p class="ot2">5　我们要按这膏油涂抹所教导的，住在三一神里面－27。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神圣膏油涂抹的教导。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>约翰在约壹二章十二至二十七节是照着信徒生命的长大，论到神圣的三一。他首先称所有的信徒为他的孩子们，他们的罪因着主的名得了赦免。然后约翰继续对父老们，就是那些在神圣生命里成熟的信徒说话。这些信徒借着神圣的膏油涂抹，认识那从起初原有的，就是那永远、在万有之先就存在的基督，祂是从起初原有的话。青年人是在神圣生命里长大的信徒，他们借着神圣的膏油涂抹，胜了那恶者。不仅如此，他们刚强，神的话住在他们里面。青年人的另一项特征是不爱世界。小孩子是刚得着神圣生命的信徒，他们借着神圣的膏油涂抹认识父。他们也曾听见，那敌基督的要来。但他们有从那圣者来的膏油涂抹，并且他们知道一切的事。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　召会中的三班人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹二13:父老们，我写信给你们，因为你们认识那从起初原有的。青年人，我写信给你们，因为你们胜了那恶者。小孩子们，我写信给你们，因为你们认识父。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们若要认识基督是那永远、在万有之先就存在的一位，我们就需要经历祂。在我们中间有一些父老，就是那些借着对主的经历而认识主的人。这种对主经历的认识，需要许多年日，这是那些能称为‘父老’者的资格。断定谁是父老的标准，乃是对于主这永远者在经历上的认识，这种认识是借着许多年日的生命过程而得到的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>借着对主的经历而认识主。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

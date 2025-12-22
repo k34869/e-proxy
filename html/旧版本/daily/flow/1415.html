@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1414')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1416')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 5 课<br />
+以基督为至宝，为我们的义</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：恩主耶稣你名我是。(诗歌61首。)</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：只是从前我以为对我是赢得的，这些，我因基督都已经看作亏损。不但如此，我也将万事看作亏损，因我以认识我主基督耶稣为至宝；我因祂已经亏损万事，看作粪土，为要赢得基督。(腓三7～8。)</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　凭那灵事奉，不信靠肉体—腓三1～6</p>
+<p class="ot2">1　嘱咐弟兄们要在主里喜乐—1。</p>
+<p class="ot2">2　属灵信徒与热中犹太教者的对比—2～3。</p>
+<p class="ot2">3　大数的扫罗—典型的热中犹太教者—4～6。</p>
+<p class="ot1">二　因基督看万事为亏损—7～8上</p>
+<p class="ot1">三　以认识基督为至宝，而亏损万事，看作粪土，为要赢得基督—8下</p>
+<p class="ot1">四　给人看出是在基督里面—9</p>
+<p class="ot2">1　不是有自己那本于律法的义—9上。</p>
+<p class="ot2">2　乃是有那基于信基督、本于神的义—9下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗因认识基督为至宝，而愿意亏损万事，看作粪土，为要赢得基督；他渴望给人看出他是在基督里面，活出那基于信、本于神的义。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在腓立比书第三章开头，首先嘱咐腓立比的信徒要在主里喜乐，这是因为热中犹太教者所引起的难处。因此，保罗也嘱咐腓立比的信徒，要提防这班热中犹太教者。并且说到新约的信徒，乃是藉着基督钉十字架受了真割礼，因此是凭神的灵事奉，不信靠肉体的。他又说到自己原来是典型的热中犹太教者，却因着认识基督为至宝，而亏损万事，看作粪土，为要赢得基督。从前他在犹太教中，给人看见他是在律法之下；现今他已从律法之下迁到基督里。他渴望给人看出他是在基督里面，不是有自己那本于律法的义，乃是有那基于信基督，本于神的义。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　信徒与热中犹太教者的对比</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓三3：真受割礼的，乃是我们这凭神的灵事奉，在基督耶稣里夸口，不信靠肉体的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>二至三节里有三重的对比：凭神的灵事奉的信徒，与犬类成对比；在基督里夸口的信徒，与作恶的成对比；不信靠肉体的信徒，与妄自行割的成对比。热中犹太教者信靠肉体而不信靠那灵。在基督里的真信徒却不信靠肉体，乃是完全信靠主。在二至三节里，我们看见何等的对比！我们凭神的灵事奉，我们在基督里夸口，并且我们不信靠肉体，只信靠主。因着我们否认我们的旧性情，我们乃是真受割礼的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>凭神的灵事奉，在基督里夸口，不信靠肉体，只信靠主。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

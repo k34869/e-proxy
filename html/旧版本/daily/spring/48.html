@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('47')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('49')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">祷告是基督徒的基本权利</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>祷告<div id="CC">耶和华啊，我却呼求你；早晨我的祷告要达到你面前。（诗篇88:13）</div>
+<div id="CC">But I，O Jehovah，have cried out to You; and in the morning my prayer comes before You.（Psalm 88:13）</div><hr/>祷告是基督徒的基本权利<div id="CC">向来你们没有在我的名里求什么，现在你们求，就必得着，叫你们的喜乐可以满足。（约16:24）</div>
+<div id="CC">Until now you have asked for nothing in My name; ask and you shall receive，that your joy may be made full.（John 16:24）</div>
+<div id="C">基督徒活在地上有一个基本的权利，就是祷告能得着答应。你一得着重生，神就给你一个基本的权利，就是你能求神，神能听你。约翰十六章告诉我们说，我们在主的名里求的时候，神就答应；叫我们的喜乐可以满足。我们如果常常祷告，我们在地上就可以作一个喜乐的基督徒。<br/><br/>　我们在圣经里能找出许多祷告得着答应的条件，但是，其中基本的条件只有几个。我们相信，如果按着这几件去作，祷告就可以得着答应。我们也相信，这几个条件对于多年祷告的人也能适用。<br/><br/>　第一，要求。所有的祷告，都应当在神面前真实的求。初信的人要学习一个功课，就是要祷告，并且要祷告得有一个专一的目标。<br/><br/>　第二，不可妄求。我们应当在神面前求，但是，还得有第二个条件，就是不可妄求（雅四3）。<br/><br/>　第三，要对付罪。有的人求是求了，也没有妄求，可是神还是没有听他的祷告。那是因为有一个基本的拦阻，就是他与神之间有罪的拦阻（诗六六18）。<br/><br/>　第四，要信，还有一个条件，就是在积极方面应当信。<br/><br/>　第五，要一直的求。祷告要继续，不可停止。（初信造就）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

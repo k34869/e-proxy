@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('383')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('385')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">耶稣拉一腿撒但拉一腿</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗 8:14　因为凡被神的灵引导的，都是神的儿子。For as many as are led by the Spirit of God, these are sons of God.</p><p>某博士看见几个孩子在巷中游戏。其中一个为领袖的小孩说，‘我们换一种更有趣的游戏罢？’遂即详细述说这种游戏的玩法及其趣味。博士站着专心观看。这位孩子玩得高兴时，旁边一屋窗户开了，有一妇女在窗中说，‘卡尔，你父亲叫你。’说完闭上窗户。博士心想，他们正玩得高兴，未必听见这位妇人的呼叫，就是听见了，也未必肯丢下游戏就去。那知，那个孩子立刻停止游戏，回家去了。博士说，‘这是孝子，他将是有福的人，幼时能够顺服，长大了必有指挥人的力量。’是的，这位小孩所以能够指挥别的小孩，因为他是听从父母使唤的。同样，只有顺从圣灵引导的人，才能让主使用。</p><p>儿童,#836</p><p>我们是小神人</p><p>一</p><p>我们是小神人，操练过神生活，神属性，藉人性，显出来。</p><p>说话真，作事真，不虚假，不遮掩。灵和真，敬拜神，荣耀神。</p><p>二</p><p>我们是小神人，操练过神生活，神属性，藉人性显出来。</p><p>说话准，听话准，传话准，作事准，时间准，彰显神，荣耀神。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

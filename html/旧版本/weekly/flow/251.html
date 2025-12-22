@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('250')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('252')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">在爱里彼此担就，俯就卑微的人</p>
+<p>凡事卑微、温柔、恒忍，在爱里彼此担就，以和平的联索，竭力保守那灵的一。（弗四2～3）</p>
+<p>在‘就’的操练上，我们需要操练在爱里担就人，俯就卑微的人。以弗所四章二至三节说，‘凡事卑微、温柔、恒忍，在爱里彼此担就，以和平的联索，竭力保守那灵的一。’卑微是留在低微的地位上，温柔是不为自己争什么。我们对待自己该有这两种美德。恒忍是忍受错待，我们对待别人该有这种美德。藉着这些美德，我们能彼此担就（不是彼此宽忍），也就是说，我们不弃绝那些麻烦的人，乃在爱里担就他们。这乃是生命的彰显。</p>
+<p>此外，在罗马十二章保罗说，‘不要思念高傲的事，倒要俯就卑微的人。’（16。）俯就卑微的人，在原文或译作，俯就卑微的事；保罗这样说，就把一切的人和事包括在内。我们该尽力俯就卑微的。</p>
+<p>在林后十章一节，保罗是藉着基督的温柔与和蔼劝哥林多人。在此，温柔也有不侵犯人，不与人相争，情愿让步的意思。和蔼是谦让宜人，情愿让别人侵犯；含示赦免、低就、容让、在任何情形下能适应别人。这二者乃是基督凭着神圣的生命，在祂的人性里所活出的美德。因着保罗活基督，基督的美德就成了他的美德。我们也应当回到灵里，接受基督作我们的人位，就自然的活出基督作我们的温柔与和蔼；这样，我们就不与人争，反而愿意赦免、低就、并适应人的情形。</p>
+<p>在帖前五章，保罗进一步说到如何俯就、担就人：‘要…抚慰灰心的人，扶持软弱的人…。’（14。）灰心的，直译，小魂的；即心思、意志和情感的度量，狭窄且脆弱的。小魂的人忍受苦难的度量非常有限；在圣徒中有些人生来就是这样小魂，他们需要得着抚慰。在我们周围也有一些软弱的圣徒，他们也许在灵、魂、体方面软弱，或是在信心上软弱；也有些人是在祷告上软弱。对于这些软弱的人，我们都要尽力扶持他们。（参以弗所书生命读经，372～373、843～844页；罗马书生命读经，372页；哥林多后书生命读经，517～518页；在神圣三一里并同神圣三一活着，135页；帖撒罗尼迦前书生命读经，190～191页。）</p>
+<p class="title">不以为已尽所能</p>
+<p>有一艘大船上的医生，一次在航程中看见一个小孩由船面上掉到海里。他不知道落海的是谁，他呼叫水手下水去救那个孩子。至终，有一水手把那孩子救了上来。水手们脱去孩子的外衣，为他施行人工呼吸，并按摩孩子的心脏，他们用尽所知道的方法，孩子仍无动静。最后，有一人说道：‘我们已经尽了我们所能的。’那位医生听见这话，心想应该过去看看能否作些什么。岂知一看，竟然是自己的儿子。这时，他再也不像那些水手们，以为已经尽所能的了。他立即脱下外衣，曲下身子，以口吹儿子的鼻孔，对着他的口呼吸，将他翻来覆去；这个方法不灵，再试别的方法；一面祷告，一面运用各种方法；如此过了许久，方才看见儿子胸部略微颤动，显出活气来。拯救人的灵魂也该像这位医生救自己的儿子那样低就并迫切；除非把他得着，就不以为已经尽所能的了。（参造就故事下册，19页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：操练在爱里担就人，俯就卑微的人，扶持软弱的人。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

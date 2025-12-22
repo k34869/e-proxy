@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1834')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1836')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 11 课<br />
+妇人和男孩子</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：得胜藉着吃基督。（补充本诗歌214首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：弟兄们胜过他，是因羔羊的血，并因自己所见证的话，他们虽至于死，也不爱自己的魂生命。（11。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　宇宙的光明妇人—启十二1</p>
+<p class="ot1">二　妇人受生产之苦—1～2</p>
+<p class="ot1">三　大红龙抵挡妇人—3～4</p>
+<p class="ot1">四　男孩子生出，被提到神和祂的宝座那里，以及妇人逃走—5～6</p>
+<p class="ot1">五　天上的争战—7～12</p>
+<p class="ot2">1　因着男孩子被提到天上。</p>
+<p class="ot2">2　弟兄们胜过他，是因羔羊的血，并因自己所见证的话，他们虽至于死，也不爱自己的魂生命。</p>
+<p class="ot1">六　龙逼迫妇人与她其余的儿女—13～18</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>宇宙的光明妇人、男孩子的属灵意义，以及天上的争战。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录的头一段由前十一章组成，说到从基督升天直到永远所要发生的一切事。第二段由后十一章组成，详述从今世的末三年半，就是大灾难的时期，直到新天新地的永世，所有重要关键的事物。本段所启示重要关键事物的头一项，就是生男孩子的妇人。这妇人身披日头，脚踏月亮，头戴十二星的冠冕。此乃象征神在地上全体的子民。她身上大部分披着日头，这日头象征神新约时代的子民。月亮表征神旧约时代的子民。月亮是在妇人的脚下，因为月亮时代是律法时代，不该像星那样被高举。星象征列祖，就是神颁赐律法之前的子民，在妇人头上为冠冕。这个宇宙的妇人忍受产难，表征历代神的子民一直忍受生产之苦，以产生男孩子，好为神的国争战。</p>
+<p>大红龙表征撒但；撒但总是抵挡神的子民，与他们作对。从创世记三章，古蛇撒但就不断的攻击这妇人直到今天，企图吞吃她的孩子。然而男孩子，就是神子民中较刚强的部分，总是从事与神仇敌的争战。他们在地上不断与撒但争战，如今天上正等待他们到达那里，好进行争战，把撒但从天上摔下去。得胜信徒胜过撒但，乃是藉着三件事：羔羊的血、自己所见证的话、以及不爱自己的魂生命。至终，当男孩子把龙摔到地上之后，龙就要逼迫妇人其余的部分，就是妇人的较弱部分，其中有些是守神诫命的犹太人，有些是持守耶稣见证的信徒，二者都要经过大灾难，受龙的逼迫和攻击。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　宇宙的光明妇人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启十二1：天上现出大异象来，有一个妇人身披日头，脚踏月亮，头戴十二星的冠冕。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这日头象征新约时代神的子民。月亮表征神旧约时代的子民。星象征列祖。神在这三个时代所有的子民构成了这妇人，他们都是发光者。因此，她是光明的妇人，历代以来一直照耀着。启示录十二章的妇人在时间和空间上都是宇宙的。她在时间上是宇宙的，从亚当的被造直到永远；她在空间上也是宇宙的，既在地上也在天上。在神眼中，所有蒙祂救赎的人乃是一个妇人。但这妇人的主要部分乃是新约的召会。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>看见宇宙光明妇人的异象，接受基督到我们里面，与基督是一。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

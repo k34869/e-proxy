@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1316')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1318')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 9 课<br />
+使徒为召会得启示的祷告</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：赞美赞美基督得胜。（诗歌109首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：愿我们主耶稣基督的神，荣耀的父，赐给你们智慧和启示的灵，使你们充分的认识祂；光照你们的心眼，使你们知道祂的呼召有何等盼望；祂在圣徒中之基业的荣耀，有何等丰富；以及祂的能力向着我们这信的人，照祂力量之权能的运行，是何等超越的浩大。(弗一17～19。)</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　使徒为召会的感谢－弗一15～16</p>
+<p class="ot1">二　使徒为召会的祈求，要圣徒看见－17～23</p>
+<p class="ot2">1　神呼召的盼望－17～18上。</p>
+<p class="ot2">2　神在圣徒中之基业的荣耀－18下。</p>
+<p class="ot2">3　神向着我们的能力－19～21。</p>
+<p class="ot2">4　召会－身体，基督的丰满－22～23。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒为召会得启示的祷告，说出了神呼召的盼望、祂在圣徒中之基业的荣耀、神向着我们的能力，并启示出召会就是基督的身体，基督的丰满。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒为召会能得着神的启示祷告，首先他求父赐给我们智慧和启示的灵，使我们充分的认识祂。我们要认识神的奥秘，必须有智慧和启示的灵，就是我们重生之人的灵，在灵里我们有属灵的悟性；并且我们的心眼需要被光照，这就需要我们有敞开的灵、清洁的良心和纯洁的心，使神能光照我们。如此我们就能看见神呼召的盼望，最主要的就是被提得赎、与基督同王的盼望，这在乎我们今世的生活。为这盼望，神已将祂在基督身上所运行那超越浩大的能力向我们传输，这浩大的能力有四重：复活的能力、升天的能力、使万有归服的能力、以及使万有归一于一个元首之下的能力。这能力是‘向着召会’的，使基督借着召会作万有的头，召会作了祂的身体，就是祂这位在万有中充满万有者的丰满，彰显祂到永远。整个以弗所一章，总结来说，就是启示基督的分赐与输供，而本章一切神祝福的项目，都可说是三一神分赐并作到我们里面的结果。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　智慧和启示的灵</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗一17：愿我们主耶稣基督的神，荣耀的父，赐给你们智慧和启示的灵，使你们充分的认识祂。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>要得着启示，我们需要有智慧和启示的灵。我们的灵有神的灵内住，使我们有智慧和启示认识神和祂的经纶。要领受智慧和启示的灵是在于我们的心，我们必须有敞开的灵、清洁的良心和纯洁的心，需要有清明的心思，爱的情感，和服从的意志，向神柔软不顽梗，以及神的光。求主赐我们光，愿我们都有保罗的祷告。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>有敞开的灵、清洁的良心和纯洁的心，得以领受智慧和启示的灵。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('500')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('502')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">坐在床上撑雨伞</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林后5：13　因我们或是癫狂，乃是向着神；或是谨守，乃是为着你们。</p><p>有一位弟兄，顶会祷告。倪弟兄因为身体有病，到他所住的地方去休息。他的房间正在倪弟兄的隔壁。到了晚上，倪弟兄因为发热，身体软弱，睡不着。他房间的灯一直点着，倪弟兄就去叩他的门，问他说，‘为什么还不睡。’他说，‘要睡的。’等一会儿，倪弟兄再去看他，他还没有睡。等到他睡时，已经是两点钟了。本来倪弟兄并不反对彻夜祷告，但是，我们只能在神面前癫狂。如果在人面前癫狂，人就要受不住。你不睡，人却要睡呢。你喜欢这样迟睡，人却不喜欢这样迟睡呢。所以第二天倪弟兄看见他，就说，‘弟兄，并非因我昨夜没有睡好要劝你，不过，照这样一直作下去，与你没有益处，与人也没有益处。’他不信倪弟兄的话。后来他吐血了。倪弟兄问到别的弟兄，他近来的情形怎样？有人告诉倪弟兄说，‘他的妻子把饭弄好了，一次请他不来吃，十二点他没有吃中饭，到两点，他还没有吃中饭。甚至到五点、六点还得通知他说，请你吃中饭罢。’哦！他这样，在神的面前够癫狂，但是在人的面前不够谨守。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

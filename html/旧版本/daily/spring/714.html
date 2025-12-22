@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('713')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('715')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">一坐下就开讲</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林前9:22　向软弱的人，我就成为软弱的，为要得软弱的人。向众人，我成了众人所是的；无论如何，总要救些人。</p><p>一天早上，纪福（P. Gifford）讲道说，每个信徒都该为主作见证，并且也都能够为主作见证。讲道毕，有位穷苦的女人，进前对纪福说，‘你今天所说的，太不公道。你坚持每个信徒都能为主作见证，并无例外么？像我这样的人应该是个例外。我怎能领人归主？我怎能出去为主作见证？我昼夜为人制衣，藉以供给我的一群孤儿。我没有受过教育，又没有时间。’纪福定睛看她，就问她说，‘每日有人到你家里否？’她回答说，‘有，每日总有几个人来。’‘送牛奶的人来么？’‘他当然来的，每日早晨必来。’‘送面包的人来么？’‘他也日日来。’‘送肉的人来么？’‘是，他也来。’纪福稍停一下，又说，‘智慧的人，只要与他说一句就够了。’那女人无言可说，就回家去。当晚她躺卧床上，回想纪福对她所说的话。她从未向人说过耶稣，从未领过一人归主。她遂立志，从明天起，从送牛奶的人着手。天尚未亮，她便起床。不久，送牛奶的人来了。她在门口遇见他，很想和他说起耶稣，但是舌头好像受了捆绑一样。送牛奶的人走了，忽然她叫声说，‘回来，我要与你讲话。’送牛奶的人回来，她就问：‘你认识耶稣为你的救主么？你是一个基督徒么？’送牛奶的人奇怪得很，几乎把牛奶翻倒了。于是望着女人的面，忧忧愁愁的说，‘主妇阿，你为何向我题起这个问题呢？我已经两夜不能睡觉。为着我的罪，我如同背负重担一样。我还不是基督徒，请帮助我，使我明白得救之道。’女人只用几分钟的时间，告诉送牛奶的人，主耶稣降世，为罪人舍命流血，只要信祂，便可得救。那送牛奶的人是女人所引领信主的第一人。她继续为主作见证，未过一年，共得七人信主。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

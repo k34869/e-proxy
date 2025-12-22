@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('240')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('242')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第21课  创造-人的受造奇妙可畏（七）手</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言三27 你手若有行善的力量，就不可推辞，当向那应得的人施行。</p>
+<p>手的用途：今天幼儿园的老师提问了一个问题，我们的手有什么用途？乐乐说吃饭时他用手帮助妈妈摆筷子，琳琳说她用自己的小手帮爷爷捶背，越越举手回答说爸爸下班回家他给爸爸端开水…大家七嘴八舌在讨论，老师很满意大家的回答，亲自给大家介绍手的功能，并一起讨论双手能做哪些有益的事情？哪些危险的、有害的事情？要大家学习保护自己的双手，并教大家作手工送给自己的同伴，小朋友觉得开心极了，觉得自己的双手真是又可爱又有趣！老师给大家留了作业，留意在生活中我们用双手都做了哪些帮助别人的事情？和爸爸妈妈一起讨论，并收集。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神为人造手，使人能做许多事。这是我们与动物不同的地方。我们应正确的使用我们的手。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：小朋友们，我们的手不同于动物的爪子，因为我们的手有手指和拇指可以一起工作。如果我们没有拇指，很难握住一支铅笔或一个球。孩子们，请讨论在儿童聚会中你们手能为小朋友做什么有用的事情呢？</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多后书六17 主说，你们务要从他们中间出来，得以分别，不要沾不洁之物，我就收纳你们。</p>
+<p>如何分别用手？小朋友们，你知道人如何能制造机器来弥补人体的有制吗？例如，人类制造了潜水艇，用于飞行的飞机，用来举起重物的叉车和起重机，快速运送人或物品的汽车，用于远距离观测的望远镜等。人类有一个不可思议的大脑，它有能力去推理和理解金属、塑料、玻璃和其他物体是以何种方式组合在一起，从而使人类能够超越身体的限制。</p>
+<p>农民伯伯用双手创造了地里丰富的出产供我们享受，工人叔叔用双手制造了各样的生活用品和食品供我们使用，教师用双手给学生批改作业，妈妈用双手给我们做好吃的饭菜，医生用双手医治病人。小朋友们，神给我们创造也都有一双可爱的小手，我们要用自己的双手做有益的事情，讨神的喜悦，不作危险的对我们身心健康不利的东西，比如打架，玩暴力游戏，接触不洁的东西。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神为人造心思，使人可以学习和创造很多东西。人与动物不同，因为人发明了许多不同种类的东西。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：小朋友们，说说你知道手有哪些功能呢？请举例说明在生活中你是如何分别自己手，做了哪些有益的事情？</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>用手为主做工的榜样：亚居拉和百基拉以制造帐棚为业，并且家打开接待弟兄姊妹服事主。保罗弟兄是一个爱主的弟兄，因与他们同业，就和他们同住做工。他亲手作正经事，除了供给自己和同伴的需要，还常常竭力作主工，凡事作榜样，扶助软弱的人，并且纪念主耶稣的话，祂自己说过，施比受更有福。保罗弟兄在爱主、服事主上是我们的榜样。人类用手语进行交流，保护自己，写下自己的想法，演奏乐器等等。纵观历史，人类也用双手实现了医学和技术的进步。最终，我们的双手是由神设计来实现祂的目的的。我们应该用我们的双手来翻阅圣经，为神和其他人服务。我们的双手应该是给予的手。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：神为人造手，使人能做许多事。我们所拥有的决定我们是什么样的人。如果我们每天都能用神的话来面对我们遇到的事，那就太好了。用我们的双手服事神、帮助人也是非常好的。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：（也包括初级和中级）：小朋友们，除了能完成日常任务外，我们的双手还能做什么呢？我们可以用双手来传递神的话，传递圣经和福音，并帮助需要帮助的人。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet"/>
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense elevation="0">
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>周二追求　第七系列</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <div id="tabs">
+            <v-tabs v-model="tab" background-color="#2196f3" dark icons-and-text hide-slider center-active grow show-arrows>
+              <v-tab href="#tab-1">
+                <div class="fs12">总题 照着神牧养的生机实行</div>
+              </v-tab>
+
+   
+            </v-tabs>
+
+            <v-tabs-items v-model="tab">
+              <v-tab-item value="tab-1">
+  
+                <v-divider></v-divider>
+                <div v-for="tab1_data in tab1">
+                  <v-list nav dense>
+                    <v-list-item-group color="primary">
+                      <v-list-item v-for="(item, i) in tab1_data.msgs" :key="i" @click="jump(item.id)">
+                        <v-list-item-icon>
+                          <v-icon>mdi-bird</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                          <v-list-item-title>
+                            <div v-text="item.text" class="title_class"></div>
+                          </v-list-item-title>
+                        </v-list-item-content>
+                      </v-list-item>
+                    </v-list-item-group>
+                  </v-list>
+                </div>
+              </v-tab-item>
+
+              <v-tab-item value="tab-2">
+
+                <v-divider></v-divider>
+                <div v-for="tab1_data in tab2">
+                  <v-list nav dense>
+                    <v-list-item-group color="primary">
+                      <v-list-item v-for="(item, i) in tab1_data.msgs" :key="i" @click="jump(item.id)">
+                        <v-list-item-icon>
+                          <v-icon>mdi-bird</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                          <v-list-item-title>
+                            <div v-text="item.text" class="title_class"></div>
+                          </v-list-item-title>
+                        </v-list-item-content>
+                      </v-list-item>
+                    </v-list-item-group>
+                  </v-list>
+                </div>
+              </v-tab-item>
+            </v-tabs-items>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          tab: null,
+          selectedItem: null,
+          tab1: [
+            {
+              msgs: [
+              
+				{ text: "第一篇 生机牧养的先决条件（一） 维持在非拉铁非召会的复兴里", id: "7-1" },
+                { text: "第二篇 生机牧养的先决条件（二） 有多而彻底的祷告", id: "7-2" },
+                { text: "第三篇 生机牧养的先决条件（三）拿起负担照顾人", id: "7-3" },
+                { text: "第四篇 借着照顾别人得照顾", id: "7-4" },
+                { text: "第五篇 照着主的心牧养人", id: "7-5" },
+                { text: "第六篇 与神完全和好，使我们的心宽宏，能以牧养人", id: "7-6" },
+                { text: "第七篇 赎回光阴学习真理", id: "7-7" },
+				{ text: "第八篇 学习信心的功课", id: "7-8" },
+				
+              ],
+            },
+          ],
+          tab2: [
+ 
+          ],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../minister/index.html";
+          },
+          jump(id) {
+            let jp_url = "./" + id + ".html";
+            window.location.href = jp_url;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      h3 {
+        text-align: center;
+        margin-top: 0.5em;
+        font-size: 1.4em;
+      }
+      .title_class {
+        font-size: 1.3em;
+        font-weight: bold;
+        line-height: 1.2em;
+      }
+      .fs12 {
+        font-weight: bold;
+        font-size: 1.4em;
+      }
+
+      b {
+        color: tomato;
+      }
+      .bt_text {
+        font-size: x-large;
+        font-weight: bold;
+      }
+    </style>
+  </body>
+</html>

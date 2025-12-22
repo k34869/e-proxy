@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1645')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1647')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 2 课<br />
+活的盼望与诸天之上的基业</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我是受造的瓦器。（诗歌425首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我们主耶稣基督的神与父是当受颂赞的，祂曾照自己的大怜悯，藉耶稣基督从死人中复活，重生了我们，使我们有活的盼望，可以得着不能朽坏、不能玷污、不能衰残，为你们存留在诸天之上的基业。（彼前一3～4。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　彼得前书简介</p>
+<p class="ot2">1　著者：耶稣基督的使徒彼得。</p>
+<p class="ot2">2　着时：约主后六十四年左右。</p>
+<p class="ot2">3　着地：伯拉大河畔的巴比伦。</p>
+<p class="ot2">4　受者：寄居外邦的犹太信徒—一1。</p>
+<p class="ot1">二　彼得前书的主题—神行政下的基督徒生活</p>
+<p class="ot1">三　引言—给在三一神工作下，寄居的信徒—1～2</p>
+<p class="ot1">四　三一神完全的救恩—父的重生—3～9</p>
+<p class="ot2">1　使我们有活的盼望—3。</p>
+<p class="ot2">2　得着存留在诸天之上，并备妥要在末时显出的基业—4～5。</p>
+<p class="ot2">3　在那时期我们要欢腾—6上。</p>
+<p class="ot2">4　现今在诸般的试炼中暂时忧愁—6下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识父的重生使我们有活的盼望，就是存留在诸天之上，并备妥要在末时显出的基业。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒彼得写信给分散在各地、受到逼迫、经过火炼试验而受困扰、疑惑的犹太信徒，教导、安慰他们，并给他们看见，他们是在神行政的对付之下，为着达到神积极的目的。他们现今虽然在诸般的试炼中，暂时忧愁，然而他们必须认识，他们是照神的大怜悯，藉耶稣基督从死人中复活而重生，有活的盼望的人。这盼望就是要得着那为信徒存留在诸天之上的基业，也就是所预备，在末后的时期所要显现神完全的救恩。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　彼得前书简介</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约十六13：只等实际的灵来了，祂要引导你们进入一切的实际；因为祂不是从自己说的，乃是把祂所听见的都说出来，并要把要来的事宣示与你们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼得著作的特征之一，就是他使用了一些高超的形容词。例如基督的宝血、不能坏的种子、生命之恩、不能衰残的荣耀冠冕等。这指明有些东西的确建造到彼得的性格里了。在彼得跟从主耶稣的那些年间，他看见许多事。但缺少在生命里正确、属灵的领会。当主复活以后，实际的灵进到彼得里面，他经历了极大的改变。藉着实际的灵，有个扎实、高超、丰富、并刚强的东西建造到彼得这人的组织里。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历实际的灵，引导我们进入一切的实际。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

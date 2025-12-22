@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('199')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('201')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">信心的翅膀</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们在所忍受的一切逼迫与患难中，仍有忍耐和信心。（帖后1:4）</div>
+<div id="CC">Concerning your endurance and faith in all your persecutions and the afflictions which you bear.（2 Thessalonians 1:4）</div>
+<div id="C">一只蜂雀孵育两只小蜂雀，等到它们羽翼长丰，便教它们学习飞行。其中一只由于母雀引导，即刻鼓翼而飞。另外一只则站在鸟巢里，十分惊惶，不敢展翅而飞。母雀一直在它周围盘旋，呼叫催促。但它看看世界这样浩大，自己又是这样渺小，不敢一试。它虽然听见母亲急切呼叫，并且看见它的兄弟自由自在的遨翔，并无丝毫危险，但它总是不敢信任它的翅膀，一直站在一旁犹预不决。母雀虽然失望，却不知如何帮助它突破自己。<br/><br/>　后来有一只土蜂飞来，发出嗡嗡的声音。小蜂雀十分害怕，以为是敌人要来攻击它。想要飞逃，却又不敢。于是摇转头部，想要把它吓走。但是土蜂越来越近，嗡嗡的声音越来越大。蜂雀极其害怕，侧身而下，并且鼓起翅膀飞到地上。虽然经过一番紧张，却安然着地。某人看见这种情形，好意将小蜂雀拾起，放回巢里。可是它已不肯留在巢里，便一飞而去。<br/><br/>　神在许多时候兴起环境，让各样的试炼、困难临到信徒身上，为叫他们运用信心倚靠祂，至终他们必学得秘诀。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

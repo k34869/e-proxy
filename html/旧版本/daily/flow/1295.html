@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1294')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1296')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 5 课<br />
+神儿女的行事为人</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　两种凭着灵而行（二）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>加五25：我们若凭着灵活着，也就当凭着灵而行。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们要有第一种凭着灵而行，就需要不住的祷告。然而我们的神有一个目的要完成，祂也定了一条将我们引到这目标的道路，为达到神的目标，我们必须以那灵作公路，我们都需要祷告：‘主，我要跟随你，有第二种凭着灵而行，好完成你的定旨。我不要凭着道理、神学、组织、或天然的观念而行。我要凭着灵作我独一的公路而行。’这使我们可以得着奖赏。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>凭着灵作独一的公路而行；不凭着道理、神学、组织、或天然的观念而行。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为着我们一般的基督徒生活，和为着完成神定旨的召会生活，需要两种凭着灵而行的生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>加拉太五章说到那两种的凭着灵而行？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘凭着灵活着与凭着灵而行不同。活着的意思是得生命，也是生存。基督徒乃是在基督里的信徒，已经从神而生，且有儿子名分的灵。他有那灵的生命，并凭着那灵生存。凭着灵活着，就是凭着灵得生命并生存。行的意思是凭着灵行动、活动、说话、作事。我们一切的生活和行动，都该凭着在我们里面的那灵。…凭着灵而行，就是让圣灵从我们的灵里，规律我们的行动。…</p>
+<p>每一个在基督里的信徒，都该有两种凭着灵的行动。第一种是我们日常的行动；第二种是在神圣的规则和步伐中的行动。我们基督徒不是漫无目的随意而行的人；我们被神创造，并且被神复造、重生，有确定的目的。因此，我们必须有第二种的行动，以完成神的定旨，并达到我们在地上生活的目标。内住的灵引导我们有两种的行动。在第一种凭着灵的行动里，我们凭着灵生活、为人、行动；这种行动支持第二种的行动，就是朝向目标的行动。…因为神是有目的的，并要达到祂的目标，祂就嘱咐我们要有两种凭着灵的行动：建立正确日常生活的行动，以及符合神圣规则与原理，以达到神所设立之目标的行动。’（新约总论第四册，146、148页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>建立正确的日常生活，并符合神圣的准则和原则，以达到神所定的目标。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

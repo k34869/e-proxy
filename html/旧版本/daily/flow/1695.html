@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1694')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1696')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 9 课<br />
+神大能的手及其目标</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：是爱的神作我牧人。（诗歌444首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：照样，年幼的，要服从年长的；你们众人彼此相待，也都要以谦卑束腰，因为神敌挡狂傲的人，赐恩给谦卑的人。所以你们要谦卑，服在神大能的手下，使祂到了时候，可以叫你们升高。你们要将一切的忧虑卸给神，因为祂顾念你们。（彼前五5～7。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　长老的牧养及其赏赐—彼前五1～4</p>
+<p class="ot2">1　牧养人的榜样—1～3。</p>
+<p class="ot2">2　牧长的赏赐—4。</p>
+<p class="ot1">二　神大能的手及其目标—5～11</p>
+<p class="ot2">1　谦卑服在神大能的手下—5～9。</p>
+<p class="ot2">2　为全般恩典的神成全并立基—10～11。</p>
+<p class="ot1">三　结语—12～14</p>
+<p class="ot2">1　神真实恩典的见证—12。</p>
+<p class="ot2">2　问安—13～14。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识长老的牧养及其赏赐，并神大能的手及其目标。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼前五章说到两件事，第一件事是长老牧养人的榜样及其赏赐；第二件事是神大能的手及其目标。长老主要的职责不是辖管人，而是作群羊的榜样，牧养神的召会，以得着不能衰残的荣耀冠冕为赏赐。要经历神大能的手，首先，我们需要谦卑，服在神大能的手下。其次，我们该将一切的忧虑卸给祂。然后，我们需要谨守、儆醒。我们所遭遇的一切都在神大能的手下。我们若将一切的忧虑卸给神，就会有谨守的心思，并且我们会清楚自己的情况。我们对于我们的对头魔鬼也会儆醒，他如同吼叫的狮子遍地游行，寻找可吞吃的人。我们若儆醒，当撒但将自己化身在忧虑的形态里，我们就不会受欺。反而，我们的对头—吼叫的狮子，会被我们击败。我们若愿意这样忍受苦难，将忧虑卸给神，那全般恩典的神，就要成全、坚固、加强我们，并给我们立定根基。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　作基督受苦的见证人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前五1～2上：所以，我这同作长老，作基督受苦的见证人，并同享那将要显出之荣耀的，劝你们中间作长老的人，务要牧养你们中间神的群羊。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼得说到自己是基督受苦的见证人。彼得和早期的使徒都是基督的见证人，他们不仅是亲眼看见的见证人，见证他们所见过基督的苦难，也是殉道者，藉着为祂殉道，表白他们的见证。这是有分于基督的苦难，有分于祂苦难的交通。这就是彼得所作的。作长老的都需要作基督受苦的见证人，作殉道者，就是为基督牺牲性命的人；这样他们必然会同享那将要显出之荣耀。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>向主立定心志，作基督受苦的见证人，并操练照着神牧养年幼的圣徒。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('46')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('48')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>那些日子，耶稣出去上山祷告，整夜祷告神。（路六12）</p>
+<p class="title">主在祷告上殷勤的榜样</p>
+<p>四福音书给我们看见，主耶稣是一个在祷告上殷勤的人。福音书里多次题到，主耶稣上山或退到隐密处去祷告。在马太十四章，当祂行完五饼二鱼食饱五千人的神迹之后，祂解散了群众，就独自上山祷告。（23。）在马可一章，清早，天还黑，耶稣就起来，到旷野地方去祷告。（35。）在路加五章，许多群众来在一起要听祂的话，也要病得医治，耶稣却退到旷野去祷告。（15～16。）又有一次，耶稣为要选立十二使徒，出去上山祷告，整夜祷告神。（六12～13。）甚至在祂被捉拿、受审问、并宣判钉十字架之前，祂带着门徒到客西马尼园，在那里祂三次祷告神。（太二六36～44。）直至祂被钉在十字架上，祂也在十字架上三次祷告神。第一次，祂为那些钉祂十字架的人祷告；（路二三33～34；）第二次，祂向神祷告说，‘我的神，我的神，你为什么弃绝我？’（太二七46。）第三次，在祂断气前，祂大声喊着说，‘父阿，我将我的灵交在你手里。’（路二三46。）主耶稣是我们殷勤祷告的榜样。祂这第一位神人，是真正的人，但祂信靠神，直到祂人生的尽头。</p>
+<p>祷告有一个秘诀，就是要‘三次’祷告主。这个‘三’，不是一二三的三，而是多数的意思。主耶稣在客西马尼三次求神，等到神听了祂的祷告才停止。保罗也曾三次求神，等到神有话答应他才停止。所有的祷告，都得注重三次的原则。这不是说祷告一次、两次、三次就停止，乃是祷告到透了，神也听了，才停止。这三次祷告的原则是很紧要的。</p>
+<p>我们祷告，不要像蚱蜢一样跳来跳去。一件事还没有祷告透，就跳到另一件事上；另一件没有祷告透，又跳回第一件事上。这样跳来跳去的祷告，叫负担无法卸去，并且难以得着神的答应。要尽祷告的职事，就得在神面前有祷告的负担。有的事也许祷告一次就成，有的也许祷告两次才成，有的也许要三次、五次，负担才卸去。不管祷告的次数多少，总是要把负担卸了，祷告才停止。这说出我们在祷告上要殷勤。（参神人的生活，105、165、178～180页；十二篮第二辑，73～75页。）</p>
+<p class="title">祷告接触领人归主</p>
+<p>斐尼（Charles G. Finney，1792～1875）年轻时，是一个未得救的律师。有几位青年弟兄常为他祷告；有机会就向他传福音。过了一段时期，他果真很奇妙的得救了。后来，主藉着他救了约五十万个灵魂！还有许多神所大用的仆人，都是藉着祷告和个人的接触而得救的。主在地上，曾经在叙加井旁引导一个女人得救，同时影响了全城的人。所以，千万不要忽略个人领人归主的工作。‘务要传道；无论得时不得时，都要豫备好，用全般的恒忍和教训，叫人知罪自责，谴责人，劝勉人。’（提后四2。）（参造就故事下册，36页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：不管祷告的次数多少，总是要把负担卸了，祷告才停止。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('40')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('42')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">盖蜡烛铁帽</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">愿我们主耶稣基督的神，荣耀的父，赐给你们智慧和启示的灵，使你们充分地认识祂。（弗一17）</div>
+<div id="CC">That the God of our Lord Jesus Christ，the Father of glory，may give to you a spirit of wisdom and revelation in the full knowledge of Him.（Ephesians 1:17）</div>
+<div id="C">有一位研究科学的人，问一位传道人说，“我将新旧约原文圣经从头至尾，仔细读了十七遍，并且与科学细细比较过，其中所说基督救赎的道，实在太奇怪了！”传道人说，“没有什么可奇怪的。几天前的一个晚上，我想点蜡烛，却总点不着，觉得非常奇怪。仔细一看，才发现原来我忘了将盖在蜡烛上面的铁帽揭开。若是我不揭开铁帽，就是点了十七次也是不会亮的。所以，凡用科学知识、成见，去读圣经的，心眼必被遮蔽，就如蜡烛盖上了铁帽一样。”<br/><br/>　我们读圣经时，不可有自己的观念、成见、看法；否则，那些东西会成为你里面的帕子，叫你读了，却仍不懂得。</div>
+<div id="CC">羡慕─与主交通（诗284）</div>
+<div id="C">没有间隔，<br/>　主，没有间隔；<br/>　愿我如此随你，<br/>　愿我所见唯你，<br/>　愿我所归唯你；<br/>　没有间隔，<br/>　没有间隔。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

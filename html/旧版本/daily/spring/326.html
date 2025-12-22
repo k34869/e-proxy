@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('325')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('327')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">见人问得救</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">主……不愿任何人遭毁坏，乃愿人人都趋前悔改。（彼后3:9）</div>
+<div id="CC">The Lord…… not intending that any perish but that all advance to repentance.（2 Peter 3:9）</div>
+<div id="C">山东平度地方有一位姓孟的教士，有一天，她感觉需对信徒讲到罪。然而，她从小就是基督徒家庭长大的人，对罪没有什么经历。她就开始祷告，祷告几天以后，忽然有一天，圣灵给她看见异象，看见罪的污秽可憎；仿佛眼看的是罪，闻的是罪，坐的也是罪，整个人都在罪的空气里，非常厌恶。从此以后，她讲道的题目改了，每次都讲罪，极有圣灵的能力，并摸着人的最深处，结果带进了那地方的一次大复兴。<br/><br/>　有一次，一位侯小姐的三哥，前去参加那里的特别聚会。会后，孟教士走来问他说，“你得救了没有？”他说，“得救了。”孟教士说，“听听你的声音，不像得救的。”第二天照样又问他得救没有？他说，“得救了。”孟教士就说，“看看你的眼睛，还是死的，不像得救的，还有罪。”第三天仍旧找他问了一阵。他被这位孟教士弄得很厌烦，自己也觉得自己的眼睛好像是死的。在那一天，他就回家求神光照。结果圣灵把他所犯的罪，都陈列在他面前，好像流水账一样，越看越觉得污秽，他就认罪悔改。末了，圣灵又给他看见十字架的拯救，祂的血已经洗净了所有的罪。他便得了大释放。第四天再去聚会时，他说，我不告诉孟教士，我已清楚得救；我要她对我说我是得救了。到第四天，他坐在前排听道。孟教士讲道讲到中途，注目看他，突然说道：“有一个人已经得救，请他上来作个见证。”孟教士又找到他，对他说，“恭喜你，你真是蒙恩得救了。”</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('331')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('333')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第6课  十诫—爱人（不可杀人）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十13 不可杀人。</p>
+<p>马太福音二二39 要爱邻舍如同自己。</p>
+<p>法国革命时，群众闯进皇宫，寻找皇后，想杀死她。为首者是位野蛮、半疯的女子，经过许多层房子，来到一间关着的大房子，她就竭力往里冲去，多少人在她后面拥挤，把门撞开。可是那位女子因为撞的太猛，头破血流，倒在地上。等她醒来一看，自己头下有一雪白可爱的手臂托着。那位就是皇后，眼中落泪，并用手绢擦她伤口，这位女子也不由得流出泪来，说道：“我不知道你是这样。”多少人反对耶稣，因为不知道祂是一位极可爱的救主。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：第六条诫命是爱所有的人，不杀人。神希望我们关心别人，而不是伤害他们。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：神爱人，祂不希望我们伤害（或杀害）祂所爱的。这就是为什么当我们对某人感觉不高兴时，我们必须学会管住自己的手和脚。我们不应该伤害别人。相反，神希望我们爱他们就像我们爱自己一样。当我们待人时，我们应该遵从规则，因为别人也会同样的待我们。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十13 不可杀人。</p>
+<p>提多书三4 当我们救主神的恩慈，和祂对人的爱显现的时候。</p>
+<p>有一少女，名叫陈素月，十五岁时，染上麻疯病，父母把她送入麻疯院。经过五年漫长岁月，居然死里逃生，麻疯痊愈了。出院之时，满心欢喜，想到再与昔日朋友，慈爱母亲久别重逢，将是何等快乐。岂知抵家之后，大失所望，不只亲友远离，不敢见她，就是生身母亲也是畏避。她那颗久经破碎之心又遭这种无情打击，真觉更比麻疯残酷，终于灰心失望，悲伤饮恨自杀了。朋友，世界上最凄惨的，不是病者、穷人，也不是残疾，更不是失业，乃是得不到爱的人。人的爱都是刻变时翻的，且受环境的支配，惟有神的爱永远长存，永不改变。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：第六条诫命是爱所有的人，不杀人。神创造人，爱人。爱神就要爱祂所爱的人。我们应该小心不要用言语或行为攻击或伤害他人。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：带一些易碎物品的物品或插图。讨论破坏或损坏那些易碎的物品是何等容易，但是把它们放回一起是多么困难（或不可能）。指出人类的生活是非常脆弱的。当我们感到沮丧时，我们应该小心不要用我们的话伤害别人，或者用手或脚击打或攻击他们。如果这些易碎物品对你有价值，你会特别小心对待它们。同样，因为人对神是有价值的，神命令我们爱人，不要伤害人或杀害人。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十13 不可杀人。</p>
+<p>约翰一书四11 亲爱的，神既是这样爱我们，我们也当彼此相爱。</p>
+<p>在美国东部一所著名的大学里，有一非基督徒学生，一天晚上，因为喝酒过多，乘醉发泄平日对犹太人的积恨，毒打同学中的一个犹太人。那个犹太人学生因此受了重伤，几乎丧失性命，经过两年医治，方才痊愈。十年之后，那位美国学生作了一家工业用品大工厂的总经理。那时，正值该家工厂经济周转发生问题，向一家大银行请求援助。如果不蒙允许，就有倒闭之危。银行派一代表，前往调查工厂情况，然后据实报告，作个决定。那位银行代表右脚微跛，额有疤痕。总经理一见他来，连忙站起欢迎，及至和他握手，才看清楚他的相貌，就是十年前被他毒打的犹太同学。总经理呐呐的说，“既然是你，我们的请求当然不会有希望了。”可是出乎意料之外，那位犹太人很有礼貌的回答说，“让我把我的经过告诉你。此后，过去的事就让它过去，不要再题了。那一次，我被你殴打之后，留在医院，经过两年医治，才算痊愈。但是从此，我脚走路就不正常了。留院疗养的日子，我有时间思想和了解主耶稣的教训，祂叫我要饶恕，祂叫我爱我的仇敌。祂是对的，我愿意依从祂。我的报告书会给你工厂所亟需的款项。”在美国东部一所著名的大学里，有一非基督徒学生，一天晚上，因为喝酒过多，乘醉发泄平日对犹太人的积恨，毒打同学中的一个犹太人。那个犹太人学生因此受了重伤，几乎丧失性命，经过两年医治，方才痊愈。十年之后，那位美国学生作了一家工业用品大工厂的总经理。那时，正值该家工厂经济周转发生问题，向一家大银行请求援助。如果不蒙允许，就有倒闭之危。银行派一代表，前往调查工厂情况，然后据实报告，作个决定。那位银行代表右脚微跛，额有疤痕。总经理一见他来，连忙站起欢迎，及至和他握手，才看清楚他的相貌，就是十年前被他毒打的犹太同学。总经理呐呐的说，“既然是你，我们的请求当然不会有希望了。”可是出乎意料之外，那位犹太人很有礼貌的回答说，“让我把我的经过告诉你。此后，过去的事就让它过去，不要再题了。那一次，我被你殴打之后，留在医院，经过两年医治，才算痊愈。但是从此，我脚走路就不正常了。留院疗养的日子，我有时间思想和了解主耶稣的教训，祂叫我要饶恕，祂叫我爱我的仇敌。祂是对的，我愿意依从祂。我的报告书会给你工厂所亟需的款项。”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：第六条诫命是爱所有的人，不杀人。这条诫命不仅与谋杀的外在行为有关，而且与愤怒（谋杀的内在动机）有关（马太福音5:21-22）。我们不应该生人的气，也不应该和他们发脾气。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：虽然我们从来没有杀害过任何人，但当我们发脾气或生气时，在神的眼中，我们就是触犯了这条诫命。甚至我们说别人愚蠢或一无是处也是神所不能接受的（马太福音5:22）。摸孩子们的良心：当他们和某人发脾气时，他们真正内里的感受如何，暴露他们内心的憎恨或对他人的愤怒。神爱我们，因为祂赐予我们的大爱，我们可以爱别人，甚至那些对我们不好的人。因为神，我们有能力爱所有的人。我们必须认识到神是一切爱的源头，祂的爱使我们能够爱所有的人。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

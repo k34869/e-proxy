@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('320')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('322')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">天性如此</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">犯罪的是出于魔鬼，因为魔鬼从起初就犯罪。为此，神的儿子显现出来，是要消除魔鬼的作为。（约壹3:8）</div>
+<div id="CC">He who practices sin is of the devil，because the devil has sinned from the beginning. For this purpose the Son of God was manifested，that He might destroy the works of the devil.（1 John 3:8）</div>
+<div id="C">有一个寓言说到，一条毒蛇被困在一圈火焰中间，无法逃脱，就对在旁观看的一个少年人说，“先生，请你挑我出来。”那人说，“我若这样作，你会咬我。”毒蛇再三请求，并且发誓不咬那人。最后，那人把蛇挑了出来。忽然间，蛇就露出犀利的毒牙，预备要咬噬那人。那人连忙对蛇说道：“你曾答应不咬我的。”蛇说，“我知道我答应过你，但我天性如此。对不起，我不能控制自己。”结果，那少年终于死在毒蛇口中。<br/><br/>　罪和世界的试探也是这样，必须开头就不容让。</div>
+<div id="CC">祷告─告诉主（诗571）</div>
+<div id="C">我们有否苦难、艰辛？<br/>　有否试探和引诱？<br/>　不能因此失望、灰心，<br/>　应当向主去祈求。<br/>　谁能像祂忠实、稳妥，<br/>　背我重担分我愁？<br/>　唯祂知我每一软弱，<br/>　故当向主去祈求。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

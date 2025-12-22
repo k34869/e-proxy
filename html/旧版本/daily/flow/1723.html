@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1722')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1724')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 13 课<br />
+神圣生命的交通</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：主你是我生命。(诗歌381首。)</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：论到那从起初原有的生命之话，就是我们所听见过的，我们亲眼所看见过的，我们所注视过，我们的手也摸过的；这生命已经显现出来，我们也看见过，现在又作见证，将原与父同在，且显现与我们那永远的生命传与你们；我们将所看见并听见的，也传与你们，使你们也可以与我们有交通；而且我们的交通，又是与父并与祂儿子耶稣基督所有的。(约壹一1～3。)</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　约翰著作简介</p>
+<p class="ot2">1　约翰的著作是其他神圣著作之启示的补充：</p>
+<p class="ot2">a　约翰福音是对观福音书的补充。</p>
+<p class="ot2">b　约翰书信是其他书信的补充。</p>
+<p class="ot2">c　启示录是整本圣经的补充。</p>
+<p class="ot2">d　约翰的著作是整个神圣启示的完成。</p>
+<p class="ot2">2　约翰著作的中心点，乃是神圣生命的奥秘。</p>
+<p class="ot1">二　约翰一书简介</p>
+<p class="ot2">1　著者：使徒约翰。</p>
+<p class="ot2">2　著时：主后九十到九十五年之间，约翰从拔摩海岛放逐回来之后。</p>
+<p class="ot2">3　著地：以弗所，即约翰末期尽职的地方。</p>
+<p class="ot1">三　神圣生命的交通－约壹一1～5</p>
+<p class="ot2">1　神圣生命的显现－1～2。</p>
+<p class="ot2">2　神圣的交通－3～4。</p>
+<p class="ot2">3　享受神作光－5。</p>
+<p class="ot2">4　联于使徒和三一神，以完成神的定旨。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神圣的生命与神圣生命的交通。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒约翰的著作是圣经其他神圣著作之启示的补充，其著作的中心点，乃是神圣生命的奥秘。约翰一书论到神圣生命的交通，这神圣的生命已经显现出来，是使徒们所听见、看见、注视、并摸过的。使徒作见证，将原与父同在的永远生命，传与信徒。这神圣的生命也带进神圣生命的交通，使信徒与父并与祂儿子耶稣基督有交通，信徒与使徒之间有交通，信徒彼此之间也有交通，就使喜乐得以满足。当我们在这交通的喜乐元素里，我们就在神的光中。这交通使我们联于使徒和三一神，以完成神的定旨。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　约翰著作简介</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹五12～13:人有了神的儿子，就有生命；没有神的儿子，就没有生命。我将这些话写给你们信入神儿子之名的人，要叫你们晓得自己有永远的生命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在新约圣经中，约翰的著作包括他的福音书、三封书信与启示录。这些著作在圣经神完满的启示中，占有特殊且显著的地位。约翰著作中神圣事物的启示，乃是其他神圣著作之启示的补充。这指明圣经若没有约翰的著作，就会缺少一些重要的东西。约翰福音是福音书的终结，揭示主耶稣基督的身位和祂工作的奥秘。约翰一书，是书信的终结，揭开神圣生命交通的奥秘，就是神的儿女与父神，并神的儿女彼此之间交通的奥秘。然后，约翰的启示录是新旧两约的总结，启示基督是神儿女生命的供应，使祂得彰显，以及祂是三一神宇宙行政的中心这个奥秘。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>宝贝并珍赏永远生命的交通。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

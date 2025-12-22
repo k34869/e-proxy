@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('195')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('197')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">用不着愁</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">所以你们不要为明天忧虑，因为明天自有明天的忧虑，一天的难处一天当就够了。（太6:34）</div>
+<div id="CC">Therefore do not be anxious for tomorrow，for tomorrow will be anxious for itself; sufficient for the day is its own evil.（Matthew 6:34）</div>
+<div id="C">第一次世界大战时，法国有一青年，就是怕被抽去当兵。在前线的一位朋友，听见他这种怕死的情形，就写信去鼓励他。这封信被邮政官检查出来，认为颇有价值，就把它登出来，用以劝告那些贪生怕死的人。以下就是信的内容：<br/><br/>　在以下二者中有一件是确定的：不是被抽调，就是在原位。若在原位，那么你用不着愁。若被抽调，在以下二者中有一件是确定的：不是送往前线，就是留在后方。若留在后方，那么你用不着愁。若在前线，在以下二者中有一件是确定的：不是在危险的区域，就是在安全的地带。若在安全的地带，那么你用不着愁。若在危险中，在以下二者中有一件是确定的：不是受伤，就是安全。若是安全，那么你用不着愁。若是受伤，在以下二者中有一件是确定的：不是重伤，便是轻伤。若是轻伤，那么你用不着愁。若是重伤，在以下二者中有一件是确定的：不是死掉，就是治好。若是治好，那么你用不着愁；若是死掉，你就不会愁了。<br/><br/>　“你们中间谁能因忧虑使自己的身量多加一肘？”（太六27。）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

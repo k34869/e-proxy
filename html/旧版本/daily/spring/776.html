@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('775')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('777')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">送父礼物钱是父给</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>弗1:13　你们既听了真理的话，就是那叫你们得救的福音，也在祂里面信了，就在祂里面受了所应许的圣灵为印记；</p><p>以弗所人对于‘圣灵作印记’的事，比我们领会得更深，因为他们那地方是贩卖木材的。以弗所邻近海口，木头都是从山上伐好，放在溪流里流到他们那地方的。常有许多客人到那里买木头，他们每一个人都带一颗不同的锤印，像一个铁锤一般。他们估定了价钱，商量妥了，每个人就把他所买的木头，用自己那一个‘锤印’，把每一根木头都打上一个印，人就先回去了。无论是过了三个月、五个月都不要紧，因为他们不是立刻用这些木头。当他们要用时，就派亲信的人带着从前的‘锤印’来取。他们只要将木头上的印记与自己的‘锤印’相比较；凡是相同的，就是他们的，就可取去。这样作一点也不会弄错。圣灵在我们里面打了印记，就把我们分别出来属于主，并使我们渐渐模成祂的形像。‘既然信祂，就受了所应许的圣灵为印记；这圣灵，是我们得基业的凭据，直等到神之民被赎，使祂的荣耀得著称赞。’（弗一13～14。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

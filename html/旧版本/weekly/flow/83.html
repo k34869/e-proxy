@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('82')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('84')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>祂便救了我们，并不是本于我们所成就的义行，乃是照着祂的怜悯，藉着重生的洗涤，和圣灵的更新。（多三5）</p>
+<p class="title">细的操练（三）细致的经历圣灵的更新</p>
+<p>更新乃是那灵在我们身上工作的一部分。照着提多书三章五节，神藉着重生的洗涤和圣灵的更新来拯救我们。在许多事上，我们仍是老旧的，因此需要在内里一面被改正并调整，使我们得着更新。譬如我们离开办公室时，也许没有把椅子放到原来的位置，也没有把书放回书架上原来的正确位置；反之，我们把每样东西弄得一团糟。这就表明我们缺少更新。当我们一再被改正时，我们就一再的被更新。在许多小事上，我们实在需要被更新，因为我们都太粗率，也不细致。洗涤是一件很细致的事。比方，我们要把手洗干净，就必须用肥皂细细的洗。在我们的经历中，更新是非常细致的。当我们离开桌子时，应当清理我们的桌面，使桌面是整洁的。甚至在自己的房里，我们也应当学习把每样东西摆好。无论我们的身份是什么，都应当在我们分内的事上，操练作得仔细，作得好。例如，学生应当学习仔细的读书、写作业；在职圣徒应当在工作上操练仔细、认真。在家中也应当仔细的整理家务，使家里干净舒适，井然有序，活出神人该有的彰显。</p>
+<p>如果我们在生活上粗心大意，在读经上也是如此，我们就无法为主作工。我们应当经常藉着重生的洗涤，使我们得更新、受调整、被改正，成为在基督里的新人。我们会犯错，因为我们是老旧的。新人总是细致的、温和的、谨慎的，特别是在我们与别人的关系上。因此，要经历因生命长大而有的更新，我们就必须非常细致。操练的路在于我们时常与主交通。当我们不断在祷告里，活在主面前，我们就会成为细致的，因为主是柔细的。愿我们每天早上都向主祷告：‘主阿，为着这一天感谢你，我将自己当作燔祭献上，使你满足。主阿，保守我一整天细致的经历圣灵的更新。’这会使我们达到圣别，而圣别会将我们引到永远的生命。（参那灵同我们的灵，150～153页。）</p>
+<p class="title">医好坏脾气</p>
+<p>有一位妇人到纽约去，请一位名医治病，她的病状乃是好发脾气，又易生气。医生开的药方是：‘每天读一小时圣经，一个月后再来看诊。’写完，医生不等她说什么，就鞠躬送客。她先是发怒，后来一想，反正这个药方不花费她什么钱，于是回家，仔细的读她平常所忽略的圣经。过了一个月，再去见医生时，她居然变了一个人，脾气消失得无影无踪；她很希奇的问医生，怎么知道她需要这个药方。医生指着他桌上一本破旧的圣经说，‘我发脾气的病也是它治好的。’每当我们细读主话，主话中的那灵，就调和着话在我们里面细细的涂抹、洗涤和更新，将祂圣别的生命和性情，涂抹、分赐到我们里面。一天、两天看不出来，久而久之，我们就被那灵浸透，好像竹篮子打水一般，将我们身上的天然、老旧和脾气，一一洗去，自然而然从我们活出祂圣别的形像。（参福音故事中册，33页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：在为人处事上，细致的经历圣灵的更新，不粗率、不马虎。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

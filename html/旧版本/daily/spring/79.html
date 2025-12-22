@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('78')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('80')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">亚比该绒线球</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们祷告，无论求什么，只要信，就必得着。（太21:22）</div>
+<div id="CC">And all that you ask in prayer，if you believe，you will receive.（Matthew 21:22）</div>
+<div id="C">有个小女孩，名叫亚比该，一直想得到一些花绒线，好能作个球玩。有一次，慕勒到她家里，她就请慕勒为她花绒线球的事祷告。慕勒答应了她，和她一同跪下祷告。她先祷告神说，“我要一个绒线球，但颜色是要花的。”后来慕勒也低下头，按手在她身上，对神说，“这里有一个孩子，她要一个绒线球，颜色要花的。这件事在人作不到，我也不作，这是你的事，求你听她的祷告。”祷告后慕勒起来，就对她说，“在近两天内，神必定给你花绒线球玩。”那时她小小的心都跳了起来，心想，也许是她的外祖母，或者姑母会带花绒线给她吧。那知就在第二天夜里，她的父亲拿了一些花绒线来给她，她真是快乐极了。原来她的父亲开了一间百货商店，别的绒线都卖出，只有这花绒线总是卖不出，索性拿回家给孩子玩。<br/><br/>　第二次慕勒先生看见她，就问她说，“你的花绒线球好玩吗？”慕勒不是问她得着了花绒线球没有，乃是问她好不好玩。一个认识神的人，祷告就是这样有把握。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

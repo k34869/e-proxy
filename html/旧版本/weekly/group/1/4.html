@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>二O二三年秋季训练申言参考</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('3')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">第 4 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('5')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+
+          <div class="title">第四周 为着正确召会生活的正确祷告生活</div>
+          <v-divider></v-divider>
+
+          <v-btn block color="primary" elevation="1" tile><b>鸟瞰：</b></v-btn>
+          <div class="contents">
+            <v-divider></v-divider>
+            <p>提前二1 要为万人祈求、祷告，为君王和一切有权位的，使我们可过平静安宁的生活。正确的召会乃是祷告的召会；祷告比工作更重要，要有美好召会生活的路乃是祷告。长老们被神指示照料召会，须有多的祷告，好读圣徒光景，如大祭司凭乌陵和土明放胸牌里，成为决断的胸牌，其实际乃调和的灵，神借胸牌来说话，主凭决断胸牌说话是借着消极的光景。领头在召会中服事话语的人，该领头有祷告的生活；在祷告中对环境、人、召会，才能得着主的智慧。如众圣徒都坚定持续祷告，主恢复会将大得丰富并被拔高；享受主笑脸，主活的人位成为经历和享受。
+</p>
+            
+            <v-divider></v-divider>
+            <br />
+
+             <v-btn block color="primary" elevation="2" rounded >周一</v-btn>
+            <br v-show="show" />
+<br />
+            <p class="ot2" >晨祷经节：所以我劝你，第一要为『万人祈求』、祷告、代求、感谢。（提前二1）17:54 2023/12/16</p>
+            <p class="ot1">1 请阐说要有正确召会生活，首先必须有祷告的生活？</p>
+            <p class="ot2" >祷告的职事乃是地方召会行政和牧养的先决条件。因此，保罗劝提摩太要为万人祈求，祷告，代求，感谢。这是保罗说到神的经纶，并嘱咐提摩太要为神的经纶打那美好的仗以后，首次论到召会生活积极方面的话。提摩太必须领头有祷告的生活。</p>
+            <p class="ot1">2 请解明当听到圣徒或召会消极的事，该祷告？</p>
+            <p class="ot2" >每当我们听见关于某召会好或坏消息，我们就该祷告。不要讨论，不要闲谈，也不要批评。只要祷告！若听见圣徒软弱或退后，不要谈论那人，也不要批评他；此外，不要立刻去看望他，而要为他祷告。你该不该看望他，在于主的引导。</p>
+           
+  <v-btn block color="primary" elevation="2" rounded >周二</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：所以，我愿男人无忿怒，无争论，举起虔圣的手，『随处祷告』。（提前二8）</p>
+            <p class="ot1">1 请解释提前二1 的话？</p>
+            <p class="ot2" >保罗在提前二章一节题起祈求、祷告、代求和感谢。祷告是一般的，带着敬拜和交通的成分；祈求是专一的，为着特殊的需要。代求，原文意，个人倾心吐意的亲近神；即在神面前关心别人的事，为他们求益处。此外，我们必须献上感谢。</p>
+            <p class="ot1">2 请阐述祷告比工作重要？</p>
+            <p class="ot2" >愿我们都学习这功课：要有美好召会生活的路乃是祷告。这是要紧的。我们的谈话若转为祷告，我们所在地的召会就会变化。我们该为万人祷告，因为我们的救主神愿意万人得救，并且认识真理。神的愿望需要我们的祷告使其实现。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周三</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：亚伦进圣所…要将『决断胸牌』上以色列儿子们的名字，带在胸前…（出二八29）</p>
+            <p class="ot1">1 请解明胸脾加上土明共二二字母，可拼出所有句子？</p>
+            <p class="ot2" >胸牌上的十二个名字包含希伯来文二十二个字母中的十八个；其余的四个字母安在一块叫作土明的东西上。土明意即成全者或完成者。因此，在胸牌及附加的土明上，能看见全部的希伯来文二十二个字母。可用来拼出所有单字和句子。</p>
+            <p class="ot1">2 请陈述乌陵和土明加到胸牌上，成为决断的胸脾？</p>
+            <p class="ot2" >每当约书亚需要得着关于百姓行动的引导时，他必须到大祭司面前，然后大祭司就借着乌陵和土明得着从神来的引导。因此，神是借着乌陵和土明说话。乌陵和土明都预表基督，而胸牌预表召会。因此，乌陵和土明加到胸牌上，为得神引导。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周四</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：使律法义的要求，成就在我们这不照着肉体，只『照着灵』而行的人身上。（罗八4）</p>
+            <p class="ot1">1 请论述胸牌称为决断的胸牌之深意？</p>
+            <p class="ot2" >胸牌称为决断的胸牌。这里的决断主要不是在断定甚么是对的，甚么是错的。反之，这个决断乃是要叫神的子民能晓得祂的引导。因此，决断的胸牌实际上乃是引导的胸牌。我们必须审判肉体及肉体的心思。这种决断为使我们知道神的引导。</p>
+            <p class="ot1">2 请说明胸牌的建造，乃是基督身体建造的图画？</p>
+            <p class="ot2" >胸牌的建造乃是基督身体建造的图画。如果我们想要知道神的判断、首先我们需要神的子民得建造。如果没这建造，根本就没有胸牌。其次必须加上基督作光和完全。第三，须进到神面前。第四，在神前有亮光使去读字母，好断定神的意思。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周五</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：你们从前是黑暗，但如今在主里面『乃是光』，行事为人就要像光的儿女，（弗五8）</p>
+            <p class="ot1">1 请解明应用带有乌陵和土明的胸牌？</p>
+            <p class="ot2" >今天要应用带有乌陵和土明的胸牌，需要带领者把圣徒和基督担负在心上，好知道圣徒的光景和基督所完成的，以得着神的引导。这些带领者需要看见主的照耀，也需要读圣徒，然后他们才能得着主对当地召会的引导。</p>
+            <p class="ot1">2 请陈述保罗和主给的书信，根据什么原则？</p>
+            <p class="ot2" >保罗的书信以及主耶稣给亚西亚七个召会的七封书信，都是根据这个原则写的。这些书信不是根据召会里积极的事情写的，而是根据召会消极的光景写的。保罗照着他对哥林多消极的光景所读出来的，写了哥林多前书。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周六</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：你们要『坚定持续的祷告』，在此儆醒感恩。（西四2）</p>
+            <p class="ot1">1 请见证该如何实行，坚定持续的祷告？</p>
+            <p class="ot2" >我们要乐意和主办交涉，甚至向祂许愿说，我们要作祷告的人。如果各召会里的众圣徒都和主办这样的交涉，主的恢复就会大大的得着丰富并被拔高。不仅如此，众圣徒也会享受主，享受主的同在和祂的膏油涂抹。他们会终日享受主的笑脸。</p>
+            <p class="ot1">2 召会是否活泼、新鲜、丰富的条件？</p>
+            <p class="ot2" >在于我们不断被三一神充满。为此我们首先需要乐意，其次需要倒空。我们所需要的第三件事是随时、不住的祷告。我们必须祷告。凡旧人所能作的，都是神所定罪的。我们必须认识这点。然后就看见我们需要神，并且会随时、不住的祷告。</p>
+
+<v-btn block color="primary" elevation="2" rounded >总结</v-btn>
+<br />
+            
+            
+            <p class="ot2" >当我们来在一起的时候应当祷告，将我们的心思、不同的见解，祷告到一里。正确的说，我们应当把自己祷告到灵里。我们在灵里祷告，就有同一的心思，就在一里。甚至在牧养、看望未得救的人或圣徒时，我们也该一直在祷告里。这样，我们去的时候就不会说我们原先以为要说的。借着不住的祷告，我们的灵得了释放，并且我们发现自己从灵里说话。神宝贝我们的乐意，这是祂所发起的；但我们的才干—我们所能作的，在神看来却毫无价值。神只要使用我们，而不使用我们的。因此，我们必须倒空自己，看见我们需要神，且会随时不住祷告。</p>
+           
+  
+        
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+      });
+    </script>
+    <style>
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <title>Bib</title>
+    <link rel="stylesheet" href="../../assets/index.css" />
+    <script src="../../assets/crypto-js/crypto-js.js"></script>
+    <link rel="stylesheet" href="../../assets/mine.css" />
+
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+      div#bts {
+        text-align: center;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <van-nav-bar :title="title" @click-left="back" @click-right="toPath('../../主页.html')">
+        <template #left>
+          <van-icon name="arrow-left" />
+        </template>
+        <template #right>
+          <van-icon name="wap-home" />
+        </template>
+      </van-nav-bar>
+
+      <div id="main">
+        <div id="toc" v-if="show==0&&toc[0]">
+          <van-cell v-for="item in toc" class="link" @click="openMsg(item.cid)">
+            <div v-text="item.text" :class="item.type"></div>
+          </van-cell>
+        </div>
+        <div id="msg" v-if="show==1&&msg[0]">
+          <div id="bts">
+            <van-space>
+              <van-button type="primary" @click="jumpTo(-1)">上一篇</van-button>
+              <van-button type="primary" @click="jumpTo(1)">下一篇</van-button>
+            </van-space>
+          </div>
+          <div>
+            <audio :src="audioSrc" controls></audio>
+          </div>
+          <van-cell v-for="item in msg">
+            <div v-html="item.text" :class="item.class"></div>
+          </van-cell>
+          <br />
+          <div id="bts">
+            <van-space>
+              <van-button type="primary" @click="jumpTo(-1)">上一篇</van-button>
+              <van-button type="primary" @click="jumpTo(1)">下一篇</van-button>
+            </van-space>
+          </div>
+        </div>
+      </div>
+      <van-back-top></van-back-top>
+    </div>
+  </body>
+
+  <script src="../../assets/v3.js"></script>
+  <script src="../../assets/mine.js"></script>
+  <script src="../../assets/router.js"></script>
+  <script src="../../assets/min.js"></script>
+  <script src="../../data/life/0.js"></script>
+  <script src="../../data/life/5.js" id="datajs"></script>
+  <script src="../../data/life/reality.js"></script>
+</html>

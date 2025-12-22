@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1546')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1548')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 5 课<br />
+为着召会生活之圣别生活的鼓励与改正</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　对不守规矩者的改正</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖后三7下～9：因为我们在你们中间，未尝不守规矩，…倒是劳碌辛苦，昼夜作工，免得叫你们任何人受累。这并不是因我们没有权利，乃是要给你们作榜样，叫你们效法我们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>不按规矩而行，不仅是照着肉体，（罗八4，）也是违反召会生活的建造。有些青年人认为只要爱主，过召会生活，就不需要受更高的教育，仅仅作些简单的工作就够了。这种观念是错误的。我们生活在一个需要受教育的时代，我们若要正当的生活，就需要接受正当、良好的教育。青年人应当努力读书，完成大学学业，如果可能，再进研究所深造。我们不该认为只要属灵、追求主、为着主的见证和恢复，就不需要受好的教育，为将来的工作作准备。我们生活在一个教育、知识、科学和工业的时代中，青年人如果没有受合式的教育，就不容易过正确的为人生活。所有的青年人都应当接受良好的教育。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>接受合式的教育，以过正确的为人生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在各种环境中经历神将永远的安慰和美好的盼望赐给我们，使我们足以应付任何环境和景况。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>帖后二章十六节所说‘永远的安慰’以及‘美好的盼望’，各有什么涵义？我们如何来经历？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们所有的不是短暂瞬时的安慰和加力，乃是藉着神的生命而有永远的安慰。这安慰足以应付任何环境和景况，因此这安慰带着美好的盼望。</p>
+<p>永远的安慰与神的生命有关。每当你失望的时候，你需要受提醒，神的生命在你里面。你只要稍微想到神的生命在你里面，就会得着安慰。你知道你有那一种生命么？你有神的生命。神的生命已经赐给了你。因此，永远的安慰实际上就是永远的生命。…</p>
+<p>假如有一个人很不快乐，但是他口袋里有一颗钻石。他只要看看钻石，就会得着安慰而喜乐。我们有真正的钻石，这钻石就是永远的生命作了我们永远的安慰。你知道你口袋里有这样一颗钻石么？那你为什么注视你的难处和苦难，却不注视这颗钻石？哦，为着永远的安慰这颗钻石，我们赞美主！这安慰乃是在恩典中永远的生命和美好的盼望。’（帖撒罗尼迦后书生命读经，42～45页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>享受神的安慰，带着美好的盼望，使我们足以应付任何环境和景况。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

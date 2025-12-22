@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('198')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('200')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第15课 创造—人的受造奇妙可畏（一）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一〇〇3 …我们是祂造的…</p>
+<p>课程内容：人的头颅上有七个窟窿，最大的窟窿莫过于嘴巴。其他的窟窿皆对称排列，鸳鸯成双，仿佛是三对“双胞胎”，惟有嘴巴是个“独生子”。嘴巴位于人的脸面最下部，但是它的功能却是最大的，它既“入”又“出”，入的是食物，滋人以营养，活人以生命；出的是语言，让人表达和交流。另外，嘴巴还是人的表情“配角”，嘴巴噘着是生气，嘴巴张大不是大哭就是大笑，嘴巴紧闭表示沉默，如果嘴巴成了弯弯的月亮，那人心里八成正汪着幸福的糖浆呢。</p>
+<p>再看看我们嘴巴上边的鼻子吧！鼻子长在前面不大方便，不如长在头顶，好象烟囱，出气入气都可自由。转而一想，如果路遇大雨，怎么得了。冬夏如果戴帽，盖住鼻子，不能透气，岂不闷死了吗？腐臭鱼肉在没有人口以前，先经鼻子一闻，再送到口里。如果鼻子在头顶，势必先要把菜举到头顶，叫鼻子闻过气味好坏才放入口，岂不太麻烦吗？</p>
+<p>我们嘴巴和鼻子的功能真是是非常奇妙可畏的！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：在神的创造中，最高等的生物是人类。当看到我们的身体所能做的许多事情时，我们不得不宣告是神创造了我们。我们的嘴巴和鼻子的功能是非常奇妙可畏的。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：如果我们没嘴巴，就不能把食物吃到肚子里，不能尝到味道，也不能说话。你知道我们的舌头有3000个味蕾，人类有超过5000种语言吗？如果我们的鼻子颠倒了，或者鼻子里没有小毛毛发会发生什么？水、灰尘和其它微粒会进入鼻孔内。我们只能专特的用嘴吃饭、说话，用鼻子嗅味道。（见《活神》出版的小册子《神》，网上也有。）</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二十12 能听的耳，能看的眼，都是耶和华所造的。</p>
+<p>课程内容：人耳由外耳、中耳、内耳三部分组成。外耳、中耳具有集音、传音、扩音作用：帮助我们倾听。内耳具有位置觉、平衡觉和感音作用，帮助我们保持平衡。我们的耳朵象一架小型的琴，耳朵的外壳就是一个收音喇叭，外耳壳上的凹凸不平专为收听各方面来的声音，里面有六千条弦丝，最长的半公厘，最短的只有二十分之一公厘。每一条都绷得恰到好处，可以听到四十个音阶。此外还有一万八千个特种细胞，长满了三十万根细丝，形成听觉神经。象钢琴上的琴键，可把外来的声音重奏一遍。这是多么奇妙的工程！我们的耳朵是如此的重要，因此我们要学习保护好我们的耳朵！保持耳朵清洁，不随便进水，不随便掏耳朵！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：在神的创造中，最高等的生物是人类。当看到我们的身体所能做的许多事情时，我们不得不宣告是神创造了我们。我们的耳朵的功能非常奇妙可畏。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：我们的耳朵能接收声波，把它变成我们所听到的语言和音乐。（你可以更详细地了解）耳朵不仅能帮助我们倾听，还能帮助我们平衡。我们的耳朵里有耳垢，能防止耳道感染，保护耳道粘膜，有助于清洁和润滑，并抵御细菌、真菌、昆虫和水的侵袭。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一三九14上 我要赞美你，因我受造奇妙可畏…</p>
+<p>课程内容：眼睛更加奇妙，从正面看，眼睛包括巩膜(眼白)、瞳孔、虹膜及角膜等几个主要部分。人的眼睛是人心灵的窗户，又好比一架天然的照相机，神赐给我们的眼睛能自动调整距离，自动调整光度，而且每一秒钟可以随时拍到清晰的照片十六张。眼睛除拍照外，还能自动洗片，自动显影，自动晒片。神供给我们无限无量的五彩底片，可以日夜免费自用。双眼除照相片还有通信作用。它能够把所看见的东西立刻通知脑子，脑子立刻加以欣赏，或者加以拒绝。同时在我们身体里面，不知在什么地方又保存着一大本相片记念册，他把我们所看见的景色人物都能珍藏起来，让我们随时可以拿来回味。好像就在眼前一样！神给我们造了这么奇妙的眼睛，所以说我们要好好保护自己的眼睛。保护眼睛视力最好的方法就是要养成良好的用眼习惯，一定要少看电视、手机、电脑等电子产品。多看一些绿色的东西，也可以做一做眼保健操，要保持看书的距离，不要长时间用眼，多注意休息，避免熬夜！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：在神的创造中，最高等的生物是人类。当看到我们的身体所能做的许多事情时，我们不得不宣告是神创造了我们。我们的眼睛在他们所能做的事上是多么奇妙。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：我们的眼睛有1亿700万个对光敏感的细胞。七百万个细胞帮助我们看到颜色和细节。一亿个细胞帮助我们在黑暗中看到障碍。当我们的眼睛眨眨眼，用眼泪擦拭眼球，保持眼球清洁和湿润。如果有东西要撞到我们的眼睛，它们也会自动眨眼。我们的睫毛和眉毛被神放在适当的位置，来保护我们的眼睛。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

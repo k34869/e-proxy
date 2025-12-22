@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('394')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('396')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第1课  性格—准确</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>希伯来书八5 他们的事奉，乃是天上事物的样本和影儿，正如摩西将要完成帐幕的时候，蒙神指示他说，你要谨慎，照着在山上所指示你的模型，作各样的物件。</p>
+<p>摩西在造帐幕之前，先与耶和华同在山上四十昼夜，神指示他天上帐幕的样式和作法。帐幕中的祭坛、洗濯盆、桌子、灯台、香炉、约柜，以及其他的一切，当用什么金属，当用什么木头，尺寸是多少，颜色是如何，都是按着神所定规的样式作的。就是一根小钉子应当用银子或者用金子，都要照着神所吩咐的去作。就是它的作法，也是神所定规的。就如：幔子要用细麻线来作，并且是用捻的细麻。灯台应当用精金来作，并且是用一块精金锤出来的。耶和华如何吩咐，摩西就如何做，当帐幕立起来后耶和华的荣光充满了帐幕。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：准确的人是一个不犯错误的人。准确对于我们的学业是很重要的。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：讲述摩西的故事，他是如何得着帐幕的样式，并且必须准确地建造。如果他不准确，那帐幕就不会被神接受。同样，我们需要在所作的事上准确，使我们所作的能被托付我们的人接受。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>使徒行传十八25 这人已经在主的道路上受了教导，灵里火热，将耶稣的事详确的讲论教训人…</p>
+<p>根据申命记记载，每个王登基后要从祭司利未人面前将律法书的原本，为自己抄录一份。王要在他一生的日子诵读，好学习敬畏耶和华他的神，遵行这律法书上一切的话。因着诸王的堕落，各人行自己眼中看为好的事。</p>
+<p>约西亚做王，行耶和华眼中看为正的事，某日书记沙蕃从祭司那里得到一卷律法书，念给王听，王听见律法上的话，便撕裂衣服。并在耶和华面前立约，要全心全魂跟从耶和华，谨守祂的诫命、法度和律例，成就这书上所记的约言。众民都一同立这约。</p>
+<p>因着王抄写律法准确，约西亚王对照律法书才知道自己没有遵守，否则人们将继续过着不认识神心意的生活。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：准确的人是一个不犯错误的人。在陈述事实或作报告时，准确是很重要的。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：讲述《旧约》中的诸王如何抄写他们自己的律法书。讲述列王记下二十二章的故事。如果王不准确，约西亚王就不会知道他们没有遵守律法，人们将继续过着不认识神心意的生活。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>申命记二五15 当用足重公道的法码，足量公道的量器。这样，在耶和华你神所赐你的地上，你的日子就得以长久。</p>
+<p>有位弟兄生活艰难，跑到南京，在戏院门口摆一花生摊子。别人的生意都很好，他却常常亏本。后来他才知道，别人卖花生利用各种欺骗的手法，明明秤十四两，就算一斤。他是十足的十六两，秤杆秤得平平的，所以别人不愿到他这里来买；情愿去买十四两一斤，秤杆秤得高高的，再加上几颗，实在重量还不足一斤。基督徒在交易上，要用公道天平，公道法码，公道升斗，公道秤，一点也不可诡诈。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：准确的人是一个不犯错误的人。在处理金钱或为人作证时，准确是很重要的。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：如果你在商店买东西，售货员给你额外的零钱，你会怎么作？我们应该准确地立即归还不是我们的部分。其他人可能不准确地谈论神，但我们应该准确地让别人知道神是真实的，祂爱我们并且顾到我们。另一个例子：如果你看到一些事情发生，比如路上的意外事故或学校的同学受伤，你需要在陈述细节时准确，以确保情况得到妥善处理，不至有人没有作某事却被人错误地指责或责备。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

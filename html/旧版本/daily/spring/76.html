@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('75')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('77')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">我的事完成了</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">不要销灭那灵。（帖前5:19）</div>
+<div id="C">为着那灵撒种的，必从那灵收永远的生命。（加6:8）</div>
+<div id="CC">Do not quench the Spirit.（1 Thessalonians 5:19）</div>
+<div id="CC">He who sows unto the Spirit will of the Spirit reap eternal life.（Galatians 6:8）</div>
+<div id="C">有一位铁匠，清晨开起店门，看见一个人站在门口；那人名叫撒母耳，是个口吃的人。他的裤子湿到膝头，鞋子完全湿透，因为他走了三英哩的路，被路上满了露水的野草弄湿了。铁匠立即上前向他请安。撒母耳因为口吃，不能即刻答复，只点了点头。然后，经过不少的挣扎，才说出话，他说，“我特意来，与你一同祷告，神把你放在我的心中。我今早四点钟就想到你。”铁匠请他进来，他却不进。未等铁匠再说什么，撒母耳就跪下，举手仰脸，开声向神祷告，极其恳切敬虔。这时他的口吃竟然不成阻碍，他祷告的话十分流畅，为铁匠向神祈求，直到心中的重担卸脱。他一说完“阿们”，就抓住铁匠的手说，“好，我的事完成了。神要我作的，我已经作了；现在我要走了。”说毕转身就走。铁匠心中深受感动，无法开店作工，就把店门关起来，转入屋内，高声向楼上呼唤其妻，要她一同下来祷告。她的妻子一下楼，便看见铁匠正放声大哭，向神祷告，真实悔改，接受主耶稣作他个人的救主。<br/><br/>　信徒若是顺从圣灵的引导，不知道多少神迹要发生！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

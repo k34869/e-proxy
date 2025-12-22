@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1225')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1227')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 14 课<br />
+瓦器里的宝贝</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：瓦器里有宝贝</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但我们有这宝贝在瓦器里，要显明这超越的能力，是属于神，不是出于我们；我们四面受压，却不被困住；出路绝了，却非绝无出路；遭逼迫，却不被撇弃；打倒了，却不至灭亡；身体上常带着耶稣的治死，使耶稣的生命也显明在我们的身体上。（林后四7～10。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　新约执事的生活—林后四7～18</p>
+<p class="ot2">1　在瓦器里的宝贝—7。</p>
+<p class="ot2">2　钉死的生活为着彰显复活的生命—8～15。</p>
+<p class="ot2">3　外面的人在毁坏，里面的人却在更新—16～18。</p>
+<p class="ot1">二　新约执事的渴望—穿上改变形状的身体—五1～8</p>
+<p class="ot1">三　新约执事怀着雄心，要向主活着，以讨主喜悦—五9～</p>
+<p class="ot2">15</p>
+<p class="ot1">四　新约执事的托付—为着主的新造，受了和好的职事—五16～21</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识新约执事的生活，乃是靠着瓦器里宝贝的能力，活出钉死的生活，彰显复活的生命；并且怀着雄心大志要讨主的喜悦。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>新约的执事乃是在瓦器里有宝贝的人。他们虽然是没有价值的瓦器，神却将基督这宝贝照进他们里面。这宝贝成了能力的源头，使他们有动力，能将神的荣光照耀出去，也把真理显扬出来。并且他们接受神主宰环境中的销毁，使得外面的人虽然在毁坏，里面的人却日日在更新。因此他们也渴望、盼望、切慕穿上改变形状的身体，就是在神完满、完整的救恩里，至终叫我们的身体改变形状；正如主耶稣复活的身体一样，这就是穿上在天上永远的房屋。保罗只有一个雄心，乃是无论在家（活着留在身内），或是离家（死去与主同在），都要讨主的喜悦。他完全服在主之下，受主的指引、管制并管理；他所作的每一件事，都是要实现主的定旨和愿望。这乃是因为他受了基督爱的困迫，受了和好职事的托付，从今以后，就不再按着肉体，乃按着灵认人。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　瓦器里的宝贝</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后四7：但我们有这宝贝在瓦器里，要显明这超越的能力，是属于神，不是出于我们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在林后四章六节，保罗说到神照在我们心里，这照耀的结果带给我们一个宝贝，就是那作我们生命和一切之荣耀的基督。这宝贝，内住的基督，在我们这些瓦器里，是基督徒生活神圣供应的源头。这奇妙的宝贝如同属天的马达，使我们有动力，能将神的荣光照耀出去，也把真理显扬出来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识我们里面有一个带着超越能力的宝贝—基督，使我们能盛装祂并彰显祂。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

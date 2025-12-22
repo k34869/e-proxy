@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('37')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('39')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">树根朝上</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我看重你的一切诫命，就不至于羞愧。（诗一一九6）</div>
+<div id="CC">Then I will not be put to shame，when I regard all Your commandments.（Psalm 119:6）</div>
+<div id="C">有一个主人，要雇用一个合式的人，第一个条件就是要这个人能听话。为要试验应征者，谁是真正听话的人，他就要求所有前来应征的人，先作一件事情。他要他们把一小株树倒栽在土里，树根朝上，树枝树叶朝下。前来应征的人，都觉得主人的命令很不合理，就照一般人的看法、作法，把根埋在土里，而没有照主人的话让根朝上。然而有一个人，他却照着主人的话，把树枝树叶埋在土里，让树根朝上。主人一看，便说，“这人就是我所要的，因为他听话；他不管别人意见如何，也不照自己的看法，只遵照主人的意思行。”<br/><br/>　我们在读神的话语，对待神的话语上，常常把别人的意见，或自己的看法掺杂进来，以致对神的旨意总是看不清。</div>
+<div id="CC">阿们神的话语（补414）</div>
+<div id="C">你若要脱离世界的辖制，<br/>　阿们神的话语！<br/>　你若要经历属灵的实际，<br/>　阿们神的话语！<br/>　阿们神的话语！<br/>　阿们神的话语！<br/>　接受祂话语，<br/>　一点不怀疑，<br/>　阿们神的话语！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('184')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('186')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">神需要人在祷告上与祂合作</p>
+<p>耶路撒冷阿，我在你城墙上设立了守望者；他们整日整夜总不静默。题醒耶和华的，你们不要歇息，也不要让祂歇息，直等祂建立耶路撒冷，使耶路撒冷在地上成为可赞美的。（赛六二6～7）</p>
+<p>神作工有一定的规律，有一定的原则。神虽然能随着自己的意思作，但祂并不是随便去作，祂必须按着自己所定的规律和原则作工。这个主要的原则，就是神要人在祷告上与祂合作。所有属灵的工作，都有四个步骤：第一步是神起意，这就是神的旨意。第二步是神把这个旨意藉着圣灵启示给祂的儿女，叫他们懂得神的旨意、打算、要求和盼望。第三步是神的儿女把神的旨意回头祷告给神听。祷告就是响应神的旨意。如果我们的心与神的心完全相合，自然就会说出神所愿意作的事来。结果，第四步，神就必定去作成功那件事。</p>
+<p>换句话说，神要作一件事，但神不单独去作，神要人与祂合作。因此，祂把自己的意思藉着圣灵摆在人里面，经过人把那意思化成祷告之后，神才把那件事作好。神作事必须有这么多的手续，神需要人与祂合作，神需要有一个意志是与祂同心的，是和祂同情的。多少事，神愿意作，但是因为神的子民不祷告的缘故，祂就宁可不作。神必须等人同意以后祂才去作，这是神作工的一个大原则，是圣经中最要紧的原则之一。我们从这里就能看见，祷告乃是一个工作，没有一个工作比祷告更紧要，因为祷告就是说出神的旨意，祷告就能完成神的定旨。</p>
+<p>用比方来说，神的旨意像火车，人的祷告像火车的铁轨。火车的能力是十分大的，东西南北都可以开，但只能开到已经有铁轨铺好的地方。照样，神有能力，但是祂要我们铺轨道。轨道铺得多，神的工作也就作得多。所以，我们的祷告应该像铁路网那样铺起来，铺得越多越好。凡有价值的祷告，都是替神的旨意铺路的。因此一个好的祷告，必须是神发起，我们响应，而且是多方、随时、仔细并周密的。如果我们一直这样作祷告的工作，我们就成为流通神旨意的管道，作神旨意的发表者。如果有更多人起来作这工，神就会因着人祷告的缘故而作许多的事，完成祂的定旨。（参十二篮第五辑，65～66、68～70、72页。）</p>
+<p class="title">密室里祷告争战</p>
+<p>在一六三○年苏格兰的复兴中，约翰李司登一次讲道，竟有五百人愿意悔改相信主；这是因为有大批的信徒彻夜祷告赞美。一七四一年，约拿单爱德华在恩田布道。一个素不敬虔的聚会，忽然满了痛哭呜咽的声音；这是因为有数百位信徒为这聚会求神怜悯。由此我们看见，圣徒藉着祷告响应神的旨意，为神争战，决定了战场上的胜败。（参造就故事上册，39～40页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：看见祷告的重要，响应神的旨意，作神旨意的发表者。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

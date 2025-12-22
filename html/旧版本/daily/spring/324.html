@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('323')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('325')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">射死一只鸭子</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">遮掩自己罪过的，必不亨通；承认离弃罪过的，必蒙怜悯。（箴28:13）</div>
+<div id="CC">He who covers his transgressions will not prosper，but whoever confesses and forsakes them will obtain mercy.（Proverbs 28:13）</div>
+<div id="C">一位弟兄到非洲传道。那里生活便宜，他便请了几个工人。一个黑人小孩，他会拿橡皮作成弓箭，射无不中。有一天，一箭射死主人的一只鸭子。不得了，主人若要他赔，他赔不起，怎么办呢？他就想了一个办法，快快挖一个坑，把那死鸭埋掉。虽然没人看见，心里却是常常不安，时时记起那只死鸭。有一天，厨子对他说，“快去替我挑水。”他说，“挑水不是我的事。”厨子说，“你要小心啊，我看见你射死鸭子，我要告诉主人。”他害怕了，便快快去挑水。厨子叫他去劈柴，他说，“我没有力气。”厨子说，“你射死鸭子，我去告诉主人。”他又害怕，就去劈柴；他天天作厨子的奴仆，心里又不安，因为有个死鸭子。<br/><br/>　日子这样过得很不安宁，有一天，他干脆到主人面前跪下，痛哭流涕。主人问他什么事？他就告诉主人，自己怎样射死了一只鸭子，怎样把鸭子埋了。主人说，“知罪认罪，我赦免你。”他心里从此平安了。<br/><br/>　有一天，厨子又叫他挑水。他说，“我不挑。”厨子问他记不记得那只死鸭子。他说，“我不怕你。”厨子说，“我去告诉主人。”他说，“你去告吧，我不怕。我认罪了，我心里平安了。”信徒若是有罪不肯承认，就会受撒但控告，昼夜心里不安，以致落在他的手中。然而，什么时候向主认罪，什么时候心里立刻得到平安，那恶者也就无能为力了。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('163')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('165')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">周六下午一定到达</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">信就是所望之事的质实，是未见之事的确证。（来11:1）</div>
+<div id="CC">Now faith is the substantiation of things hoped for，the conviction of things not seen.（Hebrews 11:1）</div>
+<div id="C">有一位基督徒船长，对一位乘客作见证：“五周前我经过此地，在我们的乘客中，有一位慕勒先生。那时因为雾大，轮船已经停顿了二十四小时。慕勒来对我说，‘船长，周六下午我是一定要到魁北克的。’我说，‘这是不可能的事。’他说，‘很好，如果你的船不能叫我按时到达，神有别的方法。五十七年以来，我从未对人失约过。让我们跪下祷告。’我呆望这位传道人，心中想，这个人不知道是从那一家疯人院出来的？我从来没有听见过这样的话。我就对他说，‘慕勒先生，你知不知道雾是多么厚？’他答道：‘不，我的眼睛并不看雾的厚薄。我的眼睛只看活的神，祂是管理我一生环境的。’于是他跪下来有一个很简单的祷告。当他祷告完了，我正想接下去祷告的时候，他将手放在我的肩上，叫我不要祷告。他说，‘第一，你不相信神会答应你；第二，我相信神已经答应了，用不着你再求了。’我呆呆的望着他。他对我说，‘我认识我的主已经五十七年了，祂从来没有一次不听我。船长，把门打开，你要看见雾全消散了。’我站起来一看，雾果然已经全消了。于是周六下午慕勒如约到了魁北克。”由此可见，信是我们所盼望之事的确信、把握，也是我们所未看见之事真实的确证。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

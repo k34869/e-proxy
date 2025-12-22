@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1511')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1513')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 18 课<br />
+结语—新人的生活</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　问安</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西四18：我保罗亲笔问安。你们要记念我的捆锁。愿恩典与你们同在。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>今天神在地上要有另外一个人，就是新人。这一个新人的出现不是一个运动，这完全是一个属灵生命的事，而这一个属灵生命就是我们的主耶稣实实际际作了我们众人的生命。这个新人到最终乃是一个新妇。召会在基督里的经历一定要达到这个地步。先是身体，再是新人，而后是新妇。今天在主的恢复里，主是要绝对的恢复，彻底的、完全的恢复这位包罗万有的灵来作我们日常的生命；凭基督活着，我们在祂里面不一也一了！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历基督作我们的生命，实际的凭着包罗万有的基督而活。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为着主在祂的恢复里，在地方一面并宇宙一面的行动，我们都需要在同心合意里有身体的感觉，并在一里以身体为中心。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>你是否有藉着相调、访问召会，经历‘新人感’的见证？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘全球的众地方召会，应当在那灵的一里，并在我们的灵、魂、与心思的同心合意里完全是一。…</p>
+<p>在召会行政的一些事上，我们不必是一。一地的召会是否该买地盖会所，乃是地方上的事。但是为着耶稣基督的见证而生命长大，在传扬福音，在扩展主的恢复，在建造基督的身体，在完成神永远的经纶这些事上，我们必须有宇宙普遍的一。</p>
+<p>为着主在祂的恢复里，在地方一面并宇宙一面的行动，我们都需要在同心合意里有身体的感觉，并在一里以身体为中心。在同心合意里，我们应当有身体的感觉。在一里，我们应当以身体为中心。在我们的考量里，基督的身体应当是第一，地方召会应当是第二。…</p>
+<p>任何一个地方召会宣告自己是自治的，那是何等的羞耻！地方召会完全是自治的这种教导，使基督的身体分裂。在宇宙一面，在道理上，并在实行上，众地方召会都是一个身体，也应该是一个身体。’（一个身体和一位灵，26～28页。）</p>
+<p>‘我们也许以为，众地方召会是神经纶的目标。然而，众地方召会不是目标，乃是神达到祂经纶之目标所采取的手续。我们不该忘记，众地方召会不是神的目标。…从倪弟兄的时候起，众地方召会在我们基督徒的生活中，就成了非常宝贵的项目。有些圣徒听见众地方召会不是神的目标，也许很失望。然而，我们若只在众地方召会里，却不往前，我们就远离了神的目标。…</p>
+<p>我们都需要考量基督的身体这件事。我们有这辞，也有道理，但在实行上，我们没有实际。相调的目的是要将我们众人引进基督身体的实际。…众召会是身体，但众召会也许没有基督身体的实际。因此，我们需要在众地方召会里，使我们能被引进或带进基督身体的实际。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>更多有分于众召会间的交通、访问。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

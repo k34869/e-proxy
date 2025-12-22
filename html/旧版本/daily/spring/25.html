@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('24')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('26')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">老爷我要圣经</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你口中的律法与我有益，胜过千万的金银。（诗119:72）</div>
+<div id="CC">The law of Your mouth is better to me than thousands of pieces of gold and silver.（Psalm 119:72）</div>
+<div id="C">有个基督徒，在他八十大寿的时候，要送一些礼物给他的用人。他把用人都叫了来，手里拿着一本皮面金边，极其好看的圣经，问厨子说，“我这里有一本圣经，又有二十块钱，随你们选，要那一样。”厨子回答：“先生，我不大认识字；我要钱吧。”于是老人给他二十块钱。又问老用人：“张妈，你认识字，给你圣经吧。”张妈说，“老爷，我终日忙碌，没有工夫读，还是请你给我钱吧。”末了问到一个扫地送信的少年人：“给你二十块钱，拿回家去，请你妈妈为你作一件新衣服。”小孩子说，“老爷，我要圣经。”老人惊讶的说道：“你又不认识字，你要圣经作什么？”小孩子说，“我母亲天天念圣经给我听。她的圣经已很破旧；我总想有了钱，买一本好的送给她。现在这本好看的圣经，要是送给她，比二十块钱，她更要欢喜得多呢！”老人说，“我的好孩子，愿神祝福你。”说着就将圣经递给他。小孩子打开一看，内中还有百元钞票一张。别人看了，都目瞪口呆，后悔得很。<br/><br/>　许多信徒不喜欢圣经，不知漏掉多少祝福；你若爱慕它，读它，必从其中得着无限的丰富。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

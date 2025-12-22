@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1588')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1590')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 11 课<br />
+基督超越天使</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　承受救恩的人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来一9：你爱公义，恨恶不法；所以神，就是你的神，用欢乐的油膏你，胜过膏你的同伙。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在神的救恩里，我们不仅由神而生，作神的儿子；我们也成为‘神的后嗣，和基督同作后嗣’。要作儿子，只要生下来就行；但是我们必须在生命里长大成熟，使我们成为合法的后嗣，与基督这位神的长子，一同承受无比的丰富。这是神救恩的最终目的。因着神的长子基督是神所立的后嗣，而我们这些众子是和祂同作后嗣的，所以我们乃是祂的同伙。与祂一同承受万有。与祂同作宇宙的拥有者；作祂神圣企业中的合伙人！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为着我们是救恩的承受者，是基督的同伙，与基督同作后嗣，一同承受万有而赞美神。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>希伯来书是一卷神说话的书。首先神在子里说话，然后神藉着众子说话。我们的神乃是说话的神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>历世历代以来神如何说话？神说话与我们发生什么关系？你是否经历神的说话？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘希伯来书的真正主题乃是神在子里说话。换句话说，全本书乃是子讲说神。神在子里说话，意思就是子讲说神。子是大祭司，（八1，）大祭司就是子这一面，便是讲说神。祂作更美之约的中保是讲说神。（6。）祂超越天使是讲说神。（一4。）祂超越摩西、（三3、）约书亚（四8）和亚伦（五4～6）是讲说神。无论祂是什么，都是讲说神，全本希伯来书就是子讲说神，或者说神在子里说话。…</p>
+<p>神在子里说话，而子是藉着祂的所是说话。无论祂是什么，都是祂的说话。祂是耶稣。耶稣是祂的说话。祂是基督。基督是祂的说话。祂是一个人，这人是祂的说话。祂是奴仆，这奴仆是祂的说话。祂是木匠，这木匠是祂的说话。祂说了马太五至七章。祂说了约翰十四至十六章，并且在约翰十七章里在祂的祷告中说话。祂藉着言语说了许多，但祂藉着所是说得更多。四福音全是祂的说话，无论是直接藉着言语，或是藉着祂的所是。四福音全是神在子里说话。无论祂作什么，无论祂说什么，无论祂行什么，无论祂是如何为人，全是祂的说话。子的说话就是神在子里说话。这是我们都必须领悟的一个要点。’（长老训练第六册，144～145页。）</p>
+<p>‘到了新约，〔神〕在一个人里面说话。你必须晓得，首先这人是单个的，然后这人成了团体的。…今天神在一个人里面说话，而这个人今天已经扩增成了团体的人。这个人包含了所有的使徒，以及这个人身体上所有的肢体。今天神是藉着一个人，藉着一个团体的人说话。今天祂仍然说话。’（神圣的说话，10～11页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在召会生活中，享受基督在众子里的说话。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

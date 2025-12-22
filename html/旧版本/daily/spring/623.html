@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('622')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('624')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">九　矮子和小公主</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗12:4　正如我们一个身体上有好些肢体，但肢体不都有一样的功用；</p><p>有一个主人，养了一头驴子和一只哈巴狗。驴子白天要去驮运木材，晚上还要推磨，非常辛苦。哈巴狗却是成天嬉戏，会向主人表示亲热，又会献媚，很得主人欢喜，常常爬到主人膝上躺着，非常得意。驴子看见哈巴狗的幸福生活，心中异常怨恨，它想：如果我也能够像哈巴狗那样作法，一定也可同样得到主人的欢心。于是，有一天主人吃饭的时候，它便挣断缰绳，冲进房中，像哈巴狗一样的又跳又闹，摇曳尾巴，向主人大献其媚。结果却把餐桌推翻，碗碟打碎；但它还不知趣，不肯停止，再跳过去，前脚踩在主人怀里…。后来，仆人看见主人危险，赶快抓住这只大发野性的驴子，把它痛打一顿。身体上的每一肢体，都有它的一定功用，配搭在一起事奉，各尽各责，非常美丽。如果有一肢体不量力，不知趣的去模仿别的肢体，乃是肉体的热心，己意的事奉，结果常使身体蒙受极大的亏损。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

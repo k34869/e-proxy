@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1617')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1619')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 16 课<br />
+更美的祭物和更美的血，同更大、更全备的帐幕</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：基督是万有惟一的实际。（诗歌374首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但基督已经来到，作了那已经实现之美事的大祭司，经过那更大、更全备的帐幕，不是人手所造的，就是不属这受造世界的。（来九11。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　旧约的预表与新约的实际—来九1～15</p>
+<p class="ot2">1　头一层帐幕—圣所，表征旧约是预表。</p>
+<p class="ot2">2　第二层帐幕—至圣所，表征新约是实际。</p>
+<p class="ot1">二　新约和新遗命—16～23</p>
+<p class="ot1">三　基督的两次显明—24～28</p>
+<p class="ot1">四　基督的祭物顶替并了结旧约的祭物—十1～18</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督是更美的祭物和更美的血，同更大、更全备的帐幕。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>希伯来九章一节至十章十八节启示基督是更美的祭物和更美的血，同更大、更全备的帐幕。头一层帐幕—圣所，表征旧约是预表；第二层帐幕—至圣所，表征新约是实际。现今那封闭至圣所的幔子，藉着基督的死已经裂开了，因为这死已经把肉体钉了十字架，至圣所的路也已经显明了。因此，我们无须停留在圣所，就是旧约，也就是我们的魂里；我们必须进入至圣所，就是新约，也就是我们的灵里。如今基督已经来到，作了那已经实现之美事的大祭司，经过那更大、更全备的帐幕，就是更美之约。基督也是新约的中保，新遗命的执行者，把新约里所成就的，新遗命所遗赠给我们的，执行出来，使我们得以完满的享受这一切。基督也成了更美的祭物，顶替并了结旧约的祭物，完成为罪献祭的事，使罪的问题一次并永远的解决，我们就无须再受罪的搅扰。而能享受这位在诸天之上的基督，就是真实的在新约之下，有分于新遗命中一切的遗赠。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　旧约帐幕的预表</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来九8：圣灵如此指明，当头一层帐幕仍然存立的时候，至圣所的路还未显明。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>这里的圣幕，乃是整个帐幕，：包括称为圣所的头一层帐幕，和称为至圣所的第二层帐幕。头一层帐幕，就是表征旧约的圣所，有几项特征：第一，它是属世界的，就是属受造世界的，全是物质的，不是属灵的；是在地上的，不是在天上的；是暂时的预表，不是永久的实际。第二，它有属肉体的章则。第三，预表旧约的头一层帐幕，不能叫敬拜的人得以完全。第四，这头一层帐幕，是新约的一个比喻和预表。它不是实际，乃是实际的一个预表，象征。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练运用灵，进入至圣所。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

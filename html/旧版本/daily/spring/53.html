@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('52')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('54')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">初见总统不至要钱</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们虽然不好，尚且知道把好东西给儿女，何况天上的父，岂不更将圣灵给求祂的人吗？（路11:13）</div>
+<div id="CC">If you then being evil know how to give good gifts to your children，how much more will the Father who is from heaven give the Holy Spirit to those who ask Him！（Luke 11:13）</div>
+<div id="C">有位不信神的学生，问一家医院的护理长说，“我若向你的神要一百元，你想祂会给我吗？”护理长温和的回答说，“如果你今天初次看见总统，你会开口向他要钱吗？”学生说，“不会，我会等到与他熟悉时。”护理长接着说，“若是你今天初次看见神，你不会只是向祂要钱；你必会向祂求更宝贵、更需要的东西。”学生问：“有什么是比钱更宝贵、更需要的呢？”护理长回答说，“有啊，比方罪得赦免，得着重生，以及内心的改变。”<br/><br/>　神给我们最大的礼物，就是祂的独生子主耶稣基督；因祂，我们的罪得赦免；借祂，我们得着重生；有祂，我们的生命得变化。我们向神所求的上好，乃是基督自己，并非福利平安。</div>
+<div id="CC">每当我喊主耶稣（补231）</div>
+<div id="C">每当我喊主耶稣，<br/>　我深处总觉发烫；<br/>　祂生命冉冉而升上，<br/>　在我里面成长。<br/>　请来同喊主耶稣，<br/>　这喜乐地上无双；<br/>　主且要进入你里面，<br/>　作你生命供你享。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

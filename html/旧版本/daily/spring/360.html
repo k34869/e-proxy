@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('359')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('361')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第10课  十戒—爱人（不可说谎）</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十16 不可作假见证陷害邻舍。</p>
+<p>从前，有个放羊娃，每天都去山上放羊。一天，他觉得十分无聊，就想了个捉弄大家寻开心的主意。他向着山下正在种田的农夫们大声喊：“狼来了！狼来了！救命啊！”农夫们听到喊声急忙拿着锄头和镰刀往山上跑，他们边跑边喊：“不要怕，孩子，我们来帮你打恶狼！”农夫们气喘吁吁地赶到山上一看，连狼的影子也没有！放羊娃哈哈大笑：“真有意思，你们上当了！”农夫们生气地走了。第二天，放羊娃故伎重演，善良的农夫们又冲上来帮他打狼，可还是没有见到狼的影子。放羊娃笑得直不起腰：“哈哈！你们又上当了！哈哈！”大伙儿对放羊娃一而再再而三地说谎十分生气，从此再也不相信他的话了。过了几天，狼真的来了，一下子闯进了羊群。放羊娃害怕极了，拼命地向农夫们喊：“狼来了！狼来了！快救命呀！狼真的来了！”农夫们听到他的喊声，以为他又在说谎，大家都不理睬他，没有人去帮他，结果放羊娃的许多羊都被狼咬死了。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：第九条诫命是爱人，而不可说谎。我们应该总是说实话。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：儿童说谎的例子很多。例子：他们的母亲说他们可以吃两块糖果，他们却吃了三块。当问到他们吃了多少糖果时，如果他们说“我拿走了两块”、“我不知道”、“我不记得了”或者“我没听见你说的话”，这些都是说谎的形式。说谎就是我们说一些我们知道的不真实的事情。我们应该总是说实话。这表明我们尊重和爱别人。服事者可以考虑讲述“狼来了”的故事。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十二22 说谎言的嘴为耶和华所憎恶；行事忠信的，为祂所喜悦。</p>
+<p>行传五章   但是有一个人，名叫亚拿尼亚，同他的妻子撒非喇，卖了产业，把价银私自留下一部分，他的妻子也知道。他把一部分拿来放在使徒脚前。彼得说，亚拿尼亚，为什么撒但充满了你的心，叫你欺骗圣灵，把田产的价银私自留下一部分？田产还留着，所留下的不是你自己的么？既卖了，价银不也是由你作主么？你为什么心里起这意念？你不是欺骗人，乃是欺骗神了。亚拿尼亚听见这话，就仆倒断了气，听见的人都甚惧怕。有些青年人起来，把他包裹好，抬出去埋葬了。约隔了三小时，亚拿尼亚的妻子进来，还不知道所发生的事。彼得对她说，你告诉我，你们卖田产的价银，就是这些么？她说，是的，就是这些。彼得对她说，你们为什么同心试探主的灵？看哪，埋葬你丈夫之人的脚已到了门口，他们也要把你抬出去。妇人立刻仆倒在彼得脚前，断了气。那些青年人进来，见她已经死了，就抬出去，埋在她丈夫旁边。全召会以及所有听见这事的人，都甚惧怕</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：当神命令我们不要说谎时，祂命令我们不要说一些我们知道的不真实的事情。如果我们作错了什么，我们应该在我们所作和所说的事上说实话。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：与孩子讨论人们说谎的不同方式（故意说谎，保持沉默，夸张，奉承，半真半假等）。神的诫命是当我们有不可告人的事时，我们不要说谎以遮掩情况。谎言是大是小并不重要。如果我们说错话作错事或没有说实话，不承认，或是沉默不言，那么我们就是在掩盖真相。我们应该遵从良心，始终讲真话。如果我们说谎，我们需要弄清真相。建议讲在使徒行传第五章亚拿尼亚和撒非喇的故事。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约翰福音八44 你们是出于那父魔鬼，你们父的私欲，你们愿意行。他从起初就是杀人的，并且不站在真理中，因为在他里面没有真理。他说谎是出于他自己的私有物，因他是说谎的，也是说谎者的父。</p>
+<p>马太福音五37  你们的话，是，就说是，不是，就说不是；若再多说，就是出于那恶者。</p>
+<p>似是而非的谎言：用真实地来掩饰虚谎，撒但就是用这种似是而非的话来试探、引诱人。他曾这样引诱夏娃，去吃善恶知识树的果子。当主耶稣在旷野禁食四十昼夜，撒但又这样进前来试探他说，“你若是神的儿子，就叫这些石头变成饼吧。”撒但就是用真实地话来掩饰他里面的虚谎。但主耶稣用经上的话抵挡了撒但：“人活着不是单靠食物，乃是靠神口里所出的一切话。”撒但却又用圣经上的话来试探主耶稣，要主耶稣从殿翼跳下去，因为经上记着：“主要为你吩咐他的使者，用手托着你，免得你的脚碰在石头上。”（太四1~11）这些话听起来都是对的，但却是要引诱主耶稣离开他人子的地位。但赞美主，他一点也没有受到撒但的引诱。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：第九条诫命不可说谎是神自身的写照。说谎者的源头是撒旦。神命令我们远离撒旦，亲近神。同样，为了得到神的救恩，我们必须坦白（说实话）我们所作的事，而不是否认它（说谎）。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：神不能撒谎，无论神说什么都是真的（希伯来书6:18；提多书1:2）。撒旦是相反的；他是说谎者，也是说谎之人的父。问孩子们，如果他们撒谎，他们是跟随神还是撒旦？神命令我们不可说谎，这使我们远离撒旦，而亲近神。神喜悦那些讲真话的人（诗篇51:6），因此，要成为跟随神并讨神喜悦的人，我们不能说谎话或说诡诈的话（启示录14:5）。说实话是一件严肃的事情。这就是为什么当我们接受神的救恩时，我们必须承认我们说过或作过违背神的事。否认我们说过或作了任何错事是在说谎，但承认这事乃是说出真相并引我们归向神的救恩。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

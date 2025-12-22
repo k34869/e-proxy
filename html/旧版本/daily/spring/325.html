@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('324')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('326')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第5课  十诫—孝敬父母</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十12上 当孝敬父母…</p>
+<p>箴言二三22 你要听从生你的父亲；你母亲老了，也不可藐视她。</p>
+<p>神看重这一条诫命，因为孝敬父母就是记念我们的源头。如果我们追溯我们的家谱，从我们的父母、祖父母、曾祖父母，一直追溯上去，最终我们会发现是神造了人类的始祖亚当，然后从亚当繁殖出许多人来。所以我们真正的源头乃是神。在路加三章那里，清楚地记载着，人类的祖先乃是亚当，而亚当是神所造的，是神的儿子（23~38）。因此，孝敬父母就是尊重我们的根源，我们的根源乃是神自己。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：第五条诫命是孝敬父母。尊敬父母，就是爱、服从和尊重他们。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：你喜欢和父母作些什么（玩运动，去公园，读书，参观动物园）？我们的父母爱我们，为我们作很多事。我们尊重他们，回报他们。当我们的父母要求我们打扫房间，吃完饭，或者在家里帮忙时，我们应该马上听从，并马上去作。而且，我们对待父母的态度和感受应该是愉快的。我们不应该发牢骚或抱怨。尊敬我们的父母，就是在态度上要爱和尊重他们，并且在我们的行为上服从他们。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书六2~3 要孝敬父母，使你亨通，在世长寿。这是第一条带应许的诫命。</p>
+<p>虽然神是我们真正的源头，但我们来到世上乃是借着父母。在神的安排中，神将儿女赐给他们的父母（创三三5，四八9），作他们的产业（诗一二七3）。神拣选我们的父母，使我们在母亲腹中经过怀胎九个月而生下来。神也安排父母照顾并养育我们，给我们食物吃，给我们衣服穿，供应我们生活上一切需要，使我们学习一切该学习的事物。父母对我们是何其重要，是我们在这世界上关系最为亲密的。父母和我们的关系，是出于神的安排，神是源头，是每一个家庭的设计者和安排者，孝敬我们的父母就是接受神的安排和智慧；不孝敬父母就是不尊敬我们在天上的父。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：借第五条诫命就是孝敬父母，我们就实化主的应许使我们在世长寿。这是第一个有应许的诫命。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：我们在生活中学到的最重要的东西是我们父母教给我们的，例如，正确的举止，健康的习惯，作出正确的选择等。我们的父母帮助我们去作什么是正确的事情，什么是对我们最好的事。我们应该相信他们的决定，服从他们的命令。我们不应该争论、反驳或不尊重他们。我们应该和他们保持一种甜蜜和谐的关系。事实上，圣经告诉我们尊重父母是非常重要的，这是带有应许的一条诫命。神应许我们，如果我们尊敬父母，我们将有繁荣（“与你同在”）和长寿（“在地的日子长久”）。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记二十12 当孝敬父母，使你的日子在耶和华你神所赐你的地上，得以长久。</p>
+<p>歌罗西书三20 作儿女的，要凡事顺从父母，因为这在主里是可喜悦的。</p>
+<p>虽然神是我们真正的源头，但我们来到世上乃是借着父母。在神的安排中，神将儿女赐给他们的父母（创三三5，四八9），作他们的产业（诗一二七3）。神拣选我们的父母，使我们在母亲腹中经过怀胎九个月而生下来。神也安排父母照顾并养育我们，给我们食物吃，给我们衣服穿，供应我们生活上一切需要，使我们学习一切该学习的事物。父母对我们是何其重要，是我们在这世界上关系最为亲密的。父母和我们的关系，是出于神的安排，神是源头，是每一个家庭的设计者和安排者，孝敬我们的父母就是接受神的安排和智慧；不孝敬父母就是不尊敬我们在天上的父。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：当神告诉我们尊敬我们的父亲和母亲时，祂也告诉我们要尊敬祂。不尊敬你的父母就是不尊敬神。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：神选择了我们的父母和我们出生和成长的特殊家庭。神赋予他们权力和责任以照顾我们的身心健康和属灵的幸福。他们照顾我们的需要，并为我们祷告，使我们可以认识神和祂的话语，并且行事虔诚地成长。有时，他们管教我们，以便我们正常的成长和发展。我们不应该用言语、思想或行为对抗我们的父母。我们尊敬父母，因为神把他们安排在我们之上。因此，尊敬我们的父母就是尊敬神，背叛他们就是背叛神。借尊敬父母，我们尊重神——我们的源头。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

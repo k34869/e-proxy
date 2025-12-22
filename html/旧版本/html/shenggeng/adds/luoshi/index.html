@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>负担落实</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+                深耕细作　负担落实
+              
+              </div>
+            </v-card>
+          </div>
+          <div class="nav" @click="jump('01.html')">第一篇：留意实行主话  维持真理绝对  保守恢复纯净</div>
+          <div class="nav" @click="jump('02.html')">第二篇：顺从生命的感觉，顾到身体的交通</div>
+          <div class="nav" @click="jump('03.html')">第三篇：爱神并彼此相爱</div>
+          <div class="nav" @click="jump('04.html')">第四篇：拔高福音质量 落实三环牧养 提升主日小排</div>
+          <div class="nav" @click="jump('05.html')">第五篇：服事者该有的操练与实行(一)</div>
+          <div class="nav" @click="jump('06.html')">第六篇：服事者该有的操练与实行(二)</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../../../weekly/minister/index.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

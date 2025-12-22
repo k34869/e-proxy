@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('642')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('644')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">我愿死在印度</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>马太福音 19:29 凡为我的名撇下房屋、或是弟兄、姊妹、父亲、母亲、儿女、田地的，必要得着百倍，且要承受永远的生命。</p><p>李文斯敦在读医学时，他想人生既然只有一命，那么应当怎样充分发展自己，才会不至虚度一生？最后决定为主传扬福音。他就详览舆图，认为中国需要福音最为迫切，就下决心前往中国，藉行医宣传福音。恰巧他听见一位在非洲传道的罗博士说，‘站在我所居住的山上，我能看见成千的村落从未曾有基督徒到过。’因而改变心意，前往非洲传道。他与野蛮的非洲土人同居，饱受蚊蚤蚁蝎的螫吮，忍受热病的侵袭。一次他想出一条道路，可从非洲中部直达海岸。于是说服了某酋长，派人护送兼作向导。酋长要求他到达海岸之后，必须再随向导回来。他到达海岸时，恰巧遇到一只英国船。船长坚决请他相偕返英。李文斯敦已与其在英伦之家族睽违多年了，按理也该回去一趟。但他不肯失信于酋长，辞谢了船长，再回到非洲腹地，忠于他的工作。最后死在荒漠草棚中。李文斯敦为事奉主而献上了一切：他的少年韶光，他的医药技术，他的壮图，他的金钱，他的骨肉至亲，他的千金之躯。‘人为我和福音，撇下房屋，或是弟兄、姐妹、父母、儿女、田地。没有不在今世得百倍的，…在来世必得永生。’（可十29～30。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

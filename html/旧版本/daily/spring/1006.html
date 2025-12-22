@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('268')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('270')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">安纳提的奉献最多</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">有一个穷寡妇来，投了两个小钱，就是一个大钱。耶稣便叫门徒来，对他们说，我实在告诉你们，这穷寡妇投入库里的，比众人所投的更多。（可12:42~43）</div>
+<div id="CC">And one poor widow came and cast in two lepta，which is a quadrans.　And He called His disciples to Him and said to them，Truly I say to you that this poor widow has cast in more than all those who were casting into the treasury.（Mark 12:42-43）</div>
+<div id="C">相传古时在欧洲某城，要铸一个大钟，不只外观要很美丽，声音也要清脆，好叫民众一听钟声，就被吸引前来敬拜神。然而，所需款项需由市民自由奉献。<br/><br/>　居民之中有一个极为贫穷的小女孩，名叫安纳提，父亲已经去世，母亲作用人，生活相当窘迫。然而安纳提诚心爱主，巴不得在铸钟的事上有分。<br/><br/>　有一天，因为帮助他人搬运杂物，人家送她一个铜元。她起初推辞说，“请你收回，我并不是因为要钱才帮助你。”后来因为推辞不掉，就征得母亲同意，将铜元拿去献作铸钟之用。<br/><br/>　在献款那里，别人都献上大笔款项。当收款人看见她光着脚，穿的又破，并且仅持一个铜元，羞羞答答的在那里递上时，便说，“什么？一个铜元，我们这里不要铜元，快拿回家去吧。”她回去一见母亲，就哭着说，“母亲，他们不肯收我的铜元。”母亲安慰她说，“不要紧，天父知道你的心，你不必忧伤。”安纳提只得又把铜元收藏起来。<br/><br/>　钟铸好之后，经过多次的修整，所发声音总是不和谐。铸钟的技工，虽然都是名匠，也灰心了。有的人说，铸匠的手艺不佳；有的人说，是因天气不合。最后有一个人问说，“请问铸钟的款全用上了吗？”收款人说，“所有奉献的款都已用在这事上了；不过有个贫穷女孩拿来一个铜元，我没有收她的。”那人说，“啊，我们若是不收那个奉献，我相信，这钟声永远不能和谐。”那收款人说，“这真是不近情理。”然而群众都说，“我们该把那女孩找来。”<br/><br/>　于是有人立刻找到安纳提，对她说，“你快快拿着你的铜元去献上吧。”安纳提不懂是什么意思；可是她就照所说的，献上了她的铜元。当人再敲那钟时，钟声真的和谐了，极其好听。民众十分欢喜，同声说道：“安纳提的奉献最多。”</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

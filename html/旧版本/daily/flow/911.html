@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('910')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('912')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 5 课<br />
+实行父旨意的榜样</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：小孩子与小牛犊。（补充本诗歌725首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：凡劳苦担重担的，可以到我这里来，我必使你们得安息。我心里柔和谦卑，因此你们要负我的轭，且要跟我学，你们魂里就必得安息；因为我的轭是容易的，我的担子是轻省的。（太十一28～30。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主为施浸者约翰作见证—太十一7～15</p>
+<p class="ot2">1.　约翰大过所有在诸天之国以前所出生的人—7～11上。</p>
+<p class="ot2">2.　约翰比在诸天之国里的人小—11下。</p>
+<p class="ot2">3.　从施浸者约翰的日子直到现在，诸天的国是强力夺取的—12。</p>
+<p class="ot1">二　主叹责顽固不悛的世代—十一16～24</p>
+<p class="ot2">1.　这世代对先锋或对基督的传讲没有反应—16～19上。</p>
+<p class="ot2">2.　国度子民是智慧之子，称义基督并跟从祂，以基督为智慧—19下。</p>
+<p class="ot2">3.　诸城不悔改—20～24。</p>
+<p class="ot1">三　主向父祷告，并以颂扬承认父的美意—十一25～27</p>
+<p class="ot2">1.　主不求工作的亨通，只求父的旨意。</p>
+<p class="ot2">2.　主称父为天地的主，指明祂是在地上为着神的权益站住—25上。</p>
+<p class="ot2">3.　父将对子和父的认识向智慧通达人藏起来，向婴孩却启示出来—25下。</p>
+<p class="ot2">4.　主的满足和安息不在于人对祂的了解和欢迎，只在于父对祂的认识—26～27。</p>
+<p class="ot1">四　主呼召负重者来得安息，与得安息的路—十一28～30</p>
+<p class="ot2">1.　主呼召劳苦担重担者，到祂这里来得安息—28。</p>
+<p class="ot2">2.　得安息的路—负主的轭，跟主学—29：</p>
+<p class="ot2">a.　负主的轭，就是接受父的旨意，受父旨意的约束。</p>
+<p class="ot2">b.　跟主学，就是‘倒空自己，取了奴仆的形状，成为人的样式’—腓二7。</p>
+<p class="ot2">3.　不仅经历得救的安息，也经历得胜的安息—接受神所分派的轭，并拣选一个受限制的生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识一个实行父旨意的榜样—主耶稣，并从主得着安息的路。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>无论是施浸者约翰的职事或是主的职事，都被当时代的人所弃绝，然而主并不因此失望灰心。祂一面为约翰作见证，坚固祂被囚的先锋；一面鼓励人要强力夺取进入诸天的国。主面对弃绝祂的世代，一面责备诸城的人，一面与父交通，并以颂扬承认父的美意。因主不求工作的亨通，只求父的旨意；主的满足和安息，不在于人对祂的了解和欢迎，只在于父对祂的认识。主也呼召一切劳苦担重担的人，到祂这里来得安息。只要我们肯负主的轭，接受并降服于父的旨意；并且跟主学，像主一样柔和谦卑，接受限制，我们魂里就必得享安息。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　诸天的国是强力夺取的</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>从施浸者约翰的日子直到现在，诸天的国是强力夺取的，强力的人就夺得了。（太十一12。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约翰虽看见成为肉体的基督，但他没有复活的基督住在他里面，新约国度的子民却有。因此，在诸天的国里，最小的一个信徒，比约翰还大。人与基督越近，他就越大。今天基督在我们里面，我们也在祂里面，我们与祂调和，甚至与祂联合。因此，我们与基督的关系是最亲密的，大过所有在我们以前的人，这是多么大的福分。那些想要进入的人，必须强力夺取，才能进入。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>不安逸懒散，操练有迫切、强力夺取，甚至不顾性命，肯出一切代价的灵。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

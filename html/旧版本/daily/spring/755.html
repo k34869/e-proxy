@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('754')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('756')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">天天准备主人回来</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>腓2:3　凡事都不私图好争，也不贪图虚荣，只要心思卑微，各人看别人比自己强；</p><p>一只棕色母鸡带着几只小鸡走出门口。看门的狗看见它们出来，就问：‘母鸡太太，你们要往何处？’棕色母鸡回答说，‘狗先生，我必须出去为我全家寻找食物。不像你一天除了吃、睡，没有事干，到了时候，就有人把饭食放在盘子里给你。’狗说，‘阿，主人不是也天天给你们食物么？我看你的工作并不比别的同伴更重。请问当你们熟睡时，若有狐狸或黄鼠狼要吃小鸡，高声吠叫，保护你们的是谁呢？’棕色母鸡说，‘不要多说了，我没有工夫听你这些。我要去教我的小鸡找虫儿吃。’狗叹息说，‘它真不公平，以为就是自己勤劳工作，其实她并没有作些什么。’棕色母鸡带着小鸡走到一片树荫底下，看见白色母鸡，就跑过去和她闲谈。她说，‘你看，那鸭太太终日除了吃饭、叫唤以外，什么事也不作。我真不知主人为何还要养她。还有那只黄色母鸡，一只小鸡也没有，一周只生一个蛋，哎呀，我真忙的不得了。我时刻勤苦工作，你看现在我正教我的小鸡掘虫儿。’白色母鸡看看她，回答说，‘我看你的工作并不比我的多。你还不过是教养头一窝小鸡；我却已经教养大了好几窝小鸡了。’她们两个各不相下，将要争吵起来。正当那时，狗忽连跑带跳，高声吠叫，奔向棕色母鸡的小鸡群那里去。末了向着棕色母鸡狂吠一声，说，‘你只管在那里闲谈，议论别的同伴，说长说短；为何不尽你的本分，照顾小鸡呢？若不是我，恐怕你的这些小鸡早都丧命了。因为方才有一大鹰要飞下来，攫取它们。’这时棕色母鸡一句话也没有了，又惧又羞，立刻回到小鸡群里。狗就心里说，‘我看这里主事的是我；不过我不说就是了。’从这里可以得到一个事奉主的教训：若是自夸自己的工作，抹煞别人的工作，就和鸡犬争功一样了。‘</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

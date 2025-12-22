@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('685')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('687')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 8 课<br />神借基督作王以恢复地</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周日　阿利路亚的诗篇</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶和华我们的神阿，求你拯救我们，从外邦中招聚我们，我们好称赞你的圣名，以赞美你为夸胜。耶和华以色列的神，是应当称颂的，从亘古直到永远。愿众民都说，阿们。你们要赞美耶和华（诗一○六47～48）。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>诗篇一百零四至一百零六篇，是“阿利路亚诗篇”。诗篇中的“阿利路亚”由这三篇诗开始。对耶和华的赞美，结果乃是阿利路亚。一百零五和一百零六篇，告诉我们基督是已经与祂子民立约的主，祂一直照着祂的约对待祂的子民。祂是救赎主（一○三），祂是创造主（一○四），祂也是与祂子民立约者，且是守约者（一○五～一○六）。立约就是担保，约乃是约束之意，有了约，神就不能随己意而行，祂愿意把祂自己放在这个约束里面。如果没有立约，一切都可以更改。但祂在立约以后，就不能更改，因为祂和受造者已经立了永远的约。一百零五篇便是说到神照着祂的约，对待亚伯拉罕和他的后裔。因此他们要称谢耶和华，求告祂的名，在万民中传扬祂的作为。要向祂唱诗歌颂，谈论祂一切奇妙的作为（1～10）。一百零六篇是这组诗的最后一篇，接续前一篇的历史，讲到神在旷野和应许之地，照着祂的约，以恩惠对待以色列。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因召会建造为殿和城，地也已经完全为主所恢复，并完全被带到基督的管治之下而欢呼跳跃，“阿利路亚”。</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

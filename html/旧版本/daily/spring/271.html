@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('270')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('272')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">霍州戒烟所</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">要变卖你们的家业，施舍给人；为自己预备永不旧的钱袋，用不尽的财宝在诸天之上，就是贼不能近，虫不能蛀的地方。（路12:33）</div>
+<div id="CC">Sell your possessions and give alms; make for yourselves purses which do not become old，an unfailing treasure in the heavens，where thief does not come near nor even moth corrupts.（Luke 12:33）</div>
+<div id="C">清朝末年有一位席胜魔弟兄，曾设立几个戒烟所，借此传扬福音，释放被烟瘾所捆绑的灵魂。其中一个霍州戒烟所的成立，乃是这样：有一天，他的妻子对他说，“我们为霍州祷告很久，现在是不是要开始工作？”席胜魔说，“可惜目前没有钱，房租又贵。”她问：“多少钱？”席胜魔便将数目告诉她；她就走开，没有说什么。第二天早上，家中聚会，她的装束特别朴素，不同素常戴着首饰。会后，她将几包东西放在桌上说，“我想神已经听了我们为霍州的祷告。”席胜魔见妻子装扮朴素，又闻此言，心知必有原因，就将小包打开看，原来是她的金银装饰：手镯、戒指、簪、钗等物。席胜魔说，“你将这一切全都奉献吗？”“自然是。”她很快乐的答复：“我可以没有这些东西，但霍州不可以没有福音。”席胜魔就用所得的钱，创办这戒烟所。戴德生当时也在场，看见这种情形，便说，“你不为这些美丽的东西可惜？”她回答说，“可惜什么？我有耶稣还不够吗？”</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

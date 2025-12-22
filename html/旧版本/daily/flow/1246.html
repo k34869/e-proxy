@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1245')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1247')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 16 课<br />
+财物的交通</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　神是独一祝福的源头</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>太六31～33：所以不要忧虑，说，我们要吃什么？喝什么？…你们的天父原知道你们需要这一切。但你们要先寻求祂的国和祂的义，这一切就都要加给你们了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>今天我们这些神的儿女，乃是在祂的看顾之下。神是用神迹和自然律这两个方式看顾并喂养我们。我们能有好工作，有舒适的住处，并且蒙保护、保守直到今天，这都是神迹。不论是由于神迹或自然律的供应，神都是源头。我们的前途不在我们手中，而在父的看顾之下。不是靠我们的收取，乃是靠神降下吗哪。不仅如此，也不是靠我们的撒种，乃是靠祂的供应。主耶稣说，‘不要为明天忧虑。’我们该听祂的话。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识神才是我们供应的源头，顾到神的需要和祂的定旨。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在主和人面前，留意作善美可敬的事，好避免人对这分职事的挑剔。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>什么叫作‘善美可敬’的事？</p>
+<p>我们在学校、召会钱财的处理上，及与异性相处的事上，如何使人敬重？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在这里，我们看见“预先准备”的原则。每逢我们要作什么，或怎样为人，都应当预先准备，考虑别人对那件事的想法。不错，圣徒都是圣别的，但是他们里面有一个不圣别的，就是魔鬼。在某一件事上，魔鬼会有什么恶念？我们都需要考虑设想。…我们要知道，魔鬼一直蹲伏着等待机会，要破坏我们。如果我们看见这点，我们作事就要谨慎，要预先准备好。</p>
+<p>在召会生活中，我们接触到许多人，牵涉到很多事。在这一切的接触和所牵涉的事上，我们要把握一个原则，就是凡事都要预先有准备，考虑到别人对我们会有怎样的想法。凡事预先有准备总是智慧的，因为这会保守并保护我们。我们尤其应当在神和人面前预先准备作善美可敬的事。一个弟兄若和一个姊妹单独相处，这在人面前就不是可敬的事。这样的行为可能不是罪，却不是可敬的。我们所作的每一件事，在主和人面前，都必须是可敬的。我们的主是无所不知的，所以我们预先准备在人面前作可敬的事，比在主面前作可敬的事更重要。…别人认为我们没有问题是不够的，我们必须在他们面前行可敬的事。否则，人就不会敬重我们。…在钱财的事，和异性接触的事，以及其他种种的事上，原则都是一样，就是在神和人面前预先准备作善美可敬的事。</p>
+<p>在有些事上，我们也许认为自己是正直、无亏、纯洁的。但我们在人面前可能不是可敬的。我们所行的，必须是人看为可敬的。这样，人就没有挑剔的余地。这是我们众人都该学的功课。’（哥林多后书生命读经，485～488页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在钱财的事，和异性接触的事，以及其他种种的事上，在神和人面前预先准备作善美可敬的事。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

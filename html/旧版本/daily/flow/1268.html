@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1267')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1269')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 2 课<br />
+基督在我里面活着</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：何等生命何等平安。（诗歌378首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我已经与基督同钉十字架；现在活着的，不再是我，乃是基督在我里面活着；并且我如今在肉身里所活的生命，是我在神儿子的信里，与祂联结所活的，祂是爱我，为我舍了自己。我不废弃神的恩；因为义若是借着律法得的，基督就是白白死了。（加二20～21。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　保罗对福音真理的忠信－加二1～14</p>
+<p class="ot2">1　保罗忠信持守福音真理，没有容让服从假弟兄－1～10。</p>
+<p class="ot2">2　抵挡彼得对福音真理的不忠信－11～14。</p>
+<p class="ot1">二　基督顶替律法－15～18</p>
+<p class="ot1">三　基督在我里面活着－19～21</p>
+<p class="ot2">1　向律法死了，向神却活着－19。</p>
+<p class="ot2">2　不再是我，乃是基督在我里面活着－20。</p>
+<p class="ot2">3　不废弃神的恩－21。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见保罗对福音真理的忠信与彼得的不忠信，以及保罗与基督同钉十字架，向律法死、向神活着；‘不再是我，乃是基督在我里面活着’的经历。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神将祂的儿子启示在保罗里面之后，他忠信持守他所看见的异象。因此，在面对加拉太的众召会受到热中犹太教者迷惑的难处时，他的态度是既诚实又勇敢。他在灵里受那灵的约束和引导，照着启示再上耶路撒冷去。他抵挡假弟兄所散布信徒要得救必须受割礼的观念，一刻也没有让步，为要使福音的真理存留在信徒中间。但彼得因怕奉割礼的人，就退去，隔离自己。保罗因而在此陈明他所传扬的福音，不是本于行律法，乃是借着信耶稣基督；并且在这样活的信里，他进入与基督生机的联结里，向律法死了，向神却活着；活着不再是保罗，乃是基督在他里面活着。这一切都是因着他对基督主观的珍赏和爱，使他与基督是一，活在神新约的恩典中。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　保罗对福音真理的忠信</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>加二2：我是照着启示上去的，把我在外邦人中所传的福音，对他们陈述；只是私下对那些有名望的人说；惟恐我现在，或是从前，徒然奔跑。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在这里，我们看见保罗的忠信、诚实、坦率、勇敢。他上耶路撒冷去是照着启示，而不是照着任何组织或系统；他的行止和活动，都是照着主即时的引领。并且他不虚张声势，只是私下对一些人陈述他的福音。他并没有从那些有名望的人领受什么，他只认为那在彼得里面运行使徒的职分，也在他里面运行，叫他为外邦人尽使徒的职分。他忠信持守所看见、所领受的托付，丝毫不耍政治，实在是我们的榜样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>忠信持守所看见、领受的托付，放胆传福音，不看环境。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

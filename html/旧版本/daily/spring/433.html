@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('432')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('434')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">一切都是基督负责</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>马太福音十九29 凡为我的名撇下房屋、或是弟兄、姊妹、父亲、母亲、儿女、田地的，必要得着百倍，且要承受永远的生命。</p><p>戚伯门（J. W. Chapman）起初作工之时，听他讲道的人一天比一天多；礼拜堂也盖得顶大。慕迪听见他的名声，特地乘火车来听他讲道。慕迪进了礼拜堂，暗暗坐在那里听道。聚会完了，戚伯门认识慕迪，所以下了讲台，走到慕迪那里，请他有什么话就直说。慕迪就说，弟兄！你所作的是失败的，不是成功的；你的生命里有了错误。戚伯门听了这话，心里很不高兴，总想你慕迪不应当这样批评我，你没有权柄这样说我。但是，说总被慕迪说了，并且自己也知道有一个地方不完全。当他知道了他顶舍不得他的妻子儿女的时候，他一连两三周顶难受！最后他对神说，神！我没法不爱我的妻子和儿女。但是，我求你作工作到我能。从那天起，他才知道如何爱他的妻子儿女了。后来，他作工大有能力。有人要他作见证，他有几句话说，如果在我身上会传福音，会讲道理，如果有一点什么好，我知道是从那里来的，不过是那一次的顺服而已。所以你应当向神说，虽然我顺服不来，我舍不得世界，我不会爱人；但是，我求你在我里面作工，作到我肯顺服你，肯丢下世界，肯不恨人。如果你能信，你这样祷告之后，就必定有改变。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

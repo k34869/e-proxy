@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('145')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('147')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">只住地窖</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">使你们满有力量，能和众圣徒一同领略何为那阔、长、高、深，并认识基督那超越知识的爱，使你们被充满，成为神一切的丰满。（弗3:18~19）</div>
+<div id="CC">May be full of strength to apprehend with all the saints what the breadth and length and height and depth are and to know the knowledge-surpassing love of Christ，that you may be filled unto all the fullness of God.（Ephesians 3:18-19）</div>
+<div id="C">一位母亲管理家务，天天打扫，并晾晒床褥椅垫。因为他们全家都住在最低层的地窖，楼上各层只等贵宾来时才开，平时总是关闭。他们住在最低层，并非因为屋荒，迫不得已；乃是他们故意拣选的，至少他们的母亲坚持如此。<br/><br/>　神造人，好像一座楼房，有灵、魂、体三层。人不要天天只为身体打算，寻求地上的福乐，就像这一家人，只住在屋子的最低层一样。乃要升到最高层，在灵里享受神自己。</div>
+<div id="CC">耶稣聚集我们在一起（补616）</div>
+<div id="C">从前我们在罪中死了，<br/>　这世界全然一团糟；<br/>　但神使我们一起复活，<br/>　一起与基督升天，<br/>　同坐宝座。<br/>（副）<br/>　耶稣聚集我们在一起，<br/>　请看看圣徒同心合意！<br/>　主爱使得我们都一致，<br/>　达到基督丰满身量的地步。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

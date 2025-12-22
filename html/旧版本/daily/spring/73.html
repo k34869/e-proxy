@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+               <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('72')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('74')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第2系列 第39课  正确的人性—公义</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一四六8下 耶和华喜爱义人</p>
+<p>一串项链</p>
+<p>秋天到了，小松鼠蒙蒙一大早就来到了森林里，准备采集储存过冬的食物。不一会儿就把一个大袋子快装满了，就在这时它忽然看到地上有个亮晶晶的东西。哇，是一串美丽的贝壳项链，中间还镶着一颗大珍珠，闪闪发光。“太漂亮了！”正当蒙蒙高兴的时候，它猛然想起了一件事情：昨天和小伙伴们在森林里捉迷藏的时候，小白兔说她最漂亮的项链不见了，最后急得哭起来······看来这串项链一定是小白兔昨天丢的那串。</p>
+<p>蒙蒙把这事告诉给了妈妈听。妈妈听了以后，说：“这肯定是小白兔最心爱的东西，她一定急坏了，赶紧去还给她。”蒙蒙说：“妈妈，我真的好喜欢这串项链，再说她也不知道是我捡的····”这时妈妈说：“蒙蒙，作为神的儿女，应该弃绝一切暗昧的行为，行在光明中。以弗所五章九节告诉我们：光明所结的果子就是一切良善·公义·诚实。所以我们凡事要为荣耀神而</p>
+<p>做，说到这里蒙蒙低下了头，它和妈妈一起跪下来祷告。祷告之后蒙蒙赶快把香链送给了小白兔并向它传福音，二人都喜乐的赞美神。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：公义就是凡事都作的正确合适。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：在某些情况下，做正确和适当的事情是容易和清楚的；有时候，则不。如果你在学校捡到了一个漂亮的钥匙链，而且你知道是别人的，你该怎么办？正确而恰当的做法是送还钥匙链，而不是保留钥匙链。上好钢琴课后，老师允许每个学生从她的糖果碗里拿出一块糖果。如果你整个星期都没有练习钢琴，而且你的功课也不太好，你可以拿一块糖果吗？如果你上了一堂很好的课，你可以拿五块糖果吗？</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约伯记十七9上 然而义人要持守他的道路</p>
+<p>箴言十30上 义人永不动摇…</p>
+<p>出钱入教</p>
+<p>一天，有一位财主，大摇大摆的来见布道家司布真说，“我要入教，如果我被接纳，我愿意捐上五万六千美元，全部由你自由运用，或用在孤儿院，或用在圣经推广都可以。”那时，司布真手头很紧，孤儿院也急需用钱；可是他并未因为钱的缘故而委曲真理。司布真问那财主说，“你重生了没有？”财主支支吾吾的，答不出话来。司布真就说，“既然你还没有重生，我就无法接纳你。”财主气忿忿的说，“给你这么多钱，难道你还不接纳么？”司布真说，“不能，再加七十倍也是不能。”财主气愤极了，掉头就走。</p>
+<p>过了几年，那位财主又来拜访司布真，承认自己已往的过错。他因司布为人正直，持守真理，刚正不阿，越感到自己有罪，因而悔改归主。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：公义就是做事正确合适，哪怕是困难的事。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：讨论做正确和适当的重要性，即使对我们来说是困难或艰难的事情。假设在学校的一次考试中，你的老师走出教室一分钟接一个电话。她不在的时候，你的一个朋友问你一个很难回答的问题。你知道答案，但是给他答案呢是作弊，不给朋友答案可能会使她对你感到失望。在你的朋友要求你作不对且不合适的事，在这样为难的情况下，怎么作才是公义呢？</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二十八1下  …义人却胆壮像狮子。</p>
+<p>箴言十一23  义人的愿望尽是美好…</p>
+<p>诗篇十一7   因为耶和华是公义的；祂爱公义的行为。正直人必得见祂的面。</p>
+<p>尼希米的故事</p>
+<p>在尼希米五章十四至十九节，我们看见尼希米的好榜样。他与他弟兄因敬畏神，十二年之久没有吃省长的俸禄。尼希米坚定持续作城墙的工。他和他的弟兄，并众仆人，聚集在哪里作工，并没有置买田地。这就是说，他们没有接受任何一种报酬。反而在席上丰富的供养一百五十个犹大平民和官长，此外还有从四国外邦中到他那里来的犹大人，然而，他并不要省长的俸禄，因为百姓为建造服役甚重。尼希米只求神记念他为百姓所行的一切事，善待他。</p>
+<p>这里我们该留意，省长尼希米在王的地位上，在重建耶路撒冷的城墙，以完成神经绝的事上，像神一样公义，不自私，不求自己的利益，不像诸王一样，为自己积蓄钱财，反而为神花费自己的一切，并且不怕人的嘲笑，刚强站住。所以他有资格享受神向他选民所应许之美地最高的分。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：公义是渴望成为正确、正当的，即使情况可能与我们无关。我们应该像神一样，只渴望公义和良善，憎恶虚假和邪恶。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：如果我们是公义的，我们不应该容忍一个错误的情形，并且应该期望做事正确、适当。如果你的老师走出不在教室内，有人把球扔到她的桌子上，打破了她的花瓶，我们该怎么办？当她回到房间时，她问班上谁扔了球。虽然每个人都知道是谁干的，但没有人说出来，因为没有人想“不舒服”。这是正确、合适的吗？你应该保持沉默吗？如果在课间休息时有人欺负别人，但没有人告诉老师，因为他们害怕被他欺负。你会不介入而允许这种情况发生吗？我们可能什么也不做，但是不义的事会发生。与孩子讨论如何处理这些类型的情况。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

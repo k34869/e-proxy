@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('833')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('835')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 12 课<br />
+主生命供应的职事（四）生命的喂养</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：神是我们食物。（补充本诗歌210首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：耶稣对他们说，我就是生命的粮，到我这里来的，必永远不饿；信入我的，必永远不渴。（约六35。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主与门徒上到高山—太十四13～14，可六30～34，路九10～11，约六1～3</p>
+<p class="ot2">1.　海象征撒但所败坏的世界。</p>
+<p class="ot2">2.　山象征超越的地位。</p>
+<p class="ot1">二　主顾到饥饿的群众—太十四15～18，可六35～38，路九12～13，约六4～10</p>
+<p class="ot1">三　五饼二鱼食饱五千—太十四19～21，可六39～44，路九14～17，约六11～14</p>
+<p class="ot2">1.　藉着一个孩童的五个大麦饼和两条小鱼：</p>
+<p class="ot2">a.　五个大麦饼象征基督的生命生产的一面。</p>
+<p class="ot2">b.　两条鱼象征基督的生命救赎的一面。</p>
+<p class="ot2">c.　饼和鱼表征基督的微小，好作我们生命的供应。</p>
+<p class="ot2">2.　藉着将饼和鱼献给主，主擘开递给众人，众人就都吃饱了。</p>
+<p class="ot2">3.　剩下十二篮的零碎，表征基督生命供应之丰富的满溢。</p>
+<p class="ot1">四　主启示祂是生命的粮，是真正的食物与真正的饮料—约六22～71</p>
+<p class="ot2">1.　不要追求必坏的食物，要追求存到永远生命的食物，就是从天上降下来生命的粮—22～31。</p>
+<p class="ot2">2.　主是那存到永远生命的食物，藉着经过以下六个步骤—32～71：</p>
+<p class="ot2">a.　成为肉体—32～51上。</p>
+<p class="ot2">b.　被杀—51下～55。</p>
+<p class="ot2">c.　复活以内住—56～59。</p>
+<p class="ot2">d.　升天—60～62。</p>
+<p class="ot2">e.　成为赐生命的灵—63～65。</p>
+<p class="ot2">f.　具体实化于生命的话—66～71。</p>
+<p class="ot1">五　主第二次行神迹，以七个饼和几条小鱼，喂饱四千人，并剩下七个筐子的零碎—太十五32～39，可八1～10</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主藉五饼二鱼的神迹，启示祂是从天上降下来生命的粮，赐人生命，作人生命的供应和饱足。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>当主和门徒渡过海，上到高山时，许多人因听见而跟随。主对他们动了慈心，因他们如同羊没有牧人一般。当这些跟从主的人饥饿时，主顾到他们的饥饿，并以一个孩童的五饼二鱼，喂饱了五千群众。这事例的属灵意义乃是，跟从主之人真正且惟一的需要，乃是主复活的生命作他们丰富的供应，以满足他们属灵的饥饿。主也向人启示，祂是那从天上降下来生命的粮。藉着祂成为肉体、钉死、复活以内住、升天、成为赐生命的灵，并具体实化于生命的话，祂成为可吃的形态，供我们享受，并赐给我们生命。接受主作生命的路，乃在于运用我们的灵，呼求主的名，并接受主那是灵、是生命的话。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主与门徒上到高山</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶稣…看见大批的群众，就对他们动了慈心，因为他们如同羊没有牧人一样；祂就开始教训他们许多事。（可六34。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主耶稣带门徒渡过海，并且上了山。在预表上，地象征神所创造、使人在其上生活的大地；海象征撒但所败坏、堕落的人在其中生活的世界。而山是象征基督所在高超的地位，以及我们必须与祂同在的地方。主并未在海边喂养人，祂乃是将群众领到山顶。我们若想要得着基督的喂养，就必须超越撒但所败坏的世界，也超越神所创造的地，与祂同上到高处。当主看见大批的群众，立刻对他们动了慈心，这展示主在人性里的美德，也说出主来到地上，是为了寻找拯救那些失丧的人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>与主一同上到高处，以从主得喂养和供应；并珍赏主牧养顾惜人的人性美德。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

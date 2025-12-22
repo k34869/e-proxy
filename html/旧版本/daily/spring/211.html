@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('210')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('212')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">喝酒的张某死了</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">我已经与基督同钉十字架；现在活着的，不再是我，乃是基督在我里面活着。（加2:20）</div>
+<div id="CC">I am crucified with Christ; and it is no longer I who live，but it is Christ who lives in me.（Galatians 2:20）</div>
+<div id="C">从前有张、李二位先生，都嗜好喝酒，因此结成好友。一次，李先生前往汉口经商，约有一个月才回来。一回到上海，将行李安置妥当，即往酒楼买醉，并叫侍役持条子邀请张先生来赴小酌。不料侍役持条子回来，上面写着：“喝酒的张某已经死了。”李先生顿时大吃一惊，心想分离只一个月，好友却已死，竟成永别。然而，不知他的家人如何？因此无意喝酒，立刻雇了一辆车子到张家去。到了张家，看见双门紧闭，便上前叩门。不久门开，张先生赫然立在门前。李先生以为见了鬼魂，吓得转身就跑。张先生赶去一把抓住他，笑个不停。李先生吓得浑身发抖的说，“我是你的好友，生前没有亏负你，你现在何必如此对待我呢？”张先生好言安慰他说，“不要怕，我没有死。”李先生回答说，“那回条明明批着：喝酒的张某已经死了。”说时双手捧着纸条，恭恭敬敬的呈在张先生面前，心中却仍旧害怕。张先生回答说，“我已经悔改信了耶稣，已经与酒樽告别了，从此不再喝酒，所以喝酒的张某死了；现在活着的，是信主的张某。”</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

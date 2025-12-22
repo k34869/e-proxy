@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('84')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('86')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">祷告救了美国</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">聚集在这里的众人也必知道耶和华施行拯救，不是用刀用枪，因为争战的胜败在于耶和华。（撒上17:47）</div>
+<div id="CC">And all this congregation will know that it is not by sword or spear that Jehovah saves，for the battle is Jehovah's.（1 Samuel 17:47）</div>
+<div id="C">一八六二至六三年，是美国历史上最黑暗的一年。当时为了解放黑奴，南北双方交战不休。当时北政府外有强敌，内有内奸，以致屡战屡败。正在这严重关头，总统林肯发布一道命令，劝全国人民禁食祷告神；那是一八六三年三月三十日的事。五月九日在昌色拉威尔，北军打了一次败仗，看起来好像神没有听到祷告。当时南方军队，更加骄傲，决定北伐。北军失败的消息传到林肯总统耳里时，他独自一人在房里祷告神，并许愿说，神若赐他大胜，他必终身向神尽忠。他对他的部属说，“这次战争是为神，为正义而战，所以这一次，神必扶助我们的将士能战胜。”第二天在盖茨堡（Gettysburg）一战，果然得了大胜利；那一次的胜利，决定了大局，以后北军屡战屡胜。这就是神听了一国元首和全国人民祷告的事实。</div>
+<div id="CC">试炼中的安慰─主的信实（诗506）</div>
+<div id="C">祂不误事，因祂是神！<br/>　祂不误事，祂乐施恩！<br/>　祂不误事，祂已许过！<br/>　我们有神，还怕谁何？</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

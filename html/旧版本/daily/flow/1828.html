@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1827')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1829')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 10 课<br />
+基督来据有全地</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：去向亡世供应基督。（诗歌665首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：第七位天使吹号，天上就有大声音说，世上的国，成了我主和祂基督的国，祂要作王，直到永永远远。（启十一15）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　插于第六号和第七号之间的异象—启十1～十一13</p>
+<p class="ot2">1　基督来据有全地—十1～7。</p>
+<p class="ot2">2　约翰受嘱再说预言—8～11。</p>
+<p class="ot2">3　丈量圣殿，丢弃外院—圣别并保留天上的殿；将地上的殿给了外邦人—十一1～2。</p>
+<p class="ot2">4　 两个见证人—摩西和以利亚—3～12。</p>
+<p class="ot2">5　 大地震—本书中所预言的第三次地震—13。</p>
+<p class="ot1">二　第七号—基督永远的国；由七碗组成的第三样灾祸；审判死人；赏赐众申言者、众圣徒、和敬畏神的人；并败坏那些败坏地者—14～18</p>
+<p class="ot1">三　吹第七号之后天上的景象—殿开了，现出约柜—19</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>说到插于第六号和第七号之间的异象与第七号。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录十章一节至十一章十三节是插在第六号与第七号之间的话，由三个异象组成，就是基督来据有地的异象，（十1～7，）敌基督和他的军队践踏地上之耶路撒冷的异象，（十一l～2，）和两个见证人的异象。（3～12。）</p>
+<p>十一章十四至十八节说到第七号，包括基督永远的国；由七碗组成的第三样灾祸；审判死人；赏赐众申言者、众圣徒、和敬畏神的人；并败坏那些败坏地者。至终，第七号之后，神天上的殿开了，现出祂的约柜。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　插于第六号和第七号之间的异象</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启十1～2上:我又看见另一位大力的天使，从天降下，披着云彩，头上有虹，脸面像日头，两脚像火柱，手里拿着展开的小书卷。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>此时祂披着云彩，不是驾着云，驾着云是公开的来，披着云彩是隐密的来。这指明即使到了第六号之后，就是大灾难中期，基督还是隐密的来临；那些在暗中仰望祂的人，就要看见祂，得着祂的安慰。一个得胜者，乃是在黑夜中儆醒的人；他们不能和罪恶的世界、和腐败的召会一同睡觉、打盹；他们所注意的，乃是将来的事，因为晨星已经在他们心里显现。主现在将这事摆在疲倦的圣徒面前，叫我们仰起头来，盼望将来的事，在腐败的环境中得胜。</p>
+<p>操练应用:作得胜者，在黑夜里儆醒，好得着晨星。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1876')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1878')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 17 课<br />
+新耶路撒冷（二）金、珍珠、宝石</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：　神的心意是要我们模成祂儿子形像。（诗歌546首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：我未见城内有殿，因主神全能者和羔羊为城的殿。那城内不需要日月光照，因有神的荣耀光照，又有羔羊为城的灯。（22～23。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot2">3　城的结构与量度（续）—启二一12～21：</p>
+<p class="ot2">c　量度的工具—15。</p>
+<p class="ot2">d　城本身的量度—16。</p>
+<p class="ot2">e　城墙的量度：</p>
+<p class="ot2">（一）天使的尺寸—一百四十四肘—17。</p>
+<p class="ot2">（二）用碧玉造的—18。</p>
+<p class="ot2">（三）十二根基是十二样宝石—19～20。</p>
+<p class="ot2">f　十二个门是十二颗珍珠—21上。</p>
+<p class="ot2">g　城内的街道是纯金，好像透明的玻璃—21下。</p>
+<p class="ot2">4　扩大的殿—22。</p>
+<p class="ot2">5　城的光与灯—23～27。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>介绍新耶路撒冷城的细节—包括城与城墙的量度、墙的根基、珍珠门、街道、城的殿与光。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>圣城的结构使我们看见，城是由金、珍珠、和宝石三种元素构成的。首先，城的本身同街道是纯金的。金是神圣别性情的表号，表征父是源头，产生使城实际存在的元素。第二，城的门是珍珠，表征子得胜的死并分赐生命的复活，藉此开了城的入口。第三，城墙及其根基是用宝石造的，表征那灵变化的工作，将蒙救赎、得重生的圣徒变化为宝石，为着建造神永远的居所。在伊甸园，这三种宝物仅是材料，到了新耶路撒冷，这些宝贵的材料成了被建造起来的城，何等荣耀！关于城的量度，新耶路撒冷的长宽高都相等，表征整个新耶路撒冷就是至圣所；而城墙的量度，则使我们看见复活的原则。城墙的根基是十二样宝石；然而，这十二根基不是并排放着，乃是上下相叠。这说出我们所有的工作都该带来并支持在独一彰显中的独一见证。此外，圣城是神的帐幕，是为给神居住；神和羔羊是殿，是为给蒙救赎的圣徒居住。在新天新地里，新耶路撒冷乃是神与人相互的居所，直到永远。在此也不需要日月光照，因为神作神圣的光，要照耀得更为明亮。那是灯的羔羊凭着是光的神照耀，用神的荣耀，就是神圣之光的彰显，照亮这城。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　城的量度</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启二一16城是四方的，长宽一样；天使用苇子量那城，共有一万二千斯泰底亚，长宽高都相等。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>新耶路撒冷为一根苇子所量，如同妇女在布店里买料子，所量出的数量就是她们所购买并据有的数量。同样的，新耶路撒冷要被金苇子所量，就是要非常积极的完全被主据有。甚至今天，神也用祂金的标准来量召会。祂不在意我们的智慧、活动或口才，但祂非常在意祂的性情有多少已经作到我们里面。我们彼此要表现爱的时候，是属人的还是神圣的。我们必须核对谦卑良善是属人的或是神圣的。这原则适用于我们人性的每一面。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>行事为人以神神圣的性情为衡量的标准。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

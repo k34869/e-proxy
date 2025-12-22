@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1854')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1856')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 13 课<br />
+晚期的得胜者和七碗</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　第七碗</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启十六17：第七位天使把碗倒在空中，就有大声音从殿中的宝座上出来，说，成了！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>当第七碗倒在空中的时候，为着审判并为着神的彰显，就是神的见证的一切事都完成了。紧接着就有闪电、声音、雷轰和大地震，要使耶路撒冷那大城裂为三段，列国的城也都倒塌了。物质的巴比伦，就是罗马城，是在大灾难的末了被毁灭。至终，又有大雹子从天落在人身上，每一个约重一他连得（约四十五公斤）。当大雹降下来的时候，在敌基督国里的人仍要亵渎神。这证明他们无心悔改，宁愿与神抗争到底。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>今世为着神的殿—神的彰显—受审判，过否认己，背十字架的生活，那日免受神末后七灾的管教。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>晚期的得胜者在大灾难期间，就是召会时代末了的三年半，胜过了敌基督的逼迫。他们为着神背负耶稣的见证而殉道，然后他们要复活，与基督在千年国里一同作王。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>晚期的得胜者是指那些人？他们胜过了什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘晚期的得胜者表征众召会中其余的信徒。（启十二17，十五2。）晚期的得胜者在大灾难期间，就是召会时代末了的三年半，胜过了敌基督的逼迫。他们为着神背负耶稣的见证而殉道。在死了的得胜者同活着的得胜者被提之后，地上还留下许多尚未成熟的信徒。他们要存留，活在大灾难中。他们有许多人要在敌基督的逼迫下殉道，然后他们要复活，与基督在千年国里一同作王。（二十4。）</p>
+<p>一面说，在今天成熟比较容易。如果你等到经过大灾难，你就必须殉道才能成为得胜者。另一面说，在大而困难的事上常常比较容易得胜，在小而容易的事上就比较不容易得胜。许多所谓好的、属灵、属天的姊妹们，习惯看周六早晨的报纸找减价广告，好去买东西。她们里面可能知道这不是出于主，而且她们也不需要她们要去买的那些东西，但是她们仍然去买。这似乎是一件很容易胜过的小事，但大部分的情形她们却在这事上失败了。</p>
+<p>然而，当敌基督在大灾难期间掌权的时候，他要以死威胁那些不敬拜他的人。在某种意义上说，我们在这样的大事上反而容易胜过。如果你拒绝敬拜敌基督，你就立即殉道。那时，你没有时间考虑，像你要去买减价东西有时间考虑一样。但无论如何，我们都必须得胜，好使我们能够成熟。’（关于主的恢复和我们当前的需要，121～122页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神的道路，确信神必要成就祂所应许的。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

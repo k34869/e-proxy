@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <title>SS</title>
+    <link rel="stylesheet" href="../../assets/index.css" />
+    <script src="../../assets/crypto-js/crypto-js.js"></script>
+    <link rel="stylesheet" href="../../assets/mine.css" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <van-nav-bar title="四活" @click-left="back" @click-right="backHome">
+        <template #left>
+          <van-icon name="arrow-left" />
+        </template>
+        <template #right>
+          <van-icon name="wap-home" />
+        </template>
+      </van-nav-bar>
+      <div style="margin: 10px; text-align: center">
+        <van-space wrap>
+          <van-button v-for="item in data" :color="item.color" @click="jumpTo(item.name)">{{ item.text }}</van-button>
+        </van-space>
+      </div>
+    </div>
+  </body>
+  <script src="../../assets/v3.js"></script>
+  <script src="../../assets/mine.js"></script>
+  <script src="../../assets/min.js"></script>
+  <script src="../../data/four/index.js"></script>
+</html>

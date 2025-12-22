@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('569')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('571')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第26课  性格—坚定持续</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多前书十五58中 …你们务要坚固，不可摇动…</p>
+<p>坚定的小蜗牛</p>
+<p>森林里的小动物们都着急的赶去听百灵鸟的演唱会，蜗牛淘淘也在满头大汗的爬着，小蜘蛛担心地说：“爬得太慢了，肯定来不及呀！”淘淘并没有气馁，继续爬呀爬呀。喜鹊阿姨叽叽喳喳的劝他说：“放弃吧，你可能赶不上，”淘淘没说话，只是坚持爬着。小动物们一溜烟的跑远了，森林里的小路上就剩下淘淘慢慢地往前爬。几天过去了，小松鼠告诉他：“你别去了，别去了，百灵鸟的演唱会取消了，因为它生病了，可是淘淘没有放弃，终于爬到了目的地。这时，百灵鸟的病好了，唱起了歌，淘淘终于听到了百灵鸟的演唱会，它的梦想实现了。</p>
+<p>这个故事告诉我们：要想梦想成真，必须坚持不懈，任何人劝说你不要做了，不要做了，都不要气馁，只有这样才能够实现梦想，梦想成真。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个坚定的人是遇到困难的事也会继续去作，努力去作的人。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：带孩子们回想，他们是怎样学会跳跃、跳绳、踢球、游泳、骑自行车或写他们名字的。当他们第一次作这些事时，可能看起来很困难，但是当他们继续努力时，他们最终就作到了。当你第一次去作一些事，作不到的时候，不要放弃。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>希伯来书十一7上 挪亚因着信，既蒙神指示他未见的事，就为虔敬所动，预备了一只方舟，使他全家得救…</p>
+<p>一直麻烦神</p>
+<p>有位姊妹为她哥哥祷告多年，未得答应，有一天她很有把握的说；我知道，我哥哥定规得救。她说，“我这几天，读到路加十八章那个寡妇不断要求那个不义的官为她伸冤，后来求到一个地步，那个不义之官为避免她不断来麻烦他，就给她伸了冤，神给我看见，我从来没有麻烦神。如果我早晨起来对神说,我的哥哥得救！中午，也对神说叫我哥哥得救!路加十八章五节这节圣经给地读透了，这位姊妹本来是个胆小的人、但是那一次她非常放胆，一直麻烦神麻烦到神没有办法。隔一周之后她哥哥果然得款了，</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个坚定的人是遇到困难的事也会继续去作，努力去作的人。他们清楚知道，有价值的事不可能在短时间内实现，或偶然地获得。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：考虑讲述挪亚的故事，挪亚所作的事情对神有何等大的价值。他建造方舟花费了几十年的时间和精力，日复一日地进行。他只有三个儿子来帮助他，其他人取笑他建造方舟是没有意义的。他必须坚持到底。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>加拉太书六9 我们行善，不可丧志；因为若不灰心，到了适当的时候，就要收成。</p>
+<p>伟大的发明家爱迪生</p>
+<p>1847年，爱迪生出生在美国俄亥俄州的米兰。从小爱迪生就喜欢发问，凡事总要追根究底爱迪生从母亲的教导中，得着极大的益处，也对读书发生了浓厚的兴趣。母亲发现爱迪生好奇心重，对物理、化学特别感兴趣。于是在他九岁时送给他一本厚厚的科学名著自然与实验哲学”。这对爱迪生而言，是一本高难度的书，然而他却认真的读完，也因此对科学产生极大的兴趣。家中地下室的个角落成了爱迪生的实验室;他开始认真投入有关电力与化学的实验由于实验需要较多的花费，爱迪生从十二岁起，就在火车上作报童。他经常利用火车到站</p>
+<p>停留六个小时的空档，到图书馆读书。母亲以牛顿和瓦特为例鼓励爱迪生不可灰心，要继续不断对人类就会有所贡献。这使爱迪生继续向艰深的学问挑战尽常一天的工作已使他精疲力</p>
+<p>但是一回到实验室，爱迪生就忘了如果遇到不懂的地方，他就记在笔记本上，第二天再到图书馆找寻相关资。</p>
+<p>1862年八月的一个早晨，爱迪生奋不顾身的抢救了一个在铁道中央玩要，即将遇难的三岁小孩，这孩子的父亲正是火车站的站长，站长为了报答爱迪生，便主动邀请爱迪生到火车站发报室，作见习的报务员，教授他电信技术。由于发生从小就经常组合电器零件，也曾经实验过电信用的电键，因此在很短时间里，就学会了各种电信技术并基本的操作，四个月后，</p>
+<p>他成为一名正式的报务人员，同时，爱迪生不断研发辅助收发工作的产品，从此开启了他的发明生涯。爱迪生在研发过程中，屡遭挫折，并且因着购买实验用品的花费太大，经常入不敷出，但他没有一次退缩，仍然朝目标迈进，之后，他成为一位电报专家，发明的产品几乎涵盖各个电报相关领域。一八七六年，他在门洛帕克建立美国第一个工业研究实验室，并在隔年发明了留声机，轰动全世界。以后，爱迪生全心投入电灯的实验工作，终于在一八七九年发明了碳芯，为了寻找灯泡内的耐热村社、爱迪生不断的探索并加以改进。前后花了二十多年的时间过程中，助手曾对发迪主说:你已经失败一干多次了，成功机会非常渺茫、还是不弄吧，爱迪生却说“我的收获还不多，起码我发现有一千多东西不能作灯丝，最后，爱迪生的实验终于成功。为人类带来极大的贡献。</p>
+<p>爱迪生是个恒心信靠神的人，在他的实验里写着我深信有一位全智全能，充满万有、至高至尊的神存在。实验室里还放着圣经，可随时阅读。这是爱迪生不因失败而沮丧。反倒能持之以恒，努力不歇的秘诀。爱迪生毕生的发明超过二千多种。是近代物理史上一位杰出的科学家更被誉为世界上最伟大的发明家。当美国科学界人士，欢腾的庆祝爱迦生的发明对人类的贡献时。爱迪生却谦虚的说我只不过用乌丝把电引导在管子里让它发光。真正的发明家是神，袍发明了电，我不过是发现者…愿一切荣耀归于我们的造物主神我只有一件事，就是忘记背后，努カ面前的，向着标竿竭力追求(腓立比书三章十三至十四节)</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个坚定的人是忠于自己信仰的人。即便受到反对和打击，他们仍然坚守自己的信仰。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：我们是相信有神的人。我们可能有朋友，他们不相信有神，甚至嘲笑我们相信神。但作为坚定的人，不管别人对我们说什么令人沮丧的话，我们必须为我们所相信的站住。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

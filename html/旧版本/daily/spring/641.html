@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('640')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('642')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">强盛时日已被吃掉</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>太26:41　要警醒祷告，免得入了试诱；</p><p>有位姊妹，常在祷告中看见天使。和她在一起的姊妹们为要晓得这位姊妹所看的是真是假，大家就时常留意她的动作和态度。可是她的态度，除了眼色有一点与平常人不同外，别的都很正常。有一位年长的姊妹很有经验，看见她的眼睛如此，就知道她所看见的大概不是真的天使。她向那姊妹说，‘你看见的灵，你试验过么？’她回答说，‘这是真的天使，穿着发光白衣，为什么还要试验呢？’年长的姊妹说，‘圣经岂不是说，魔鬼也能装作光明的天使么？总要照着约壹四章二节的方法去试验！否则，上了当怎么办呢？’那个姊妹很能受教，定意下次要试验这灵。</p><p>不久，她祷告的时候，那天使又来了。她就对那天使说，‘你恐怕不是天使阿！’那天使说，‘你那里知道？’她说，‘因为经上说，魔鬼也能装作光明的天使哩！’说完这话，魔鬼就把白衣慢慢脱下，现出漆黑狰狞的面目，开始用欺骗的手段，诡诈的话语，向那姊妹攻击。那位姊妹就用经句抵挡，打起仗来。可惜那位姊妹学习不够，圣经认识较浅，几被魔鬼所胜。后来幸得许多姊妹同心祷告，最后得胜了。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

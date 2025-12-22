@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('712')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('714')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">并无例外</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林前9:23　凡我所行的，都是为福音的缘故，为要与人同享这福音。</p><p>有一个人叫作叨德，算是十九世纪很会带人得救的人。他十六岁得救，情形是这样的：在一个假日，他到乡村去，在那里碰着教会里的一对老夫妇招待他。那一对老夫妇很会作工，就把他引到主的面前去。那一天他跪下来祷告，得救了。后来，他就和那一对老夫妇一起喝茶谈话；喝茶的时候，他们谈起这地方，总得等那一个狄营长悔改了，才有办法。</p><p>叨德是一个年轻人，一听见这话，就问狄营长是谁？他们就告诉他，他是一个退伍军人，已经六十多岁了。他在家里预备了一支手枪，谁向他开口传福音，他就打他。对于基督徒，他就给他们起一个名字，叫假冒为善的人。他看全世界的基督徒都是假冒为善的人，只要是基督徒，他就要打。所以没有一个人敢向他传福音，也没有一个人敢从他住的那条路上走过。因为一从他的路上走过，他就要骂，咒诅的骂，非常的凶。叨德就说，‘主阿！我蒙你的恩典，今天你救了我，我要去向他作见证。’茶没有喝完，就说，我要去。得救没有两个钟头，就要向狄营长作见证。</p><p>那一对老夫妇就劝他说，这是不行的，我们许多人劝过他都不行，你不要去。有的人给他用枪托打出来，有的人给他用棍子打出来，有的人看见他要开枪，就赶快跑出来。又不能因着传福音，被打而控告他，所以他越打越厉害。并且他又是受法律保障的退伍军人，没有人敢碰他。但叨德说，‘不！我觉得我应该去。’他就去了。</p><p>一到狄家门口，一叩门，狄营长就出来开门。狄营长说，‘青年人，你要作什么？’棍子拿在手里。他就说，‘好不好让我说几句话。’两个人就一同走到房子里去。一到房子里，叨德就说，‘我盼望你能够接受主耶稣作你的救主。’狄营长就把棍子拿出来，说，‘恐怕你是新来到这一个地方，你是初到这里来，所以原谅你，不打你。难道你在这里没有听见么？这一个地方，是谁都不许题起耶稣的名字的，走！快快走！’叨德就再说，‘我劝你应该相信耶稣。’狄营长就发火了，到楼上去，把手枪拿下来，很凶的对他说，‘走！不然，我就开枪。’他说，‘我是要劝你信耶稣，你要开枪，只好让你开。不过当你还没有开枪之前，让我祷告。’</p><p>他就立刻当着狄营长的面跪下来，祷告说，‘神阿！在这里有一个人，不认识你，求你救他。’第二次再说，‘神阿！在这里有一个人，不认识你，求你怜悯他，怜悯狄营长。’一直一直的祷告，跪在那里不起来。一直说，‘神阿！求你怜悯狄营长！’当他祷告到五、六遍的时候，他就听见在他旁边有一个声音，好像是叹一口气。等一等，又听见手枪放下来。再等一等，狄营长也跪下来了，在他的旁边，祷告说，‘神阿！求你怜悯狄营长。’五分钟之后，那一个人相信了主。他就拉一拉这个青年人的手说，‘我一生都是听见福音，今天我是第一次看见福音。’</p><p>这一个青年告诉人说，当时我看见他的脸，照旧是犯罪的脸，每一横都是罪，每一横都是凶的。但是，光从每一横里照出来，每一横好像都是在说，神怜悯了他。第二个主日，狄营长就到礼拜堂聚会。一直到去世，狄营长也带领了几十个人得救。基督徒一得救，就向人传福音，是很蒙祝福的一件事。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

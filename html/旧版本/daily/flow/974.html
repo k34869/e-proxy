@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('973')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('975')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 14 课<br />
+逾越节的筵席与主设立晚餐</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：在宇宙中只有一个身体。（补充本诗歌611首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：耶稣拿起饼来，祝福了，就擘开，递给门徒，说，你们拿着吃，这是我的身体。又拿起杯来，祝谢了，递给他们，说，你们都喝这个，因为这是我立约的血，为多人流出来，使罪得赦。（太二六26下～28。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　国度预言的第三段—关于万民—太二五31～46</p>
+<p class="ot1">二　主第四次预言受死并犹大出卖主—太二六1～5，14～16，可十四1～2，10～11，路二二1～6</p>
+<p class="ot1">三　逾越节晚餐的预备—太二六17～20，可十四12～17，路二二7～14</p>
+<p class="ot1">四　生命在爱中维持交通的洗涤—约十三1～17</p>
+<p class="ot1">五　主预言犹大将出卖主—太二六21～25，可十四18～21，路二二21～23，约十三21～30</p>
+<p class="ot1">六　主赐下新诫命，要门徒彼此相爱—约十三34～35</p>
+<p class="ot1">七　主设立晚餐顶替逾越节—太二六26～29，可十四22～25，路二二14～20</p>
+<p class="ot2">1.　主和门徒首先吃逾越节的筵席—太二六20～25，路二二14～20。</p>
+<p class="ot2">2.　主设立主的筵席（桌子）顶替逾越节的筵席—太二六26～28，路二二19～20：</p>
+<p class="ot2">a.　筵席上的饼象征主的身体为我们在十字架上裂开，使我们有分于祂的生命，并有分于主身体的交通。</p>
+<p class="ot2">b.　主的杯象征主立约的血为我们流出，使我们享受神作我们救恩的杯，满溢的福杯。</p>
+<p class="ot1">八　主与门徒唱诗敬拜父，并往橄榄山去—太二六30，可十四26</p>
+<p class="ot1">九　主坚固并警告门徒—太二六31～35，可十四27～31，路二二24～34</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识主受死前设立主的筵席顶替旧约的逾越节，擘饼聚会中饼和杯的意义。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>本课继续说到主在橄榄山上国度预言的第三段，关于万民的预言，以及主受死前最后一次过逾越节晚餐的细节。这晚餐分为两个段落，前一段是逾越节的筵席。主在这筵席中为门徒洗脚，要门徒也彼此洗脚。主也预言犹大将出卖主，此时撒但进入犹大的心，他就离开了。犹大离开后，主赐给门徒一条新诫命，要他们彼此相爱。接着，主设立主桌子的筵席，顶替逾越节的筵席。在这筵席上，主桌子的饼是为了记念主的身体为我们裂开，使我们有分于神的生命；主的杯是主用血所立的新约，使我们享受神的福分。在这晚餐中，主也坚固门徒，警告他们将要因着主钉十字架而分散。筵席过后，主与门徒一同唱诗敬拜父，并往橄榄山去。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　国度的预言—关于万民</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我实在告诉你们，这些事你们既作在我这些弟兄中最小的一个身上，就是作在我身上。（太二五40。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>国度预言的第三段是关于万民的。主将要在祂的荣耀里，同着众天使公开的来临，并要坐在祂荣耀的宝座上，万民都要聚集在祂面前受审判。主要把他们彼此分开，好像牧人把绵羊从山羊分开一样。这指明主不仅是信徒和犹太人的牧人，也是所有外邦人的牧人。在大灾难期间，敌基督要强迫神的子民敬拜他，恶待、逼迫、监禁那些留在地上的基督徒。而天使要来传永远的福音，警告人要敬畏神，不要恶待祂的子民。那些听从这福音，善待受苦信徒的人，就要蒙福，被算为义的，要承受那创世以来为他们所预备的国。但那些不听从的，就要受咒诅，进入那为魔鬼和他的使者所预备的永火里去。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>活在审判台前的光中，善待弟兄姊妹，好在那日得着赏赐。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

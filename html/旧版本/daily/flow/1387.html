@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1386')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1388')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 1 课<br />
+推广福音的交通</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我是个新约福音祭司。(新歌颂咏9首。)</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：为了你们从头一天 　直到如今，在推广福音上所有的交通。（腓一5。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　腓立比书简介—腓一1，徒十六10～12</p>
+<p class="ot2">1　著者：基督耶稣的奴仆，保罗和提摩太。</p>
+<p class="ot2">2　著时与著地：约主后六十四年，保罗在罗马监狱中所写。</p>
+<p class="ot2">3　受者：在腓立比的圣徒，同监督和执事。</p>
+<p class="ot2">4　主题：经历基督—以基督为生活、为榜样、为目标、为能力及秘诀。</p>
+<p class="ot1">二　引言—腓一1～2</p>
+<p class="ot1">三　推广福音的交通—3～18</p>
+<p class="ot2">1　腓立比的召会在推广福音上与保罗有交通—5。</p>
+<p class="ot2">2　保罗为福音受捆锁并对恩典的享受—7～8。</p>
+<p class="ot2">3　保罗为腓立比人的祷告—9～11。</p>
+<p class="ot2">4　保罗的捆锁是为着福音的进展—12～14。</p>
+<p class="ot2">5　两种不同的传讲—15～18。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见保罗活基督并显大基督，为着福音的进展受捆锁；以及腓立比的召会在福音的推广上，与保罗有交通的榜样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>腓立比书是一卷经历基督的书。第一章给我们看见保罗为福音的进展受捆锁，而腓立比召会的圣徒因着在推广福音上与保罗有交通，就与在捆锁中的使徒同享恩典。保罗也为腓立比人祷告，使他们的爱能在充足的知识和一切的辨识上，多而又多的洋溢，能鉴赏那更美、不同的事，并能纯诚无过，直到基督的日子。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　腓立比书的简介与引言</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>腓一20～21上：只要凡事放胆，无论是生，是死，总叫基督在我身体上，现今也照常显大，因为在我，活着就是基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>新约四卷心脏书信的第三卷是腓立比书。腓立比书的主题，就是经历基督。首先，第一章有显大基督。第二章，保罗陈明基督为我们的榜样。第三章指明基督该是我们的标竿，我们的目标。最后，第四章说到基督是我们的能力。这卷论到经历基督的书包含四个要点：彰显、榜样、标竿和能力。我们都必须对基督有这四重的经历。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>对基督有四重的经历：经历基督为彰显、榜样、标竿和能力。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('519')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('521')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">夸耀角美活活被捉</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>耶稣说，我就是道路、实际、生命；若不藉着我，没有人能到父那里去。 约翰福音 14:6</p><p>有一南极探险队员，在一冬天严寒的黑夜，走出了大队驻扎的小屋，想去不远的冰海，修理一件被冰结在海里的科学仪器。风雪很大，但他以为旅程很短，必能安全往返，于是他便出发了。但他走了两百码后，看见情形不对，掉转头来，循着以为对的方向走了回去。走了不久，发现走到一个地点，离开海岸相当的远，完全不在回家的路中。于是他又转头，朝着以为正确的方向走去，可是他看不见前面的一切，因为雪下太大，如同厚厚毡子盖住他的四周。他一面走，一面觉得他是完全迷路了。他这样蹒跚走了几个钟头，一跌一拐，颠踬的在冷风刺骨以及严酷雪中爬行了几哩。渐渐他的知觉被冻麻木，双手被冰割破，双脚几乎冻僵，回家希望真是微乎其微。最后，看见远处有点亮光，他就朝着亮光走去，方才回到了家。</p><p>在事奉神的事上，人的天然聪明、才智，不过使人暗中摸索，永远不能领你到达目的地。惟有神的亮光，才能引领我们走在神的旨意之中。‘主叫有智慧的中了自己的诡计。’（林前三19。）‘我要灭绝智慧人的智慧，废弃聪明人的聪明。’（一19。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

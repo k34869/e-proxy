@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('242')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('244')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">归荣耀给母亲</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">因为你们是重价买来的。这样，就要在你们的身体上荣耀神。（林前6:20）</div>
+<div id="CC">For you have been bought with a price. So then glorify God in your body.（1 Corinthians 6:20）</div>
+<div id="C">有一位大学毕业生，全靠着他母亲的劳苦节俭，才得大学毕业。毕业典礼的前一天，他回家去见他的母亲，请求她去参加毕业典礼。他母亲推说，“好儿子，我没有好衣服穿，穿了破衣服去，要丢你的脸。”儿子说，“妈妈，我能有今天，都是您的功劳，都是您的荣耀。尽管去吧！”儿子百般的相劝，才得母亲同意。次日早晨，礼堂中挤满了人，个个衣着光鲜，男女同学个个精神奕奕。在礼堂大门口，一个穿着礼服，头戴方帽的毕业生正迎着他的母亲。人人看见他手搀着一位贫穷的老太太进来，又坐在礼堂的头一排座位上，无不惊奇。原来这位大学毕业生，在同班的几十人中考得第一名，所以要代表全班上台演说。在他的毕业演说中，他述说他的母亲，如何辛苦节俭，供给他的需要，鼓励他的学业，说时诚挚感人。等到校长颁发文凭及奖品的时候，那位大学毕业生又走下台去，扶着他的母亲走上台，把文凭和奖品，恭恭敬敬的放在母亲手中说，“母亲，这一切都是你的功劳。”全场来宾、高官显要、男女同学看见这事，都大受感动，鼓掌欢呼，甚至热泪盈眶。<br/><br/>　主耶稣为我们成了贫穷，祂为我们一生劳苦，最后为我们钉死流血；所以，我们当将自己的身体献上，在我们的身体上荣耀神。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

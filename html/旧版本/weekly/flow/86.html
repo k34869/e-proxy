@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('85')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('87')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">今是昔是以后永是、永不改变的三一神</p>
+<p>神对摩西说，我是那我是。（出三14）</p>
+<p>主神说，我是阿拉法，我是俄梅嘎，是今是昔是以后永是的全能者。（启一8）</p>
+<p>圣经启示神所用的第一个神圣称谓是‘伊罗欣’，意即信实的大能者。这说出我们照着圣经所敬拜的真神，不仅是大能者，且是信实的。祂是大能者，所以祂能创造天地万物和人类，就是从无造出有来。祂是信实的，所以祂是信实可靠，永不变更，永不易动的。神凭祂的信实所作的事，如日之恒，如月之坚。（诗八九33～37。）</p>
+<p>出埃及三章十四至十五节，神对摩西说，‘我是那我是；…耶和华…这是我的名，直到永远；这也是我的记念，直到万代。’神在这里，用明言告诉摩西，祂的名是耶和华。耶和华这名，乃是圣经启示神所用的第二个主要圣称，意即那自有永有的我是，那今是昔是以后永是的我是；这指明祂是那我是的，除祂以外，一切的都不是，惟有祂是。宇宙中一切都是虚无不是，惟有祂是，惟有祂是永远存在的，惟有祂是实际。耶和华对于祂所创造，属祂的人，乃是一切。他们需要什么，祂就是什么。启示录一章四节说到神是‘那今是昔是以后永是的’。祂是那位从前是的，现在是的，将来也是的。换句话说，祂是自有永有的，这含示祂是无始无终的。</p>
+<p>主耶稣在约翰八章曾三次说到祂自己是‘我是’。（24，28，58。）祂是那我是，意思就是‘你需要什么，我就是什么’，以及‘我是一切’。我们需要什么，主就是什么。如果我们需要救恩、亮光、生命、能力、智慧、圣别或公义，耶稣基督自己就是我们的这一切。祂是耶和华神，是那伟大的‘我是’。在祂没有变动，也没有转动的影儿。（雅一17。）（参生命课程卷一，40～41页；神在祂与人联结中的历史，6～7页。）</p>
+<p class="title">助手毁画</p>
+<p>一个画家，在一建筑物的顶壁上完成了一幅壁画。画成以后，他就站在一个特制的高架上，欣赏自己的作品。不知不觉一步一步向后退，最后已退到高架边缘，再退一步就会跌下去。在他旁边的助手看见这种情形，急忙把墨水泼在画上，毁坏他的杰作。画家立即跳向前来，急忙喊叫。但是当他看见助手面色苍白，用手指着高架边缘之时，他明白了。他流着泪把助手抱在怀中，感谢他救了自己的性命。当我们遭遇为难的环境时，我们或许以为神没有看顾我们，却不知神藉着圣灵在环境中的管治，拆毁我们对地上事物的贪恋，为要救我们脱离那恶者的网罗，使我们得着那更美长存的家业，就是不能朽坏、不能玷污、不能衰残，为我们存留在诸天之上的基业。（彼前一4。）让我们信靠祂到底，不要疑惑祂那永远对我们有益的安排。‘我们纵然失信，祂仍是可信的。’（提后二13。）（参造就故事中册，145页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：呼求主名，经历祂是我们的一切，享受祂的信实稳妥。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

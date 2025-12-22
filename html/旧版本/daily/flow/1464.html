@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1463')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1465')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 12 课<br />
+神的奥秘</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：基督是神真实见证。（诗歌373首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：要叫他们的心得安慰，在爱里结合一起，以致丰丰富富的在悟性上有充分的确信，能以完全认识神的奥秘，就是基督；一切智慧和知识的宝藏，都藏在祂里面。（西二2～3。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　神的奥秘—基督—西二1～4</p>
+<p class="ot2">1　心得安慰—1～2上。</p>
+<p class="ot2">2　丰丰富富的在悟性上有充分的确信—2中。</p>
+<p class="ot2">3　认识神的奥秘—基督—2下。</p>
+<p class="ot1">二　经历那是神奥秘的基督—5～7</p>
+<p class="ot2">1　接受基督—5～6。</p>
+<p class="ot2">2　在祂里面生根—7上。</p>
+<p class="ot2">3　在祂里面被建造—7中。</p>
+<p class="ot2">4　在祂里面行事为人—7下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督是神的奥秘，使我们在祂里面生根、建造并行事为人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在歌罗西二章的开头，紧接着一章许多关乎基督极高的异象之后，使徒说到要圣徒‘心得安慰’。这是叫众圣徒结合一起的因素和元素；并在悟性上对神的奥秘有充分的确信。我们需要操练我们的全人—我们的灵、我们的心思、情感、和意志来接触主，使我们里面的每一部分正确且正常的尽功用，结果就是丰丰富富的在悟性上有充分的确信。基督不仅是我们的救主和主，也是神的奥秘，一切真智慧、真知识的宝藏，都藏在基督里面。这是关于基督与召会，神圣经纶的属灵智慧和知识。我们越认识主耶稣，越珍赏祂，我们就越爱祂。基督是众圣徒的分，给我们享受。我们已经信入祂，就是接受祂。祂是包罗万有的灵，进入我们里面，并住在我们灵里，作我们的一切。因此，我们不该被任何其他的事物欺骗。反而我们要看见，我们乃是活的生机体，如同植物，已经在基督这土壤、土地里生根，吸取祂一切的丰富作营养，成为我们的元素和本质，使我们藉此长大并建造。至终，我们该在基督里行事为人，生活行动，使我们能享受祂的丰富，就如以色列人住在美地，享受其上一切丰富的出产。照着这灵而行，乃是新约的中心和关键。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　心得安慰</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西二1～2上：我愿意你们晓得，我为你们和那些在老底嘉，甚至所有在肉身上没有见过我面的人，是何等竭力奋斗，要叫他们的心得安慰，在爱里结合一起。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>圣徒们的心若能得到合式的照顾，他们就能丰丰富富的在悟性上有充分的确信。当我们的心得了安慰，我们的心思就正常的尽功用。我们需要蒙怜悯，求主使我们有对的心。我们的心若是对的，不管别人对我如何，我们在召会生活中都会喜乐。这是非常严肃的事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>求主保守我们有对的心，能与众圣徒在爱里结合一起。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

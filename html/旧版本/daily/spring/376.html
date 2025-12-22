@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('375')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('377')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">四十年不安</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林后5:11　所以我们既晓得主的可畏，就劝服人，但我们向神是显明的，只是我盼望在你们的良心里，也是显明的。Knowing therefore the fear of the Lord, we persuade men, but we are made manifest to God; yet I hope that we are made manifest also in your bconsciences.</p><p>有一妇人清楚接受了救恩，可是心中总是没有平安。于是她去请教一位传道人。传道人心想，她既已这样清楚得救，却是没有得救的平安，或许在她的生活中有些什么故事，便问她说，‘你过去有没有一些对良心有亏的事呢？’她毅然回答说，‘不，我没有。’传道人偶然看见她的左手无名指上戴着一个黑骨戒指，觉得有点奇异，就问她说，‘好阿，你的指头上为什么戴一个骨头戒指呢？’那个妇人一听，几乎就要昏倒地上，以为传道人已经知道她的心中秘密，便说，‘你怎么知道这事呢？’其实传道人并不晓得那是怎么一回事情，只是偶然看见，问问而已；现在既知必有故事，就对她说，‘你良心上有什么亏欠，必须一一对付，才有平安。’妇人没有回答，默默而去！不义的事没有对付清楚，良心必定不安。</p><p>儿诗205 每当我心安静主前</p><p>G大调4/4</p><p>1</p><p>每当我心安静主前，</p><p>灵里静听我主慈言，</p><p>圣灵充满在我心间，</p><p>使我得享平安无限。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

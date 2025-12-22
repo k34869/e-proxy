@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1008')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1010')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 3 册 | 第 1 课<br />
+复活升天之基督的繁殖</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我们是一粒粒麦子。（补充本诗歌426首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但圣灵降临在你们身上，你们就必得着能力，并要在耶路撒冷、犹太全地、撒玛利亚，直到地极，作我的见证人。（徒一8。）说了这话，他们正看的时候，祂就被取上升，有一朵云彩把祂从他们的眼界中接上去了。（9。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　使徒行传的简介</p>
+<p class="ot2">1.　作者为路加，可视为路加福音的延续，也是四福音的延续，故称为‘第五卷福音’。</p>
+<p class="ot2">2.　为前四卷福音书和各卷书信中间的桥梁，可称为新约圣经的‘背脊’。</p>
+<p class="ot1">二　使徒行传的主题—复活的基督在升天里，凭着那灵，藉着门徒，为着产生众召会—神的国—的繁殖</p>
+<p class="ot2">1.　使徒行传说到复活基督的繁殖，目的要产生众召会—神的国。</p>
+<p class="ot2">2.　在福音书里，基督乃是国度的种子。</p>
+<p class="ot2">3.　在使徒行传里有这种子的繁殖，以产生众召会，就是神的国。</p>
+<p class="ot2">4.　直到如今，使徒行传还在继续写，因为复活基督的繁殖还在进行。</p>
+<p class="ot1">三　使徒行传的引言—徒一1～2</p>
+<p class="ot2">1.　由医生路加写给任职罗马帝国的外邦信徒提阿非罗。</p>
+<p class="ot2">2.　是路加福音的延续。</p>
+<p class="ot1">四　主升天前对门徒的预备与训练—3～8</p>
+<p class="ot2">1.　主复活后四十天向门徒显现—3上。</p>
+<p class="ot2">2.　主对门徒讲说神国的事—3下。</p>
+<p class="ot2">3.　主嘱咐门徒等候父的应许，并受灵浸，以成为基督的见证人—4～8。</p>
+<p class="ot2">4.　门徒需要从旧约的时代，转到神新约的经纶。</p>
+<p class="ot1">五　基督的升天—9～11</p>
+<p class="ot2">1.　主的升天指向祂的回来，主怎样往天上去，祂还要怎样回来。</p>
+<p class="ot2">2.　升天的基督要藉着祂的信徒，在地上执行祂在天上继续的职事。</p>
+<p class="ot2">3.　门徒因看见基督升天的异象，在信心上得着加强，扩大他们对神属天经纶的眼光，而与基督在诸天之上的职事合作。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>简介使徒行传的作者、主题、引言、主升天前对门徒的预备、及基督的升天。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>使徒行传由医生路加所写，乃是四福音的延续，常被称为‘第五卷福音’，为前四卷福音书和各卷书信中间的桥梁，可称为新约圣经的‘背脊’。使徒行传的主题乃是‘复活的基督在升天里，凭着那灵，藉着门徒，为着产生众召会—神的国—的繁殖’。第一段说到引言与预备，主升天前藉着四十天向门徒显现，对门徒讲说神国的事，嘱咐门徒等候父的应许，并受灵浸，以成为基督的见证人，来预备并训练门徒。藉此门徒从旧约时代转到神新约的经纶。主预备门徒以后，就升天了，主的升天指向祂的回来，主怎样往天上去，祂还要怎样回来。升天的基督要藉着祂的信徒，在地上执行祂在天上继续的职事。门徒因着看见基督升天的异象，而在信心上得着加强，扩大他们对神属天经纶的眼光，而与基督在诸天之上的职事合作。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　第五卷福音书</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>阿非罗阿，我已经作了前书，论到耶稣开头所行所教训的一切事，直到祂藉着圣灵，吩咐所拣选的使徒以后，被接上升的日子为止。（徒一1～2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>本册我们来到新约圣经的第五卷书—使徒行传，本书的著者是医生路加。前四卷福音书是记成为肉体的基督，本书是记复活升天的基督。‘使徒’原文的意义是奉差遣者，凡是奉主差遣的人，从广义来说都是使徒。因此本书中所题的，的确是使徒的行传，也就是复活升天的主借着圣灵通过众使徒在地上的行传。并且，本书是一卷没有终结的书，意思说还有千万个使徒的行传要添补进去。全部的‘使徒行传’，犹待在国度期间，方能够编写完全。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>操练奉主差遣，向人传福音。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

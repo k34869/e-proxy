@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1847')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1849')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 12 课<br />
+两个兽与三种收割</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　大酒榨与葡萄</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启十四19:那天使就把他的镰刀扔在地上，收取了地上的葡萄，丢在神烈怒的大酒榨中。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>麦子象征基督徒，就是召会。麦子收割之后，在神眼中被比作葡萄的不信者就要被收割。这要发生在大灾难结束时。大酒榨就是约沙法谷的审判。外邦一切邪恶、属世的军队都要聚拢在那里，主同祂得胜的圣徒要和他们争战，并毁灭他们。就是哈米吉顿大战。当主回来，看到所有属世的军队都聚集在这战争中，那就是祂踹酒榨的时候了。踹这个酒榨就是主耶稣在敌基督和他的军队身上施行审判。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>作得胜者，成为争战的军队。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>渴慕成为庄稼中初熟的果子，被提到锡安神的家中，作神新鲜的享受，使神得到满足。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>初熟的果子是怎样的一班人？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘启示录十四章四节指出，初熟的果子就是那些“羔羊无论往那里去，他们都跟随祂”的人。他们这初熟的果子，是被提到锡安神的家中，作神新鲜的享受，使神得到满足。按照旧约的预表，收割了地里首先初熟之物，不可以放进仓里，乃是要送到耶和华神的殿中。这指明所有早期的得胜者，都要被提到天上神的家中，给神享受。所以被提主要的还不是为着我们的享受，乃是为着神的享受。被提是为着打败仇敌，并且为着使神满足。…</p>
+<p>在初熟的果子之后，就是庄稼收成。…收割庄稼的时间，是在大灾难快要结束的时候。庄稼要被提到空中，基督就在那里的云上。为什么要将庄稼留下来经过大灾难？因为青嫩、未熟的庄稼，需要猛烈的阳光照晒，才会成熟。大灾难在一方面说，就像猛烈的日头，要使所有在灾难前未预备好的圣徒成熟。简单的说，你今日若不撇弃世界，为基督而活，基督要把你留在地上，经过大灾难。到了那个时候，你必然会放下世界，而且认识到最好的生活，就是为基督而活。所有神的儿女都当这样，否则永远不能成熟。…可能你认为世界太可爱，放下世界太可惜了，那么主就会说，“既然你这么爱世界，我且把你留下，让你看看世界是否真的那么可爱！”然后，主要震动世界。最后你要说，“主阿，我悔改！”然而，到那个时候悔改，可能迟了一点。不要等大灾难来到了才悔改，现在就悔改！每一个真基督徒迟早都要悔改。我有把握说，有一天每一个得救的人都要看见，世界不但不可爱，更是有毒；你越爱世界，就越要中毒。世界是与神为仇的，我们都必须摒弃它。主迟早要使你知道，祂是何等恨恶这个世界。那一天要来到，我们都要成熟。你不要说，“我不在乎成熟不成熟，只要我得救了，一切就都没有问题！”你今天可以硬着心、硬着颈项和我争辩，但那一天来到，你就知道你需要成熟。我劝你不要等到收割的日子。靠着祂的恩，今日就进前来，作初熟果子的一部分。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>今日就撇弃世界，为基督而活，作初熟果子的一部分。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

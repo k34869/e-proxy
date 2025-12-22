@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>二O二三年秋季训练申言参考</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('8')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">第 9 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('10')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+
+          <div class="title">第九周 召会的功用（二）神在肉体里团体的显现</div>
+          <v-divider></v-divider>
+
+          <v-btn block color="primary" elevation="1" tile><b>鸟瞰：</b></v-btn>
+          <div class="contents">
+            <v-divider></v-divider>
+  <br />
+
+            <p style="text-indent: 2em;">新约不只有神的儿子成肉体，乃启示神显现于肉体；显现于肉体的神乃是整个三一神。在基督成肉体的职事里，祂把无限的神带到有限的人里；借着成肉体，基督乃是三一神与三部分人合并。太初的话就是神，神成了肉体，意在人的样式和样子里。神格一切的丰满，都有形有体的居住在基督里面，神格指完整的神。基督和召会都是敬虔的奥秘，二者都在肉体里彰显神，神显现于召会就是祂在肉体里扩大的团体彰显。当召会受到妥善的照料，召会就是活神的家，尽真理的柱石
+和根基的功用。成为肉体原则，是神性被带到人性里，并同人性作工；保罗写林前七章是在话成肉体原则里。至终，神要显现于新耶路撒冷，是三一神在新天新地，终极完成团体彰显。
+</p>
+            
+            <v-divider></v-divider>
+            <br />
+
+             <v-btn block color="primary" elevation="2" rounded >周一</v-btn>
+            <br v-show="show" />
+<br />
+            <p class="ot2" >晨祷经节：大哉！『敬虔的奥秘』！这是众所公认的，就是：祂显现于肉体…（提前三16）</p>
+            <p class="ot1">1 请阐明提前三16 敬虔的辞意？</p>
+            <p class="ot2" >提前三16 敬虔辞意是像神。指明人可以有神的样子、彰显和显现。敬虔的奥秘这辞，意思是神在祂的奥秘里得以显现并彰显于肉体。敬虔乃神显现于肉体；敬虔的奥秘就是神显现于人。基督—就是敬虔的奥秘。</p>
+            <p class="ot1">2 请解述约一1 与约一14 的话？</p>
+            <p class="ot2" >话就是神，成为肉体。话是神的解释、说明和彰显；因此，那成为肉体的话—神显现于肉体—乃是神在肉体里的解释、说明和彰显。显现于肉体的神，不仅是子，乃是整个的神—父、子、灵。基督在祂人性里活在地上，祂是神显现于肉体。</p>
+           
+  <v-btn block color="primary" elevation="2" rounded >周二</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：因为『神格』一切的丰满，都有形有体的居住在基督里面，（西二9）</p>
+            <p class="ot1">1 请阐释圣经启示神的心愿？</p>
+            <p class="ot2" >神的喜悦，神的心愿，是要得着许多儿子，作祂儿子的彰显，使祂在子里借着那灵彰显出来。为这目的，神已显明自己，首先在基督里—肉体里个别的彰显；然后在召会，基督的身体里—肉体里扩大团体的彰显；最终，在新耶路撒冷里终极彰显。</p>
+            <p class="ot1">2 请解述基督是神格丰满的具体化身？</p>
+            <p class="ot2" >基督是神格丰满的具体化身。这就是说，三一神的丰满，有形有体的居住在基督里面。这丰满真实且实际的居住在祂里面。这含示基督在祂的人性里所穿上的肉身。这指明神格一切的丰满，都居住在这位有属人身体的基督里面。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周三</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：他心里的隐情显露出来…宣告说，『神真是在你们中间了』。（林前十四25）</p>
+            <p class="ot1">1 请说明提前三16『
+并且』，这连接辞的
+意义？</p>
+            <p class="ot2" >1 提前三16 开始于『并且』这话：指明，保罗在十五节还没有说完召会。召会是活神的家，是真理的柱石和根基。保罗在十六节开头用连接词，指明召会不只是活神的家，是真理的柱石和根基；召会也是敬虔的奥秘。</p>
+            <p class="ot1">2 请解明神彰显出来是一件大事？</p>
+            <p class="ot2" >敬虔指神彰显出来。天使承认并珍赏这事。主出生时，有一队天使赞美神。天使若看见基督扩增并扩大的召会，岂不也会欢乐？在地上活出神并彰显神的主面对鬼的时候，鬼就喊叫。召会活出神并彰显神时，鬼和邪恶的天使就会惧怕。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周四</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：：…被天使看见，被传于万邦，被信仰于世人中，『被接去于荣耀里』。（提前三16）</p>
+            <p class="ot1">1 请阐述提前三16 中被天使看见，被传于万邦？</p>
+            <p class="ot2" >提前三16 说『被天使看见』。天使曾看见基督的成为肉体、为人生活以及升天。基督也『被传于万邦』。基督是神显现于肉体，从五旬节开始就被人当作福音传于万邦。基督『被信仰于世人中』。基督已在世人中为人所信仰，接受为救主和生命。</p>
+            <p class="ot1">2 请论述提前三16 被接去荣耀里？</p>
+            <p class="ot2" >这是指基督升天进入荣耀。按着历史的事实，基督的升天在被传于万邦之前。然而，在这里，升天列为基督是神显现于肉体最后一项。这必指召会被接去于荣耀里。这含示不仅作头的基督是神显现于肉体，连作身体的召会也是神显现于肉体。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周五</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：但与主联合的，便是与主『成为一灵』。（林前六17）</p>
+            <p class="ot1">1 请解说提前三16 敬虔的深意？</p>
+            <p class="ot2" >不仅作头的基督自己是神显现于肉体，连作基督身体和神的家的召会也是神显现于肉体—敬虔的奥秘。基督和召会，二者都是敬虔的奥秘，在肉体里彰显神。敬虔的奥秘就是正当召会的生活。神显现于召会—就是祂在肉体里扩大的团体彰显。</p>
+            <p class="ot1">2 请解述成为肉体的原则？</p>
+            <p class="ot2" >神显现于肉体，开始于基督在地上时。神显现于肉体，延续于召会；这乃是神照着新约成为肉体的原则，以更广泛的方式显现于肉体。成为肉体的原则是：神自己进到人里面，将祂自己与人调和，使人与祂自己成为一。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周六</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：…操练身体益处还少；『惟独敬虔』，凡事都有益处，有今生和来生…（提前四8）</p>
+            <p class="ot1">1 请阐述操练敬虔，凡事都有益处？</p>
+            <p class="ot2" >我们需要操练自己，以至于在一切事上，使神显现于我们的肉体。保罗将操练以至于敬虔与操练身体相比。操练身体对我们的健康有益，但益处不多，无法与操练以至于敬虔的益处相比。操练以至于敬虔，凡事都有益处。</p>
+            <p class="ot1">2 请交通慕勒弟兄，给我们留下的榜样？</p>
+            <p class="ot2" >慕勒得救后，成了一个敬虔的人。他每天早晨所作的第一件事，就是读经并祷告，将他的祷告与读经调和。慕勒这种将祷告与读神的话调和的实行，无疑的帮助他长寿。神的话洗去我们的担忧和罣虑，会帮助我们在属灵上和肉身上都健康。</p>
+
+<v-btn block color="primary" elevation="2" rounded >总结</v-btn>
+<br />
+            
+            
+            <p class="ot2" >我们在召会中乃是在彰显神。每个地方召会必须是基督再生在圣徒里面的地方。不仅如此，每个地方召会必须活出神，使魔鬼的年日缩短。一面，召会构上神的标准，天使就会歌唱并欢乐；另一面，鬼和邪恶的天使就会恐惧战兢。当召会受到妥善的照料，且将长老的监督和执事的服事完全建立起来，那时召会就要显出功用，成为活神的家，为着神在地上的行动；并有基督和祂身
+体的神圣实际，对世人作见证。这样，召会就成为基督是神显现于肉体的延续。</p>
+           
+  
+        
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+      });
+    </script>
+    <style>
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

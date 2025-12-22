@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('924')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('926')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 7 课<br />
+达到荣耀的路</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：你的灵岂非已见祂过？（诗歌333首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：于是耶稣对门徒说，若有人要跟从我，就当否认己，背起他的十字架，并跟从我。因为凡要救自己魂生命的，必丧失魂生命；凡为我丧失自己魂生命的，必得着魂生命。（太十六24～25。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　领受关于基督和召会的启示—太十六13～19</p>
+<p class="ot2">1.　在该撒利亚腓立比境内，远离圣城和圣地—13上。</p>
+<p class="ot2">2.　门徒缺少属天的启示，不认识主—13下～15。</p>
+<p class="ot2">3.　彼得从父得着启示，认识主是基督，是活神的儿子—16～17。</p>
+<p class="ot2">4.　主向彼得启示，主要将召会建造在基督和对基督启示的磐石上，是阴间的门不能胜过的—18。</p>
+<p class="ot2">5.　主将诸天之国的钥匙赐给彼得以建造召会—19。</p>
+<p class="ot1">二　跟从主，并建造召会的路—十六21～26</p>
+<p class="ot2">1.　主启示建造召会的路乃是藉着钉死与复活—21。</p>
+<p class="ot2">2.　撒但藉彼得天然的观念阻挠基督—22。</p>
+<p class="ot2">3.　主启示跟从主并建造召会需要关闭阴间之门的三把钥匙—24～26：</p>
+<p class="ot2">a.　否认己—24上。</p>
+<p class="ot2">b.　背十字架—24下。</p>
+<p class="ot2">c.　丧失魂生命—25～26。</p>
+<p class="ot1">三　主在高山上变化形像—十七1～8</p>
+<p class="ot2">1.　要看见基督变化形像的异象，需要上到高山—1。</p>
+<p class="ot2">2.　主变化形像乃是祂神性的彰显，也就是祂的得荣耀，祂国度的来临—2。</p>
+<p class="ot2">3.　摩西和以利亚显现，代表旧约的得胜者在国度的实现里—3。</p>
+<p class="ot2">4.　彼得、雅各和约翰，代表新约的得胜者在国度的实现里—1。</p>
+<p class="ot2">5.　彼得天然的观念将摩西和以利亚错误的与基督同列—4。</p>
+<p class="ot2">6.　父从天上打断彼得，宣告基督是神的爱子，是父所喜悦的，我们应当听祂—5。</p>
+<p class="ot2">7.　门徒不见一人，只见耶稣，指明在神新约的经纶里，基督是实际—8。</p>
+<p class="ot1">四　基督儿子名分的启示与异象的应用—十七24～27</p>
+<p class="ot2">1.　在被问到纳殿税的事上，彼得的天然被暴露—24～25上。</p>
+<p class="ot2">2.　基督的改正—25下～26。</p>
+<p class="ot2">3.　主藉着叫彼得去海边打鱼训练他应用关于基督的启示与异象—27。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见基督与召会的异象，以及跟随主、建造召会的路—否认己，背十字架，丧失魂生命。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为了要使门徒领受基督与召会的异象，主带领门徒远离圣城和圣地，使他们有清明的天，清新的空气来领受异象。主也实际的藉着各种环境训练门徒，不仅看见异象，也需要藉着否认己、背十字架、丧失魂生命这三把钥匙，关闭阴间的门，跟随主并建造基督的身体。主更带门徒上到高山，在山顶上主变化形像，显出神的荣耀，带进国度实现的小影。主既是这荣耀的一位，我们就不应当将主与任何人同列，而应当‘不见一人，只见耶稣’。并且我们要在凡事上听祂，照祂的话而行。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　领受关于基督的启示</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>祂对他们说，你们说我是谁？西门彼得回答说，你是基督，是活神的儿子。（太十六15～16。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>每个人的思想都被老旧犹太宗教的气氛充满，没有丝毫余地留给主。所以主特意将门徒带到这样一个气氛清明的地方，使他们的思想能脱离圣城和圣殿宗教环境的影响，并使祂能给他们一些关于那是祂属天国度命脉的基督与召会新的启示。若没有属天的启示，没有人能够认识主。所以当主问他们：‘你们说我是谁？’没有人能回答，惟有西门彼得回答说，‘你是基督，是活神的儿子。’主的使命是要藉着他的钉死、复活、升天和再临，完成神永远的定旨；祂的身位具体的表现父，并终结于那灵，使三一神得着完满的彰显。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>脱离一切宗教的捆绑，在灵里有清明的心思和悟性，认识主是基督，是活神的儿子。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

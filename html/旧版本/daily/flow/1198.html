@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1197')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1199')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 10 课<br />
+ 对付复活并收集馈送</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：如今主你就是那灵。（补充本诗歌137首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：你们要儆醒，在信仰上站立得住，要作大丈夫，要刚强。凡事你们都要在爱里作。（林前十六13～14。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　对付复活—林前十五1～58</p>
+<p class="ot2">1　基督的复活—1～11。</p>
+<p class="ot2">2　对‘没有复活’的反驳—12～19。</p>
+<p class="ot2">3　复活的历史—20～28。</p>
+<p class="ot2">4　复活的道德影响—29～34。</p>
+<p class="ot2">5　复活的定义—35～49。</p>
+<p class="ot2">6　复活的得胜—50～58。</p>
+<p class="ot1">二　对付收集馈送—十六1～9</p>
+<p class="ot2">1　使徒的吩咐—1～3。</p>
+<p class="ot2">2　使徒的意愿—4～9。</p>
+<p class="ot1">三　结语—十六10～24</p>
+<p class="ot2">1　亲切的嘱咐—10～18。</p>
+<p class="ot2">2　问安与警告—19～24。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识什么是复活，并召会中财物奉献的教导。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>哥林多前书的后半段论到关乎神行政的五件事：宇宙中的头、身体、恩赐、复活以及财物。神的行政需要正确的作头。为着要在神的作头之下执行神圣的行政，就需要身体，身体上所有的肢体就需要有恩赐来尽功用。不仅如此，还需要复活的生命。复活的生命使众肢体能够发挥他们的恩赐来尽功用，好使身体能够运行，在神的作头之下执行神的行政。而末了的一项—金钱与财物—乃是一项试验，验证我们活在复活的生命里有多少。哥林多人中间的第十个难处，就是说没有死人的复活。这难处损害、败坏神的经纶。保罗因此在林前十五章对付这件事。对基督来说，末了的仇敌乃是死。但是对我们来说，末了的仇敌是玛门，就是财物。复活的生命使我们能胜过罪的权势。复活也是一种大能，使基督能掌管背叛者，征服祂一切的仇敌。基督末了所征服的仇敌就是死。林前十六章是十五章的延续，指明我们里面复活的生命，胜过我们最后的仇敌—财物。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　传扬并见证复活的基督</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十五10：然而因着神的恩，我成了我今天这个人，并且神的恩临到我，不是徒然的；反而我比众使徒格外劳苦，但这不是我，乃是神的恩与我同在。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>复活的基督成了赐生命的灵，在复活里将经过过程的三一神带到我们里面，作我们的生命和生命的供应，使我们能在复活里活着。因此，恩乃是三一神成了我们的生命和一切。大数的扫罗原是罪人中的罪魁，但因着这恩竟成了最前面的使徒，比众使徒格外劳苦。这指明恩典乃是一个人位，就是复活的基督活在信祂的人里面，成了神的恩与我们同在。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识复活的基督活在信祂的人里面，成了神的恩与我们同在。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

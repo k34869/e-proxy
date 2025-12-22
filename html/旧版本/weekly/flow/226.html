@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('225')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('227')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">风、云、火、金银合金的神</p>
+<p>耶和华你的神乃是烈火，是忌邪的神。（申四24）</p>
+<p>以西结书开头描述，以西结在迦巴鲁河边被掳的人中，那时诸天开了，他就看见神的异象：有暴风从北方刮来，随着有一朵大云，云里有闪烁焚烧的火，火内发出光耀的金银合金。（一1，4。）暴风表征能力的灵，强大的暴风，乃是神能力之灵的表号、图画。风是吹动的，表示神的灵像大风一样吹到人身上，感动人对自己的情形不安，愿意悔改，接受主。</p>
+<p>云是风吹的结果，也是表征圣灵。圣灵摸着我们的时候，就像风。圣灵眷顾、覆庇、遮盖我们的时候，就像云。云是神遮盖祂子民的表号，表示神与我们同在，照顾我们，向我们施恩典，所以云乃是覆罩的神。神作为风来临，但祂作为云停留，遮盖、覆庇、覆罩我们，使我们享受祂的同在，而在我们的日常生活中产生属祂的东西。当我们祷告、悔改、认罪、晨兴、或祷读主话时，有时会觉得我们乃是在云的遮盖之下。</p>
+<p>当暴风从主刮来，主覆庇的同在停留，我们就觉得里面有个东西在照耀、搜寻并焚烧。在主同在的照耀和搜寻下，我们被暴露，就定罪自己，承认自己的缺点，然后搜寻的火会烧去我们里面消极的事物。因此火表征神焚烧、圣别的能力。凡与神圣别的性情、性质不合的，都必须烧去。当主如同焚烧的火临到我们，这火就使我们蒙光照，被炼净。</p>
+<p>风、云和火都是主自己。祂来临的时候，乃是作为暴风来临；祂与我们同在的时候，是作为云停留；祂搜寻、焚烧我们的时候，是作为烈火搜寻、焚烧。当我们经历主作吹动的风、遮盖的云、和焚烧的烈火时，我们就会经历真正的改变和变化。结果会产生光耀的金银合金，一种照耀、可爱、宝贵、可悦的东西。我们越经历属灵的风、覆庇的云和焚烧的火，金银合金就越构成在我们这人里面，使我们成为满了三一神并彰显祂荣耀的人。（参以西结书生命读经，33～44页。）</p>
+<p class="title">神行在前头</p>
+<p>一八二一年，亚当斯城（Adams City）里，有一位年轻的律师斐尼（Charles G. Finney，1792～1875），一日到树林隐密的地方祷告。神在那里遇见他。他便在那一日悔改，后来被圣灵充满了。城中的人听见这件事，极为兴奋，不约而同的到聚会的地方。斐尼一到那里，圣灵的大能便运行在聚会中，叫人悔改认罪。复兴在那里起了头，后来蔓延到邻近各地，直至北美东部都被复兴了。无论何时，斐尼讲道，圣灵都大大的作工。更奇妙的，就是神行在他的前头；所以有时他才到达一个地方，那地方的人已经痛哭悔改了！有时圣灵叫人为罪悔改的能力极大，使悔改的人，不能不大声的哭起来；斐尼只得停止讲道，等候他们安静。（参造就故事中册，71页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：当主如同焚烧的火临到我们，这火就使我们蒙光照，被炼净.</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

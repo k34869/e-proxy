@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周追求</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jumpWeek(-7)"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="dis_bt_text">第 {{week}} 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jumpWeek(7)"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <br />
+          <div style="text-align: center">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="100">
+             
+              <v-btn color="primary" elevation="5" rounded large @click="jump('weekly2.html')"><div class="bt_text">泉排</div></v-btn>
+              <v-btn color="primary" elevation="5" rounded large @click="openFlow()"><div class="bt_text">流排</div></v-btn>
+             
+            </v-card>
+          </div>
+          <div v-if="date_error" class="contents"><v-alert shaped prominent type="error">日期超出信息范围</v-alert></div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script src="../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          timeMS: 0,
+          week: 0,
+          peak_url: "",
+          jumpToPeak: false,
+          yy: 0,
+          gro_url: "",
+          spring_url: "",
+          flow_url: "",
+          sister_url: "",
+          green_url: "",
+          date_error: false,
+        }),
+
+        methods: {
+          openGreen() {
+            let diffweek = this.green_url;
+            if (diffweek < 1 || diffweek > 55) {
+              this.date_error = true;
+              setTimeout(() => {
+                this.date_error = false;
+              }, 2000);
+            } else window.location.href = `./green/${diffweek}.html`;
+          },
+          openSister() {
+            let diffweek = this.green_url;
+            if (diffweek < 1 || diffweek > 75) {
+              this.date_error = true;
+              setTimeout(() => {
+                this.date_error = false;
+              }, 2000);
+            } else window.location.href = `./sister/${diffweek}.html`;
+          },
+          openFlow() {
+            window.location.href = this.flow_url;
+          },
+          openSpring() {
+            window.location.href = this.spring_url;
+          },
+          openGro() {
+            window.location.href = this.gro_url;
+          },
+          backtohome() {
+            window.location.href = "weekly.html";
+          },
+          jumpWeek(id) {
+            let addN = 1000 * 60 * 60 * 24 * id;
+            this.timeMS += addN;
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+          getDiffWeek(start) {
+            let dt = start.split("-");
+            let yy = dt[0];
+            let mm = Number(dt[1]) - 1;
+            let dd = dt[2];
+            let staTime = new Date(yy, mm, dd);
+            let d = Math.round((this.timeMS - staTime.valueOf()) / 86400000);
+            let weekN = Math.ceil((d + staTime.getDay()) / 7);
+            return weekN;
+          },
+          openPeak() {
+            if (this.jumpToPeak) window.location.href = this.peak_url;
+          },
+          getDateWeek() {
+            let da = this.timeMS;
+            let ntime = new Date(da);
+            let yy = ntime.getFullYear();
+            this.yy = yy;
+            let mm = ntime.getMonth();
+            let dd = ntime.getDate();
+            var date1 = new Date(yy, mm, dd),
+              date2 = new Date(yy, 0, 1),
+              d = Math.round((date1.valueOf() - date2.valueOf()) / 86400000);
+            let weekN = Math.ceil((d + date2.getDay()) / 7);
+            if (weekN == 0) this.week = 1;
+            else this.week = weekN;
+          },
+          set_peak_url() {
+            let val = this.getDiffWeek("2022-11-28");
+            let msgNum = 52;
+            if (val > 0 && val <= msgNum) {
+              let url = `./peak/${val}.html`;
+              this.peak_url = url;
+              this.jumpToPeak = true;
+            } else this.jumpToPeak = false;
+          },
+          set_gro_url() {
+            this.getDateWeek();
+            let yy = this.yy;
+            let sn = (yy - 2018) % 5;
+            if (sn == 0) sn = 5;
+            let week = this.week;
+            if (week > 52) week = 52;
+            this.gro_url = `./group/${sn}/${week}.html`;
+          },
+          set_spring_url() {
+            let diffWeek = this.getDiffWeek("2022-11-14");
+            let msgid = (diffWeek + 45) % 156;
+            if (msgid == 0) msgid = 156;
+            this.spring_url = `./spring/${msgid}.html`;
+          },
+          set_flow_url() {
+            let diffweek = this.getDiffWeek("2022-12-5");
+            let msgid = (diffweek + 195) % 252;
+            if (msgid == 0) msgid = 252;
+            this.flow_url = `./flow/${msgid}.html`;
+          },
+          set_sister_url() {
+            this.sister_url = this.getDiffWeek("2022-12-12");
+          },
+          set_green_url() {
+            this.green_url = this.getDiffWeek("2024-1-8");
+          },
+        },
+        watch: {
+          timeMS(val) {
+            this.set_gro_url();
+            this.set_peak_url();
+            this.set_spring_url();
+            this.set_flow_url();
+            this.set_sister_url();
+            this.set_green_url();
+          },
+        },
+        computed: {},
+        mounted() {
+          let dt = new Date();
+          let yy = dt.getFullYear();
+          let mm = dt.getMonth();
+          let dd = dt.getDate();
+          let ndt = new Date();
+          this.timeMS = ndt.getTime();
+        },
+      });
+    </script>
+    <style>
+      .contents {
+        margin: 1em;
+      }
+      .dis_bt_text {
+        color: #333 !important;
+        font-weight: bold;
+        font-size: large;
+      }
+      .v-btn {
+        margin: 5px;
+      }
+      b {
+        color: tomato;
+      }
+      .bt_text {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    </style>
+  </body>
+</html>

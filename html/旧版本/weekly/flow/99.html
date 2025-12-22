@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('98')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('100')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">忍（一）　忍等待：恒忍等待不着急</p>
+<p>弟兄们，你们要恒忍，直到主的来临。看哪，农夫等候地里宝贵的出产，为此恒忍，直到得了秋雨春雨。（雅五7）</p>
+<p class="title">什么是忍</p>
+<p>忍就是能等，不着急。能忍才能等。如雅各书五章七节说，‘农夫等候地里宝贵的出产，为此恒忍。’农夫忍等地里的出产，是让时间来作事；这是急不来的，要等时间到。能忍的人虽会感觉痛，却能不动。忍不是消极，乃是更积极，但并不着急。这个忍不是一般人所谓忍耐的忍，乃是不松懈、不马虎，只知努力而不着急。作什么事都需要时间，下多少功夫，就会有多少成就，没有便宜的工作。盼望一下子就作好的人，不能作神的工。作神的工是天天作，但不着急，不看暂时的果效，因为知道所托付的是什么；像农夫一样，很自然的在等，一面在田间工作，一面等。服事人很多时候是使人失望的，但忍的人不会绝望。你的工作遇到打击要忍，时间是一个证明，时间会出来说话，时间会出来表白，会使事情水落石出，显出真相。也许再等半分钟，神的荣耀就显出来了。</p>
+<p>积极而不着急，是需要操练的。由忍而产生的性格是有价值的。对人、对事不要太快下断语，再等几天，底样就出来了。对缺乏也要忍，忍就没有告贷的事。保罗写哥林多书的时候，他的心情多重多切，但是他能忍，这是事奉主之人必有的性格。许多人有一点为难就嚷出来，有一点事就反映出来，一件事来了马上下断案，这是没有用的人。</p>
+<p>忍与慢不同，慢是有机会却不抓住它，而失去了机会；‘忍’是机会还没到，而在那里等待机会。人不该慢，却该等。慢该破碎，但忍是既敏且捷，机会未到能忍，机会一到就抓住。我们该殷勤作工，没有失望。不是空望，乃是信祂能作。不论性情快慢都要学习忍。我们服事召会，对于所遭遇的事和工作的结果，该是能忍着等的。凡没有到收成的节令，我们不着急，但不松懈，也不懒惰。我们对人、对事该满了感觉，是敏锐的，是深切关心的，是有眼光的，凡我们该作的都作了，其余的交给时间。（参性格，3、16～18页。）</p>
+<p class="title">一一团</p>
+<p>一百多年前，英国有位信徒，名叫哈利培基（Harley Page）。他特别蒙主的恩典，开他的眼睛，使他看见并见证说，‘我什么恩赐都没有，我是最简单的人，我不会带领许多人，但是最少我总能一个对付一个。许多人能彀作大的工作，我作不来，我就只对付一个人，只注意一个人，老注意他，老跟着他。我只会说，我得救了，你也要得救。抓牢一个，怎么都不放。总得要等他得救才过去，老是替他祷告，老和他讲话。’培基的意思是：我如果要对付两个不行，对付三个更没有办法，我只对付一个，总不肯让他过去。他这样恒忍、不松懈的作下去，结果到他离世的时候，他一共得着了一百多个人，都是结结实实的一百多个果子。后来，何多马（Thomas Hogban）发起组织‘一一团’（One by one band），就是一个救一个的团体。何多马是有学问的人，也是一个会祷告的人。至终，在二十七个国家中，都有他们的‘一一团’团体。（参造就故事下册，35页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：忍不是消极，乃是更积极，但并不着急；机会未到能忍，机会一到就抓住。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

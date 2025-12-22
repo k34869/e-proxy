@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1224')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1226')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 13 课<br />
+新约的执事</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　新约执事生活的目标与目的</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后四6：因为那说光要从黑暗里照出来的神，已经照在我们心里，为着光照人，使人认识那显在耶稣基督面上之神的荣耀。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗见证使徒们生活的目标与目的，是要照耀基督荣耀的福音。他们的行事为人，是为使基督的福音能藉着他们，并从他们里面照耀出去。今天我们也必须是发光体，返照基督福音的荣耀。如今我们需要藉着呼求主，与祂有直接、切身、亲密、敞开的接触，我们就会经历神在我们心里照耀，使我们也能认识基督面上的荣耀，而成为这荣耀福音的照耀者。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>呼求主，与祂有直接、切身、亲密、敞开的接触，经历神在我们心里照耀，使我们成为这荣耀福音的照耀者。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>心转向主，除去我们与主之间的帕子，享受主就是那灵，主的灵在那里，那里就有自由。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>什么是我们与主之间的帕子？我们的心要如何转向主？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘保罗说，我们的心几时归向主，帕子就几时除去了。这个“帕子”不是一个东西，也不是一件事，而是“背”向主。好比我与一位弟兄原是面对面；但我若是转个向背向他，虽然我们还很近，我却看不见他，这就是有了帕子。我背向他就是帕子，但什么时候我归向他，转向他，这个帕子就除去了，我们又面对面了。主在我们里面也是这样，祂离我们很近，就在我们灵里；我们与祂原是面对面的，但我们的心不爱祂，我们的心背向祂，而向着我们的家人、学问、名誉、地位、钱财。我们的心向着世界的许多事物，而不向着主；我们与主之间就有帕子。</p>
+<p>我们的心要向着主，就是要向着灵。这个灵今天就在我们里面。故此，我们要学习回到里面，回到灵里，和主交通，把我们这个人调到灵里。我们要学习调头来向内，主就在那里。当我们回到灵里，往里面去时，我们就感觉主的同在。</p>
+<p>主就是那灵，在我们里面；在我们外面的，乃是我们这个人。在我们和主之间有一个心，这个心向外，就是背向主，就是帕子；这个心向内，就是向着主，帕子就除去。然而，如何能知道我们是向着主，还是背着主呢？保罗在林后三章说，主就是那灵，主这个灵在那里，那里就得以自由。自由乃是个大凭据，那里有主，那里就得以自由；心思里有主，心思就得以自由；心情里有主，心情就得以自由；心志里有主，心志也得以自由了。那个自由才是真自由，是里面的自由，满了喜乐、平安。’（基督徒生命成熟的路，132～133、150～152页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>心转向主，除去一切与主之间的帕子，在心思、情感、意志里，得着真正的自由。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

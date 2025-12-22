@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>二O二三年秋季训练申言参考</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('6')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">第 7 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('8')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+
+          <div class="title">第七周 使徒保罗的榜样</div>
+          <v-divider></v-divider>
+
+          <v-btn block color="primary" elevation="1" tile><b>鸟瞰：</b></v-btn>
+          <div class="contents">
+            <v-divider></v-divider>
+            <p>保罗向着神所活出来的榜样：包括他在灵里活且显大基督、并供应基督作为那灵；主向他显现，选定作执事和见证人，他过一种生活，有人性美德彰显神圣属性，与主在地生活相似；他作基督大使，不凭所是或所作，乃凭基督而活。他怀着雄心大志讨主喜悦，受基督的爱困迫，不再向自己乃向主活；他有身体感且在身体里，借着身体，并为着身体作一切事；保罗向着圣徒所活出的榜样，他活基督喂养他属灵儿女，传福音在于怎样为人，注意生命过于工作，没有用过谄媚的话，没寻求从人来的荣耀，如同乳母顾惜、劝勉如父亲，要叫他们行事为人配得过神。
+</p>
+            
+            <v-divider></v-divider>
+            <br />
+
+             <v-btn block color="primary" elevation="2" rounded >周一</v-btn>
+            <br v-show="show" />
+<br />
+            <p class="ot2" >晨祷经节：我向你显现，正是要选定你作『执事和见证人』…见证出来；（徒二六16）</p>
+            <p class="ot1">1 请阐释保罗在徒二七，活出主的生活？</p>
+            <p class="ot2" >在风暴的海上，主不仅使保罗成了与他同船之人的主人，也使保罗成了他们生命的保证人和安慰者。在他漫长、不幸且受监禁的航程中，主保守使徒在祂的超越里，使他能活出一种生活，与多年前主在地所过的生活相似。</p>
+            <p class="ot1">2 请论述徒二六16 所说见证的事？</p>
+            <p class="ot2" >当主向保罗显现时，选定他作执事和见证人。执事是为着职事，见证人是为着见证。徒二六16 论到这个见证，要将你所看见我的事，和我将要显现给你的事，见证出来。保罗曾看见过主，主也要在一些事中向他显现。</p>
+           
+  <v-btn block color="primary" elevation="2" rounded >周二</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：基督的爱困迫我们，因我们断定：一人既替众人死，众人就『都死了』；（林后五14）</p>
+            <p class="ot1">1 请描述保罗是基督的大使？</p>
+            <p class="ot2" >使徒保罗乃是基督的大使。大使是代表最高权柄的人。宇宙中最高的权柄乃是神，神已将天上和地上所有的权柄，都赐给了基督。神设立基督作万王之王，最高的权柄。这个最高的权柄，需要彀资格在地上代表祂的大使。</p>
+            <p class="ot1">2 请解说作为基督的大使，他所是所有是必死的？</p>
+            <p class="ot2" >保罗知道他里面的一切，他所是的一切，他所有的一切，都是必死的。我们的智慧，才能是必死的。因这缘故，我们不该信靠我们的所是。我们是必死的人，但神已将永远的东西、永远不死的东西、作到我们里面。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周三</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：…在我们的神里面放胆，在极大的『争战中』，对你们讲说了神的福音。（帖前二2）</p>
+            <p class="ot1">1 请阐述保罗生活的榜样？</p>
+            <p class="ot2" >保罗说到他在帖撒罗尼迦人中间的生活。他强调这事，是要给年幼的圣徒看见正当生活的榜样。盼望所有的长老，必须是众圣徒的榜样。在每一个地方召会里，必须有一些榜样，让别人效法。抚育年幼信徒正确之路，乃是给他们榜样看。</p>
+            <p class="ot1">2 请解明保罗用他的生活，来喂养属灵儿女？</p>
+            <p class="ot2" >照顾孩子在于九分喂养和一分教导，这也是我们照顾初信者的作法。喂养包括从圣经或召会历史中题出榜样。我们读历代圣徒的传记，就喂养了自己，也经历了抚育。这里的重点是说，喂养人和抚育人最好的路，是给他们一个正确的榜样。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周四</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：神怎样『验中』了我们，把福音托付…不是要讨人喜欢…要讨…神喜欢。（帖前二4）</p>
+            <p class="ot1">1 请解述帖前二4 的验中，有何深意？</p>
+            <p class="ot2" >帖前二4 的验中含示试验。神验中使徒以前，先试验他们。神根据这验中，把福音托付他们。神作这事非常谨慎，因为祂知道我们的心。我们受试验的时候，就会看见我们真正的所是，我们会发现，自己里面是不诚实、不忠信、也不可靠的。</p>
+            <p class="ot1">2 请阐明神要用青年人，但神要先试验他们？</p>
+            <p class="ot2" >我确信神要用青年人，但神要先试验然后才用他们。神试验我们而验中我们以后，才能对我们有所托付。但我们不能验中我们自己。惟有在神试验我们以后，祂才会验中我们。然后祂会把一些事托付我们，并开始使用我们。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周五</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：…虽然有权利叫人尊重，却没有向你们…寻求从『人来的荣耀』；（帖前二6）</p>
+            <p class="ot1">1 请解述寻求从人来的荣耀，对基督工人是试诱？</p>
+            <p class="ot2" >许多已被这事吞灭、破坏。在基督徒的工作中维护权柄、尊严或权利，就破坏了工作。主在地上时放弃了祂的尊严，使徒也宁可不用他的权利。天使长的堕落是由于寻求荣耀。根据新约圣经，凡寻求从人来的荣耀，都是撒但的跟从者。</p>
+            <p class="ot1">2 请说帖前二6 的话，该如何运用？</p>
+            <p class="ot2" >使徒虽然是基督的使徒，却不维护自己的权柄。他们必须忘记他们是使徒，而像奴仆般服事神的子民。他们不该题醒别人他们是基督的使徒，却要记得自己是服事信徒的弟兄。地方召会中我们不是尊贵的人，乃是彼此服事的奴仆。</p>
+
+<v-btn block color="primary" elevation="2" rounded >周六</v-btn>
+<br />
+            
+            <p class="ot2" >晨祷经节：…将神的福音分给你们，连自己的『性命』也愿意分给你们…（帖前二8）</p>
+            <p class="ot1">1 请解明帖前二8 的话，该如此喂养初信者？</p>
+            <p class="ot2" >在帖前二8 切慕，意热切渴望，就像乳养的母亲热切关心她所喂养、顾惜的孩子。这就是使徒对初信者所作的。使徒不但将神的福音分给帖撒罗尼迦人，连他们自己的性命也分给他们。这些乃是我们传福音时，将救恩注入别人里面的必要条件。</p>
+            <p class="ot1">2 请阐释帖前二11 的话，如何经历？</p>
+            <p class="ot2" >在帖前二11 使徒有力的强调他们的所是或为人，因为他们的所是开了一条路，将初信者带进神完全的救恩。在顾惜信徒如同自己的孩子上，使徒看自己是乳养的母亲；在劝勉信徒上，他看自己是父亲。</p>
+
+<v-btn block color="primary" elevation="2" rounded >总结</v-btn>
+<br />
+            
+            
+            <p class="ot2" >我们给初信者和年幼信徒榜样看，就是浇灌、供应、乳养、顾惜他们。我们必须学习有九分的喂养和一分的教导。喂养包括从圣经或召会历史中题出榜样。我们读历代圣徒的传记，就喂养了自己，也经历了抚育。有了榜样，我们才能喂养别人。我确信神要用青年人，但是神要先试验他们，然后才用他们。神试验我们而验中我们以后，才能对我们有所托付，并开始使用我们。此后，我们要效法保罗，他怀着雄心大志，要讨主喜悦，他且受基督的爱困迫，不再向自己乃向主活；要讨那察验我们心的神喜欢，并绝对不在主的工作中，寻求从人来的荣耀。</p>
+           
+  
+        
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+      });
+    </script>
+    <style>
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

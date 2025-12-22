@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('58')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('60')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">司布真的发热机</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">这些人同着几个妇人，和耶稣的母亲马利亚，并耶稣的兄弟，都同心合意，坚定持续地祷告。（徒1:14）</div>
+<div id="CC">These all continued steadfastly with one accord in prayer，together with the women and Mary the mother of Jesus，and with His brothers.（Acts 1:14）</div>
+<div id="C">有五个青年传道人，特意在主日到伦敦参观大会堂，想听名人讲道。那天早晨天气炎热，他们到司布真的会堂去聚会。会堂门口站着一个人，上前对他们说，“诸位好像都是主的工人，想必喜欢看看我们会堂的发热机，我可以引导诸位去看。”他们在炎热的日光下，那里还想去看发热机，无奈因着情面难却，只得答应。那人便引导他们到会堂的下一层，开了门，低声对他们说，“请诸位看，这就是我们教会热力的发源处。”他们见了，大大惊奇。原来在他们面前，约有七百人，都屈膝在神面前，恳切祷告神，求神赐福给楼上聚会的讲道。那位引导他们的，不是别人，就是司布真自己。司布真传道有能力的秘诀就在此。</div>
+<div id="CC">经历基督─与祂交通（诗417）</div>
+<div id="C">当我欢留于祂面光，<br/>　祂以温情对付、指点；<br/>　用祂神圣、宝贵成分，<br/>　浸透全人、供应无限。<br/>　向我发言、给我看见：<br/>　祂的丰富是为今天；<br/>　多方、丰满，将祂享受，<br/>　所有问题全都逃窜！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

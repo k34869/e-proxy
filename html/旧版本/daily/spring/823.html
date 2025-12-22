@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('822')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('824')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">喜欢在你脚印中行</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>诗篇 31:2求你向我侧耳，快快救我。求你作护卫我的磐石，作拯救我的山寨。</p><p>Incline Your ear to me; Deliver me speedily. Be to me a rock of protection, A fortress, to save me.</p><p>有一黑人和他妻子，二人都是基督徒，也都会唱诗。一次，他们二人作一长途旅行，搭了一艘大轮船，行在海中。一天早晨，船上忽然失火；水手尽力想法子扑灭，可是火势越来越大。船长吩咐各位乘客都要套上救生圈；但是许多人都不愿意这样行。黑人夫妻听得船长吩咐，照样作了。但有一人忽把黑人妻子身上的救生圈脱了下来，套在自己身上。许多人跳到水里躲避火势。那个黑人只得叫他妻子拉住他的背脊。最后她对丈夫说，‘我不能再拉住你；因我力气用尽了。’丈夫说，‘我们应当唱诗。’于是二人同唱‘永久磐石为我开’那首诗。这诗一唱，重新得力。许多水中挣扎的人，听见黑人夫妻的歌声，也都和声唱了起来。不久，就有一船经过那里，全都得了拯救。</p><p>贰肆　父母</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

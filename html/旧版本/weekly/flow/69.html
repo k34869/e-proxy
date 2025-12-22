@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('68')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('70')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>你们往普天下去，向一切受造之物传扬福音。（可十六15）</p>
+<p class="title">大的操练（二）装备真理，广传福音</p>
+<p>在‘大’的操练上，我们要向主大大张口，使我们经常被灵充满，也被话充满，成为一个有丰富属灵度量的人。诗篇说，‘你要大大张口，我就给你充满。’（八一10。）我们不仅要向主敞开心，还要向主张口。我们若大大张口，主就要充满我们。我们也需要装备真理，使我们能成为在真理上丰富供应人的人。今天在主的恢复里，真理好像瀑布般倾泻出来；加上交通、印刷、电视等各样视讯工具的便利，使我们所出版的书报已流传到全球各大洲。然而全地的人都是饥饿的，他们需要真正的粮食—基督和神的话。所以我们应当学习真理，使我们因真理而得救、释放、成圣并被建造，更能向人传讲真理，使主的真理、主的话增长，像花草生长一样，越长越繁茂。至终，能达到如以赛亚十一章九节所说：‘对耶和华的认识充满遍地，好像水充满洋海一般。’</p>
+<p>圣经里给我们最大的托付，也是主给我们最大的使命，就是传福音；这也是主耶稣升天之前，给我们的最后托付。马太福音说，‘所以你们要去，使万民作我的门徒，将他们浸入父、子、圣灵的名里。’（二八19。）马可福音说，‘你们往普天下去，向一切受造之物传扬福音。’（十六15。）路加福音也说，‘人要靠着祂的名，传悔改以得赦罪之道，从耶路撒冷起，直到万邦。’（二四47。）这清楚指明，传福音乃是主给我们的最大托付。对于传福音我们需要作得广、作得多、作得好、作得有分量。主的命令，乃是要我们往普天下去传福音。特别是少年的弟兄姊妹，应当起来传福音。每一个召会都需要把福音传遍当地。所有的家庭、学校、机关，都应该充满福音，我们需要多多生育属灵的孩子。（参普及主恢复的指引，25～26、63页；倪柝声恢复职事过程中信息记录上册，153页。）</p>
+<p class="title">为着全世界的真理</p>
+<p>李常受弟兄曾作过以下见证：‘有一次倪柝声弟兄对我说，“常受弟兄，主所给我们的这些真理，不只是为着我们华语信徒，我相信也是为着全世界的。”那时我们二人都不知道，主要怎么把祂给我们的真理，普及到全球。然而，主兴起环境，中国大陆时局变动，主把我带到台湾。经过十年的发展，立了一个基础，主又带我到美国。再经过十年，主就藉着文字，把祂的恢复普及到其他各大洲。虽然各地召会人数还不彀多，但的确普及了。此后，主给我们一个敞开的门，各大洲都有人接受我们所传扬的真理，也欢迎有圣徒前去访问，甚至缅甸、印度都开始有聚会了。</p>
+<p>我们实在感谢主，在台湾给我们一个好的基础，不仅圣徒人数最多，并且政治、经济、社会各方面的条件都配合，使我们能开办全时间训练，差派工人往各地去开展。在十九世纪，都是外国差遣西教士到中国传福音；现在是台湾差派“中教士”到世界各地，传布主恢复的真理。我相信在永世里，我要和你们一同为着这个大举，喜乐欢腾，手舞足蹈。</p>
+<p>经过倪弟兄和我的劳苦，圣经的真理如今都挖掘出来了。自一九七四年起，我每年花半年以上的工夫，专心编写生命读经的纲要，以及新约圣经恢复本的注解。有心寻求的人都不能否认，真理向着我们是解开的。盼望我们众人都接受负担，好好研读主恢复的真理，并且将这真理传布出去。’（参忠信殷勤的传扬真理—关于文字服事，42～43页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：向主大大张口，使我们经常被灵和话充满，成为有丰富属灵度量的人，将基督的丰富，当作福音传给人。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

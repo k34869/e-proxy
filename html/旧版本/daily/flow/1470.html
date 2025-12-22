@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1469')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1471')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 12 课<br />
+神的奥秘</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　在祂里面行事为人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>西二7：…照着你们所受的教导，在信心上得以坚固，洋溢着感谢，就要在祂里面行事为人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>行事为人就是生活、行动、举止、为人，这含示日常生活中的每件事。我们该在基督里行事为人、生活行动，使我们能享受祂的丰富，就如以色列人住在美地，享受其上一切丰富的出产。今天的美地就是基督那包罗万有的灵。祂住在我们的灵里，作我们的享受。照着灵而行，乃是新约的中心和关键。基督该是我们的范围，就是我们在其中行事为人的宽阔领域，祂也该成为我们日常生活的一切元素！愿我们天天都操练凭基督而活，活基督、长基督、并产生基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>天天都操练凭基督而活，活基督、长基督、并产生基督。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督是神的奥秘，我们需要操练全人—灵、心思、情感、和意志来接触主，使里面的每一部分正确且正常的尽功用，丰丰富富的在悟性上对基督有充分的确信。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神的奥秘是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘歌罗西书说到与神旨意有关的神的奥秘。我们要说到一个人的心意，就必须明白他心里所要的是什么。我们必须认识他，了解他，并认识他是那一种人。神有一个奥秘，并且祂就是一个奥秘。我们知道神存在，但任何人要认识祂，显然是不容易的。不仅神自己是个奥秘，连祂所想要的和所要作的，也是一个奥秘。…</p>
+<p>神的奥秘太奥秘、太深奥、太伟大了，需要丰丰富富的在悟性上有充分的确信。神的奥秘是什么？我们凭着自己，无法完全解释神是什么，以及神要作什么；答案乃是在歌罗西这卷书里。…</p>
+<p>我们写信给朋友时，我们的信必须是基督。我们必须学习这样经历基督。…在我们的日常生活中，应用祂作一切。祂必须是我们的一切。当我们供应话语时，供应的话语必须是基督。我们的信息和职事必须是基督。供应的路和我们供应的力量，都必须是基督。</p>
+<p>歌罗西书这卷著作是要告诉他们，他们必须认识基督是他们的一切。我们也必须学习这样真实而活的经历基督。甚至我们从年轻时起，就应该开始经历基督。…你应当珍赏有人使你看见接受基督、经历基督、并应用祂作一切的路。…这样，他们就要成为活的见证人，活的见证，见证基督是何等亲爱、何等真实、何等宝贵、何等丰富、何等的活！让我们学习这样经历基督。’（由基督与召会的观点看新约概要卷二，287、297～298页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练全人—灵、心思、情感、和意志来接触主，使里面的每一部分正确且正常的尽功用，丰丰富富的在悟性上对基督有充分的确信。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

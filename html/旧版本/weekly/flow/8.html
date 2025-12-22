@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('7')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('9')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">真（二）　作人真：作人真诚不敷衍</p>
+<p>求你用真理圣别他们，你的话就是真理。（约十七17）</p>
+<p class="title">真实的重要</p>
+<p>真的人，就是被神充满、里外一样、不虚假、不遮掩，并且结实、可托付的人。真是人之本、人之底。不真的人无底，不能受重大的托付。凡能为别人牺牲者，都是性格真的人。作人诚实还不彀，必须是真的人。作人不真，在初时可能也受人欢迎，但久就不行。惟独真，乃能越久而越得人心。一个能取信于人的，他的性格必须是真的才可以。许多事虽然不是撒谎，但是不真。所有不真的人，在主手里都没有用处。因此，所有事奉主的人都必须养成一个真的性格。我们碰到事情，可以因着敬畏主的缘故，不表示什么；然而一旦要表示，就得真。</p>
+<p>神是真实的，然而人却是虚谎的，我们怎样才能活出神的真实呢？主耶稣在约翰十七章向父祷告：‘求你用真理圣别他们，你的话就是真理。’（17。）这里的‘用真理’，直译，在实际里。实际，就是三一神。这三一神是包藏在祂的话里，所以祂的话也是实际。父的话带着父的实际。当神的话说，‘神是光，’这话就带着是光的神。所以神的话是实际，真理仆人。神在召会中，是与谁同在呢？是那些有恩赐而行为堕落的呢？还是那些心中诚实，却好像没有多大恩赐的呢？（造就故事下册，59页。）</p>
+<p class="title">人里面喜欢真理的性能</p>
+<p>人里面有一种喜欢真理的性能，这在圣经里有清楚的例证。主耶稣出来尽职时，大多在山上或旷野讲道；没有豪华、舒适的场所，但人成群的来。两百多年前，英国的卫斯理约翰（John Wesley）兴起，他也是在马路边传讲；同时期的怀特腓乔治（George Whitefield），据说能力比卫斯理更大，是在野地里传讲。那时没有麦克风，也没有好的设备，他们就是放声喊叫，人都成群的去听。这是因为神造人时，在人里面造了一个求知的欲望，所以人自小渴望认识外在的事物。聪明的母亲管教孩子，不会责打、勉强，而是对他多说话，向他多传输知识。西方人教育孩子有一个长处，就是在孩子入睡前，必定对他讲一段故事。不仅如此，有时母亲看见孩子顽皮，也不责打，就是讲故事给他听，他一听就安静、规矩、驯服，不再调皮了。这是因为他里面有个渴望，愿意多知道。小孩子知道得越多，他就越欢喜，越觉得满足。圣经的丰富是我们无法穷其究竟的。李弟兄见证他天天研读圣经，有七十年之久，越读越有得着，也越觉得可读。研读圣经的真理是没有止境的。（参作主合用的器皿，14～15、17页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：享受主的话，让主用真理来圣别我们，脱离一切的虚谎。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

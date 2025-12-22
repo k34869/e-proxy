@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1687')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1689')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 8 课<br />
+有分于基督的苦难而欢乐</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：如果我的道路引我去受苦。（诗歌282首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：基督既在肉身受过苦，你们也当用同样的心思武装自己，（因为在肉身受过苦的，就与罪断绝了；）好使你们不再从人的情欲，只从神的旨意，在肉身中度余下的光阴。（彼前四1～2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　用基督的心思，为着受苦武装自己—彼前四1～6</p>
+<p class="ot2">1　在肉身受过苦的，就与罪断绝—1。</p>
+<p class="ot2">2　使我们不再从人的情欲，只从神的旨意过生活—2。</p>
+<p class="ot2">3　不随从外邦人虚妄的生活，他们必向那审判的主交账—3～5。</p>
+<p class="ot2">4　顺从福音的信徒，在肉身中受审判，在灵里却照着神活着—6。</p>
+<p class="ot1">二　作神诸般恩典的好管家—7～11</p>
+<p class="ot2">1　万物的结局临近，要清明适度，谨慎自守，以便祷告  　—7。</p>
+<p class="ot2">2　最要紧的是要彼此热切相爱—8。</p>
+<p class="ot2">3　要互相款待，不发怨言—9。</p>
+<p class="ot2">4　照所得的恩赐彼此供应，作神诸般恩典的好管家—　10～11。</p>
+<p class="ot1">三　因有分于基督的苦难而欢乐—12～19</p>
+<p class="ot2">1　有火炼的试验临到信徒，不要以为奇怪，要因有分于基督的苦难而欢乐—12～13。</p>
+<p class="ot2">2　在基督的名里，因是基督徒而受苦，是有福的，且荣耀神—14～16。</p>
+<p class="ot2">3　神的审判要从神的家起首—17～18。</p>
+<p class="ot2">4　要在善行上，将我们的魂交与信实的创造主—19。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神的审判是从神的家起首；信徒为着受苦要用基督的心思武装自己，并因有分于基督的苦难而欢乐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼得前书有一主要的目的，是要鼓励并劝勉信徒在受逼迫时跟随基督的脚踪。因此彼得在四章劝勉信徒，要用基督的心思，为着受苦武装自己，使我们不再从人的情欲，只从神的旨意过生活。彼得也嘱咐信徒，万物的结局已经临近，要清明适度，谨慎自守，以便祷告。最要紧的是要彼此热切相爱。还要互相款待，不发怨言。照所得的恩赐彼此供应，作神诸般恩典的好管家。同时要因有分于基督的苦难而欢乐，因为在基督的名里，因是基督徒而受苦，是有福且荣耀神的。因为时候到了，审判要从神的家起首。信徒照神的旨意受苦，要在善行上，将我们的魂交与信实的创造主。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　用基督的心思武装自己</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前四1：基督既在肉身受过苦，你们也当用同样的心思武装自己，（因为在肉身受过苦的，就与罪断绝了）。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>基督徒的生活是受苦的生活，这观念与许多基督徒天然的头脑相对。但我们若有基督的心思，就会领悟，我们生活在背叛的时代，在弯曲、悖谬的世代。我们越爱神，并且行祂的旨意，就越会受苦，因为我们无法与这时代的趋势并行。神的旨意完全与今世的趋势或潮流相反；所以我们若爱主耶稣，并且行神的旨意，我们必定会受苦。因此我们需要用基督的心思武装自己，装备自己。以基督的心思为武器，作为为着神国争战所需要之军装的一部分。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>以基督的心思武装自己，忍受苦难，蒙拯救脱离虚妄的生活。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('136')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('138')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">打破水晶灯</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">但那属基督耶稣的人，是已经把肉体连肉体的邪情私欲，都钉了十字架。（加5:24）</div>
+<div id="CC">But they who are of Christ Jesus have crucified the flesh with its passions and its lusts.（Galatians 5:24）</div>
+<div id="C">有一位姊妹脾气凶暴，超乎平常人，她的家人都很怕她。多年以后，她学会与主交通，靠主得胜。有一天早晨，她遇到一个顶大的试验。她在楼上梳洗，还未下楼，她的丈夫和用人在楼下，要挂一盏水晶灯。这灯相当名贵，价值很高。他们正挂的时候，不料落在地上，砸得粉碎。这时正巧她从楼上下来。她的丈夫看见她，以为她要大发脾气，那知她却很安静的说，“灯打碎了，扫掉就是了。”她的丈夫十分希奇，平时只打破小杯、小碟，都要吵闹，今天却完全出乎意料之外。丈夫见她这样安静，就问她说，“你昨夜睡得好吗？你生病了吗？”她说，“我没有病，是神行神迹，将我的病除去了。”她的丈夫回答：“这真是神迹，真是神迹！感谢赞美神！”</div>
+<div id="CC">福音─见证（诗738）</div>
+<div id="C">救我恩何等丰满，<br/>　救我恩何等丰满，<br/>　救我恩何等丰满，<br/>　救我恩无量！<br/>（副）<br/>　主断开一切锁链，<br/>　主断开一切锁链，<br/>　主断开一切锁链，<br/>　主把我释放！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

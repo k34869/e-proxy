@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('175')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('177')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">戴德生论信心</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">耶稣听见，就希奇，对跟从的人说，我实在告诉你们，这样大的信心，我在以色列中，没有遇见人有过。（太8:10）</div>
+<div id="CC">Now when Jesus heard this，He marveled and said to those who followed，Truly I say to you，With no one in Israel have I found such great faith.（Matthew 8:10）</div>
+<div id="C">戴德生说，“‘主是我的牧者。’请注意这个‘是’字，不是说‘从前’主是我的牧者，也不是说，主‘或者’是我的牧者，乃是说，主‘是’我的牧者。主日祂是我的牧者；周一至周六，祂也是我的牧者。正月初一到十二月三十一日，主天天是我的牧者，年年是我的牧者。在家或出外，顺境或逆境，贫穷或富有，主都是我的牧者。世界的一切金银，都是属于神的，千山万水，地上一切的生物，都是神所有的。我们何必叫穷？我们何必吃素？我差仆人去买东西，无论是买几分钱的，或是买几千块钱的，仆人都须指望我给钱，并将东西买来给我。照样，神差我无论作大事或是小事，难事或是易事，无论怎样，神都要引导我，给我一切的需要。有难解的事，神要赐智慧；有难办的事，神要赐恩惠；有难作的事，神要赐力量。不用怕出于神的来源不够，入不敷出，供不应求。神的来源是我的，因为神自己是我的。神与我同在，并且住在我的心内。”<br/><br/>　这位信心的伟人，就是凭这样的信心，在中国内地十一个省打开福音之门。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

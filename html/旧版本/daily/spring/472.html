@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('471')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('473')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第12课  性格—谨慎（2）细心</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇三二7 你是我藏身之处；你必保守我脱离患难……</p>
+<p>一天，大象博士在森林里开了一场招聘会。小猴非常兴奋，心想:我如此有才，这助手非我莫属～而小兔却非常着急，因为它担心晚去一步助手的职位会被别人夺走。小熊则两眼放光，在心里窃喜:哈哈，太好了，有钱挣了首先，大象博士向外喊道:“小猴，请进～”小猴得意洋洋地冲进房间，撞翻了椅子。大象博士皱起了眉头:这小猴做事情太冲动了。</p>
+<p>接着，大象博士又喊道:“小兔，请进来～”小兔进来时看到了一把椅子，只见它暗暗骂了一句:“谁这么没公德心,竟然放椅子在这，哼～不关我的事。”说完便直接跳了过去。大象博士瞧了一眼，摇摇头，很失望。</p>
+<p>然后，大象博士又叫小熊进去，它满头大汗，气喘吁吁的。一进门就破口大骂，并且一脚踢飞了椅子，显得很愤怒。在一旁的大象博士气得火冒三丈。</p>
+<p>最后，大象博士叫小猫进去，小猫轻轻推开门，把椅子扶起来放好，再走过去微笑地向博士鞠了个躬。</p>
+<p>结束后，大象博士向大家宣布:“助手是小猫，因为它做事情认真，细心，有礼貌～”小猴、小兔和小熊听了一下子目瞪口呆，简直不敢相信自己的耳朵，听了大象博士的解释后都不好意思地低下了头。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：细心的人是尽力作正确、安全的事，不伤害别人的利益。当我们在外面玩或者使用某些东西时，我们需要细心。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：细心的人作正确的事情。看图作画时，细心的人会遵循指示，在线条内涂上颜色。细心的人是小心谨慎的。他们会小心谨慎的留意到危险并避免危险。例如，当过马路时，一个细心的人会在过马路前先看两边，确保通过时是安全的。细心的人在作事时也会很小心，比如用剪刀或倒一杯水。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二三12 你要留心领受训诲，侧耳听从知识的言语。</p>
+<p>高考之后，两人自我感觉都不错，对自己的发挥比较满意。可成绩出来后，却让小甲大跌眼镜，小甲比小乙总分少了60分，其中数学就相差了30分。小甲大受打击，不相信自己的考分，通过关系查到了自己的考卷，原来数学计算上式子都列对了，可答案却写错了。作文审题不清，跑题了。结果小乙如愿考上了大学，而小甲名落孙山，只好进工厂当工人。</p>
+<p>几年后同学聚会，小甲感慨万千。他如果当时能够细心点，那么也能体验到大学丰富多彩的生活。</p>
+<p>中国有一句典故叫“千里之堤溃于蚁穴”，常用来比喻不注意小事则会酿成大祸或不注意小事则会造成严重的损失。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：细心的人是尽力作正确、安全的事，不伤害别人的利益。细心的人会密切的注意细节。当我们工作或作事时，我们要非常的用心且仔细。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：在我们交作业之前，我们要花时间仔细检查，确保我们的笔迹整洁，内容正确。当我们被要求打扫房间时，我们要非常细心并彻底地完成这项任务。我们应该仔细整理床铺，叠好衣服，把玩具放在适当的位置，整理桌子。当我们整理好房间，看起来是不是很舒服呢？一个细心的人总是关注细节，在他们所作的事上是用心的。他们不是粗心大意的或邋遢的。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>以弗所书五15 你们要仔细留意怎样行事为人，不要像不智慧的人，乃要像有智慧的人。</p>
+<p>主耶稣在地上时，是家中的老大。他出生在贫穷的木匠家里，从小没有享受过舒适的生活，还需要帮忙妈妈照顾弟弟妹妹，帮爸爸作木工。但没有因为他是老大而骄傲，不肯作这些事，却温和的对待他周围的每一个人。</p>
+<p>后来，他尽职时，你看见他忙起来的时候，只顾到人的需要，没有顾到自己的肚腹。   很多人在旷野里面，天已经晚了，但是他不忍打发他们走，怕他们走路困乏，因为他们没有吃的。圣经用细面表征基督柔细的人性，他照顾人总是照顾的柔细、周到。</p>
+<p>当李弟兄和同学们同住时，端一盆水进来，水滴在别人的床铺上，他赶快把水擦干，还要快找个机会向室友道歉。从主耶稣和李弟兄身上，我们都看到他们做事是何等的柔细。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：细心的人是尽力作正确、安全的事，不伤害别人的利益。当别人把重要的事委托给我们时，我们要细心行事。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：如果在公园里需要你来照看弟弟妹妹，你是怎么作的？你是不是一直跟着他们，来保证他们的安全呢？还是继续玩你自己的游戏？如果你的朋友把她最喜欢的书借给你，或者她看重的东西，比如相机，你是怎么对待的？你是不是很小心的阅读这本书呢？你有没有把相机当作自己的来保管呢？当你把它们还回去的时候，它们和借来的时候一样完好吗？细心的人总是很小心的看管别人委托给他们的东西。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

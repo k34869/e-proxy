@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1735')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1737')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 14 课<br />
+神圣交通的条件</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　遵守主的话并爱弟兄</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹二5:…凡遵守祂话的，神的爱在这人里面实在是得了成全。在此我们就知道我们是在祂里面。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主的诫命不仅仅是训谕，更是传输生命供应的话。每当我们接受并遵守主的话，我们就接受生命的供应。主的话也发出真光，使弟兄相爱这条旧诫命，在整个基督徒的生活中一直是新鲜的。因此，旧诫命和新诫命实际上乃是一。因为诫命就是主的话，而主的话发出曙光，如同旭日照耀，吞灭了黑暗。这真光照耀在我们里面，使我们能爱弟兄，并且住在光中。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>接受并遵守主的话，以接受生命的供应，实行弟兄相爱。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识并活在属灵交通的循环里，在永远的生命里享受神圣生命的交通，得着神圣的光，并在光中认罪以有分于耶稣之血的洗净。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>请说明我们属灵生命中有一个神圣的循环，是由那四件事物形成？要维持这神圣的循环，我们这一面需要作什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘虽然我们一得救，就得着神圣生命的交通。但在我们身上，里面的罪性和外面的罪行总是成为我们的难处…。无论是粗野的罪，或是细微的罪，都阻碍我们和神的交通，也都使我们有罪的感觉。所以要留在神圣生命的交通里，头一件事就是要向神认罪。约壹一章七节说，我们一在光中，就要认我们的罪。我们不在光中，还不觉得自己有罪；一在光中，我们就觉得自己实在有罪。我们一认罪，主就要赦免我们的罪。但我们若是在黑暗里，就只看见别人有罪，看不见自己有罪，我们也就不会认罪，主的血就不会洗我们的罪。换句话说，什么时候我们来到神面前，觉得自己有错，有罪的感觉，那就指明我们是在光中。自然而然的，我们就会求主赦免我们的罪。我们一承认自己的罪，神是信实的，必要赦免我们的罪；祂也是公义的，必要借着耶稣的血洗净我们的一切的罪。…你只要有一点点错的感觉，或觉得是活在肉体、旧造、自己里，就要立刻认罪，求主赦免。你一认罪，就证明你在光中，宝血就来洗净你，膏油也跟着来涂抹你，使你里面神的成分加多，你就更多享受神的所是，你也就实实在在的是住在主里面，享受主生命。’住在主里面，享受主生命，100～101页。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>活在属灵交通的循环里，在永远的生命里享受神圣生命的交通，得着神圣的光，并在光中认罪以有分于耶稣之血的洗净。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

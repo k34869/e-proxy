@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('43')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('45')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>活物往来奔走，好像闪电的样子。…灵往那里去，活物就往那里去；活物上升，轮也在活物旁边上升，因为活物的灵在轮中。（结一14，20）</p>
+<p class="title">神是奋力活动的</p>
+<p>以西结一章，将神的经纶比作一个大轮。（15～21。）这大轮的轮轴表征基督作神经纶的中心；轮辋表征基督的配偶—召会，要终极完成为新耶路撒冷。众多的信徒，作为基督的肢体，乃是轮辐，要一直扩展，直到轮辋，就是基督的身体，终极完成为新耶路撒冷。这大轮不只是神的经纶，也是神经纶的行动。从创世记一章直到如今，这大轮一直在转动。神经纶的行动从未停止过。二十世纪初，这大轮从西方转到了中国大陆；六十多年前，又从中国大陆转到了台湾。结果，五年内台湾众召会的人数增加到了五万人。后来，这大轮的行动到了美国，又继续进展到全球六大洲。</p>
+<p>历世历代以来，这大轮一直在行动；今天我们都是这大轮在地上行动的一部分。有时这大轮的行动相当缓慢，有时它却快到一个地步，叫我们很难追得上。事实上，神是这大轮的发动者，祂从未休息过，祂是一直不断的奋力向前。然而，神在祂经纶的大轮里行动，需要神的选民与祂合作。神子民在地上的历史，事实上就是这位运行的神，在祂所救赎的人里面奋力活动的历史，为使他们能与祂一起奋力活动，为着完成神对基督和祂扩增的永远经纶。所以，我们的生活，我们的日常行事，我们的学业、职业、事业，都必须是神今天在地上，在祂美妙且超绝行动中之历史的一部分。</p>
+<p>当神在我们里面奋力活动并行动时，我们必须与神是一；这就是说，在生命上，在生活上，并在我们今天地上全部的行动上，我们必须与神是一。我们必须写神今日的历史，与那奋力活动的神成为一，而一同前进。在祂里面，同着祂，凭着祂，并为着祂。这个奋力活动，就是勤的特征。（参约书亚记生命读经，10～12、3～4页。）</p>
+<p>活物往来奔走，好像闪电的样子。…灵往那里去，活物就往那里去；活物上升，轮也在活物旁边上升，因为活物的灵在轮中。（结一14，20）</p>
+<p class="title">比电报更快</p>
+<p>从前，有一个人在某海岛上装置电线。他对在旁观看的孩童说道：‘真是奇妙阿！等电线装好了，从这里发信到几千里之外的城市，只要二十分钟，就可以收到回信。’孩童回答说，‘那有什么希奇！’那人惊讶的问道：‘你知道还有比这更奇妙的事么？’孩童说，‘我听说，还没有发信，就可得到回信。’‘这是什么意思？那能有这事？’‘圣经上面写着：“他们尚未呼求，我就应允；正说话的时候，我就垂听。”’（赛六五24。）神是奋力活动的神，祂回答人的祷告，是极快的。（参福音故事下册，122～123页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：与奋力活动的神成为一，一同奋力向前，积极进取。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

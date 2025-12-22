@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('233')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('235')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">奉献的意义</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>奉献<div id="CC">因为你们是重价买来的。这样，就要在你们的身体上荣耀神。（哥林多前书6:20）</div>
+<div id="CC">For you have been bought with a price. So then glorify God in your body.（1 Corinthians 6:20）</div><hr/>奉献的意义<div id="CC">所以弟兄们，我借着神的怜恤劝你们，将身体献上，当作圣别并讨神喜悦的活祭，这是你们合理的事奉。（罗12:1）</div>
+<div id="CC">I exhort you therefore，brothers，through the compassions of God to present your bodies a living sacrifice，holy，well pleasing to God，which is your reasonable service.（Romans 12:1）</div>
+<div id="C">奉献自己乃是我们蒙恩的人，对主救恩一个积极的反应。我们将自己奉献给主，就是让主得着我们，作我们对祂的还报。我们将自己奉献给主的根据，是主用祂的血作重价买了我们，我们就成了祂所买的奴仆（林前六19～20）。我们信主，蒙主救赎所买的人，乃是主所买的奴仆，不再是属自己的，乃是属于主的。主权不在我们，乃在主。我们为主所赎、所买，既是属于主的，我们或活或死，总是祂的人（罗十四8）。这是我们把自己奉献给祂，归祂使用的根据。<br/><br/>　再者，我们将自己奉献给主，也是因为祂的爱困迫、激励我们。主的爱逼着我们，不能不把自己奉献给祂。因为祂替我们众人死，我们众人就都死了；并且祂死，是为叫我们得着祂的生命，向祂活着。这个爱激励我们，逼着我们爱祂，将自己奉献归祂，作我们对祂大爱的感激、还报（林后五14～15）。<br/><br/>　我们将自己献给主，是将自己献给主作活祭，（罗十二1，）这不像旧约的人，献牛羊牺牲给神作祭物。我们这样献上自己作活祭，乃是圣别的，是将自己分别出来，归主使用；也是讨神喜悦，满足神心愿的。（生命课程）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

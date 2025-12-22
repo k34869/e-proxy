@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('127')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('129')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">加利利海和死海</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">所以你们必从救恩之泉欢然取水。（赛12:3）</div>
+<div id="CC">Therefore you will draw water with rejoicing from the springs of salvation.（Isaiah 12:3）</div>
+<div id="C">以色列有两个湖，都是约但河的延续。一是北边的加利利海，沿岸百花芬芳、葡萄茂密；湖里游鱼成群。主耶稣有四位门徒，曾经都是加利利海的渔夫；直到今天，还有人倚靠此海为生。另一为南边的死海，湖水过咸，不仅鱼类难以繁殖，沿岸也是草木不生。前者因为水源川流不息，所以清澈而富饶；后者因为水源停滞不流，所以枯干死寂。基督徒若不常常与主交通，一面有领受，一面有供应，也会慢慢变成死海。</div>
+<div id="CC">从救恩泉源欢然取水（补25）</div>
+<div id="C">所以你们从救恩泉源欢然取水，<br/>　欢然取水。<br/>　就在那日，<br/>　你们说：赞美主！<br/>　所以你们从救恩泉源欢然取水，<br/>　欢然取水。<br/>　就在那日，<br/>　你们说：赞美主！<br/>　呼求祂的名，<br/>　将祂所行传扬在万民中，<br/>　提说祂的名已经被尊崇。<br/>　扬声欢呼！<br/>　你们锡安的居民哪！<br/>　因你们中间的以色列的圣者为至大！</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

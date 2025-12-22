@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('289')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('291')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第28课  创造-人的受造奇妙可畏（十四）男女有別</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一27 神就按着自己的形像创造人，乃是按着神的形像创造他；创造他们有男有女。</p>
+<p>亚当夏娃的故事:神是创造万物的神，他创造天地、花草、动物、植物，他也创造人。他照自己形象也创造了头一个人叫亚当，他看他独居不好就让他沉睡，取了一根肋骨建造了一个夏娃。有一天神出去了，狡猾的蛇就来诱惑夏娃，让她怀疑神的话？夏娃不问亚当就直接和蛇对话，就受了蛇引诱，吃了神吩咐不可吃的有毒果子神，并且拿给亚当吃，最终就遭到神的审判。蛇要终身用肚子行走；女人要受怀胎生产之苦，并受男人的管辖；男人也要汗流满面才得糊口。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神以奇妙的方式创造了人：男和女。在神创造人时，男和女是不同的。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：让孩子们对神创造的男人和女人的不同这事实留下深刻的印象。在神的设计里，男性和女性之间是有区别的。说明男性和女性是如何不同。例如，爸爸可以把你扛在肩膀上，妈妈善于在你受伤后安慰你。让孩子们描述男孩和女孩的好恶之间的差异。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>申命记二二5 妇女不可穿戴男子所穿戴的，男子也不可穿妇女的衣服，因为行这些事的人，都是耶和华你神所憎恶的。</p>
+<p>班里的酷女孩： 有一个叫婷婷的女孩，她剪着一头短短的发，穿着她认为很酷的男生服装去上学，她认为这样很有个性，但大家都认为她不男不女。班里的同学好多都嘲笑她，不和她做朋友，也没人和她玩，她觉得好孤单，好伤心。老师看到这情形，就柔细的教导她说，婷婷，女生就是女生，该穿女生的衣服，像女生。这样才不会引起大家的误会和歧视，也会得到更多的好朋友。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：在神的创造里，男性和女性是不同的。由于男女在身体上的区别，男女穿着的衣服也有区别。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：由于男孩和女孩在生理上的不同，因此有些衣服是为男孩做的，有些衣服是为女孩做的。我们穿的衣服区别我们是男孩还是女孩，我们应该选择适当的着装。让孩子们描述男孩和女孩所穿各式各样的衣服之间的不同。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多前书十一11~12 然而在主里面，女也不是无男，男也不是无女。因为女人怎样出于男人，照样，男人也是藉着女人，但万有都是出于神。</p>
+<p>想做女孩：小明是一个三年级的学生，在一个周末他趁妈妈不在家，竟把妈妈的口红，眼影等化妆品画在自己脸上，还穿上妈妈的衣服，妈妈下班回到家还以为谁到她家了。一喊儿子，小明就回答。听声音才知道是自己的儿子。妈妈就说儿子你把自己打扮成这样，小明说妈妈我想做女孩。女孩可以干轻一点的活，女孩还很漂亮，妈妈回答说男孩子也很好啊，自信，有有责任心，还能帮助人。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：在神的创造里，男性和女性是不同的。我们应该接受神对我们的安排，并且忠实地保持神对男女区别的安排。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：一个人是男还是女，这是神的设计。你天生是男生或女生，这是神的选择。我们应该接受神对我们的主宰安排，并尊重它。男生应该像男性一样举止和打扮，女生也应该像女生一样举止打扮。我们应该满意于神的创造，不应该渴望成为一个我们不是的人。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

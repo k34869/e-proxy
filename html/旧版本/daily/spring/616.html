@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('615')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('617')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">折箭训子</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>弗4:16　本于他，全身藉着每一丰富供应的节，并藉着每一部分依其度量而有的功用，得以联络在一起，并结合在一起，便叫身体渐渐长大，以致在爱里把自己建造起来。</p><p>有一天，身体上各部分相聚议论，各都抱怨那‘胃’，说它什么都不作，却要我们各自尽力来供给它。嘴说，‘你们看这讨厌的懒东西─胃。它不能说一句话，也永没有唱过一首歌。我一天几次让食物从我这里经过，去装满它，它却永不向我说声谢谢。你想，时常为它开，闭，吞，嚼，多么劳苦，这种劳而无功的事，我真不愿再干了。’手说，‘这话很对。就如我们，终日辛勤工作，无非想得几个钱，我们手掌变粗，起了硬皮，手指有时疼痛难忍。最可恶的是，我们回家之后，还得替这毫无用处的胃拿取食物，却永没有得过它一个谢字。’头也猛点了几点道：‘对阿，真的。我常因为想法子调制食物，弄得晚上不得安睡。有时家中食物不够，不能叫它满足，我就为它焦虑、策划。我以为它自己也应该出一点主意，可是我永没有听它说过一句话。’足狠狠的在地板上蹬了几下，说道：‘你们还不知道我们的苦楚呢。我们一天到晚背负这个讨厌的胃，走到这里，走到那里，起立，坐下都得担负，真是不胜其重。至于酬报却是丝毫没有。’于是别的肢体也都加入讨论。眼说它有锐利的目光察看一切；耳说它留心倾听各种的声音；连那肋骨也是自己称功，夸说全仗它们代胃受了一切外来的打击。后来各个肢体一致赞成，从今以后不再帮助那胃。头不思想，手不再工作，嘴不再吞吃，因此使胃不能再得食物。结果两脚疲乏不能走路，手臂酸软不能伸动，头因无力而眩晕，全身萎缩不堪。于是胃就对它们说道：‘你们真是不知利害。岂不知道供我食物，就是供给你们自己？你们给我食物，我使食物变成血和精力，还给你们，使你们能够工作。你们不给我食物，我怎能帮助你们？’头很有见识的说道：‘胃所说的话不错。来，我们再来合力工作，使全身恢复精力。’‘为要成全圣徒，各尽其职，建立基督的身体。…全身都靠祂联络得合式，百节各按各职，照着各体的功用，彼此相助，便叫身体渐渐增长，在爱中建立自己。’（弗四12，16。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

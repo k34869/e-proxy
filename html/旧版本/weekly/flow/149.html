@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('148')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('150')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">召会生活是人生正确的平衡</p>
+<p>好在今世过自守、公义、敬虔的生活，等候那有福的盼望，就是至大的神和我们的救主，耶稣基督之荣耀的显现。（多二12～13）</p>
+<p>年轻人总是最好玩的，无论是任何运动或娱乐，都是他们所喜好的。当然，人需要娱乐，这是神所创造的；但这需要有节制。好比人需要吃饭，乃是神创造的；神给我们创造了一个胃，是消化食物的器官；神也给我们创造一个身体，来吸收一切的营养。但在摄取的量上，神也给我们种种的限制—饭不可以多吃，多吃会过胖，过胖就容易生病。这是在健康方面，神给我们的律。</p>
+<p>一面，我们应该顾到神所创造的需要，但另一面不可太过，一过分就害事。吃饭是需要的，但不可过分，一过分就伤身；娱乐是需要的，但不可过分，一过分就伤神。我们整个人的生命，是需要调剂，需要平衡的；一个人越是平衡，越有调剂，自然就越健康。我们基督徒也需要娱乐，但我们的娱乐不能太过，并且必须是正当的娱乐。许多黑暗、混乱、暗昧不明的事，许多使人不道德、不顾家庭、不顾父母、不顾婚姻生活的事，都是因为过度娱乐所演变出来的。</p>
+<p>召会的聚会生活，是最高尚，也是最平衡的娱乐。不只主日有聚会，周间也有聚会，众人来在一起，一同敬拜主，一同欢乐，那是一个最健康的平衡。所以基督徒的生活，是最平衡，也是最有调剂的。年轻人应当趁着年轻，追求上进，但更要追求认识主。因为认识主，能使我们认识宇宙的奥秘，知道宇宙的来历，进而了解自己当过怎样的人生。所以千万不要以为，来这个聚会，去那个聚会，是白费工夫，浪费时间。我们的人生需要平衡，需要调剂，而最叫我们能享受正确人生的，就是召会生活的平衡。召会生活对我们的人生，实在有正确的平衡作用。我们从年幼起，就守住这原则，定规使我们的一生，蒙受最大的祝福，得到莫大的益处。（参福乐的人生，17～19页。）</p>
+<p class="title">矿洞拉车的马</p>
+<p>主日那天，一位英国游客到煤矿场参观，看见一个孩子在那里看守一些马匹。那孩子告诉游客，这些马都是在矿洞里拉车的。一周它们有六天在黑暗的矿道上奔走，因此主日这一天，必须把它们带出矿洞，见见阳光；不然，它们在短时间内都会瞎眼。基督徒需要过一个平衡的生活，若把所有的时间都拿去忙碌世事，而没有划出时间聚会亲近神，也会很快瞎了心眼，不能认识属灵的事物。（参造就故事下册，162页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：召会生活是最平衡的娱乐，守住这原则，使我们一生蒙受最大的祝福，得到莫大的益处。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

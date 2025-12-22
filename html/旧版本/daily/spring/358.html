@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('357')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('359')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">不为脚忧却为钱哭</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">然而敬虔又知足，便是大利了；因为我们没有带什么到世界来，也不能带什么去。（提前6:6~7）</div>
+<div id="CC">But godliness with contentment is great gain; for we have brought nothing into the world，because neither can we carry anything out.（1 Timothy 6:6-7）</div>
+<div id="C">八一三上海战役爆发的次日，空袭击中一间戏院，死伤惨重。有一位老妇人正巧经过戏院门口，也被炸掉一只脚。她被救护队送到医院，经过医师、护士洗涤治疗，包扎完毕送回病房。但她还是痛哭不已，并且挣扎要爬起来。<br/><br/>　医师叫她安卧静养，但她还是痛哭挣扎。医生问她到底想要起来作些什么？她说，“在炸掉的那只脚鞋子里，装着三十元钞票，我一定要去找回来。”说完，又很伤心的痛哭起来。医生无法可想，只好派人去找她炸掉的那只脚。后来终于找到了，在那小鞋底下，真有这位老妇人所珍藏的三十元钞票。这位老妇人不为失去的脚伤心，却为失去的钞票哭泣。<br/><br/>　有些基督徒太爱财宝而忽略生命，也是如此。只知追求财宝，积攒财宝，关心自己的钱财；对于自己属灵的生命残缺不全、贫穷、幼稚、软弱，却漠不关心。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

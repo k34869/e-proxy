@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1609')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1611')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 14 课<br />
+竭力前进达到成熟</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　紧随先锋并抛锚于避难所（二）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来六20：作先锋的耶稣，既照着麦基洗德的等次，成了永远的大祭司，就为我们进入幔内。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>作为新约的信徒，第一，我们需要过河。第二，我们需要逃跑。这样的逃跑乃是真正的过河。让我们逃到我们的灵里，逃到召会生活里。让我们逃入幔内，进入至圣所。看见基督照着麦基洗德的等次，在天上的帐幕里尽天上的职事。我们已经有分于基督在地上的职事，就是由亚伦工作所预表，在地上十字架的工作，使我们的罪得赦免。我们还必须竭力往前，享受基督照着麦基洗德的等次，在天上宝座的职事，供应我们，使我们胜过罪，进入美地。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受基督天上职事的服事，供应我们，使我们胜过罪，进入美地。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们必须往前，竭力前进，达到成熟，忘记背后，努力面前的，追求对基督最完满的享受并赢得基督。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督徒的生命要如何达到长大并成熟？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘往前去的最好方法，就是忘掉一切。我们可能花很多时间考虑我们的环境、我们的已往、我们的将来、以及许多相关的事，却不肯花一点工夫在往前的事上。…场上赛跑的人，没有工夫去想别的事。他们只知道一件事，就是奔跑赛程。</p>
+<p>我们在这里看见一个基本的原则：若有人偏离了正轨，或是停下不跑，以后又受激励要继续往前，他这时就不要犹预，不要问问题，只管往前奔跑。许多青年人受到激励，要与主一同往前；但他们中间有些人担心，在往前之先是否该作什么，惟恐主可能不赦免他，不喜欢他。你若也是这样，就很难与主一同往前。你若对主认真，就只管往前。忘掉祂是否会赦免你，或者是否喜欢你。不要在这事上花时间考虑，只要达到目标，得着奖赏。不必考虑对或错，只管往前。…</p>
+<p>我们要竭力前进，达到完全、成熟，就必须分享基督所达到的。要分享基督所达到的一切，路乃是藉着信。…我们只相信神的话所说的，不管有没有感觉。…</p>
+<p>我们要竭力前进，达到完全、成熟，就必须竭力进入那存留之安息日的安息，就是召会生活。我们必须忘掉已往，也不巴望将来，而在今天进入召会生活里。…</p>
+<p>我们也要来到施恩的宝座前，为要受怜悯，得恩典。（16。）我们是不可能靠自己长大的。我们受怜悯并得恩典的路，乃是来到施恩的宝座前。…</p>
+<p>我们要竭力前进，达到完全、成熟，就必须不再吃婴孩的食物，就是开端的话，而吃干粮，就是公义的话。大多数基督徒只停留在吃婴孩食物的阶段，不想吃干粮，也不经历基督作他们的麦基洗德。本书鼓励我们，要往前吃干粮，并享受天上的基督，好接受神丰富的元素，使我们得以长大成熟。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>吃干粮，并享受天上的基督，好接受神丰富的元素，使我们得以长大成熟。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

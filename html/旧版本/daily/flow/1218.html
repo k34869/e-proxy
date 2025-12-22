@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1217')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1219')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 12 课<br />
+新约的职事</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　新约职事的卓越</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后三10～11：那从前得荣光的，在这一点上，因这超越的荣光，就算不得有荣光；因为那渐渐废去的，如果是经过荣光的，这长存的就更多在荣光里了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>新约的职事远超过旧约律法的职事。旧约职事的荣光是照在一个人的脸上，新约职事的荣光却照在千万信徒的里面。这荣光不是临到我们，而是来充满、渗透、饱和、浸润并浸透我们，再从我们里面照耀出来；它远超过旧约职事的荣光。阿利路亚！新约职事的荣光在我们众人里面照耀！这荣光不是仅仅临到我们，乃是留在我们里面，并从我们里面照耀出来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>被基督的荣光充满、渗透、饱和、浸润并浸透，而照耀出来！</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>被基督击败、征服并掳获，让活神的灵自由的书写，成为基督的活信，为人所诵读。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>什么是‘基督的活信’？基督如何将自己写到我们里面？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘一封信是写成的。但如果你从未被基督掳获，活神的灵就绝不能在你身上写什么。首先，我们必须被掳获。…这样，那灵就有自由的通路，照着祂所要的，将出于基督的东西写在我们身上。…祂在你里面乃是那灵，（林后三17，）要将基督的元素、丰富，写到你全人里面。但如果你在你的心思里、在你的情感里、并在你的意志里是背叛的，基督的灵就无法将出于基督的东西写在你里面。祂正等着你愿意被基督掳获。你若被基督击败、征服并掳获，就会成为很好的一张纸，让那灵来书写。</p>
+<p>你也许以为你能够出去为主作些事，但你也许仅仅是“一张白纸”。别人能在你这人身上读出多少基督的东西？这不仅是说话或传讲，乃是你被别人诵读。别人能在你身上看见或读到多少出于基督的东西？这在于基督有多少写进你里面。</p>
+<p>圣经所启示的一切，必须写在你里面，不是单单藉着你研读神的话，或读圣经，乃是藉着你愿意被基督掳获。许多基督徒以为，如果他们听到更好的信息，得着更多圣经的知识，他们就会成为更好的信徒；这是错误的领会。要成为一个有职事的执事，以建造基督的身体，并不是在于接受更好的教训，或从听道得着帮助的事，乃在于基督将祂自己活的、真实的、活跃的、并实际的写在我们里面。’（一个在灵里之人的自传，26～29页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>被基督击败、征服并掳获，让活神的灵自由的书写，成为基督的活信，为人所诵读。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

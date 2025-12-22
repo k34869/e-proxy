@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('537')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('539')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">王像古钱</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>徒9:1~16主却对亚拿尼亚说，你只管去，因为这人是我所拣选的器皿，要在外邦人和君王并以色列子孙面前，宣扬我的名；我要指示他，为我的名必须受许多的苦难。</p><p>若将可以装满一尊大炮的火药，放在一个小手枪里，惟一的结果，就是手枪炸毁。如果神把我们向祂所求的能力都赐给我们，会使我们因此毁坏；因为我们得到以后，可能自以为了不起，自以为重要，以自己为中心，以致败亡。即使不然，也会被所得的荣耀重量压死。所以圣灵必须预备我们，扩充我们的度量，然后才能赐给我们能力。保罗先求神使我们心里的力量刚强起来，叫基督得以因信住在我们心里，（参弗三16～17，）乃是作为一种接受能力的准备。制造枪炮的人特别注意炮身衔接之处，及受压力最重之处，在这些地方加料制造，或增加其厚度，且使接近炮口的地方渐渐收缩，这样可使炮身承受得住放炮冲击力。也许制造枪炮的人，须作多年的实验，才能使钢质与炮身适合所需。也许需要时常重新铸造，经过多次试验以后，才能放心使用。照样，圣灵必须预备我们，忍耐的在我们身上工作，无数次的破碎我们，使我们适于作祂恩典与能力的器皿，而把祂的最高使命托付我们。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

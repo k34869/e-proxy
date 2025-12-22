@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('12')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('14')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>以纯洁、以知识、以恒忍、以恩慈、以圣别的灵、以无伪的爱、以真实的话、以神的大能，…证荐自己是神的执事；…是真诚的。（林后六6～8上）</p>
+<p class="title">真的榜样—保罗</p>
+<p>使徒保罗是圣经中‘真’的榜样。哥林多后书是保罗的自传，他在十一章十节说，‘基督的真实在我里面，这夸口在亚该亚一带，是不会在我身上被堵住的。’因着使徒凭基督而活，基督所是的一切，就是基督的真实在他里面，成为他行为上的美德；这夸口绝不会在他身上被堵住，让人无法看见基督的真实。他也见证他里面有无伪（不虚假）的爱，并以真实的话—就是将神的话所启示的一切真实事物，来教导圣徒。他更证荐自己是神的执事，是真诚的。（六6～8。）当保罗被囚，被带到亚基帕王面前分诉时，犹太总督非斯都以为他癫狂了。他却说，‘非斯都大人，我不是癫狂，我说的乃是真实清醒的话。王也晓得这些事，所以我向王放胆直言，我深信这些事没有一件向王是隐藏的，因为都不是在隐匿的地方作的。’（徒二六24～26。）</p>
+<p>按照神新约的经纶，福音要扩展到居人之地的四方，聚拢各类不洁净（有罪）的人。（十11注2。）然而，犹太宗教按照旧约一切合乎圣经的规条，如饮食上的规定等，却成为照着神新约的经纶，将福音开展到外邦人的阻碍。（14注1。）在这背景下，有一次彼得在安提阿，他惯常和外邦信徒一同吃饭。当耶路撒冷的犹太信徒来到时，彼得害怕那些人责怪他为何和外邦信徒一起吃饭，就退去隔离自己，不和他们吃饭。其余的犹太信徒看见他这样作，也都随着他装假，不和外邦信徒一起吃饭。但保罗看见他们因为害怕人，不按福音的真理正直而行，就当着众人责备彼得。（加二11～14。）我们读保罗的书信，就看见他作神的仆人是刚强、肯负责、认真、不容让错误、说实话的。他有一个真的性格，并且这性格是给基督用的，是托住基督的，是以基督为生命，活在基督里，也让基督活在他里面。（参一个在灵里之人的自传，36页；性格，24～25页。）</p>
+<p class="title">愿阁下录用信任之</p>
+<p>毕地勒作美国联邦银行总裁时，在一个主日嘱某书记写贸易信。书记婉辞说，‘我是基督徒，今日是主日，我要去聚会，无暇作这事。’毕地勒以为书记不顺从他的话，就把他解雇。数日后，别家银行总裁以电话请毕地勒推荐一忠实的人为司库。毕地勒即以所解雇的书记介绍给他，说，‘他因恪守主日，不肯为我书写贸易信，故为我解雇；但是他既对神忠诚，对于人亦必忠诚，愿阁下录用而信任之。’（造就故事下册，161页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：以基督为生命，活在基督里，也让基督活在我们里面，活出基督的真实。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

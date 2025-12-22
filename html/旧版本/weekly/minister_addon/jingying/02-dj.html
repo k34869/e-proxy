@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../html/shenggeng/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../../html/shenggeng/css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>经营小排</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              
+            </v-card>
+            <br />
+            <v-card elevation="0">
+              <div class="banner">
+           
+                经营小排
+                <br />
+               第二篇 经营小排——盯名单（统计 分类 展望）
+              </div>
+        
+          </div>
+         
+          <p class="nav">读经：</p>
+          <p class="hymn">民 1:2 你们要按以色列人全会众的家族、宗族，照人名的数目，逐一计算所有男丁的总数。</p>
+          <p class="hymn">路 15:4 你们中间谁有一百只羊，失去其中的一只，不把这九十九只撇在旷野，去找那失去的，直到找着么？</p>
+<p class="hymn">路 15:5 找着了，就欢欢喜喜的扛在自己肩上，回到家里，</p>
+<p class="hymn">路 15:6 召齐朋友、邻舍，对他们说，和我一同欢喜吧，因为我失去的那只羊已经找着了。</p>
+<p class="hymn">路 15:7 我告诉你们，一个罪人悔改，在天上也要这样为他欢喜，比为九十九个不用悔改的义人欢喜更大。</p>
+          <p class="hymn">林前 13:4 爱是恒久忍耐，又有恩慈；爱是不嫉妒；爱是不自夸，不张狂，</p>
+<p class="hymn">林前 13:5 不作不合宜的事，不求自己的益处，不轻易发怒，不计算人的恶，</p>
+<p class="hymn">林前 13:6 不因不义而欢乐，却与真理同欢乐；</p>
+<p class="hymn">林前 13:7 凡事包容，凡事相信，凡事盼望，凡事忍耐。 </p>
+
+          <p class="hymn">创 1:11 神说，地要长出青草，和结种子的菜蔬，并结果子的树木，各从其类，果子都包着核；事就这样成了。</p>
+<p class="hymn">创 1:12 于是地生出青草，和结种子的菜蔬，各从其类，并结果子的树木，各从其类，果子都包着核；神看是好的。 </p>
+          <p class="hymn">申 1:6 耶和华我们的神在何烈山对我们说，你们住在这山上的日子够了；。</p>
+          
+
+
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../html/shenggeng/js/vue.js"></script>
+    <script src="../../../html/shenggeng/js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "02.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

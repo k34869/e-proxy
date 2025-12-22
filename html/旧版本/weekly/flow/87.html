@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('86')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('88')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">耶稣基督昨日今日到永远是一样的</p>
+<p>耶稣基督，昨日、今日、直到永远，是一样的。（来十三8）</p>
+<p>希伯来一章八至十二节论到子基督说，‘神阿，你的宝座是永永远远的，你国的权杖是正直的权杖。你爱公义，恨恶不法；所以神，就是你的神，用欢乐的油膏你，胜过膏你的同伙。’又说，‘主阿，你起初立了地的根基，诸天也是你手的工作；天地都要灭没，你却长存；一切都要像衣服渐渐旧了，你要将天地像外衣一样卷起来，天地就像衣服一样改变了；惟有你仍是一样，你的年数也没有穷尽。’这给我们看见，基督是永远不改变的一位。‘你起初立了地的根基，诸天也是你手的工作，’这是指主的创造。‘天地都要灭没，你却长存；一切都要像衣服渐渐旧了，’这是指旧造将要了结，新天新地将要来到。‘惟有你仍是一样，你的年数也没有穷尽，’指明在永世里，基督是永远长存的一位。祂是创造者，也是那永远长存的永远之主。</p>
+<p>十三章八节说，‘耶稣基督，昨日、今日、直到永远，是一样的。’基督乃是七节神话语的执事们所传讲并教导的话，是他们所过的生活，也是他们信心的创始者与成终者；祂是永久长存、不能改变、也没有改变的。我们要过真实且稳固的召会生活，就必须持定那不改变，从昨日、今日、直到永远是一样的基督，不被各样怪异的教训带入歧途。</p>
+<p>彼后一章四节告诉我们，这位永不改变的神，藉着祂永不改变的应许，已经用祂的荣耀和美德呼召了我们，并且基于祂的荣耀和美德，将又宝贵又极大的应许赐给了我们，叫我们藉着这一切应许，使祂那显为优越美德的生命能力，在我们这班信祂的人身上逐渐完成，以达到祂的荣耀。（参希伯来书生命读经，58、743～744页；彼得后书生命读经，19页。）</p>
+<p class="title">在主全能的手里</p>
+<p>从前，在美国南方的一个家庭里，有一个黑奴女孩。有一天这女孩得救了，非常快乐。她主人有一个朋友，是个很有学问的人，常常到她主人家里。这一天他来，看见这个小黑奴非常快乐，洗衣服也快乐，扫地也快乐，笑得合不拢嘴，就希奇的问她说，‘你今天为什么这样快乐？’她说，‘哦，我得救了，我得救了，我是在主耶稣的手里面。’这是因为她看见约翰十章二十八至二十九节的话说，我们是主的羊，祂赐给我们永远的生命，我们必永不灭亡，谁也不能从祂手里把我们夺去。这小女孩就告诉主人的朋友说，主耶稣的手是大的，极其有权能，所以她在主的手里，就永远没有什么能把她夺去，她是永远得救的人。她主人的朋友还没有得救，就开玩笑对她说，‘你看我们的手不是有指缝么？你要知道，我们的手小，所以我们的指缝也小，但是主耶稣的手太大了，所以祂的指缝也大。你这个小孩子在祂手里要当心一点，不要快乐太过，从祂的指缝里掉下去。’然而这女孩回答他说，‘先生，的确主耶稣的手是大的，我这个人是小的。但是我告诉你，我不只是在主耶稣的手里，我就是主耶稣的小指头，所以我绝不会从祂手里掉下去。’（参初信课程，10～11页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：持定这位不改变，从昨日、今日、直到永远是一样的基督，过真实且稳固的召会生活。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('819')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('821')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">有墙筑在周围</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>历代志下 20:22</p><p>众人一开始欢呼歌唱赞美，耶和华就派伏兵击杀那来攻击犹大人的亚扪人、摩押人、和西珥山人，他们就被打败了。And when they began to shout in song and to praise, Jehovah set ambushes for the children of Ammon, Moab, and Mount Seir, who were coming out against Judah; and they were struck.</p><p>主后一七九九年是法国皇帝拿破仑一世最盛的时候，他的军队横行欧洲，人们都莫敢谁何。大将军马生拿奉他的命，率领一万八千人，进兵侵略奥国。在奥国边界，有座小城，名叫弗克（Feldkirk），那里没有正式军队，也没有相当的准备。正在复活节早晨，马将军的大兵来到，驻扎城外高山之上，个个耀武扬威。城内的人聚集，商量投降手续，全城纷乱，不知所措。他们清早，就开了好几个会议，复活节的礼拜是谈不到了。在会议中，有位某礼拜堂老执事站起来说，‘弟兄们，今日岂不是复活节，万军之耶和华的儿子耶稣基督由死复活大得胜的时候么？从早晨到如今，我们商量又商量，会议又会议，结果只是徒唤奈何而已。我们既知道自己无能，为什么在这山穷水尽时，绝口不谈神的大能大力呢？复活节作礼拜的时候，是我们开会商量投降仇敌的时候么？我题议打钟，到礼拜堂去敬拜神。我们的仇敌，让神自己来对付他们吧！’于是各礼拜堂钟声大响，人们扶老携幼，到礼拜堂去唱诗，赞美主复活的大能。马将军是富有经验的元帅，他对部下官佐说，‘不好了！今早围城，城里哭声载道。现在忽然打起钟来，人们高声大唱，破啼为笑，按我的经验，这是他们的救兵来到了！我们孤军深入，实在危险！空城也罢，实城也罢，我们赶快退兵吧！’真是‘未烦一兵，未劳一卒。’神替祂的儿女打退仇敌。‘约沙法既与民商议了，就设立歌唱的人，颂赞耶和华，…众人方唱歌赞美的时候，耶和华就派伏兵击杀那来攻击犹大人的亚扪人、摩押人、和西珥山人；他们就被打败了。’（代下二十21～22。）</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

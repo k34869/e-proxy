@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('29')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('31')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>耶稣对他们说，来跟从我，我要使你们成为得人的渔夫。他们就立刻撇下网，跟从了祂。（可一17～18）</p>
+<p>紧的榜样—主耶稣（一）</p>
+<p>四福音书中的马可福音，乃是记载主耶稣是奴仆救主，为神忠心劳苦。马可无意叫我们对这位奴仆美妙的言语有什么深刻的印象，却有意使我们对祂在福音服事中超绝的作为，有深刻的印象。它比别的福音书提供更多的细节，描绘奴仆救主在为着神拯救罪人的服事上，所显出的殷勤、忠信、和其他的美德。马可特别两次题到主因着福音服事上的忙碌，连吃饭也没有机会；（三20，六31；）并特别记载主的行动，祂是‘随即’的、‘立刻’的去作。原文‘立即’一辞在马可福音里共用了四十二次，在恢复本圣经中翻译为：立即、立刻、随即、即刻、即时等。（可一10注1。）这说明主耶稣作为神的奴仆，在服事上是殷勤的。换句话说，祂是紧的、不松懈、不松懒的。</p>
+<p>一章十二节说，‘那灵随即把耶稣催到旷野去。’这里不是‘引’，而是‘催’；这‘催’字的原意简直是‘赶逐’。神的灵在此所以藉着马可用这样的字，就因为主在马可福音中是一个仆人，祂带着奴仆的灵来服事罪人时，祂的生活、工作是何等的紧，丝毫不放松。主耶稣是成为奴仆的那位，当祂的门徒争论谁为大时，祂就教导他们要取奴仆的地位，作众人的奴仆，正如人子来，不是要受人的服事，乃是要服事人。阿利路亚，何等一位神的奴仆！何等可爱，令人赞赏！这样一位奴仆作了奴仆救主来服事罪人，以祂的生命作他们的赎价，为要成就祂所隶属之神的永远定旨。（1注1。）（参马可福音生命读经，9页；圣经提要第四卷，475页。）</p>
+<p class="title">采玫瑰花</p>
+<p>义大利有一风俗：每个女子一出嫁，都有一个口袋。每年正月初一，她必须去采一朵玫瑰花，放在这袋内。当她死的时候，就用这盛满了玫瑰花的口袋，给她放在棺材里作枕头。意思是，让你几年所采的玫瑰花的香气，留给你闻到永远。哦，我们一天过一天，也当采我们的玫瑰花，豫备闻它的香气到永远。我们应当赎回我们的光阴，不要失去我们的机会。如果你就是这样一天过一天让它去，就你若不是一基督徒，必定有一天要懊悔你没有得救；你若是一基督徒，就必定有一天要懊悔你没有完全事奉主。（倪柝声文集第一辑第十七册，80～81页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：效法主有奴仆的灵，在生活中操练紧，不浪费时间。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

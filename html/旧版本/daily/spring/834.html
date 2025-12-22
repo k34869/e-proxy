@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('833')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('835')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">母嗜酒子也嗜酒</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>腓立比书 4:6</p><p>应当一无挂虑，只要凡事借着祷告、祈求，带着感谢，将你们所要的告诉神；</p><p>美国加州的一个法庭内，曾因一个女孩的祷告，法官认为是最有力的证据，解决了一件难以判决的案件。一个离弃了妻子和二个小孩的父亲，在弗罗伦斯被他的妻子和舅子找到了。他们劝他从速回家，言归于好。他竟完全拒绝，以致涉讼。他在法庭为着自己辩护，说，他所以离家是因他的妻子是个不良女子，因此不能与她共同生活；她的言语举动都是不好的榜样，以致儿女也要学坏了！她分辩道：‘法官，我已尽力照应家务，抚养儿女，竭力的教训他们，实可无负于丈夫；他实不应离家不顾。’他仍不服，坚决主张分离，并且起誓说她决非贤妻良母，否则不至到此境况。两造各执一辞，法官委实难以遽加判断。遂问那个妇人，小孩带来没有。当下就有一个不过数岁光景的小女孩到达庭中，站在法官面前。法官便问他道：‘你父亲说你的母亲不好；你告诉我她好不好呢？’她对她母亲望了望，说道：‘先生，我的母亲真好，我很爱她。’那位法官听了，不觉笑了起来，这样审问如何可以证明呢？因为没有一个孩子肯说自己母亲是不好的。忽然想到另外一个方法，便问那女孩子道：‘你会祷告么？’小孩毫无踌躇，当庭跪了下来，闭目合掌，郑重恭敬，祷告着说，‘我们在天上的父，愿人都尊你的名为圣…阿们！’接着又说，‘求天父使我父亲像那浪子一样快快回家…。’法官听她这样诚恳祷告，深知是她母亲一片苦心教育的结果，也就不用什么见证，判她父亲归家团聚。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

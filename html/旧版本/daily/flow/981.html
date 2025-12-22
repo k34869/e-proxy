@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('980')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('982')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 15 课<br />
+主被捉拿并受审</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：众人涌进主的国度。（诗歌349首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：祂被欺压，在受苦的时候却不开口；祂像羊羔被牵到宰杀之地，又像羊在剪毛的人手下无声，祂也是这样不开口。（赛五三7。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主在客西马尼祷告—太二六36～46，可十四32～42，路二二40～46</p>
+<p class="ot2">1.　主三次向父祷告，以明白父的旨意。</p>
+<p class="ot2">2.　主要门徒和主一同儆醒，门徒却睡着了。</p>
+<p class="ot2">3.　主要门徒儆醒祷告，免得入了试诱。</p>
+<p class="ot1">二　主为犹大所出卖，却是自愿交出自己，并妥善照顾祂的门徒，医好大祭司奴仆的耳朵—太二六47～56，可十四43～52，路二二47～53，约十八3～11</p>
+<p class="ot1">三　主为议会所审—太二六57～68，可十四53～65，路二二66～71，约十八12～14，19～24</p>
+<p class="ot2">1.　主被假见证诬告，却不说一句话表白自己，如同羊在剪毛的人手下无声—赛五三7。</p>
+<p class="ot2">2.　主站在人子的地位上，在议会面前得胜。</p>
+<p class="ot1">四　彼得因三次否认主而出去痛哭—太二六58，69～75，可十四66～72，路二二55～62，约十八15～18，25～27</p>
+<p class="ot1">五　犹大不义的出卖主的结局—太二七1～10</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见主如何在祷告中挣扎奋斗，以明白并接受父神的旨意，将祂自己交给人，被捉拿、并被审问。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主知道自己将要被钉十字架，就带门徒到客西马尼园祷告。祂三次向父祷告，以清楚钉十字架是父神的旨意。主因此自愿被交给那些捉拿祂的人，并从容的妥善照顾祂的门徒。虽然主耶稣被犹大所出卖，为门徒所弃绝，为彼得所否认，祂的行止却仍是尊严且镇定的。主首先为腐败的犹太首领所审，当他们不实的指控他时，他保持静默，应验了以赛亚五十三章七节所说，祂像羊在剪毛的人手下无声。但当主被问到祂是否是神的儿子，祂回答是的，又告诉他们，祂是人子，将要驾云回来。祂的静默无声，使祂在议会面前得胜。而出卖主的犹大，至终因为他不义的出卖主，而受良心的控告，将三十两银子丢弃，悲惨的结束自己的生命。这给我们看见，我们需要爱主，也需要过义的生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　主在客西马尼祷告</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我父阿，若是可能，就叫这杯离开我；然而不要照我的意思，只要照你的意思。（太二六39下。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主在客西马尼园的祷告，乃是顺服神权柄最高的表示，主顺服神权柄胜过十字架的献祭。藉着祂的祷告，祂确实知道，这杯就是十字架，就是父的旨意，并且祂预备好去喝这杯，因为那是父的旨意。祂不怕死，但祂圣洁的性情怕担罪。当祂还没有把杯和神的旨意联在一起时，祂还可以说，倘若可行，求你叫这杯离开我。但祂立刻又说，不要照我意思，只要照你的意思。所以祂在客西马尼是专一的拣选神的旨意，专一的拒绝不是神旨意的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>像主一样，专一拣选神的旨意。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

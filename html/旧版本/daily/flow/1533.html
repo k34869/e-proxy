@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1532')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1534')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 3 课<br />
+为着召会生活之圣别生活的劝勉、盼望、儆醒与谨守</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　与主同活</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖前五9：因为神没有派定我们受忿怒，乃是派定我们藉着我们的主耶稣基督得着救恩。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神没有派定我们受忿怒，既是这样，我们就该儆醒谨守并争战，与神合作，使我们藉着主耶稣得着祂的救恩。我们就必须与祂站在一边，为着祂的权益争战，这争战就是儆醒。我们若儆醒谨守并争战，与神合作，就藉着主耶稣基督得着救恩—不是指藉着主的死脱离永远沉沦的救恩，乃是指藉着主的回来，脱离那要来之毁灭的救恩，也是脱离旧造败坏之奴役的救恩。我们正在等候蒙拯救脱离毁灭和败坏的奴役。那时我们就要享受神众子荣耀的自由。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>儆醒谨守并争战，与神合作，使我们藉着主耶稣得着祂的救恩。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>学习逃避淫乱，以圣别和尊贵持守自己的器皿，不放纵私欲的邪情。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们要如何持守、保守自己的身体？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们基督徒应当禁戒、远离甚至逃避的，不仅是邪恶，也是邪恶的形状、样式。一男一女在黑暗的密室里单独谈话，并不是犯罪，但那里有一种邪恶的样式。经过酒吧不是罪，但你若每天晚上经过酒吧，那就是邪恶的样式。你该禁戒这事，不仅是为别人的缘故，也是为自己的缘故。</p>
+<p>若是你环绕一口深井走路，离井口只有五寸，你也许说你只是在散步。但你可能会掉进井里，受到重伤。你若天天靠近井边行走，最终会掉进其中。在黑暗的密室里与一个异性单独谈话，乃是冒险的事。若是你要禁戒邪恶，首先必须禁戒邪恶的样式。假定你在剥桃子皮，你也许说，“我不要吃桃子。”但你若连续半个钟头剥桃子皮，最终会有一个桃子进入你的胃里。你若不想吃桃子，就不该留在那里剥桃子皮。照样，我们该禁戒邪恶的样式，这样才不会掉进邪恶里。’（长老训练第六册，116～117页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>用圣别和尊贵持守自己的器皿，不放纵私欲的邪情。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('275')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('277')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第26课  创造—人的受造奇妙可畏（十二）灵</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约伯记三二8上 但在人里面有灵…</p>
+<p>基督在我里面活着：一位老弟兄过着长久失败的基督徒生活。他在失望中，看到神的话：‘基督在我里面活着。’他说，‘什么？基督真的活在我里面么？’于是他跳起来了。虽然他的个性严谨，竟也在桌边跳起舞来说，‘基督在我里面活着！基督在我里面活着！’当他认识了那钉死的基督，实在活在他里面的时候，他满有神的赐福，而脱离了旧生活。</p>
+<p>一个与基督合一的生活，是一个满足、丰富、得胜的生活。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神为人造了灵以赞美并敬拜祂。这就是为什么当我们去参加儿童聚会的时候我们是快乐的，为什么我们喜欢歌唱颂咏神。没有动物歌唱或向神祈求。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：询问孩子们喜欢怎样的儿童聚会，如唱诗、美工、与其他孩子一起玩等。询问他们儿童聚会中最喜欢的诗歌是什么。当他们唱这些歌曲时，他们感觉如何（例如快乐，安慰）？当我们在家里或在儿童聚会中唱歌时 ，我们感到快乐，因为神给我们造了喜欢歌唱赞美祂的灵。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约翰福音四23 时候将到，如今就是了，那真正敬拜父的，要在灵和真实里敬拜祂。</p>
+<p>天使看管钮扣：倪柝声年少时，有一次穿了他父亲的新大衣，到邮局去寄信。到了邮局之后，发现钮扣掉了一个。他就立刻祷告，求主差遣天使看住那个钮扣，不要给人拿去；因为他穿这件衣服，没有得到父亲的允许，若是丢了钮扣，恐怕要受父亲重重的责备。在他回家的路上，他几乎已经忘记此事；直走到半路时，才忽然想起来，即刻低下头来，一看，那个钮扣就在他脚下。天使是服役的灵，为那承受救恩的人效力。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神给我们造灵，使我们能在祷告中接触祂（与祂交通）。在世界各地，你都可以找到向神祷告的人。但在地上我们没有看到动物向神祷告。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：因为人有灵，所以人的深处知道神的存在。因为有神，人可以在祷告中与接触神（与神说话）。动物没有灵。在世界各地，你都可以找到人神向祷告，无论他们说什么语言，无论他们是年轻还是年老，男孩还是女孩。向神祷告就像跟朋友说话一样。与孩子们讨论他们能向主所有的不同的祷告。鼓励他们每天向神祷告，比如晚上睡觉前祷告。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二十27 人的灵是耶和华的灯，鉴察人的深处。</p>
+<p>叫我的灵松一松：有一个人名叫沙波，说到他自己亲身的经历：‘我年少时，有一天，我的父亲叫我和他同去铁匠柴塞尔店里。我父亲有些东西在他店里修理，现在要去拿回来。我们到了铁匠店里，看见我们的东西已经修好了，好像新的一样。父亲就给他修理费；他坚持不受，父亲一定要他收。铁匠回答的话，就是经过一千年，我也会记得。他说，“朋友，你不容让我有时作一、两件事，叫我的灵松一松么？”’</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：神给人造了灵，却没有给动物造灵。人的灵可以接触神，知道神所赞成的和不赞成的。我们应该根据我们灵（良心）的感觉向神祷告。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：人们一直在向神祷告。很多时候人们祷告是向神求他们想要或需要的东西。我们的祷告不应该仅仅是索取东西。有时在我们的祷告中，我们的良心有感觉需要向神认罪。我们应该向神祷告，承认那些困扰我们的事情，求祂赦免我们。有时我们会感觉到神希望我们做些事情（对我们的兄弟姐妹好，或者在学校对一个新来的孩子友好）。我们也可以求神帮助我们作祂让我们作、我们却不愿意做的事。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

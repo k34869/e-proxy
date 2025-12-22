@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1868')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1870')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 15 课<br />
+羔羊的婚娶</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　末次的背叛与白色大宝座前的审判</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约五26～29因为父怎样在自己里面有生命，就赐给子也照样在自己里面有生命；并且因为祂是人子，就赐给祂行审判的权柄。…时候将到，凡在坟墓里的，都要听见祂的声音，就出来；行善的归到生命的复活，作恶的归到审判的复活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>末次背叛的人，歌革和玛各必是指苏俄。这是地上最后一次战争，由人类受撒但煽动所引起。最后的清理，乃是白色大宝座前的审判—审判已死的不信者、鬼，并且死亡和阴间要被扔在火湖里。父神已将审判的事全交与子，且设立祂作审判活人死人的那一位。（约五22。）不信的死人都要凭着案卷上所记载的，照他们的工作行为受审判；宇宙的录音机甚至录下了人所说的每句话，那时每张口都要被堵住。无论谁不在生命册上，就要因不信而灭亡—不相信主耶稣，乃是惟一使人灭亡的罪。我们当敬畏神！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因神的审判敬畏神，并广传福音，抢救灵魂！</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督徒的生活开始于婚筵，一周又一周继续于主的筵席，直到主来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>有分于羔羊的婚筵，和得救有何不同？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘基督徒的生活开始于婚筵，一周又一周继续于主的筵席，直到主来；在主来时，我们要有一个婚筵。整个基督徒生活，从始至终都是享受筵席。在我们的基督徒生活中，我们是否一直的享受主？在我们的基督徒生活中，我们是否一再的赴筵？基督徒的生活乃是吃筵席的生活。这生活开始于筵席，继续于筵席，终结于筵席。</p>
+<p>我们可能不是终日吃主，反而是一直努力挣扎。但是甚至在战场上，主也在我们的仇敌面前，为我们摆设了筵席。（诗二三5。）当我们在争战时，我们也在吃筵席。我们若不知道如何吃筵席，我们就绝不能争战得好。惟有那些知道如何吃主作筵席的人，才知道如何为主争战。基督徒的生活是一个享受的生活。…在我自己里面，我应当忧愁，但是在主里面却有一个真实的筵席。…要试著作一个吃筵席的基督徒，不要作一个挣扎的基督徒。’（生命树，117～118页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>持续不断的享受主，一再的赴筵，过吃筵席的生活。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

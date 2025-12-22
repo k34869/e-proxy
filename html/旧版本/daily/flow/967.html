@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('966')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('968')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 2 册 | 第 13 课<br />
+国度的预言</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：把主迎接回来。（补充本诗歌908首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但你们要时时儆醒，常常祈求，使你们得胜，能逃避这一切要发生的事，得以站立在人子面前。（路二一36。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　主为着受死预备门徒，使他们接受祂的死，甚至有分于祂的死—太二四～二五，二六17～35</p>
+<p class="ot2">1.　主告诉门徒要来的事—太二四～二五。</p>
+<p class="ot2">2.　主设立祂的晚餐，使门徒有分于祂的死—二六17～35。</p>
+<p class="ot1">二　国度的预言</p>
+<p class="ot2">1.　关于以色列人—太二四1～31，可十三3～27，路二一7～28：</p>
+<p class="ot2">a.　从基督升天到这世代终结—太二四1～14，可十三3～13，路二一7～19。</p>
+<p class="ot2">b.　这世代终结的情形—太二四15～31，可十三14～27，路二一20～28。</p>
+<p class="ot2">2.　关于召会—太二四32～二五30，路二一29～36，十七26～27，34～36，十二39～46：</p>
+<p class="ot2">a.　要儆醒预备—太二四32～44。</p>
+<p class="ot2">b.　要忠信精明—45～51。</p>
+<p class="ot2">c.　儆醒的比喻—二五1～13。</p>
+<p class="ot2">d.　忠信的比喻—14～30。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主受死前将国度的预言告诉门徒，预备他们接受并有分祂的受死。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主为着受死先预备门徒，使他们接受祂的死，甚至有分于祂的死。主首先在橄榄山上，告诉门徒要来的事，将国度的预言，就是国度的实现，告诉他们。国度的预言分为三部分，本课说到前两部分：关于以色列人，以及关于召会的部分。第一部分主从基督升天，直到这世代终结的情形，都对门徒说了。第二部分主乃是要新约信徒，成为儆醒预备的童女，并作忠信精明的奴仆。当这世代结束时，主要来临，并在空中审判祂的信徒。那些儆醒预备、被神的灵充满浸透；并忠信精明、为主赚得恩赐的信徒，将要被提，在国度里与主一同快乐，并与主一同掌权。那些在今世未出代价买油，以致当主来时没有被圣灵充满；和那些在今世没有积极运用恩赐为主赚得家业的信徒，在千年国度时，将要被扔在黑暗中，哀哭切齿。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　关于以色列人</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>惟有忍耐到底的，必然得救。这国度的福音要传遍天下，对万民作见证，然后末期才来到。（太二四13～14。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主在橄榄山上对门徒说预言，向他们揭示从祂升天到祂回来之间要发生的事。这些预言分三段，第一段是关于犹太选民的。这段经文中主给我们这世代终结的标示，新约时代一切的灾难，包括前面所题的战争、饥荒、地震、患难与逼迫。这些灾难都为神所用，藉着福音的传扬，产生祂的众子，以构成今世的召会，完成来世的国度，并产生永世的新耶路撒冷，使神在将来的永远有一永远的彰显。今天恩典的福音已传遍各洲，但国度的福音还没有。在主恢复中的召会，需要接受负担，把国度的福音传遍天下，不仅把人带进神的救恩，也把人带进诸天的国，以迎接主的再来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>接受负担，传国度的福音，不仅将人带进神的救恩，也把人带进诸天的国，以迎接主的再来。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

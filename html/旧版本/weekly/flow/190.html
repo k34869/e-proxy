@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('189')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('191')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">公（二）　待人公：彼此相顾待人公</p>
+<p>我们这许多人，在基督里是一个身体，并且各个互相作肢体，也是如此。（罗十二5）</p>
+<p class="title">身体上的肢体彼此相顾</p>
+<p>我们蒙召得救，是团体的；得救以后所过的生活，也是团体的。一面来说，我们是神的儿女。凡是神的儿女，他里面的生命都是丰富到一个地步，能叫他爱所有的弟兄姊妹。这一个爱弟兄的心，对所有的弟兄都没有分别，只要是弟兄都能爱。</p>
+<p>另一面说，我们是基督身体上的肢体，肢体需要彼此配搭，建造在一起，不能缺少任何一个。保罗在林前十二章描绘一幅清楚的图画：‘身体原不是一个肢体，乃是许多肢体。倘若脚说，我不是手，所以不属于身体，它不能因此就不属于身体。倘若耳说，我不是眼，所以不属于身体，它也不能因此就不属于身体。若全身是眼，听觉在那里？若全身是听觉，嗅觉在那里？但如今神照着自己的意思，把肢体俱各安置在身体上了。若都是一个肢体，身体在那里？但如今肢体是多的，身体却是一个。眼不能对手说，我不需要你；头也不能对脚说，我不需要你。不但如此，身上肢体似乎较为软弱的，更是不可少的。’（14～22。）这表明主赐给每位圣徒各有不同的恩赐和职事，乃是为了供应整个身体的需要。（罗十二4～8。）弟兄姊妹作为身体上的肢体，都有他的用处，也都该有他的事奉。</p>
+<p>在召会中，所有作肢体的人，都应该有事奉，也个个都要在那里事奉。同时，不要越过自己所当作的，去作别人分内的事。每一个肢体不占去别的肢体的地位，也不丢掉自己的地位，大家一同事奉，个个在那里专一的作，就彰显出基督的身体。</p>
+<p>我们若能以主的眼光来看每位圣徒，就能宝爱、珍赏、并顾惜我们周围的同伴，放下自己的喜好，与圣徒有交通和建造；这就是操练公的性格。（参初信造就下册，359、399～402页。）</p>
+<p class="title">一个肢体得荣耀，所有的肢体就一同欢乐</p>
+<p>二十世纪初，在英国的威尔斯有一次属灵的大复兴。大约同一时期，在另外一个地方，有位姊妹和两三个人在一起祷告，那一天她奇妙的感受到圣灵浇灌在她身上。她从来没有这样的经历。这一种情形，一直继续四、五个月之久，叫她好像不花力气，就能摸着神，天变得特别的近。直到有一天，她读报纸时，神光照她，使她领悟原来是威尔斯的复兴供应了她。这就是一个肢体得荣耀，所有的肢体就一同欢乐。基督的身体是一个活的身体，是满了生命的生机体。保罗在歌罗西一章二十四节说，‘为基督的身体，就是为召会，在我一面，在我肉身上补满基督患难的缺欠。’因为我们是在一个身体里面，所以能补满其他肢体的缺欠。（参十二篮第一辑，79页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：以基督身体的眼光，宝爱、珍赏、并顾惜周围的同伴，放下自己的喜好，与圣徒有交通和建造。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

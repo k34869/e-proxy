@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1518')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1520')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 1 课<br />
+为着召会生活之圣别生活的结构与起源</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　等候神的儿子从诸天降临</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖前一10：…等候祂的儿子从诸天降临，就是祂从死人中所复活，那拯救我们脱离要来忿怒的耶稣。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们必须活出一种生活，能向人宣告我们的盼望不在这地上，也不在今世。我们的盼望乃在于那要来的主；我们的前途在于祂。在这地上，我们没有任何的定命、目的地或前途。我们的前途、定命和目的地全集中于那要来的主。主是我们的盼望、我们的前途、和我们的目的地。我们要到主那里去，我们的定命是与祂相见。这就是基督徒的生活。但愿我们都操练为着召会生活，过一个正常基督徒生活—没有偶像，见证我们的神是活神，并等候主回来的生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>过一个正常的基督徒生活—拒绝偶像，见证活神，并等候主的回来。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>过一个正常的基督徒生活—拒绝偶像，见证活神，并等候主的回来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>一个正常的基督徒生活有那三种特征？请说出一些经历与见证。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘离弃偶像转向神，服事又活又真的神，并且等候祂的儿子从诸天降临，这三件事从另一角度看，乃是基督徒生活三个基本的要素。离弃偶像转向神，不仅是离弃假神及其背后的魔鬼和鬼，也是离弃在神之外的一切事物。这是藉着那因听见福音的话所注入初信者里面的信心。服事又活又真的神，就是服事那经过了过程，成为信徒的生命和生命的供应，给他们享受的三一神—父、子、灵。他们不仅该经历祂作敬拜的对象，更该经历祂作那活在他们里面，包罗万有的供应者。这是父藉着子在灵里丰富供应的甜美味道，在他们里面产生的爱所作成的。等候神的儿子从诸天降临，就是期盼那已经经过成为肉体、为人生活、钉十字架、进入复活并升上诸天，还要回来接祂信徒到荣耀里的一位。这就是那加强信徒，使他们在信心上站立得稳的盼望。</p>
+<p>又活又真的神，与又死又假的偶像相对。在我们日常的生活中，神对我们，并祂在我们里面，必须是又活又真，好叫我们现今的生活，见证我们所服事的神是又活又真的。</p>
+<p>因着等候神的儿子从诸天降临，我们的将来就集中在祂身上；我们的生活表明我们在地上没有盼望，在今世没有积极的定命；也表明我们的盼望是要来的主，祂是我们永远的定命。这管治、维持并保守我们为着召会生活的基督徒生活。’（帖前一9注2与注4，10注1。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练在主日时，在复活的生命里，胜过玛门的霸占，有财物的摆上。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

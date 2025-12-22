@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1665')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1667')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 4 课<br />
+圣别的生活与弟兄相爱</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　藉活而常存的话蒙了重生</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前一23：你们蒙了重生，不是由于能坏的种子，乃是由于不能坏的种子，是藉着神活而常存的话。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>我们既然蒙了重生，就需要顾到我们里面的种子，我们该把每件事与我们里面的种子核对。藉着重生所接受的这种子作基础，我们需要洁净自己的魂。要束上我们的心思，使我们的情感专注，并加强我们的意志。我们这样洁净自己的魂，结果就会爱弟兄没有假冒。主活而常存的话犹如种子，藉着重生种在我们里面，改变了我们的性质，使我们成为活而常存的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>顾到我们里面生命的种子，将每件事与里面的生命核对，使我们活而常存。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>脱离老旧、虚妄、放纵私欲的生活，在一切行事为人上过圣别的生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>什么是虚妄的生活？我们如何过圣别的生活？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们应当不仅仅是圣的，过圣别的生活，更是在一切生活样式上成为圣的。别人应当能在我们的生活中看见一种样式，这种样式该是圣的。这不是说，我们偶尔是圣的，或者我们在某些事上是圣的。譬如，我们不是仅仅早晨在某件事上是圣的，而稍后在那件事上就不再是圣的。不，我们需要习惯的有圣别的生活；这才会构成圣别的行事为人。我们若要有圣别的行事为人，就需要在我们的构成上习惯的成为圣的。…</p>
+<p>有些基督徒强调所谓的圣别，他们也许有时候行动圣别，有时候却非常属世或属肉体。这指明他们没有圣别的行事为人。有圣别的行事为人，就是有彰显神的生活。这就是过彰显神圣别性情的生活。</p>
+<p>虚妄的生活未必是罪恶的。反之，这样的生活在某些方面也许是相当道德的。然而那仍是虚妄的—没有目标、目的或标的。任何没有目标或目的的事都是虚妄。现在我们应当过没有虚妄的生活。我们所作所说的一切，都该对准神的目标。这种生活有分量，并且满了内容；乃是有标的、有目标、有目的的生活。让我们都花时间思想彼得所写论到基督宝血的话，好叫我们实际的在一切行事为人上成为圣的，并且在我们寄居的时日中，凭着敬畏行事为人。’（彼得前书生命读经，114～115、124～125页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>思念基督救赎宝血的宝贵，脱离虚妄，过圣别的生活。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

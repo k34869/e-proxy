@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('86')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('88')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第2系列 第41课  正确的人性—同情</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>彼得前书三8 同情体恤，弟兄相爱，心存慈怜，心思卑微。</p>
+<p>折脚小孩折翼小鸟</p>
+<p>有一小孩坐在路旁，手中有一折翼小鸟。一位仁慈老妇经过，就问小孩可否将那可怜小鸟交她带回医治、看护，等到完全复原，再放它走，让它享受自由。小孩思想片刻，答道：‘对不起，我想还是自己看顾它好了。’接着又说，‘因我懂得它的难处。’老妇不大明白小孩的意思，等他站了起来，她才明白；原来小孩也是折脚，脚上尚有石膏绑着。因他自己折脚，所以懂得小鸟折翼的难处。自己经历难处的人，才能帮助有同样难处的人。“祂自己既然被试探而受苦，就能搭救被试探的人”（来二I8)</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：同情是理解别人的感受。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：小朋友们，如果你看到一只受伤的鸟，或朋友或兄弟姐妹受伤，你会有什么感觉？你会走开，还是会感到悲伤，然后去帮忙？对受伤的鸟，或受伤的朋友、兄弟姐妹感到难过是一种同情。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>路加福音七13 主看见那寡妇，就对她动了慈心，说，不要哭。</p>
+<p>有一个夏天的中午，丽丽跟妈妈一起去街上买东西，看见一群人围着什么在观看，原来是几个十几岁的男孩在卖艺。这些孩子衣衫褴褛，面黄肌瘦，本该是上学的年龄，却不得不在这儿挣钱糊口。他们正在表演的节目叫硬功，只见一个男孩拿起一块砖朝自己的额头狠狠一拍，可能是技艺不深的缘故吧，砖没砸断，他的额头却被砸得血淋淋的。这时，丽丽旁边站着的一位跟他年龄差不多得的男孩高兴地拍掌起哄“噢，演砸了，演砸了。” 　　丽丽把手上的钱放在他们那个破破的小饭盒里，转身退出了围观的人群，跟妈妈一起走在喧闹的街市上，这时丽丽却泪流满面。妈妈疑惑的看着丽丽，问她怎么了？丽丽说我不能明白的是身边这位男孩——一个人的心怎能硬到这样的地步，看见别人流血，居然会拍起巴掌。妈妈微笑着说，每天人都是不一样的，我们不该定罪别人，我们只管做好自己，对自己的行为负责。有一天说不定他也会被我们行为感动呢！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：同情不仅仅是在外面帮助他人，更是分担他内心的感受。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：小朋友们，我们是否感受到别人的感受？我们曾经同情过别人吗？我们可以帮助别人，但我们可能对他们没有同情。例如，我们可以给病人提供食物和药品，但我们可能感觉不到他们的痛苦。当我们在学校度过糟糕的一天或感到悲伤和孤独的时候，能有朋友不仅给我们帮助，也同情我们，那是多么美好。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>希伯来书四15 因我们并非有一位不能同情我们软弱的大祭司，祂乃是在各方面受过试诱，与我们一样，只是没有罪。</p>
+<p>希尔顿饭店首任经理的传奇故事</p>
+<p>一天夜里，已经很晚了，一对年老的夫妻走进一家旅馆，他们想要一个房间。前台侍者回答说："对不起，我们旅馆已经客满了，一间空房也没有剩下。"看着这对老人疲惫的神情，侍者又说："但是，让我来想想办法......"</p>
+<p>他当然不忍心深夜让这对老人出门另找住宿。而且在这样一个小城，恐怕其他的旅店也早已客满打烊了，这对疲惫不堪的老人岂不会在深夜流落街头?于是好心的侍者将这对老人引领到一个房间，说："也许它不是最好的，但现在我只能做到这样了。"老人见眼前其实是一间整洁又干净的屋子，就愉快地住了下来。</p>
+<p>第二天，当他们来到前台结账时，侍者却对他们说："不用了，因为我只不过是把自己的屋子借给你们住了一晚--祝你们旅途愉快!"原来如此。侍者自己一晚没睡，他就在前台值了一个通宵的夜班。两位老人十分感动。老头儿说："孩子，你是我见到过的最好的旅店经营人。你会得到报答的。"侍者笑了笑，说这算不了什么。他送老人出了门，转身接着忙自己的事，把这件事情忘了个一干二净。没想到有一天，侍者接到了一封信函，打开看，里面有一张去纽约的单程机票并有简短附言，聘请他去做另一份工作。他乘飞机来到纽约，按信中所标明的路线来到一个地方，抬眼一看，一座金碧辉煌的大酒店耸立在他的眼前。原来，几个月前的那个深夜，他接待的是一个有着亿万资产的富翁和他的妻子。富翁为这个侍者买下了一座大酒店，深信他会经营管理好这个大酒店。这就是全球赫赫有名的希尔顿饭店首任经理的传奇故事。</p>
+<p>在路加福音7章中，记载了主耶稣怜悯哀哭的寡妇，使其独生的儿子复活的故事。事情发生在拿因城，在那城里一个寡妇正在为她独生的儿子送葬，悲伤欲绝，因为她唯一的儿子死去了。主看见那寡妇就对她动了慈心，安慰她，并且上前按住棺杠，吩咐那死去的青年人起来，他便复活了。这给我们看见主耶稣是多么的满了怜悯的心肠。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：当主在地上时，同情是祂的一个特点。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：圣经记载了很多神同情人的例子。在洁净麻疯病人之前，祂动了慈心，并伸手摸他（马可1:40-45）。祂同情饥饿的人，用饼喂饱了五千人和四千人（马可6:30 44；8:1-10）。祂见寡妇丧子的悲哀就动了慈心，没等她祈求就叫他的儿子活过来（路加福音7:11-17）。作为好撒玛利亚人，祂对垂死的人极度关怀，表现出祂的亲切和同情（路加10:25-37）。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

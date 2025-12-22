@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('61')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('63')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">慕迪如何到英国</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">也替我祈求，使我在开口的时候，有发表赐给我，好放胆讲明福音的奥秘。（弗6:19）</div>
+<div id="CC">And for me，that utterance may be given to me in the opening of my mouth，to make known in boldness the mystery of the gospel.（Ephesians 6:19）</div>
+<div id="C">伦敦有一个姊妹，时常抱病在床，自己起初以为在世的工作结束了。然而圣灵却对她说，这病并非是神把她放在一边，乃是神要她为复兴召会的工作祷告。她就日夜为着这事祷告。有一天，她看见报纸刊载大布道家慕迪的工作，深深觉得应该求主带领慕迪，到她所在的教堂领会。然而这事如何成就呢？因为慕迪在大西洋那边，而她在伦敦千万个会堂中的一个，如何与他接洽呢？<br/><br/>　一八七二年，慕迪第二次到英国，立志不再讲道，唯一的心愿，是想从英国解经家多学一些圣经真理。在一次祷告聚会之后，有人请他到伦敦北部教堂讲道，他无法推辞。这就是那位常常祷告的姊妹聚会的会堂。慕迪在那天早晨讲道，精神不佳，巴不得不讲还好。那位姊妹听说慕迪来到她所在的会堂讲道，明白这事的意义，那天她就特别专心祷告。晚上慕迪再去讲道，当他开口讲道之际，一切都改变了，听众莫不肃静细听。慕迪的舌头也松开了，话语如同活水般流了出来。毫无疑问，神与他们同在。当慕迪请凡要信主的人起立时，全体听众都站了起来，甚至慕迪自己也感希奇。那天晚上共有四百人加入召会。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

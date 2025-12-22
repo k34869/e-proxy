@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('840')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('842')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 13 课<br />
+主生命供应的职事（五）生命的解渴</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：喝！吃！看！（补充本诗歌216首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：节期的末日，就是最大之日，耶稣站着高声说，人若渴了，可以到我这里来喝。信入我的人，就如经上所说，从他腹中要流出活水的江河来。耶稣这话是指着信入祂的人将要受的那灵说的；那时还没有那灵，因为耶稣尚未得着荣耀。（约七37～39。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　住棚节的情景—约七2</p>
+<p class="ot1">二　宗教逼迫下的生命—约七1～36</p>
+<p class="ot2">1.　宗教徒的逼迫—1。</p>
+<p class="ot2">2.　主在时间里受限制—3～9。</p>
+<p class="ot2">3.　主寻求神的荣耀—10～24。</p>
+<p class="ot2">4.　主的源头乃是父神—25～36。</p>
+<p class="ot1">三　主在末日向干渴的人呼喊—37～39</p>
+<p class="ot2">1.　末日表征人生一切成就所带来之享受的尽头。</p>
+<p class="ot2">2.　主呼喊干渴的人来喝—37。</p>
+<p class="ot2">3.　信入主的人，从他腹中要流出活水的江河—38。</p>
+<p class="ot2">4.　那时还没有那灵—39。</p>
+<p class="ot1">四　住棚节的意义</p>
+<p class="ot2">1.　要以色列子民记念他们的祖宗在旷野飘流时曾住在帐棚里—利二三39～43。</p>
+<p class="ot2">2.　提醒人需要永远的帐幕—新耶路撒冷，其中有生命河涌流—启二一1～3，17。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>只有基督能为那些在表征人生完满和成功的住棚节时安息享乐的人解除干渴。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主耶稣是永远的神，但祂在时间里来成为人，受人的限制，甚至遭受人的不信与宗教的逼迫。然而主向那些逼迫祂的人启示，祂只寻求父的荣耀，并以父为源头与原始。主在住棚节的最后一日，就是最大之日，向那些在节期中享乐却仍旧干渴的人，高声呼喊说，‘人若渴了，可以到我这里来喝。信入我的人，就如经上所说，从他腹中要流出活水的江河来。’主向人启示，祂是惟一且真正能满足人需要，解人干渴的生命活水。而主这样成为活水，供应人的需要，乃是藉着祂经过成为肉体、钉死、复活、升天、成为赐生命的灵，就是‘那灵’，那包罗万有之耶稣基督的灵，进入一切信入祂的人里面。这样一位包罗万有的灵，把生命水的河赐给我们，供应我们所需要的一切，并要从我们里面涌流出来。至终，我们要在新耶路撒冷这永远的帐幕里，享受基督作永远的住棚节，饮于生命水的河，而有完满的享受和满足，直到永远。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　住棚节的情景</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>节期的末日，就是最大之日，耶稣站着高声说，人若渴了，可以到我这里来喝。（约七37。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>逾越节是犹太人每年的第一个节期，含示人生的开始，说到人寻求满足，结果却是饥饿。住棚节是犹太人每年的最后一个节期，含示人一生的完满和成功，这一切都要到尽头，结果仍是干渴。人类生存于两种情况中的一种，其一是：他们有所缺乏，所以必须寻求、工作、奋斗并劳苦。其二是：他们有了一切，所以他们可以欢乐并享受他们的财富。我们现今在过什么节？逾越节还是住棚节？不论我们在过什么节，我们仍是饥饿或干渴的。但赞美主，对于在逾越节时劳苦的人，基督是生命的粮。对于那些在住棚节时安息享乐的人，基督是活水，能解除他们的干渴。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受基督是活水，解除我们的干渴。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

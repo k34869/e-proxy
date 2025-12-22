@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('361')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('363')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">跳舞能否见证主</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们是地上的盐；盐若失了味，可用什么叫它再咸？既无任何用处，只好丢在外面，任人践踏了。（太5:13）</div>
+<div id="CC">You are the salt of the earth. But if the salt has become tasteless，with what shall it be salted? It is no longer good for anything except to be cast out and trampled underfoot by men.（Matthew 5:13）</div>
+<div id="C">有位年轻女孩，在传福音的聚会中受感动信了主。她就问说，“我该不该放弃跳舞？”人就反问她说，“你能不能在跳舞时见证基督？”可是她仍然硬着颈项去跳舞。<br/><br/>　在舞会中，她碰见第一个舞伴，就问他：“你是不是基督徒？”那人答说，“我不是！”舞伴接着问她：“你是基督徒吗？”她说，“是的。”那舞伴就说，“那么你到这里来干什么呢？”这叫她哭笑不得。从此以后，那个年轻女孩再也不去跳舞了。在我们的日常生活中，是否能在每一件事上见证主？<br/><br/>　基督徒乃是世上的盐。盐必须溶化了，才能使别的东西有滋味。假使我们放些盐在一锅的米里，若是盐不溶化，能有什么用处呢？若是溶化了，它的滋味就能进入全锅的米粒里。于是这些米粒，都因盐的溶化而得了滋味。这个我们虽然看不出来，却能尝得出来。基督徒必须有所撇弃，有所牺牲，才能影响别人。不然，就会像罗得的妻子，因为贪恋世界，变成一根盐柱。不化的盐，究竟有什么用处呢？</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

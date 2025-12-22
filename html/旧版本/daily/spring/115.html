@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('114')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('116')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第3课  创造—从天看出神的威荣</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一四七4 祂数点星宿的数目，一一给它们起名。</p>
+<p>课程内容：晚上，满天的星星像无数珍珠撒在夜空中。一个孩子坐在院子里，靠着奶奶，仰着头，数着天空的星星。一颗，两颗，一直数到几百颗。奶奶笑着说：“傻孩子，又在数星星了。那么多星星，一闪一闪地乱动，眼都看花了，能数得清吗？”孩子说：“奶奶，能看得见，就能数得清。星星是在动，可不是乱动。您看，这颗星和那颗星总是离得那么远。”爷爷走过来说：“孩子，你看得很仔细。天上的星星是在动，可它们之间的距离是不变的。我们的祖先把它们分成一组一组，还给起了名字。”爷爷停了停，指着北边的天空，说：“你看，那七颗星，连起来像一把勺子，叫北斗星。离它们不远，有颗最亮的星，叫北极星。北斗星总是绕着北极星在转。”爷爷说的话是真的吗？这个孩子一夜没睡好，几次起来看星星。他看清楚了，北斗星果然绕着北极星慢慢地转动。这个数星星的孩子叫张衡，是汉朝人。他长大以后，刻苦钻研，发明了浑天仪。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：威荣的意思是因它的美丽、伟大和壮丽令人印象深刻。神是威荣的，星星向我们展示神的威荣。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当你仰望夜空时，可以看到许多美丽的星星。天空中有各种各样的星星。有的很大，有的很小，有的很古老，有的很年轻，也有一些星星颜色各异。神创造宇宙时创造了数十亿颗各种各样的星星，以展示祂的威荣和壮观。拿一些银河系的照片，展示出不同颜色和种类的星星的壮丽。问问孩子们，神创造的造物中还有哪些对他们来说是宏伟壮丽的。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>撒母耳记下二三4 祂必像日出的晨光…如雨后的晴光…</p>
+<p>课程内容：如果没有了太阳，地球将永远被夜晚所笼罩。人类家园被黑暗和极寒覆盖。皎洁的月亮失去了光源的依附，将立刻沦落为太空中一颗死寂的冰冷星球。当地球再也享受不到阳光的亲吻时，植物立刻停止了光合作用，但它们不会立即死去。大多数植物将在几周内死亡。由于新陈代谢缓慢、储备了大量养分，一些大树或许还能存活几十年。但永久的黑暗意味着食物链根基的崩塌，食草动物、食肉动物以及人类的食物将越来越少。太阳消失后，在出现食物匮乏这个严峻问题之前，人类先要担心如何在极寒天气中自保。如果我们把一杯热腾腾的咖啡放到冰箱中，它不会马上冷却下来。同理，如果太阳这个最大热源不见了，地球表面温度的变化并不会像黑暗那样降临得如此快速和彻底。此外，在几百万年内，由于放射性元素衰变，地球内部仍会保持着至少比周边太空高的温度。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造向我们展示神的威荣。太阳不仅展示了神提供光和温暖的智慧和力量，更体现了神的威荣和伟大。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：太阳是神为地球上生命的生存所创造的特殊恒星。但太阳不是仅仅为了产生光和热，它也宣告神的威荣。你有没有看过日出？太阳升起时光芒四射的壮丽景象就是神威荣的完展示。你看过日落吗？日落时天空美丽的颜色也是神威荣的完美展示。带一些照片，比如人们早起去看日出美景的照片。这些例子表明，神创造天空不仅为着我们的需要，也为着彰显祂的威荣。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一三六9 祂造月亮星宿管黑夜，因祂的慈爱永远长存。</p>
+<p>课程内容：在没有任何灯光的夜晚，如果能看到天上的月亮和星星是最叫人得安慰的了。所以自古以来，有许多关于月亮的故事、传说，你们可能也曾经听说过，但那些都是人们称赞、欣赏美丽的月亮所编造出来的。事实上，太空人已经登陆过月球，发现月球是一个很冷清的世界，没有空气，也没有水分，表面凹凸不平，看不到任何有生命的东西。</p>
+<p>3 月亮返照太阳</p>
+<p>太阳是一个气体大火球，所以会发出热和光来。但是月亮是一个很冷清的星球，如何在黑夜发出银白色的月光呢？原来月亮本身并不会发光，但是却能反射太阳的光。我们曾经说过，我们所住的这个地球，会绕着太阳转，并且自己转动，自转一圈是一天，面对太阳的地方是白天，背对太阳的地方就是夜晚了。而月球会绕着地球转，是地球的卫星。当月球正转到地球与太阳中间，反射太阳光，这时我们在地球上看到的就是又大又圆的月亮。如果月球转到地球的侧边时，我们所看到的就是细细弯弯的眉月了。但是无论是像银盘似的满月，或者是眉月，我们从地上看来都是很洁白美丽的，对不对？两次满月的间隔大概是二十九天，也就差不多是一个月的时间。</p>
+<p>初中高活动：星空图。</p>
+<p>（一）发给每位小朋友一张深蓝色书面纸，及各种颜色的色纸。</p>
+<p>（二）请小朋友剪月亮（或圆或缺）、星星（各色大大小小），并将所剪好的月亮、星星贴在书面纸上。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造向我们展示神的威荣。月亮在夜晚闪耀，彰显了神的威荣和光辉。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：带些满月和月球表面的照片，使孩子们看到月球表面并不美丽。月球表面颜色暗淡并布满陨石坑。然而在夜晚，当太阳的光从月亮反射到地球上，我们看到月亮变得宏伟而美丽。人们受吸引仰望月亮，注视它的光辉。这是神威荣的预表，它吸引人们荣耀、事奉并敬拜神。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

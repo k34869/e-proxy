@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1322')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1324')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 9 课<br />
+使徒为召会得启示的祷告</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　三一神的分赐</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗一3：我们主耶稣基督的神与父，是当受颂赞的，祂在基督里，曾用诸天界里各样属灵的福分，祝福了我们。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>召会作为基督的身体，乃是三一神祝福的结果，也是这传输的结果。我们读以弗所一章，需要有基本且管制的观念，就是三一神正在将祂自己分赐到我们里面，且将祂自己作到我们全人里面。这神圣分赐进到我们里面的结果，就是那在万有中充满万有者的丰满。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历并享受三一神的分赐，及将祂自己作到我们全人里面。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>求神赐给我们智慧和启示的灵，使我们能充分的认识祂。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以弗所一章十五至二十三节，保罗的祷告是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘在神的儿女中，有许多人所盼望得着的拯救，是一个将来的拯救，也许在明天，也许在明年；但是神所要我们看见的，乃是一个已成的拯救，不是要等到将来。启示是给我们看见神已经作好了什么事，不是神将要作什么事。许多人因为自己有一个软弱，有一个失败，就盼望有一天能够得着拯救。但是，神如果开他的眼睛，他就看见说，这一个软弱，这一个失败，已经在十字架上对付了。他眼睛开起来的时候，就要说，神，感谢你，赞美你，你已经作成功了；感谢你，赞美你，那一件事完全胜过了。</p>
+<p>我们今天所缺少的就是启示。有了启示，就什么都好了。</p>
+<p>我们不要盼望神给我们更大的能力，我们是要看见神所已经给我们的能力有多大。智慧的灵能够叫我们明白，启示的灵能够叫我们看见。需要智慧，也需要启示。需要智慧才能够明白，才能够清楚；需要启示才能够看见，才能够懂得。…</p>
+<p>这些话，在有的人也许已经很熟了，但是，我们在神面前要再一次看见启示是何等要紧。我们相信，神今天在天上是关心着祂的启示，因为祂所要作的一切祂已经都作了，今天的问题是人怎么样能够看见。所以，我们不必求别的，我们要像保罗那样，替我们自己祷告，替我们的弟兄姊妹祷告，求神把智慧和启示的灵赐给我们。我们要谦卑在神面前祷告说，“神阿，我要看见，我要看见！”（一个求启示的祷告，32～34页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>谦卑祷告，求神把智慧和启示的灵赐给我们。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

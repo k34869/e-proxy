@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('398')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('400')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">世乱无主我心有主</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗8:2　因为生命之灵的律，在基督耶稣里已经释放了我，使我脱离了罪与死的律。For the law of the Spirit of life has freed me in Christ Jesus from the law of sin and of death.</p><p>有一个弟兄很会喝酒，并且喝得很厉害。这位弟兄有一个朋友，也是很会喝酒的。后来他们两个都得救了。有一天，年轻的请年长的吃饭，桌上也摆上了酒。年长的就说，‘我们得救了，恐怕不能喝酒罢。’年轻的说，‘少喝一点没有关系，因为我们喝的是“提摩太酒”，这是圣经所许可的。’后来他们问一传道人说，‘人得救了，到底“提摩太酒”可喝不可喝？’那个传道人说，‘我作工作了十几年，从来没有听见过有什么“提摩太酒”。’过了几天，他们来对那个传道人说，‘我们不喝“提摩太酒”了。’那个传道人问他们说，‘有没有人教导你们呢？’他们说，‘没有。’‘那么，是不是圣经教导你们的呢？’他们说，‘不是，圣经反而是说提摩太可以稍微用点酒。我们的不喝，乃是因为我们的里面不许可。’</p><p>弟兄姊妹们，这里面的不许可，就是生命的律不许可。生命的律是活的，是有能力的。这生命的律会说话，会起作用，会给我们感觉，所以我们要尊重它。</p><p>儿童,#702 当我心亲近救主</p><p>当我心亲近救主，祂使我心快乐；</p><p>当我心忧愁痛苦，祂使我口唱歌；</p><p>祂以柔声细语招呼，招呼我亲近主，</p><p>祂使我心高声歌唱，永远永远歌唱。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

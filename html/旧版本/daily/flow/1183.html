@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1182')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1184')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 7 课<br />
+对付蒙头与主的晚餐</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　吃主晚餐的原因</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十一26：你们每逢吃这饼，喝这杯，是宣告主的死，直等到他来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>召会真是基督的满足。每当我们来吃主的晚餐，我们就宣告他的死。我们向全宇宙宣布主耶稣来了，他在十字架上死了，完成包罗万有的救赎，并且他的死产生了召会。现今我们是召会，他的身体，回应他在诸天之上的职事，并与他合作。每逢七日的第一日吃他的晚餐，就是这样宣告。只要地上有人回应基督天上的职事，他就有路将神的国带到地上。这是叫主满足并使他喜乐的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识吃主晚餐的意义，回应基督天上的职事，使他有路将神的国带到地上，使主满足并喜乐。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主的晚餐与基督的身体有关，察验并分辨自己，使主得着真正的记念。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主日早上的聚集为什么又称作‘主的晚餐’？</p>
+<p>对付主的晚餐与对付蒙头有什么关联？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘蒙头的事例与头有关，而主的晚餐（主的筵席，或桌子）与身体有关。…〔林前〕十一章乃是论到宇宙人—头和身体。原则上，我们都必须与头是对的，也必须与身体是对的。我们若与主的晚餐有问题，就与身体有问题，因为我们没有分辨那身体。（29。）…</p>
+<p>分辨那身体在林前十一章二十九节有两个意义。每当我们来有分于这饼，我们必须分辨这饼不是凡俗的东西，因为这饼表征主的身体，为我们钉在十字架上。我们分享这饼，不该像早晨吃一块普通的饼一样，乃该存着敬畏的心来有分于这饼。不仅如此，我们也必须分辨基督那宇宙、奥秘的身体。这是为什么我们不该有分于公会“圣餐”的原因，因为他们是宗派。有分于他们的“圣餐”，就是有分于他们的分裂。那不是主的筵席，乃是分裂的筵席。主的筵席必须在正确的立场上，不是代表宗派或公会，乃是代表基督的身体。</p>
+<p>虽然在公会的“圣餐”里，也许有成千上万真正得救的肢体，但那个筵席还是不能代表那独一的身体，乃是代表路德会、长老会或浸信会等公会。不论他们会员的数目多么庞大，仍然是代表那个公会。相反的，如果只有三、四位弟兄，站在一的立场上，代表基督的身体，他们所有的，就是正确的主的筵席，而正确的分辨那身体。这是十一章二十九节，分辨那身体的正确意义。’（由基督与召会的观点看新约概要卷二，193～195页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>主日重看我们所吃的饼，分辨察验那身体，正确的吃主的晚餐。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

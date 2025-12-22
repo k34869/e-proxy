@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1287')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1289')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 4 课<br />
+基督成形在我里面</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　从那灵而生，以接受那灵</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>加三5：这样，那丰富供应你们那灵，又在你们中间行异能的，是本于行律法，还是本于听信仰？</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神终极的心意，要将祂自己作到祂所拣选的人里面。借此祂成为赐生命的灵，进到我们灵中，使我们从灵而生，并接受那灵。因此我们应当天天，甚至时刻向那灵敞开，好接受那灵。我们若要接受属天电流的供应，就需要到我们重生的灵那里，去‘打开开关’。为着一直向主敞开，我们要呼求主的名、祷读主的话、向主赞美、歌唱，这些都是有帮助的。没有一种喜乐能超过这种喜乐。不论我们在家里、在工作中，或在学校里，都可以接受那灵。那灵既是这么便利，我们随时都可以接受祂！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>一直向那灵敞开，不断的接受那灵。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识神的经纶乃是要产生儿子，我们需要在神的生命里成熟，以承受父所有的一切丰富。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘儿子的名分’在属灵上指的是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘加拉太四章告诉我们，我们现今不再是孩童。（1～3。）我们已经被带到训蒙师傅这里，我们在祂里面，祂也在我们里面。现今我们不仅是儿童，更是儿子和后嗣。（4～7。）我们不仅有孩童的生命，我们也有儿子的名分。本章所题到的儿子名分是特别的。按照古罗马帝国的习俗，儿子得着继承的权利。这是儿子名分的意义。然而儿子在成熟之前，就只是儿子；他还没有儿子的名分。一个人在二十一岁以前，是他父亲的儿子，有儿子的生命，但他没有儿子的权利，也就是没有儿子的名分。他没有权利继承他父亲一切所有的，直到他完全长大。有一天他父亲要宣告，他不仅是儿子，他也有儿子的名分，有完全的权利继承父亲的一切。</p>
+<p>使徒在本章中的思想是，从基督来到并完成祂的工作之后，我们就不再是未成年的。这不是按照我们作了什么，乃是按照基督所成就的。因着我们不再是未成年人，而是长成的孩子，神就赐给我们儿子的名分。现今我们能承受神的一切所是。这遗产就是神格的丰满，就是基督自己。因着我们是长成的人，是成年的儿子，所以我们有儿子名分的权利，可以承继基督的一切所是。从前我们是孩童，在奴仆手下，就是在儿童导师的手下，所以我们无法享受训蒙师傅所有的一切。然而现今我们已经从儿童导师手中转移，归于训蒙师傅。我们已经成年并接受了儿子名分，就是继承的权利。这遗产一点不差就是基督自己，连同神格一切的丰满。所以，我们必须被充满；也就是说，在基督里神格的丰满必须成形在我们里面。（19。）基督的一切所是和一切所有，必须成形在我们里面。我们这样被充满，就证明我们是神的儿子。’（由基督与召会的观点看新约概要卷二，232～233页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在灵里呼求‘阿爸，父’，享受父神与我们之间生命的关系。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

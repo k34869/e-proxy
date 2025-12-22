@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('123')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('125')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 18 课<br />成熟的以色列</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile><b>周五　心麻木、灵苏醒并发亮的雅各</b></v-btn>
+          <div class="contents">
+            <div class="main">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为这缘故，我题醒你，将那藉我按手，在你里面神的恩赐，再如火挑旺起来。因为神赐给我们的，不是胆怯的灵，乃是能力、爱、并清明自守的灵。（提后一6～7。）</p><p>当雅各的儿子们第二次从埃及回来的时候，他们告诉他约瑟还在，并且作埃及的宰相。此时他的反应并不是重重的责备儿子们，为甚么欺骗他这么久。圣经告诉我们，他起先的反应是“心麻木”，因为他不信他们。（创四五26，另译。）后来看见约瑟打发来接他的车辆，他就“灵苏醒，”（27，另译，）说，“罢了，罢了，我的儿子约瑟还在，趁我未死以先，我要去见他一面。”</p><p>这里我们看见雅各成熟的第一个标记─心麻木，灵苏醒。这说出他的心里没有感觉、知觉或反应。他的魂生命完全死了，他的心像木头一样。约瑟的好消息乃是使他的灵苏醒，并不是使他的心激动。在我们属灵生命幼小的时候，我们常是心里苏醒，灵却麻木。如果我们是个年轻人，无须模仿老年人“心麻木”，那是表演，而非生命的成熟。年轻人正是心思、情感、意志活跃的时候，而不该心里麻木，对事物没有反应。但我们应当操练灵苏醒；因为灵是接触神的器官，因此我们的灵应该火热、苏醒、活泼、兴奋，向着神有正确的反应。</p></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"></v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>天天操练灵火热、苏醒、活泼、兴奋，向着神有正确的反应。</p></v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

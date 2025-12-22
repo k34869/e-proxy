@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="css/vuetify.min.css" rel="stylesheet" />
+    <link href="css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>造就课程</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+              造就课程——对付
+            
+              
+              </div>
+            </v-card>
+          </div>
+      
+          <p class="heading"> 良心的洁净： </p>
+          <div class="nav" @click="jump('./xz21.html')"> 第二十一课   若有人犯罪</div>
+          <div class="nav" @click="jump('./xz22.html')"> 第二十二篇   赔罪和赔偿</div>
+          <div class="nav" @click="jump('./xz23.html')"> 第二十三篇   赦免和挽回</div>
+          <div class="nav" @click="jump('./xz24.html')"> 第二十四篇   信徒的反应</div>
+         <p class="heading"> 生命的释放： </p>
+           <div class="nav" @click="jump('./xz25.html')"> 第二十五篇   罪律的释放</div>
+          <div class="nav" @click="jump('./xz26.html')"> 第二十六篇  我们的生命</div>
+   
+ <br />
+ <br />
+        </v-main>
+      </v-app>
+    </div>
+   <script src="js/vue.js"></script>
+    <script src="js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "index.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

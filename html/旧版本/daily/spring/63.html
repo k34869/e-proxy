@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('62')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('64')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">引起全城祷告会</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">主耶和华如此说，我要加增以色列家的人数，多如羊群；他们必为这事向我求问，我要给他们成就。（结36:37）</div>
+<div id="CC">Thus says the Lord Jehovah，Moreover for this I will be inquired of by the house of Israel to do it for them; I will increase them with men like a flock.（Ezekiel 36:37）</div>
+<div id="C">一八五七年，美国伦菲耳先生在祷告中忽然觉得，在这世界上每天不知有多少人死亡，心中很是忧急。于是在纽富耳敦街找到一个地方，布置妥当，预备开一个祈祷会。到了那一天，只有他自己一个人赴会。然而，他并不灰心，独自一人跪下祷告主，恳求主赦罪，求圣灵挑旺。过了半个钟头，来了另一个人，最后一共来了六个人；于是，他们同心祷告主。会后，伦菲耳很快乐的对他们说，“今天我真是觉得主与我们同在，请下周再来聚会。”果然下周到了三十个人，再下周竟然来了一百多人；人数天天增加，以致天天聚会。后来影响所及，全城到处发起祷告会，并渐渐遍及全美国。<br/><br/>　神听了他们的祷告，赐福给这个工作。几个月后，就有几千处奋兴会，影响到全世界。星星之火，足以燎原；因此而归主的，不只千百万人。纽富耳敦街这祈祷处的发源地，如今还在。</div>
+<div id="CC">祷告─凭信心（诗562）</div>
+<div id="C">再唱信心的歌！<br/>　仇敌听见要抖；<br/>　赞美原来会胜鬼魔，<br/>　何致被他箝口。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

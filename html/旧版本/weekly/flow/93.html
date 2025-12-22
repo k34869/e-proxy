@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('92')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('94')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">从主而出的国是不能震动的</p>
+<p>我们既领受了不能震动的国，就当接受恩典，借此得以照神所喜悦的，以虔诚和畏惧事奉神。（来十二28）</p>
+<p>希伯来十二章二十八节说，‘所以我们既领受了不能震动的国，就当接受恩典，借此得以照神所喜悦的，以虔诚和畏惧事奉神。’这节指明，我们所要领受的国，是不能震动的。当旧约在西乃山颁布时，地就震动。那次震动，是给地上百姓的警告。（出十九18。）有一天，在新约时代，主不仅要震动地，还要震动天，作为从天来的警告。这乃是根据哈该书二章六节的话：‘万军之耶和华如此说，过不多时我必再一次震动天、地、海与旱地。’当主来的时候，祂要震动万国。（7。）地和诸天都会震动，惟有主和出于主的要永远长存。这意思是说，我们所领受的国，乃是出于主自己。</p>
+<p>国度其实就是主自己在我们里面作王。但以理二章三十四至三十五节：‘你观看，见有一块非人手凿出来的石头，打在这像半铁半泥的脚上，把脚砸碎。于是铁、泥、铜、银、金，都一同砸得粉碎，成如夏天禾场上的糠秕，被风吹散，无处可寻。打碎这像的石头，变成一座大山，充满全地。’那块非人手凿出来的石头，就是天上的基督，祂在十字架上由神所凿；并且那块石头最后要变成一座大山，充满天下，而这座大山就是要来的国度。因此，我们所领受那不能震动的国，就是基督和祂的扩大。</p>
+<p>我们得救的时候，已经为着国度悔改，并且已经重生到国度里，被迁入神爱子的国里。（太三2，约三5，西一13。）今天我们在召会中，就是生活在神的国度里。（罗十四17，启一9。）我们现今在国度的实际里，若接受那灵的操练和神的管教，来世在国度的实现里，就必得着主的赏赐，并享受要来之安息日的安息，得着这不能震动之神的国。（参希伯来书生命读经，716～721页。）</p>
+<p class="title">一进家门就平安</p>
+<p>一位信徒幼年时代住在哈尔滨，那里的野孩子很多，一个人走在路上，常会受到无端的欺侮。一次他走在路上，忽然来了一群野孩子，不问情由的就被他们拳打脚踢，受到相当无理的对待。有时，他们会追到家门。但当他进了家，关上门，就感到平安了、稳妥了。无论他们怎样蛮横、恐吓，他都不怕。因为他知道，只要回到家，就有了保障。‘住在至高者隐密处的，必住在全能者的荫下。’（诗九一1。）（参造就故事上册，92页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：今天在召会中，在国度的实际里，接受那灵的操练和神的管教，来世在国度的实现里，得着主的赏赐和不能震动之神的国。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

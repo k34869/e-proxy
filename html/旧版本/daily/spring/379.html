@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('378')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('380')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">良心好像日晷</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>提前3:9　用清洁的良心持守信仰的奥秘。Holding the mystery of the faith in a pure conscience.</p><p>一位信徒在造船厂作工，厂主是一不信的人。他虽曾向厂主传扬福音，并请他去听道，他却一笑置之。原来那位信徒自造一船，要用铜钉，因其不易生锈，但是相当值钱，他就常从工厂带些回去。虽然知道这是偷窃，但却自己安慰自己，以为工厂铜钉太多，拿一些去，不算什么，况且所得工资甚薄，更可取些弥补弥补。后来他去参加一次聚会，听到认罪与赔偿，就深深觉得自己是个小偷，无法推诿。但是要他去向厂主认罪，赔还所用钉子，则觉为难。因他惟恐厂主获悉，看他是一假冒为善的人。但是那些铜钉一直刺透他的良心，叫他感觉极其不安，非得认罪赔还不可。于是他就去见厂主，承认偷带铜钉的事，并愿赔还。厂主就说，‘乔治阿，我常以为你是一个假冒为善的人，现在我才知道信耶稣实在有些东西。信耶稣使你回头，向人认罪赔偿，信耶稣必有价值。’</p><p>儿童诗歌 | 第206首 圣灵今在我心内</p><p>圣灵今在我心内，我要以祂为我主；</p><p>因爱耶稣，我敬畏祂最小的宣布。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1603')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1605')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 14 课<br />
+竭力前进达到成熟</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：进入幔内。（诗歌414首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：祂虽然为儿子，还是因所受的苦难学了顺从；祂既得以成全，就对凡顺从祂的人，成了永远救恩的根源。（来五8～9。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一基督超越亚伦（二）—来五1～10</p>
+<p class="ot2">1　亚伦作大祭司，乃是替人办理关于神的事；基督超越亚伦，因祂是在神面前照料我们一切的案件—1～3、10。</p>
+<p class="ot2">2　祂不是自取荣耀作大祭司，乃是神在祂的复活里，照着麦基洗德的等次，立祂为大祭司—4～6。</p>
+<p class="ot2">3　基督经过苦难学了顺从，才得以完全，成为我们的大祭司—7～10。</p>
+<p class="ot1">二　第三个警告—要竭力前进，达到成熟—五11～六20</p>
+<p class="ot2">1　公义的话是关于神行政的话，是干粮的话，长成的人才能享用—11、13～14。</p>
+<p class="ot2">2　神谕言开端的话，就是论到基督之开端的话，是基督徒生活的根基，也是给婴孩的奶—12～13。</p>
+<p class="ot2">3　信徒需要离开那论到基督之开端的话，竭力前进，达到成熟—六1～8。</p>
+<p class="ot2">4　信徒需要紧随先锋，逃入并抛锚于避难所—9～20。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识基督超越亚伦，照着麦基洗德的等次为祭司；并了解希伯来书中对信徒的第三个警告—要竭力前进，达到成熟。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>希伯来五章一至十节继续说到基督超越亚伦。亚伦作大祭司，乃是替人办理关于神的事；基督超越亚伦，因祂是在神面前照料我们一切的案件。祂不是自取荣耀作大祭司，乃是神在祂的复活里，照着麦基洗德的等次，立祂为大祭司。基督经过苦难学了顺从，才得以完全，成为我们的大祭司。五章十一节至六章二十节，是作者给希伯来信徒的第三个警告，劝勉他们要离开那论到基督之开端的话，竭力前进，达到成熟。不仅能够喝奶，也能够吃干粮，就是能分辨公义的话。信徒也需要紧随我们的先锋基督，逃入并抛锚于避难所，就是那在我们灵里的至圣所。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　基督超越亚伦</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来五5：…基督也不是自取荣耀作大祭司，乃是那向祂说‘你是我的儿子，我今日生了你’的，荣耀了祂。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>基督超越亚伦，因祂是在神面前照料我们一切的案件。我们的大祭司基督，虽不像从人间选取的大祭司，为软弱所困，却在各方面受过试诱，与我们一样；因此，祂能同情我们的软弱，体谅我们这些无知和失迷的人。基督作大祭司，不仅有尊贵，更有荣耀；不仅有祂地位的宝贵，更有祂人位的荣美。就祂的人性说，祂能同情我们，怜悯我们。就祂的神性说，祂在复活里，能为我们作每一件事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历基督是尊贵荣耀的大祭司，同情、怜悯我们，并在复活里供应我们。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

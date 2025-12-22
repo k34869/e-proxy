@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1869')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1871')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 16 课<br />
+新天新地与新耶路撒冷（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：　在灵里我看见。（补充本诗歌509首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：　我又看见一个新天新地；因为第一个天和第一个地已经过去了，海也不再有了。我又看见圣城新耶路撒冷由神那里从天而降，预备好了，就如新妇妆饰整齐，等候丈夫。（启二一1～2。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　新天新地—启二一1～8</p>
+<p class="ot2">1　旧天旧地的四个时代。</p>
+<p class="ot2">2　新耶路撒冷降到新地上—2：</p>
+<p class="ot2">a　新地上的百姓—3～4。</p>
+<p class="ot2">b　神在永远里的众子—5～7。</p>
+<p class="ot2">c　灭亡于火湖的人—8。</p>
+<p class="ot1">二　新耶路撒冷—9～27</p>
+<p class="ot2">1　在灵里看异象—10。</p>
+<p class="ot2">2　新耶路撒冷：</p>
+<p class="ot2">a　新妇，羔羊的妻—9。</p>
+<p class="ot2">b　圣城，神的帐幕—10，3。</p>
+<p class="ot2">c　所有蒙神救赎者活的组成—12～14。</p>
+<p class="ot2">3　城的结构与量度—12～21：</p>
+<p class="ot2">a　四边各有三门—12～13。</p>
+<p class="ot2">b　门上有十二位天使，又写着以色列十二支派的名字—12。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示旧天旧地过去之后，新天新地的来临；与作为神之圣城和羔羊新妇的新耶路撒冷。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在启示录二十章结束以前，神对付祂受造之物的工作还没有完成。然而在二十一章，新天新地来临了，神的诸时代已经完成了。等到神藉着国度时代完成祂的工作时，旧天旧地就要被火焚烧而过去，更新为新天新地，新耶路撒冷要降到其中，作神永远的彰显。新耶路撒冷不是一座物质的城，乃是一个团体的人位，就是我们！神将祂的选民比作自己的配偶和居所，这两面要终极完成于新耶路撒冷。因着她，神在爱里得着完全的满足，并在彰显中得着终极的安息。新耶路撒冷也是所有蒙神拣选、救赎之人的组合，包括在旧约下得救的以色列人，以及所有新约的信徒。我们若要看见新耶路撒冷，就必须在灵里。在灵里，我们可以得着一切属灵事物的异象。</p>
+<p>关于圣城的结构：城是四方的，每边各有三门，表征三一神一同作工，将人带进圣城。四边的门向着地的四方，表征圣城的入口对地上所有的人都是便利的。这城在宇宙的中心，并且城本身就是中心。她是均衡而不偏的。新耶路撒冷的门上且有律法在看守，以保证圣城一切的交通、进出都合乎律法的要求。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　旧天旧地的四个时代</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启二一1我又看见一个新天新地；因为第一个天和第一个地已经过去了，海也不再有了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>从创世以来，共分四个时代：法前时代，律法时代，恩典时代，还有国度时代。神用这四个时代成全并对付祂所拣选的人，使他们作祂永远团体的彰显，以成就祂的定旨。今天只有一个地方能使我们得成全，那就是召会生活。我们必须留在这里，被成全、受对付，在家庭和召会生活里彼此建造。这样，我们在今世就可以得成全。那时，第一个天和第一个地的老旧东西都必了结。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在今世得成全，在家庭和召会生活里被成全、受对付。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1238')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1240')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 15 课<br />
+适应一切的生命</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　供应的生命与亲密的关切</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后七4：我向你们大大的放胆，我为你们多多的夸口；我满得安慰，在我们一切的患难中，我格外的洋溢喜乐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗的灵是柔和的，他里面的人是甜美的，他在爱中关切哥林多人与神的关系，以及他们在神面前的光景。他也在恳求中表达对信徒亲密的关切，要叫他们得着安慰和鼓励，在与主完全和好之后，同他积极往前。先前哥林多人毫不在意使徒的关切，因着保罗的第一封书信，他们悔改了，这悔改的忧愁产生七种结果：热诚、自诉、愤恨、惧怕、切望、热心、责罚。也使保罗得了安慰和喜乐，能在凡事上为哥林多人放心。这乃是使徒藉着那和好的职事供应生命所产生的结果。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为同伴、小羊、和福音朋友在主面前的光景祷告，并主动热切的关心他们。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>藉着适应一切的生命，在各种光景及环境中，将生命供应给人，够资格成为新约的执事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>林后六章三至十三节所说适应一切的生命，有那些特点？</p>
+<p>在你的家庭生活及学校生活中，如何应用这适应一切的生命？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们不该认为六章三至十三节所描述适应一切的生命，仅仅是说到像保罗这样的人。不，每一位信徒都有可能成为新约的执事。一个完全得救的人，的确就是一个有了适应一切之生命的新约执事。任何光景、任何环境都适合我们将生命供应给人。我们乃是藉着完全得救，而够资格成为新约的执事。保罗所有的，也是我们今天所需要的。我们都该是有适应一切生命的人。’（哥林多后书生命读经，425～426页。）</p>
+<p>一个人若要作执事，代表他的主人来对待人，就必须让他的主人作工在他身上。那个人必须清楚主人的心意、愿望、目的、思想、以及与人的关系。这样他就可以成为执事，代表他的主人去接触人，完全照着主人来说话。…主的性格、生命、目的、愿望和定旨，已经作到他们里面，使他们成为基督的执事。…</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在各种光景及环境中，将生命供应给人。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

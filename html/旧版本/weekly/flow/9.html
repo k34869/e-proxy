@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('8')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('10')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>你们从前是黑暗，但如今在主里面乃是光，行事为人就要像光的儿女，（光的果子是在于一切的善、义和真实。）（弗五8～9）</p>
+<p class="title">为人真实如同光的儿女</p>
+<p>真就是实在，可托付。歌罗西三章二十三至二十四节说，‘你们无论作什么，都要从心里作，像是给主作的，不是给人作的，知道你们从主那里必得着基业为赏报；你们所事奉的乃是主基督。’按规矩，一个人若是在性格上有对付、有建立，当他受人托付的时候，就要看能不能作到，作不到就不要接受这托付；或者能作，可以作，就立刻去作。一件事我不答应就是不答应，答应了就是答应了，即使赴汤蹈火还是要作好。如果一个人随便答应，答应了又随随便便的不作，这样的一个人，神能托他事情？神能托他工作？或者说，这样的一个人能接受神的付托么？能接受神的引导么？没有这件事。</p>
+<p>保罗在以弗所四章说到：‘你们行事为人，不要再像外邦人在他们心思的虚妄里行事为人，’（17，）乃要在基督里面，‘照着那在耶稣身上是实际者，受过教导，在从前的生活样式上，脱去了旧人，…而在你们心思的灵里得以更新，并且穿上了新人，这新人是照着神，在那实际的义和圣中所创造的。’（21～24。）到了五章，他说到这新人生活的细节时就说，‘你们从前是黑暗，但如今在主里面乃是光，行事为人就要像光的儿女，（光的果子是在于一切的善、义和真实。）’（8～9。）这里的真实就是实际，乃是光之果子真实的彰显，就是神自己。（9注1。）我们既已蒙了重生，有基督作我们的生命，我们就该过一种团体的新人生活，如同耶稣在地上所过的生活，彰显神并叫人认识神是实际。（四24注2。）这样，我们就结出光的果子—善、义和真实。（参性格，42页；以弗所书生命读经，516～517页。）</p>
+<p class="title">认真查票</p>
+<p>有一个冬天晚上，天气十分寒冷。一位查票员站在火车站门口，要每个旅客拿出车票给他检查。旅客感觉十分不便，因为有的人穿着大衣，戴着手套，要把车票取出，必须脱下手套，解开大衣。个个都是如此，站在门外等候的时间因而拖长了。旅客之中不少烦言，说此查票员太过认真，天气如此酷寒，难道不可通融一点。其中一位不禁开口对他说，‘今晚你太不受人欢迎了。天气如此严寒，你还这样认真查票，岂不令人太感不便么！’查票员一点不为所动，抬头看那站在天桥上的站长。站长看他认真作好查票工作，十分的满意。事奉主的人也会常常听到别人的批评、烦言；但是只要遵行主的旨意，讨祂喜欢就彀了。（造就故事下册，59～60页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：以基督作生命，过一种团体的新人生活，如同耶稣在地上所过的生活，结出光的果子—善、义和真实。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

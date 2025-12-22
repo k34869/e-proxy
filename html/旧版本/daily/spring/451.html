@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('450')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('452')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第 9 课 性格-自制</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言二九 11 愚昧人怒气全发，智慧人忍气含怒。愤怒的火山</p>
+<p>小火山的脾气，非常暴躁。</p>
+<p>只要它一生气，就会吐出很多很多的岩浆来。</p>
+<p>那一次，它生气了，于是喷出好多岩浆，把牛伯伯的庄稼全部是都烧死了。还有一次，它又发脾气，这次，遭殃的是兔奶奶晒在草地上的被子。</p>
+<p>这让森林里的小动物们都苦不堪言。</p>
+<p>大象先生说：小火山，你就不能不生气吗？</p>
+<p>小火山委屈的说：我也不想呀！可我就是控制不住自己的情绪！</p>
+<p>小百灵飞过来，说：我为你唱一首快乐的歌，听了歌，你就不会生气啦！ 说完，叽叽喳喳唱起来。</p>
+<p>小火山的心情慢慢好起来，还跟着小百灵后头哼起来了呢！</p>
+<p>一曲唱完了，小百灵说：这个法子好吧！以后你要是生气了，就自己哼歌，这样你就不会生气啦！</p>
+<p>小火山小鸡啄米似的点点头，憨憨的说：太谢谢你们的帮助了！ 说完，就高高兴兴的回家去了。</p>
+
+</div>
+            </v-alert>
+   <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">
+
+<p>焦	点：自制就是控制自我的行为。一个有自制的人在生气的时候不会发脾气，更不会打人。</p></div></v-alert>
+<v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">
+实际应用：如果有人拿走了你的东西，说一些针对你的话，或者对你说话难听，你会怎么作？你会生气，发脾气，对人拳打脚踢吗？一个自制的人不会作出这样的反应。相反，
+他能够控制自己的行为并收回这些坏情绪。发脾气、打人只会导致更多的麻烦和困难。
+</div></v-alert>
+            
+
+
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇一一四 3 耶和华阿，求你在我的口边设立守卫；求你把守我嘴唇的门户。听话的朋友</p>
+<p>拉拉的衣服朋友不听话，有时躲在床底下，有时藏在柜子后面，有时又躲在椅子底下，每天早上，拉拉总要找上半天。</p>
+<p>妈妈帮拉拉把这些不听话的朋友一个一个找出来，对拉拉说：“你要学着当个小司令，让衣服朋友都听你的话。”</p>
+<p>晚上，拉拉把衣服和裤子叠整齐，放在椅子上说：“命令你们在椅子上趴着，队伍整齐， 别乱动，不能让敌人发现。”</p>
+<p>“小袜子，你躲在潜水艇里。”拉拉把鞋子放在床下，“小帽子，请你去当侦察兵。”拉拉把帽子挂在衣钩上。</p>
+<p>最后，拉拉才安安心心地上床睡觉了。</p>
+<p>第二天早上，拉拉很快就找到这些衣服朋友。</p>
+<p>他穿好衣服，裤子，穿上袜子、鞋子，戴上帽子，得意地对妈妈说：“瞧，我的衣服朋友多听话呀。”</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：拥有自制就是控制我们的感情和话语。一个有自制力的人在生气的时候选择恰当的表达方式和话语。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：如果有人把你的玩具拿走，或者在你玩的时候把你推开，你会有什么反应？你有没有生气的说粗鄙的话？那些有自制的人会保持冷静，要求把玩具拿回来，告诉他们不要推，或者告诉大人。当你还在和朋友玩，爸爸妈妈说现在要离开的时候，你有没有，然后对爸爸妈妈说不好听的话？一个有自制的人会顺从，然后和父母离开， 并且不会抱怨、嘀咕。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>哥林多前书九 25 凡较力争胜的，诸事都有节制；他们不过是要得能坏的华冠，我们却是要得不能坏的华冠。</p>
+<p>偷车贼</p>
+<p>那一天，小猴正准备骑单车回家。突然，羊大妈车上的苹果不知怎么的全部都掉了下来。小猴见状，立即下单车去帮忙。</p>
+<p>不一会儿，羊大妈的苹果也捡完了，小猴新买的单车却不翼而飞了。小猴气急败坏，它心想:“哼!我做了好事还被偷车，太不公平了!小偷们，你们等着瞧，总有一     天我会用同样的方法来偷你们的单车，我要双倍的俸还!”</p>
+<p>于是，小猴变的不可理喻，天天去偷别人的车，变成了“江湖大盗”。这时， 黑猫警长可坐不住了，它心想:“一个好端端的学生，竟然成了江湖大盗，真是不可思议啊!”它便调动警力，决定捉拿这个江湖大盗。终于，在一次警方的天罗地网下，小猴终于落网了。在动物法庭上，小猴不得不承认自己的罪行。</p>
+<p>法律，在我们每个人的生活中都是无所不在的，它与我们的生活密切的关系。你是学生，在校你就要遵守各项规章制度；你是工人，就要脚踏实地，不做违法乱纪的事，你是行人，你就要遵守马路上的交通规则……总之，无论你是谁，从事哪一种工作，身在何处，总与法律息息相关，有了法律，我们的社会才会更美好！更加和谐！</p>
+<p>被警长抓住的小猴，认识到了自己的错误，惭愧地低下了头。“对不起，我错了，我不应该偷单车……”</p>
+<p>“勿以恶小而为之，勿以善小而不为。”几个简单的字眼，告诉我们：不要因为恶事小而去做它，善事小就无视。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">
+<p>焦	点：拥有自制就是控制我们的感觉、行为和话语。一个有自制的人能够克制自己的冲动。</p>
+</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：作为神的子民，我们要操练节制。能够管制我们在许多事情上的冲动。我们要能够管制我们吃多少糖果和甜点，管制我们在电视或互联网上观看什么，以及管制我们和朋友谈论什么（例如，不说我们父母、兄弟姐妹或老师的坏话）。</p>
+</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

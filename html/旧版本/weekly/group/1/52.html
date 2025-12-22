@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周小排</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('51')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <v-btn disabled elevation="5" rounded>
+                <div class="bt_text">第 52 周</div>
+              </v-btn>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('../2/1')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第五十二周　人人申言建造召会</div>
+          <v-divider></v-divider>
+          <div class="contents">
+            <p class="bible_reading">诗歌：补充735首</p>
+            <p class="bible_reading">读经：林前十四31 因为你们都能一个一个的申言，为要使众人有学习，使众人得勉励。</p>
+            <p class="bible_reading">4那说方言的，是建造自己，但那申言的，乃是建造召会。</p>
+            <p class="bible_reading">12你们也是如此，既渴慕灵，就要为着召会的建造，寻求得以超越。</p>
+            <p class="heading">申言是为主说话，并说出主，是召会聚会中最主要的事</p>
+            <p class="content">林前十四章开头就说，"你们要追求爱，更要切慕属灵的恩赐，尤其要切慕申言。……那申言的，是对人讲说建造、勉励和安慰。……那申言的，乃是建造召会"（1、3～4）。追求爱就是追求带生命里长大，好在生命里发展恩赐。因此，追求爱必须配以切慕最有益的恩赐，就是申言的恩赐。在召会生活里，我们不仅要彼此相爱，也要为着完成神的定旨而切慕恩赐。在各项恩赐中，有一项是最重要的，就是申言，其意义是为主说话，并说出主来。</p>
+            <p class="content">申言既是为主说话，并说出主，也就是把基督供应给人。这是召会聚会中最主要的事，也是我们现今最注重的事。因着改制走新路，主将新约所命定信徒聚会和事奉的路向我们完全开启。我们也竭尽所能的在这条路上向前迈进。在这条路上最重要的一项，就是我们在聚会中的申言。我们的经历也告诉我们，今后我们所实行的新路能否成功，全在于我们在聚会中申言这件事。聚会的申言若有了，好了，成功了，新路就走通了；聚会中的申言若空了，缺了，失败了，新路就走不通。所以我们必须在这最关键的事上有操练。</p>
+            <p class="heading">我们若都申言，召会的建造就要得到助益</p>
+            <p class="content">五节说，"我愿意你们都说方言，但我更愿意你们申言；说方言的，若不翻出来，使召会得建造，那申言的，就比他强了。"这里的强字，直译大，与十九节里"在召会中，我宁愿用我的心思说五句话，可以教导人，强如用方言说万句话"的强字同。这给我们看见，在建造召会上，申言比其他的恩赐还要强大。所以，在召会的聚会中，我们若不申言，召会的建造就有很大的亏缺；但我们若都申言，召会的建造就要得到很大的助益。</p>
+            <p class="heading">若是我们众人都申言，这会劝服人、审明人</p>
+            <p class="content">二十三至二十五节说，"所以若全召会聚在一处的时候，众人都说方言，有不通方言的，或是不信的人进来，岂不说你们癫狂了么？但若众人都申言，有不信的，或是不通方言的人进来，他就被众人劝服，被众人审明了；他心里的隐情显露出来，就必面伏于地敬拜神，宣告说，神真是在你们中间了。"在召会的聚会中，若是我们众人都申言，为主说话，并说出主，这会劝服人、审明人；因为这样的说话，乃是以神为内容，把神供应给听见的人，并带他们归向神。换句话说，召会的聚会应当充满神，会中一切的活动都该把神传达并传输给人，使他们为神所灌注；要能这样，必须众人都在会中申言。</p>
+            <p class="heading">我们要作一个为主说话的人，就要多多学习、操练</p>
+            <p class="content">二十六节说到全召会"聚在一起的时候，各人或有诗歌，或有教训，或有启示，或有方言，或有翻出来的话，凡事都当为建造。"这指明我们来到召会的聚会中，说有一些出于主的东西与别人分享；或有诗歌赞美主；或有（教师的）教训，将基督的丰富供应人，好造就并滋养人；或有申言者的启示，给人看见神永远定旨的异象，就是关于基督是神的奥秘，以及召会是基督的奥秘；或有方言，给不信的人作表记，使他们认识并接受基督；或有翻出来的话，使论到基督和祂身体的方言，成为让人明白的话。这些都是我们来聚会之前，因着对主有经历，对主的话有享受，以及在祷告中和主有交通，从主而来有的，并出于主的东西；这不是临时的灵感，乃是平时的得着；这不是偶尔举动，乃是经过许多的学习。</p>
+            <p class="content">本节所列的五件事，无论是诗歌、教训、启示、方言、或翻出来的话，都与我们的说话有关。为此，我们需要在主的话语上有学习，多多操练申言。三十一节告诉我们，我们"都能一个一个地申言，为要使众人有学习，使众人得勉励。"这说明申言者在主的话语上有学习，就能借着为神说话，使别人有学习。</p>
+            <p class="content">末了，我们要作一个为主说话的人，惟一的路就是操练。我们都晓得，知道是一回事，说，又是另一回事。并且，要说得好，说得有启示，有供应，就要多多操练、学习。所以，今后你们不但需要在主的话语上有学习，明白圣经的真理，对主有经历，还需要在各种的聚会和场合里，操练说主的话。越说，越知道怎么说；越说，也越会说。（李文集一九八八年第二册，生命的话，第七篇）</p>
+            <p class="heading">我们要切慕申言，并且个个都能申言</p>
+            <p class="content">你们中间有丰富的道，甚至每一个人里面也都有，但过去都给埋没了。这一次我来，就是要把你们都挖出来。我愿意你们竭力追求，达到此一目标。我实在推崇这件事，像保罗在林前十四章所推崇的一样。所以我也鼓励你们大家切慕申言，并且你们个个都能申言。借此，每个肢体的功用都能发挥出来，基督身体的丰富也都能从众肢体里面释放出来。到一个地步，基督的身体就要被建造起来，而完成神新约的经纶。（李文集一九八九年第二册，新约福音祭司的尽职，第四篇）</p>
+            <p class="bible_reading">彼此问互相答：</p>
+            <p class="content">1. 主将新约所命定信徒聚会和事奉的路向我们完全开启。在这条路上最重要的一项是什么？</p>
+            <p class="content">2. 按照林前十四章二十三至二十五节所说，在召会的聚会中，若是我们众人都申言，为主说话，并说出主，这会劝服人、审明人，为什么？</p>
+            <p class="content">3. 我们若要作一个为主说话的人，就要怎样作？</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../../js/vue.js"></script>
+    <script src="../../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+      });
+    </script>
+    <style>
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .bible_reading {
+        font-size: 1em;
+        font-weight: bold;
+        color: #555;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('632')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('634')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">值得我这样来抵挡么</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗西书 2:15 既将执政的和掌权的脱下，神就把他们公然示众，仗着十字架在凯旋中向他们夸胜。</p><p>Stripping off the rulers and the authorities, He made a display of them openly, triumphing over them in it.</p><p>慕迪说，我在苏格兰曾去看望一位圣徒。他十五岁时就跌伤了背骨，躺在病榻上已有四十年之久，稍一转动就会感到剧痛。他在这么多年之中，几乎没有一天不饱尝这痛苦。如果在四十年以前，有人预先告诉他说，他要躺在那里吃四十年的苦；他一定要回答说，这件事他作不来。但是一天过一天，神赐给他恩典，他不只没有怨言，且是常常喜乐。他的脸闪耀着从天上来的荣光。我在他面前，好像是在神所最宠爱的儿女面前。我对他说，‘我的朋友，那恶者从来没有试探过你，叫你疑惑神，叫你想神是一位残忍的主人么？’‘是的。’他说，‘这就是他所作的。有的时候，我从我的窗户向外观看，看见许多强健的人走来走去，撒但就低声附耳说，“如果神对你是这么好的话，为何祂把你困在这里，度着这么长久疲惫、困苦的年日。如果祂真的爱你，你岂不是老早就成为一位富翁，坐着自己的车子，来去自如，而不至于躺在这里，一直连累到别人么？”’‘撒但这样试探你，你怎么办呢？’‘哦，我就宣告，他在一千八百多年以前，在十字架那里，已经被主打伤了头，在那里恐惧战抖了。他就离开我。’</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

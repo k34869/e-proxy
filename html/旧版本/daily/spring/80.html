@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+             <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('79')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('81')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第2系列 第40课 正确的人性—分享</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>路加福音三11下 有两件里衣的，就分给那没有的，有食物的，也当这样行。</p>
+<p>潘基文与桃子的故事</p>
+<p>曾经有一个父亲问他的三个儿子说：“如果有两筐容易腐烂的桃子，该怎么样吃才能使容易腐烂的桃子不浪费掉一个呢？”大儿子说：“先挑熟透的吃，因为那些容易烂掉。”“可等你吃完那些，其余的桃子也要开始腐烂了”，父亲立即反驳到。二儿子思考再三说：“应先吃刚好熟的，先拣好的吃呗！”“如果那样的话，熟透的桃子会很快烂掉。”父亲把目光转移到一直沉默的小儿子身上，问道：“你有什么好办法吗？”他思考片刻说道：“我把这些桃子分给邻居们一些，让他们帮着我吃，这样就会很快吃完而不会浪费一个桃子。”父亲十分满意，不住的点头。他就是现今联合国的秘书长潘基文！潘基文曾在不同场合说起桃子的故事。在我们与别人分亨的同时自然也会得到别人的回馈，只有那些被用于分享的桃子才会永久保鲜。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：我们不应该自私，为自己保留一切。我们不需要两件东西时，我们可以把另一件东西留给我们的朋友、同学，或者捐给穷人。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：如果有人给我们礼物，我们已经拥有了玩具，我们可以把其中的一个给出去。如果我们得到两个饼干，我们可以分享一个饼干给我们的兄弟姐妹。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>提摩太前书六18 又要嘱咐他们行善，在善事上富足，甘心分授，乐意与人同享。</p>
+<p>霍去病分享美酒</p>
+<p>霍去病大败匈奴后，驻兵在现在肃州城东的泉湖一带。捷报飞传长安，汉武帝大喜，传旨赐霍去病白银10万两，御酒一坛，犒赏有功将士。霍去病平日爱兵如子，皇上赐了御酒，他不愿独自享受。可是一坛御酒，20万大军，如何饮得过来。有人建议：每100人选一个代表，分酒一杯。但仔细一算，还是不够。霍去病便把酒倒入一眼泉中，20万将士开怀畅饮。从此，这眼水泉就被人们称为“酒泉”。这地方就是甘肃酒泉。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：我们应该有一个随时愿意分享的态度。我们应该积极寻求帮助他人的方法。神赐给了我们时间、精力和财物，所有这些东西都可以用来帮助别人。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：在儿童会上，如果我们注意到我们的朋友需要一个东西，我们应该尝试提供那样东西给他。我们甚至应该给予人们热情，让他们睡在我们的床上，在家里，并且吃我们的食物。我们也可以帮助别人为考试学习。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>希伯来书十三16 只是不可忘记行善和供输，因为这样的祭物是神所喜悦的。</p>
+<p>有一个别出心裁的农民，从外地买回了一批优良的小麦种子，种下去之后，第二年就大获丰收，农民自然是喜出望外。可是高兴过后，他马上就变得忧心忡忡，原来他害怕别人偷去他的优良品种，也种出一样好的小麦。很多人听说他家的小麦丰收了之后，都前来询问他从哪里买到的品种，可他总是想方设法搪塞，唯恐别人知道。可惜好景不长，第三年的时候他就发现，种下去的同样是优良品种，但产量却和普通小麦差不多。又过了两年，他的麦子甚至连普通小麦也不如了，且病虫害现象也十分严重。心急如焚的他赶紧带着自家的麦种去请教一位农科专家，经过一番考察后，专家告诉他，由于良种的四周都是普通的麦田，而它们之间相互传播花粉，使良种发生了变异，久而久之，品质就会下降。农民后悔不已，倘若当初他和邻居一同分享这种优质品种，就不会有今天这个后果了。独食难肥，共赢才是真理，一个人的赢不是赢。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：我们可以与其他人分享神、圣经和聚会。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：与他人分享，以满足他们的实际需要是很好的，而且我们能与他人分享的最有价值的帮助是属灵上的帮助。当机会来临时，我们可以与朋友分享圣经中的一节经文或与他们讲到与神有关的事。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

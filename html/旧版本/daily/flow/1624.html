@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1623')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1625')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 16 课<br />
+更美的祭物和更美的血，同更大、更全备的帐幕</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　基督所献的比旧约更美（二）</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>来十12～14：惟独这一位既为罪一次献上祭物，就永久在神的右边坐下了；从此等候祂的仇敌，放在祂的脚下作脚凳。因为祂一次献祭，便叫那些得以圣别的人永久完全。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>旧约的祭司天天站着，一再献上同样的祭物，但基督为着罪将自己当作那惟一的祭物献给神，就把罪除掉；因此，祂永久在神的右边坐下了。。我们的注意力，当从十字架上的基督，转向在诸天之上的基督。我们必须在跟随祂奔跑属天赛程时，享受天上的基督作我们的生命和我们一切的需要。我们享受这位在诸天之上的基督，就是真实的在新约之下，有分于这新遗命中一切的遗赠。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>跟随祂奔跑属天赛程时，享受天上的基督作我们的生命和我们一切的需要。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督成了更美的祭物，顶替并了结旧约的祭物，完成为罪献祭的事，一次并永远的解决罪的问题。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督作为祭物为何能顶替并了结旧约的祭物？这与我们有什么关系？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘圣灵藉着圣所和至圣所指明，当头一层帐幕仍然存立的时候，进入至圣所的路还未显明。（来九8。）圣灵告诉我们，旧帐幕仍存的时候，进入至圣所的路还没有开启。那灵也藉着这例证告诉我们，进入至圣所的路已经开启，旧帐幕已经除去。今天我们没有旧帐幕，却有新帐幕—基督。在希伯来书里，帐幕乃是基督，今天所有的祭物也都是基督。基督实化成为那灵，所以当你有那灵，你有分于那灵，你就有帐幕和所有的祭物。新约乃是这样一位奇妙、无限者的书，祂取代了旧约的一切。这位并没有取代神，因为祂就是神自己；但祂取代了摩西、亚伦、帐幕和所有的祭物，并且祂的约取代了旧约。祂是永远的灵，祂是每一件和每一地，并且祂不是客观的。这灵在我们里面始终是主观的。这永远的灵是经过过程之三一神的总结，已经成了我们永远的享受。’</p>
+<p>‘神的旨意首先是要为基督得着一个身体。然而，基督这身体，召会，就是神具体化身的扩大和彰显，如何能产生呢？答案与基督很有关系。神旨意的第二面，是要得着基督作一切祭物和供物的顶替，使我们享受祂作我们一切的一切。（来十5～10。）旧约圣徒以祭物和供物为中心。祭物和供物对他们乃是一切。然而，基督来实行神的旨意，顶替一切的祭物和供物，为要使祂能成为我们的一切。</p>
+<p>在旧约里，有五种主要的祭：燔祭、素祭、平安祭、赎罪祭和赎愆祭。…神为基督预备了身体，使祂能将自己献给神，顶替一切的供物。这就是基督来实行的神的旨意。如今不再需要祭物和供物，因为这些已经为基督所顶替。今天基督是一切的供物，祂也是一切的祭物。…基督顶替一切旧约的祭物和供物，除去旧约的预表，并立定自己作我们的一切，这是神伟大的旨意。我们凭这旨意，藉基督一次永远的献上身体，就得以圣别，享受并有分于祂作我们的一切。’（召会实际并生机的建造，4～5页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督藉着将自己一次永远的献上，已为我们解决罪的问题，所以我们无须再受罪的搅扰。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

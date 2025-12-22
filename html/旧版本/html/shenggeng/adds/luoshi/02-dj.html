@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <link href="../../css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-arrow-left</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>负担落实</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              
+            </v-card>
+            <br />
+            <v-card elevation="0">
+              <div class="banner">
+           
+                第二篇  顺从生命的感觉 顾到身体的交通
+                
+              </div>
+        
+          </div>
+         
+          <p class="nav">读经：</p>
+          <p class="hymn">罗8:6　因为心思置于肉体，就是死；心思置于灵，乃是生命平安。</p>
+          <p class="hymn">弗 4:19　他们感觉既然丧尽，就任凭自己放荡，以致贪行种种的污秽。</p>
+          <p class="hymn">提前 4:2　这乃是借着说谎之人的假冒，他们自己的良心犹如给热铁烙过；</p>
+          <p class="hymn">约壹 1:7　但我们若在光中行，如同神在光中，就彼此有交通，祂儿子耶稣的血也洗净我们一切的罪。</p>
+          <p class="hymn">林前12:14　身体原不是一个肢体，乃是许多肢体。</p>
+ <p class="hymn">15　倘若脚说，我不是手，所以不属于身体，它不能因此就不属于身体。</p>
+ <p class="hymn">16　倘若耳说，我不是眼，所以不属于身体，它也不能因此就不属于身体。</p>
+ <p class="hymn">17　若全身是眼，听觉在哪里？若全身是听觉，嗅觉在哪里？</p>
+ <p class="hymn">18　但如今神照着自己的意思，把肢体俱各安置在身体上了。</p>
+ <p class="hymn">19　若都是一个肢体，身体在哪里？</p>
+ <p class="hymn">20　但如今肢体是多的，身体却是一个。</p>
+ <p class="hymn">21　眼不能对手说，我不需要你；头也不能对脚说，我不需要你。</p>
+ <p class="hymn">22　不但如此，身上肢体似乎较为软弱的，更是不可少的；</p>
+ <p class="hymn">林前 16:19　亚西亚的众召会问你们安。亚居拉和百基拉，并在他们家中的召会，在主里多多地问你们安。</p>
+ <p class="hymn">西  4:16　 这书信在你们中间念了之后，务要叫在老底嘉的召会也念，你们也要念从老底嘉来的书信。</p>
+
+         
+
+
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "02.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

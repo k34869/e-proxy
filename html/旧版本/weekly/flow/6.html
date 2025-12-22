@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('5')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('7')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>看哪，你所喜爱的，是内里真实；你在我隐密处，必使我认识智慧。（诗五一6）</p>
+<p class="title">大卫悔改的祷告</p>
+<p>大卫被高举作以色列的王之后，在安逸的环境中犯了大罪，与乌利亚的妻子拔示巴同房，使她怀了孕。又为了遮盖他抢夺别人妻子的罪，不让乌利亚发现这事，竟设计谋杀死他忠信的仆人乌利亚。乌利亚的妻子拔示巴听见丈夫乌利亚死了，就为他哀哭。哀哭的日子过了，大卫差人将她接到宫里，她就作了大卫的妻子，给大卫生了一个儿子。但大卫所行的事，耶和华神非常不喜悦，就差遣申言者拿单去见大卫，责备并指出他所行的恶。此时，大卫心生悔改，承认自己所犯的罪说，‘我得罪耶和华了。’（撒下十二13。）拿单离开大卫之后，大卫写下了诗篇五十一篇悔改的诗。</p>
+<p>诗篇五十一篇是大卫犯罪之后，向神悔改的祷告：‘神阿，求你按你的慈爱恩待我，按你丰盛的怜恤涂抹我的过犯。求你将我的罪孽洗涤净尽，并洁净我的罪。…求你用牛膝草洁除我的罪，我就洁净；求你洗涤我，我就比雪更白。…求你掩面不看我的罪，涂抹我一切的罪孽。神阿，求你为我造清洁的心，使我里面重新有正直的灵。不要丢弃我，使我离开你的面；不要从我取去你圣别的灵。求你使我复得你救恩之乐，赐我乐意的灵扶持我。’（1～12。）大卫因着放纵他眼目和肉体的情欲，干犯了十诫的后五条诫命。但是他受了申言者拿单的责备后，就向神悔改并认罪。他用了涂抹、洗净、洁除、洁净这些辞，指明他的悔改和认罪是彻底的；他的求赦免是真实的。我们也需要这样，常常停留在神面前，承认我们的罪，恳求祂洗净我们，洁净我们，涂抹我们的过犯。这样真实的认罪祷告，是神所喜悦的。（参撒母耳记生命读经，257～264页；诗篇生命读经，344～ 345页。）</p>
+<p class="title">真实悔改得救</p>
+<p>有一位同工，名叫栾腓力，得救前一向轻视基督教。有一天他因事上山，到了一座庙里，看见供桌上有一大本圣经敞着，就好奇的走过去，想看看到底这本圣经说的是什么。他看到诗篇第一篇，读了两三次后，就被主的话抓住，受了感动。没有人传福音给他，也没有人对他说什么，他只不过读到主的话，圣灵就叫他知罪自责，末了他在地上打滚、流泪、认罪，得救了。这样的得救是真实的。（作主合用的器皿，41～42页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：常常停留在神面前，承认我们的罪，恳求祂洗净我们，洁净我们，涂抹我们的过犯。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

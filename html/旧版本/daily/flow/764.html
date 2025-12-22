@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('763')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('765')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 2 课<br />
+基督家谱拾穗</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：耶稣这名甜美芬芳。（诗歌66首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：耶稣基督，大卫的子孙，亚伯拉罕子孙的家谱。（太一1。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　马太福音中基督的家谱</p>
+<p class="ot2">1.　证明基督是君王，是王室正确的后裔。</p>
+<p class="ot2">2.　基督是大卫的子孙，亚伯拉罕的子孙，指明耶稣是神性与人性的调和—太一1。</p>
+<p class="ot2">3.　由五班人所组成：</p>
+<p class="ot2">a.　列祖—太一2～6上。</p>
+<p class="ot2">b.　君王—6下～10。</p>
+<p class="ot2">c.　平民（被掳归回的人）—10～16。</p>
+<p class="ot2">d.　四个再嫁的妇女—3，5，6。</p>
+<p class="ot2">e.　一个童女—16。</p>
+<p class="ot2">3.　两条家谱的线，最后合成为一，带进基督的出生—太一6下～7上，16，路三23下，31下。</p>
+<p class="ot2">4.　家谱的分段—太一17。</p>
+<p class="ot1">二　路加福音中基督的家谱</p>
+<p class="ot2">1.　强调耶稣的人性，证实祂人、神二性的身分。</p>
+<p class="ot2">2.　从耶稣回溯到亚当—路三23～38。</p>
+<p class="ot2">3.　四个显著的名称：神、亚当、亚伯拉罕、耶稣。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>从马太和路加福音中基督的家谱认识基督是谁。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督是一位奇妙的人物，祂的家谱也是奇妙的。祂有两个家谱，这两个家谱所记载的内容并不相同，但最后却合为一条线。马太福音的家谱说出祂是神性与人性的调和，也给我们看见这位君王的祖先与身分，以证明祂是君王，是旧约所预言的基督。路加福音的家谱说明祂是亚当的后裔，是惟一正确并正常的人，证实基督有资格作人类的救主。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　基督的两个家谱</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>耶稣基督，大卫的子孙，亚伯拉罕子孙的家谱。（太一1。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>四福音书中，只有两卷有家谱，就是马太福音和路加福音。马太告诉我们，基督是王室的正确后裔，是王位合法的继承人。这样一位人物必然需要一个家谱，说出祂的由来与家世。路加陈明耶稣是一正确并正常的人。要表明耶稣是正确的人，就需要展示这人的谱系，证实祂有资格作人类的救主。基督的家谱包括各式各样的人：好人、坏人、蒙召的人、退后并堕落的人、以及恢复的人。我们是那一种人呢？基督的家谱包括你我。至终神要把我们带回，成为恢复的人。阿利路亚！在基督的家谱中，我们是蒙召的人，堕落的人，也是恢复的人。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>经历从退后的光景中，蒙神带回并被神恢复。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

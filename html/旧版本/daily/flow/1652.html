@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1651')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1653')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 2 课<br />
+活的盼望与诸天之上的基业</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　因信蒙神能力保守</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前一5：就是你们这因信蒙神能力保守的人，得着所预备，在末后的时期要显现的救恩。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>今天我们若要享受我们属天的基业，并有分于它，我们就需要蒙保守在正确的地位上。神的能力是我们蒙保守的因由，信是其次的凭藉。神的能力是在神那一面，信是在我们这一面。这指明我们需要与神的能力合作，以蒙保守在正确的地位上，享受属天的基业。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因信而蒙神能力保守，得着终极、完全的救恩。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在神属天的呼召里，三一神是我们的基业，有不能朽坏、不能玷污、和不能衰残的绝佳品质。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼得前书所说为信徒所存留在诸天之上的基业，具有那三个性质？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘彼前一章三节下半至四节启示，在神的呼召，就是属天的呼召里，三一神是我们的基业。四节用三个辞描述我们的基业：不能朽坏、不能玷污、和不能衰残。不能朽坏，指在本质上不能毁灭、不腐败；不能玷污，指在纯洁上不污染；不能衰残，指在美丽和荣耀上不凋谢。我们的基业是神圣、属灵的，全然是不能衰残的。不但如此，这基业也是不能玷污的；没有什么能使它不洁。最后，它是不能衰残的；它的美丽和荣耀不能凋谢。这些乃是我们在生命里永远基业的绝佳品质。</p>
+<p>彼得对我们基业的三重描述，实际上是对三一神的描述。不能朽坏一辞，指这基业的性质。这是神的性质，由金表征。不能玷污一辞，描述基业的光景。这光景与圣别的灵有关。不能衰残一辞，指这基业的彰显，有不能衰残的荣耀。由不能衰残一辞所指明永久的彰显，就是子作父荣耀的彰显。所以，这里有父不能朽坏的性质，那灵圣别的能力，维持基业在不能玷污的光景中，保守它圣别、洁净并纯洁，也有子作不能衰残之荣耀的彰显。这启示我们的基业乃是三一神。我们已蒙召，有永远享受祂作我们基业的盼望。’（新约总论第五册，255～256页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>经历神圣的传输，应用并享受为我们存留在诸天之上的基业。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

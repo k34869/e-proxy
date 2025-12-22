@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('198')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('200')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">神要把祂自己调和到人里面</p>
+<p>但与主联合的，便是与主成为一灵。（林前六17）</p>
+<p>神乐意向人敞开，因为神的心意乃是要将祂自己调和到人里面。一般人总认为，神高高在天上作主宰，要人敬拜事奉祂。但圣经给我们看见，神在人身上的目的，并不是这样；神乃是要进到人里面，作人的内容，作人的生命和性情。换句话说，神要作人情感里的爱好，心思里的思想，意志里的选择和定规，祂还要作人的能力和眼光。总之，神要进到人里面作人的一切。</p>
+<p>可以说，神在我们身上所要作的，只有一件事，就是要将祂自己调和到我们里面，作我们的成分，使我们里面每一部分、每一角落，都充满祂。当我们这样充满神时，那就是我们最享受神的时候，也就是我们最认识神的时候。只有我们让祂这样充满在我们里面，作我们每一种的成分，我们才能真实的赏识祂是怎样的一位神。</p>
+<p>为使我们能享受祂，神作了四步工作。第一步，祂为人造了一个灵。人的灵是神为人所豫备的器官，为叫人接受神，享受神自己。第二步，神亲自来成为一个人，名叫耶稣。神将祂自己完全调到这人里面，作耶稣里面每一种的成分。第三步，这位神而人的救主，为人的罪被钉死在十字架上，流出祂的血来，解决了人与神一切调不来的东西。凡人与神之间的一切间隔，一切叫人不能接触神、不能摸着神的，主的宝血都给我们洁净了。第四步，主耶稣从死里复活，成为赐生命的灵；借此，祂将完整的人带到神里面。主耶稣成为肉体，乃是把神带到人里面；祂从死里复活，乃是把人带到神里面。这就完成了神与人的调和，不只神到人里面来了，人也到神里面去了。这一位救主已经成了赐生命的灵，超越了时间和空间，无所不在。无论我们在什么地方，只要敞开心和灵，神的灵就要进到我们里面，与我们灵灵相交，使我们得以享受神自己。（参如何享受神及操练，38～51页。）</p>
+<p class="title">光就照在背上</p>
+<p>有一次，达秘到美国北边一个地方开会。当时，有一人名叫但以理斯底儿，是相当好的一个人。斯底儿也顶佩服达秘，不过他们二人在真理上有点不合。达秘最注重神的恩典，斯底儿最注重神在我们里面的路。虽然两个人注重的点不同，但是每次达秘讲道，斯底儿都会去听。有一次，达秘引用一节圣经：‘我们若在光中行，’（约壹一7，）讲到人能认识神，乃是藉着神的福音所启示的神。神在祂恩典的光中，启示祂自己，人也在祂福音恩典的光中，来到神面前，这样人就能与神相交。达秘讲到这里的时候，斯底儿在底下反驳达秘说，‘如果他的背朝着光走，怎么办？’达秘知道斯底儿，很简单的答复他：‘弟兄，神的光会照在他的背上，因为神在福音里，已经把祂自己完全启示出来。今天，我们凭着与在福音里启示的神有交通，结果祂儿子耶稣的血就洗净我们一切的罪。祂儿子耶稣的血洗净我们一切的罪，乃是根据于我们在光中行。’（参造就故事下册，84～85页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：操练敞开心和灵，让神的灵进到我们里面，充满我们，使我们得以享受神。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

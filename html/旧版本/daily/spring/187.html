@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('186')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('188')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">空白的支票簿</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">少壮狮子，还缺食忍饿；但寻求耶和华的，什么好处都不缺。（诗34:10）</div>
+<div id="CC">The young lions hunger and starve，but those who seek Jehovah will not lack any good thing.（Psalm 34:10）</div>
+<div id="C">十九世纪英国弟兄会的戚伯门（Robert Cleaver Chapman），在他所著的书中说到，在他人生的一个时期，肩负经济上的重担，因为他家里发生一件意外，为此需要很多的金钱协助。他就凭着信心，将他的需要告诉神。不久，有一位信徒前来见他。这一位信徒素来很谦卑，也很爱主，又是一位百万富翁。他对戚伯门说，“戚伯门博士，我听说你近日有经济上的难题。你不必问我这消息从那里来，只请你承认这是否是事实。”戚伯门没有应声，但点头示意。那位信徒说，“你不必告诉我你的需要，但要你知道，我的一切是要作你的后盾，盼望你的难题可以因此得着解决。”戚伯门的眼泪不禁夺眶而出。他似乎信不来他耳中的好消息，只是瞪大眼睛看着他的朋友，不能说出一句话。那位信徒从他口袋中，拿出一本支票递给戚伯门说，“这些支票都已签上我的名字，你只要在空白处填上所需要的数目。”说完了话，他与戚伯门诚挚的握手而别。戚伯门一面感谢神，一面将他经济的难题一一解决。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

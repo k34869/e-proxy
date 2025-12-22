@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('284')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('286')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">卢布变废纸</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">但那些想要发财的人，就陷在试诱、网罗、和许多无知有害的私欲里，叫人沉溺在败坏和灭亡中。（提前6:9）</div>
+<div id="CC">But those who intend to be rich fall into temptation and a snare and many foolish and harmful desires，which plunge men into destruction and ruin.（1 Timothy 6:9）</div>
+<div id="C">民国初年，中国北方有许多人，竞相储存俄国的卢布，甚至有人积了几麻袋。因为他们不信任当时的“哈大洋”和“奉票”；反以为只有外币可靠。然而当帝俄被人推翻之后，那些卢布便一文不值，形同废纸。到民国二十年时，仍可看见许多孩子，拿着一叠一叠的新卢布当作玩物；也有许多人当糊墙纸用了。现今许多信徒，不知积蓄财宝在天上，只知积蓄黄金美钞在地上，到有一天，钱财无用的时候，这些还能给他什么呢？</div>
+<div id="CC">经历基督─因祂满足（诗438）</div>
+<div id="C">我已拣选主耶稣，<br/>　拣选祂作世界；<br/>　祂爱实在是充足，<br/>　满足我的一切；<br/>　主，我是你的器皿，<br/>　只有你能充盈；<br/>　叙加的水饮千井，<br/>　渴仍不停。<br/>（副）<br/>　耶稣，耶稣，<br/>　我拣选主耶稣，<br/>　我心今正住在所有甘甜事物之源；<br/>　耶稣，耶稣，<br/>　祂乃是我满足，<br/>　是祂消除我的要求，<br/>　平静我的意愿。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

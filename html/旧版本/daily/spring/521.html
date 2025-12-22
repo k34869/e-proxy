@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('520')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('522')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第 19 课 性格—平静</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十四 29 不轻易发怒的，大有聪明。打翻杯子的鹰</p>
+<p>成吉思汗是蒙古族最伟大的首领。有一天，他带着心爱的飞鹰去打猎，直到中午都一无所获。正在口渴难忍的时候，他看见前面小山上的泉水一滴一滴落下来。成吉思汗大喜， 立刻走上前去，取出了杯子，耐心地接着泉水。谁知接连两次，水杯都在快满的时候被鹰打翻。成吉思汗不禁大怒，拔出尖刀，当鹰再次靠近时，迅速杀死了它。</p>
+<p>成吉思汗杀了鹰，好不容易爬到了山顶的水池边，他正准备喝个痛快，忽然发现水边躺着一条死去的毒蛇。那一刻，成吉思汗才恍然大悟：原来，这水早就受到了蛇毒的污染！他后悔不已，望着飞鹰的尸体，暗暗发誓，从此以后，绝不在发怒时作出任何决定。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个平静的人是一个安静而平和的人。一个平静的人不会轻易沮丧。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：你的老师已经准备结束当天的课程，但是你的同桌没有听从老师的吩咐，所以老师让你和你的同桌一起等着，你的反应如何，内心感觉如何？在课间，你的同学不让你参加他们的游戏时，你的态度如何？你会生气、哭泣、抱怨吗？如果你想要一块糖果，你妈妈告诉你“不”，因为已经快到晚餐时间了。我们需要在情绪上保持安静和平和，而不应该太快或太轻易的沮丧。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十四 30 上 心中安静是肉体的生命。丢失的苹果</p>
+<p>秋天到了，苹果熟了。斑马去果园里采摘苹果，斑马看见树上只剩下一个烂苹果挂在树梢。斑马十分生气，把苹果摘下来用力地往远处扔去。</p>
+<p>这时，狐狸恰好路过，看到斑马生气的样子就走过去问：“斑马，你怎么了？”斑马说：“我的苹果被人偷了。”狐狸说：“肯定是大象，昨天我还看见大象提着一篮子苹果回去了。”兔子连忙跳过来作证，肯定是大象，大象的鼻子那么长很容易就够到了苹果。</p>
+<p>斑马气冲冲的去找大象，质问他为什么要偷自己的苹果。大象说：“苹果不是我偷的，是我在集市上买来的。”斑马不信，非要大象交出苹果。大象想了想，说：“让我去看看那颗苹果树可以吗？”斑马说：“可以呀！”斑马把大象带到果园里，远远的指着那颗苹果树。在果园里，大象仔细地观察了一下，说：“这个真不是我偷的，我的身体很重，踩到泥地里就会有很深的脚印。”斑马一看，也是啊，苹果树下没有脚印。斑马低着头对大象道歉，对不起大象，我冤枉你了。</p>
+<p>这个故事告诉我们，生活中，总有被人冤枉的时候，那件事明明不是你做的，却冤枉你说是你 做的；那个东西明明不是你弄坏的，却偏偏说是你弄坏的。就像故事里的大象一样，</p>
+<p>明明没有偷苹果，却被别人冤枉。这时候，生气也不能解决问题，一定要保持冷静， 想办法证明自己的清白。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个平静的人是一个安静而平和的人。平静的人对事物反应不快，也不会过度兴奋或失望。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：当你的父母指出你的作业错误时，你的反应是什么？你会接受他们的意见并改正过来，还是你与他们争论，并感到沮丧？如果你丢失了什么东西呢？你会思考你最后一次看到它的地方，它可能在哪里，还是你会马上要求你的妈妈找到它，或者因为它没有在你所认为的地方就责备别人？如果你的篮球队在一场比赛中输了，你没有投中，或者队友错过得分的机会呢？你会保持冷静，还是感到沮丧？也许有人答应你去某个地方，你已经等了好几个星期了。在要启程的那天，带你去的人生病了， 不得不取消旅行。你的反应如何？我们需要平静，不要对事情反应太快，或过于兴奋或失望。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>箴言十四 29 下 灵里暴躁的，大显愚妄。</p>
+<p>箴言十四 15 愚蒙人凡话都信；精明人步步慎思。十二探子</p>
+<p>以色列人在旷野的行程，将近迦南地的时候，神吩咐摩西在每支派中打发一个作首领的，共十二个人，去窥探那地的情形。摩西就照着神的吩咐，差遣了十二个人去窥探那地，要看看其中 所住的民是强是弱，是多是少，所住之地是好是歹，地土是肥美或是贫瘠，有树木没有。摩西 要他们放开胆量，并带些那地的果子回来。那十二个人就上去窥探那地，他们从以实各谷砍了 一挂葡萄，两个人用杠抬着，还带了一些石榴和无花果。过了四十天他们才从那里回来，他们 向摩西、亚伦、并以色列全会众报信说，那地果然是流奶与蜜之地，又将那地的果子给他们看。其中十个探子向以色列人报恶信说，那地的民强壮，城墙也坚固宽大，他们都像伟人一样身量 高大，我们和他们比起来，就如蚱蜢一样。另外两个探子—迦勒和约书亚，却和这十个人有完 全不同的说话。迦勒安抚百姓说，‘我们立刻上去得那地罢，我们足能得胜。’当全会众大声 喧嚷哭号，又向摩西、亚伦发怨言时，迦勒的同伴约书亚又与他站在一起，撕裂衣服，对以色 列全会众说，‘我们所窥探经过之地，是极美之地。耶和华若喜悦我们，就必将我们领进那地， 把地赐给我们，那地原是流奶与蜜之地。…有耶和华与我们同在，不要怕他们。</p>
+<p>求神赐给我们迦勒与约书亚的心志，专一跟从神，信靠神并说神的话语。</p>
+
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">
+<p>焦	点：一个平静的人是一个不容易在自己的思想和情感中兴奋的人。他们对事物不会反应太快，他们不相信谣言，而且也能影响他人也平静下来。</p>
+</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：可以讲述十二个探子的故事（民数记十三章和十四章）来说明保持平静的重要性。 强调会众如何很快的对所报的恶信作出反应，并在他们的思想和情感上变得激动。 相比之下，约书亚和迦勒都很平静，他们报告好信息，相信神会帮助他们取得那地。你如何应对这样的情况呢？当你听到同学或老师的负面消息时，你的反应是什么？ 你会不会很快就相信，还跟随他们一起说？还是你保持冷静，考虑这情况，找出这 谣言是真还是假？如果你的弟弟不小心摔倒了，哇哇大哭，你怎么办？妈妈不在场， 问你怎么把他们弄哭了，你怎么办？你能平静地向她解释所发生的事情吗？还是你也很生气，对她采取防卫的态度？很多时候，当我们冷静下来考虑事情，而不是着急反应，我们可以影响周围的人，缓和形势。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1806')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1808')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 7 课<br />
+是配的狮子羔羊</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：看哪耶稣天上坐着。（诗歌115首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：看哪，犹大支派中的狮子，大卫的根，祂已得胜，能以展开那书卷，揭开它的七印。我又看见宝座与四活物中间，并众长老中间，有羔羊站立，像是刚被杀过的，有七角和七眼，就是神的七灵，奉差遣往全地去的。（启五5下～6。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　基督升天后天上宝座周围的景象—启四1～11</p>
+<p class="ot2">1　一个宝座在天上—1～2。</p>
+<p class="ot2">2　坐在宝座上的神—3。</p>
+<p class="ot2">3　宝座的周围有二十四位长老坐在二十四个宝座上—4～6上。</p>
+<p class="ot2">4　在宝座中和周围有四活物—6下～7。</p>
+<p class="ot2">5　对神的敬拜—8～11。</p>
+<p class="ot1">二　是配的狮子羔羊—天上景象的中心—五1～14</p>
+<p class="ot2">1　神行政的奥秘—1～4。</p>
+<p class="ot2">2　是配的狮子羔羊—5～7：</p>
+<p class="ot2">a　犹大支派中的狮子。</p>
+<p class="ot2">b　大卫的根。</p>
+<p class="ot2">c　刚被杀的羔羊，有七角和七眼。</p>
+<p class="ot2">d　配展开书卷，揭开它的七印。</p>
+<p class="ot2">3　四活物和二十四位长老向羔羊的敬拜和赞美—8～10。</p>
+<p class="ot2">4　向神和羔羊的宇宙赞美—11～14。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>陈明基督升天后天上宝座周围的景象；这景象乃是以宝座，与是配的狮子羔羊为中心。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>启示录第四章开始进到另一个段落；接续使徒约翰所得着关于七个地方召会的启示，从这里起乃是说到将要发生的事。其中，第一大段从第四章到十一章，乃是综观要来的事，从基督升天一直到将来的永远。启示录这卷书乃是以宝座为中心。从四章开始，揭示了神宇宙的行政。这宝座乃是审判的宝座，从这宝座世界受审判。然而这个审判也是祂的照耀，在祂宝座前有七灯；七灯就是神的七眼，也就是神的七灵。神的灵奉差遣往普天下，去看每一个角落的人。至终，在一班人身上烧出一个结果，就是彰显神的形像。</p>
+<p>在宝座上坐着的神，显出来的样子好像碧玉和红宝石。神乃是生命的神，也是救赎的神。宝座周围有二十四位长老，代表所有的天使；另有四活物，代表所有其他的活物。他们都向神献上赞美。当神坐在宝座上，预备执行祂宇宙的行政时，基督，这是配的狮子羔羊，够资格揭开神经纶的奥秘，以成就祂永远的定旨。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　基督升天后天上的景象</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启四2：我立刻就在灵里；看哪，有一个宝座安置在天上，又有一位坐在宝座上。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>四章一至二节说，‘这些事以后，我观看，看哪，天上有门开了，我初次所听见那如吹号的声音，对我说，你上到这里来，我要将这些事以后必发生的事指示你。我立刻就在灵里；看哪，有一个宝座安置在天上，又有一位坐在宝座上。’</p>
+<p>从四章开始，揭示了神宇宙的行政。本书中的宝座乃是审判的宝座，从这宝座世界受审判。这是神在天上的宝座。整个宇宙，特别是地，都在这个宝座之下。无论撒但在空中作什么，或人在地上作什么，都在神的宝座之下。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>敬畏神，认识神宝座的管理。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

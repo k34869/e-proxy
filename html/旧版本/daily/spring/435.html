@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('434')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('436')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">杖柄往那边倒</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>罗马书十二2不要模仿这世代，反要藉着心思的更新而变化，叫你们验证何为神那美好、可喜悦、并纯全的旨意。</p><p>有一个磨坊主人和他的儿子，赶着一匹骡子到市场上去卖。途中遇见一群妇人，她们都取笑他说，‘看阿，天下有这样蠢笨的事，有骡子不骑，却要走路。’于是他叫儿子骑上骡背，自己跟在后面。走了一程，又碰见一群老头子，其中一个说，‘你们看这懒惰的小孩，他自己骑着骡子，却让父亲走路！’磨坊主人便叫他的儿子下来，自己骑上骡背。走了不久，又来了一群熟悉的妇人和孩子。她们说，‘唉！你这懒惰的老家伙，自己舒服的骑着骡子，为何不让你可怜的儿子跟你一起骑上去呢？’给他们这样一说，磨坊主人就叫儿子一同骑上骡背。不一会，来了一位绅士，对他们说，‘我好意告诉你，你的骡子负载过重，未免太不人道了！’磨坊主人同儿子急忙下来，用绳子缚住骡子的脚，用一条竹杠穿着，父子两人抬着它走。正当走上一座桥时，路人都大笑起来。骡子听到笑声，惊慌起来，挣脱了竹杠，坠入河里淹死了。在许多事上，人不认识属灵的原则，东去听人说说，西去模仿某人，不知浪费了多少时日，吃了多少的苦头。</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

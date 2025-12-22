@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('756')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('758')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 1 册 | 第 1 课<br />
+基督—圣经一切图画的实际与应许的应验</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：我已得到宇宙至宝。（诗歌388首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：神既在古时，藉着众申言者，多分多方向列祖说话，就在这末后的日子，在子里向我们说话。（来一1～2上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一 　全本圣经乃是关于基督的书—约五39，路二四27，44</p>
+<p class="ot2">1.　最好的读经之路乃是寻出基督—约五39～40。</p>
+<p class="ot2">2.　旧约用预表和预言描绘这位要来的奇妙人物。</p>
+<p class="ot2">3.　到了新约，这位奇妙的人物来到了—太一1注1。</p>
+<p class="ot1">二 　基督是旧约中一切正面图画的实际</p>
+<p class="ot2">1.　旧约用许多预表、预影和影儿，描绘出基督。</p>
+<p class="ot2">2.　在新约，基督是这一切预表、预影和影儿的实际。</p>
+<p class="ot1">三　基督是旧约中一切应许的应验</p>
+<p class="ot2">1.旧约中的预言和应许，都是指向基督，以基督为目标—太一22～23，路二四25～27，44～46，罗一2，林前十五3～4。</p>
+<p class="ot2">2.新约乃是旧约的应验。</p>
+<p class="ot1">四　新约乃是基督这人物活的图画</p>
+<p class="ot2">1.　新约开头的四卷书，乃是一个人物的四本传记。</p>
+<p class="ot2">a.　马太福音见证基督是君王。</p>
+<p class="ot2">b.　马可福音见证基督是神的仆人。</p>
+<p class="ot2">c.　路加福音描绘基督是惟一正确、正常的人。</p>
+<p class="ot2">d.　约翰福音揭示基督是神的儿子。</p>
+<p class="ot2">2.　四福音所描绘基督的四方面，正是旧约以西结书中所描绘四活物的四方面—人、 　狮、牛、鹰—结一10。</p>
+<p class="ot2">3.　基督是包罗万有，丰富不已，能供应我们一切的需要，并且绰绰有余。</p>
+<p class="ot2">4.　我们应当在灵中更多珍赏、经历基督的各方面，并向祂发出赞美！</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见全本圣经是关于基督的书，并且基督是旧约一切正面预表和预影的应验。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>全本圣经是关于基督的书。旧约用许多预表、预影和影儿来描绘基督，这些都是基督的图画。到了新约，基督就作为这一切图画的实际而来。我们若看见旧约这些图画及其在新约里之应验的关系，我们就会得帮助看见全本圣经里的基督。基督是旧约里一切正面图画的实际，基督说明并解释了这些图画。而四福音书更清楚的描绘了包罗万有之基督的四方面—祂是君王，是奴仆，是正确且正常的人，是神的儿子—就是神自己。我们若正确的读经，就能在每一页都看见基督。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　全本圣经乃是关于基督的书</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神既在古时，藉着众申言者，多分多方向列祖说话，就在这末后的日子，在子里向我们说话。（来一1～2上。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>全本圣经是关于基督的书，所以正确的读经方法乃是在读的时候把基督找出来。新约的头一个和末一个名字（太一1，启二二21）都是耶稣基督，证明耶稣基督乃是新约的主题，也是新约的内容。圣经是一本生命的书，这生命乃是一位活的人物，就是那奇妙且包罗万有的基督。旧约用预表和预言描绘这位要来的奇妙人物；到了新约，这位奇妙的人物来到了。阿利路亚！赞美主！基督乃是全本圣经的中心和焦点。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>用灵接触主的话，从主的话中读出对基督的启示。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

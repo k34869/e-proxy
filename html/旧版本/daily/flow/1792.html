@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1791')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1793')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 4 课<br />
+在别迦摩和推雅推喇的召会</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　权柄和晨星</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启二26～27：得胜的，又守住我的工作到底的，我要赐给他权柄制伏列国；他必用铁杖辖管他们，将他们如同窑户的瓦器打得粉碎，像我从我父领受的权柄一样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>主对在推雅推喇的召会的得胜者应许说，要赐给他们权柄制伏列国，且用铁杖辖管他们。这是头一个应许。在新天新地里，只有义居住在其中。所以这里要有铁杖牧养他们，把他们从人出来的东西都打得粉碎。再者，神说，‘要把晨星赐给他。’这是第二个应许。晨星就是中国人说的启明星，天最黑暗而又快亮的时候，它出现一时，过后太阳就出来了。许多人看见太阳，但少有人看见晨星；有一天主要被全世界的人看见，但主应许得胜者要在黑暗极深之时得着晨星，意思就是被提见主！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>羡慕作得胜者，在黑暗极深之时作晨星，被提见主。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>对抗属世的召会，持守主的名，主的信仰，更至死忠信。住在至圣所神的面光中，享受隐藏的基督作每日的供应，经历变化成为白石，上面写着新名，与人建造在一起。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>隐藏的吗哪表征什么？你有没有这样的经历？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘巴兰的工作就是世界与召会的联合。需要康士坦丁来高抬我们，这是巴兰的教训。今天神的儿女总是想大、想多，而不注意圣洁和清洁。巴兰是头一个把恩赐卖钱的人。本来所有为神工作的人，都是靠神过活的人，向人一无所取；但到了康士坦丁的时候，所有事奉神的人，都从国库支取薪金。我们若能信靠神，就去作工；不能信靠，就不要作工。巴兰的办法，在神的定规中是从来没有的。’</p>
+<p>“别迦摩”是坚固的高塔，就像马太十三章三十一至三十二节的大树，一切都显露出来，为着对外展示。然而，按原则说，宝贵的东西乃是隐藏的。（44。）在这个时代，基督乃是隐藏的吗哪。所以，我们必须是隐藏的召会。我们必须学习隐藏，不显露。我们不该以属世的方式宣传自己，这样作乃是与世界联婚，犯了属灵的淫乱，不但拜偶像，并且也成了偶像。我们必须学习隐藏。基督在这个时代既是隐藏的，我们作为祂的身体也必须是隐藏的；这样，我们就会享受祂作隐藏的吗哪。</p>
+<p>白石上有主赐的名字，这名字只有我们和主认识，此外没有人认识，因为这名是个秘密。我们需要对基督有秘密、隐藏的经历，这样我们与基督之间就有秘密存在。‘今天主把我们摆在一些环境里，使我们学习变化的功课。在召会生活中，我们不该有任何选择，也不该发起任何改变。我们该留在我们所在之处，喜喜乐乐的受苦，好得着变化。这样，我们就不再是泥人，乃是石人，甚至是白石人。白指明我们得主称义，得主称许，祂喜悦我们。当我们被变化时，我们就正确的、充分的与别人建造在一起。这就是写给在别迦摩召会的信所给我们看见的。’（得胜者，54页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>对基督有秘密、隐藏的经历，被变化成为白石，与人建造在一起。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

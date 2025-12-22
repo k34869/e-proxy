@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('35')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('37')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">紧（二）　生活紧：生活行动需要紧</p>
+<p>凡当兵的，不让今生的事务缠身，好叫那招他入伍的人喜悦。（提后二4）</p>
+<p class="title">建立紧的性格</p>
+<p>在提后二章，保罗用五种人来形容事奉主的人，说到与性格有关的问题，为着训练他的青年同工。三至四节说，我们事奉主的人，好像基督耶稣的精兵；凡在军中当兵的，头一件事就是不让今生的事务缠身，才能打胜仗。这完全是性格的要求。五节说到竞赛的人，为了竞赛争胜，运动员必须受严格的训练；有的教练不只教导技术，还管吃饭、睡觉、穿着，训练性格。一个运动员的性格若是松散的，不按时吃饭、睡觉、生活、行动，就无法赢得胜利。运动场上的赛跑选手，个个都是尽量衣着简便，不愿身上有多余的重量，成为比赛时的缠累；这样，才容易在比赛中得冠冕。</p>
+<p>世上的兵役，役期一满，人就可以放松。但我们在召会中作精兵事奉主，乃是服终身役，是一生一世作精兵。我们必须有这样的精神，向主决志说，‘主阿，我是毕生从军，一生作你的精兵。’事情没有不能作的，乃在乎我们的心有没有放进去。我们的心进去了就能作，所谓‘有志者事竟成’；难处在于人的天性都是好逸恶劳，懒惰成性。李弟兄劝勉我们，操练性格头五年是最要紧的，一点马虎不得；我们应当牢牢抓紧时间，不在乎我们作什么，乃在乎我们学多少。最重要的是学真理、学生命的经历。倪弟兄也劝勉我们，在各方面都要作最紧的人，因为‘紧’才能作出事情来，不然前途就没有盼望。马太福音基本乃是说到作门徒，我们需要学作门徒，作个紧的人，尽所能的有所学习。（参作主合用的器皿，145～146、85～86、16页；主恢复中成熟的带领上册，19页。）</p>
+<p class="title">桑顿的机器被</p>
+<p>英国有一传道人，名叫桑顿（Thornton），很有学问，对于机械很有研究。在他刚信主时，很想早起，就是爬不起来。后来他就利用一架闹钟，挂上一根绳子，穿过滑辘，往上面去，在上面系上一块石头，再穿过一个钉在天花板上的滑辘，垂了下来，系住棉被的四角。早上闹钟一响，绳子脱离闹钟，石头就从上面落了下来。石头一落下来，棉被就被提了上去，被子没有，再也无法睡了，只好爬了起来。因他起先只用闹钟，闹钟响完还是不起来，他就想，不能单用闹钟，总得把棉被揭去，棉被一揭去，就不能不起来了。他这样一连作了几年的工夫，天天晚上把他自己所发明的机器豫备好，早晨棉被飞到天花板上就早起。因他这样管住自己，约束自己，所以神重用他，作工很有能力。（造就故事上册，9页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：抓紧时间，学真理、生命的经历，作个紧的人，尽所能的有所学习。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

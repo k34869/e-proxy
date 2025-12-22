@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1434')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1436')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 6 册 | 第 7 课<br />
+以基督为我们的美德</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　两种生活</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>你们要将一切的忧虑卸给神，因为祂顾念你们。彼前五7</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保罗在腓立比四章五至七节的话，指明世上有两种不同的生活。人类中间只有两种生活：属人的生活和基督徒的生活。属人的生活是挂虑的生活，而基督徒的生活乃是谦让宜人的生活。挂虑的源头乃是撒但，要拦阻神定旨的实现。而谦让宜人是从神来的，代表神，因此，谦让宜人的源头乃是神。活基督就是谦让宜人而一无挂虑。在积极一面，我们应当叫人知道我们的谦让宜人。凡接触我们的人都当知道我们的谦让宜人。在消极一面，我们必须过一种没有挂虑的生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>活基督，过谦让宜人而一无挂虑的生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>与众圣徒思念相同的事，就能在各种景况中，在主里常常喜乐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>要经历与众圣徒思念相同的事，其秘诀是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘腓立比四章所题的头一件事是思念相同的事。…照着我们持异议的天性，我们常常不能同意别人。若有人建议我们作一件事，我们可能故意作相反的事。小孩在懂得别的字之先，就会对他母亲说，“不！”我们从年幼，就学会对别人说“不”，对自己说“是”。这是持异议，持异议就是背叛。渴求声望和敬重是我们持异议的根由。即使我们在一些事上错了，我们可能仍旧想在那种情形里保持尊严。我们随处都能见到人这种堕落的行为。家庭中孩子之间的争论，都是绕着声望为中心。…渴求声望以及因此而产生的异议，乃是出于人的己。…我们若思念相同的事，并且不持异议，就能喜乐。照人的经历而言，持异议的人很少是喜乐的。</p>
+<p>‘我们要知道，“要喜乐”是神的一个命令。神从来没有命令我们去作所不能作的。神给人的命令，都是人所能作得到的。…喜乐既是神的一个命令，我们就应当照着去实行；不然，就是违背神的命令。也许有人要想：喜乐不能是勉强的，我不喜乐的时候怎能喜乐呢？我的身体不好，我的事情又忙又难，我的儿女又多又不听话，像我这样的情形怎能喜乐呢？是的，有许多事是使你不能喜乐。但是请你注意，圣经在这里不是说你要靠你自己喜乐，…神不是叫我们靠着环境喜乐，靠着顺利喜乐，神是告诉我们：“在主里喜乐。”有一件事要认定的：我们不是因环境而喜乐，乃是因我们的主而喜乐。当处境艰难，伤心流泪的时候，我们却能因着仰望那爱我们的，也是我们所爱的主而喜乐。祂够满足我们的心。但是许多人最会忘记，今天听了，明天就忘了，因此，底下保罗立刻说，“我再说，你们要喜乐。”哦，神是要我们喜乐。所以，无论如何，我们要喜乐。’</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>与弟兄姊妹在基督里同负一轭，在主里常常喜乐。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1203')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1205')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 10 课<br />
+ 对付复活并收集馈送</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　亲切的嘱咐、问安与警告</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十六13～14：你们要儆醒，在信仰上站立得住，要作大丈夫，要刚强。凡事你们都要在爱里作。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十六章最后一段，是保罗对哥林人亲切的嘱咐、问安与警告。这段结语陈示一幅美丽和谐，基督身体的生活实际实行的图画，这不仅在使徒和他的同工之间，也在他们和众召会之间，使基督的身体得着建造。　爱神使我们成为蒙神赐福的人，有分于祂所命定，为我们所预备，过于我们所能领略的神圣福分。不爱主使我们成为可咒可诅的人，被分别出来，遭受咒诅。这是何等的警告。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>爱神，使我们成为蒙神赐福的人，有分于祂所命定的神圣福分。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在复活的方式里，操练把主给我们一切盈余的财物献上。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>你有过财物奉献的经历么？</p>
+<p>基督徒馈送及奉献的原则是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘保罗在哥林多前书对付的末了一个事例，是财物的施与受。（十六1～9。）财物的施与受是非常实际的事。我们的基督徒生活与召会事奉，必须充满施与受。我们从神领受的一切财物，不该为自己储存起来，而必须给人，将我们所有的送出去，顾到别人的需要。我们若不是这种信徒，我们就错了。我们在财物这件事上若被打败，我们就不是属灵的信徒，乃是属肉体或属魂的。主若给我们一笔钱，我们就应当给人，以顾到身体。甚至施与受也是一件身体生活的事。</p>
+<p>在对待财物的事上，我们必须学习祷告，寻求主的引导，顾到身体里的光景与圣徒的需要。我们必须关心主的儿女和祂的身体到一个地步，当我们领受了一笔钱，就会将一些给人，然后才花费剩下的，不是为着我们自己，乃是为着身体。</p>
+<p>按照二节来看，我们应当在七日的第一日，奉献我们的馈赠。这是第八日，表征复活。我们在复活的日子奉献，这表明我们应当在复活里给与。我们不应当在老旧的方式里奉献，乃该在新路里奉献。我们必须在复活的方式里，把主给我们一切盈余的财物献上。肉体和旧造必须彻底受对付。</p>
+<p>有时候，我们可能把好东西送给我们亲密的亲戚，以应付特殊的需要。这也许是照着主的引导，但可能没有生命的分赐。我们却应当乐意将我们的盈余给同工、给主的仆人、给那些与我们没有任何肉身关系，却在身体里有真实关系的主的子民。我们给与人，不是因为我们天然的爱他们，或出自友情或关系爱他们，乃是因着主的负担、权益和工作。我们不是在旧造里给与，乃是在新造里给与；不是在第七天给与，乃是在第八天给与。原则上，我们在主日给与。’（由基督与召会的观点看新约概要卷二，198～199页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>操练在主日时，在复活的生命里，胜过玛门的霸占，有财物的摆上。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

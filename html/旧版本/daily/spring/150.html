@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('149')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('151')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第8课 创造—从天看出神的大能</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约伯记二六7 神将北极铺在空中，将大地悬于虚无之上。</p>
+<p>引    题：小朋友们，你们知不知道我们人类住在哪里？知不知道地球是在空中悬着呢？那么又是谁在支撑呢？</p>
+<p>课程内容: 神创造地时，立了地的根基，定了地的尺度，将大地悬于空中（伯二六7）而神自己却靠着祂的大能拖着，支撑着地球，使我们快乐的在其上生活。主啊，赞美你是大能的神！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造向我们展示神的大能。当神创造天地时，祂显出祂的大能。一切都是靠神的大能来维持的。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：携带一些重物品，并询问孩子是否能举起。然后带一些较轻的物品，让孩子们尽可能长时间举起它们。这将说明我们的力量是有限的。然后把地球与一个孩子所能理解的物体相比重量（比如大象），并问孩子们：“是谁在支撑着地球？”</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>耶利米书三二17 哎，主耶和华阿！你曾用大能和伸出来的膀臂造了天地，在你没有难成的事。</p>
+<p>引    题:小朋友们，你们做了一些事情，并且做了好长时间之后会不会感到困倦呢？</p>
+<p>课程内容：在创世记一章一节：『起初神创造天地。』旧的圣经是用希伯来文写的，这里的『神』，希伯来文是『以罗欣』。以罗欣的意思是『信实的大能者』。这意思是说，我们所敬拜的这位真神，是信实的，也是大能的。他是大能者，所以他能从一片无有中，创造出天天地万物和人类，宇宙中有数十亿个星体，制造这些需要巨大的能力，但祂不依靠任何人或任何物来帮助他，祂只需要一句话就成了，因为祂说有，就有；命立，就立。并且祂从不觉得困倦 （诗篇 33:9）赞美神是大能的神！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造向我们展示神的大能。宇宙有数十亿个星体。制造这些东西需要巨大的能量。神创造了天上的一切，祂并没有感觉疲乏，也不困倦。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：用以赛亚书40:28“你岂不知道么？你岂不曾听见么？永远的神耶和华，创造地极的主，并不疲乏，也不困倦。”说明当我们做某事时，我们很容易感到疲倦。例如，拿一些面团给每个孩子机会揉搓面团做面包。他们在手累之前能揉搓多久？告诉他们，尽管这只是制作面包的一步，我们也很容易疲劳。神创造了诸天和万物，但祂并不疲倦。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>希伯来书一3 祂是神荣耀的光辉，是神本质的印像，用祂大能的话维持、载着并推动万有；祂成就了洗罪的事，就坐在高处至尊至大者的右边。</p>
+<p>引    题:宇宙有多大？宇宙的边界在哪？</p>
+<p>课程内容：随着古代科技的不时开展，人们关于外界宇宙的探究也越来越多，从发射卫星、火箭，到载人航天飞船，人类不断想去看看宇宙的真实相貌，可是这个问题一直没答案，因为宇宙的浩瀚远远的超乎了人类的想像，天文学家用最新的哈勃太空望远镜观测数据刷新了天文学家对宇宙中星系的认知，天文学家估计，宇宙中至少有2万亿个星系，這些星系有大有小。大的直徑幾十萬光年，包含幾十萬億顆星球。小的直徑幾千光年，包含幾千萬顆星球，我們所居住的銀河系是其中的一個星系。</p>
+<p>在这浩瀚无垠的宇宙中，是神用祂的话维持，载着并推动万有，主啊！赞美你，赞美你是大能的神</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造向我们展示神的大能。宇宙仍在膨胀，但我们太阳系中的一切都保持在它应有的位置。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：神在宇宙中不止创造出一个行星，而是在宇宙中创造出许多星系。太阳系的众星环绕太阳转动，太阳是中心。行星围绕太阳旋转，太阳的引力使行星保持在各自的轨道。因为太阳系中没有其他的能力可以阻止它们，它们停留在它们的轨道上。只有神才有足够的大能来维持一切。神的大能使万物维系在一起。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

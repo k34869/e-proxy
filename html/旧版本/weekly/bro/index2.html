@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="css/vuetify.min.css" rel="stylesheet" />
+    <link href="css/mycss.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="#76543a" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title><strong>造就课程</strong></v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center">
+            <v-card elevation="0">
+              <div class="banner">
+              造就课程——学习
+            
+              
+              </div>
+            </v-card>
+          </div>
+      
+          <p class="heading"> 生活的追求： </p>
+          <div class="nav" @click="jump('./z10.html')"> 第九篇  如何读圣经</div>
+          <div class="nav" @click="jump('./z11.html')"> 第十篇  祷告的学习</div>
+          <div class="nav" @click="jump('./z12.html')"> 第十一篇  早起享受主</div>
+
+         <p class="heading"> 聚会的操练： </p>
+           <div class="nav" @click="jump('./z13.html')"> 第十二篇  召会与聚会</div>
+          <div class="nav" @click="jump('./z14.html')"> 第十三篇  聚会的学习</div>
+          <div class="nav" @click="jump('./z15.html')">第十四篇  主日的圣别</div>
+            <div class="nav" @click="jump('./z16.html')"> 第十五课 唱诗的学习</div>
+          <div class="nav" @click="jump('./z17.html')"> 第十六篇   赞美与得胜</div>
+       <div class="nav" @click="jump('./z18.html')"> 第十七篇  擘饼的重要</div>
+         <p class="heading"> 福音的宣扬： </p>
+         <div class="nav" @click="jump('./z19.html')"> 第十八篇   为主作见证</div>
+          <div class="nav" @click="jump('./z20.html')">第十九篇   领人来归主</div>
+          <div class="nav" @click="jump('./z21.html')">第二十篇   全家要得救</div>
+ <br />
+ <br />
+        </v-main>
+      </v-app>
+    </div>
+   <script src="js/vue.js"></script>
+    <script src="js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "index.html";
+          },
+          jump(id) {
+            window.location.href = id;
+          },
+        },
+        computed: {},
+        async mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+  </body>
+</html>

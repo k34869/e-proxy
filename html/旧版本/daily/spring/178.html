@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('177')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('179')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第12课  创造—创造中令人惊讶的原理</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇十八30上 至于神，祂的道路是完全的…</p>
+<p>引题：小朋友们，我们都吃过芽菜没有，那你们知道不知道它们是怎样生长的？</p>
+<p>课程内容：为了观察生长黄豆的过程，我把几粒黄豆泡在水中，一天后将水倒掉，黄豆变大了，我把黄豆放进一个碗里，盖上一块湿布。4月17日，黄豆长出根来了，我选定一颗黄豆，每天在下午5时30分的时候测量根的长度，并记录下来。第一天黄豆的根长出7毫米，第二天长到15毫米，第三天长到30毫米，第四天长到60毫米，第五天我发现黄豆的根两旁长出许许多多细细的根须，又长到110毫米，第六天长到了115毫米，我发现黄豆的生长速度变慢了，第七天才长到120毫米，我看见黄豆经过7天终于长出了两片嫩嫩绿绿的。如果我们继续浇水，并把它们放在阳光底下，它们就会继续生长，会开花，会结果！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：在神的创造中，一切都是以完美的方式精心策划和设计的，没有任何过度或不及之处。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：一粒小小的种子中蕴含着长成、开花、繁衍或结果所需的一切，这实在令人惊奇。神的详细计划为生命提供了一切必要的东西。种子一无所缺，它能自我保护，它有自己的营养来源。即使是小小的种子也有足够的力量破土而出。种子中的每一部分都是有用的，没有不足也没有浪费。带来不同大小的种子，以及种子生长的图片。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇七四16 白昼属你，黑夜也属你；月亮和日头是你所预备的。</p>
+<p>引题：小朋友们，你们都见过日食和月食吗，知道不知道它们都发生在什么时间段！</p>
+<p>日食是月亮运动到了地球和太阳中间，月亮挡住了太阳光，于是出现日食。月食是地球运动到了太阳与月亮的中间，地球把从太阳射向月亮的光挡住了，而月亮本身不发光，所以出现月食。</p>
+<p>课程内容：日食和月食分别是什么</p>
+<p>日食是一种天文现象,只在月球运行至太阳与地球之间时发生.这时,对地球上的部分地区来说,月球位于太阳前方,因此来自太阳的部分或全部光线被挡住,因此看起来好像是太阳的一部分或全部消失了。这时，月球就会挡住太阳射向地球的光，月球身后的黑影正好落到地球上，这时发生日食现象。</p>
+<p>月食：月全食是月食的一种，当整个月球完全进入地球的本影之时，就会出现月全食。 月食是自然界的一种现象，当太阳、地球、月球三者恰好或几乎运行在同一条直线上时(地球在太阳和月球之间)，太阳到月球的光线便会部分或完全地被地球掩盖，产生月食。月食可以分为月偏食、月全食和半影月食三种。</p>
+<p>他们最大的区别就是，日食发生在白天，一般发生在农历的初一，月食一般是在晚上，发生在农历十五的前后，。日食是月亮夹在太阳和地球的中间，投下的阴影形成日食，月食是地球夹在太阳和月亮的中间，地球遮挡了太阳照射到月亮的光线，形成月食。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：在创造中，每件事都是以准确而精确的方式设计的。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：太阳、地球和月亮是三个大小不同的球体，但是它们却以正确的大小和位置被安置，所以才会有日食和月食。（月蚀发生在地球经过月球和太阳之间时，地球的阴影遮蔽月球的一部分。日食发生在月亮经过地球和太阳之间时，遮挡了所有或部分太阳。）日食意味着神必须非常精准准确并精确的排列太阳、地球和月亮之间的位置。带三个不同直径的圆（或球），让孩子试着模拟日食的情景。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约翰福音十二24 我实实在在的告诉你们，一粒麦子不落在地里死了，仍旧是一粒；若是死了，就结出许多子粒来。</p>
+<p>引    题：小朋友们，你们知道什么是复活吗？复活是生命在死亡后再复生。诗人白居易写过一首古诗：离离原上，一岁一枯荣，野火烧不尽，春风吹又生！这就是复活的景象，当冬天到了，树木都看起来枯萎了，草也枯干了，但是到了春天来临，它们就又发芽生长了，这就是复活，在神的创造中，我们可以看到复活的原理。神借着奇妙的植物给了我们一幅幅复活的图画。</p>
+<p>课程内容：全息谷物——种子的生命力</p>
+<p>一粒小草的种子，上面压着层层的瓦砾与石块，种子的小芽向着阳光拼命向上顶，在这样实力悬殊的较量中，弱小的种子却是最后的赢家，阻止它的石块被它掀翻了；人体的头盖骨坚固而紧密，解剖学家用尽一切办法想要完整的分开它也没能成功。后来有人把植物的种子放在要剖析的头盖骨里，给予合适的条件使它发芽。一发芽，这些种子便以可怕的力量，将一切机械力所不能分开的骨骼，完整地分开了；古莲子在地层中度过上千年岁月后还能够开出鲜艳美丽的惊世之花。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：在创造中我们可以看到复活的原理（生命是从死亡中出来的），神给了我们一个奇妙的复活图画。有些人怀疑复活是不可能的，但是如果我们观察植物，我们就会看到复活的图画。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：为了使种子发芽，必须先将种子埋在地下。地里没有光，没有空气，好像种子埋在地里死了。然而生命是从埋在地下的种子发芽而生的。死亡不是结果，而是产生生命的方式。森林火灾也显示出复活的图画。火似乎毁灭了生命，但实际上是新森林生长所必需的。火燃烧诸如枯枝和树叶之类的东西，为植物生长提供新的空间，并允许阳光照射到森林地面，使新的幼苗生长。燃烧产生的灰烬被土壤吸收，为新植物提供养分。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

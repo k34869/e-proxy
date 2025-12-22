@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('122')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('124')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">深的操练（二）扎根、隐藏的生活</p>
+<p>主耶稣在马太十三章说到撒种的比喻。（3～8。）有一个人出去撒种，撒的时候，有落在路旁的，有落在土浅石头地上的，有落在荆棘里的，有落在好土里的；这给我们看见，传神话语的时候，人的接受，有四种不同的态度。在这几种不同的情形中，有一种叫作土浅石头地，上面是土，下面是石头。种子落在这种地上，长得顶快，但是日头出来一晒，因为没有根，就枯干了。什么是根？根是长在下面的。什么是叶子？叶子是长在上面的。换句话说，看不见的生命叫作根，看得见的生命叫作叶子。许多基督徒的难处，就是看得见的生命虽然有，但看不见的生命却少得很。这意思是，缺少隐藏在深处的生活。你作基督徒这么多年，你生命中有那一部分是人所没有看见的，是人所不曾知道的？在你外面的好行为之外，人看不见的还有多少？你所有属灵的经历如果都是人所知道的，你就没有根。如果你所有的经历都是显露的，那你所有的都是往上长的，不是往下扎根的。这样，你就是土浅的人。</p>
+<p>以赛亚书记载犹大王希西家生病求神医治，神听见他的祷告就医治他。巴比伦王子听见希西家病得痊愈，就送书信和礼物给他。希西家喜欢见使者，就把自己的宝库，银子、金子、香料、和贵重的膏油，以及他整个军器库，并他所珍藏的一切都给他们看。（三八1～8，三九1～4。）希西家是个经不起试探的人。他病才痊愈，就不免心里高傲。他打开宝库给人看，说出他是一个浮浅的人，天然的生命没有受对付，以致他的根露在外面。因此以赛亚对他说，‘你要听万军之耶和华的话：看哪，日子必到，凡你家里所有的，并你列祖积蓄到今日的，都要被带到巴比伦去，不留下一样；这是耶和华说的。’（5～ 6。）许多人忍不住不说自己的经历，并且一说就要说个痛快，这也像希西家把宝库所有的打开给人看一样。这种浮浅的生活，叫我们在神的面前受到最大的亏损，也叫我们在神面前不能有长进。这是严肃的事，我们不可不注意。（参十二篮第一辑，90～91、93～95页。）</p>
+<p>但那撒在好土里的，就是人听了道，也领悟了，他就结出果实，有的结了一百倍，有的六十倍，有的三十倍。（太十三23）</p>
+<p class="title">撒播基督这生命的种子</p>
+<p>李常受弟兄见证他与倪柝声弟兄在一起的年间，看见倪弟兄不是在作工，乃是在撒播基督这生命的种子。倪弟兄也曾告诉李弟兄，和受恩教士不是来中国作工，她在中国乃是撒播基督，甚至是在基督里把她自己撒出去。她是一粒种子撒在中国。如今，主的恢复就是和教士与倪弟兄所撒的种子产生出来的。我们读福音书，看见第一个工人就是基督自己。然而，主没有作多少工作，祂乃是在撒种，把祂自己作为生命的种子，在话里撒在门徒里面，使他们成为国度之子。这指明神的路乃是生命的路。</p>
+<p>我们若要成为这样撒播基督的人，就需要过一种深而隐藏的生活，并且要背起自己的十字架，接受十字架的破碎，才能流露神的生命，将基督作为生命的种子撒播出去。（参马太福音生命读经，493～495页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：看见自己里面土浅石头地的光景，并向主悔改。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

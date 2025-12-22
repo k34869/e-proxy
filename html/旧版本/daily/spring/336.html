@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('335')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('337')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">抵销不是对付</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">你们要以恩慈相待，心存慈怜，彼此饶恕，正如神在基督里饶恕了你们一样。（弗4:32）</div>
+<div id="CC">And be kind to one another，tenderhearted，forgiving one another，even as God in Christ also forgave you.（Ephesians 4:32）</div>
+<div id="C">有位弟兄在服装店作了一件大衣，作好后送来，才发觉衣料被服装店老板赚了，大不满意，就不给老板工价。两人因而发生口角。三年后，这位服装店的老板得救受浸了。每逢聚会，这两位弟兄因为已往的口角，彼此都觉得有些难为情。这位得救多年的弟兄，就去问一位负责弟兄说，“弟兄，我和一位服装店的弟兄，三年前有一件事还没解决。他给我作了一件大衣，因为赚了我的衣料，我就没有付他工价。现在我有引导，要去对付这个不义。可是我又想到，他所赚下我的衣料怎么办？你看，我是给他工价好呢，还是不给他工价好？”负责弟兄回答说，“你是得救多年的弟兄，并且你的经济状况比他富裕，既然有了引导要对付，你就付他工价好了。至于他赚你的衣料，那是他的不义。”<br/><br/>　第二天，这位弟兄就到服装店去，向那位弟兄认罪，并且付还工价。第三天，那服装店的弟兄，拿着昨天送还的工价，和三年前赚下的衣料，来向这位弟兄说，“弟兄，按照成衣公会的规章，给人作坏了衣服，不许要工价。那一次我的确给你作坏了，并且赚下你的衣料。工钱我是不能收，衣料请你收下，并且求你饶恕我这偷赚衣料的罪。”他们两人就在主面前和睦，跪下祷告，彼此认罪。<br/><br/>　我们不能因为对方对不起我，我也就对不起他；对方亏欠我，我也就亏欠对方，以作为彼此的抵销，而不对付。这种抵销绝不是对付。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

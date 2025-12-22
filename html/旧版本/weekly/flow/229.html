@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('228')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('230')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p class="title">祭坛上的火不可熄灭</p>
+<p>坛上的火要在其上一直烧着，不可熄灭。祭司要每早晨在上面烧柴，把燔祭摆列在上面…。（利六12）</p>
+<p>在利未记六章八节，神吩咐摩西：‘燔祭要整夜在坛上的焚烧处，直到早晨，坛上的火要一直烧着。’在旧约里，帐幕入口的正前方就是祭坛。帐幕外面有洗濯盆，帐幕里有陈设饼桌子、灯台、香坛、以及约柜连同其物件。人若要有分那些东西，就必须先经过祭坛，在那里有所对付。放在祭坛上的每一样东西都是供物；这表征奉献。新约清楚教导我们得救后，需要将自己奉献给主。坛上的火要一直烧着，表征神是宇宙中圣别的火，（来十二29，）随时豫备好接纳（焚烧）所献给祂的食物；这也表征神悦纳所献给祂之物的愿望，从不止息。（利六9注4。）</p>
+<p>奉献的关是我们一切经历的关键，也是我们一生之久而非一劳永逸的经历。在豫表里，以色列人必须每日早晚献燔祭。（9，12～13。）燔祭乃是常时不断的祭，燔祭的火不可熄灭，必须日夜烧着。这豫表给我们看见，我们必须有燔祭的生活，每早晨献上自己，每晚结束时再次献上给主。此外，我们该特别为着主日，及主日的事奉和敬拜，奉献自己。</p>
+<p>我们重生后，可能已将自己奉献给主，问题是我们有否在奉献中继续往前。如果人对奉献不忠信，在生命上就不会有多少长大，也无法在主的路上往前。这好比一个人一直走路，却没有走在正路上。往前在乎奉献，每当主向我们点出一件事，我们需要说，‘主，我让你得着这件事。’我们若这样作，就会有生命的长进。当我们忠于我们的奉献，我们就会有活的信心，也会有立场取用能力。我们需要一再的，在主面前对付并清理我们的奉献，使祭坛上的火不熄灭。（参生命经历的实际功课，35、37～39页。）</p>
+<p class="title">神的同在如同火烧</p>
+<p>一九三二年夏天，李常受弟兄到一个地方参加聚会。一天，他在宿舍里看书，读到一句话，使他觉得他和天上的宝座是相通的。从天上的宝座，有眼睛看到他里面；这眼睛一面看他，一面呼召他。他不禁放下书本，对主说，‘主阿！是的，我应当归向你。’这时，他觉得那眼看得更强、更厉害，神的同在就像火烧一样。那时他还没有出来专心传道，不知为何如此，只在那里祷告、唱诗、感谢、赞美，觉得即使全世界都给他，他也不要。他对主说，‘我要永远事奉你。’聚会结束，他回到家里，就是天天喜乐的向人述说耶稣。家里的人都说他着迷了。以后神兴起环境，打发弟兄去找他，慢慢开始有聚会和擘饼。不久，他就脱离职业，完全事奉主，神也藉着他建造各地召会。（参造就故事中册，56～57页。）</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：学习每天早晚，将自己奉献给主，不让祭坛上的火熄灭。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

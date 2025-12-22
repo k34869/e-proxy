@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('329')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('331')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">鞋钱还未给我</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div><br/>
+<div id="c">
+<div class="cont">持守信心和无亏的良心；有人丢弃这些，就在信仰上犹如船破。（提前1:19）</div>
+<div class="cont">Holding faith and a good conscience，concerning which some，thrusting these away，have become shipwrecked regarding the faith.（1 Timothy 1:19）</div>
+<div class="cont">从前有一个人很会讲道。有一天，他在一个大聚会里讲道，讲得正得意时，就作见证说，“你们知道，我实在蒙了重生。现在我脚所站之处，就是
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="23_26_4" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header"><h4 class="modal-title" id="myModalLabel"><a href="/bible/23-26#4" id="wt">以赛亚书二六4</a></h4><button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button></div>
+<div class="modal-body">你们当信靠耶和华，直到永远；因为在主耶和华里，我们有永久的磐石。<br/></div></div></div></div>所说的‘永久的磐石’。”听众之中忽有一人站了起来说，“这位作见证的先生，说他是站在‘永久的磐石’上，这话完全不对；他的脚是站在一双鞋子里面。这鞋子是在我铺子里买的，价钱十二元五角。这鞋子很结实，他差不多穿了一年。我向他要鞋价，至今尚未给我。这样，他所站的岂是‘永久的磐石’吗？”　当你说你是蒙恩的人时，你是否还有不义在你身上呢？若是有，请快快对付，否则你的见证并不荣耀主名，因为给撒但留了地步。</div></div><a class="btt up" href="#" id="btt"><span style="max-width:30px;height: 30px;background-color: #E3D4C1;"><img src="images/home.png" width="30px"/></span></a></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

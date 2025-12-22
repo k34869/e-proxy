@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1218')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1220')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 13 课<br />
+新约的执事</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：神所赐恩典最高的定义。（诗歌376首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但他们的心几时转向主，帕子就几时除去了。而且主就是那灵；主的灵在那里，那里就有自由。但我们众人既然以没有帕子遮蔽的脸，好像镜子观看并返照主的荣光，就渐渐变化成为与祂同样的形像，从荣耀到荣耀，乃是从主灵变化成的。（林后三16～18。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　新约执事的构成—林后三6</p>
+<p class="ot1">二　新约执事的盼望与胆量—三12～16</p>
+<p class="ot2">1　有盼望且大大放胆—12。</p>
+<p class="ot2">2　不像摩西将帕子蒙在脸上—13。</p>
+<p class="ot2">3　帕子在基督里已经废去了—14。</p>
+<p class="ot1">三　新约执事被组成的过程—三16～18</p>
+<p class="ot2">1　心转向主，帕子就除去了—16。</p>
+<p class="ot2">2　脱离律法的捆绑，享受主就是那灵—17。</p>
+<p class="ot2">3　以没有帕子遮蔽的脸，好像镜子观看并返照主的荣光—18上。</p>
+<p class="ot2">4　渐渐变化成为主的形像—18下。</p>
+<p class="ot1">四　新约执事的行事为人—四1～2</p>
+<p class="ot2">1　受了这新约的职事而不丧胆—1。</p>
+<p class="ot2">2　活基督而将真理显扬出来—2。</p>
+<p class="ot1">五　新约执事生活的目标与目的—照耀基督的福音—四3～6</p>
+<p class="ot2">1　他们的福音蒙蔽在灭亡的人身上—3。</p>
+<p class="ot2">2　不是传自己，乃是传基督耶稣为主—5。</p>
+<p class="ot2">3　神照在他们心里—6。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识新约的执事乃是为主以祂作赐生命并变化人的灵所组成，并且他们的行事为人，是为着照耀基督的福音。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>在哥林多后书中，使徒说过新约的职事以后，继续说到新约的众执事。他首先描述新约的众执事乃是心转向主的人，他们的脸没有帕子遮蔽，他们享受是灵的主，使他们脱离律法的辖制，并且他们观看并返照主，渐渐变化成为主的形像。藉着这变化的过程，他们就为那灵用基督身位和工作的元素，构成基督的众执事。因此，他们的所是乃是出于基督，并用基督所构成；他们的职事乃是将基督供应人，用包罗万有的基督这内住、赐生命的灵，灌注他们。他们的行事为人，是为着照耀基督荣耀的福音，所以他们既受了这职事，就不丧胆，也不搀混神的话，乃将真理显扬出来；他们不传自己，乃是传基督耶稣为主，也传自己为基督的缘故，作众信徒的奴仆。所有的信徒都该效法他们，成为同样的人，并且完成同样的职事。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　新约执事的构成</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林后三6：祂使我们够资格作新约的执事，这些执事不是属于字句，乃是属于灵，因为那字句杀死人，那灵却叫人活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>新约的职事是神经纶那独一的职事，单数的，而执事却是复数的；许多执事的工作都为着同一个新约的职事。把新约服事给人的人，就是新约的执事。新约的执事不是仅仅受了训练或教导，乃是为主以祂作赐生命并变化人的灵所组成一个在灵里的人。我们必须学习停下一切的作为，一直在我们调和的灵里生活行动，在灵里享受并经历基督，同着神并在神里面经历一切神圣的事物。这将使我们够资格成为新约的执事，将基督供应到人里面。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>在调和的灵里生活行动，在灵里享受并经历基督，同着神并在神里面经历一切神圣的事物 。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

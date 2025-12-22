@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('135')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('137')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第3系列 第6课  创造—从地看出神的秩序</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一14下 …定节令、日子、年岁。</p>
+<p>引    题:小朋友们，你们现在是什么季节吗？一年有几个季节？</p>
+<p>课程内容:春夏秋冬的四季轮换，让我们感受到大自然给予我们的呵护和关爱。春天的雨滴，夏天的鲜花，秋天的硕果，冬天的阳光，我们没有理由不对大自然的美好赐予不去心怀感激。（借着你知道的花草树木说一说四季的变化）</p>
+<p>总    结:一年四季有规律的轮换，给我们看出神是有秩序的</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：创造告诉我们，神是有秩序的。神创造了大地，祂把一切都安排得井然有序。为着万物生长，四季也按照正确的次序轮换。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：由于四季轮换，树叶的生命是周期性的。大多数叶子春天萌芽，整个夏天都常青茂盛。秋天，由于白昼的变化导致叶子因缺乏营养而死亡。树叶从红色变成黄色，再变成紫色，然后变成棕色。叶柄变脆从树上落下来。枯叶将被微生物分解，化作养分返回土壤中，为着新树木的生长。神创造了树叶和树木生长的秩序。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>创世记一30 至于地上各样的走兽和空中各样的飞鸟，并各样爬在地上有生命的物，我将青草赐给它们作食物；事就这样成了。</p>
+<p>引    题:小朋友们，说一种你知道的动物最喜欢吃的食物是什么？</p>
+<p>课程内容:野兽和其他的动物一样，为了生存，需要吃东西。每种野兽都有它们自己喜欢的食物，有的喜欢吃植物，有的喜欢吃动物，有的是杂食性的；它们吃的食物和它们住的地方很有关系。像那些住在澳洲的无尾熊，只吃某几种油加利树的叶子，如果给它们别种油加利树叶子，它们宁愿挨饿也不肯吃。而澳洲就长了很多无尾熊爱吃的油加利树。中国大陆有一种特别的动物，就是人见人爱的大猫熊，它们住在山区的竹林里，它们最爱吃的就是竹子。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：创造告诉我们，神是有秩序的。神按照正确的顺序创造了所有的生物。祂在第三天创造了植物和青草，使在第五天和第六天创造的鸟和动物有食物吃。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：海水中有着数十亿种称为浮游植物的微小植物，大多不到一毫米长。如果没有它们，几乎没有其他动物能在海洋中生存。它们是许多鱼类：鲸鱼，海龟，海豹，甚至鸟类最重要的食物。如果海洋里没有浮游植物，它们都会饿死。（浮游植物被浮游动物所食用，浮游动物被鱼所食用，鱼被海豹或鲸鱼或鸟所食用。）</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>尼希米书九6 你，惟独你是耶和华；你造了天和天上的天，并天上的万象，地和地上的万物，海和海中所有的；这一切都是你所保存的；天军也都敬拜你。</p>
+<p>引    题:小朋友们，你们知道我们生存的地方是在地球的南方还是北方？南方和北方有什么明显的区别？</p>
+<p>课程内容:不同的地区具有不同的气候，不同地区的土壤也有不同的性质如酸碱度等。而同时，植物也有不同的生长条件需求。因此植物生长在不同的地方是由当地的土壤条件，气候特点，以及植物的性质共同决定的。比如热带雨林说到热带雨林，大家不一定见过，但是对于这个名字却不陌生，热带雨林被誉为“地球的净化器”，那么热带雨林的作用究竟体现在哪几个方面呢？第一是它的观赏性，热带雨林绝对是一大美景，这样的美景不去看看，真是可惜。第二就是净化空气，热带雨林光合作用十分旺盛，为地球提供了大量的优质氧气。第三野生动植物宝库，大大丰富了生物多样性，如果来到热带雨林，你会见到好多都没有听说过的野生动植物。第四涵养水源的作用，大量的水被热带雨林涵养起来，如果在热带雨林进到一条小溪，你会惊叹它的美丽，这也有热带雨林的功劳。大雾下的热带雨林倒是增添了几分神秘感。总之，热带雨林的作用实在是太多了，如果有机会的话，一定要到热带雨林</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：创造告诉我们，神是有秩序的。因着神创造的秩序，许多不同种类的生物可以在地球上共存。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：雨林是世界上一半以上动物的家园，从微小昆虫到大型哺乳动物，世界上至少三分之二的植物物种都生长在这里。土壤、气候，以及3000万种动植物，都在此共存并有合适的位置，它们都按着秩序发挥各自的功能。例如，植物和树木防止土壤侵蚀，为地球提供大量氧气，并为昆虫和动物提供食物、住处和庇护所。即使是微小的细菌和蚯蚓，也能将死去的动植物分解或循环成化学营养物，如碳和氮，释放回土壤、空气和水中。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

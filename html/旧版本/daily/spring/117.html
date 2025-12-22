@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('116')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('118')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">神与人的交通</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">因那圣别人的，和那些被圣别的，都是出于一；因这缘故，祂称他们为弟兄，并不以为耻。（来2:11）</div>
+<div id="CC">For both He who sanctifies and those who are being sanctified are all of One，for which cause He is not ashamed to call them brothers.（Hebrews 2:11）</div>
+<div id="C">在自然界，两种生物要有交通，必须有一样的生命、有一样的地位。今天我们能够与主有交通，是因为主已经把祂的生命给了我们，也把祂的地位给了我们。我们与主有一样的生命，有一样的地位，所以我们能够与祂有交通。<br/><br/>　主耶稣成为肉体，是叫祂自己成为人子；祂从死里复活，是叫我们成为神子。祂成为肉体，是叫祂自己来到地上，站在人子的地位；祂从死里复活，是将我们带到天上，站在神子的地位。借此，我们与主耶稣是联合的。主耶稣降生是叫祂自己与我们联合，主耶稣复活是叫我们与祂联合。从祂复活之后，我们与祂有同一的生命，站在同一的地位上。所以希伯来书说，祂受苦之后，就能称我们为弟兄（二12）。<br/><br/>　如果你在这里只看见自己是仆人，主是主人，你和主就不能交通。你必须看见，你有祂的生命、祂的地位；你必须看见，祂称你为弟兄，你和祂站在一样的地位上，彼此能有交通。今天我们虽然是在地上，却有天上的生命；祂虽然是在天上，却有地上的生命。我们能与祂有交通。如果我们真看见这一件事情，就不会沉闷，就要发疯似的赞美祂了！我们要说，阿利路亚！（十二篮，神与人的交通）</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1372')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1374')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 17 课<br />
+极大的奥秘—基督与召会</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌:　主你是那可爱新郎。（诗歌140首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：作丈夫的，要爱你们的妻子，正如基督爱召会，为召会舍了自己，好圣化召会，藉着话中之水的洗涤洁净召会，祂好献给自己，作荣耀的召会，没有斑点、皱纹、或任何这类的病，好使她成为圣别、没有瑕疵。（弗五25～27。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　在夫妻伦常关系上需要的生活—弗五22～33</p>
+<p class="ot1">二　基督与召会的预表—23～32</p>
+<p class="ot2">1　基督与召会的预表—23～25。</p>
+<p class="ot2">2　圣化召会—26。</p>
+<p class="ot2">3　荣耀的召会—27。</p>
+<p class="ot2">4　极大的奥秘—28～32。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>从使徒所教导在夫妻伦常关系上需要的生活，认识基督与召会奥秘的预表。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗在以弗所五章二十二至三十三节，开始说到在伦常关系上需要的生活；其中的第一方面，就是夫妻关系的生活。妻子与丈夫之间的关系，乃是联于在灵里被充满。圣经的头一对夫妇，亚当和夏娃，陈明基督与召会一幅满了意义且完整的图画。召会出自基督，如同夏娃出自亚当；召会与基督有同一的生命和性情，并作祂的配偶，与祂成为一，如同夏娃与亚当成为一体。基督爱召会，为她舍了自己，好圣化召会，藉着话中之水的洗涤洁净召会，不仅使召会从一切凡俗的事物圣别归祂，也用祂自己的成分浸透召会，使召会成为与祂相像的配偶。祂也除去我们的斑点，就是属于天然生命的东西，以及皱纹，就是老旧，使我们成为美丽的，也是荣耀的，好在祂来时献给祂自己。因此，以弗所五章二十五至二十七节，向我们陈明在三个阶段里的基督。在第一阶段，基督是救赎主；在第二阶段，基督是赐生命的灵；在第三阶段，基督是新郎。藉着祂的保养和顾惜，基督照料祂的身体—召会，也预备我们成为新妇。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　夫妻关系的生活</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗五23：因为丈夫是妻子的头，如同基督是召会的头；祂自己乃是身体的救主。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>使徒在关于婚姻生活的劝勉里，首先说到作妻子的，因为她就像创世记三章的夏娃，比作丈夫的容易偏离正路。使徒劝勉作妻子的，不论自己的丈夫怎样，都要服从他。并且，这样的服从，要‘如同服从主’。在婚姻生活中，妻子的责任是服从，丈夫的责任是爱。丈夫对妻子的爱，必须像基督对召会的爱，甚至为妻子死。他爱妻子要像爱自己的身体一样，不断的保养顾惜。惟有这样才能有正确的婚姻生活。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>保养顾惜圣徒，即喂养、给与他们深切柔和的照顾。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

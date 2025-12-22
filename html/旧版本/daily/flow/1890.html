@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1889')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 9 册 | 第 18 课<br />
+生命水河与生命树</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　使徒末了的祷告</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>启二二20　见证这些事的说，是的，我必快来！阿们。主耶稣阿，我愿你来！</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>使徒与主是一，发出末了的警告：不可在这书预言的话上加添什么，也不可删去什么。人要受灾害，或享福分，取决于他如何对待本书的预言。不要在这书上加上我们自己的观念、意见、道理、教训、或者神学。也不该从其中删去什么。我们必须全然照着这书上所写的话接受。使徒也以祷告响应主再来的警告。我们看见了这卷书中一切的异象，也听见了其中一切的预言之后，所需要的仍是主的恩典。愿主耶稣的恩典与众圣徒同在—惟有主耶稣的恩典能使我们照着这些异象和预言生活行事。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>向主耶稣祷告：‘主耶稣阿，我愿你来！’</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>吃基督作生命树，使我们得以变化为宝贵的材料，为着神的建造。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>试叙述生命树在整本圣经中的图画。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们必须有异象，看见整本圣经向我们陈明一幅图画，显示神乃是生命树，好作我们的食物。这就是为什么在圣经的开始和末了都题到生命树。（创二9，启二二2，14。）在圣经这首尾两端之间，有许多消极的故事，说到主的子民受打岔、被阻挠、被拦阻，而没有享受神作生命树。圣经里一切积极的故事都给我们看见，神的选民在不同方面享受神作生命树。因为人的堕落，生命树改变形状，成为羔羊。如今我们必须享受祂作救赎的羔羊。我们享受祂救赎的一面之后，就必须立即享受祂作滋养、加力的羔羊。我们必须学习用这种吃的方式来享受主。吃主会把我们从外院子转到圣所。我们藉着吃祂，就被变化成为宝贵的材料，与别人同被建造，为着神的建造。（彼前二5。）然后就会有一个家，一个殿，使神得着安息，并且在这殿里，我们要极其完满的享受主。这样，神的定旨就得以完成。最后，这个家，这个殿，要扩大为一座城，就是神永远心意的终极完成。神的心意乃是藉着吃祂才得以实现的。我们都必须学习如何吃主，如何得祂的喂养。’（生命树，67页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>天天吃生命树的果子，接受基督作内里的生命和生命的供应，使我们对祂不断的有新鲜的经历，在神圣生命里长大，以建造圣城。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

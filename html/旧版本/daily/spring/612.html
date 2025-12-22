@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('611')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('613')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第32课  性格-有耐心</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>诗篇四十1 我曾耐心等候耶和华，祂就侧耳垂听我的呼求。</p>
+<p>有一天小维尼对妈妈说：“妈妈，我想到公园去玩。”</p>
+<p>妈妈当时正在写一篇论文，就对女儿说：“等妈妈把文章写完后再去。”</p>
+<p>“不吗，我现在就要去。”</p>
+<p>“维尼，这篇文章非常重要，妈妈必须写完它。你先玩一会儿玩具吧，等会儿我一定带你去，好吗?”</p>
+<p>过了一会儿，女儿又来催促：“妈妈，还要等多久?”</p>
+<p>当妈妈告诉她还要再等一会儿时，维尼便一声不吭地走了出去。</p>
+<p>妈妈写完论文之后去叫维尼：“我完成工作了，走吧，妈妈带你出去玩。”</p>
+<p>“不，等一等，这个故事我正看了一半”，</p>
+<p>但此时，这位妈妈却很有耐心，她坐在客厅的沙发上等起了女儿。</p>
+<p>最后，等到小维尼读完那个故事，母女俩才一起出门。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：有耐心的人是会等待别人的人。有耐心的人就算等了别人很长时间，仍然心态平静，不会烦躁。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：当你在等爸爸妈妈带你去某个地方时，你是一边抱怨一边催他们快一点，还是会耐心的等他们？有耐心的人会等待别人作完事，即使等了很长时间也不会烦躁。当你吃完饭后，需要等别人都吃完才能离开，你会不会催别人快点吃？还是心平气和的等他们吃完？</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>传道书七8下 灵里忍耐，胜过灵里高傲。</p>
+<p>课堂上，老师在准备为一年一度的幼儿园联欢晚会做准备，可是依旧有好多小朋友学不会，不是忘记歌词，就是唱错了调。</p>
+<p>突然，老师想到了一个好主意，她将小朋友分成两两一组，让学习快的帮助学习慢的。</p>
+<p>最后，小嘟拉和小楠楠两个人被分在了一组。可是，小楠楠总是记不住歌词，他每次都需要小嘟拉提醒。</p>
+<p>小楠楠心里很难过，对小嘟啦说:不好意思哦，我老是记不住，让你一直帮我。没关系，加油，想信你可以的。你是太心急了，要静下心来，先把歌词记住，再唱出来，这样印象就会更加深刻，我们一起来试一试。</p>
+<p>嗯，好吧，我听你的。</p>
+<p>在嘟拉的监督下，小楠楠按照方法，熟记歌词，他不但记住了歌词，歌声还非常优美，嘟拉为他竖起大拇指，</p>
+<p>你成功了，真棒！</p>
+<p>嗯，这次多亏有你帮我，要不是你这么有耐心地教我，我不可能这么快学会。谢谢你！</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：有耐心的人是行事为人保持冷静不生气的人。他们能理解人，知道别人处理问题需要时间，学一样东西也需要时间。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：如果你在教弟弟妹妹妹或朋友作某件事时，他们学的很慢，你会不会没有耐心，不再教他们？有的家庭作业要花好长时间才能写完，你是不是写一小会就不想写了？对那些学习新事物比较慢的人，有耐心的人不会嫌他们烦；遇到很长时间才能完成的任务时，有耐心的不会放弃。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>约伯记六11 我有什么力气，使我等候？我有什么结局，使我忍耐？</p>
+<p>雅各书五7 所以，弟兄们，你们要恒忍，直到主的来临。看哪，农夫等候地里宝贵的出产，为此恒忍，直到得了秋雨春雨。</p>
+<p>李白是唐代的大诗人，但是小时候读书并不用功。有一天，他的书读到一半，就不耐烦了：“这么厚一本书，什么时候才能读完啊！”于是他干脆不读了，把书一扔就溜出去玩。</p>
+<p>李白快乐地跑着，忽然，他看见一位老奶奶正在磨刀石上，用力地磨着一根铁棒。李白觉得很奇怪，便蹲了下来，傻傻地看了好一阵。老奶奶也不理会他，只是全神贯注地磨着。后来，李白忍不住了，问道：“奶奶，您这是干什么呢？”</p>
+<p>“我在磨一根针来缝衣服。”老奶奶头也不抬，专心地磨。“磨针？”李白更加奇怪了，“这么粗一根铁棒怎么能磨成针？！”老奶奶这才抬起头来说：“孩子，铁棒再粗，我天天磨，还怕它磨不成一根针吗！”</p>
+<p>李白听了，恍然大悟，“对呀!只要有耐心和恒心，再难的事情也能做成功的，读书不也是这样吗！”于是他便立刻转身跑回家去，拾起扔在地上的书本，专心地读，从此也不再敢偷懒了。后来他终于成了中国历史上一位伟大的诗人。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：有耐心的人是为了美好的结果，甘愿等待很长时间的人。他们既不着急，也不懒惰，而是勤奋地作自己该作的事，不丧失希望，让时间来作工。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：向孩子们描述农民的劳动。他们如何播种，如何在田地里劳苦，还要耐心地等待几个月，才能够看到庄稼劳动的结果。对农民来说，想要催促庄稼、逼着庄稼快点长是荒谬的。因为农民们知道，生命从种子到发芽再到成长是需要时间的。生活中的许多事情都需要时间，我们不能期待立刻就得到结果。当你上午才考完试，你能希望老师下午就评出成绩吗？当你第一次尝试（学习一种新乐器或者学习画画），你能因为第一次作的不够好就失去希望，就放弃吗？一个有耐心的人清楚知道结果不是瞬间就能获得的，必须坚持勤奋的工作。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

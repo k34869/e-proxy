@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1540')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1542')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 5 课<br />
+为着召会生活之圣别生活的鼓励与改正</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <div class="contents">
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>诗歌：一切在于爱耶稣。（补充本诗歌315首。）</p>
+</v-alert>
+              </div>
+              <div class="mt">
+                <v-alert border="left" colored-border color="info" elevation="2"><p>背经：但愿我们的主耶稣基督自己，和神我们的父，就是那爱我们，在恩典中将永远的安慰和美好的盼望赐给我们的，安慰你们的心，并在一切善行善言上，坚固你们。（帖后二16～17。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>纲目</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p class="ot1">一　引言—帖后一1～2</p>
+<p class="ot1">二　为着召会生活之圣别生活的鼓励与改正—一3～三15</p>
+<p class="ot2">1　鼓励—过配得神国的生活—一3～12。</p>
+<p class="ot2">2　改正—对主来之日的谬见—二1～12。</p>
+<p class="ot2">3　进一步的鼓励—二13～三5。</p>
+<p class="ot2">4　对不守规矩者的改正—三6～15。</p>
+<p class="ot1">三　结语—三16～18。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>中心思想</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>为着召会生活之圣别生活的鼓励与改正。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>课程摘要</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>帖撒罗尼迦后书是一卷鼓励与改正的书。保罗在本书一面鼓励帖撒罗尼迦召会的初信者，一面也在对主来之日的谬见上，以及对不守规矩者的事上，改正他们。本书延续前书的思想，强调圣别之召会生活的基本结构，是由信心、爱心和盼望所构成。为了经历藉着圣别而得救，并在为着召会生活之圣别生活的基本结构上长大，我们需要永远的生命作永远的安慰。我们也需要那灵作恩典，并需要恩典本身。因此，我们乃是藉着永远的生命作永远的安慰，藉着那灵，就是经过过程之三一神作恩典，而为着召会生活过一种圣别的生活。</p>
+</v-alert>
+              </div>
+            </div>
+            <v-btn block color="primary" elevation="1" tile><b>周一　鼓励的话</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖后一3：弟兄们，我们应当常为你们感谢神，这本是合宜的；因你们的信心格外增长，你们众人每一位彼此相爱的心也一直增加。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>帖后是一卷鼓励与改正的书。在后书这里，信心和爱心在他们基督徒的生活里，一直增长并增加。神在今世如何对待不同的人，乃是祂在将来施行公义审判的指明、表征和证明。而逼迫与患难乃是神公义审判的明证，表明我们可算配得神的国。在此我们再次看见，国度是基督徒生活的目标。我们今天活在召会生活里，乃是有目标的，就是我们有一天要进入神的国。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>看见国度乃是基督徒生活的目标。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+      .ot1 {
+        font-weight: bold;
+      }
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

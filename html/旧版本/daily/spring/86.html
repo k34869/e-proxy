@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('85')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('87')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">一条大鱼</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <div class="main">
+<div id="chap1"></div>
+<div id="CC">并要在患难之日呼求我：我必搭救你，你也要荣耀我。（诗50:15）</div>
+<div id="CC">And call upon Me in the day of trouble: I will deliver you，and you will glorify Me.（Psalm 50:15）</div>
+<div id="C">有一个寡妇，抚养了五个孩子，生活极其穷苦。有一天，天气十分寒冷，家里只剩一点面。母亲就用仅有的面作了一块饼，分成两半，作为午、晚两餐之用。到了晚上，吃完最后半块的饼，母亲坐在灯下，想到明天的日子不知如何过，不禁叹口气说，“我太骄傲了，从来没有借着祷告寻求神的帮助。现在虽想祷告，但是心里又冷又硬。”于是翻开圣经，盼望找到一些关于穷乏得着供应的例子。然而转念之间，心想：此时总不会有申言者到我这里，即使有申言者来，也不会增加我的粮食，因为坛里没有一点面；明晨只好叫四个孩子喝些开水，打发他们上学。想到这里，忽然看到诗篇里的一句话：“并要在患难之日呼求我：我必搭救你，你也要荣耀我。”（五十15。）这句话摸着了她的心，立即泪如雨下，跪在主前祷告。当下，她的小女儿玛利忽从外面跑进来，说，“妈妈，我找到一条大鱼，但我拿不动。”母亲随即与女儿一同跑到河边，果真发现河边岸上有一大鱼。取回后卖给一家大饭馆，鱼重十九磅半，得了一大笔钱。</div></div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

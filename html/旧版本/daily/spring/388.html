@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('387')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('389')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第4系列 第14课  十诫——神颁赐诫命的目的</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>罗马书三20下 因为律法本是叫人知罪…</p>
+<p>在苏格兰那地方曾有一个法官的侄子，因为犯法而被人控告，这件案子恰好是这位法官审理的。开庭那天，法庭里挤满了人，都想看看法官如何审判自己的亲人。审判之时，全堂鸦雀无声，法官对他侄子宣判说，“所有民众都该遵守法律，你既犯法，就当受该受的刑罚。”结果，他的侄子被判罚五个金磅。这时全庭屏息，少年人难过极了，因他感觉在众人面前被罚很没面子，并且他根本无力付这五个金币的罚金。就在这时，法官站了起来，脱下法官的衣服，走到他侄子旁边，从口袋里拿出五个金磅，放在法官秘书前面，作为侄子的赎金。按着公义来说，法官的侄子该受刑罚，但他无力付出这五个金磅，所以法官为他的侄子付了这罚金，使侄子能履行这公义的判决。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：神给人律法是要让人知道什么是善。神渴望要人知道祂公义的标准（怎么作是正确的）。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：讲述出埃及记十九章到二十章神颁布十条诫命的故事。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>加拉太书三23 但信仰还未来到以先，我们是被看守在律法之下，被圈住好归于那要显示的信仰。</p>
+<p>在家中，父母通常都会给我们一些规定，像早晨该几点起床，平日应当作哪些事等。在学校中，也有班规和校规，例如几点以前要到学校，上课不能吵闹喧哗，考试不能作弊等。为什么要有这些规定呢？有了这些规定，我们行事为人才有一个标准的规范或范围可循，超过这个范围，就要受当受的处罚。照着规定去执行，不随意改变，这就是公义。有时我们犯错，爸妈惩罚我们，为什么爸妈那么严格，不能通融？这不是严不严格的问题，乃是公义的问题。公义的意思就是公平与正直，当我们作错事，父母或老师必须惩罚我们，并不是他们爱惩罚人，而是他们必须照着公义来对待人。如果有一个同学，常常触犯老师的规定，而且每次都找理由来逃避老师的处罚，或者嫁祸给别人，这样的同学，我们必定不喜欢他，因为他的行为不公义。所以公义可以解释为“照着公平和正直作事的原则”。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：神给人律法，为使人知道什么是善，使人不犯罪。神要人不仅知道祂公义的标准（怎么作是正确的），还要知道什么是不义的（怎么作是错的）。</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：讲述出埃及记十九章到二十章神颁布十条诫命的故事。指出那时以色列子民住在埃及，他们不认识他们的神是谁。十条诫命帮助他们认识神公义和不义的标准。这并不是他们从埃及那里学得的。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>出埃及记三四28 摩西在那里与耶和华同在四十昼四十夜…耶和华将这约的话，就是十条诫命，写在两块版上”。</p>
+<p>这位法官如何是公义的，我们的神更是公义的。圣经告诉我们，公义和公平，是神宝座的根基（诗八九14上）。神的宝座是建立在他公义和公平的根基上，这根基永不动摇。前一课我们说到，亚当和夏娃犯罪而被神赶出伊甸园，神在伊甸园的东方安设了基路伯，和四面转动发火焰的剑，把守生命树的道路。神这么作，因为神是圣别的、是公义的；他的公义使他绝不能以有罪的为无罪。那剑就是表征神的公义，使神不能容许有罪的人再来接触生命树，所以神以他的荣耀、圣别和公义，封闭了通到生命树的道路。</p>
+<p>到神是慈爱的，圣洁的，真实的，纯洁的。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：神给人律法，让人认识神是什么样的神。律法就像是神的肖像。借律法我们可以认识</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：讲述出埃及十九章到二十章，和二十二章到二十四章神给予十条诫命的故事。指出在颁赐诫命的时候，摩西在神面前度过了四十天四十夜。在这四十天里，摩西不但领受了十条诫命，而且领受了神的见证。这表明神颁赐律法的主要目的是使人成为神的见证。关于法律问题，有一个重要的原则：人所制定的法律表现出一个人的所是。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

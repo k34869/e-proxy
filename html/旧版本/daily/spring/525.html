@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('524')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('526')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">鱼席宴客</div>
+          <div class="contents">
+            <v-divider></v-divider>
+            <br />
+            <p>林前3:10　我照神所给我的恩典，好像一个智慧的工头，立好了根基，有别人在上面建造，只是各人要谨慎怎样在上面建造。</p><p>某富翁家中用了一个管家；这个管家是一质朴忠诚的乡下人。他爱他的主人和他主人的家，不亚于自己的骨肉与自己的家庭。他的忠心甚得主人的欢心。某年暑假期间，主人携眷要到海滨消暑。临走吩咐管家说，‘我们这座楼房，因为多年失修，屋内粉墙都已剥落，污浊得很难看，趁着今夏我们全家外出之时，你可以去找几名工匠，将各墙壁粉刷一遍。这些墙壁本来是白色的，但是以后要刷一层好看的色彩，可以更能悦目。’等到主人避暑走了，管家立即寻找工匠，开始粉刷楼房。他想主人吩咐要刷好看的色彩，就很慎重的选择了他自己心目中最爱的红色。主人度过暑假，回家一看，几乎把他吓倒。好好一座楼房，竟都染成红色，红色有害人的神经，且要去掉红色，再行改换其他浅的色彩，也是不易的事。这座楼房未经粉刷以前还好居住，但经这次粉刷，竟使主人全家都感容身无地之苦。主人对于这样一位管家，虽然满心爱惜他的忠诚，但为将来不至发生其他同样的困难与损失，只好忍心将他辞掉；另找一个有见识的人来作管家。人把人天然的看法带到神的事工上，岂不也是常常使神为难么？</p>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      #CC {
+        font-weight: bold;
+        font-size: large;
+        margin-bottom: 1em;
+      }
+      #C {
+        font-size: large;
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+      .title {
+        margin-top: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

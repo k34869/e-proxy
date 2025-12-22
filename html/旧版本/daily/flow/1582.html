@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1581')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1583')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 7 册 | 第 10 课<br />
+召会秩序的维持</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　信徒身份平等的例证</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>门15～17：因为他暂时离开你，或者是叫你可以永远完全得着他，不再是奴仆，乃是高过奴仆，是亲爱的弟兄，…所以，你若以我为同伙，就接纳他，如同接纳我一样。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>因着腓利门的一个奴仆欧尼西母，从主人那里逃走，犯了该死的罪，与使徒同在罗马监狱里，并藉着使徒得救了。现今欧尼西母与腓利门的关系在肉身上是奴仆，但在主里是弟兄。所以保罗推荐欧尼西母给腓利门接纳，这乃是在基督里，在新人里，亲爱、亲密的接纳。基督身体所有的肢体，在神永远的生命和神圣的爱里都是平等的。因着神圣的出生，以及凭着神圣生命而有的生活，所有在基督里的信徒，在召会中都有平等的身份；召会乃是在基督里的新人，没有为奴和自主的区别。我们若要有真实的召会生活，就必须接纳所有的圣徒，无论他们的种族、国籍、或社会阶级是什么，这些都已经藉着十字架废掉了。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>看见信徒在新人里有平等的身份，接纳所有的圣徒。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督身体所有的肢体，在神永远的生命和神圣的爱里都是平等的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>请从提多书和腓利门书来说明奴仆在社会制度中该有怎样的态度，以及在召会生活中信徒身份平等的例证。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘在神的主宰下安排新约经典的时候，腓利门书被安置成前三卷书—提摩太前后书和提多书—的结语。这卷书里主要的点乃是在新人里信徒身份的平等，这一点非常关键。这封简短书信专一的目的，是要给我们看见，基督身体所有的肢体，在神永远的生命和神圣的爱里都是平等的。在保罗那半野蛮的时代，基督的生命在信徒中间废除了牢固的奴隶制度。在基督徒的交通里，爱的情操既是这样有力且得胜，就自然忽视堕落人类中间邪恶的社会等次，也无需任何制度上的解放。因着神圣的出生，以及凭着神圣生命而有的生活，所有在基督里的信徒，在召会中都有平等的身份；召会乃是在基督里的新人，没有为奴和自主的区别。（西三10～11。）这是根据三个事实：（一）基督在十字架上的死已经废掉不同生活方式的规条，为着创造一个新人；（弗二15；）（二）我们已经浸入基督，在祂里面成为一，不再有任何差异；（加三27～28；）（三）在新人里，基督是一切，又在一切之内。（西三11。）这样的生命，同着这样在平等交通里的爱，足能在召会中维持良好的秩序（提多书），完成神对召会的经纶（提前），并对抗召会败落的潮流（提后）。〔腓利门〕书在新约的排列上，位于前三卷之后，乃是出于神主宰的权柄。’（长老训练第六册，142～143页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>看见信徒在新人里有平等的身份，接纳所有的圣徒。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

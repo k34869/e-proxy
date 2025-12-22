@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每周活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('39')"><div class="bt_text">前一周</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('41')"><div class="bt_text">后一周</div></v-btn>
+            </v-card>
+          </div>
+          <div class="contents"><p>我紧紧跟随你的法度；耶和华阿，求你不要叫我羞愧。（诗一一九31）</p>
+<p class="title">紧的操练（二）读主话要紧</p>
+<p>人的性格一松，就无法是立体的，而完全是平面的。平面的人不能成为容器，不能装东西。你的性格若是不建立起来，你就是平平的一个人，没有什么用处。因此，我们学习事奉主，首要注意的就是性格，绝不能放松。以读经为例，我们要定规每天读多少，并且照表实行；生病了也要读，再忙也要读。要在各方面计算又计算，衡量再衡量，尽所能的把时间和精力省下来，用在事奉和属灵的追求上。我们能否好好与主有交通，在主面前有彀多的祷告，好好读主的话，操练在主手中的用处上有进步，完全与我们的性格有关；性格一松，这些都不可能建立。</p>
+<p>提后二章十五节说，‘你当竭力将自己呈献神前，得蒙称许，作无愧的工人，正直的分解真理的话。’这里的工人是指木匠，分解意即分割。保罗的意思是告诉提摩太，要像木匠切割木头一样，把神话语的各部分，正确、正直、毫无曲解的揭示出来。木头一割偏，就完全无用了。如果我们的性格不彀紧，读经一定松散，解释必然不准确。如果我们作什么事都是‘差不多’，解经自然也是差不多。惟有性格严谨的人，才能正直的分解真理的话。我们必须宝贵年轻的时候，努力进入真理，学习生命的经历。圣经是我们无法穷其究竟的。李弟兄见证他天天研读，越读越有得着，也越觉得可读。研读圣经的真理是没有止境的。（参作主合用的器皿，145～146、17页。）</p>
+<p class="title">戴德生的读经法</p>
+<p>戴德生从年少的时候，就按次序有系统的读圣经。他在六十八岁作见证说，他四十年之久，读过圣经从创世记到启示录四十遍，大约每天读旧约三章，新约一章，诗篇一篇。有时因思想贯串，读得多些；有时因为默想多，读得少些。每年总把圣经读一遍。在他看来，读圣经不但培养灵性，而且作他生活工作的指导。圣经对于他，真是脚前的灯、路上的光。他常说，‘有一位活神，这位活神在圣经里说话；神说一句，就算一句，凡神应许的，无不成就。活神仍然活着，圣经是活神所说的活话。凡神所说的，是靠得住的。’戴德生平日习惯早起，守晨更。无论环境如何，绝不稍改。他说，‘那有先开音乐会，然后才调和乐器呢？每天读经、祈祷，先与神调和，然后再与人见面办事。’在他看来，研究圣经，在乎遵行圣经的话；所以他解经讲道，都注重实行这一面。正是因为他实行他自己所知道的，顺服圣经的命令、应许，所以他能明白圣经的深奥。知道即行，越行越知道。如经上所记，‘你们既晓得这事，若是去行就有福了。’</p>
+<v-alert shaped dark color="primary" elevation="2"><div class="ala">生活应用：订定时间表，把时间和精力省下来，追求主的话。</div></v-alert>
+</div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../weekly.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

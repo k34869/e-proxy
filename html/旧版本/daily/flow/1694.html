@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1693')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1695')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 8 课<br />
+有分于基督的苦难而欢乐</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　审判从神的家起首</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前四17：因为时候到了，审判要从神的家起首。若是先从我们起首，那不信从神福音的人，将有何等的结局？</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神的旨意乃是要我们，且已经派定我们，为基督的缘故受苦。逼迫和苦难是一种审判。。这审判是火炼的试验，焚烧的炉，以炼净我们并除去任何的渣滓。他们在火炼的逼迫中所经历的苦难，是神审判他们的凭藉，使他们受管教、被炼净，从不信的人中圣别出来，不和他们有一样的定命。因此，这种管教的审判，要从神自己的家起首，不是一次两次就作完的，乃是一直不断的直到主来。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>认识苦难的临到是神审判我们的凭藉，使我们受管教、被炼净，从不信的人中圣别出来。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>用基督的心思武装自己，使我们在肉身受苦，能与罪断绝。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>彼得劝勉信徒要以什么来武装自己？这样的武装对我们有什么益处？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘一般人都知道，富有的人比贫穷的人犯更多情欲的罪。你若有许多财富，不需要工作，你就能花时间放纵情欲。你也许环游世界寻求享乐。但主也许在财物上限制你，使你几乎没有足够的钱为着生活的需要。你必须长时间劳苦谋生。因着你劳苦的结果，你既没有时间，也没有精力放纵情欲。甚至追求情欲享乐的愿望，也被你的贫穷消杀了。</p>
+<p>富有是危险的。…不要以为因为你是基督徒，且有神圣的生命，你就不会这样受试诱。魔鬼用财富激起情欲；然而，神用肉身的苦难使我们与罪断绝。…</p>
+<p>我们在物质的东西上富有，就不容易远离情欲，并且行神的旨意。这是神把一分苦难分配给我们的原因。这些苦难限制我们的情欲，并保守我们在神的旨意中。就这一面的意义说，我们都应当为着我们的苦难敬拜神。我们应当告诉祂：“主，我何等敬拜你，在你的主宰里，你已将苦难分配给我，使我蒙保守在你的旨意中。”我们不该惧怕我们的苦难会太大。主知道如何将苦难分配给我们。’（彼得前书生命读经，279～280页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>以基督的心思武装自己，忍受苦难，以蒙拯救脱离虚妄的生活。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

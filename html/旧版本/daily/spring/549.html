@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                 <v-toolbar-title>每日活泉</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('548')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('550')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第5系列 第23课  性格—专注</div>
+          <v-divider></v-divider>
+          <v-btn block color="primary" elevation="1" tile v-show="show"><b>初级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>马太福音六22下 所以你的眼睛若单一，全身就明亮。</p>
+<p>法国著名作家莫泊桑小时候曾经在著名作家福楼拜面前，非常自信地告诉他说：“我上午用两个小时读书、写作，用另外两个小时来弹钢琴；下午我则用一个小时向邻居学习开汽车和修理汽车，用三个小时来练习踢足球；晚上我会去饭店里学习怎么样烹饪；星期天我要到乡下去种菜。”说完一脸得意的样子。</p>
+<p>福楼拜听后笑了笑说：“我每天上午用四个小时来读书、写作；下午我用四个小时来读书、写作；吃完晚饭之后，我用四个小时来读书、写作。”</p>
+<p>福楼拜接着问：“你究竟有什么特长？比如有哪样事情，你特别专一和做得特别好？””莫泊桑讲不出来，于是他就问福楼拜：“那么你的特长又是什么呢？”福楼拜说：“写作。”</p>
+<p>原来特长就是要专心、专注地做好一件事情。后来莫泊桑下决心拜福楼拜为文学导师，一心一意地读书、写作，最后拥有了丰硕的成果，他的《羊脂球》和《项链》成为世界名著。</p>
+<p>我们人活在世界上专注于某一件事情，看似非常简单，其实是对你的毅力和恒心的考量。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">焦点：一个专注的人是一个能够一直专注于一个任务，直到完成的人。他们一次不会作太多事情。</div></v-alert>
+            <v-alert border="left" colored-border color="primary" elevation="2"><div class="ala">实际应用：拿三个软球供孩子们玩。让其中一个孩子把球自抛自接。然后把第二个球交给他们，让他们同时掷两个球。最后，让他们试着一次抛三个球。以此来说明我们很难同时作两件或更多的事情。当我们在作作业（或杂事）时，我们也不能玩玩具或阅读漫画书。我们的心应该专注于手中的任务，直到完成为止。</div></v-alert>
+          </div>
+          <v-btn block color="info" elevation="1" tile v-show="show"><b>中级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>雅歌一15下 …你的眼好像鸽子。</p>
+<p>小棕熊的梦想</p>
+<p>草长莺飞，小棕熊从睡梦中醒来，他觉得春天真好，可以实现自己很多的梦想。他想当一个画家，把春天的小燕子画下来，把河里游的小鱼画下来，把妈妈做的香喷喷的蛋糕画下来！如果他再厉害一点，就可以画出像真的一样的蜂巢，蜜蜂们就会把蜂蜜送到这里来啦！小棕熊坐在窗前刚刚拿起画笔，就看见了跳高冠军猴子先生正在练习跳高。他的心里美滋滋地想：跳高好像也挺有意思的，如果我学会跳高，我可以也当跳高冠军了！小棕熊仿佛已经看到了自己撑着长杆，跳过了高高的横杠，森林里的动物们都在为他喝彩。这感觉可真棒啊！“不好不好，我又开小差了，我还是接着画画吧。”小棕熊重新拿起了画笔。可是这时，他又看到了狮子先生正在练习跑步，小棕熊心里不由又想道：如果我会跑步，那我就可以当长跑冠军了！小棕熊仿佛已经看到自己率先冲过了终点线，彩带在头顶飞舞，他的胸前挂着一块金灿灿的奖牌！“不好不好，我又开小差了，我还是接着画画吧。”小棕熊重新拿起了画笔，却被池塘边游泳的青蛙吸引了。他不由想道：如果我学会了游泳，该多好啊。小棕熊仿佛已经看到了自己学会了游泳，在水波中翻腾，和鸭子们嬉戏。他再也不用害怕炎热的夏天啦！天色渐渐暗了下来，小棕熊一点都没有画，他的梦想也一个都没有实现。他打了一个呵欠，他还是那只喜欢睡觉的小棕熊呀。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">焦点：一个专注的人是一个能够一直专注于一个任务，直到完成的人。他们尽可能把注意力集中在一件事情上。（马太福音3:16注4 鸽子的眼睛一次只能看见一件东西。因此，鸽子表征在眼光与目的上是温柔和单纯。）</div></v-alert>
+            <v-alert border="left" colored-border color="info" elevation="2"><div class="ala">实际应用：使用初级阶段讲解的抛球活动。很多时候，我们有一个琐事或一个任务（例如，练习一个乐器），这需要时间去作。我们需要从头至尾集中精力完成任务。我们不能半途而废去作别的事情。我们必须专注地完成任务，不错失目标。</div></v-alert>
+          </div>
+          <v-btn block color="success" elevation="1" tile v-show="show"><b>高级</b></v-btn>
+          <div class="contents">
+            <v-alert elevation="2">
+              <div class="ala"><p>提摩太后书四7 那美好的仗我已经打过了，当跑的赛程我已经跑尽了，当守的信仰我已经守住了。</p>
+<p>列王记下 2:1~9</p>
+<p>耶和华要用旋风接以利亚升天的时候，以利亚与以利沙从吉甲前行。以利亚对以利沙说，你留在这里，因耶和华已差遣我到伯特利去。以利沙说，我指着永活的耶和华和你的性命起誓，我必不离开你。于是二人下到伯特利。在伯特利的申言者门徒出来见以利沙，对他说，耶和华今日要将你的师傅提上去离开你，你知道么？他说，我也知道，你们不要作声。以利亚对他说，以利沙，你留在这里，因耶和华已差遣我往耶利哥去。以利沙说，我指着永活的耶和华和你的性命起誓，我必不离开你。于是二人到了耶利哥。在耶利哥的申言者门徒就近以利沙，对他说，耶和华今日要将你的师傅提上去离开你，你知道么？他说，我也知道，你们不要作声。以利亚对以利沙说，你留在这里，因耶和华已差遣我往约但河去。以利沙说，我指着永活的耶和华和你的性命起誓，我必不离开你。于是二人继续前行。申言者的门徒中有五十人也去了，远远的站在他们对面；二人在约但河边站住。以利亚将自己的外衣卷起来击打河水，水就左右分开，二人走干地而过。过去之后，以利亚对以利沙说，我被接去离开你以前，该为你作什么，你只管求我。以利沙说，愿你的灵加倍的临到我。</p>
+</div>
+            </v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">焦点：一个专注的人是一个能够一直专注于一个任务，直到完成的人；他们不容易分心。他们会设定目标，并集中精力和力量，直到达到目标。</div></v-alert>
+            <v-alert border="left" colored-border color="success" elevation="2"><div class="ala">实际应用：使用初级阶段讲解的抛球活动。有些事情不是在短时间内完成的。有些事情可能需要几个月、一年甚至几年才能完成。当我们作这些事情时，我们不能来回改变我们的想法。我们的心必须专注在我们要完成的事上。参加马拉松比赛的人不能在赛跑中分心，不能停下来吃汉堡包。如果有人想成为宇航员或外科医生，他们需要在学校里学习正确的科目很多年。他们不可能年复一年地改变主意，相反，他们需要集中注意力并坚定信念，不管他们面临什么样的挑战。</div></v-alert>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          today: "2022年11月30日",
+          pre: "",
+          nex: "",
+          show: true,
+          show_text: "只看大纲",
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+          openSST(id) {
+            window.location.href = id;
+          },
+        },
+        watch: {
+          show(val) {
+            val ? (this.show_text = "只看大纲") : (this.show_text = "查看所有纲目");
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .ala {
+        font-size: large;
+      }
+      img {
+        width: 100%;
+      }
+      audio {
+        width: 100%;
+        margin-bottom: -7px;
+      }
+      span {
+        margin-left: 5px;
+      }
+
+      .b_read {
+        text-indent: -3em;
+        margin-left: 3em;
+      }
+      .ot1,
+      .ot2 {
+        text-indent: -2em;
+        margin-left: 2em;
+        text-align: justify;
+      }
+
+      .ot3 {
+        text-indent: -1.6em;
+        margin-left: 1.6em;
+        text-align: justify;
+      }
+
+      .ot1 {
+        font-weight: bold;
+      }
+      .title {
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .mrv {
+        font-weight: bold;
+      }
+      .mr,
+      .mrv {
+        text-align: justify;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .cb {
+        text-align: center;
+        font-weight: bold;
+      }
+      b {
+        font-weight: bold;
+        font-size: large;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>

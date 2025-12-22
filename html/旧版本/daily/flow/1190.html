@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1189')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1191')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 4 册 | 第 8 课<br />
+对付恩赐（一）</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　爱的定义与超越</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>林前十三4～7：爱是恒久忍耐，又有恩慈；爱是不嫉妒；爱是不自夸，不张狂，不作不合宜的事，不求自己的益处，不轻易发怒，不计算人的恶，不因不义而欢乐，却与真理同欢乐；凡事包容，凡事相信，凡事盼望，凡事忍耐。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>爱永不败落、永不衰残、永不终止，就像神永远的生命一样。没有什么能摇动爱，或把爱挪去。所有其他的恩赐，包括申言在内，至终都会归于无用，惟有爱是永远长存，永不败落的。在今世，我们所知道的和所申言的，都只是局部的，不是全部的。在今世，信徒乃是孩童，是未成熟的。但在来世，成熟的信徒要成人，一切幼稚、最小的恩赐，就都要废掉了。然而，我们在今世就可藉着活出爱的生活，预尝来世。爱使我们在生命里成熟。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>追求爱，活出爱的生活，滋养自己，建造别人，并彰显神。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们运用恩赐上好的路，乃是爱的路；爱是上好的、极超越的路。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>保罗要信徒追求最上好的恩赐是什么？</p>
+<p>请说明爱为何是得着恩赐最超越的路？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们运用恩赐上好的路，乃是爱的路。（林前十三1～13。）爱是上好的、极超越的路。真实的爱是基督与十字架。我们对别人要有真正的爱，就必须经历基督与十字架。我们的己必须受对付，我们也必须接受基督作一切，然后我们就会知道如何爱人。我们即使运用恩赐，却可能没有爱；反而我们可能不爱人，只管每天说方言，丝毫不关心别人。我们若仔细读过十二至十四章，就会明白著者的用意，是要我们宁可有爱，胜过运用恩赐。我们运用属灵的恩赐，若不能建造人或与人有益，我们就应当乐意放下恩赐，而运用我们对人的爱。这是我们运用恩赐上好的路，因为恩赐的目的是要建造身体。我们运用恩赐，若没有达到这目的，就应当乐意把恩赐放下。如果爱建造人胜过恩赐，我们就应当运用爱，过于运用恩赐。’（由基督与召会的观点看新约概要卷二，196～197页。）</p>
+<p>‘林前十三章启示，应用我们恩赐的路乃是凭着爱。没有爱，我们就没有资格切慕恩赐。只有生命里的爱使我们有资格寻求恩赐。我们若没有爱的生命，就可能妄用恩赐，错误的用恩赐破坏人，而不是建造人。我们若要有恩赐，就必须有合格的生命，这合格的生命就是爱的生命。我们都必须追求爱。’（建造召会的超越恩赐，20页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>追求爱，活出爱的生活，以滋养自己，建造别人，并彰显神。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

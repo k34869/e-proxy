@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1672')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1674')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 5 课<br />
+生命的长大及其结果</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　宣扬神的美德</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>彼前二9下～10：要叫你们宣扬那召你们出黑暗、入祂奇妙之光者的美德；你们从前不是子民，现在却是神的子民；从前未曾蒙怜悯，现在却蒙了怜悯。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>美德是优越之处，优越并荣美的美德。这是指神之所是并所有，以及神那在祂的荣耀中达到终极之奇妙的光。神用祂的荣耀和美德呼召我们，并且呼召我们到祂的荣耀和美德。无论使徒传讲并教导什么，都是宣扬他们所看见并享受的美德。这是往外宣报他们所有分于的美德。今天我们需要跟随使徒，往外宣扬主优越的美德。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>跟随使徒，往外宣扬主优越的美德。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>我们生命长大的目的，是被变化建成属灵的殿，作神的居所，成为事奉神的圣别祭司体系。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>基督徒生命长大的最终目的，是成为一个很属灵的人么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘我们长大的目的，是要被建造成为属灵的殿，就是召会。神的定旨是要我们被建造在一起，成为属灵的殿，这属灵的殿是祭司体系，就是祭司团，建造在一起，向神献上属灵的祭物。这是召会的事奉和召会生活。这建筑，这属灵的殿，乃是基督的身体。这身体带同许多祭司配搭在一起，向神献上属灵的祭物。’（由基督与召会的观点看新约概要卷三，421页。）</p>
+<p>‘地方的圣徒是在基督里面同被建造，成为神在灵里的居所。他们不是在规条、实行、或意见上被建造。惟有在包罗万有的基督里，（祂是我们的和平、根基和房角石，）我们才能被建造起来。…我们的灵是召会建造所在的地方。建造不是在我们的心思、情感、魂、或心里；建造完全是在我们灵里的事。</p>
+<p>我们要在地方上被建造，我们的个性和我们的所是就必须受对付。没有什么像建造这件事更试验我们属灵的成熟程度。不但如此，地方的建造，在我们属灵的成长上是一大帮助。我们若愿意在我们的地方上被建造到召会里，我们在生命上就会有大量的成长。’（新约总论第六册，233～234页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>与圣徒同被建造，成为属灵的殿，作神的居所。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

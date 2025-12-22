@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1728')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1730')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 8 册 | 第 13 课<br />
+神圣生命的交通</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　联于使徒和三一神</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>约壹三2:亲爱的，我们现在是神的儿女，将来如何，还未显明；但我们晓得祂若显现，我们必要像祂；因为我们必要看见祂，正如祂所是的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>神的定旨是要祂每一个儿女都在神圣的生命里长大，过义和爱的生活，以胜过一切消极的事物。这样，众地方召会就要被建造成为耶稣的见证，最终就有新耶路撒冷，作三一神永远的彰显。这就是神的定旨，也是使徒工作的负担；他们与神共有这定旨。现在我们该在神圣生命的交通里联于他们，这样享受神圣生命里的交通，就会将我们引进使徒与三一神共有的权益里。我们的目的就与三一神和使徒一样，要信徒在生命里长大，过义和爱的生活，以胜过消极的事物，使众地方召会得以建造起来，结果产生新耶路撒冷，作三一神终结的彰显。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>享受神圣生命里的交通，将我们引进使徒与三一神共有的权益里。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>认识何为神圣的生命与神圣生命的交通。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>请解释‘交通’一辞的意义。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘生命之话就是神的儿子基督自己，正如约翰一章一节所说的；而约壹一章三节的交通，乃是出自这永远的生命。</p>
+<p>神儿女的交通不只是他们之间的交通，也是儿女与父之间的交通。这交通出自神圣的生命，就是基督自己。交通就是神圣的生命在我们里面的流通和生活。电流乃是电本身的流动，而我们身体里的血液循环乃是血液本身的周转和流通。同样的，当基督不断的在我们里面生活、工作、流通，我们就有神圣生命的交通。这神圣的交通在我们与父之间，也在我们与基督身体所有的肢体之间。在我们物质的身体中，只有一种血液循环。虽然有成百个肢体，血液循环却只有一个。血液循环这个例子说明了基督作我们生命的交通。我们是基督身体的许多肢体，但在作我们生命的基督里只有一个交通。我们越留在基督里，就越有这交通。’（由基督与召会的观点看新约概要卷三，427～428页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>借着交通，享受所得着神圣生命的丰富。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

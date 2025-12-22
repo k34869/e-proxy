@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../../css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="../../css/vuetify.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" v-cloak>
+      <v-app>
+        <v-app-bar app color="blue" dark dense>
+          <v-icon @click="backtohome">mdi-home</v-icon>
+          <v-row align="center">
+            <v-col :cols="12">
+              <div style="text-align: center">
+                <v-toolbar-title>每日活流</v-toolbar-title>
+              </div>
+            </v-col>
+          </v-row>
+        </v-app-bar>
+        <v-main>
+          <br />
+          <div style="text-align: center; margin-bottom: 10px">
+            <v-card class="d-flex align-content-center flex-wrap justify-center" flat tile min-height="10">
+              <v-btn color="primary" elevation="5" rounded @click="jump('1315')"><div class="bt_text">前一天</div></v-btn>
+              <span></span>
+              <span></span>
+              <v-btn color="primary" elevation="5" rounded @click="jump('1317')"><div class="bt_text">后一天</div></v-btn>
+            </v-card>
+          </div>
+          <v-divider></v-divider>
+          <div class="title">第 5 册 | 第 8 课<br />
+神给召会的福分（二）子的救赎与灵的印记和凭质</div>
+          <v-divider></v-divider>
+          <div class="main">
+            <v-btn block color="primary" elevation="1" tile><b>主日　使神的荣耀得著称赞</b></v-btn>
+            <div class="contents">
+              <v-btn block color="error" elevation="1" tile><b>祷读经文</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>弗一6：使祂恩典的荣耀得著称赞，这恩典是祂在那蒙爱者里面所恩赐我们的。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>亮光启示</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>‘使祂的荣耀得着称赞’这句话重复了三次，因为三一神配得我们三重的称赞。整个宇宙要为着祂的计划、祂的完成、和祂的应用称赞神。太好了！我们是在神的祝福之下！虽然我们堕落得这么低下，但是我们已成了神的儿子，甚至成了神的基业和享受。神成了我们的基业，我们也正在承受神作我们的享受。现在我们所渴望的，乃是得着更多的神。</p>
+</v-alert>
+              </div>
+              <v-btn block color="error" elevation="1" tile><b>操练应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" colored-border color="info" elevation="2"><p>为着三一神赐给我们三重的福分，在灵里向神发出颂赞。</p>
+</v-alert>
+              </div>
+            </div>
+            <div class="contents" v-if="ifBord">
+              <v-btn block color="teal" elevation="1" tile><b>负担及研讨重点</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>子的救赎，说出神永远定旨的完成；灵的印记和凭质，说出神所完成之定旨的应用。</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>引题</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>神给召会的第二、三项福分是什么？</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>开启</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>‘以弗所一章七至十二节…启示，子为着完成父的永远定旨所施的救赎。父神拣选了我们。然后子来借着祂的救赎，完成了神的经纶。我们虽然蒙了拣选和预定，但在受造之后堕落了。因此，我们需要救赎，就是神在基督里，借着基督的血为我们所完成的。</p>
+<p>十三至十四节启示那灵为着应用神所完成之定旨所施的印涂和作质。首先，神有一个永远的定旨。为这定旨，神拣选了我们。然后子来借着祂的救赎，完成了这定旨。子的救赎完成之后，那灵来照着父的拣选，应用子所完成的。这个应用乃是借着那灵的印涂和作质。</p>
+<p>没有墨的成分，就不可能有正确的印涂。印记也带着形像。印章带着墨印涂到一样东西上，墨就有与印章相同的图形或形像。印章若是圆的，所盖的印也是圆的。印是神自己，墨是那灵。那灵的印涂，使我们有神的形像，因此使我们像神。</p>
+<p>不仅如此，这印涂也是作质。神已经将祂自己给了我们，在我们里面作凭质，为着作我们的保证，担保祂是属于我们的；也为着作我们的预尝，使我们有分于祂作我们的基业，就是作我们的享受。一个人买了一本新圣经，他可能在其上签名盖章。在他圣经上的印记，表明这本圣经是他的这个事实。就另一面的意义说，印记成了凭质，保证这本圣经是属于他的。因此我们可以说，印涂就是作质。现在我们可以看见，以弗所一章四至十四节启示，三一神已经作到我们里面，以成就祂永远的经纶。’（在神圣三一里并同神圣三一活着，39～40页。）</p>
+</v-alert>
+              </div>
+              <v-btn block color="teal" elevation="1" tile><b>应用</b></v-btn>
+              <div class="mt">
+                <v-alert border="top" elevation="2"><p>接受圣灵的印记和印涂，更多彰显神的形像。</p>
+</v-alert>
+              </div>
+            </div>
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+          test: [],
+          ifBord: true,
+        }),
+
+        methods: {
+          backtohome() {
+            window.location.href = "../daily.html";
+          },
+          jump(id) {
+            window.location.href = `./${id}.html`;
+          },
+        },
+        computed: {},
+        mounted() {},
+        beforeDestroy() {},
+      });
+    </script>
+    <style>
+      .mt {
+        margin-top: 1em;
+      }
+      span {
+        margin-left: 5px;
+      }
+      b {
+        font-size: large;
+      }
+      .title {
+        margin: 10px;
+        font-weight: bold !important;
+        text-align: center;
+      }
+      .contents {
+        margin: 1em;
+      }
+      .bt_text {
+        font-size: 1em;
+        font-weight: bold;
+      }
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+      .heading {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>
